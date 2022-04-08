@@ -49,6 +49,9 @@ book:
     - "appendix-a-template.qmd"
     - "appendix-b-faq.qmd"
     - "appendix-c-html-extensions.qmd"
+bibliography:
+  - book.bib
+  - packages.bib
 
 format:
   html:
@@ -57,8 +60,10 @@ format:
     code-copy: true
     css: style.css
     toc: true
+    fontsize: 12pt
+    monofont: "Source Code Pro"
   pdf:
-    documentclass: scrreport
+    documentclass: krantz
     keep-tex: true
     cite-method: natbib
   # epub:
