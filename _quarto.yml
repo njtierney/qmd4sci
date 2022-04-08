@@ -1,30 +1,66 @@
-book_filename: rmd4sci
-output_dir: _book
-repo: https://github.com/njtierney/rmd4sci
-css: style.css
-new_session: yes # this knits each chapter separately in a new session
-delete_merged_file: true
-rmd_files: [ "index.Rmd",
-             "license.Rmd",
-             "why-rmd.Rmd",
-             "installation.Rmd",
-             "rstudio.Rmd",
-             "workflow.Rmd",
-             "using-rmd.Rmd",
-             "pdf-html-word.Rmd",
-             "keyboard-shortcuts.Rmd",
-             "figures-tables-captions.Rmd",
-             "changing-figures.Rmd",
-             "math.Rmd",
-             "cite-fig-tab-sec.Rmd",
-             "citations-and-styles.Rmd",
-             "caption-reference-eqn.Rmd",
-             "common-problems.Rmd",
-             "alternative-outputs-and-exts.Rmd",
-             "next-steps.Rmd",
-             "references.Rmd",
-             "acknowledgements.Rmd",
-             "appendix-a-template.Rmd",
-             "appendix-b-faq.Rmd",
-             "appendix-c-html-extensions.Rmd"
-             ]
+project: 
+  type: "book"
+  output-dir: docs
+  
+book:
+  title: "Quarto for Scientists"
+  author: "Nicholas Tierney"
+  css: style.css
+  description: | 
+     For a scientific report to be completely credible, it must be reproducible. 
+     The full computational environment used to derive the results, including 
+     the data and code used for statistical analysis should be available for 
+     others to reproduce. quarto is a tool that allows you integrate your 
+     code, text and figures in a single file in order to make high quality, 
+     reproducible reports. A paper published with an included quarto file and 
+     data sets can be reproduced by anyone with a computer.
+  site-url: https://qmd4sci.njtierney.com
+  repo-url: https://github.com/njtierney/qmd4sci
+  repo-branch: master
+  repo-actions: [edit, issue]
+  sharing: [twitter]
+  date: "2022-04-08"
+  page-footer: "Copyright 2022, Nicholas Tierney" 
+  page-navigation: true
+  search: true
+  collapse-level: 1
+  chapters:
+    - "index.qmd"
+    - "license.qmd"
+    - "why-rmd.qmd"
+    - "installation.qmd"
+    - "rstudio.qmd"
+    - "workflow.qmd"
+    - "using-rmd.qmd"
+    - "pdf-html-word.qmd"
+    - "keyboard-shortcuts.qmd"
+    - "figures-tables-captions.qmd"
+    - "changing-figures.qmd"
+    - "math.qmd"
+    - "cite-fig-tab-sec.qmd"
+    - "citations-and-styles.qmd"
+    - "caption-reference-eqn.qmd"
+    - "common-problems.qmd"
+    - "alternative-outputs-and-exts.qmd"
+    - "next-steps.qmd"
+    - "references.qmd"
+    - "acknowledgements.qmd"
+  appendices:
+    - "appendix-a-template.qmd"
+    - "appendix-b-faq.qmd"
+    - "appendix-c-html-extensions.qmd"
+
+format:
+  html:
+    theme: cosmo
+    code-background: true
+    code-copy: true
+    css: style.css
+    toc: true
+  pdf:
+    documentclass: scrreport
+    keep-tex: true
+    cite-method: natbib
+  # epub:
+  #   cover-image: cover.png
+
