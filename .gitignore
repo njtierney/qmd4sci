@@ -12,3 +12,5 @@ _bookdown_files
 _rmd4sci.rds
 notes
 *.log
+
+/.quarto/
