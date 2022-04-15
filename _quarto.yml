@@ -16,7 +16,7 @@ book:
      data sets can be reproduced by anyone with a computer.
   site-url: https://qmd4sci.njtierney.com
   repo-url: https://github.com/njtierney/qmd4sci
-  repo-branch: master
+  repo-branch: main
   repo-actions: [edit, issue]
   sharing: [twitter]
   date: "2022-04-08"
