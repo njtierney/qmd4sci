@@ -19,7 +19,6 @@ knitr::opts_chunk$set(echo = TRUE,
 
 ```{r library}
 library(tidyverse)
-library(naniar)
 library(visdat)
 library(broom)
 ```
