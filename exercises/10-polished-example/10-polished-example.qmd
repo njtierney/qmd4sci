@@ -2,17 +2,16 @@
 title: "Rmarkdown example"
 author: "Nicholas Tierney"
 bibliography: packages.bib
-output:
-  html_document:
-    keep_md: yes
-    toc: yes
-    toc_float: yes
-  pdf_document:
-    toc: yes
-  word_document:
-    toc: yes
+keep-md: true
+format:
+  html:
+    toc: true
+  pdf:
+    toc: true
+  docx:
+    toc: true
 csl: bmj.csl
-Date: 2017/06/27
+date: 2017/06/27
 ---
 
 ```{r setup, include=FALSE}

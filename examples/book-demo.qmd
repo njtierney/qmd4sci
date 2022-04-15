@@ -1,7 +1,7 @@
 ---
 title: "Exploring gapminder"
 author: "Nicholas Tierney"
-output: html_document
+format: html
 ---
 
 ```{r library, message = FALSE}

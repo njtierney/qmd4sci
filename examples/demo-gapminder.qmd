@@ -1,10 +1,10 @@
 ---
 title: "Exploring gapminder"
 author: "Nicholas Tierney"
-output:
-  html_document:
+format: 
+  html:
     toc: true
-    toc_depth: 2
+    toc-depth: 2
 ---
 
 

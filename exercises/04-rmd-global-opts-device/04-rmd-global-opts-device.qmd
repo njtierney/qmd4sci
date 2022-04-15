@@ -2,9 +2,8 @@
 title: "04-rmd-global-opts-device"
 author: "Your Name"
 date: 2017/06/27
-output: 
-  html_document:
-    keep_md: true
+format: html
+keep-md: true
 ---
 
 

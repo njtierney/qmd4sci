@@ -1,10 +1,10 @@
 ---
 title: "Introduction document"
 author: "Nicholas Tierney"
-output:
-  html_document:
+format: 
+  html:
     toc: true
-    toc_depth: 2
+    toc-depth: 2
 ---
 
 ````{r setup , include=FALSE}

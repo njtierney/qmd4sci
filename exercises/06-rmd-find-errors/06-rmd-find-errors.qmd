@@ -2,7 +2,9 @@
 title: "Rmarkdown Errors"
 author: Nicholas Tierney
 Date: 2017/06/27
-output: 
+execute: 
+  echo: true
+format:
 bibliography: packages.bib
 ---
 
@@ -22,8 +24,7 @@ bibliography: packages.bib
             - remember that the rmarkdown directory is where the .Rmd file lives
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE,
-                      dev = "png"})
+knitr::opts_chunk$set(dev = "png")
 ```
 
 ```{r library, eval = FALSE}

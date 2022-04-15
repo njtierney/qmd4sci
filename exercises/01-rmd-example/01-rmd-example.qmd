@@ -2,9 +2,9 @@
 title: "01-rmd-example"
 author: "YOUR NAME"
 date: "yyyy/mm/dd"
-output:
-  word_document: default
-  html_document: default
+format: 
+  docx: default
+  html: default
 ---
 
 # Tasks
