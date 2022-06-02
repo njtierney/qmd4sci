@@ -4,7 +4,7 @@ on:
   pull_request:
     branches: main
   # to be able to trigger a manual build
-  workflow_dispatch:
+  # workflow_dispatch:
 
 name: Render and deploy Book to Netlify
 
