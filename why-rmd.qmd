@@ -1,6 +1,6 @@
-# Why RMarkdown
+# Why Quarto
 
-The goal of this section is to briefly discuss why we want to learn R Markdown, the benefits, and the barriers to using it.
+The goal of this section is to briefly discuss why we want to learn quarto, the benefits, and the barriers to using it.
 
 ## Overview
 
