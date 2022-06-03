@@ -1,5 +1,5 @@
 project: 
-  type: "book"
+  type: book
   output-dir: docs
   
 book:
