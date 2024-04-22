@@ -1,16 +1,15 @@
 project: 
   type: book
   output-dir: docs
-  
+
 book:
   title: "Quarto for Scientists"
   author: "Nicholas Tierney"
-  css: style.css
   description: | 
      For a scientific report to be completely credible, it must be reproducible. 
      The full computational environment used to derive the results, including 
      the data and code used for statistical analysis should be available for 
-     others to reproduce. quarto is a tool that allows you integrate your 
+     others to reproduce. Quarto is a tool that allows you integrate your 
      code, text and figures in a single file in order to make high quality, 
      reproducible reports. A paper published with an included quarto file and 
      data sets can be reproduced by anyone with a computer.
@@ -19,11 +18,10 @@ book:
   repo-branch: main
   repo-actions: [edit, issue]
   sharing: [twitter]
-  date: "2022-04-08"
-  page-footer: "Copyright 2022, Nicholas Tierney" 
+  date: "2024-04-22"
+  page-footer: "Copyright 2022-2024, Nicholas Tierney" 
   page-navigation: true
   search: true
-  collapse-level: 1
   chapters:
     - "index.qmd"
     - "license.qmd"
@@ -62,6 +60,7 @@ format:
     toc: true
     fontsize: 12pt
     monofont: "Source Code Pro"
+    toc-depth: 1
   pdf:
     documentclass: krantz
     keep-tex: true

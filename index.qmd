@@ -1,33 +1,41 @@
 # About this {-}
 
-This is a book on rmarkdown, aimed for scientists. It was initially developed as a 3 hour workshop, but is now developed into a resource that will grow and change over time as a **living book**.
+This is a book on quarto, aimed for scientists. It was initially developed as a 3 hour workshop, but is now developed into a resource that will grow and change over time as a **living book**.
 
 This book aims to teach the following:
 
-- Getting started with your own R Markdown document
+
+This book aims to teach the following:
+
+- Getting started with your own quarto document
+  - Using Rstudio
+  - Visual Studio Code
 - Improve workflow:
-  - With RStudio projects
-  - Using keyboard shortcuts
-- Export your R Markdown document to PDF, HTML, and Microsoft Word
+  - RStudio
+    - Demonstrate rstudio projects
+    - Using keyboard shortcuts
+  - Quarto projects
+- Export your quarto documents to PDF, HTML, and Microsoft Word
 - Better manage figures and tables
     - Reference figures and tables in text so that they dynamically update
     - Create captions for figures and tables
     - Change the size and type of figures
-    - Save the figures to disk when creating an R Markdown document
+    - Save the figures to disk when rendering a document
 - Work with equations
     - Inline and display
     - Caption equations
     - Reference equations
 - Manage bibliographies
-    - Cite articles in text
-    - Generate bibliographies
-    - Change bibliography styles
-- Debug and handle common errors with R Markdown
-- Next steps in working with rmarkdown - how to extend yourself to other rmarkdown formats
-    
+  - Cite articles in text
+  - Generate bibliographies
+  - Change bibliography styles
+- Debug and handle common errors with quarto
+- Next steps in working with quarto:
+  - How to extend yourself to other formats, such as slides, websites, books, and more
+
 ## Why write this as a book?
 
-There are many great books on R Markdown and it's various features, such as ["Rmarkdown: The definitive guide"](https://bookdown.org/yihui/rmarkdown/), ["bookdown: Authoring Books and Technical Documents with R Markdown"](https://bookdown.org/yihui/bookdown/), and ["Dynamic Documents with R and knitr, Second edition"](https://www.crcpress.com/Dynamic-Documents-with-R-and-knitr/Xie/p/book/9781498716963), and Yihui Xie's thesis, ["Dynamic Graphics and Reporting for Statistics"](https://lib.dr.iastate.edu/etd/13518/).
+This book started out its first life being around rmarkdown. There are many great books on R Markdown and it's various features, such as ["Rmarkdown: The definitive guide"](https://bookdown.org/yihui/rmarkdown/), ["bookdown: Authoring Books and Technical Documents with R Markdown"](https://bookdown.org/yihui/bookdown/), and ["Dynamic Documents with R and knitr, Second edition"](https://www.crcpress.com/Dynamic-Documents-with-R-and-knitr/Xie/p/book/9781498716963), and Yihui Xie's thesis, ["Dynamic Graphics and Reporting for Statistics"](https://lib.dr.iastate.edu/etd/13518/).
 
 > So why write a book?
 
@@ -62,12 +70,12 @@ With the remaining sections being used as extra material, or have since been wri
 Course materials can be downloaded by using the following command from the `usethis` package:
 
 ```{r use-course, echo = TRUE, eval = FALSE}
-usethis::use_course("bit.ly/rmd4sci-materials")
+usethis::use_course("bit.ly/qmd4sci-materials")
 ```
 
 ## Where has this course been taught?
 
-So far I have taught this rmarkdown for science course at the following locations:
+So far I have taught the rmarkdown for science course at the following locations:
 
 - 2018
   - Melbourne, November for SSA Victoria
@@ -77,7 +85,7 @@ So far I have taught this rmarkdown for science course at the following location
   - Melbourne, November, for AIMOS2019
   - Melbourne, December, for Plant Pathology Conference
 - 2020
-  - Seattle, February, for University of Washington
+  - Seattle, February, for the University of Washington
 
 
 ## Licence
