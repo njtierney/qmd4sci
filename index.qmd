@@ -4,9 +4,6 @@ This is a book on quarto, aimed for scientists. It was initially developed as a 
 
 This book aims to teach the following:
 
-
-This book aims to teach the following:
-
 - Getting started with your own quarto document
   - Using Rstudio
   - Visual Studio Code
