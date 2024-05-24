@@ -29,7 +29,10 @@ The RStudio layout has the following features:
 - On the upper right, the environment / history pane
 
 
-```{r rstudio-screenshot, echo = FALSE, fig.cap = "A screenshot of the RStudio working environment."}
+```{r}
+#| label: rstudio-screenshot
+#| echo: false
+#| fig-cap: A screenshot of the RStudio working environment.
 knitr::include_graphics("figs/rstudio-screenshot.png")
 ```
 
@@ -55,7 +58,12 @@ Under the **General** tab:
     - Uncheck "Always save history (even when not saving .RData)
     - Uncheck "Remove duplicate entries in history"
 
-```{r fig-rstudio-workspace-options, fig.cap = "Setting the options right for RStudio, so you don't restore previous sessions work, and don't save it either.", out.width = "50%", echo = FALSE}
+```{r}
+#| label: fig-rstudio-workspace-options
+#| echo: false
+#| fig-cap: Setting the options right for RStudio, so you don't restore previous sessions
+#|   work, and don't save it either.
+#| out-width: 50%
 knitr::include_graphics("figs/rstudio-remove-data.png")
 ```
 

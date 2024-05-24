@@ -1,4 +1,4 @@
-# Using Rmarkdown
+# Using Quarto
 
 Now that we've covered how to organise your project, have some data, and talked a bit about what rmarkdown is, let's talk about using it.
 
@@ -9,18 +9,18 @@ Now that we've covered how to organise your project, have some data, and talked 
 
 ## Questions
 
-* How should I start an rmarkdown document?
+* How should I start an Quarto document?
 * What do I put in the YAML metadata?
 * How do I create a code chunk?
 * What sort of options to I need to worry about for my code?
 
 ## Objectives
 
-* Create an rmarkdown document, do some basic exploration
+* Create an Quarto document, do some basic exploration
 
 ## The anatomy of an rmarkdown document
 
-This is an rmarkdown document (demo). It has three parts:
+This is an Quarto document (demo). It has three parts:
 
 * Metadata (YAML)
 * Text (markdown formatting)
@@ -30,21 +30,21 @@ This is an rmarkdown document (demo). It has three parts:
 
 The metadata of the document tells you how it is formed - what the title is, what date to put, and other control information.  If you're familiar with LaTeX, this is kind of like how you specify the many options, what sort of document it is, what styles to use, etc at the front matter.
 
-Rmarkdown documents use YAML (YAML Ain't Markup Language) to provide the metadata. It looks like this.
+Quarto documents use YAML (YAML Ain't Markup Language) to provide the metadata. It looks like this.
 
 ```YAML
 ---
 title: "An example document"
 author: "Nicholas Tierney"
-output: html_document
+format: html
 ---
 ```
 
-It starts and ends with three dashes `---`, and has fields like the following: `title`, `author`, and `output`. 
+It starts and ends with three dashes `---`, and has fields like the following: `title`, `author`, and `format`. 
 
 `title` and `author` are special inputs which place the title and author information at the top of the document in large font. They are optional!
 
-` output: html_document ` tells us we want this to be a HTML document - you'll see what this looks like in a moment!
+`format: html ` tells us we want this to be a HTML document - you'll see what this looks like in a moment!
 
 
 #### Some extra details
@@ -54,10 +54,10 @@ The options in the YAML are actually passed down into the `render` function unde
 This means that:
 
 ```YAML
-output:
-  html_document:
+format:
+  html:
     toc: true
-    toc_depth: 2
+    toc-depth: 2
 ```
 
 is the same as:
@@ -109,7 +109,8 @@ __bold__, **bold**, _italic_, *italic*
 
 > quote of something profound 
 
-```{r example-chunk}
+```{r}
+#| label: example-chunk
 # computer code goes in three back ticks
 1 + 1
 2 + 2
@@ -132,7 +133,11 @@ Code chunks are marked by three backticks and curly braces with `r` inside them:
 
 **a backtick** is a special character you might not have seen before, it is typically located under the tilde key (`~`). On USA / Australia keyboards, is under the escape key:
 
-```{r show-backtick, out.width = "100%", echo = FALSE, fig.cap = "image from https://commons.wikimedia.org/wiki/File:ANSI_Keyboard_Layout_Diagram_with_Form_Factor.svg"}
+```{r}
+#| label: show-backtick
+#| echo: false
+#| out-width: 100%
+#| fig-cap: image from https://commons.wikimedia.org/wiki/File:ANSI_Keyboard_Layout_Diagram_with_Form_Factor.svg
 knitr::include_graphics("figs/ansi-keyboard.png")
 ```
 

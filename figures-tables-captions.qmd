@@ -25,13 +25,17 @@ To produce a table, I recommend you use the `kable` function from the `knitr` pa
 
 For example, let's say we wanted to share the first 6 rows of our gapminder data.
 
-```{r read-gapminder, include = FALSE, echo = FALSE}
+```{r}
+#| label: read-gapminder
+#| include: false
+#| echo: false
 gapminder <- readr::read_csv(here::here("data", "gapminder.csv"))
 ```
 
 This gives us the following output
 
-```{r show-gapminder}
+```{r}
+#| label: show-gapminder
 top_gap <- head(gapminder)
 
 knitr::kable(top_gap)
@@ -56,7 +60,8 @@ And this then gets _rendered_ as a table. This works for HTML, PDF, and word!
 
 Now, say that we wanted to include a caption? We use the `caption` argument. This will also automatically number the table (woo! We'll cover this later).
 
-```{r print-tab-gap-captions}
+```{r}
+#| label: print-tab-gap-captions
 knitr::kable(top_gap,
              caption = "The first 6 rows of the dataset, gapminder")
 ```
@@ -65,7 +70,8 @@ Some other useful features of `kable` include setting the rounding number, with 
 
 For example, we could present the first 2 digits of each number like so:
 
-```{r print-tab-gap-digits}
+```{r}
+#| label: print-tab-gap-digits
 knitr::kable(top_gap,
              caption = "The first 6 rows of the dataset, gapminder",
              digits = 2)
@@ -89,7 +95,8 @@ Printing figures is probably my favourite feature of rmarkdown. It is actually r
 
 For example, I can print a plot of the gapminder data for Australia like so:
 
-```{r gg-gapminder}
+```{r}
+#| label: gg-gapminder
 library(ggplot2)
 library(dplyr)
 
@@ -122,7 +129,11 @@ gapminder %>%
 
 Which would produce the following output
 
-```{r gg-oz-gapminder, fig.cap = "Life expectancy from 1952 - 2007 for Australia. Life expentancy increases steadily except from 1962 to 1969. We can safely say that our life expectancy is higher than it has ever been!"}
+```{r}
+#| label: gg-oz-gapminder
+#| fig-cap: Life expectancy from 1952 - 2007 for Australia. Life expentancy increases
+#|   steadily except from 1962 to 1969. We can safely say that our life expectancy is
+#|   higher than it has ever been!
 library(ggplot2)
 library(dplyr)
 
@@ -175,7 +186,11 @@ knitr::include_graphics(here::here("figs", "ssa-logo.png"))
 ```
 ````
 
-```{r ssa-logo, fig.align = 'center', out.width = "25%", fig.cap = "The new SSA logo, which is actually a scatterplot, which is super neat!"}
+```{r}
+#| label: ssa-logo
+#| fig-align: center
+#| out-width: 25%
+#| fig-cap: The new SSA logo, which is actually a scatterplot, which is super neat!
 knitr::include_graphics(here::here("figs", "ssa-logo.png"))
 ```
 

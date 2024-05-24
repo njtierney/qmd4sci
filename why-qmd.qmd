@@ -87,7 +87,8 @@ __bold__, **bold**, _italic_, *italic*
 
 > quote of something profound
 
-```{r example-calculator}
+```{r}
+#| label: example-calculator
 # computer code goes in three back ticks
 1 + 1
 2 + 2
@@ -107,6 +108,10 @@ Some other nice features of Markdown include:
 
 <!-- | footnote(s)     | `[^4]` followed by `[^4]: footnote text goes here`.| [^4] followed by [^4]: footnote text goes here. | -->
 
+## What about Rmarkdown
+
+TODO
+
 ## Your Turn {.exercise}
 
 1. **Learn to use Markdown** In your small groups, spend five minutes working through this [brief online Markdown tutorial](https://www.markdowntutorial.com/)
@@ -119,7 +124,11 @@ So, how do we combine this with our R code, into a literate programming environm
 
 For example, look at the following report:
 
-```{r example-report, out.width = "80%", fig.align = "center", echo = FALSE}
+```{r}
+#| label: example-report
+#| echo: false
+#| out-width: 80%
+#| fig-align: center
 knitr::include_graphics("figs/rmd-report-example.png")
 # image generated with
 # webshot::webshot("file:///Users/ntie0001/github/njtierney/world-health-demo/book-demos/book-demo.html",
@@ -129,7 +138,9 @@ knitr::include_graphics("figs/rmd-report-example.png")
 
 How did we generate it?
 
-```{r fit-coef-ugle-hack, include=FALSE}
+```{r}
+#| label: fit-coef-ugle-hack
+#| include: false
 fit_coef = '`r fit_coef[1]`'  # an ugly hack; don't look at me
 ```
 
@@ -206,7 +217,11 @@ But if you did it in R Markdown?
 
 Just update the data, and render the document again, and get an updated document:
 
-```{r img-show-all-data, echo = FALSE, out.width = "80%", fig.align = "center"}
+```{r}
+#| label: img-show-all-data
+#| echo: false
+#| out-width: 80%
+#| fig-align: center
 
 knitr::include_graphics(here::here("figs",
 "rmd-report-example-all-data.png"))

@@ -55,13 +55,15 @@ You can use the `citation` function in R for R itself, and for specific R packag
 
 We can get the citation for R with:
 
-```{r citation-r}
+```{r}
+#| label: citation-r
 citation()
 ```
 
 And for ggplot2 with
 
-```{r citation-ggplot}
+```{r}
+#| label: citation-ggplot
 citation("ggplot2")
 ```
 

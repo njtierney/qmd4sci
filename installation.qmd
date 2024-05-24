@@ -36,7 +36,9 @@ https://www.rstudio.com/products/rstudio/download/#download
 
 To ensure you are up to date, run the following script to install the packages.
 
-```{r install-rmd, eval = FALSE}
+```{r}
+#| label: install-rmd
+#| eval: false
 install.packages("rmarkdown")
 install.packages("knitr")
 install.packages("tinytex")
@@ -53,7 +55,9 @@ rmarkdown documents can be compiled to PDF, which is a great feature. In order t
 
 Installing LaTeX [can be a pain](https://yihui.name/tinytex/pain/), but thankfully there is an easier way to install it - [`tinytex`](https://yihui.name/tinytex/). `tinytex` is an R package that installs a sane, lightweight (<200Mb) version of LaTeX. 
 
-```{r run-tiny-tex, eval = FALSE}
+```{r}
+#| label: run-tiny-tex
+#| eval: false
 tinytex::install_tinytex()
 ```
 
@@ -71,7 +75,9 @@ If you have any problems with installing `tinytex`, I recommend you check out th
 
 You should be able to run the following code on your machine
 
-```{r library-test, eval = FALSE}
+```{r}
+#| label: library-test
+#| eval: false
 library(rmarkdown)
 library(knitr)
 library(tinytex)

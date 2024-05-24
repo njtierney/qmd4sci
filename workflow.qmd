@@ -89,7 +89,10 @@ users
                     └──  gapminder.csv
 ```
 
-```{r tree-elbow, eval = FALSE, echo = FALSE}
+```{r}
+#| label: tree-elbow
+#| eval: false
+#| echo: false
 file_dir <- "Desktop/rmd4sci-materials/demo-gapminder.Rmd"
 
 gsub(pattern = "/", 
@@ -232,19 +235,31 @@ file > new project > new directory > new project > name your project > create pr
 
 You can also click on the create project button in the top left corner
 
-```{r rstudio-create-proj-1, echo = FALSE, fig.align = "center", out.width = "50%"}
+```{r}
+#| label: rstudio-create-proj-1
+#| echo: false
+#| fig-align: center
+#| out-width: 50%
 knitr::include_graphics(here::here("figs", "rstudio-create-proj-1.png"))
 ```
 
 Then go to new directory, if it is a new folder - otherwise if you have an existing folder you have - click on existing directory.
 
-```{r rstudio-create-proj-2, echo = FALSE, fig.align = "center", out.width = "50%"}
+```{r}
+#| label: rstudio-create-proj-2
+#| echo: false
+#| fig-align: center
+#| out-width: 50%
 knitr::include_graphics(here::here("figs", "rstudio-create-proj-2.png"))
 ```
 
 Then go to new project
 
-```{r rstudio-create-proj-3, echo = FALSE, fig.align = "center", out.width = "50%"}
+```{r}
+#| label: rstudio-create-proj-3
+#| echo: false
+#| fig-align: center
+#| out-width: 50%
 knitr::include_graphics(here::here("figs", "rstudio-create-proj-3.png"))
 ```
 
@@ -258,7 +273,11 @@ For example, I have a project looking at bat calls, so I called it `screech`, be
 
 And click "create project". 
 
-```{r rstudio-create-proj-4, echo = FALSE, fig.align = "center", out.width = "50%"}
+```{r}
+#| label: rstudio-create-proj-4
+#| echo: false
+#| fig-align: center
+#| out-width: 50%
 knitr::include_graphics(here::here("figs", "rstudio-create-proj-4.png"))
 ```
 
