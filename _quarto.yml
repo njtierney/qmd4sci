@@ -25,7 +25,7 @@ book:
   chapters:
     - "index.qmd"
     - "license.qmd"
-    - "why-rmd.qmd"
+    - "why-qmd.qmd"
     - "installation.qmd"
     - "rstudio.qmd"
     - "workflow.qmd"

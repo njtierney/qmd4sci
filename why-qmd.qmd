@@ -4,43 +4,45 @@ The goal of this section is to briefly discuss why we want to learn quarto, the 
 
 ## Overview
 
-* **Teaching** 3 minutes
-* **Exercises** 5 minutes
+-   **Teaching** 3 minutes
+-   **Exercises** 5 minutes
 
 ## Questions
 
-* What is the value in a reproducible report?
-* What is Markdown?
-* Can I combine my software and my writing?
+-   What is the value in a reproducible report?
+-   What is Markdown?
+-   Can I combine my software and my writing?
 
 ## Objectives
 
-* [Learn how to use Markdown](https://www.markdowntutorial.com/)
-* Think about why you want to use Markdown
+-   [Learn how to use Markdown](https://www.markdowntutorial.com/)
+-   Think about why you want to use Markdown
 
 ## Your Turn {.exercise}
 
-1. **Why are we here** Form small groups of 2-4 with your neighbours and discuss how you expect learning R Markdown might benefit you.
+1.  **Why are we here** Form small groups of 2-4 with your neighbours and discuss how you expect learning Quarto might benefit you.
 
 ## Reproducibility is a problem
 
-We are in a crisis at the moment where a lot of people cannot reproduce scientific work. This isn't just a few people, and it's not cheap. Estimates say that in the biomedical industry, in the USA, irreproducibility (not being able to reproduce a given piece of work) costs $28 Billion dollars annually [^1]. That's one country, one field, and one year.
+It is unfortunately a common, seemingly evergreen problem that a lot of people cannot reproduce scientific work. This might appear to be a "current" problem, but it has indeed been a problem throughout a lot of scientific history. To illustrate this, here's a nice article by [Rich FitzJohn](), , , , [Reproducible research is still a challenge](https://ropensci.org/blog/2014/06/09/reproducibility/), which was written 10 years ago, in 2014, and provides a list of the challenges and lessons learned in making research reproducible. The list is still relevant. This problem isn't completely solved. But, we can make it easier to solve, to get further.
 
-[^1]:The article, [Freedman, 2010](https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.1002165), Heard via Garret Grolemund's [great talk](https://www.youtube.com/watch?v=HVlwNayog-k)
+Reproducibility isn't just something that impacts a few people, and it's not cheap. A 2010 estimate stated that in the biomedical industry, in the USA, irreproducibility (not being able to reproduce a given piece of work) costs \$28 Billion dollars annually [^why-qmd-1]. That was one country, one field, and one year.
+
+[^why-qmd-1]: The article, [Freedman, 2010](https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.1002165), Heard via Garret Grolemund's [great talk](https://www.youtube.com/watch?v=HVlwNayog-k)
 
 So what can we do about it?
 
 ## Literate programming is a partial solution
 
-The idea of literate programming shines some light on this dark area of science. This is an idea from [Donald Knuth](https://en.wikipedia.org/wiki/Donald_Knuth) where you combine your text with your code output to create a document. This is a _blend_ of your literature (**text**), and your programming (**code**), to create something that you can read from top to bottom. Imagine your paper - the introduction, methods, results, discussion, and conclusion, and all the bits of code that make each section. With rmarkdown, you can see all the pieces of your data analysis all together.
+The idea of literate programming shines some light on this dark area of science. This is an idea from [Donald Knuth](https://en.wikipedia.org/wiki/Donald_Knuth) where you combine your text with your code output to create a document. This is a *blend* of your literature (**text**), and your programming (**code**), to create something that you can read from top to bottom. Imagine your paper - the introduction, methods, results, discussion, and conclusion, and all the bits of code that make each section. With rmarkdown, you can see all the pieces of your data analysis all together.
 
 #### Some history {.history}
 
-This was a popular idea, and it has had some interesting discussion and contributions over the years. Notably, in the R ecosystem, the _Sweave_ (S+weave) program provided a way to write text and code together. As with any technology, there were some speedbumps with using Sweave, and some of the reasons we are not teaching it now is because:
+This was a popular idea, and it has had some interesting discussion and contributions over the years. Notably, in the R ecosystem, the *Sweave* (S+weave) program provided a way to write text and code together. As with any technology, there were some speedbumps with using Sweave, and some of the reasons we are not teaching it now is because:
 
-* It uses a form of LaTeX, which provides great flexibility at the cost of complexity.
-* Printing figures involves additional work
-* There isn't a way to save (cache) your work. Every analysis has to be repeated from start to finish. This was time consuming.
+-   It uses a form of LaTeX, which provides great flexibility at the cost of complexity.
+-   Printing figures involves additional work
+-   There isn't a way to save (cache) your work. Every analysis has to be repeated from start to finish. This was time consuming.
 
 ## Markdown as a new player to legibility
 
@@ -50,7 +52,7 @@ In 2004, [John Gruber](https://en.wikipedia.org/wiki/John_Gruber), of [daring fi
 
 For example,
 
-```markdown
+``` markdown
 - bullet list
 - bullet list
 - bullet list
@@ -64,7 +66,7 @@ __bold__, **bold**, _italic_, *italic*
 > quote of something profound
 ```
 
-````
+````         
 ```r
 # computer code goes in three back ticks
 1 + 1
@@ -74,16 +76,15 @@ __bold__, **bold**, _italic_, *italic*
 
 Would be converted to:
 
+-   bullet list
+-   bullet list
+-   bullet list
 
-- bullet list
-- bullet list
-- bullet list
+1.  numbered list
+2.  numbered list
+3.  numbered list
 
-1. numbered list
-2. numbered list
-3. numbered list
-
-__bold__, **bold**, _italic_, *italic*
+**bold**, **bold**, *italic*, *italic*
 
 > quote of something profound
 
@@ -98,29 +99,49 @@ With very little marking up, we can create rich text, that **actually resembles*
 
 Some other nice features of Markdown include:
 
-|  feature        | markdown      | rendered     |
-|----------------:|--------------:|:-------------|
-|  superscript    |  `2^nd^`      | 2^nd^        |
-|  subscript      |  `CO~2~`      | CO~2~        |
-|  strikethrough  |  `~~mistake~~`| ~~mistake~~  |
-| links           | `[text](http:://www.example.com/your-link-goes-here)`| [text](http:://www.example.com/your-link-goes-here) |
-| images          | `![alternative text](link)` | `![alternative text](link)`|
+|       feature |                                              markdown | rendered                                            |
+|--------------------------:|-----------------------:|:---------------------|
+|   superscript |                                               `2^nd^` | 2^nd^                                               |
+|     subscript |                                               `CO~2~` | CO~2~                                               |
+| strikethrough |                                         `~~mistake~~` | ~~mistake~~                                         |
+|         links | `[text](http:://www.example.com/your-link-goes-here)` | [text](http:://www.example.com/your-link-goes-here) |
+|        images |                           `![alternative text](link)` | `![alternative text](link)`                         |
 
 <!-- | footnote(s)     | `[^4]` followed by `[^4]: footnote text goes here`.| [^4] followed by [^4]: footnote text goes here. | -->
 
-## What about Rmarkdown
+## What about Rmarkdown? {.history}
 
-TODO
+Issues around Sweave led to the development of [knitr](), and subsequently [Rmarkdown](), which used the knitr engine. You could run more than R code in rmarkdown, in fact there are [over 60 engines available](https://bookdown.org/yihui/rmarkdown/language-engines.html), from awk and bash, to haskell, perl, php, sql, scala, stata, javascript, python, julia, and even C.
+
+-   rmarkdown created many approaches to document processing. bookdown, blogdown, xaringan, ...
+
+However, there are a few points of friction:
+
+-   You need to call it from R to use it. No problem for R users, but what if you use python? Or javascript? If you are a python user, using R to use python just might not be in your workflow.
+-   There are great packages that provide extensions, such as blogdown for blogs, bookdown for books, and xaringan for slides. However, there are differences between these systems that might cause stumbles. Each of these systems is an iteration towards something awesome, and it’s only natural they might be a little bit different.
+-   quarto, instead of being an R package, is a separate piece of software, that you can call from the command line (terminal). This means other pieces of software can use it to create their own literate programming documents. Well, that’s my understanding.
+
+Here are some (very good, and definitely not bad diagrams) to illustrate this point:
+
+![Rmarkdown can talk to Python, but it works from within R](figs/r-knitr-rmd.jpeg){fig-alt="Rmarkdown can talk to Python, but it works from within R"}
+
+In rmarkdown, we are working in rmarkdown, and that uses knitr to talk to R and handle the document generation:
+
+But with quarto, we have this general interface, where quarto can talk to different programming languages. Not pictured, but the “R engine” is in fact, `knitr`:
+
+![quarto is a separate program](figs/quarto-all.jpeg)
 
 ## Your Turn {.exercise}
 
-1. **Learn to use Markdown** In your small groups, spend five minutes working through this [brief online Markdown tutorial](https://www.markdowntutorial.com/)
+1.  **Learn to use Markdown** In your small groups, spend five minutes working through this [brief online Markdown tutorial](https://www.markdowntutorial.com/)
 
-## R Markdown helps complete the solution to the reproducibility problem
+## Quarto helps complete the solution to the reproducibility problem
+
+UP TO HERE
 
 So, how do we combine this with our R code, into a literate programming environment?
 
-`rmarkdown` provides an environment where you can write your complete analysis, and marries your text, and code together into a rich document. You write your code as code chunks, put your text around that, and then hey presto, you have a document you can reproduce.
+`quarto` provides an environment where you can write your complete analysis, and marries your text, and code together into a rich document. You write your code as code chunks, put your text around that, and then hey presto, you have a document you can reproduce.
 
 For example, look at the following report:
 
@@ -144,7 +165,7 @@ How did we generate it?
 fit_coef = '`r fit_coef[1]`'  # an ugly hack; don't look at me
 ```
 
-```yaml
+``` yaml
 ---
 title: "Exploring gapminder"
 author: "Nicholas Tierney"
@@ -152,7 +173,7 @@ output: html_document
 ---
 ```
 
-````
+````         
 
 `r ''````{r library, message = FALSE}
 library(tidyverse)
@@ -190,7 +211,7 @@ knitr::kable(fit_coef,
 The effect of year on life expectancy is `r "\u0060r fit_coef$estimate[2]\u0060"`.
 ````
 
-We _render_ this code and it creates this report!
+We *render* this code and it creates this report!
 
 It has a plot, it has a table, we even refer to some of the values in the text - the last line of the report looks at the effect of year.
 
@@ -200,16 +221,16 @@ Say you'd created your report by hand in microsoft word, and with a graphical us
 
 You would need to:
 
-1. Go back to the GUI, re run the analysis
-1. Import the results into Excel
-1. Create your graph
-1. Copy the graph into Word
-1. Copy the results of the coefficients into the text
-1. Copy the results of the coefficient table into the text.
+1.  Go back to the GUI, re run the analysis
+2.  Import the results into Excel
+3.  Create your graph
+4.  Copy the graph into Word
+5.  Copy the results of the coefficients into the text
+6.  Copy the results of the coefficient table into the text.
 
 This is painful.
 
-And what if someone wants to know _exactly_ how you did your analysis?
+And what if someone wants to know *exactly* how you did your analysis?
 
 This process isn't exactly sharable.
 
@@ -243,13 +264,13 @@ That is why we use R Markdown.
 
 In this section we've learned about:
 
-- What the value is in a reproducible report
-- What is Markdown
-- How to combine software and writing
-- How to use Markdown
+-   What the value is in a reproducible report
+-   What is Markdown
+-   How to combine software and writing
+-   How to use Markdown
 
 ## Learning more
 
-- [rstudio's R Markdown cheatsheet](https://github.com/rstudio/cheatsheets/raw/master/rmarkdown-2.0.pdf)
+-   [rstudio's R Markdown cheatsheet](https://github.com/rstudio/cheatsheets/raw/master/rmarkdown-2.0.pdf)
 
-- [Bookdown's section on Markdown syntax](https://bookdown.org/yihui/bookdown/markdown-syntax.html)
+-   [Bookdown's section on Markdown syntax](https://bookdown.org/yihui/bookdown/markdown-syntax.html)
