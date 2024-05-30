@@ -29,7 +29,7 @@ book:
     - "installation.qmd"
     - "rstudio.qmd"
     - "workflow.qmd"
-    - "using-rmd.qmd"
+    - "using-qmd.qmd"
     - "pdf-html-word.qmd"
     - "keyboard-shortcuts.qmd"
     - "figures-tables-captions.qmd"

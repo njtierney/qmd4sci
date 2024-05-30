@@ -137,11 +137,9 @@ But with quarto, we have this general interface, where quarto can talk to differ
 
 ## Quarto helps complete the solution to the reproducibility problem
 
-UP TO HERE
-
 So, how do we combine this with our R code, into a literate programming environment?
 
-`quarto` provides an environment where you can write your complete analysis, and marries your text, and code together into a rich document. You write your code as code chunks, put your text around that, and then hey presto, you have a document you can reproduce.
+`quarto` provides an environment where you can write your complete analysis. It weaves your text, and code, and its output together into a single document.
 
 For example, look at the following report:
 
@@ -150,37 +148,31 @@ For example, look at the following report:
 #| echo: false
 #| out-width: 80%
 #| fig-align: center
-knitr::include_graphics("figs/rmd-report-example.png")
 # image generated with
-# webshot::webshot("file:///Users/ntie0001/github/njtierney/world-health-demo/book-demos/book-demo.html",
-#         here::here("figs", "rmd-report-example.png"))
-
+# webshot2::webshot(
+#   url = "https://html-preview.github.io/?url=https://raw.githubusercontent.com/njtierney/gapminder-demo/main/gapminder-demo.html",
+#   file = here::here("figs", "qmd-report-example.png"),
+#   vheight = 1600
+#   )
+knitr::include_graphics("figs/qmd-report-example.png")
 ```
 
 How did we generate it?
 
-```{r}
-#| label: fit-coef-ugle-hack
-#| include: false
-fit_coef = '`r fit_coef[1]`'  # an ugly hack; don't look at me
-```
-
-``` yaml
+````
 ---
 title: "Exploring gapminder"
 author: "Nicholas Tierney"
 output: html_document
 ---
-```
 
-````         
 
-`r ''````{r library, message = FALSE}
+```{r library, message = FALSE}
 library(tidyverse)
 library(broom)
 ```
 
-`r ''````{r data-read-in, message = FALSE}
+```{r data-read-in, message = FALSE}
 data <- read_csv(here::here("data/oz_gapminder.csv"))
 ```
 
@@ -188,27 +180,28 @@ data <- read_csv(here::here("data/oz_gapminder.csv"))
 
 let's look at the lifespan
 
-`r ''````{r hist-life-exp}
+```{r hist-life-exp}
 hist(data$lifeExp)
 ```
 
 Let's fit a simple linear model of the effect of year on life expectancy
 
-`r ''````{r example-lm}
+```{r example-lm}
 fit <- lm(lifeExp ~ year, data = data)
 fit
 ```
 
 And let's look at the coefficient table:
 
-`r ''````{r coef-table}
+```{r coef-table}
 library(broom)
 fit_coef <- tidy(fit)
 knitr::kable(fit_coef,
              caption = "A table of the coefficients")
 ```
 
-The effect of year on life expectancy is `r "\u0060r fit_coef$estimate[2]\u0060"`.
+The effect of year on life expectancy is `` `r  fit_coef$estimate[2]` ``.
+
 ````
 
 We *render* this code and it creates this report!
@@ -245,11 +238,13 @@ Just update the data, and render the document again, and get an updated document
 #| fig-align: center
 
 knitr::include_graphics(here::here("figs",
-"rmd-report-example-all-data.png"))
+"qmd-report-example-all.png"))
 # generated with this code
-# webshot::webshot("file:///Users/ntie0001/github/njtierney/world-health-demo/book-demos/book-demo.html",
-#      here::here("figs", "rmd-report-example-all-data.png"))
-
+# webshot2::webshot(
+#   url = "https://html-preview.github.io/?url=https://raw.githubusercontent.com/njtierney/gapminder-demo/main/gapminder-demo-all.html",
+#   file = here::here("figs", "qmd-report-example-all.png"),
+#   vheight = 1600
+#   )
 ```
 
 The results are different!
@@ -258,7 +253,7 @@ And we just pointed it to some different data. Then re-rendered it.
 
 That's it.
 
-That is why we use R Markdown.
+That is why we use Quarto
 
 ## Summary
 
@@ -271,6 +266,4 @@ In this section we've learned about:
 
 ## Learning more
 
--   [rstudio's R Markdown cheatsheet](https://github.com/rstudio/cheatsheets/raw/master/rmarkdown-2.0.pdf)
-
--   [Bookdown's section on Markdown syntax](https://bookdown.org/yihui/bookdown/markdown-syntax.html)
+-   [posit's Quarto cheatsheet](https://rstudio.github.io/cheatsheets/quarto.pdf)
