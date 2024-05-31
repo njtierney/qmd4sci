@@ -19,7 +19,7 @@
 
 ## What is RStudio, and why should I use it?
 
-If R is the engine and bare bones of your car, then RStudio is like _the rest of the car_. The engine is super critical part of your car. But in order to make things properly functional, you need to have a steering wheel, comfy seats, a radio, rear and side view mirrors, storage, and seatbelts. 
+If R is the engine and bare bones of your car, then RStudio is like _the rest of the car_. The engine is super critical part of your car. But in order to make things properly functional, you need to have a steering wheel, comfy seats, a radio, rear and side view mirrors, storage, and seatbelts.
 
 The RStudio layout has the following features:
 
@@ -40,7 +40,7 @@ We saw a bit of what an rmarkdown script does.
 
 The R console is the bit where you can run your code. This is where the R code in your rmarkdown document gets sent to run. 
 
-The file/plot/pkg viewer is a handy browser for your current files, like Finder, or File Explorer, plots are where your plots appear, you can view packages, see the help files.
+The file/plot/package viewer is a handy browser for your current files, like Finder, or File Explorer, plots are where your plots appear, you can view packages, see the help files.
 And the environment / history pane contains the list of things you have created, and the past commands that you have run.
 
 ## Exercise: RStudio default options {.exercise}
@@ -78,4 +78,4 @@ Additionally, not saving your history means that you won't be relying on things 
 
 ## Learning more
 
-- [RStudio IDE cheatsheet](https://github.com/rstudio/cheatsheets/raw/master/rstudio-ide.pdf)
+- [RStudio IDE cheatsheet](https://github.com/rstudio/cheatsheets/blob/main/rstudio-ide.pdf)
