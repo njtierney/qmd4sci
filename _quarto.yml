@@ -59,8 +59,6 @@ format:
     css: style.css
     toc: true
     fontsize: 12pt
-    monofont: "Source Code Pro"
-    toc-depth: 1
   pdf:
     documentclass: krantz
     keep-tex: true
