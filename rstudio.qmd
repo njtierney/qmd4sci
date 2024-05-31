@@ -33,7 +33,7 @@ The RStudio layout has the following features:
 #| label: rstudio-screenshot
 #| echo: false
 #| fig-cap: A screenshot of the RStudio working environment.
-knitr::include_graphics("figs/rstudio-screenshot.png")
+knitr::include_graphics(here::here("figs","rstudio-screenshot.jpeg"))
 ```
 
 We saw a bit of what an rmarkdown script does.
@@ -64,7 +64,7 @@ Under the **General** tab:
 #| fig-cap: Setting the options right for RStudio, so you don't restore previous sessions
 #|   work, and don't save it either.
 #| out-width: 50%
-knitr::include_graphics("figs/rstudio-remove-data.png")
+knitr::include_graphics(here::here("figs","rstudio-remove-data.png"))
 ```
 
 This means that you won't save the objects and other things that you create in your R session and reload them. This is important for two reasons
