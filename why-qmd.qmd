@@ -113,7 +113,7 @@ Some other nice features of Markdown include:
 
 Issues around Sweave led to the development of [knitr](), and subsequently [Rmarkdown](), which used the knitr engine. You could run more than R code in rmarkdown, in fact there are [over 60 engines available](https://bookdown.org/yihui/rmarkdown/language-engines.html), from awk and bash, to haskell, perl, php, sql, scala, stata, javascript, python, julia, and even C.
 
--   rmarkdown created many approaches to document processing. bookdown, blogdown, xaringan, ...
+-   Through rmarkdown there were many approaches to document processing, such as bookdown for books, blogdown for blogs and websites, xaringan for slide decks.
 
 However, there are a few points of friction:
 
@@ -121,7 +121,7 @@ However, there are a few points of friction:
 -   There are great packages that provide extensions, such as blogdown for blogs, bookdown for books, and xaringan for slides. However, there are differences between these systems that might cause stumbles. Each of these systems is an iteration towards something awesome, and it’s only natural they might be a little bit different.
 -   quarto, instead of being an R package, is a separate piece of software, that you can call from the command line (terminal). This means other pieces of software can use it to create their own literate programming documents. Well, that’s my understanding.
 
-Here are some (very good, and definitely not bad diagrams) to illustrate this point:
+Here are some diagrams to illustrate this point:
 
 ![Rmarkdown can talk to Python, but it works from within R](figs/r-knitr-rmd.jpeg){fig-alt="Rmarkdown can talk to Python, but it works from within R"}
 
@@ -210,9 +210,7 @@ It has a plot, it has a table, we even refer to some of the values in the text -
 
 But what if the data changes? At the moment we are looking at only Australia - say we get the full dataset, what happens then?
 
-Say you'd created your report by hand in microsoft word, and with a graphical user interface software.
-
-You would need to:
+Say you'd created your report by hand in microsoft word, and with a graphical user interface software, you would need to:
 
 1.  Go back to the GUI, re run the analysis
 2.  Import the results into Excel
@@ -227,7 +225,7 @@ And what if someone wants to know *exactly* how you did your analysis?
 
 This process isn't exactly sharable.
 
-But if you did it in R Markdown?
+But if you did it in quarto?
 
 Just update the data, and render the document again, and get an updated document:
 
@@ -247,7 +245,7 @@ knitr::include_graphics(here::here("figs",
 #   )
 ```
 
-The results are different!
+The results are updated!
 
 And we just pointed it to some different data. Then re-rendered it.
 
