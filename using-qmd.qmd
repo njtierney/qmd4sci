@@ -1,6 +1,6 @@
 # Using Quarto
 
-Now that we've covered how to organise your project, have some data, and talked a bit about what rmarkdown is, let's talk about using it.
+Now that we've covered how to organise your project, have some data, and talked a bit about what quarto is, let's talk about using it.
 
 ## Overview
 
@@ -16,23 +16,23 @@ Now that we've covered how to organise your project, have some data, and talked 
 
 ## Objectives
 
-* Create an Quarto document, do some basic exploration
+* Create a Quarto document, do some basic exploration
 
-## The anatomy of an rmarkdown document
+## The anatomy of a Quarto document
 
-This is an Quarto document (demo). It has three parts:
+This is a Quarto document (demo). It has three parts:
 
-* Metadata (YAML)
-* Text (markdown formatting)
-* Code (code formatting)
+1. Metadata (YAML)
+1. Text (markdown formatting)
+1. Code (code formatting)
 
 ### Metadata
 
 The metadata of the document tells you how it is formed - what the title is, what date to put, and other control information.  If you're familiar with LaTeX, this is kind of like how you specify the many options, what sort of document it is, what styles to use, etc at the front matter.
 
-Quarto documents use YAML (YAML Ain't Markup Language) to provide the metadata. It looks like this.
+Quarto documents use [YAML (YAML Ain't Markup Language)](https://en.wikipedia.org/wiki/YAML) to provide the metadata. It looks like this.
 
-```YAML
+```yaml
 ---
 title: "An example document"
 author: "Nicholas Tierney"
@@ -44,27 +44,7 @@ It starts and ends with three dashes `---`, and has fields like the following: `
 
 `title` and `author` are special inputs which place the title and author information at the top of the document in large font. They are optional!
 
-`format: html ` tells us we want this to be a HTML document - you'll see what this looks like in a moment!
-
-
-#### Some extra details
-
-The options in the YAML are actually passed down into the `render` function under the hood.
-
-This means that:
-
-```YAML
-format:
-  html:
-    toc: true
-    toc-depth: 2
-```
-
-is the same as:
-
-```r
-render(file.Rmd, output_format = html_document(toc = TRUE, toc_depth = 2))
-```
+`format: html ` tells us we want this to be a HTML formatted document - you'll see what this looks like in a moment!
 
 ### Text
 
@@ -96,7 +76,6 @@ __bold__, **bold**, _italic_, *italic*
 
 Would be converted to:
 
-
 - bullet list
 - bullet list
 - bullet list
@@ -119,17 +98,45 @@ __bold__, **bold**, _italic_, *italic*
 
 ### Code
 
-We refer to code in an rmarkdown document in two ways, code chunks, and inline code.
+We refer to code in an rmarkdown document in two ways: 
+
+1. Code chunks, and 
+1. Inline code.
 
 #### Code chunks
 
-Code chunks are marked by three backticks and curly braces with `r` inside them:
+Code chunks are marked by three backticks and curly braces. We put the letter `r` inside them to denote them as "r" code chunks, but you can instead use "python" and "julia" instead:
 
-````markdown
-```{r chunk-name}`r ''`
+::: {.panel-tabset}
+
+## r 
+
+````
+```{r}
+#| label: chunk-name
 # a code chunk
 ```
 ````
+
+## python
+
+````
+```{python}
+#| label: chunk-name
+# a code chunk
+```
+````
+
+## julia
+
+````
+```{julia}
+#| label: chunk-name
+# a code chunk
+```
+````
+
+::: 
 
 **a backtick** is a special character you might not have seen before, it is typically located under the tilde key (`~`). On USA / Australia keyboards, is under the escape key:
 
@@ -149,19 +156,24 @@ Every chunk should ideally have a name. As I've mentioned earlier, naming things
 * one word that describes the thing inside the code (e.g, "gapminder")
 * separate words with "-" or "_" (e.g., `read-gapminder`)
 
+UP TO HERE
+
 ## Code chunk options
 
 You can control how the code is output by changing the code chunk options which follow the title. 
 
-````markdown
-```{r read-gapminder, eval = FALSE, echo = TRUE}`r ''`
+````
+```{r}
+#| label: read-gapminder
+#| eval: false
+#| echo: true
 gap <- read_csv("gapminder.csv")
 ```
 ````
 
 The ones that you need to know about right now are:
 
-  * `cache`: TRUE / FALSE. Do you want to save the output of the chunk so it doesn't have to run next time?
+  * `cache`: true / false Do you want to save the output of the chunk so it doesn't have to run next time?
   * `eval`: Do you want to evaluate the code?
   * `echo`: Do you want to print the code?
   * `include`: Do you want to include code output in the final output document? Setting to `FALSE` means nothing is put into the output document, but the code is still run.
