@@ -70,7 +70,7 @@ This is painful. And when you do this all the time, it gets old, fast.
 So, this might all be a bit confusing if you don't know what a file path is. A file path is the machine-readable directions to where files on your computer live. So, the file path:
 
 ```
-/Users/njtierney/Desktop/rmd4sci-materials/demo.R
+/Users/njtierney/Desktop/qmd4sci-materials/demo.R
 ```
 
 Describes the location of the file "demo.R". This could be visualised as:
@@ -79,11 +79,11 @@ Describes the location of the file "demo.R". This could be visualised as:
 users
   └── njtierney
       └── Desktop
-          └──  rmd4sci-materials
+          └──  qmd4sci-materials
                └── demo.R << THIS IS THE FILE HERE
                └── exercises
                └── exploratory-data-analysis
-                   └── eda-document.Rmd
+                   └── eda-document.qmd
                    └── eda-script.R
                └──  data
                     └──  gapminder.csv
@@ -93,7 +93,7 @@ users
 #| label: tree-elbow
 #| eval: false
 #| echo: false
-file_dir <- "Desktop/rmd4sci-materials/demo-gapminder.Rmd"
+file_dir <- "Desktop/qmd4sci-materials/demo-gapminder.Rmd"
 
 gsub(pattern = "/", 
      replacement = "\n└──  ", 
@@ -105,12 +105,12 @@ gsub(pattern = "/",
 So, if you want to read in the `gapminder.csv` file, you might need to write code like this:
 
 ```r
-gapminder <- read_csv("/Users/njtierney/Desktop/rmd4sci-materials/data/gapminder.csv")
+gapminder <- read_csv("/Users/njtierney/Desktop/qmd4sci-materials/data/gapminder.csv")
 ```
 
 As we now know, this is a problem, because this is not portable code.
 
-If you have an RStudio project file inside the `rmd4sci-materials` folder, you can instead write the following:
+If you have an RStudio project file inside the `qmd4sci-materials` folder, you can instead write the following:
 
 ```r
 gapminder <- read_csv("data/gapminder.csv")
@@ -121,17 +121,17 @@ gapminder <- read_csv("data/gapminder.csv")
 * (1-2 minutes) Imagine you see the following directory path: `"/Users/miles/etc1010/week1/data/health.csv"`
 what are the folders above the file, `health.csv`?
 
-* What would be the result of using the following code in `demo-gapminder.Rmd`, and then using the code, and then moving this to another location, say inside your C drive?
+* What would be the result of using the following code in `demo-gapminder.qmd`, and then using the code, and then moving this to another location, say inside your C drive?
 
 ```r
-setwd("Downloads/etc1010/week1/week1.Rmd)
+setwd("Downloads/etc1010/week1/week1.qmd)
 ```
 
 ## Is there an answer to the madness?
 
 This file path situation is a real pain. Is there an answer to the madness?
 
-The answer is yes!
+The answer is **yes**!
 
 I highly recommend when you start on a new idea, new research project, paper. Anything that is new. It should start its life as an **rstudio project**. 
 
@@ -159,10 +159,10 @@ Let's open one together.
 
 ## Your Turn: Use your own rstudio project {.exercise}
 
-1. In RStudio, and run the following code to start a new rstudio project called "rmd4sci-materials".
+1. In RStudio, and run the following code to start a new rstudio project called "qmd4sci-materials".
 
 ```r
-usethis::use_course("bit.ly/rmd4sci-materials")
+usethis::use_course("njtierney/qmd4sci-materials")
 ```
 
 2. Follow the prompts to download this to your desktop and then run the rstudio project. (You can move it later if you like!)
@@ -175,7 +175,7 @@ usethis::use_course("bit.ly/rmd4sci-materials")
 2. Why does the `read_csv` code work?
 3. Run the code inside the `exploratory-data-analysis` folder - `eda-script.R`.
 4. Does the `read_csv` code work?
-5. Run the code inside the `exploratory-data-analysis` folder - `eda-document.Rmd`, by clicking the "knit" button (we'll go into this in more detail soon!)
+5. Run the code inside the `exploratory-data-analysis` folder - `eda-document.qmd`, by clicking the "render" button (we'll go into this in more detail soon!)
 6. Does it work?
 
 ## The "here" package
@@ -189,7 +189,7 @@ here::here("data")
 returns
 
 ```
-[1] "/Users/njtierney/Desktop/rmd4sci-materials/data"
+[1] "/Users/nick/github/njtierney/qmd4sci-materials/data"
 ```
 
 And 
@@ -201,7 +201,7 @@ here::here("data", "gapminder.csv")
 returns
 
 ```
-[1] "/Users/njtierney/Desktop/rmd4sci-materials/data/gapminder.csv"
+[1] "/Users/nick/github/njtierney/qmd4sci-materials/data/gapminder.csv"
 ```
 
 (Note that these absolute file paths will indeed be different on my computer compared to yours - super neat!)
@@ -213,7 +213,8 @@ You can read the above `here` code as:
 This is really handy for a few reasons:
 
 1. It makes things _completely_ portable
-1. Rmarkdown documents have a special way of looking for files, this helps eliminate file path pain.
+<!-- TODO - what are quarto's rules for looking for files? -->
+1. quarto documents have a special way of looking for files, this helps eliminate file path pain.
 1. If you decide to not use RStudio projects, you have code that will work on _any machine_
 
 ## Remember
@@ -226,6 +227,8 @@ setwd("C:\Users\jenny\path\that\only\I\have")
 
 -- Jenny Bryan
 
+
+UP TO HERE
 
 ### Aside: Creating an RStudio project {.history}
 
@@ -281,7 +284,7 @@ And click "create project".
 knitr::include_graphics(here::here("figs", "rstudio-create-proj-4.png"))
 ```
 
-D# Summary
+# Summary
 
 In this lesson we've:
 
