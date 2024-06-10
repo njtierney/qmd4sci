@@ -109,29 +109,29 @@ Code chunks are marked by three backticks and curly braces. We put the letter `r
 
 ::: {.panel-tabset}
 
-## r 
+## R
 
-````
+````{verbatim, lang = "r"}
 ```{r}
-#| label: chunk-name
+#| label: r-chunk-name
 # a code chunk
 ```
 ````
 
 ## python
 
-````
+````{verbatim, lang = "python"}
 ```{python}
-#| label: chunk-name
+#| label: py-chunk-name
 # a code chunk
 ```
 ````
 
 ## julia
 
-````
+````{verbatim, lang = "julia"}
 ```{julia}
-#| label: chunk-name
+#| label: julia-chunk-name
 # a code chunk
 ```
 ````
@@ -156,11 +156,9 @@ Every chunk should ideally have a name. As I've mentioned earlier, naming things
 * one word that describes the thing inside the code (e.g, "gapminder")
 * separate words with "-" or "_" (e.g., `read-gapminder`)
 
-UP TO HERE
-
 ## Code chunk options
 
-You can control how the code is output by changing the code chunk options which follow the title. 
+You can control how the code is output by changing the code chunk options, which are written with a `#|`, called a "hash-pipe", since `#` is "hash", and `|` is "pipe", but might sometimes be called "bar" or "v-bar".
 
 ````
 ```{r}
@@ -171,12 +169,18 @@ gap <- read_csv("gapminder.csv")
 ```
 ````
 
-The ones that you need to know about right now are:
+A nice feature of quarto + Rstudio is that they provide code completion when you start writing the code chunk options, and they will provide options when hitting "tab". 
+
+*gif showing autocomplete*
+
+In the past Rmarkdown required "TRUE" and "FALSE", but note that quarto always uses "true" or "false" in lowercase, and never "yes" or "no".
+
+The code chunks you need to know about right now are:
 
   * `cache`: true / false Do you want to save the output of the chunk so it doesn't have to run next time?
-  * `eval`: Do you want to evaluate the code?
-  * `echo`: Do you want to print the code?
-  * `include`: Do you want to include code output in the final output document? Setting to `FALSE` means nothing is put into the output document, but the code is still run.
+  * `eval`: true/false Do you want to evaluate the code?
+  * `echo`: true/false Do you want to print the code?
+  * `include`: Do you want to include code output in the final output document? Setting to `false` means nothing is put into the output document, but the code is still run.
   
 <!-- What are messages, warnings, errors, results? -->
 
@@ -187,7 +191,7 @@ The ones that you need to know about right now are:
 
 <!--   * results: option 'hold' will wait until the code chunk is complete and then  -->
   
-You can read more about the options at the official documentation: https://yihui.name/knitr/options/#code-evaluation
+You can read more about the options at the official documentation: https://quarto.org/docs/computations/execution-options.html
 
 ### Inline code
 
@@ -197,14 +201,90 @@ You might want to run the code inline to name the number of variables or rows in
 
 > There are XXX observations in the airquality dataset, and XXX variables.
 
-You can call code "inline"  like so:
+You can call code "inline"  with the pattern:
 
-````markdown
+UP TO HERE
 
-There are `r "\u0060r nrow(airquality) \u0060"` observations in the airquality dataset, 
-and `r "\u0060r 'ncol(airquality) \u0060"` variables.
+```
+Here are some code things with language "lang": `` `{lang} code` ``.
+```
+
+Essentially instead of using three backticks to write multiple lines of code, you use a single backtick. You can think of this as a backtick being used inside text for a one liner, whereas creating a code fence with three backticks indicates something longer.
+
+```{python}
+import rdatasets
+```
+
+
+
+::: {.panel-tabset group="engine"}
+
+## Python
+
+
+
+```` markdown
+```{{python}}
+radius = 5
+```
+
+The radius of the circle is `{python} radius`
+````
+
+This syntax works for any Jupyter kernel---so for Julia you would write an inline expression as `` `{julia} radius` ``).
+
+## Knitr
+
+```` markdown
+```{{r}}
+radius <- 5
+```
+
+The radius of the circle is `{r} radius`
+````
+
+## OJS
+
+```` markdown
+```{{ojs}}
+radius = 5
+```
+
+The radius of the circle is `{ojs} radius`
+````
+:::
+
+
+::: {.panel-tabset}
+
+## R
+
+````{verbatim, lang = "r"}
+
+There are `` `r nrow(airquality)` `` observations in the airquality dataset, 
+and `` `r ncol(airquality)` `` variables.
 
 ````
+
+## python
+
+````{verbatim, lang = "python"}
+```{python}
+#| label: py-chunk-name
+# a code chunk
+```
+````
+
+## julia
+
+````{verbatim, lang = "julia"}
+```{julia}
+#| label: julia-chunk-name
+# a code chunk
+```
+````
+
+::: 
 
 Which gives you the following sentence
 

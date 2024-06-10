@@ -2,32 +2,82 @@
 
 There are some things that I run into fairly frequently (and some not so much) when I'm rendering my rmarkdown documents. This section details some the common problems, and the solution that I have found works for me.
 
-If you want to practice on fixing broken rmarkdown documents, check out some pathologically broken examples on github at [njtierney/rmd-errors](https://github.com/njtierney/rmd-errors).
+If you want to practice on fixing broken rmarkdown documents, check out some pathologically broken examples on github at
+
+<!-- [njtierney/rmd-errors](https://github.com/njtierney/rmd-errors). -->
+
+[njtierney/qmd-errors](https://github.com/njtierney/qmd-errors).
 
 ## Avoiding problems
 
 To avoid problems in the first place, I try and do the following:
 
-- Develop code in chunks and execute the chunks until they work, then move on.
-- knit the document regularly to check for errors.
+-   Develop code in chunks and execute the chunks until they work, then move on.
+-   knit the document regularly to check for errors.
 
 Then, if there is an error:
 
-- recreate the error in an interactive session:
-    - restart R
-    - run all chunks below
-    - find the chunk that did not work, fix until it does
-    - run all chunks below
-    - explore working directory issues
-      - remember that the rmarkdown directory is where the .Rmd file lives
+-   recreate the error in an interactive session:
+    -   restart R
+    -   run all chunks below
+    -   find the chunk that did not work, fix until it does
+    -   run all chunks below
+    -   explore working directory issues
+        -   remember that the rmarkdown directory is where the .Rmd file lives
 
 ## The errors
 
 What follows from here are all the errors you might in an rmarkdown document, with the following structure:
 
-- What they might look like
-- What the error message might appear to be, and 
-- How to solve them
+-   What they might look like
+-   What the error message might appear to be, and
+-   How to solve them
+
+## Python not found
+
+An error like:
+
+```         
+Error:
+! /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/config-3.7m-darwin/libpython3.7.dylib - dlopen(/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/config-3.7m-darwin/libpython3.7.dylib, 0x000A): tried: '/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/config-3.7m-darwin/libpython3.7.dylib' (mach-o file, but is an incompatible architecture (have 'x86_64', need 'arm64e' or 'arm64')), '/System/Volumes/Preboot/Cryptexes/OS/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/config-3.7m-darwin/libpython3.7.dylib' (no such file), '/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/config-3.7m-darwin/libpython3.7.dylib' (mach-o file, but is an incompatible architecture (have 'x86_64', need 'arm64e' or 'arm64')), '/Library/Frameworks/Python.framework/Versions/3.7/Python' (mach-o file, but is an incompatible architecture (have 'x86_64', need 'arm64e' or 'arm64')), '/System/Volumes/Preboot/Cryptexes/OS/Library/Frameworks/Python.framework/Versions/3.7/Python' (no such file), '/Library/Frameworks/Python.framework/Versions/3.7/Python' (mach-o file, but is an incompatible architecture (have 'x86_64', need 'arm64e' or 'arm64')), '/System/Library/Frameworks/Python.framework/Versions/3.7/Python' (no such file, not in dyld cache)
+
+Backtrace:
+  1. global .main()
+  2. execute(...)
+  3. rmarkdown::render(...)
+  4. knitr::knit(knit_input, knit_output, envir = envir, quiet = quiet)
+  5. knitr:::process_file(text, output)
+     ...
+ 17. reticulate:::initialize_python()
+ 18. base::tryCatch(...)
+ 19. base (local) tryCatchList(expr, classes, parentenv, handlers)
+ 20. base (local) tryCatchOne(expr, names, parentenv, handlers[[1L]])
+ 21. value[[3L]](cond)
+```
+
+This error went away when I installed python - I went to https://www.python.org/downloads/ and followed the prompts
+
+![](images/clipboard-3981398633.png)
+
+## No julia
+
+```
+Error in `loadNamespace()`:
+! there is no package called 'JuliaCall'
+Backtrace:
+  1. global .main()
+ 14. base::loadNamespace(x)
+ 15. base::withRestarts(stop(cond), retry_loadNamespace = function() NULL)
+ 16. base (local) withOneRestart(expr, restarts[[1L]])
+ 17. base (local) doWithOneRestart(return(expr), restart)
+```
+
+Fix: Install `JuliaCall` R package:
+
+```r
+install.packages("JuliaCall")
+```
+
 
 ## "Duplication": Duplicated chunk names
 
@@ -35,21 +85,20 @@ What follows from here are all the errors you might in an rmarkdown document, wi
 
 Chunks like this:
 
-````markdown
+```` markdown
 
 ```{r title-one}`r ''`
 ```
 
 ```{r title-one}`r ''`
 ```
-
 ````
 
 **The error message**
 
 This is caught before the document compiles with a warning like:
 
-```
+```         
 processing file: common-problems.Rmd
 Error in parse_block(g[-1], g[1], params.src) : 
   duplicate label 'title-one'
@@ -63,7 +112,7 @@ Execution halted
 
 The important part to note is the start:
 
-```
+```         
 .
 .
 .
@@ -76,31 +125,29 @@ Error in parse_block(g[-1], g[1], params.src) :
 
 **How to solve**
 
-* In our case we have the same chunk name twice: 'title-one'. Change the chunk name of one of them!
+-   In our case we have the same chunk name twice: 'title-one'. Change the chunk name of one of them!
 
 ## "Not what I ordered": Objects not created in the right order
 
 **What it might look like**
 
-```r
+``` r
 plot(my_table)
 
 my_table <- table(mtcars$cyl)
 ```
 
-
 **The error message**
 
 **How to solve**
 
-## "Forgotten Trails I":  Missing ",", or "(", "}", or "'"
+## "Forgotten Trails I": Missing ",", or "(", "}", or "'"
 
 **What it might look like**
 
 **The error message**
 
 **How to solve**
-
 
 ## "Forgotten Trails II": Chunk option with trailing ", or not input
 
@@ -108,7 +155,7 @@ my_table <- table(mtcars$cyl)
 
 **The error message**
 
-```
+```         
 processing file: rstudio.Rmd
 (*) NOTE: I saw chunk options "fig-rstudio-workspace-options, fig.cap = "Setting the options right for rstudio, so you don't restore previous sessions work, and don't save it either."
  please go to https://yihui.name/knitr/options
@@ -120,15 +167,15 @@ Error in parse(text = code, keep.source = FALSE) :
 
 **How to solve it?**
 
-* The easiest way is to do Cmd+Shift+F, which opens up a global search in your rstudio project, and then type in the offending string mentioned in the NOTE. In this case, I would search for the partial string `"fig.cap = "Setting the options right for rstudio, so you don't restore previous sessions work, and`. I search for the partial string because there might be parts at the end of the error message that aren't in the text.
+-   The easiest way is to do Cmd+Shift+F, which opens up a global search in your rstudio project, and then type in the offending string mentioned in the NOTE. In this case, I would search for the partial string `"fig.cap = "Setting the options right for rstudio, so you don't restore previous sessions work, and`. I search for the partial string because there might be parts at the end of the error message that aren't in the text.
 
-## "Forgotten Trail III": 
+## "Forgotten Trail III":
 
 **What it might look like**
 
 **The error message**
 
-```
+```         
 processing file: figures-tables-captions.Rmd
 (*) NOTE: I saw chunk options "read-gapminder include = FALSE, echo = FALSe"
  please go to https://yihui.name/knitr/options
@@ -141,24 +188,23 @@ Error in parse(text = code, keep.source = FALSE) :
 
 **How to solve**
 
-This error message is pretty good, I needed to add a comma after my chunk name. 
+This error message is pretty good, I needed to add a comma after my chunk name.
 
 So, go from:
 
-````markdown
+```` markdown
 `r ''````{r read-gapminder include = FALSE, echo = FALSE}
 gapminder <- readr::read_csv(here::here("data", "gapminder.csv"))
 ```
 ````
 
-to 
+to
 
-````markdown
+```` markdown
 `r ''````{r read-gapminder, include = FALSE, echo = FALSE}
 gapminder <- readr::read_csv(here::here("data", "gapminder.csv"))
 ```
 ````
-
 
 ## "The Path Not Taken" File path incorrect
 
@@ -174,13 +220,13 @@ These are often not an error, but you just won't get the behaviour that you expe
 
 **What it might look like**
 
-* `fig.caption` instead of `fig.cap`. This once caused me to rewrite a lot of code and an entire section of a paper until I realised the problem.
+-   `fig.caption` instead of `fig.cap`. This once caused me to rewrite a lot of code and an entire section of a paper until I realised the problem.
 
 **The error message**
 
 **How to solve**
 
-* There might be a switch you can flick to ask `knitr` to solve
+-   There might be a switch you can flick to ask `knitr` to solve
 
 ## "Spolling II" Incorrectly spelled chunk option inputs
 
@@ -190,7 +236,7 @@ So this is when you provide the wrong input to your chunk options. Like somethin
 
 **The error message**
 
-```
+```         
 Quitting from lines 31-32 (figures-tables-captions.Rmd) 
 Error in eval(x, envir = envir) : object 'FALSe' not found
 Calls: local ... process_group.block -> call_block -> eval_lang -> eval -> eval
@@ -205,18 +251,17 @@ Execution halted
 
 What was the problem? Turns out I provided the option `FALSe` instead of `FALSE`.
 
-
 Go from:
 
-````markdown
+```` markdown
 `r ''````{r read-gapminder include = FALSE, echo = FALSe}
 gapminder <- readr::read_csv(here::here("data", "gapminder.csv"))
 ```
 ````
 
-to 
+to
 
-````markdown
+```` markdown
 `r ''````{r read-gapminder, include = FALSE, echo = FALSE}
 gapminder <- readr::read_csv(here::here("data", "gapminder.csv"))
 ```
@@ -244,13 +289,13 @@ Check out this great [blog post by T. Hovorka from R Views](https://rviews.rstud
 
 It boils down to this:
 
-<span style="color:blue">``` `r "\u0060\u0060 \u0060r \"\\u0060r expression\\u0060\"\u0060 \u0060\u0060"` ```</span>.
+[`` `r "\u0060\u0060 \u0060r \"\\u0060r expression\\u0060\"\u0060 \u0060\u0060"` ``]{style="color:blue"}.
 
 ## My Figure or Table isn't being cited
 
 **What it might look like**
 
-You create a figure, 
+You create a figure,
 
 **The error message**
 
@@ -262,4 +307,4 @@ You need to make sure that you actually print the table or plot. If you create t
 
 ## Your Turn {.exercise}
 
-1. Go to this repo [njtierney/rmd-errors](https://github.com/njtierney/rmd-errors), and give debugging some of these common rmarkdown errors a go.
+1.  Go to this repo [njtierney/rmd-errors](https://github.com/njtierney/rmd-errors), and give debugging some of these common rmarkdown errors a go.
