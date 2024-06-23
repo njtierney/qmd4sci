@@ -1,6 +1,6 @@
 # Math
 
-Want to include equations in your writing? Easy. rmarkdown supports
+Want to include equations in your writing? Easy. Quarto supports
 LaTeX style equation writing. This section introduces the two types equations, inline, and display form, and how to number equations.
 
 ## Overview
@@ -40,8 +40,6 @@ $$
 E = mc^2
 $$
 ```
-
-<!-- TODO: will need to display the unevaluated LaTeX code? -->
 
 $$
 E = mc^2
@@ -167,6 +165,6 @@ $$
 
 ## Further Reading:
 
-https://bookdown.org/yihui/bookdown/markdown-extensions-by-bookdown.html#equations
+https://quarto.org/docs/visual-editor/technical.html#equations
 https://oeis.org/wiki/List_of_LaTeX_mathematical_symbols
 
