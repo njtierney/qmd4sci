@@ -9,8 +9,8 @@ You need figures and tables in your own writing, whether it be a journal paper, 
 
 ## Questions
 
-* How do I create a figure in rmarkdown?
-* How do I create a table in rmarkdown?
+* How do I create a figure in Quarto?
+* How do I create a table in Quarto?
 * How do I add captions for figures and tables?
 
 ## Objectives
@@ -198,7 +198,7 @@ knitr::include_graphics(here::here("figs", "ssa-logo.png"))
 
 ### Your Turn {.exercise}
 
-1. Download [the gapminder logo](https://www.gapminder.org/wp-content/themes/gapminder/images/logo.png) and put it into a new directory call "figs"
+1. Download [the gapminder logo](https://www.gapminder.org/wp-content/themes/gapminder2/images/gapminder-logo.svg) and put it into a new directory call "figs"
 1. Insert this image into your rmarkdown document around where you introduce gapminder.
 
 ## Summary
