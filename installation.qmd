@@ -1,6 +1,6 @@
 # Installation
 
-In this section, the aim is to have everyone setup with R, RStudio, and quarto
+In this section, the aim is to have everyone setup with R, RStudio, and Quarto
 
 ## Overview
 
