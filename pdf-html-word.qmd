@@ -1,6 +1,6 @@
 # HTML, PDF, and Word (and more!)
 
-One of the really great, powerful things about rmarkdown is that we can convert it to many different output types. The top three that you might be most likely to use are HTML, PDF, and Microsoft Word. There are others that we can discuss later.
+One of the great things about Quarto is that we can convert it to many different output types. The top three that you might be most likely to use are HTML, PDF, and Microsoft Word. There are others that we can discuss later.
 
 In this section, we are going to briefly discuss how to render to these output formats, and some things that you might want to do for each of them.
 
@@ -21,13 +21,13 @@ In this section, we are going to briefly discuss how to render to these output f
 
 Here are three ways to do this:
 
-1. You can control this in the "knit" button
+1. You can control this in the "render" button
 
 ```{r}
 #| label: knit-screenshot
 #| eval: true
 #| echo: false
-knitr::include_graphics("figs/rstudio-knit-button.png")
+knitr::include_graphics("figs/rstudio-render-button.png")
 ```
 
 You might notice that depending on the option you select, this changes things in the YAML - which is another way to control which output you have:
@@ -36,29 +36,26 @@ You might notice that depending on the option you select, this changes things in
 
 ```YAML
 title: "Exploring gapminder"
-output: html_document
+format: html
 ```
 
 ```YAML
 title: "Exploring gapminder"
-output: pdf_document
+format: pdf
 ```
 
 ```YAML
 title: "Exploring gapminder"
-output: word_document
+format: docx
 ```
 
-And if we remember from the previous lesson, the information in the YAML is passed into the `render` function:
+3. You can call the `quarto render` function - from the terminal if you wish
 
-3. You can call the `render` function.
-
-```{r}
-#| label: rmd-render
+```{shell}
+#| label: qmd-render
 #| eval: false
-rmarkdown::render("example.Rmd", output_format = "html_document")
-rmarkdown::render("example.Rmd", output_format = "pdf_document")
-rmarkdown::render("example.Rmd", output_format = "word_document")
+quarto render example.qmd --to html
+quarto render example.qmd --to docx
 ```
 
 ### A note on workflow with rmarkdown: HTML first, PDF/word later
