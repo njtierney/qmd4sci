@@ -1,4 +1,4 @@
-# Citing Figures, Tables & Sections {#start}
+# Citing Figures, Tables & Sections {#sec-start}
 
 When you're writing a report, you often refer to a table or figure in text. 
 
@@ -54,69 +54,54 @@ There is a way to solve this, which this lesson discusses.
 
 * Link to tables or figures in text.
 
-## How to refer to tables and figures in text? {.demo}
+## How to refer to tables and figures in text? (demo)
 
-In order to use this referencing style, you must use the following in the YAML
+- Tables are referenced in text with `@tbl-label`
+- Figures are references in text with `@fig-label`
 
-```
-output:
-  bookdown::pdf_document2
-```
+Importantly here, for these two above examples to work, the things that they are referring to must have the exact label `tbl-label` and `fig-label`, respectively.
 
-Or for HTML:
-
-```
-output:
-  bookdown::html_document2
-```
-
-Or for word:
-
-```
-output:
-  bookdown::word_document2
-```
-
-This is a new version of document that supports a better way to reference things in text.
-This reads as:
-
-> Make the output the HTML/PDF/Word document from the bookdown package.
-
-That is, the special `::` after `bookdown`, `bookdown::html_document2` read as "The html_document2 function from the bookdown package".
-
-## Your Turn {.exercise}
-
-1. Convert your output to use `bookdown::html_document2` in your YAML.
-
-## Referencing a figure
-
-To refer to a figure, you write the following in your text:
-
-`Figure \@ref(fig:chunk-name)`
-
-### Demo {.demo}
-
-````markdown
-`r ''````{r gg-oz-plot, fig.cap = "Life expectancy from 1952 - 2007 for Australia. Life expentancy increases steadily except from 1962 to 1969. We can safely say that our life expectancy is higher than it has ever been!"}
-library(ggplot2)
-library(dplyr)
-gapminder %>%
-  filter(country == "Australia") %>%
-  ggplot(aes(x = year,
-             y = lifeExp)) + 
-  geom_point()
-```
-
-Australia's life expectancy has increased a great deal over the past 50 years
-
-(See Figure \@ref(fig:gg-oz-plot))
-
-````
+So, in order to use this referencing style, you must use specific labelling of your code chunks. For example, if you have some code like this:
 
 ```{r}
-#| label: gg-oz-plot
+#| echo: fenced
+#| label: example-figure
+image(volcano)
+```
+
+Then you cannot reference this figure in text - `@example-figure` does not work: @example-figure.
+
+It would need to have a label like:
+
+```{r}
+#| echo: fenced
+#| label: fig-example
+image(volcano)
+```
+
+Then you can reference it with: `@fig-example` - @fig-example.
+
+Also note that there are a variety of ways to specify the figure:
+
+- `@fig-example`: @fig-example
+- `@Fig-example`: @Fig-example
+- `[Fig @fig-example]`: [Fig @fig-example]
+- `-@fig-example`: Figure -@fig-example
+
+(reference here: https://quarto.org/docs/authoring/cross-references.html#references)
+
+
+## Your Turn (exercise)
+
+1. Convert your output to use `fig` prefixes to reference figures
+
+### Demo (.demo)
+
+```{r}
+#| label: fig-gg-oz
+#| echo: fenced
 #| fig-cap: Life expectancy from 1952 - 2007 for Australia. Life expectancy increases
-#|   steadily except from 1962 to 1969. We can safely say that our life expectancy is
+#|   steadily except from 1962 to 1969. We can safely say our life expectancy is
 #|   higher than it has ever been!
 library(ggplot2)
 library(dplyr)
@@ -127,7 +112,7 @@ gapminder %>%
   geom_point()
 ```
 
-Australia's life expectancy has increased a great deal over the past 50 years (See Figure \@ref(fig:gg-oz-plot))
+Australia's life expectancy has increased a great deal over the past 50 years (See Figure -@fig-gg-oz.
 
 ### Your Turn {.exercise}
 
@@ -137,75 +122,57 @@ Australia's life expectancy has increased a great deal over the past 50 years (S
 
 To cite a table, you write the following:
 
-`Table \@ref(tab:chunk-name)`
-
-````markdown
-`r ''````{r gg-oz-tab}
-gapminder %>%
-  filter(country == "Australia") %>%
-  knitr::kable(caption = "Raw gapminder data for Australia.")
-```
-````
-
-We can see below in Table \@ref(tab:gg-oz-tab) the raw data used to create Figure \@ref(fig:gg-oz-plot)).
+`@tbl-chunk-name`
 
 ```{r}
-#| label: gg-oz-tab
+#| label: tbl-gg-oz-tab
+#| echo: fenced
 gapminder %>%
   filter(country == "Australia") %>%
   knitr::kable(caption = "Raw gapminder data for Australia.")
 ```
 
-### Your Turn {.exercise}
+`@tbl-chunk-name`
+
+Reference: https://quarto.org/docs/authoring/cross-references.html#tables
+
+## Other things you can reference
+
+You can also reference theorems, code, proofs, and equations! See https://quarto.org/docs/authoring/cross-references.html#theorems-and-proofs for more details.
+
+### Your Turn (exercise)
 
 1. Create a table in your document and refer to it in text
 
 ## Referencing a section
 
-You can even reference a section in your report:
+You can even reference a section in your report: `@sec-slug`
 
-`\@ref(slug)`
-
-However, in order to write this, you need to include `slug` in your markdown header, like so:
+However, in order to write this, you need to include `sec-slug` in your markdown header, like so:
 
 ```
-## your amazing header {#slug}
+## your amazing header {#sec-slug}
 ```
 
-For example, I can refer to the first section (Section \@ref(start)) in this document by referring to the section as 
+You must also include `number-section` in your YAML:
 
-`\@ref(start)`
+```r
+---
+title: "example"
+number-sections: true
+---
+```
+
+For example, I can refer to the first section (Section @sec-start) in this document by referring to the section as 
+
+`(Section @sec-start)`
 
 because it was written as:
 
 ```
-# Citing Figures, Tables & Sections {#start}
-```
-
-**One note here - your slug can not start with a number**. Otherwise, it will print out the slug. So the following would not work:
-
-```
-## 10 rules {#10-rules}
-```
-
-You should instead write:
-
-```
-## 10 rules {#ten-rules}
+# Citing Figures, Tables & Sections {#sec-start}
 ```
 
 ### Your Turn {.exercise}
 
 1. Reference a section in the report.
-
-## One small note
-
-If you are using a template of some kind, such as those in `rticles`, and want the full featured citation features, then your YAML will need to include something like this:
-
-```yaml
-output:
-  bookdown::pdf_book:
-    base_format: rticles::plos_article
-```
-
-
