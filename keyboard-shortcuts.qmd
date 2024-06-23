@@ -17,7 +17,7 @@ There are many keyboard shortcuts that you can access in R, this section provide
 
 ## Gifs of the action
 
-### Knit document
+### render document
 ### Insert Chunk
 ### Run Current Chunk
 ### Jump to
@@ -45,8 +45,8 @@ Below is a small table of tasks you can perform with keyboard
 
 ## Further Reading
 
-- The [https://www.rstudio.com/wp-content/uploads/2016/01/rstudio-IDE-cheatsheet.pdf](Rstudio Cheat Sheet) has an index of shortcuts. 
-- This [https://support.rstudio.com/hc/en-us/articles/206382178-Customizing-Keyboard-Shortcuts] help file has a guide to customising keyboard shortcuts.
+- The [https://rstudio.github.io/cheatsheets/html/rstudio-ide.html#keyboard-shortcuts](Rstudio Cheat Sheet) has an index of shortcuts. 
+- This [https://support.posit.co/hc/en-us/articles/206382178-Customizing-Keyboard-Shortcuts-in-the-RStudio-IDE] help file has a guide to customising keyboard shortcuts.
 
 ## Your Turn {.exercise}
 
