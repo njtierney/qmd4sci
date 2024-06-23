@@ -21,7 +21,7 @@ Now that you are near the end of your data analysis, you want to make sure that 
 
 ## How to cite things
 
-Citing things in an rmarkdown document is straightforward, you refer to articles you want to cite using `[@article-handle]`. Here, `article-handle` matches the article handle in your `.bib` file.
+Citing things in a quarto document is straightforward, you refer to articles you want to cite using `[@article-handle]`. Here, `article-handle` matches the article handle in your `.bib` file.
 
 This `.bib` file is referred to in the YAML of your document, under the option `bibliography: filename.bib`:
 
@@ -36,7 +36,7 @@ bibliography: references.bib
 
 ### What is a .bib file?
 
-Good question. `.bib` is a format for storing references from the haydey of LaTeX. It contains scripts with reference information for the article. Here's an example one
+Good question. `.bib` is a format for storing references from the heyday of LaTeX. It contains scripts with reference information for the article. Here's an example one
 
 ```
   @Book{ggplot2,
@@ -67,7 +67,7 @@ And for ggplot2 with
 citation("ggplot2")
 ```
 
-For journals or books, you'll need to get a specific .bib file. Yes, this can be a bit of a pain, but this is where you need to use a reference management software like [Zotero](https://www.zotero.org/), [Mendeley](https://www.mendeley.com/download-desktop/), [papers](https://www.papersapp.com/), or my personal preference [paperpile](https://paperpile.com/). The important thing to to **use something**. These all allow you to get .bib files of your articles, which you can then placec in your `references.bib` file.
+For journals or books, you'll need to get a specific .bib file. Yes, this can be a bit of a pain, but this is where you need to use a reference management software like [Zotero](https://www.zotero.org/), [Mendeley](https://www.mendeley.com/download-desktop/), [papers](https://www.papersapp.com/), or [paperpile](https://paperpile.com/). The important thing to to **use something**. These all allow you to get .bib files of your articles, which you can then placec in your `references.bib` file.
   
 ### Your Turn {.exercise}
 
@@ -102,24 +102,33 @@ csl: my_journal.csl
 
 ## How to move the bibliography location
 
-The bibliography is typically placed at the end of the document, so your last heading should be something like `# References`. However, if you want to move it, you need to use the `bookdown::html_document2()` output option, and then in your document, place the following piece of text in the reference section. For example.
+The bibliography is typically placed at the end of the document, so your last heading should be something like `# References`. However, if you want to move it, place the following piece of text in the reference section. For example.
 
 ```
 # Introduction
 
-# References {-}
+# References
 
-<div id="refs"></div>
+::: {#refs}
+:::
 
 # Appendix
 ```
 
-Note the reference section, the code: `<div id="refs"></div>`
+This is taken from [this section of the quarto documentation](https://quarto.org/docs/authoring/footnotes-and-citations.html#bibliography-generation). Note they also state:
 
+> If your bibliography is being generated using BibLaTeX or natbib...the bibliography will always appear at the end of the document and the #refs div will be ignored.
 
-This is taken from [this SO thread](https://stackoverflow.com/questions/51335125/adding-figures-and-tables-after-bibliography-in-rmarkdown?noredirect=1&lq=1). Note that the answer also states: 
+## How to not print / suppress the bibliography?
 
-> Note: this will only work if you use pandoc's built-in citation package and won't work if you set citation_package: natbib in the YAML
+The bibliography can be suppressed with the YAML option `suppress-bibliography`
+
+```
+title: "document"
+output: html
+bibliography: file.bib
+suppress-bibliography: true
+```
 
 ### Your Turn {.exercise}
 
