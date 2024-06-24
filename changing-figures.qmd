@@ -1,6 +1,6 @@
 # Customising your figures
 
-When you produce figures, you usually want to tweak them a little bit. A bit wider, perhaps a bit taller. Perhaps a different image type other than "png", because the journal requires "TIFF" or "EPS". Maybe you need 600dpi because you're going to print it really big. So, how do you control these features?
+When you produce figures, you usually want to tweak them a little bit. A bit wider, perhaps a bit taller. Perhaps a different image type other than "png", because the journal requires "svg" or "jpg". Maybe you need 600dpi because you're going to print it really big. So, how do you control these features?
 
 You can control the size and features of figures with the chunk options. In this section, we are going to talk more specifically about how to customise your figures.
 
@@ -12,7 +12,7 @@ You can control the size and features of figures with the chunk options. In this
 ## Questions
 
 * How do I change the height and width of a figure?
-* How to I change the type of output of a figure? (e.g., PDF, TIFF, PNG, JPG, SVG)
+* How to I change the type of output of a figure? (e.g., PDF, PNG, JPG, SVG)
 * Can I set all the figure features globally?
 * How do I save the figures?
 
@@ -135,3 +135,43 @@ knitr:
 ## Further Reading
 
 - [Official Quarto documentation on figures](https://quarto.org/docs/computations/r.html#output-formats)
+
+## EPS/TIFF/Other multiple image formats
+
+Unfortunately (currently) in Quarto it seems you cannot save to other image formats such as "eps", "tiff", and cannot save to multiple formats at the same time.
+
+If you would like to convert images to a specific format, you could try using code like the following.
+
+```{r}
+#| eval: false
+
+library(magick)
+library(fs)
+
+# List existing file paths matching "png" extension
+figures_ls <- dir_ls(
+  path = "exercises/02-qmd-figures-chunks/02-qmd-figures-chunks_files/",
+  recurse = TRUE,
+  glob = "*.png"
+  )
+
+# read images in
+library(purrr)
+figures <- map(
+  figures_ls,
+  \(x) image_read(path = x)
+)
+
+# create new paths with .TIFF extension
+# substitute out for another image format like "bmp", "
+new_paths <- xfun::with_ext(figures_ls, "tiff")
+
+# write new images
+walk2(
+  .x = figures,
+  .y = new_paths,
+  \(x, y) image_write(image = x, path = y)
+)
+
+```
+
