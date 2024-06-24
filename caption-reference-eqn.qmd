@@ -1,6 +1,6 @@
 # Captioning and referencing equations
 
-This section introduces how to add captions to equations, and reference them in text. Note that when using captioning, you need to use the `bookdown::html_document2` output.
+This section introduces how to add captions to equations, and reference them in text. 
 
 ## Overview
 
@@ -14,28 +14,16 @@ This section introduces how to add captions to equations, and reference them in 
 
 ### Numbering equations
 
-You can provide a number for an equation by adding `\begin{equation}` along with a label, provided with `(\#eq:label)`
-
-\begin{equation}
-  Y \sim X\beta_0 + X\beta_1 + \epsilon
-  (\#eq:model)
-\end{equation}
-
-You can then refer to the equation in text using `\@ref(eq:model)`:
-
-> Our model is given in \@ref(eq:model)
-
-If you want to provide a specific number to the equation, you can use `\tag{XX.XX}`
+You can make an equation referencable by adding a label starting with `#eq-` after the equation `$$`. For example:
 
 $$
-Y \sim X\beta_0 + X\beta_1 + \epsilon \tag{1}
-$$
+Y \sim X\beta_0 + X\beta_1 + \epsilon
+$$ {#eq-linear}
 
+You can then refer to the equation in text using `@eq-linear`:
 
+> Our model is given in @eq-linear.
 
-## Numbering equations
+## Other equation-adjacent referencing
 
-
-
-## Referencing equations
-
+You can also use and reference theorems, lemmas, conjectures, and many more - to see these, see the Quarto documentation: [theorems and proofs documentation](https://quarto.org/docs/authoring/cross-references.html#theorems-and-proofs).
