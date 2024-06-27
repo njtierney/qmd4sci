@@ -1,6 +1,6 @@
 # About this {-}
 
-This is a book on Quarto, aimed for scientists. It was initially developed as a 3 hour workshop, "Rmarkdown for scientists". It has been updated to use Quarto, which is a more updated and modern take on rmarkdown. It is now developed into a resource that will grow and change over time as a **living book**.
+This is a book on using Quarto for writing and document preparation, aimed for scientists. It was initially developed as a 3 hour workshop, ["Rmarkdown for scientists"](https://rmd4sci.njtierney.com/). This focusses on Quarto, which is a next-generation rmarkdown. It is now developed into a resource that will grow and change over time as a **living book**.
 
 This book aims to teach the following:
 
@@ -34,7 +34,7 @@ This book aims to teach the following:
 
 This book started out its first life being around rmarkdown. There are many great books on R Markdown and it's various features, such as ["Rmarkdown: The definitive guide"](https://bookdown.org/yihui/rmarkdown/), ["bookdown: Authoring Books and Technical Documents with R Markdown"](https://bookdown.org/yihui/bookdown/), and ["Dynamic Documents with R and knitr, Second edition"](https://www.crcpress.com/Dynamic-Documents-with-R-and-knitr/Xie/p/book/9781498716963), and Yihui Xie's thesis, ["Dynamic Graphics and Reporting for Statistics"](https://lib.dr.iastate.edu/etd/13518/).
 
-With the [release of Quarto](), I wanted to translate the materials I developed in "Rmarkdown for scientists" to cover the same material. There are other excellent resources for learning Quarto:
+With the [release of Quarto](https://posit.co/blog/announcing-quarto-a-new-scientific-and-technical-publishing-system/), I wanted to translate the materials I developed in "Rmarkdown for scientists" to cover the same material. Here are some resources that I really liked for learning Quarto:
 
 - [The Quarto "get started" guide](https://quarto.org/docs/get-started/hello/rstudio.html)
 - [The Quarto guide "Quarto manuscripts"](https://quarto.org/docs/manuscripts/)
@@ -83,22 +83,15 @@ Course materials can be downloaded by using the following command from the `uset
 #| label: use-course
 #| echo: true
 #| eval: false
-usethis::use_course("bit.ly/qmd4sci-materials")
+usethis::use_course("njtierney/qmd4sci-materials")
 ```
 
-## Where has this course been taught?
+<!-- ## Where has this course been taught? -->
 
-The Quarto for scientists for course has not been taught yet, but the rmarkdown for scientists course, upon which this book is based, has been taught at the following locations:
+<!-- The Quarto for scientists for course has been taught at the following locations: -->
 
-- 2018
-  - Melbourne, November for SSA Victoria
-- 2019
-  - Melbourne, April, for Monash University
-  - Canberra, July, for SSA Victoria
-  - Melbourne, November, for AIMOS2019
-  - Melbourne, December, for Plant Pathology Conference
-- 2020
-  - Seattle, February, for the University of Washington
+<!-- - 2024 -->
+<!--   - Online -->
 
 ## Licence
 

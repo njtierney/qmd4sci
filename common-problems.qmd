@@ -82,14 +82,13 @@ install.packages("JuliaCall")
 
 Chunks like this:
 
-````markdown
-
-```{r}`r ''`
+````{markdown}
+```{r}
 #| label: repeated
 1+1
 ```
 
-```{r}`r ''`
+```{r}
 #| label: repeated
 2+2
 ```
@@ -179,7 +178,7 @@ I would then navigate to those lines of code in the Quarto document, or search f
 
 **What it might look like**
 
-````markdown
+````{markdown}
 ```{r}
 #| label: fig-volcano
 #| eval: false
@@ -230,7 +229,7 @@ Here the error message even points to the `image` code, and the message, "unexpe
 
 **What it might look like**
 
-````markdown
+````{markdown}
 ```{r
 #| label: fig-volcano
 image(volcano)
@@ -285,7 +284,7 @@ ERROR: YAMLException: unexpected end of the stream within a double quoted scalar
 
 **What it might look like**
 
-````markdown
+````{markdown}
 ```{r}
 #| label: read-data
 #| echo: fenced
@@ -329,7 +328,7 @@ These are often not an error, but you just won't get the behaviour that you expe
 
 **What it might look like**
 
-````markdown
+````{markdown}
 ```{r}
 #| label: fig-penguins
 #| fig-caption: "Penguin Bill Length against Flipper Length. coloured by species. Each dot represents the bill length and flipper length of a penguin, coloured by species (Adelie, Chinstrap, Gentoo), and facetted by the three islands (Biscoe, Dream, Torgensen). We learn that not all three species are present on all islands, only Adelie is present on each. Adelie generally has the smallest flipper and bill length of the penguins, with chinstrap and gentoo being similar. Flipper length is correlated with bill length."
@@ -347,7 +346,7 @@ ggplot(penguins,
 ```
 ````
 
-```markdown
+```{markdown}
 Above we have @fig-counts...
 ```
 
@@ -449,6 +448,9 @@ There isn't one - you just get `@fig-chunk-name` printed.
 
 You need to make sure that you actually print the table or plot. If you create the plot and save it, but do not print it in the document, then you will not be able to reference the plot or table.
 
+# `::: {.cell}` appears in my quarto document
+
+
 ## Your Turn {.exercise}
 
 1.  Go to this repo [njtierney/qmd-errors](https://github.com/njtierney/qmd-errors), and give debugging some of these common rmarkdown errors a go.
@@ -458,5 +460,5 @@ You can download this repository by running this code:
 ```{r}
 #| label: use-course-code
 #| eval: false
-use_course("njtierney/qmd-errors")
+usethis::use_course("njtierney/qmd-errors")
 ```

@@ -114,8 +114,10 @@ Inserting a caption for a figure is a little bit different. The caption argument
 
 So to insert a figure, we do the following.
 
-````markdown
-`r ''````{r gg-oz-gapminder, fig.cap = "Life expectancy from 1952 - 2007 for Australia. Life expentancy increases steadily except from 1962 to 1969. We can safely say that our life expectancy is higher than it has ever been!"}
+````{markdown}
+```{r}
+#| label: gg-oz-gapminder
+#| fig-cap: "Life expectancy from 1952 - 2007 for Australia. Life expentancy increases steadily except from 1962 to 1969. We can safely say that our life expectancy is higher than it has ever been!"
 library(ggplot2)
 library(dplyr)
 
@@ -144,8 +146,6 @@ gapminder %>%
   geom_point()
 ```
 
-<!-- TODO: needs to be effectively evaluated? Little convoluted with the many backticks involved... -->
-
 ### Your Turn {.exercise}
 
 * Create a plot with your .Rmd doc
@@ -168,7 +168,7 @@ The markdown syntax to insert an image is: `![caption]("path/to/image")`
 
 So we could insert the new SSA vic logo by doing the following:
 
-````markdown
+````{markdown}
 ```
 ![SSA Logo!](bit.ly/ssa-logo)
 ```
@@ -180,8 +180,8 @@ Which would give us the following output:
 
 But say that we want more control over the output, like we want to center the image, and we want to make it smaller? Then you can use `knitr::include_graphics()`, and control the figure size using the options `out.width`, and add a caption with `fig.cap`.
 
-````markdown
-`r ''````{r ssa-logo, fig.align = 'center', out.width = "25%", fig.cap = "The new SSA logo, which is actually a scatterplot, which is super neat!"}
+````{markdown}
+```{r ssa-logo, fig.align = 'center', out.width = "25%", fig.cap = "The new SSA logo, which is actually a scatterplot, which is super neat!"}
 knitr::include_graphics(here::here("figs", "ssa-logo.png"))
 ```
 ````

@@ -40,7 +40,7 @@ We may, depending on time, also cover the following areas:
 
 See the [installation chapter](https://qmd4sci.njtierney.com/installation) for details on software to be installed.
 
-Some working materials will be made available at [https://github.com/njtierney/qmd4sci-materials]() closer to the course date
+Working materials will be made available at [github.com/njtierney/qmd4sci-materials](https://github.com/njtierney/qmd4sci-materials).
 
 ## Book 
 

@@ -228,11 +228,9 @@ setwd("C:\Users\jenny\path\that\only\I\have")
 -- Jenny Bryan
 
 
-UP TO HERE
-
 ### Aside: Creating an RStudio project {.history}
 
-You can create an rstudio project by going to:
+You can create an Rstudio project by going to:
 
 file > new project > new directory > new project > name your project > create project.
 

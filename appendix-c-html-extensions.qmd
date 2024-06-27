@@ -9,16 +9,17 @@ Some common options for HTML include:
 
 A tab set looks like the following:
 
-````markdown
-#### Example tab set {.tabset}
+````{markdown}
+## Example tab set {.tabset}
 
-##### Tab 1
+### Tab 1
 
 > Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sed eleifend velit. Sed porta pulvinar lorem ut rutrum. Etiam quis cursus libero. Donec nibh nisl, auctor quis sem in, feugiat convallis odio. Ut at euismod ligula. Nullam vitae quam non lacus scelerisque tempus. Sed tincidunt massa non nunc tincidunt feugiat. In hac habitasse platea dictumst.
 
-##### Tab 2
+### Tab 2
 
-```{r tab-plot}` r''
+```{r}
+#| label: tab-plot
 plot(iris$Sepal.Length, iris$Sepal.Width)
 ```
 ````

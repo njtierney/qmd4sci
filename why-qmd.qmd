@@ -71,6 +71,7 @@ __bold__, **bold**, _italic_, *italic*
 # computer code goes in three back ticks
 1 + 1
 2 + 2
+image(volcano)
 ```
 ````
 
@@ -93,6 +94,7 @@ Would be converted to:
 # computer code goes in three back ticks
 1 + 1
 2 + 2
+image(volcano)
 ```
 
 With very little marking up, we can create rich text, that **actually resembles** the text that we want to see.
@@ -105,15 +107,12 @@ Some other nice features of Markdown include:
 |     subscript |                                               `CO~2~` | CO~2~                                               |
 | strikethrough |                                         `~~mistake~~` | ~~mistake~~                                         |
 |         links | `[text](http:://www.example.com/your-link-goes-here)` | [text](http:://www.example.com/your-link-goes-here) |
-|        images |                           `![alternative text](link)` | `![alternative text](link)`                         |
+|        images |                           `![alternative text](https://quarto.org/)` | ![alternative text](https://quarto.org/)                         |
+| footnote(s)     | `[^4]` followed by `[^4]: footnote text goes here`.| [^4] followed by [^4]: footnote text goes here. |
 
-<!-- | footnote(s)     | `[^4]` followed by `[^4]: footnote text goes here`.| [^4] followed by [^4]: footnote text goes here. | -->
+# What about Rmarkdown?
 
-UP TO HERE
-
-## What about Rmarkdown? {.history}
-
-Issues around Sweave led to the development of [knitr](), and subsequently [Rmarkdown](), which used the knitr engine. You could run more than R code in rmarkdown, in fact there are [over 60 engines available](https://bookdown.org/yihui/rmarkdown/language-engines.html), from awk and bash, to haskell, perl, php, sql, scala, stata, javascript, python, julia, and even C.
+Issues around Sweave led to the development of [knitr](https://yihui.org/knitr/), and subsequently [Rmarkdown](https://rmarkdown.rstudio.com/), which used the knitr engine. You could run more than R code in rmarkdown, in fact there are [over 60 engines available](https://bookdown.org/yihui/rmarkdown/language-engines.html), from awk and bash, to haskell, perl, php, sql, scala, stata, javascript, python, julia, and even C.
 
 -   Through rmarkdown there were many approaches to document processing, such as bookdown for books, blogdown for blogs and websites, xaringan for slide decks.
 
@@ -129,7 +128,7 @@ Here are some diagrams to illustrate this point:
 
 In rmarkdown, we are working in rmarkdown, and that uses knitr to talk to R and handle the document generation:
 
-But with Quarto, we have this general interface, where Quarto can talk to different programming languages. Not pictured, but the “R engine” is in fact, `knitr`:
+But with Quarto, we have this general interface, where Quarto can talk to different programming languages. Not pictured, but the "R engine" is in fact, `knitr`:
 
 ![Quarto is a separate program](figs/quarto-all.jpeg)
 
@@ -141,7 +140,7 @@ But with Quarto, we have this general interface, where Quarto can talk to differ
 
 So, how do we combine this with our R code, into a literate programming environment?
 
-`Quarto` provides an environment where you can write your complete analysis. It weaves your text, and code, and its output together into a single document.
+Quarto provides an environment where you can write your complete analysis. It weaves your text, and code, and its output together into a single document.
 
 For example, look at the following report:
 
@@ -161,20 +160,22 @@ knitr::include_graphics("figs/qmd-report-example.png")
 
 How did we generate it?
 
-````
+````{markdown}
 ---
 title: "Exploring gapminder"
 author: "Nicholas Tierney"
-output: html_document
+format: html
 ---
 
 
-```{r library, message = FALSE}
+```{r}
+#| label: library
 library(tidyverse)
 library(broom)
 ```
 
-```{r data-read-in, message = FALSE}
+```{r}
+#| label: data-read-in
 data <- read_csv(here::here("data/oz_gapminder.csv"))
 ```
 
@@ -182,20 +183,23 @@ data <- read_csv(here::here("data/oz_gapminder.csv"))
 
 let's look at the lifespan
 
-```{r hist-life-exp}
+```{r}
+#| label: hist-life-exp
 hist(data$lifeExp)
 ```
 
 Let's fit a simple linear model of the effect of year on life expectancy
 
-```{r example-lm}
+```{r}
+#| label: example-lm
 fit <- lm(lifeExp ~ year, data = data)
 fit
 ```
 
 And let's look at the coefficient table:
 
-```{r coef-table}
+```{r}
+#| label: coef-table
 library(broom)
 fit_coef <- tidy(fit)
 knitr::kable(fit_coef,
