@@ -58,7 +58,11 @@ Installing LaTeX is thankfully handled when you install Quarto, as [Quarto inclu
 
 Installing LaTeX [can be a pain](https://yihui.name/tinytex/pain/), but thankfully Yihui Xie has put a lot of time and energy into making an easier way to install it - [`tinytex`](https://yihui.name/tinytex/). `tinytex` is an R package that installs a sane, lightweight (<200Mb) version of LaTeX. 
 
-```{r run-tiny-tex, eval = FALSE}
+If you are running into issues rendering a PDF, you can try the following:
+
+```{r}
+#| label: run-tiny-tex
+#| eval: false
 tinytex::install_tinytex()
 ```
 

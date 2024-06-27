@@ -36,9 +36,9 @@ The RStudio layout has the following features:
 knitr::include_graphics(here::here("figs","rstudio-screenshot.jpeg"))
 ```
 
-We saw a bit of what an rmarkdown script does.
+We saw a bit of what an Quarto script does.
 
-The R console is the bit where you can run your code. This is where the R code in your rmarkdown document gets sent to run. 
+The R console is the bit where you can run your code. 
 
 The file/plot/package viewer is a handy browser for your current files, like Finder, or File Explorer, plots are where your plots appear, you can view packages, see the help files.
 And the environment / history pane contains the list of things you have created, and the past commands that you have run.

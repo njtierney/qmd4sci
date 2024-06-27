@@ -1,6 +1,6 @@
 # Figures, Tables, Captions.
 
-You need figures and tables in your own writing, whether it be a journal paper, an internal document, or some documentation. In this section, we discuss how to add figures and tables into your rmarkdown document, and how to provide captions for them.
+You need figures and tables in your own writing, whether it be a journal paper, an internal document, or some documentation. In this section, we discuss how to add figures and tables into your Quarto document, and how to provide captions for them.
 
 ## Overview
 
@@ -89,7 +89,7 @@ There are many different ways to produce tables in R. We have chosen to show `ka
 
 ## Figures
 
-Printing figures is probably my favourite feature of rmarkdown. It is actually relatively straightforward in the case of plots. You provide the plot you want to show in a code chunk!
+Printing figures is probably my favourite feature of Quarto. It is actually relatively straightforward in the case of plots. You provide the plot you want to show in a code chunk!
 
 #### Demo {.demo}
 
@@ -199,7 +199,7 @@ knitr::include_graphics(here::here("figs", "ssa-logo.png"))
 ### Your Turn {.exercise}
 
 1. Download [the gapminder logo](https://www.gapminder.org/wp-content/themes/gapminder2/images/gapminder-logo.svg) and put it into a new directory call "figs"
-1. Insert this image into your rmarkdown document around where you introduce gapminder.
+1. Insert this image into your Quarto document around where you introduce gapminder.
 
 ## Summary
 

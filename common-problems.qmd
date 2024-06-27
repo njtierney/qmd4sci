@@ -21,11 +21,11 @@ Then, if there is an error:
     -   find the chunk that did not work, fix until it does
     -   run all chunks below
     -   explore working directory issues
-        -   remember that the rmarkdown directory is where the .Rmd file lives
+        -   remember that the Quarto directory is where the .qmd file lives
 
 ## The errors
 
-What follows from here are all the errors you might in an rmarkdown document, with the following structure:
+What follows from here are all the errors you might in an Quarto document, with the following structure:
 
 -   What they might look like
 -   What the error message might appear to be, and
@@ -418,7 +418,7 @@ There is no panacea for LaTeX errors, but if you aren't familiar with "what that
 
 ## I want to include inline R code verbatim to show an example
 
-... Like for a book on using rmarkdown or something.
+... Like for a book on using Quarto or something.
 
 You can use the chunk option `echo: fenced`. See the [Quarto documentation on fenced echo for more details](https://quarto.org/docs/computations/execution-options.html#fenced-echo).
 
@@ -453,7 +453,7 @@ You need to make sure that you actually print the table or plot. If you create t
 
 ## Your Turn {.exercise}
 
-1.  Go to this repo [njtierney/qmd-errors](https://github.com/njtierney/qmd-errors), and give debugging some of these common rmarkdown errors a go.
+1.  Go to this repo [njtierney/qmd-errors](https://github.com/njtierney/qmd-errors), and give debugging some of these common Quarto errors a go.
 
 You can download this repository by running this code:
 

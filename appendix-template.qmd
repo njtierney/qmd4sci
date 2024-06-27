@@ -14,7 +14,7 @@ Some common options for HTML include:
 ### Options for PDF
 
 - Adding page breaks
-- injecting LaTeX into your rmarkdown document
+- injecting LaTeX into your Quarto document
 
 ### Options for Word
 

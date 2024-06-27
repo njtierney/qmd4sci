@@ -58,7 +58,7 @@ quarto render example.qmd --to html
 quarto render example.qmd --to docx
 ```
 
-### A note on workflow with rmarkdown: HTML first, PDF/word later
+### A note on workflow with Quarto: HTML first, PDF/word later
 
 It can be easy to get caught up with how your document looks. I highly recommend avoiding compiling to PDF or word until _you really need to_. [This is also recommended by the author of rmarkdown and knitr, Yihui Xie](https://yihui.name/en/2018/07/in-html-i-trust/). Because HTML doesn't have page breaks, this means that you can spend time working on generating content, and not trying to get figures to line up correctly. 
 

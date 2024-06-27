@@ -98,7 +98,7 @@ __bold__, **bold**, _italic_, *italic*
 
 ### Code
 
-We refer to code in an rmarkdown document in two ways: 
+We refer to code in an Quarto document in two ways: 
 
 1. Code chunks, and 
 1. Inline code.
@@ -240,8 +240,8 @@ What's great about this is that if your data changes upstream, then you don't ne
 ## Creating a Quarto document
 
 * Rstudio menu system
-* Explore the template provided by rstudio
-* Compile an rmarkdown document
+* Explore the template provided by RStudio
+* Compile an Quarto document
 
 ## Working with a Quarto document
 

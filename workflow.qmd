@@ -1,6 +1,6 @@
 # Workflow
 
-Before we start with rmarkdown, we need to make sure that you understand _file storage hygiene_. This helps you keep your files, paths, and directories clean, which prevents unexpected problems. It will make you more productive in the future because you'll spend less time fighting against file paths. Not sure what a file path is? We explain that as well.
+Before we start with Quarto, we need to make sure that you understand _file storage hygiene_. This helps you keep your files, paths, and directories clean, which prevents unexpected problems. It will make you more productive in the future because you'll spend less time fighting against file paths. Not sure what a file path is? We explain that as well.
 
 ## Overview
 
