@@ -1,10 +1,8 @@
-# Common Problems with rmarkdown (and some solutions)
+# Common Problems with Quarto (and some solutions)
 
-There are some things that I run into fairly frequently (and some not so much) when I'm rendering my rmarkdown documents. This section details some the common problems, and the solution that I have found works for me.
+There are some things that I run into fairly frequently (and some not so much) when I'm rendering my Quarto documents. This section details some the common problems, and the solution that I have found works for me.
 
-If you want to practice on fixing broken rmarkdown documents, check out some pathologically broken examples on github at
-
-<!-- [njtierney/rmd-errors](https://github.com/njtierney/rmd-errors). -->
+If you want to practice on fixing broken Quarto documents, check out some pathologically broken examples on github at
 
 [njtierney/qmd-errors](https://github.com/njtierney/qmd-errors).
 
@@ -13,7 +11,7 @@ If you want to practice on fixing broken rmarkdown documents, check out some pat
 To avoid problems in the first place, I try and do the following:
 
 -   Develop code in chunks and execute the chunks until they work, then move on.
--   knit the document regularly to check for errors.
+-   render the document regularly to check for errors.
 
 Then, if there is an error:
 
@@ -61,7 +59,7 @@ This error went away when I installed python - I went to https://www.python.org/
 
 ## No julia
 
-```
+```         
 Error in `loadNamespace()`:
 ! there is no package called 'JuliaCall'
 Backtrace:
@@ -74,10 +72,9 @@ Backtrace:
 
 Fix: Install `JuliaCall` R package:
 
-```r
+``` r
 install.packages("JuliaCall")
 ```
-
 
 ## "Duplication": Duplicated chunk names
 
@@ -85,12 +82,16 @@ install.packages("JuliaCall")
 
 Chunks like this:
 
-```` markdown
+````markdown
 
-```{r title-one}`r ''`
+```{r}`r ''`
+#| label: repeated
+1+1
 ```
 
-```{r title-one}`r ''`
+```{r}`r ''`
+#| label: repeated
+2+2
 ```
 ````
 
@@ -99,14 +100,11 @@ Chunks like this:
 This is caught before the document compiles with a warning like:
 
 ```         
-processing file: common-problems.Rmd
-Error in parse_block(g[-1], g[1], params.src) : 
-  duplicate label 'title-one'
-Calls: local ... process_file -> split_file -> lapply -> FUN -> parse_block
-Execution halted
-Error in Rscript_render(f, render_args, render_meta) : 
-  Failed to compile common-problems.Rmd
-Calls: <Anonymous> ... render_book -> render_new_session -> Rscript_render
+processing file: duplicated-chunk-names.qmd
+Error in parse_block(g[-1], g[1], params.src, markdown_mode) : 
+  Duplicate chunk label 'repeated', which has been used for the chunk:
+1+1
+Calls: .main ... process_file -> split_file -> lapply -> FUN -> parse_block
 Execution halted
 ```
 
@@ -116,8 +114,8 @@ The important part to note is the start:
 .
 .
 .
-Error in parse_block(g[-1], g[1], params.src) : 
-  duplicate label 'title-one'
+Duplicate chunk label 'repeated', which has been used for the chunk:
+1+1
 .
 .
 .
@@ -125,7 +123,7 @@ Error in parse_block(g[-1], g[1], params.src) :
 
 **How to solve**
 
--   In our case we have the same chunk name twice: 'title-one'. Change the chunk name of one of them!
+-   In our case we have the same chunk name twice: 'repeated'. Change the chunk name of one of them!
 
 ## "Not what I ordered": Objects not created in the right order
 
@@ -139,80 +137,193 @@ my_table <- table(mtcars$cyl)
 
 **The error message**
 
+```         
+processing file: wrong-order.qmd
+  |......................................                   |  67% [plot-table]Error:
+! object 'my_table' not found
+Backtrace:
+ 1. base::plot(my_table)
+
+
+
+Quitting from lines 8-12 [plot-table] (wrong-order.qmd)
+```
+
 **How to solve**
 
-## "Forgotten Trails I": Missing ",", or "(", "}", or "'"
+There is a good clue at the end of this message here, stating:
+
+```         
+.
+.
+Quitting from lines 8-12 [plot-table] (wrong-order.qmd)
+.
+.
+```
+
+The template here is:
+
+```         
+Quitting from lines START-END [CHUNK LABEL] (QUARTO-DOCUMENT-NAME.qmd)
+```
+
+I would then navigate to those lines of code in the quarto document, or search for the chunk label, and see if I can run that code interactively. A common problem with these kinds of errors is that they *just might* work interactively, because you might have run them out of sequence. However because a quarto document goes from a fresh R session and runs the code from the top to the bottom in that order, the objects might not yet exist. So:
+
+1.  Restart R - ensure it is a clean session without objects from the previous session hanging around
+2.  Run code above the problem chunk
+3.  Run code in the problem chunk
+4.  Hopefully this reproduces your error
+5.  If it doesn't reproduce your error, consider trying to make a [small reprex](https://reprex.tidyverse.org/) of the problem so you have try and figure out the bug.
+
+## Forgotten Trails I: Missing "(", or "}"
 
 **What it might look like**
 
+````markdown
+```{r}
+#| label: fig-volcano
+image(volcano
+```
+````
+
 **The error message**
 
+```         
+processing file: forgotten-trails-i.qmd
+  |.....................................                   |  67% [fig-volcano]Error in `parse()`:
+! <text>:2:0: unexpected end of input
+1: image(volcano
+   ^
+Backtrace:
+  1. global .main()
+  2. execute(...)
+  3. rmarkdown::render(...)
+  4. knitr::knit(knit_input, knit_output, envir = envir, quiet = quiet)
+  5. knitr:::process_file(text, output)
+     ...
+ 11. knitr:::eng_r(options)
+ 14. knitr (local) evaluate(...)
+ 15. evaluate::evaluate(...)
+ 17. evaluate:::parse_all.character(...)
+ 18. base::parse(text = x, srcfile = src)
+                                                                                                        
+
+
+Quitting from lines 7-9 [fig-volcano] (forgotten-trails-i.qmd)
+
+Execution halted
+```
+
 **How to solve**
+
+In this case the key part to look at is
+
+```         
+|.....................................                   |  67% [fig-volcano]Error in `parse()`:
+! <text>:2:0: unexpected end of input
+1: image(volcano
+   ^
+```
+
+Here the error message even points to the `image` code, and the message, "unexpected end of input" is referring to the missing closing parenthesis.
+
+**What it might look like**
+
+````markdown
+```{r
+#| label: fig-volcano
+image(volcano)
+```
+````
+
+**The error message**
+
+There **is no error message** here, but your output might look like this:
+
+![](images/clipboard-3244038101.png)
+
+```         
+Forgotten Trails I: Missing “(”, or “}”
+{r #| label: fig-volcano image(volcano)
+```
+
+**How to solve**
+
+The clue here for me is that we are getting this part of the code:
+
+`{r #| label: fig-volcano image(volcano)`
+
+When we would normally not see any information about the code chunk option, `#| label`.
+
+When you come across some funky looking text like that, look for a missing `}`.
 
 ## "Forgotten Trails II": Chunk option with trailing ", or not input
 
 **What it might look like**
 
+````markdown
+```{r}
+#| label: fig-volcano
+#| fig-cap: "An elevation plot of Maunga Whau (Mt Eden). Darker colours indicate higher parts of the volcano. We see one main peak on the left, followed by two smaller peaks on the right.
+image(volcano)
+```
+````
+
 **The error message**
 
 ```         
-processing file: rstudio.Rmd
-(*) NOTE: I saw chunk options "fig-rstudio-workspace-options, fig.cap = "Setting the options right for rstudio, so you don't restore previous sessions work, and don't save it either."
- please go to https://yihui.name/knitr/options
- (it is likely that you forgot to quote "character" options)
-Error in parse(text = code, keep.source = FALSE) : 
-  <text>:1:51: unexpected INCOMPLETE_STRING
-1: alist( 'fig-rstudio-workspace-options', fig.cap = "Setting the options right for rstudio, so you don't restore previous sessions work, and don't save it either. )
+ERROR: YAMLException: unexpected end of the stream within a double quoted scalar (forgotten-trails-ii.qmd, 8:188)
+7: #| label: fig-volcano
+8: #| fig-cap: "An elevation plot of Maunga Whau (Mt Eden). Darker colours indicate higher parts of the volcano. We see one main peak on the left, followed by two smaller peaks on the right.
+                                                                                                                                                                                             ~
+9: image(volcano)
 ```
 
 **How to solve it?**
 
--   The easiest way is to do Cmd+Shift+F, which opens up a global search in your rstudio project, and then type in the offending string mentioned in the NOTE. In this case, I would search for the partial string `"fig.cap = "Setting the options right for rstudio, so you don't restore previous sessions work, and`. I search for the partial string because there might be parts at the end of the error message that aren't in the text.
+-   The clue here is `unexpected end of the stream within a double quoted scalar`. Which, although it might sound a bit obtuse, is referring to a missing quote. The other clue is that the error captures the code chunk information and prints it out to the console.
+-   When you are working with this code in RStudio it also highlights the error:
 
-## "Forgotten Trail III":
-
-**What it might look like**
-
-**The error message**
-
-```         
-processing file: figures-tables-captions.Rmd
-(*) NOTE: I saw chunk options "read-gapminder include = FALSE, echo = FALSe"
- please go to https://yihui.name/knitr/options
- (it is likely that you forgot to quote "character" options)
-Error in parse(text = code, keep.source = FALSE) : 
-  <text>:1:23: unexpected symbol
-1: alist( read-gapminder include
-                          ^
-```
-
-**How to solve**
-
-This error message is pretty good, I needed to add a comma after my chunk name.
-
-So, go from:
-
-```` markdown
-`r ''````{r read-gapminder include = FALSE, echo = FALSE}
-gapminder <- readr::read_csv(here::here("data", "gapminder.csv"))
-```
-````
-
-to
-
-```` markdown
-`r ''````{r read-gapminder, include = FALSE, echo = FALSE}
-gapminder <- readr::read_csv(here::here("data", "gapminder.csv"))
-```
-````
+![](images/clipboard-1852474255.png)
 
 ## "The Path Not Taken" File path incorrect
 
 **What it might look like**
 
+```{r}
+#| label: read-data
+#| echo: fenced
+library(readr)
+penguins <- read_csv("the_penguins.csv")
+```
+
 **The error message**
 
+```         
+processing file: path-not-taken.qmd
+  |.......................................                   |  67% [read-data]Error:
+! 'the_penguins.csv' does not exist in current working directory ('/Users/nick/github/njtierney/qmd-errors').
+Backtrace:
+ 1. readr::read_csv("the_penguins.csv")
+ 4. vroom (local) `<fn>`("the_penguins.csv")
+ 5. vroom:::check_path(path)
+                                                                                                      
+
+
+Quitting from lines 7-10 [read-data] (path-not-taken.qmd)
+
+Execution halted
+```
+
 **How to solve**
+
+The key part to pay attention to here is:
+
+```         
+Error:! 'the_penguins.csv' does not exist in current working directory ('/Users/nick/github/njtierney/qmd-errors').
+```
+
+In this case, we need to ensure that the data file is in the right spot - in our example we have a typo - the data should be "data/penguins.csv".
 
 ## "Spolling I" Incorrectly spelled chunk options
 
@@ -220,56 +331,86 @@ These are often not an error, but you just won't get the behaviour that you expe
 
 **What it might look like**
 
--   `fig.caption` instead of `fig.cap`. This once caused me to rewrite a lot of code and an entire section of a paper until I realised the problem.
+```{r}
+#| label: fig-penguins
+#| fig-caption: "Penguin Bill Length against Flipper Length. coloured by species. Each dot represents the bill length and flipper length of a penguin, coloured by species (Adelie, Chinstrap, Gentoo), and facetted by the three islands (Biscoe, Dream, Torgensen). We learn that not all three species are present on all islands, only Adelie is present on each. Adelie generally has the smallest flipper and bill length of the penguins, with chinstrap and gentoo being similar. Flipper length is correlated with bill length."
+#| echo: fenced
+library(palmerpenguins)
+library(ggplot2)
+ggplot(penguins,
+       aes(x = flipper_length_mm,
+           y = bill_length_mm,
+           colour = species)) + 
+  geom_point() + 
+  scale_color_brewer(palette = "Dark2") +
+  theme_minimal() + 
+  facet_wrap(~island)
+```
+
+```markdown
+Above we have @fig-counts...
+```
+
+In this case we do not get a rendered caption at all:
+
+![](images/clipboard-3202124281.png)
+
+The root cause of this is that we have specified `fig-caption` instead of `fig-cap`.
+
+This once caused me to rewrite a lot of code and an entire section of a paper until I realised the problem.
 
 **The error message**
 
+There is no error message for this! It is a silent error.
+
 **How to solve**
 
--   There might be a switch you can flick to ask `knitr` to solve
+You can resolve this issue by using `fig-cap` instead of `fig-caption`.
 
 ## "Spolling II" Incorrectly spelled chunk option inputs
 
-So this is when you provide the wrong input to your chunk options. Like something that requires `TRUE` gets "yes", or something that needs `"100%"` instead gets `100`
+So this is when you provide the wrong input to your chunk options. Like something that requires `true` gets "yes", or something that needs `"100%"` instead gets `100`
 
 **What it might look like**
+
+```{r}
+#| label: fig-volc
+#| cache: yes
+#| echo: fenced
+image(volcano)
+```
 
 **The error message**
 
 ```         
-Quitting from lines 31-32 (figures-tables-captions.Rmd) 
-Error in eval(x, envir = envir) : object 'FALSe' not found
-Calls: local ... process_group.block -> call_block -> eval_lang -> eval -> eval
-Execution halted
-Error in Rscript_render(f, render_args, render_meta) : 
-  Failed to compile figures-tables-captions.Rmd
-Calls: <Anonymous> ... render_book -> render_new_session -> Rscript_render
-Execution halted
+==> quarto preview spolling-ii.qmd --to html --no-watch-inputs --no-browse
+
+(line 8, columns 11--14) Field "cache" has value yes, which must instead be `true` or `false`
+
+✖ The value yes is a string.
+ℹ The error happened in location cache.
+ℹ Quarto uses YAML 1.2, which interprets booleans strictly.
+ℹ Try using true instead.
+
+ERROR: Validation of YAML cell metadata failed.
+ERROR: Render failed due to invalid YAML.
 ```
 
 **How to solve**
 
-What was the problem? Turns out I provided the option `FALSe` instead of `FALSE`.
+There's a bit of text here, but the key piece is:
 
-Go from:
-
-```` markdown
-`r ''````{r read-gapminder include = FALSE, echo = FALSe}
-gapminder <- readr::read_csv(here::here("data", "gapminder.csv"))
+```         
+(line 8, columns 11--14) Field "cache" has value yes, which must instead be `true` or `false`
 ```
-````
 
-to
-
-```` markdown
-`r ''````{r read-gapminder, include = FALSE, echo = FALSE}
-gapminder <- readr::read_csv(here::here("data", "gapminder.csv"))
-```
-````
+We have specified `#| cache: yes` instead of `#| cache: true`. A good thing to internalise here is that Quarto always uses lowercase `true` or `false` and never `yes` or `no`.
 
 ## "The Legend of Link I": Your images in `![]()` don't work.
 
 I often forget that it is `![](path/to/image)`, and not `![]("path/to/image")`. There are no quote marks!
+
+![](images/clipboard-1417429929.png)
 
 ## LaTeX errors
 
@@ -285,11 +426,19 @@ There is no panacea for LaTeX errors, but if you aren't familiar with "what that
 
 ... Like for a book on using rmarkdown or something.
 
-Check out this great [blog post by T. Hovorka from R Views](https://rviews.rstudio.com/2017/12/04/how-to-show-r-inline-code-blocks-in-r-markdown/)
+You can use the chunk option `echo: fenced`. See the [Quarto documentation on fenced echo for more details](https://quarto.org/docs/computations/execution-options.html#fenced-echo).
+
+::: callout-tip
+Back before we had this option we used to have to do things like this:
+
+[blog post by T. Hovorka from R Views](https://rviews.rstudio.com/2017/12/04/how-to-show-r-inline-code-blocks-in-r-markdown/)
 
 It boils down to this:
 
 [`` `r "\u0060\u0060 \u0060r \"\\u0060r expression\\u0060\"\u0060 \u0060\u0060"` ``]{style="color:blue"}.
+
+Thankfully the folks at Quarto have made this much easier!
+:::
 
 ## My Figure or Table isn't being cited
 
@@ -299,7 +448,7 @@ You create a figure,
 
 **The error message**
 
-There isn't one - you just get `\@ref(fig:figure-chunk-name)` printed.
+There isn't one - you just get `@fig-chunk-name` printed.
 
 **How to solve**
 
@@ -307,4 +456,13 @@ You need to make sure that you actually print the table or plot. If you create t
 
 ## Your Turn {.exercise}
 
-1.  Go to this repo [njtierney/rmd-errors](https://github.com/njtierney/rmd-errors), and give debugging some of these common rmarkdown errors a go.
+1.  Go to this repo [njtierney/qmd-errors](https://github.com/njtierney/qmd-errors), and give debugging some of these common rmarkdown errors a go.
+
+You can download this repository by running this code:
+
+```{r}
+#| label: use-course-code
+#| eval: false
+use_course("njtierney/qmd-errors")
+```
+
