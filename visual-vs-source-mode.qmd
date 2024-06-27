@@ -1,0 +1,7 @@
+# Visual mode
+
+
+This
+
+
+There is also a [VS Code extension for visual mode](https://quarto.org/docs/visual-editor/vscode/), which this book does not (currently) focus on.

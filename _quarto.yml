@@ -30,6 +30,7 @@ book:
     - "rstudio.qmd"
     - "workflow.qmd"
     - "using-qmd.qmd"
+    - "visual-vs-source-mode.qmd"
     - "pdf-html-word.qmd"
     - "keyboard-shortcuts.qmd"
     - "figures-tables-captions.qmd"
