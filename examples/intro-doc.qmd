@@ -5,30 +5,31 @@ format:
   html:
     toc: true
     toc-depth: 2
+    fig-align: center
+    fig-width: 4
+    fig-height: 4
+    fig-format: png
+execute:
+  echo: false
+  cache: true
 ---
 
-````{r setup , include=FALSE}
-knitr::opts_chunk$set(echo = FALSE, 
-                      fig.align = "center",
-                      fig.width = 4, 
-                      fig.height = 4, 
-                      dev = "png",
-                      cache = TRUE)
-```
-
-````{r library}
+````{r}
+#| label: library
 library(tidyverse)
 library(visdat)
 ```
 
-````{r functions}
+````{r}
+#| label: functions
 # A function to scale input to 0-1
 scale_01 <- function(x){
   (x - min(x, na.rm = TRUE)) / diff(range(x, na.rm = TRUE))
 }
 ```
 
-```{r data-read-in}
+```{r}
+#| label: data-read-in
 data <- read_csv(here::here("data", "oz_gapminder.csv"))
 ```
 
@@ -36,25 +37,32 @@ data <- read_csv(here::here("data", "oz_gapminder.csv"))
 
 This code will be cached
 
-```{r example-cache}
+```{r}
+#| label: example-cache
 
 ```
 
 This code will not run
 
-```{r example-eval, eval = FALSE}
+```{r}
+#| label: example-eval
+#| eval: false
 plot()
 ```
 
 This code will have the output printed, but the code will not be printed
 
-```{r example-echo, echo = FALSE}
+```{r}
+#| label: example-echo
+#| echo: false
 plot(iris)
 ```
 
 none of the output of this will be included (equivalent to `echo = FALSE, message = FALSE, error = FALSE, warning = FALSE`)
 
-```{r example-include, include = FALSE}
+```{r}
+#| label: example-include
+#| include: false
 
 ```
 

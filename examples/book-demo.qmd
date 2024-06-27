@@ -4,12 +4,16 @@ author: "Nicholas Tierney"
 format: html
 ---
 
-```{r library, message = FALSE}
+```{r}
+#| label: library
+#| message: false
 library(tidyverse)
 library(broom)
 ```
 
-```{r data-read-in, message = FALSE}
+```{r}
+#| label: data-read-in
+#| message: false
 data <- read_csv(here::here("data/oz_gapminder.csv"))
 ```
 
@@ -17,20 +21,23 @@ data <- read_csv(here::here("data/oz_gapminder.csv"))
 
 let's look at the lifespan
 
-```{r hist-life-exp}
+```{r}
+#| label: hist-life-exp
 hist(data$lifeExp)
 ```
 
 Let's fit a simple linear model of the effect of year on life expectancy
 
-```{r example-lm}
+```{r}
+#| label: example-lm
 fit <- lm(lifeExp ~ year, data = data)
 fit
 ```
 
 And let's look at the coefficient table:
 
-```{r coef-table}
+```{r}
+#| label: coef-table
 library(broom)
 fit_coef <- tidy(fit)
 knitr::kable(fit_coef,

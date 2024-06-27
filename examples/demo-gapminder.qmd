@@ -5,25 +5,24 @@ format:
   html:
     toc: true
     toc-depth: 2
+    fig-align: center
+    fig-width: 4
+    fig-height: 4
+    fig-format: png
+execute: 
+  echo: true
+  cache: true
 ---
 
-
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE, 
-                      fig.align = "center",
-                      fig.width = 4, 
-                      fig.height = 4, 
-                      dev = "png",
-                      cache = FALSE)
-```
-
-```{r library}
+```{r}
+#| label: library
 library(tidyverse)
 library(visdat)
 library(broom)
 ```
 
-````{r functions}
+````{r}
+#| label: functions
 # A function to scale input to 0-1
 scale_01 <- function(x){
   (x - min(x, na.rm = TRUE)) / diff(range(x, na.rm = TRUE))
@@ -32,11 +31,18 @@ scale_01 <- function(x){
 
 # Data reading in here
 
-```{r data-read-in, echo = FALSE, message = FALSE, cache = FALSE}
+```{r}
+#| label: data-read-in
+#| echo: false
+#| message: false
+#| cache: false
 data <- read_csv(here::here("data", "oz_gapminder.csv"))
 ```
 
-```{r demo, eval = TRUE, echo = TRUE}
+```{r}
+#| label: demo
+#| eval: true
+#| echo: true
 1 + 1
 ```
 
@@ -44,26 +50,30 @@ data <- read_csv(here::here("data", "oz_gapminder.csv"))
 
 let's look at the lifespan
 
-```{r hist-life-exp}
+```{r}
+#| label: hist-life-exp
 hist(data$lifeExp)
 ```
 
 Let's look at the GDP per capita
 
-```{r example-cache}
+```{r}
+#| label: example-cache
 hist(data$gdpPercap)
 ```
 
 Let's fit a simple linear model of the effect of year on life expectancy
 
-```{r example-lm}
+```{r}
+#| label: example-lm
 fit <- lm(lifeExp ~ year, data = data)
 fit
 ```
 
 And let's look at the coefficient table:
 
-```{r coef-table}
+```{r}
+#| label: coef-table
 fit_coef <- tidy(fit)
 knitr::kable(fit_coef,
              caption = "A table of the coefficients")
