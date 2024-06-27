@@ -24,7 +24,7 @@ The goal of this section is to briefly discuss why we want to learn Quarto, the 
 
 ## Reproducibility is a problem
 
-It is unfortunately a common, seemingly evergreen problem that a lot of people cannot reproduce scientific work. This might appear to be a "current" problem, but it has indeed been a problem throughout a lot of scientific history. To illustrate this, here's a nice article by [Rich FitzJohn](), , , , [Reproducible research is still a challenge](https://ropensci.org/blog/2014/06/09/reproducibility/), which was written 10 years ago, in 2014, and provides a list of the challenges and lessons learned in making research reproducible. The list is still relevant. This problem isn't completely solved. But, we can make it easier to solve, to get further.
+It is unfortunately a common, seemingly evergreen problem that a lot of people cannot reproduce scientific work. This might appear to be a "current" problem, but it has indeed been a problem throughout a lot of scientific history. To illustrate this, here's a nice article by [Rich FitzJohn](https://github.com/richfitz), [Reproducible research is still a challenge](https://ropensci.org/blog/2014/06/09/reproducibility/), which was written 10 years ago, in 2014, and provides a list of the challenges and lessons learned in making research reproducible. The list is still relevant. This problem isn't completely solved. But, we can make it easier to solve, to get further.
 
 Reproducibility isn't just something that impacts a few people, and it's not cheap. A 2010 estimate stated that in the biomedical industry, in the USA, irreproducibility (not being able to reproduce a given piece of work) costs \$28 Billion dollars annually [^why-qmd-1]. That was one country, one field, and one year.
 
@@ -46,11 +46,11 @@ This was a popular idea, and it has had some interesting discussion and contribu
 
 ## Markdown as a new player to legibility
 
-In 2004, [John Gruber](https://en.wikipedia.org/wiki/John_Gruber), of [daring fireball](https://daringfireball.net/) created [Markdown](https://en.wikipedia.org/wiki/Markdown), a simple way to create text that rendered into an HTML webpage.
+In 2004, [John Gruber](https://en.wikipedia.org/wiki/John_Gruber), of [daring fireball](https://daringfireball.net/) created [Markdown](https://en.wikipedia.org/wiki/Markdown), a simple way to create text that rendered into an HTML webpage. The core idea was that you could write plain text (not text inside a MS Word/WordPerfect/Pages/Proprietary Format Document), and it would look readable, then get rendered into HTML.
+
+The idea took off.
 
 ### A brief example of markdown
-
-For example,
 
 ``` markdown
 - bullet list
@@ -108,6 +108,8 @@ Some other nice features of Markdown include:
 |        images |                           `![alternative text](link)` | `![alternative text](link)`                         |
 
 <!-- | footnote(s)     | `[^4]` followed by `[^4]: footnote text goes here`.| [^4] followed by [^4]: footnote text goes here. | -->
+
+UP TO HERE
 
 ## What about Rmarkdown? {.history}
 
