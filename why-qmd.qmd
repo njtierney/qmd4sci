@@ -1,6 +1,6 @@
 # Why Quarto
 
-The goal of this section is to briefly discuss why we want to learn quarto, the benefits, and the barriers to using it.
+The goal of this section is to briefly discuss why we want to learn Quarto, the benefits, and the barriers to using it.
 
 ## Overview
 
@@ -119,7 +119,7 @@ However, there are a few points of friction:
 
 -   You need to call it from R to use it. No problem for R users, but what if you use python? Or javascript? If you are a python user, using R to use python just might not be in your workflow.
 -   There are great packages that provide extensions, such as blogdown for blogs, bookdown for books, and xaringan for slides. However, there are differences between these systems that might cause stumbles. Each of these systems is an iteration towards something awesome, and it’s only natural they might be a little bit different.
--   quarto, instead of being an R package, is a separate piece of software, that you can call from the command line (terminal). This means other pieces of software can use it to create their own literate programming documents. Well, that’s my understanding.
+-   Quarto, instead of being an R package, is a separate piece of software, that you can call from the command line (terminal). This means other pieces of software can use it to create their own literate programming documents. Well, that’s my understanding.
 
 Here are some diagrams to illustrate this point:
 
@@ -127,9 +127,9 @@ Here are some diagrams to illustrate this point:
 
 In rmarkdown, we are working in rmarkdown, and that uses knitr to talk to R and handle the document generation:
 
-But with quarto, we have this general interface, where quarto can talk to different programming languages. Not pictured, but the “R engine” is in fact, `knitr`:
+But with Quarto, we have this general interface, where Quarto can talk to different programming languages. Not pictured, but the “R engine” is in fact, `knitr`:
 
-![quarto is a separate program](figs/quarto-all.jpeg)
+![Quarto is a separate program](figs/quarto-all.jpeg)
 
 ## Your Turn {.exercise}
 
@@ -139,7 +139,7 @@ But with quarto, we have this general interface, where quarto can talk to differ
 
 So, how do we combine this with our R code, into a literate programming environment?
 
-`quarto` provides an environment where you can write your complete analysis. It weaves your text, and code, and its output together into a single document.
+`Quarto` provides an environment where you can write your complete analysis. It weaves your text, and code, and its output together into a single document.
 
 For example, look at the following report:
 
@@ -225,7 +225,7 @@ And what if someone wants to know *exactly* how you did your analysis?
 
 This process isn't exactly sharable.
 
-But if you did it in quarto?
+But if you did it in Quarto?
 
 Just update the data, and render the document again, and get an updated document:
 

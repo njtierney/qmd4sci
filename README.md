@@ -3,7 +3,7 @@
 
 <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>.
 
-This is a course on how to use quarto, with the target audience being for scientists. This was first developed as a short workshop on rmarkdown, as the book ["rmarkdown for scientists"](https://github.com/njtierney/rmd4sci). The general structure will be the same, and it will grow and change over time as a **living book**.
+This is a course on how to use Quarto, with the target audience being for scientists. This was first developed as a short workshop on rmarkdown, as the book ["rmarkdown for scientists"](https://github.com/njtierney/rmd4sci). The general structure will be the same, and it will grow and change over time as a **living book**.
 
 # Structure of the workshop
 
@@ -11,22 +11,22 @@ This online book covers more content than the workshop. Here's an example struct
 
 | time | topic |
 |------|-------|
-|1:00-1:20|	Get started with your own quarto document | 
-|1:20-1:40|	Workflow when using quarto documents and projects |
-|1:40-2:00|	Exporting quarto documents to PDF, HTML, and Microsoft Word |
+|1:00-1:20|	Get started with your own Quarto document | 
+|1:20-1:40|	Workflow when using Quarto documents and projects |
+|1:40-2:00|	Exporting Quarto documents to PDF, HTML, and Microsoft Word |
 |2:00-2:30|	Managing captions, figures, tables |
 |2:30-3:00|	BREAK|
 |3:00-3:30|	Managing equations and bibliographies |
 |3:30-4:00|	How to debug and handle common errors |
-|3:45-4:30|	Free time for discussion around aother quarto formats: websites, blogs, slides, and more!|
+|3:45-4:30|	Free time for discussion around aother Quarto formats: websites, blogs, slides, and more!|
 
 # Learning outcomes
 
 After completing this course, you will know how to:
 
-- Create your own quarto document
+- Create your own Quarto document
 - Create figures and tables that you can reference in text, and update with - your data
-- Export your quarto document to PDF, HTML, and Microsoft Word
+- Export your Quarto document to PDF, HTML, and Microsoft Word
 - Use keyboard shortcuts to improve workflow
 - Cite research articles and generate a bibliography
 
@@ -48,7 +48,7 @@ Some working materials will be made available at [https://github.com/njtierney/q
 
 This book aims to teach the following:
 
-- Getting started with your own quarto document
+- Getting started with your own Quarto document
   - Using Rstudio
   - Visual Studio Code
 - Improve workflow:
@@ -56,7 +56,7 @@ This book aims to teach the following:
     - Demonstrate rstudio projects
     - Using keyboard shortcuts
   - Quarto projects
-- Export your quarto documents to PDF, HTML, and Microsoft Word
+- Export your Quarto documents to PDF, HTML, and Microsoft Word
 - Better manage figures and tables
     - Reference figures and tables in text so that they dynamically update
     - Create captions for figures and tables
@@ -70,8 +70,8 @@ This book aims to teach the following:
   - Cite articles in text
   - Generate bibliographies
   - Change bibliography styles
-- Debug and handle common errors with quarto
-- Next steps in working with quarto:
+- Debug and handle common errors with Quarto
+- Next steps in working with Quarto:
   - How to extend yourself to other formats, such as slides, websites, books, and more
 
 
@@ -79,11 +79,11 @@ This book aims to teach the following:
 
 For a scientific report to be completely credible, it must be reproducible. The full computational environment used to derive the results, including the data and code used for statistical analysis should be available for others to reproduce.
 
-Quarto is a tool that allows you integrate your code, text and figures in a single file in order to make high quality, reproducible reports. A paper published with an included quarto file and data sets can (in principle) be reproduced by anyone with a computer.
+Quarto is a tool that allows you integrate your code, text and figures in a single file in order to make high quality, reproducible reports. A paper published with an included Quarto file and data sets can (in principle) be reproduced by anyone with a computer.
 
 # Future / extensions
 
-Tentatively, there will also be a new part to this book, which discusses how to use quarto in a [targets](https://github.com/ropensci/targets) pipeline. This is now my preferred way to work when starting new projects, and it draws heavily from [Miles McBain's](https://www.milesmcbain.com/) ergonomic workflow packages, [tflow](https://github.com/MilesMcBain/tflow), [fnmate](https://github.com/MilesMcBain/fnmate), [capsule](https://github.com/MilesMcBain/capsule), most of which are demonstrated in his blog post, ["Benefits of a function-based diet (The {drake} post)"](https://www.milesmcbain.com/posts/the-drake-post/).
+Tentatively, there will also be a new part to this book, which discusses how to use Quarto in a [targets](https://github.com/ropensci/targets) pipeline. This is now my preferred way to work when starting new projects, and it draws heavily from [Miles McBain's](https://www.milesmcbain.com/) ergonomic workflow packages, [tflow](https://github.com/MilesMcBain/tflow), [fnmate](https://github.com/MilesMcBain/fnmate), [capsule](https://github.com/MilesMcBain/capsule), most of which are demonstrated in his blog post, ["Benefits of a function-based diet (The {drake} post)"](https://www.milesmcbain.com/posts/the-drake-post/).
 
 # License 
 

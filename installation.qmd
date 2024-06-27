@@ -9,7 +9,7 @@ In this section, the aim is to have everyone setup with R, RStudio, and Quarto
 ## Questions
 
 * How do I install R?
-* How do I install quarto?
+* How do I install Quarto?
 * How do I install LaTeX in a sane way?
 
 ## Software Setup
@@ -32,7 +32,7 @@ https://cloud.r-project.org/bin/linux/
 
 https://www.rstudio.com/products/rstudio/download/#download
 
-## quarto
+## Quarto
 
 To ensure you are up to date, run the following script to install the packages.
 
@@ -50,9 +50,9 @@ install.packages("usethis")
 
 ## A note on PDF
 
-quarto documents can be compiled to PDF, which is a great feature. In order to convert the documents to PDF, they use a software called LaTeX (\LaTeX) (pronounced la-tek or lay-tek). 
+Quarto documents can be compiled to PDF, which is a great feature. In order to convert the documents to PDF, they use a software called LaTeX (\LaTeX) (pronounced la-tek or lay-tek). 
 
-Installing LaTeX is thankfully handled when you install quarto, as [quarto includes a built-in Latexmk engine](https://quarto.org/docs/output-formats/pdf-engine.html#latexmk).
+Installing LaTeX is thankfully handled when you install Quarto, as [Quarto includes a built-in Latexmk engine](https://quarto.org/docs/output-formats/pdf-engine.html#latexmk).
 
 ## Test Script
 

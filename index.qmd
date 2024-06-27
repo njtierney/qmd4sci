@@ -1,10 +1,10 @@
 # About this {-}
 
-This is a book on quarto, aimed for scientists. It was initially developed as a 3 hour workshop, "Rmarkdown for scientists". It has been updated to use quarto, which is a more updated and modern take on rmarkdown. It is now developed into a resource that will grow and change over time as a **living book**.
+This is a book on Quarto, aimed for scientists. It was initially developed as a 3 hour workshop, "Rmarkdown for scientists". It has been updated to use Quarto, which is a more updated and modern take on rmarkdown. It is now developed into a resource that will grow and change over time as a **living book**.
 
 This book aims to teach the following:
 
-- Getting started with your own quarto document
+- Getting started with your own Quarto document
   - Using Rstudio
   - Visual Studio Code
 - Improve workflow:
@@ -12,7 +12,7 @@ This book aims to teach the following:
     - Demonstrate rstudio projects
     - Using keyboard shortcuts
   - Quarto projects
-- Export your quarto documents to PDF, HTML, and Microsoft Word
+- Export your Quarto documents to PDF, HTML, and Microsoft Word
 - Better manage figures and tables
     - Reference figures and tables in text so that they dynamically update
     - Create captions for figures and tables
@@ -26,24 +26,24 @@ This book aims to teach the following:
   - Cite articles in text
   - Generate bibliographies
   - Change bibliography styles
-- Debug and handle common errors with quarto
-- Next steps in working with quarto:
+- Debug and handle common errors with Quarto
+- Next steps in working with Quarto:
   - How to extend yourself to other formats, such as slides, websites, books, and more
 
 ## Why write this as a book?
 
 This book started out its first life being around rmarkdown. There are many great books on R Markdown and it's various features, such as ["Rmarkdown: The definitive guide"](https://bookdown.org/yihui/rmarkdown/), ["bookdown: Authoring Books and Technical Documents with R Markdown"](https://bookdown.org/yihui/bookdown/), and ["Dynamic Documents with R and knitr, Second edition"](https://www.crcpress.com/Dynamic-Documents-with-R-and-knitr/Xie/p/book/9781498716963), and Yihui Xie's thesis, ["Dynamic Graphics and Reporting for Statistics"](https://lib.dr.iastate.edu/etd/13518/).
 
-With the [release of quarto](), I wanted to translate the materials I developed in "Rmarkdown for scientists" to cover the same material. There are other excellent resources for learning quarto:
+With the [release of Quarto](), I wanted to translate the materials I developed in "Rmarkdown for scientists" to cover the same material. There are other excellent resources for learning Quarto:
 
-- [The quarto "get started" guide](https://quarto.org/docs/get-started/hello/rstudio.html)
-- [The quarto guide "quarto manuscripts"](https://quarto.org/docs/manuscripts/)
-- [The quarto chapter in "R for data science"](https://r4ds.hadley.nz/quarto)
-- [Making shareable documents with quarto from](https://openscapes.github.io/quarto-website-tutorial/), from OpenScapes
-- [Alison Hill's blog post: "we don't talk about quarto"](https://www.apreshill.com/blog/2022-04-we-dont-talk-about-quarto/)
+- [The Quarto "get started" guide](https://quarto.org/docs/get-started/hello/rstudio.html)
+- [The Quarto guide "Quarto manuscripts"](https://quarto.org/docs/manuscripts/)
+- [The Quarto chapter in "R for data science"](https://r4ds.hadley.nz/quarto)
+- [Making shareable documents with Quarto from](https://openscapes.github.io/quarto-website-tutorial/), from OpenScapes
+- [Alison Hill's blog post: "we don't talk about Quarto"](https://www.apreshill.com/blog/2022-04-we-dont-talk-about-quarto/)
 - [Mine Çentinkaya-Rundel's talk "Quarto for academics"](https://quarto.org/docs/blog/posts/2023-05-22-quarto-for-academics/)
 
-While the quarto guide is extensive, and indeed their "quarto manuscripts" guide covers a lot of the ground in this book. 
+While the Quarto guide is extensive, and indeed their "Quarto manuscripts" guide covers a lot of the ground in this book. 
 
 > So, why write a book?
 
@@ -88,7 +88,7 @@ usethis::use_course("bit.ly/qmd4sci-materials")
 
 ## Where has this course been taught?
 
-The quarto for scientists for course has not been taught yet, but the rmarkdown for scientists course, upon which this book is based, has been taught at the following locations:
+The Quarto for scientists for course has not been taught yet, but the rmarkdown for scientists course, upon which this book is based, has been taught at the following locations:
 
 - 2018
   - Melbourne, November for SSA Victoria

@@ -18,7 +18,7 @@ book:
   repo-branch: main
   repo-actions: [edit, issue]
   # sharing: [twitter]
-  date: "2024-04-22"
+  date: "2024-06-27"
   page-footer: "Copyright 2022-2024, Nicholas Tierney" 
   page-navigation: true
   search: true

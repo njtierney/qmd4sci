@@ -167,7 +167,7 @@ The template here is:
 Quitting from lines START-END [CHUNK LABEL] (QUARTO-DOCUMENT-NAME.qmd)
 ```
 
-I would then navigate to those lines of code in the quarto document, or search for the chunk label, and see if I can run that code interactively. A common problem with these kinds of errors is that they *just might* work interactively, because you might have run them out of sequence. However because a quarto document goes from a fresh R session and runs the code from the top to the bottom in that order, the objects might not yet exist. So:
+I would then navigate to those lines of code in the Quarto document, or search for the chunk label, and see if I can run that code interactively. A common problem with these kinds of errors is that they *just might* work interactively, because you might have run them out of sequence. However because a Quarto document goes from a fresh R session and runs the code from the top to the bottom in that order, the objects might not yet exist. So:
 
 1.  Restart R - ensure it is a clean session without objects from the previous session hanging around
 2.  Run code above the problem chunk
@@ -182,6 +182,7 @@ I would then navigate to those lines of code in the quarto document, or search f
 ````markdown
 ```{r}
 #| label: fig-volcano
+#| eval: false
 image(volcano
 ```
 ````
@@ -261,13 +262,7 @@ When you come across some funky looking text like that, look for a missing `}`.
 
 **What it might look like**
 
-````markdown
-```{r}
-#| label: fig-volcano
-#| fig-cap: "An elevation plot of Maunga Whau (Mt Eden). Darker colours indicate higher parts of the volcano. We see one main peak on the left, followed by two smaller peaks on the right.
-image(volcano)
-```
-````
+![](images/SCR-20240627-pnlc.png)
 
 **The error message**
 
@@ -290,12 +285,15 @@ ERROR: YAMLException: unexpected end of the stream within a double quoted scalar
 
 **What it might look like**
 
+````markdown
 ```{r}
 #| label: read-data
 #| echo: fenced
+#| eval: false
 library(readr)
 penguins <- read_csv("the_penguins.csv")
 ```
+````
 
 **The error message**
 
@@ -331,6 +329,7 @@ These are often not an error, but you just won't get the behaviour that you expe
 
 **What it might look like**
 
+````markdown
 ```{r}
 #| label: fig-penguins
 #| fig-caption: "Penguin Bill Length against Flipper Length. coloured by species. Each dot represents the bill length and flipper length of a penguin, coloured by species (Adelie, Chinstrap, Gentoo), and facetted by the three islands (Biscoe, Dream, Torgensen). We learn that not all three species are present on all islands, only Adelie is present on each. Adelie generally has the smallest flipper and bill length of the penguins, with chinstrap and gentoo being similar. Flipper length is correlated with bill length."
@@ -346,6 +345,7 @@ ggplot(penguins,
   theme_minimal() + 
   facet_wrap(~island)
 ```
+````
 
 ```markdown
 Above we have @fig-counts...
@@ -373,12 +373,7 @@ So this is when you provide the wrong input to your chunk options. Like somethin
 
 **What it might look like**
 
-```{r}
-#| label: fig-volc
-#| cache: yes
-#| echo: fenced
-image(volcano)
-```
+![](images/clipboard-2038915081.png)
 
 **The error message**
 
@@ -465,4 +460,3 @@ You can download this repository by running this code:
 #| eval: false
 use_course("njtierney/qmd-errors")
 ```
-

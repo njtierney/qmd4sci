@@ -213,8 +213,8 @@ You can read the above `here` code as:
 This is really handy for a few reasons:
 
 1. It makes things _completely_ portable
-<!-- TODO - what are quarto's rules for looking for files? -->
-1. quarto documents have a special way of looking for files, this helps eliminate file path pain.
+<!-- TODO - what are Quarto's rules for looking for files? -->
+1. Quarto documents have a special way of looking for files, this helps eliminate file path pain.
 1. If you decide to not use RStudio projects, you have code that will work on _any machine_
 
 ## Remember

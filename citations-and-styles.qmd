@@ -21,7 +21,7 @@ Now that you are near the end of your data analysis, you want to make sure that 
 
 ## How to cite things
 
-Citing things in a quarto document is straightforward, you refer to articles you want to cite using `[@article-handle]`. Here, `article-handle` matches the article handle in your `.bib` file.
+Citing things in a Quarto document is straightforward, you refer to articles you want to cite using `[@article-handle]`. Here, `article-handle` matches the article handle in your `.bib` file.
 
 This `.bib` file is referred to in the YAML of your document, under the option `bibliography: filename.bib`:
 
@@ -115,7 +115,7 @@ The bibliography is typically placed at the end of the document, so your last he
 # Appendix
 ```
 
-This is taken from [this section of the quarto documentation](https://quarto.org/docs/authoring/footnotes-and-citations.html#bibliography-generation). Note they also state:
+This is taken from [this section of the Quarto documentation](https://quarto.org/docs/authoring/footnotes-and-citations.html#bibliography-generation). Note they also state:
 
 > If your bibliography is being generated using BibLaTeX or natbib...the bibliography will always appear at the end of the document and the #refs div will be ignored.
 

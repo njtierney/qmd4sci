@@ -14,7 +14,7 @@ There are some small differences in how files are setup, but by and large the wo
 - [Write a book](https://quarto.org/docs/books/)
 - [build a website](https://quarto.org/docs/websites/)
 - [create a simple dashboard](https://quarto.org/docs/dashboards/)
-- [use shiny with quarto](https://quarto.org/docs/interactive/shiny/)
+- [use shiny with Quarto](https://quarto.org/docs/interactive/shiny/)
 - [generate multiple reports with parameterised reports](https://quarto.org/docs/computations/parameters.html) - [blog post by Mike Mahoney](https://www.mm218.dev/posts/2022-08-04-how-to-use-quarto-for-parameterized-reporting/), [blog post by Mandy Norrbo](https://www.jumpingrivers.com/blog/r-parameterised-presentations-quarto/)
 - [typst](https://quarto.org/docs/output-formats/typst.html) (like a next-generation LaTeX - still new.)
 
@@ -30,7 +30,7 @@ Quarto has an official extensions API, you can see all their extensions on their
 
 #### For Journals
 
-Quarto has provided a substantial list of supported journal formats in the [journal listings quarto extensions page](https://quarto.org/docs/extensions/listing-journals.html). This is similar to [rticles](https://cran.r-project.org/web/packages/rticles/index.html) in rmarkdown.
+Quarto has provided a substantial list of supported journal formats in the [journal listings Quarto extensions page](https://quarto.org/docs/extensions/listing-journals.html). This is similar to [rticles](https://cran.r-project.org/web/packages/rticles/index.html) in rmarkdown.
 
 #### Other extensions
 
