@@ -17,7 +17,7 @@ book:
   repo-url: https://github.com/njtierney/qmd4sci
   repo-branch: main
   repo-actions: [edit, issue]
-  sharing: [twitter]
+  # sharing: [twitter]
   date: "2024-04-22"
   page-footer: "Copyright 2022-2024, Nicholas Tierney" 
   page-navigation: true

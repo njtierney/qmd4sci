@@ -1,32 +1,23 @@
-Package: rmd4sci
-Title: A Book On Rmarkdown For Scientists
+Package: qmd4sci
+Title: Book about using Quarto for Scientific Writing
 Version: 0.0.0.9000
-Description: RMarkdown is a powerful tool to create reproducible reports. 
-    However it can be difficult for scientists to know how and where to start 
-    when writing their own reports. Rmarkdown for scientists is a short book 
-    created for the purpose of a workshop to help for scientists get started
-    with rmarkdown.
 Authors@R: 
-    person(given = "Nicholas",
-           family = "Tierney",
-           role = c("aut", "cre"),
-           email = "nicholas.tierney@gmail.com")
+    person("Nicholas", "Tierney", , "nicholas.tierney@gmail.com", role = c("aut", "cre"),
+           comment = c(ORCID = "https://orcid.org/0000-0003-1460-8722"))
+Description: What the package does (one paragraph).
+License: MIT + file LICENSE
+Encoding: UTF-8
+Language: en-GB
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.1
 Imports: 
-    bookdown,
-    readr,
-    here,
-    remotes,
-    curl,
-    git2r,
-    dplyr,
-    ggplot2,
     broom,
-    rmarkdown
-Remotes:
-    rstudio/bookdown
-License: Creative Commons Attribution-NonCommercial 4.0 International License
-Suggests: 
-    spelling
-Language: en-US
-URL: https://github.com/njtierney/rmd4sci
-BugReports: https://github.com/njtierney/rmd4sci/issues
+    here,
+    knitr,
+    palmerpenguins,
+    readr,
+    remotes,
+    rmarkdown,
+    spelling,
+    tidyverse,
+    visdat
