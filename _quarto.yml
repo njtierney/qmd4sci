@@ -59,8 +59,8 @@ format:
       - qmd4sci.scss
     code-background: true
     code-copy: true
+    code-overflow: wrap
     toc: true
-    fontsize: 12pt
   pdf:
     documentclass: krantz
     keep-tex: true
