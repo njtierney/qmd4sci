@@ -1,6 +1,6 @@
 # Using Quarto
 
-Now that we've covered how to organise your project, have some data, and talked a bit about what quarto is, let's talk about using it.
+Now that we've covered how to organise your project, have some data, and talked a bit about what Quarto is, let's talk about using it.
 
 ## Overview
 
@@ -169,11 +169,11 @@ gap <- read_csv("gapminder.csv")
 ```
 ````
 
-A nice feature of quarto + Rstudio is that they provide code completion when you start writing the code chunk options, and they will provide options when hitting "tab". 
+A nice feature of Quarto + Rstudio is that they provide code completion when you start writing the code chunk options, and they will provide options when hitting "tab". 
 
 *gif showing autocomplete*
 
-In the past Rmarkdown required "TRUE" and "FALSE", but note that quarto always uses "true" or "false" in lowercase, and never "yes" or "no".
+In the past Rmarkdown required "TRUE" and "FALSE", but note that Quarto always uses "true" or "false" in lowercase, and never "yes" or "no".
 
 The code chunks you need to know about right now are:
 
@@ -203,19 +203,11 @@ You might want to run the code inline to name the number of variables or rows in
 
 You can call code "inline"  with the pattern:
 
-UP TO HERE
-
 ```
 Here are some code things with language "lang": `` `{lang} code` ``.
 ```
 
 Essentially instead of using three backticks to write multiple lines of code, you use a single backtick. You can think of this as a backtick being used inside text for a one liner, whereas creating a code fence with three backticks indicates something longer.
-
-```{python}
-import rdatasets
-```
-
-
 
 ::: {.panel-tabset group="engine"}
 
@@ -225,33 +217,27 @@ import rdatasets
 
 ```` markdown
 ```{{python}}
-radius = 5
+py_heights = [153, 151, 156, 160, 171]
+import statistics
+py_mean = statistics.mean(py_heights)
 ```
 
-The radius of the circle is `{python} radius`
+The mean of these heights is `{python} py_mean`
 ````
 
-This syntax works for any Jupyter kernel---so for Julia you would write an inline expression as `` `{julia} radius` ``).
+This syntax works for any Jupyter kernel---so for Julia you would write an inline expression as `` `{julia} j_mean` ``).
 
 ## Knitr
 
 ```` markdown
 ```{{r}}
-radius <- 5
+r_heights <- c(153, 151, 156, 160, 171)
+r_mean <- mean(r_heights)
 ```
 
-The radius of the circle is `{r} radius`
+The mean of these heights is `{r} mean(c(153, 151, 156, 160, 171))`
 ````
 
-## OJS
-
-```` markdown
-```{{ojs}}
-radius = 5
-```
-
-The radius of the circle is `{ojs} radius`
-````
 :::
 
 

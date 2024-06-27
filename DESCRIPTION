@@ -13,10 +13,12 @@ RoxygenNote: 7.3.1
 Imports: 
     broom,
     here,
+    JuliaCall,
     knitr,
     palmerpenguins,
     readr,
     remotes,
+    reticulate,
     rmarkdown,
     spelling,
     tidyverse,
