@@ -1,45 +1,39 @@
 # Different Outputs and Extensions 
 
-There are many different outputs for rmarkdown - as a start, THIS VERY BOOK IS WRITTEN IN RMARKDOWN! How cool is that?
+There are many different outputs for Quarto - as a start, THIS VERY BOOK IS WRITTEN IN QUARTO! How cool is that? I think it's pretty cool.
+
+What's especially great is that the extra barriers to moving from one format to another are relatively low. Generally speaking, the things that you will change in your overall setup are:
+
+- Adding a `_quarto.yml` file
+  - Making some changes inside this file to tell it whether it is a book/manuscript/slideshow
+  
+There are some small differences in how files are setup, but by and large the work that you need to do will be on the writing of the content, and your code. Which is good! That's where we want out focus to be.
 
 ## Alternative output formats
 
-- [write a book with bookdown](https://github.com/rstudio/bookdown)
-- [build a website with blogdown](https://github.com/rstudio/blogdown)
-- [create a simple dashboard with flexdashboard](https://rmarkdown.rstudio.com/flexdashboard/)
-- [generate learning exercises with `learnr`](https://bookdown.org/yihui/rmarkdown/learnr.html#learnr)
-- [generate multiple reports with parameterised reports](https://bookdown.org/yihui/rmarkdown/parameterized-reports.html#parameterized-reports)
-- [tufte](https://github.com/rstudio/tufte)
+- [Write a book](https://quarto.org/docs/books/)
+- [build a website](https://quarto.org/docs/websites/)
+- [create a simple dashboard](https://quarto.org/docs/dashboards/)
+- [use shiny with quarto](https://quarto.org/docs/interactive/shiny/)
+- [generate multiple reports with parameterised reports](https://quarto.org/docs/computations/parameters.html) - [blog post by Mike Mahoney](https://www.mm218.dev/posts/2022-08-04-how-to-use-quarto-for-parameterized-reporting/), [blog post by Mandy Norrbo](https://www.jumpingrivers.com/blog/r-parameterised-presentations-quarto/)
+- [typst](https://quarto.org/docs/output-formats/typst.html) (like a next-generation LaTeX - still new.)
 
-### Slideshows
+### Slideshows / Presentations
 
-- [HTML: xaringan](https://github.com/yihui/xaringan)
-- [HTML: slidy](https://bookdown.org/yihui/rmarkdown/slidy-presentation.html)
-- [HTML: ioslides](https://bookdown.org/yihui/rmarkdown/ioslides-presentation.html)
-- [PDF: beamer](https://bookdown.org/yihui/rmarkdown/beamer-presentation.html)
-- [powerpoint](https://bookdown.org/yihui/rmarkdown/powerpoint-presentation.html)
+- [HTML: revealjs](https://quarto.org/docs/presentations/revealjs/)
+- [PDF: beamer](https://quarto.org/docs/presentations/beamer.html)
+- [powerpoint](https://quarto.org/docs/presentations/powerpoint.html)
 
-### For Journals
+### Quarto Extensions
 
-- [rticles](https://cran.r-project.org/web/packages/rticles/index.html)
+Quarto has an official extensions API, you can see all their extensions on their [extensions page](https://quarto.org/docs/extensions/). Perhaps the most relevant is the journal extensions page, which I discuss below. For more information on creating extensions, see their [creating extensions page](https://quarto.org/docs/extensions/creating.html).
 
-Note that if you are using a template and want the full featured citation features, 
+#### For Journals
 
-your YAML will need to include something like this:
+Quarto has provided a substantial list of supported journal formats in the [journal listings quarto extensions page](https://quarto.org/docs/extensions/listing-journals.html). This is similar to [rticles](https://cran.r-project.org/web/packages/rticles/index.html) in rmarkdown.
 
-```yaml
-output:
-  bookdown::pdf_book:
-    base_format: rticles::plos_article
-```
+#### Other extensions
 
-### APA
+Other formats and extensions for PDF, for example, the [`hikmah.pdf`](https://github.com/andrewheiss/hikmah-academic-quarto) extension by [Andrew Heiss](https://www.andrewheiss.com/).
 
-- [papaja](http://github.com/crsh/papaja)
-
-### Misc
-
-- [rmdformats](https://github.com/juba/rmdformats)
-- [Bob Rudis' markdown templates](https://github.com/hrbrmstr/markdowntemplates)
-- [prettydoc by Yixuan Qiu](http://yixuan.cos.name/prettydoc/themes.html)
-- [svm r templates by Steve Miller](https://github.com/svmiller/svm-r-markdown-templates)
+These can be found at the [Quarto Custom Formats Page](https://quarto.org/docs/extensions/listing-formats.html).
