@@ -1,5 +1,5 @@
 ---
-title: "01-rmd-example"
+title: "01-qmd-example"
 author: "YOUR NAME"
 date: "yyyy/mm/dd"
 format: 

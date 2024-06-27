@@ -1,25 +1,26 @@
 ---
-title: "Rmarkdown example"
+title: "Quarto example"
 author: "Nicholas Tierney"
 bibliography: packages.bib
-keep-md: true
 format:
   html:
+    keep-md: true
     toc: true
+    fig-format: png
   pdf:
     toc: true
+    fig-format: png
   docx:
     toc: true
+    fig-format: png
+execute: 
+  echo: true
 csl: bmj.csl
-date: 2017/06/27
+Date: 2017/06/27
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE,
-                      dev = "png")
-```
-
-```{r library}
+```{r}
+#| label: library
 
 library(tidyverse)
 
@@ -61,7 +62,8 @@ We are going to explore the relationship between solar radiation and other selec
 
 First, we tidy the names of the dataset, to provide information about the units of measurement for Ozone, Solar Radiation, Wind, and Temperature. We do this by renaming the variables and adding a suffix at the end to describe the units. To do this we use the `rename` function from the `dplyr` package[@dplyr].
 
-```{r tidy-data}
+```{r}
+#| label: tidy-data
 
 tidy_aq <-rename(.data = airquality,
                  ozone_ppb = Ozone,
@@ -75,7 +77,10 @@ tidy_aq <-rename(.data = airquality,
 
 We can see that there is an interesting relationship between ozone and solar radiation in figure 1 below, plotted using ggplot2 [@ggplot2]
 
-```{r figure-1, fig.height = 4, fig.width=4}
+```{r}
+#| label: figure-1
+#| fig-height: 4
+#| fig-width: 4
 
 ggplot(tidy_aq,
        aes(x = ozone_ppb,
@@ -86,7 +91,8 @@ ggplot(tidy_aq,
 
 We can also see that there is an interesting relationship between Ozone and temperature.
 
-```{r figure-2}
+```{r}
+#| label: figure-2
 
 ggplot(tidy_aq,
        aes(x = ozone_ppb,
@@ -106,7 +112,8 @@ $$
 
 And we can fit this model using the code below.
 
-```{r data-model}
+```{r}
+#| label: data-model
 lm_aq <- lm(ozone_ppb ~ solar_rad_lang + wind_mph + temp_fah,
             data = tidy_aq)
 
@@ -116,7 +123,8 @@ lm_aq <- lm(ozone_ppb ~ solar_rad_lang + wind_mph + temp_fah,
 
 The key results are given below, using the `tidy` function from the `broom` package [@broom] to clean up the data.
 
-```{r broom-tidy}
+```{r}
+#| label: broom-tidy
 
 library(broom)
 
@@ -127,7 +135,8 @@ tidy_lm_aq
 
 We can present this result in a nice table using the `kable` function from the knitr package [@knitr]
 
-```{r lm-kable}
+```{r}
+#| label: lm-kable
 
 knitr::kable(tidy_lm_aq,
              digits = 3,
@@ -143,7 +152,9 @@ We have explored the relationship of Ozone with other variables in the airqualit
 
 # References
 
-```{r write-references, include = FALSE}
+```{r}
+#| label: write-references
+#| include: false
 knitr::write_bib(c(
   .packages(), 
   "knitr", 

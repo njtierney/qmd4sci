@@ -1,5 +1,5 @@
 ---
-title: "02-rmd-figures-chunks"
+title: "03-qmd-lm-tables-inline-eqn"
 author: "Your Name"
 date: 2017/06/27
 format: html
@@ -7,11 +7,13 @@ format: html
 
 # Tasks
 
-- Change the fig.width, fig.height, and dev of the figure in plot-1
-  - (hint: look at the gear icon in a chunk)
-- Add an option to keep the markdown source code 
-  - (hint: look at the gear icon next to `knit` icon)
-- print the code for one of the figures, but not the other (hint: use `echo = `)
+  - fit a linear model of Ozone ~ Temp + Wind + Solar.R 
+    - (hint: use `lm`)
+  - Make a table of the coefficients from the linear model 
+    - (hint: use `coef` and `knitr::kable`)
+  - Make some inline code chunks that describe the single values of the R-squared or a coefficient
+  - Make an equation describing the relationship
+
 
 # Introduction
 
@@ -38,7 +40,11 @@ We are going to explore the relationship between solar radiation and other selec
 
 We can see that there is an interesting relationship between ozone and solar radiation in figure 1 below, plotted using ggplot2.
 
-```{r figure-1}
+```{r}
+#| label: figure-1
+#| echo: true
+#| fig-height: 2
+#| fig-width: 2
 library(ggplot2)
 ggplot(airquality,
        aes(x = Ozone,
@@ -49,7 +55,11 @@ ggplot(airquality,
 
 We can also see that there is an interesting relationship between Ozone and temperature.
 
-```{r figure-2}
+```{r}
+#| label: figure-2
+#| echo: false
+#| fig-height: 2
+#| fig-width: 2
 
 ggplot(airquality,
        aes(x = Ozone,

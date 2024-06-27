@@ -1,21 +1,21 @@
 ---
-title: "04-rmd-global-opts-device"
+title: "02-qmd-figures-chunks"
 author: "Your Name"
-date: 2017/06/27
-format: html
-keep-md: true
+date: 2024/06/23
+format: 
+  html:
+    fig-height: 7
+    fig-width: 7
+    fig-format: png
+    fig-dpi: 300
 ---
-
 
 # Tasks
 
-- set a global option to: 
-  - hide all of the code
-    - hint: put `knitr::opts_chunk$set()` in a chunk and set the options
-  - set the graphics device
-    - hint: `dev = "png"` or even `dev = c("png", "pdf","tiff")`
-  - set the DPI
-    - hint: `dpi = 300`
+- Change the fig-width, fig-height, and fig-format of the figure in plot-1
+  - (hint: use tab-complete on the `#|`)
+- Add an option to keep the markdown source code 
+- Print the code for one of the figures, but not the other (hint: use `echo = `)
 
 # Introduction
 
@@ -38,24 +38,13 @@ It contains the following variables
 
 We are going to explore the relationship between solar radiation and other selected variables, solar radiation, wind, and temperature.
 
-# Method
-
-```{r lm-fit}
-
-lm_fit <- lm(Ozone ~ Solar.R + Temp + Wind, 
-             data = airquality)
-
-```
-
-$$
-Ozone \sim \beta_0 + \beta_1Solar.R + \beta_2 Wind + \beta_3Temp + \epsilon
-$$
-
 # Results
 
 We can see that there is an interesting relationship between ozone and solar radiation in figure 1 below, plotted using ggplot2.
 
-```{r figure-1, fig.height = 2, fig.width = 2, echo = TRUE}
+```{r}
+#| label: figure-1
+#| fig-align: "center"
 library(ggplot2)
 ggplot(airquality,
        aes(x = Ozone,
@@ -66,7 +55,8 @@ ggplot(airquality,
 
 We can also see that there is an interesting relationship between Ozone and temperature.
 
-```{r figure-2, fig.height = 2, fig.width = 2, echo = FALSE}
+```{r}
+#| label: figure-2
 
 ggplot(airquality,
        aes(x = Ozone,
@@ -75,12 +65,3 @@ ggplot(airquality,
 
 ```
 
-
-```{r print-coef-table}
-
-knitr::kable(coef(lm_fit))
-
-```
-
-`r coef(lm_fit)[2]`
-`broom::glance(lm_fit)$r.squared`

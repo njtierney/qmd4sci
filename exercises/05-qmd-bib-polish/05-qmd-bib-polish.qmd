@@ -1,23 +1,21 @@
 ---
-title: "05-rmd-bib-polish"
-format: html
+title: "05-qmd-bib-polish"
+format: 
+  html:
+    fig-height: 3
+    fig-width: 4
+    fig-format: png
+execute: 
+  echo: false
+bibliography: packages.bib
 ---
-
-```{r setup}
-
-knitr::opts_chunk$set(echo = FALSE,
-                      fig.height = 3,
-                      fig.width = 4,
-                      dev = "png")
-```
-
 
 # Tasks
 
-- Cite the packages you use when you use them
-  - hint: http://rmarkdown.rstudio.com/authoring_bibliographies_and_citations.html
-  - hint: look at the names in packages.bib
-- Tidy up the structure, provide some more words around the introduction and results
+-   Cite the packages you use when you use them
+    -   hint: https://quarto.org/docs/authoring/footnotes-and-citations.html
+    -   hint: look at the names in packages.bib
+-   Tidy up the structure, provide some more words around the introduction and results
 
 # Introduction
 
@@ -31,18 +29,19 @@ And the dataset is sourced from:
 
 It contains the following variables
 
-- Ozone: Mean ozone in parts per billion from 1300 to 1500 hours at Roosevelt Island.
-- Solar.R: Solar radiation in Langleys in the frequency band 4000–7700 Angstroms from 0800 to 1200 hours at Central Park.
-- Wind: Average wind speed in miles per hour at 0700 and 1000 hours at LaGuardia Airport.
-- Temp: Maximum daily temperature in degrees Fahrenheit at La Guardia Airport.
-- Month: Month (1--12)
-- Day: Day of month (1--31)
+-   Ozone: Mean ozone in parts per billion from 1300 to 1500 hours at Roosevelt Island.
+-   Solar.R: Solar radiation in Langleys in the frequency band 4000–7700 Angstroms from 0800 to 1200 hours at Central Park.
+-   Wind: Average wind speed in miles per hour at 0700 and 1000 hours at LaGuardia Airport.
+-   Temp: Maximum daily temperature in degrees Fahrenheit at La Guardia Airport.
+-   Month: Month (1--12)
+-   Day: Day of month (1--31)
 
 We are going to explore the relationship between solar radiation and other selected variables, solar radiation, wind, and temperature.
 
 # Method
 
-```{r lm-fit}
+```{r}
+#| label: lm-fit
 
 lm_fit <- lm(Ozone ~ Solar.R + Temp + Wind, 
              data = airquality)
@@ -57,7 +56,11 @@ $$
 
 We can see that there is an interesting relationship between ozone and solar radiation in figure 1 below, plotted using ggplot2.
 
-```{r figure-1, fig.height = 2, fig.width = 2, echo = TRUE}
+```{r}
+#| label: figure-1
+#| echo: true
+#| fig-height: 2
+#| fig-width: 2
 library(ggplot2)
 ggplot(airquality,
        aes(x = Ozone,
@@ -68,7 +71,11 @@ ggplot(airquality,
 
 We can also see that there is an interesting relationship between Ozone and temperature.
 
-```{r figure-2, fig.height = 2, fig.width = 2, echo = FALSE}
+```{r}
+#| label: figure-2
+#| echo: false
+#| fig-height: 2
+#| fig-width: 2
 
 ggplot(airquality,
        aes(x = Ozone,
@@ -79,7 +86,8 @@ ggplot(airquality,
 
 We use the knitr package to make a table - CITATION NEEDED!
 
-```{r print-coef-table}
+```{r}
+#| label: print-coef-table
 
 knitr::kable(coef(lm_fit))
 

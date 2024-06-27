@@ -1,20 +1,20 @@
 ---
-title: "03-rmd-lm-tables-inline-eqn"
+title: "04-qmd-global-opts-device"
 author: "Your Name"
 date: 2017/06/27
 format: html
-keep-md: true
 ---
+
 
 # Tasks
 
-  - fit a linear model of Ozone ~ Temp + Wind + Solar.R 
-    - (hint: use `lm`)
-  - Make a table of the coefficients from the linear model 
-    - (hint: use `coef` and `knitr::kable`)
-  - Make some inline code chunks that describe the single values of the R-squared or a coefficient
-  - Make an equation describing the relationship
-
+- set a global option to: 
+  - hide all of the code
+    - hint: Set YAML options with `execute:`
+  - set the graphics device
+    - hint: `fig-format: png`
+  - set the DPI
+    - hint: `dpi: 300`
 
 # Introduction
 
@@ -37,11 +37,29 @@ It contains the following variables
 
 We are going to explore the relationship between solar radiation and other selected variables, solar radiation, wind, and temperature.
 
+# Method
+
+```{r}
+#| label: lm-fit
+
+lm_fit <- lm(Ozone ~ Solar.R + Temp + Wind, 
+             data = airquality)
+
+```
+
+$$
+Ozone \sim \beta_0 + \beta_1Solar.R + \beta_2 Wind + \beta_3Temp + \epsilon
+$$
+
 # Results
 
 We can see that there is an interesting relationship between ozone and solar radiation in figure 1 below, plotted using ggplot2.
 
-```{r figure-1, fig.height = 2, fig.width = 2, echo = TRUE}
+```{r}
+#| label: figure-1
+#| echo: true
+#| fig-height: 2
+#| fig-width: 2
 library(ggplot2)
 ggplot(airquality,
        aes(x = Ozone,
@@ -52,7 +70,11 @@ ggplot(airquality,
 
 We can also see that there is an interesting relationship between Ozone and temperature.
 
-```{r figure-2, fig.height = 2, fig.width = 2, echo = FALSE}
+```{r}
+#| label: figure-2
+#| echo: false
+#| fig-height: 2
+#| fig-width: 2
 
 ggplot(airquality,
        aes(x = Ozone,
@@ -61,3 +83,13 @@ ggplot(airquality,
 
 ```
 
+
+```{r}
+#| label: print-coef-table
+
+knitr::kable(coef(lm_fit))
+
+```
+
+`{r} coef(lm_fit)[2]`
+`{r} broom::glance(lm_fit)$r.squared`

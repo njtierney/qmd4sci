@@ -1,33 +1,31 @@
 ---
-title: "Rmarkdown Errors"
+title: "Quarto Errors"
 author: Nicholas Tierney
 Date: 2017/06/27
-execute: 
-  echo: true
-format:
-bibliography: packages.bib
+format: 
+bibligraphy: packages.bib
+echo = TRUE
+fig-dev: "png"
 ---
 
 # Tasks
 
-- Get this rmarkdown document to compile
+- Get this quarto document to compile
   - hint:
-    - knit the document and look at the line for the error
+    - render the document and look at the line for the error
     - if there is an error:
        - recreate the session in an interactive session:
-          - restart R
-          - run all chunks below (top section Run>arrow>run all chunks below)
-          - find the chunk that did not work, fix that chunk
-          - run all chunks below (top section Run>arrow>run all chunks below)
-          - explore working directory issues
-            - where is the packages.bib file?
-            - remember that the rmarkdown directory is where the .Rmd file lives
+          - Restart R
+          - Run all chunks below (top section Run>arrow>run all chunks below)
+          - Find the chunk that did not work, fix that chunk
+          - Run all chunks below (top section Run>arrow>run all chunks below)
+          - Explore working directory issues
+            - Where is the packages.bib file?
+            - Remember that the quarto directory is where the .qmd file lives
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(dev = "png")
-```
-
-```{r library, eval = FALSE}
+```{r }
+#| label: library
+#| echo: !expr ''
 
 library(tidyverses)
 
@@ -59,7 +57,8 @@ We are going to explore the relationship between solar radiation and other selec
 
 First, we tidy the names of the dataset, to provide information about the units of measurement for Ozone, Solar Radiation, Wind, and Temperature. We do this by renaming the variables and adding a suffix at the end to describe the units. To do this we use the `rename` function from the `dplyr` package[@dplyr].
 
-```{r tidy-data}
+```{r}
+#| label: tidy-data
 
 tidy_aq <-rename(.data = airquality,
                  ozone_ppb = Ozone,
@@ -73,7 +72,10 @@ tidy_aq <-rename(.data = airquality,
 
 We can see that there is an interesting relationship between ozone and solar radiation in figure 1 below, plotted using ggplot2 [@ggplot2]
 
-```{r figure-1, fig.height = 4, fig.width=4}
+```{r}
+#| label: figure-1
+#| fig-height: 4
+#| fig-width: 4
 
 ggplot(tidy_aq,
        aes(x = ozone_ppb,
@@ -84,7 +86,8 @@ ggplot(tidy_aq,
 
 We can also see that there is an interesting relationship between Ozone and temperature.
 
-```{r figure-2}
+```{r}
+#| label: figure-2
 
 ggplot(tidy_aq,
        aes(x = ozone_ppb,
@@ -101,7 +104,8 @@ $$
 
 And we can fit this model using the code below.
 
-```{r data-model}
+```{r}
+#| label: data-model
 
 lm_aq <- lm(ozone_ppb ~ solar_rad_lang + wind_mph + temp_fah,
             data = tidy_aq)
@@ -112,7 +116,8 @@ lm_aq <- lm(ozone_ppb ~ solar_rad_lang + wind_mph + temp_fah,
 
 The key results are given below, using the `tidy` function from the `broom` package [@broom] to clean up the data.
 
-```{r broom-tidy}
+```{r}
+#| label: broom-tidy
 
 library(broom)
 
@@ -123,7 +128,8 @@ tidy_lm_aq
 
 We can present this result in a nice table using the `kable` function from the knitr package [@knitr]
 
-```{r lm-kable}
+```{r}
+#| label: lm-kable
 
 knitr::kable(tidy_lm_aq_broom,
              digits = 3,
