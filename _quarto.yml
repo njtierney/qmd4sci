@@ -30,7 +30,6 @@ book:
     - "rstudio.qmd"
     - "workflow.qmd"
     - "using-qmd.qmd"
-    - "visual-vs-source-mode.qmd"
     - "pdf-html-word.qmd"
     - "keyboard-shortcuts.qmd"
     - "figures-tables-captions.qmd"
@@ -45,19 +44,21 @@ book:
     - "references.qmd"
     - "acknowledgements.qmd"
   appendices:
-    - "appendix-a-template.qmd"
-    - "appendix-b-faq.qmd"
-    - "appendix-c-html-extensions.qmd"
+    - "appendix-a-visual-vs-source-mode.qmd"
+    - "appendix-b-template.qmd"
+    - "appendix-c-faq.qmd"
+    - "appendix-d-html-extensions.qmd"
 bibliography:
   - book.bib
   - packages.bib
 
 format:
   html:
-    theme: cosmo
+    theme: 
+      - cosmo
+      - qmd4sci.scss
     code-background: true
     code-copy: true
-    css: style.css
     toc: true
     fontsize: 12pt
   pdf:

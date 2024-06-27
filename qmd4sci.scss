@@ -1,0 +1,83 @@
+/*-- scss:defaults --*/
+
+$primary: #637238 !default;
+$font-size-root: 18px !default;
+
+
+/* -- scss: rules --*/
+
+$color_1: #777;
+$color_2: #696969;
+$color_3: #ffffff;
+$color_4: inherit;
+$background-color_1: #96D3CE;
+$background-color_2: #FFD992;
+$background-color_3: #CDD8EF;
+$background-color_4: #FFACAC;
+$border-color_1: #ffffff;
+
+/* colors generated w http://paletton.com/#uid=73g0u0k9gMF1u+354U+dHBqiftl */
+/* "#7B321C" dark red */
+/* "#FFACAC" light red */
+
+/*
+p.caption {
+	color: $color_1;
+	margin-top: 10px;
+}
+p {
+	code {
+		white-space: inherit;
+	}
+}
+pre {
+	word-break: normal;
+	word-wrap: normal;
+	code {
+		white-space: inherit;
+	}
+}
+*/
+
+.exercise {
+	padding-left: 2em;
+	padding-right: 2em;
+	border: 1px solid;
+	border-color: $border-color_1;
+	color: $color_2;
+	background-color: $background-color_1;
+	a {
+		color: $color_3;
+		font-weight: bold;
+		text-decoration: none;
+	}
+	p {
+		code {
+			color: $color_4;
+		}
+	}
+}
+.history {
+	padding-left: 2em;
+	padding-right: 2em;
+	border: 1px solid;
+	border-color: $border-color_1;
+	color: $color_2;
+	background-color: $background-color_2;
+}
+.question {
+	padding-left: 2em;
+	padding-right: 2em;
+	border: 1px solid;
+	border-color: $border-color_1;
+	color: $color_2;
+	background-color: $background-color_3;
+}
+.demo {
+	padding-left: 2em;
+	padding-right: 2em;
+	border: 1px solid;
+	border-color: $border-color_1;
+	color: $color_2;
+	background-color: $background-color_4;
+}
