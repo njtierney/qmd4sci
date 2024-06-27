@@ -44,10 +44,10 @@ book:
     - "references.qmd"
     - "acknowledgements.qmd"
   appendices:
-    - "appendix-a-visual-vs-source-mode.qmd"
-    - "appendix-b-template.qmd"
-    - "appendix-c-faq.qmd"
-    - "appendix-d-html-extensions.qmd"
+    - "appendix-visual-vs-source-mode.qmd"
+    - "appendix-template.qmd"
+    - "appendix-faq.qmd"
+    - "appendix-html-extensions.qmd"
 bibliography:
   - book.bib
   - packages.bib
