@@ -1,6 +1,6 @@
 # Next Steps
 
-So now you've got a handle on rmarkdown, what are some of the other things to think about learning? Here are some of my recommendations.
+So now you've got a handle on Quarto, what are some of the other things to think about learning? Here are some of my recommendations.
 
 ## Learn how to use git and github
 
@@ -19,4 +19,6 @@ Or even if you have something like:
 - `2018-10-10-document.Rmd`
 - `2018-10-11-document.Rmd`
 
-These are ways of managing which version you have
+These are ways of managing which version you have.
+
+To learn git and github, I'd highly recommend [Happy Git with R](https://happygitwithr.com/) by [Jenny Bryan](https://jennybryan.org/), the [STAT 545 TAs](https://stat545.com/), and [Jim Hester](https://www.jimhester.com/)

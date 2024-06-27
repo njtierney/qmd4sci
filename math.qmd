@@ -1,7 +1,7 @@
 # Math
 
 Want to include equations in your writing? Easy. Quarto supports
-LaTeX style equation writing. This section introduces the two types equations, inline, and display form, and how to number equations.
+LaTeX style equation writing. This section introduces the two types equations, inline, and display form, as well as numbering equations.
 
 ## Overview
 
