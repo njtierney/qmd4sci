@@ -1,0 +1,1175 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.4.556">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="description" content="For a scientific report to be completely credible, it must be reproducible. The full computational environment used to derive the results, including the data and code used for statistical analysis should be available for others to reproduce. Quarto is a tool that allows you integrate your code, text and figures in a single file in order to make high quality, reproducible reports. A paper published with an included quarto file and data sets can be reproduced by anyone with a computer.">
+
+<title>Quarto for Scientists - 16&nbsp; Common Problems with Quarto (and some solutions)</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./alternative-outputs-and-exts.html" rel="next">
+<link href="./caption-reference-eqn.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body class="nav-sidebar floating">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./common-problems.html"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Common Problems with Quarto (and some solutions)</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Quarto for Scientists</a> 
+        <div class="sidebar-tools-main">
+    <a href="https://github.com/njtierney/qmd4sci" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">About this</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./license.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">License</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./why-qmd.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Why Quarto</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./installation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Installation</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./rstudio.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">RStudio, What and Why</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./workflow.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Workflow</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./using-qmd.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Using Quarto</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./visual-vs-source-mode.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Visual mode</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./pdf-html-word.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">HTML, PDF, and Word (and more!)</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./keyboard-shortcuts.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Keyboard Shortcuts</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./figures-tables-captions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Figures, Tables, Captions.</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./changing-figures.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Customising your figures</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./math.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Math</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./cite-fig-tab-sec.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Citing Figures, Tables &amp; Sections</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./citations-and-styles.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Citing Articles &amp; Bibliography Styles</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./caption-reference-eqn.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Captioning and referencing equations</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./common-problems.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Common Problems with Quarto (and some solutions)</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./alternative-outputs-and-exts.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Different Outputs and Extensions</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./next-steps.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Next Steps</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">References</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./acknowledgements.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Acknowledgements</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+ <span class="menu-text">Appendices</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./appendix-a-template.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Templates</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./appendix-b-faq.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">FAQ</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./appendix-c-html-extensions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">C</span>&nbsp; <span class="chapter-title">HTML document extensions</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#avoiding-problems" id="toc-avoiding-problems" class="nav-link active" data-scroll-target="#avoiding-problems"><span class="header-section-number">16.1</span> Avoiding problems</a></li>
+  <li><a href="#the-errors" id="toc-the-errors" class="nav-link" data-scroll-target="#the-errors"><span class="header-section-number">16.2</span> The errors</a></li>
+  <li><a href="#python-not-found" id="toc-python-not-found" class="nav-link" data-scroll-target="#python-not-found"><span class="header-section-number">16.3</span> Python not found</a></li>
+  <li><a href="#no-julia" id="toc-no-julia" class="nav-link" data-scroll-target="#no-julia"><span class="header-section-number">16.4</span> No julia</a></li>
+  <li><a href="#duplication-duplicated-chunk-names" id="toc-duplication-duplicated-chunk-names" class="nav-link" data-scroll-target="#duplication-duplicated-chunk-names"><span class="header-section-number">16.5</span> “Duplication”: Duplicated chunk names</a></li>
+  <li><a href="#not-what-i-ordered-objects-not-created-in-the-right-order" id="toc-not-what-i-ordered-objects-not-created-in-the-right-order" class="nav-link" data-scroll-target="#not-what-i-ordered-objects-not-created-in-the-right-order"><span class="header-section-number">16.6</span> “Not what I ordered”: Objects not created in the right order</a></li>
+  <li><a href="#forgotten-trails-i-missing-or" id="toc-forgotten-trails-i-missing-or" class="nav-link" data-scroll-target="#forgotten-trails-i-missing-or"><span class="header-section-number">16.7</span> Forgotten Trails I: Missing “(”, or “}”</a></li>
+  <li><a href="#forgotten-trails-ii-chunk-option-with-trailing-or-not-input" id="toc-forgotten-trails-ii-chunk-option-with-trailing-or-not-input" class="nav-link" data-scroll-target="#forgotten-trails-ii-chunk-option-with-trailing-or-not-input"><span class="header-section-number">16.8</span> “Forgotten Trails II”: Chunk option with trailing “, or not input</a></li>
+  <li><a href="#the-path-not-taken-file-path-incorrect" id="toc-the-path-not-taken-file-path-incorrect" class="nav-link" data-scroll-target="#the-path-not-taken-file-path-incorrect"><span class="header-section-number">16.9</span> “The Path Not Taken” File path incorrect</a></li>
+  <li><a href="#spolling-ii-incorrectly-spelled-chunk-option-inputs" id="toc-spolling-ii-incorrectly-spelled-chunk-option-inputs" class="nav-link" data-scroll-target="#spolling-ii-incorrectly-spelled-chunk-option-inputs"><span class="header-section-number">16.10</span> “Spolling II” Incorrectly spelled chunk option inputs</a></li>
+  <li><a href="#the-legend-of-link-i-your-images-in-dont-work." id="toc-the-legend-of-link-i-your-images-in-dont-work." class="nav-link" data-scroll-target="#the-legend-of-link-i-your-images-in-dont-work."><span class="header-section-number">16.11</span> “The Legend of Link I”: Your images in <code>![]()</code> don’t work.</a></li>
+  <li><a href="#latex-errors" id="toc-latex-errors" class="nav-link" data-scroll-target="#latex-errors"><span class="header-section-number">16.12</span> LaTeX errors</a></li>
+  <li><a href="#i-want-to-include-inline-r-code-verbatim-to-show-an-example" id="toc-i-want-to-include-inline-r-code-verbatim-to-show-an-example" class="nav-link" data-scroll-target="#i-want-to-include-inline-r-code-verbatim-to-show-an-example"><span class="header-section-number">16.13</span> I want to include inline R code verbatim to show an example</a></li>
+  <li><a href="#my-figure-or-table-isnt-being-cited" id="toc-my-figure-or-table-isnt-being-cited" class="nav-link" data-scroll-target="#my-figure-or-table-isnt-being-cited"><span class="header-section-number">16.14</span> My Figure or Table isn’t being cited</a></li>
+  <li><a href="#your-turn" id="toc-your-turn" class="nav-link" data-scroll-target="#your-turn"><span class="header-section-number">16.15</span> Your Turn</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/njtierney/qmd4sci/edit/main/common-problems.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/njtierney/qmd4sci/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Common Problems with Quarto (and some solutions)</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>There are some things that I run into fairly frequently (and some not so much) when I’m rendering my Quarto documents. This section details some the common problems, and the solution that I have found works for me.</p>
+<p>If you want to practice on fixing broken Quarto documents, check out some pathologically broken examples on github at</p>
+<p><a href="https://github.com/njtierney/qmd-errors">njtierney/qmd-errors</a>.</p>
+<section id="avoiding-problems" class="level2" data-number="16.1">
+<h2 data-number="16.1" class="anchored" data-anchor-id="avoiding-problems"><span class="header-section-number">16.1</span> Avoiding problems</h2>
+<p>To avoid problems in the first place, I try and do the following:</p>
+<ul>
+<li>Develop code in chunks and execute the chunks until they work, then move on.</li>
+<li>render the document regularly to check for errors.</li>
+</ul>
+<p>Then, if there is an error:</p>
+<ul>
+<li>recreate the error in an interactive session:
+<ul>
+<li>restart R</li>
+<li>run all chunks below</li>
+<li>find the chunk that did not work, fix until it does</li>
+<li>run all chunks below</li>
+<li>explore working directory issues
+<ul>
+<li>remember that the rmarkdown directory is where the .Rmd file lives</li>
+</ul></li>
+</ul></li>
+</ul>
+</section>
+<section id="the-errors" class="level2" data-number="16.2">
+<h2 data-number="16.2" class="anchored" data-anchor-id="the-errors"><span class="header-section-number">16.2</span> The errors</h2>
+<p>What follows from here are all the errors you might in an rmarkdown document, with the following structure:</p>
+<ul>
+<li>What they might look like</li>
+<li>What the error message might appear to be, and</li>
+<li>How to solve them</li>
+</ul>
+</section>
+<section id="python-not-found" class="level2" data-number="16.3">
+<h2 data-number="16.3" class="anchored" data-anchor-id="python-not-found"><span class="header-section-number">16.3</span> Python not found</h2>
+<p>An error like:</p>
+<pre><code>Error:
+! /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/config-3.7m-darwin/libpython3.7.dylib - dlopen(/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/config-3.7m-darwin/libpython3.7.dylib, 0x000A): tried: '/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/config-3.7m-darwin/libpython3.7.dylib' (mach-o file, but is an incompatible architecture (have 'x86_64', need 'arm64e' or 'arm64')), '/System/Volumes/Preboot/Cryptexes/OS/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/config-3.7m-darwin/libpython3.7.dylib' (no such file), '/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/config-3.7m-darwin/libpython3.7.dylib' (mach-o file, but is an incompatible architecture (have 'x86_64', need 'arm64e' or 'arm64')), '/Library/Frameworks/Python.framework/Versions/3.7/Python' (mach-o file, but is an incompatible architecture (have 'x86_64', need 'arm64e' or 'arm64')), '/System/Volumes/Preboot/Cryptexes/OS/Library/Frameworks/Python.framework/Versions/3.7/Python' (no such file), '/Library/Frameworks/Python.framework/Versions/3.7/Python' (mach-o file, but is an incompatible architecture (have 'x86_64', need 'arm64e' or 'arm64')), '/System/Library/Frameworks/Python.framework/Versions/3.7/Python' (no such file, not in dyld cache)
+
+Backtrace:
+  1. global .main()
+  2. execute(...)
+  3. rmarkdown::render(...)
+  4. knitr::knit(knit_input, knit_output, envir = envir, quiet = quiet)
+  5. knitr:::process_file(text, output)
+     ...
+ 17. reticulate:::initialize_python()
+ 18. base::tryCatch(...)
+ 19. base (local) tryCatchList(expr, classes, parentenv, handlers)
+ 20. base (local) tryCatchOne(expr, names, parentenv, handlers[[1L]])
+ 21. value[[3L]](cond)</code></pre>
+<p>This error went away when I installed python - I went to https://www.python.org/downloads/ and followed the prompts</p>
+<p><img src="images/clipboard-3981398633.png" class="img-fluid"></p>
+</section>
+<section id="no-julia" class="level2" data-number="16.4">
+<h2 data-number="16.4" class="anchored" data-anchor-id="no-julia"><span class="header-section-number">16.4</span> No julia</h2>
+<pre><code>Error in `loadNamespace()`:
+! there is no package called 'JuliaCall'
+Backtrace:
+  1. global .main()
+ 14. base::loadNamespace(x)
+ 15. base::withRestarts(stop(cond), retry_loadNamespace = function() NULL)
+ 16. base (local) withOneRestart(expr, restarts[[1L]])
+ 17. base (local) doWithOneRestart(return(expr), restart)</code></pre>
+<p>Fix: Install <code>JuliaCall</code> R package:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"JuliaCall"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="duplication-duplicated-chunk-names" class="level2" data-number="16.5">
+<h2 data-number="16.5" class="anchored" data-anchor-id="duplication-duplicated-chunk-names"><span class="header-section-number">16.5</span> “Duplication”: Duplicated chunk names</h2>
+<p><strong>What it might look like</strong></p>
+<p>Chunks like this:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="in">#| label: repeated</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="in">1+1</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="in">#| label: repeated</span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a><span class="in">2+2</span></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>The error message</strong></p>
+<p>This is caught before the document compiles with a warning like:</p>
+<pre><code>processing file: duplicated-chunk-names.qmd
+Error in parse_block(g[-1], g[1], params.src, markdown_mode) : 
+  Duplicate chunk label 'repeated', which has been used for the chunk:
+1+1
+Calls: .main ... process_file -&gt; split_file -&gt; lapply -&gt; FUN -&gt; parse_block
+Execution halted</code></pre>
+<p>The important part to note is the start:</p>
+<pre><code>.
+.
+.
+Duplicate chunk label 'repeated', which has been used for the chunk:
+1+1
+.
+.
+.</code></pre>
+<p><strong>How to solve</strong></p>
+<ul>
+<li>In our case we have the same chunk name twice: ‘repeated’. Change the chunk name of one of them!</li>
+</ul>
+</section>
+<section id="not-what-i-ordered-objects-not-created-in-the-right-order" class="level2" data-number="16.6">
+<h2 data-number="16.6" class="anchored" data-anchor-id="not-what-i-ordered-objects-not-created-in-the-right-order"><span class="header-section-number">16.6</span> “Not what I ordered”: Objects not created in the right order</h2>
+<p><strong>What it might look like</strong></p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(my_table)</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>my_table <span class="ot">&lt;-</span> <span class="fu">table</span>(mtcars<span class="sc">$</span>cyl)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>The error message</strong></p>
+<pre><code>processing file: wrong-order.qmd
+  |......................................                   |  67% [plot-table]Error:
+! object 'my_table' not found
+Backtrace:
+ 1. base::plot(my_table)
+
+
+
+Quitting from lines 8-12 [plot-table] (wrong-order.qmd)</code></pre>
+<p><strong>How to solve</strong></p>
+<p>There is a good clue at the end of this message here, stating:</p>
+<pre><code>.
+.
+Quitting from lines 8-12 [plot-table] (wrong-order.qmd)
+.
+.</code></pre>
+<p>The template here is:</p>
+<pre><code>Quitting from lines START-END [CHUNK LABEL] (QUARTO-DOCUMENT-NAME.qmd)</code></pre>
+<p>I would then navigate to those lines of code in the Quarto document, or search for the chunk label, and see if I can run that code interactively. A common problem with these kinds of errors is that they <em>just might</em> work interactively, because you might have run them out of sequence. However because a Quarto document goes from a fresh R session and runs the code from the top to the bottom in that order, the objects might not yet exist. So:</p>
+<ol type="1">
+<li>Restart R - ensure it is a clean session without objects from the previous session hanging around</li>
+<li>Run code above the problem chunk</li>
+<li>Run code in the problem chunk</li>
+<li>Hopefully this reproduces your error</li>
+<li>If it doesn’t reproduce your error, consider trying to make a <a href="https://reprex.tidyverse.org/">small reprex</a> of the problem so you have try and figure out the bug.</li>
+</ol>
+</section>
+<section id="forgotten-trails-i-missing-or" class="level2" data-number="16.7">
+<h2 data-number="16.7" class="anchored" data-anchor-id="forgotten-trails-i-missing-or"><span class="header-section-number">16.7</span> Forgotten Trails I: Missing “(”, or “}”</h2>
+<p><strong>What it might look like</strong></p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>::: {.cell}</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="in">```{.r .cell-code}</span></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="in">image(volcano</span></span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>:::</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>The error message</strong></p>
+<pre><code>processing file: forgotten-trails-i.qmd
+  |.....................................                   |  67% [fig-volcano]Error in `parse()`:
+! &lt;text&gt;:2:0: unexpected end of input
+1: image(volcano
+   ^
+Backtrace:
+  1. global .main()
+  2. execute(...)
+  3. rmarkdown::render(...)
+  4. knitr::knit(knit_input, knit_output, envir = envir, quiet = quiet)
+  5. knitr:::process_file(text, output)
+     ...
+ 11. knitr:::eng_r(options)
+ 14. knitr (local) evaluate(...)
+ 15. evaluate::evaluate(...)
+ 17. evaluate:::parse_all.character(...)
+ 18. base::parse(text = x, srcfile = src)
+                                                                                                        
+
+
+Quitting from lines 7-9 [fig-volcano] (forgotten-trails-i.qmd)
+
+Execution halted</code></pre>
+<p><strong>How to solve</strong></p>
+<p>In this case the key part to look at is</p>
+<pre><code>|.....................................                   |  67% [fig-volcano]Error in `parse()`:
+! &lt;text&gt;:2:0: unexpected end of input
+1: image(volcano
+   ^</code></pre>
+<p>Here the error message even points to the <code>image</code> code, and the message, “unexpected end of input” is referring to the missing closing parenthesis.</p>
+<p><strong>What it might look like</strong></p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{r</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="in">#| label: fig-volcano</span></span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="in">image(volcano)</span></span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>The error message</strong></p>
+<p>There <strong>is no error message</strong> here, but your output might look like this:</p>
+<p><img src="images/clipboard-3244038101.png" class="img-fluid"></p>
+<pre><code>Forgotten Trails I: Missing “(”, or “}”
+{r #| label: fig-volcano image(volcano)</code></pre>
+<p><strong>How to solve</strong></p>
+<p>The clue here for me is that we are getting this part of the code:</p>
+<p><code>{r #| label: fig-volcano image(volcano)</code></p>
+<p>When we would normally not see any information about the code chunk option, <code>#| label</code>.</p>
+<p>When you come across some funky looking text like that, look for a missing <code>}</code>.</p>
+</section>
+<section id="forgotten-trails-ii-chunk-option-with-trailing-or-not-input" class="level2" data-number="16.8">
+<h2 data-number="16.8" class="anchored" data-anchor-id="forgotten-trails-ii-chunk-option-with-trailing-or-not-input"><span class="header-section-number">16.8</span> “Forgotten Trails II”: Chunk option with trailing “, or not input</h2>
+<p><strong>What it might look like</strong></p>
+<p><img src="images/SCR-20240627-pnlc.png" class="img-fluid"></p>
+<p><strong>The error message</strong></p>
+<pre><code>ERROR: YAMLException: unexpected end of the stream within a double quoted scalar (forgotten-trails-ii.qmd, 8:188)
+7: #| label: fig-volcano
+8: #| fig-cap: "An elevation plot of Maunga Whau (Mt Eden). Darker colours indicate higher parts of the volcano. We see one main peak on the left, followed by two smaller peaks on the right.
+                                                                                                                                                                                             ~
+9: image(volcano)</code></pre>
+<p><strong>How to solve it?</strong></p>
+<ul>
+<li>The clue here is <code>unexpected end of the stream within a double quoted scalar</code>. Which, although it might sound a bit obtuse, is referring to a missing quote. The other clue is that the error captures the code chunk information and prints it out to the console.</li>
+<li>When you are working with this code in RStudio it also highlights the error:</li>
+</ul>
+<p><img src="images/clipboard-1852474255.png" class="img-fluid"></p>
+</section>
+<section id="the-path-not-taken-file-path-incorrect" class="level2" data-number="16.9">
+<h2 data-number="16.9" class="anchored" data-anchor-id="the-path-not-taken-file-path-incorrect"><span class="header-section-number">16.9</span> “The Path Not Taken” File path incorrect</h2>
+<p><strong>What it might look like</strong></p>
+<div class="sourceCode" id="cb17"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>::: {.cell}</span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a><span class="in">````{.cell-code}</span></span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a><span class="in">#| label: read-data</span></span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a><span class="in">#| eval: false</span></span>
+<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a><span class="in">library(readr)</span></span>
+<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a><span class="in">penguins &lt;- read_csv("the_penguins.csv")</span></span>
+<span id="cb17-9"><a href="#cb17-9" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>:::</p>
+<div class="sourceCode" id="cb18"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>**The error message**</span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a><span class="in">```         </span></span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a><span class="in">processing file: path-not-taken.qmd</span></span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a><span class="in">  |.......................................                   |  67% [read-data]Error:</span></span>
+<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a><span class="in">! 'the_penguins.csv' does not exist in current working directory ('/Users/nick/github/njtierney/qmd-errors').</span></span>
+<span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a><span class="in">Backtrace:</span></span>
+<span id="cb18-9"><a href="#cb18-9" aria-hidden="true" tabindex="-1"></a><span class="in"> 1. readr::read_csv("the_penguins.csv")</span></span>
+<span id="cb18-10"><a href="#cb18-10" aria-hidden="true" tabindex="-1"></a><span class="in"> 4. vroom (local) `&lt;fn&gt;`("the_penguins.csv")</span></span>
+<span id="cb18-11"><a href="#cb18-11" aria-hidden="true" tabindex="-1"></a><span class="in"> 5. vroom:::check_path(path)</span></span>
+<span id="cb18-12"><a href="#cb18-12" aria-hidden="true" tabindex="-1"></a><span class="in">                                                                                                      </span></span>
+<span id="cb18-13"><a href="#cb18-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-14"><a href="#cb18-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-15"><a href="#cb18-15" aria-hidden="true" tabindex="-1"></a><span class="in">Quitting from lines 7-10 [read-data] (path-not-taken.qmd)</span></span>
+<span id="cb18-16"><a href="#cb18-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-17"><a href="#cb18-17" aria-hidden="true" tabindex="-1"></a><span class="in">Execution halted</span></span>
+<span id="cb18-18"><a href="#cb18-18" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb18-19"><a href="#cb18-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-20"><a href="#cb18-20" aria-hidden="true" tabindex="-1"></a>**How to solve**</span>
+<span id="cb18-21"><a href="#cb18-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-22"><a href="#cb18-22" aria-hidden="true" tabindex="-1"></a>The key part to pay attention to here is:</span>
+<span id="cb18-23"><a href="#cb18-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-24"><a href="#cb18-24" aria-hidden="true" tabindex="-1"></a><span class="in">```         </span></span>
+<span id="cb18-25"><a href="#cb18-25" aria-hidden="true" tabindex="-1"></a><span class="in">Error:! 'the_penguins.csv' does not exist in current working directory ('/Users/nick/github/njtierney/qmd-errors').</span></span>
+<span id="cb18-26"><a href="#cb18-26" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb18-27"><a href="#cb18-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-28"><a href="#cb18-28" aria-hidden="true" tabindex="-1"></a>In this case, we need to ensure that the data file is in the right spot - in our example we have a typo - the data should be "data/penguins.csv".</span>
+<span id="cb18-29"><a href="#cb18-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-30"><a href="#cb18-30" aria-hidden="true" tabindex="-1"></a><span class="fu">## "Spolling I" Incorrectly spelled chunk options</span></span>
+<span id="cb18-31"><a href="#cb18-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-32"><a href="#cb18-32" aria-hidden="true" tabindex="-1"></a>These are often not an error, but you just won't get the behaviour that you expect.</span>
+<span id="cb18-33"><a href="#cb18-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-34"><a href="#cb18-34" aria-hidden="true" tabindex="-1"></a>**What it might look like**</span>
+<span id="cb18-35"><a href="#cb18-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-36"><a href="#cb18-36" aria-hidden="true" tabindex="-1"></a><span class="in">````markdown</span></span>
+<span id="cb18-37"><a href="#cb18-37" aria-hidden="true" tabindex="-1"></a>::: {.cell fig-caption='Penguin Bill Length against Flipper Length. coloured by species. Each dot represents the bill length and flipper length of a penguin, coloured by species (Adelie, Chinstrap, Gentoo), and facetted by the three islands (Biscoe, Dream, Torgensen). We learn that not all three species are present on all islands, only Adelie is present on each. Adelie generally has the smallest flipper and bill length of the penguins, with chinstrap and gentoo being similar. Flipper length is correlated with bill length.'}</span>
+<span id="cb18-38"><a href="#cb18-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-39"><a href="#cb18-39" aria-hidden="true" tabindex="-1"></a><span class="in">````{.cell-code}</span></span>
+<span id="cb18-40"><a href="#cb18-40" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb18-41"><a href="#cb18-41" aria-hidden="true" tabindex="-1"></a><span class="in">#| label: fig-penguins</span></span>
+<span id="cb18-42"><a href="#cb18-42" aria-hidden="true" tabindex="-1"></a><span class="in">#| fig-caption: "Penguin Bill Length against Flipper Length. coloured by species. Each dot represents the bill length and flipper length of a penguin, coloured by species (Adelie, Chinstrap, Gentoo), and facetted by the three islands (Biscoe, Dream, Torgensen). We learn that not all three species are present on all islands, only Adelie is present on each. Adelie generally has the smallest flipper and bill length of the penguins, with chinstrap and gentoo being similar. Flipper length is correlated with bill length."</span></span>
+<span id="cb18-43"><a href="#cb18-43" aria-hidden="true" tabindex="-1"></a><span class="in">library(palmerpenguins)</span></span>
+<span id="cb18-44"><a href="#cb18-44" aria-hidden="true" tabindex="-1"></a><span class="in">library(ggplot2)</span></span>
+<span id="cb18-45"><a href="#cb18-45" aria-hidden="true" tabindex="-1"></a><span class="in">ggplot(penguins,</span></span>
+<span id="cb18-46"><a href="#cb18-46" aria-hidden="true" tabindex="-1"></a><span class="in">       aes(x = flipper_length_mm,</span></span>
+<span id="cb18-47"><a href="#cb18-47" aria-hidden="true" tabindex="-1"></a><span class="in">           y = bill_length_mm,</span></span>
+<span id="cb18-48"><a href="#cb18-48" aria-hidden="true" tabindex="-1"></a><span class="in">           colour = species)) + </span></span>
+<span id="cb18-49"><a href="#cb18-49" aria-hidden="true" tabindex="-1"></a><span class="in">  geom_point() + </span></span>
+<span id="cb18-50"><a href="#cb18-50" aria-hidden="true" tabindex="-1"></a><span class="in">  scale_color_brewer(palette = "Dark2") +</span></span>
+<span id="cb18-51"><a href="#cb18-51" aria-hidden="true" tabindex="-1"></a><span class="in">  theme_minimal() + </span></span>
+<span id="cb18-52"><a href="#cb18-52" aria-hidden="true" tabindex="-1"></a><span class="in">  facet_wrap(~island)</span></span>
+<span id="cb18-53"><a href="#cb18-53" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Removed 2 rows containing missing values or values outside the scale range
+(`geom_point()`).</code></pre>
+</div>
+<div class="cell-output-display">
+<div id="fig-penguins" class="quarto-figure quarto-figure-center quarto-float anchored" width="672">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-penguins-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="common-problems_files/figure-html/fig-penguins-1.png" id="fig-penguins" class="img-fluid figure-img" width="672">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-penguins-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;16.1
+</figcaption>
+</figure>
+</div>
+</div>
+<p>::: ````</p>
+<div class="sourceCode" id="cb20"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>Above we have @fig-counts...</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>In this case we do not get a rendered caption at all:</p>
+<p><img src="images/clipboard-3202124281.png" class="img-fluid"></p>
+<p>The root cause of this is that we have specified <code>fig-caption</code> instead of <code>fig-cap</code>.</p>
+<p>This once caused me to rewrite a lot of code and an entire section of a paper until I realised the problem.</p>
+<p><strong>The error message</strong></p>
+<p>There is no error message for this! It is a silent error.</p>
+<p><strong>How to solve</strong></p>
+<p>You can resolve this issue by using <code>fig-cap</code> instead of <code>fig-caption</code>.</p>
+</section>
+<section id="spolling-ii-incorrectly-spelled-chunk-option-inputs" class="level2" data-number="16.10">
+<h2 data-number="16.10" class="anchored" data-anchor-id="spolling-ii-incorrectly-spelled-chunk-option-inputs"><span class="header-section-number">16.10</span> “Spolling II” Incorrectly spelled chunk option inputs</h2>
+<p>So this is when you provide the wrong input to your chunk options. Like something that requires <code>true</code> gets “yes”, or something that needs <code>"100%"</code> instead gets <code>100</code></p>
+<p><strong>What it might look like</strong></p>
+<p><img src="images/clipboard-2038915081.png" class="img-fluid"></p>
+<p><strong>The error message</strong></p>
+<pre><code>==&gt; quarto preview spolling-ii.qmd --to html --no-watch-inputs --no-browse
+
+(line 8, columns 11--14) Field "cache" has value yes, which must instead be `true` or `false`
+
+✖ The value yes is a string.
+ℹ The error happened in location cache.
+ℹ Quarto uses YAML 1.2, which interprets booleans strictly.
+ℹ Try using true instead.
+
+ERROR: Validation of YAML cell metadata failed.
+ERROR: Render failed due to invalid YAML.</code></pre>
+<p><strong>How to solve</strong></p>
+<p>There’s a bit of text here, but the key piece is:</p>
+<pre><code>(line 8, columns 11--14) Field "cache" has value yes, which must instead be `true` or `false`</code></pre>
+<p>We have specified <code>#| cache: yes</code> instead of <code>#| cache: true</code>. A good thing to internalise here is that Quarto always uses lowercase <code>true</code> or <code>false</code> and never <code>yes</code> or <code>no</code>.</p>
+</section>
+<section id="the-legend-of-link-i-your-images-in-dont-work." class="level2" data-number="16.11">
+<h2 data-number="16.11" class="anchored" data-anchor-id="the-legend-of-link-i-your-images-in-dont-work."><span class="header-section-number">16.11</span> “The Legend of Link I”: Your images in <code>![]()</code> don’t work.</h2>
+<p>I often forget that it is <code>![](path/to/image)</code>, and not <code>![]("path/to/image")</code>. There are no quote marks!</p>
+<p><img src="images/clipboard-1417429929.png" class="img-fluid"></p>
+</section>
+<section id="latex-errors" class="level2" data-number="16.12">
+<h2 data-number="16.12" class="anchored" data-anchor-id="latex-errors"><span class="header-section-number">16.12</span> LaTeX errors</h2>
+<p>There is no panacea for LaTeX errors, but if you aren’t familiar with “what that error message” might look like, here are some details.</p>
+<p><strong>What it might look like</strong></p>
+<p><strong>The error message</strong></p>
+<p><strong>How to solve</strong></p>
+</section>
+<section id="i-want-to-include-inline-r-code-verbatim-to-show-an-example" class="level2" data-number="16.13">
+<h2 data-number="16.13" class="anchored" data-anchor-id="i-want-to-include-inline-r-code-verbatim-to-show-an-example"><span class="header-section-number">16.13</span> I want to include inline R code verbatim to show an example</h2>
+<p>… Like for a book on using rmarkdown or something.</p>
+<p>You can use the chunk option <code>echo: fenced</code>. See the <a href="https://quarto.org/docs/computations/execution-options.html#fenced-echo">Quarto documentation on fenced echo for more details</a>.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Back before we had this option we used to have to do things like this:</p>
+<p><a href="https://rviews.rstudio.com/2017/12/04/how-to-show-r-inline-code-blocks-in-r-markdown/">blog post by T. Hovorka from R Views</a></p>
+<p>It boils down to this:</p>
+<p><span style="color:blue"><code></code> <code>r "\u0060r expression\u0060"</code> <code></code></span>.</p>
+<p>Thankfully the folks at Quarto have made this much easier!</p>
+</div>
+</div>
+</section>
+<section id="my-figure-or-table-isnt-being-cited" class="level2" data-number="16.14">
+<h2 data-number="16.14" class="anchored" data-anchor-id="my-figure-or-table-isnt-being-cited"><span class="header-section-number">16.14</span> My Figure or Table isn’t being cited</h2>
+<p><strong>What it might look like</strong></p>
+<p>You create a figure,</p>
+<p><strong>The error message</strong></p>
+<p>There isn’t one - you just get <code>@fig-chunk-name</code> printed.</p>
+<p><strong>How to solve</strong></p>
+<p>You need to make sure that you actually print the table or plot. If you create the plot and save it, but do not print it in the document, then you will not be able to reference the plot or table.</p>
+</section>
+<section id="your-turn" class="level2 exercise" data-number="16.15">
+<h2 class="exercise anchored" data-number="16.15" data-anchor-id="your-turn"><span class="header-section-number">16.15</span> Your Turn</h2>
+<ol type="1">
+<li>Go to this repo <a href="https://github.com/njtierney/qmd-errors">njtierney/qmd-errors</a>, and give debugging some of these common rmarkdown errors a go.</li>
+</ol>
+<p>You can download this repository by running this code:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="fu">use_course</span>(<span class="st">"njtierney/qmd-errors"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/qmd4sci\.njtierney\.com");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./caption-reference-eqn.html" class="pagination-link" aria-label="Captioning and referencing equations">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Captioning and referencing equations</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./alternative-outputs-and-exts.html" class="pagination-link" aria-label="Different Outputs and Extensions">
+        <span class="nav-page-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Different Outputs and Extensions</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+<p>Copyright 2022-2024, Nicholas Tierney</p>
+<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/njtierney/qmd4sci/edit/main/common-problems.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/njtierney/qmd4sci/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body></html>
