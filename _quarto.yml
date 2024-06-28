@@ -65,6 +65,8 @@ format:
     documentclass: krantz
     keep-tex: true
     cite-method: natbib
+execute: 
+  freeze: auto
   # epub:
   #   cover-image: cover.png
 

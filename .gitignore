@@ -13,5 +13,7 @@ docs
 _rmd4sci.rds
 notes
 *.log
-
 /.quarto/
+_freeze
+*.tex
+site_libs/

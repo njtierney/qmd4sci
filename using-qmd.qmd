@@ -111,25 +111,22 @@ Code chunks are marked by three backticks and curly braces. We put the letter `r
 
 ## R
 
-```{r}
+```{{r}}
 #| label: r-chunk-name
-#| echo: fenced
 # a code chunk
 ```
 
 ## python
 
-```{python}
+```{{python}}
 #| label: py-chunk-name
-#| echo: fenced
 # a code chunk
 ```
 
 ## julia
 
-```{julia}
+```{{julia}}
 #| label: julia-chunk-name
-#| echo: fenced
 # a code chunk
 ```
 
