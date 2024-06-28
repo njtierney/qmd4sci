@@ -297,6 +297,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  <span class="menu-text"><span class="chapter-number">D</span>&nbsp; <span class="chapter-title">HTML document extensions</span></span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./appendix-manuscript.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">E</span>&nbsp; <span class="chapter-title">Using manuscripts in your writing</span></span></a>
+  </div>
+</li>
       </ul>
   </li>
     </ul>
@@ -315,18 +321,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#how-to-refer-to-tables-and-figures-in-text-demo" id="toc-how-to-refer-to-tables-and-figures-in-text-demo" class="nav-link" data-scroll-target="#how-to-refer-to-tables-and-figures-in-text-demo"><span class="header-section-number">12.4</span> How to refer to tables and figures in text? (demo)</a></li>
   <li><a href="#your-turn-exercise" id="toc-your-turn-exercise" class="nav-link" data-scroll-target="#your-turn-exercise"><span class="header-section-number">12.5</span> Your Turn (exercise)</a>
   <ul class="collapse">
-  <li><a href="#demo-.demo" id="toc-demo-.demo" class="nav-link" data-scroll-target="#demo-.demo"><span class="header-section-number">12.5.1</span> Demo (.demo)</a></li>
+  <li><a href="#demo" id="toc-demo" class="nav-link" data-scroll-target="#demo"><span class="header-section-number">12.5.1</span> Demo</a></li>
   <li><a href="#your-turn" id="toc-your-turn" class="nav-link" data-scroll-target="#your-turn"><span class="header-section-number">12.5.2</span> Your Turn</a></li>
   </ul></li>
   <li><a href="#referencing-a-table" id="toc-referencing-a-table" class="nav-link" data-scroll-target="#referencing-a-table"><span class="header-section-number">12.6</span> Referencing a table</a></li>
-  <li><a href="#other-things-you-can-reference" id="toc-other-things-you-can-reference" class="nav-link" data-scroll-target="#other-things-you-can-reference"><span class="header-section-number">12.7</span> Other things you can reference</a>
+  <li><a href="#other-things-you-can-crossreference" id="toc-other-things-you-can-crossreference" class="nav-link" data-scroll-target="#other-things-you-can-crossreference"><span class="header-section-number">12.7</span> Other things you can cross/reference</a>
   <ul class="collapse">
   <li><a href="#your-turn-exercise-1" id="toc-your-turn-exercise-1" class="nav-link" data-scroll-target="#your-turn-exercise-1"><span class="header-section-number">12.7.1</span> Your Turn (exercise)</a></li>
   </ul></li>
-  <li><a href="#referencing-a-section" id="toc-referencing-a-section" class="nav-link" data-scroll-target="#referencing-a-section"><span class="header-section-number">12.8</span> Referencing a section</a>
-  <ul class="collapse">
-  <li><a href="#your-turn-1" id="toc-your-turn-1" class="nav-link" data-scroll-target="#your-turn-1"><span class="header-section-number">12.8.1</span> Your Turn</a></li>
-  </ul></li>
+  <li><a href="#referencing-a-section" id="toc-referencing-a-section" class="nav-link" data-scroll-target="#referencing-a-section"><span class="header-section-number">12.8</span> Referencing a section</a></li>
+  <li><a href="#using-visual-mode" id="toc-using-visual-mode" class="nav-link" data-scroll-target="#using-visual-mode"><span class="header-section-number">12.9</span> Using visual mode</a></li>
+  <li><a href="#your-turn-1" id="toc-your-turn-1" class="nav-link" data-scroll-target="#your-turn-1"><span class="header-section-number">12.10</span> Your Turn</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/njtierney/qmd4sci/edit/main/cite-fig-tab-sec.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/njtierney/qmd4sci/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -450,8 +455,8 @@ Figure&nbsp;12.1
 <ol type="1">
 <li>Convert your output to use <code>fig</code> prefixes to reference figures</li>
 </ol>
-<section id="demo-.demo" class="level3" data-number="12.5.1">
-<h3 data-number="12.5.1" class="anchored" data-anchor-id="demo-.demo"><span class="header-section-number">12.5.1</span> Demo (.demo)</h3>
+<section id="demo" class="level3 demo" data-number="12.5.1">
+<h3 class="demo anchored" data-number="12.5.1" data-anchor-id="demo"><span class="header-section-number">12.5.1</span> Demo</h3>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="in">#| label: fig-gg-oz</span></span>
@@ -622,10 +627,141 @@ Table&nbsp;12.1: Raw gapminder data for Australia.
 </div>
 </div>
 <p><code>@tbl-chunk-name</code></p>
-<p>Reference: https://quarto.org/docs/authoring/cross-references.html#tables</p>
+<p>If you want to move the caption location you can use <code>tbl-cap-location: &lt;position&gt;</code> to specify the location. By default it is the top.</p>
+<div class="cell" data-tbl-cap-location="bottom">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="in">#| label: tbl-gg-oz-tab-bottom</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="in">#| tbl-cap-location: bottom</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="in">gapminder %&gt;%</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="in">  filter(country == "Australia") %&gt;%</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="in">  knitr::kable(caption = "Raw gapminder data for Australia.")</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="tbl-gg-oz-tab-bottom" class="cell quarto-float anchored" data-tbl-cap-location="bottom">
+<figure class="quarto-float quarto-float-tbl figure">
+<div aria-describedby="tbl-gg-oz-tab-bottom-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output-display">
+<table class="do-not-create-environment cell caption-top table table-sm table-striped small">
+<thead>
+<tr class="header">
+<th style="text-align: left;">country</th>
+<th style="text-align: left;">continent</th>
+<th style="text-align: right;">year</th>
+<th style="text-align: right;">lifeExp</th>
+<th style="text-align: right;">pop</th>
+<th style="text-align: right;">gdpPercap</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Australia</td>
+<td style="text-align: left;">Oceania</td>
+<td style="text-align: right;">1952</td>
+<td style="text-align: right;">69.120</td>
+<td style="text-align: right;">8691212</td>
+<td style="text-align: right;">10039.60</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Australia</td>
+<td style="text-align: left;">Oceania</td>
+<td style="text-align: right;">1957</td>
+<td style="text-align: right;">70.330</td>
+<td style="text-align: right;">9712569</td>
+<td style="text-align: right;">10949.65</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Australia</td>
+<td style="text-align: left;">Oceania</td>
+<td style="text-align: right;">1962</td>
+<td style="text-align: right;">70.930</td>
+<td style="text-align: right;">10794968</td>
+<td style="text-align: right;">12217.23</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Australia</td>
+<td style="text-align: left;">Oceania</td>
+<td style="text-align: right;">1967</td>
+<td style="text-align: right;">71.100</td>
+<td style="text-align: right;">11872264</td>
+<td style="text-align: right;">14526.12</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Australia</td>
+<td style="text-align: left;">Oceania</td>
+<td style="text-align: right;">1972</td>
+<td style="text-align: right;">71.930</td>
+<td style="text-align: right;">13177000</td>
+<td style="text-align: right;">16788.63</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Australia</td>
+<td style="text-align: left;">Oceania</td>
+<td style="text-align: right;">1977</td>
+<td style="text-align: right;">73.490</td>
+<td style="text-align: right;">14074100</td>
+<td style="text-align: right;">18334.20</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Australia</td>
+<td style="text-align: left;">Oceania</td>
+<td style="text-align: right;">1982</td>
+<td style="text-align: right;">74.740</td>
+<td style="text-align: right;">15184200</td>
+<td style="text-align: right;">19477.01</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Australia</td>
+<td style="text-align: left;">Oceania</td>
+<td style="text-align: right;">1987</td>
+<td style="text-align: right;">76.320</td>
+<td style="text-align: right;">16257249</td>
+<td style="text-align: right;">21888.89</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Australia</td>
+<td style="text-align: left;">Oceania</td>
+<td style="text-align: right;">1992</td>
+<td style="text-align: right;">77.560</td>
+<td style="text-align: right;">17481977</td>
+<td style="text-align: right;">23424.77</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Australia</td>
+<td style="text-align: left;">Oceania</td>
+<td style="text-align: right;">1997</td>
+<td style="text-align: right;">78.830</td>
+<td style="text-align: right;">18565243</td>
+<td style="text-align: right;">26997.94</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Australia</td>
+<td style="text-align: left;">Oceania</td>
+<td style="text-align: right;">2002</td>
+<td style="text-align: right;">80.370</td>
+<td style="text-align: right;">19546792</td>
+<td style="text-align: right;">30687.75</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Australia</td>
+<td style="text-align: left;">Oceania</td>
+<td style="text-align: right;">2007</td>
+<td style="text-align: right;">81.235</td>
+<td style="text-align: right;">20434176</td>
+<td style="text-align: right;">34435.37</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-tbl" id="tbl-gg-oz-tab-bottom-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;12.2: Raw gapminder data for Australia.
+</figcaption>
+</figure>
+</div>
+</div>
+<p>Reference: <a href="https://quarto.org/docs/authoring/cross-references.html#tables" class="uri">https://quarto.org/docs/authoring/cross-references.html#tables</a> and <a href="https://quarto.org/docs/authoring/tables.html#caption-location" class="uri">https://quarto.org/docs/authoring/tables.html#caption-location</a></p>
 </section>
-<section id="other-things-you-can-reference" class="level2" data-number="12.7">
-<h2 data-number="12.7" class="anchored" data-anchor-id="other-things-you-can-reference"><span class="header-section-number">12.7</span> Other things you can reference</h2>
+<section id="other-things-you-can-crossreference" class="level2" data-number="12.7">
+<h2 data-number="12.7" class="anchored" data-anchor-id="other-things-you-can-crossreference"><span class="header-section-number">12.7</span> Other things you can cross/reference</h2>
 <p>You can also reference theorems, code, proofs, and equations! See https://quarto.org/docs/authoring/cross-references.html#theorems-and-proofs for more details.</p>
 <section id="your-turn-exercise-1" class="level3" data-number="12.7.1">
 <h3 data-number="12.7.1" class="anchored" data-anchor-id="your-turn-exercise-1"><span class="header-section-number">12.7.1</span> Your Turn (exercise)</h3>
@@ -640,22 +776,26 @@ Table&nbsp;12.1: Raw gapminder data for Australia.
 <p>However, in order to write this, you need to include <code>sec-slug</code> in your markdown header, like so:</p>
 <pre><code>## your amazing header {#sec-slug}</code></pre>
 <p>You must also include <code>number-section</code> in your YAML:</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="sc">---</span></span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>title<span class="sc">:</span> <span class="st">"example"</span></span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>number<span class="sc">-</span>sections<span class="sc">:</span> true</span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="sc">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="sc">---</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>title<span class="sc">:</span> <span class="st">"example"</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>number<span class="sc">-</span>sections<span class="sc">:</span> true</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="sc">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>For example, I can refer to the first section (Section <a href="#sec-start" class="quarto-xref"><span>Chapter 12</span></a>) in this document by referring to the section as</p>
 <p><code>(Section @sec-start)</code></p>
 <p>because it was written as:</p>
 <pre><code># Citing Figures, Tables &amp; Sections {#sec-start}</code></pre>
-<section id="your-turn-1" class="level3 exercise" data-number="12.8.1">
-<h3 class="exercise anchored" data-number="12.8.1" data-anchor-id="your-turn-1"><span class="header-section-number">12.8.1</span> Your Turn</h3>
+</section>
+<section id="using-visual-mode" class="level2 demo" data-number="12.9">
+<h2 class="demo anchored" data-number="12.9" data-anchor-id="using-visual-mode"><span class="header-section-number">12.9</span> Using visual mode</h2>
+<p>Visual mode is this pretty neat feature, it’s best demonstrated live!</p>
+</section>
+<section id="your-turn-1" class="level2 exercise" data-number="12.10">
+<h2 class="exercise anchored" data-number="12.10" data-anchor-id="your-turn-1"><span class="header-section-number">12.10</span> Your Turn</h2>
 <ol type="1">
 <li>Reference a section in the report.</li>
 </ol>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->

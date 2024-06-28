@@ -140,21 +140,11 @@
     ]
   },
   {
-    "objectID": "why-qmd.html#quarto-helps-complete-the-solution-to-the-reproducibility-problem",
-    "href": "why-qmd.html#quarto-helps-complete-the-solution-to-the-reproducibility-problem",
-    "title": "2  Why Quarto",
-    "section": "3.2 Quarto helps complete the solution to the reproducibility problem",
-    "text": "3.2 Quarto helps complete the solution to the reproducibility problem\nSo, how do we combine this with our R code, into a literate programming environment?\nQuarto provides an environment where you can write your complete analysis. It weaves your text, and code, and its output together into a single document.\nFor example, look at the following report:\n\n\n\n\n\n\n\n\n\nHow did we generate it?\n\n---\ntitle: \"Exploring gapminder\"\nauthor: \"Nicholas Tierney\"\nformat: html\n---\n\n\n#| label: library\nlibrary(tidyverse)\nlibrary(broom)\n\n#| label: data-read-in\ndata &lt;- read_csv(here::here(\"data/oz_gapminder.csv\"))\n\n# Introduction\n\nlet's look at the lifespan\n\n#| label: hist-life-exp\nhist(data$lifeExp)\n\nLet's fit a simple linear model of the effect of year on life expectancy\n\n#| label: example-lm\nfit &lt;- lm(lifeExp ~ year, data = data)\nfit\n\nAnd let's look at the coefficient table:\n\n#| label: coef-table\nlibrary(broom)\nfit_coef &lt;- tidy(fit)\nknitr::kable(fit_coef,\n             caption = \"A table of the coefficients\")\n\nThe effect of year on life expectancy is `` `r  fit_coef$estimate[2]` ``.\n\nWe render this code and it creates this report!\nIt has a plot, it has a table, we even refer to some of the values in the text - the last line of the report looks at the effect of year.\nBut what if the data changes? At the moment we are looking at only Australia - say we get the full dataset, what happens then?\nSay you’d created your report by hand in microsoft word, and with a graphical user interface software, you would need to:\n\nGo back to the GUI, re run the analysis\nImport the results into Excel\nCreate your graph\nCopy the graph into Word\nCopy the results of the coefficients into the text\nCopy the results of the coefficient table into the text.\n\nThis is painful.\nAnd what if someone wants to know exactly how you did your analysis?\nThis process isn’t exactly sharable.\nBut if you did it in Quarto?\nJust update the data, and render the document again, and get an updated document:\n\n\n\n\n\n\n\n\n\nThe results are updated!\nAnd we just pointed it to some different data. Then re-rendered it.\nThat’s it.\nThat is why we use Quarto",
-    "crumbs": [
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Why Quarto</span>"
-    ]
-  },
-  {
     "objectID": "why-qmd.html#summary",
     "href": "why-qmd.html#summary",
     "title": "2  Why Quarto",
-    "section": "3.3 Summary",
-    "text": "3.3 Summary\nIn this section we’ve learned about:\n\nWhat the value is in a reproducible report\nWhat is Markdown\nHow to combine software and writing\nHow to use Markdown",
+    "section": "4.1 Summary",
+    "text": "4.1 Summary\nIn this section we’ve learned about:\n\nWhat the value is in a reproducible report\nWhat is Markdown\nHow to combine software and writing\nHow to use Markdown",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Why Quarto</span>"
     ]
@@ -163,8 +153,8 @@
     "objectID": "why-qmd.html#learning-more",
     "href": "why-qmd.html#learning-more",
     "title": "2  Why Quarto",
-    "section": "3.4 Learning more",
-    "text": "3.4 Learning more\n\nposit’s Quarto cheatsheet",
+    "section": "4.2 Learning more",
+    "text": "4.2 Learning more\n\nposit’s Quarto cheatsheet",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Why Quarto</span>"
     ]
@@ -674,7 +664,7 @@
     "href": "keyboard-shortcuts.html#further-reading",
     "title": "8  Keyboard Shortcuts",
     "section": "8.6 Further Reading",
-    "text": "8.6 Further Reading\n\nThe https://rstudio.github.io/cheatsheets/html/rstudio-ide.html#keyboard-shortcuts has an index of shortcuts.\nThis [https://support.posit.co/hc/en-us/articles/206382178-Customizing-Keyboard-Shortcuts-in-the-RStudio-IDE] help file has a guide to customising keyboard shortcuts.",
+    "text": "8.6 Further Reading\n\nThe Rstudio Cheat Sheet has an index of shortcuts.\nThis help file has a guide to customising keyboard shortcuts.",
     "crumbs": [
       "<span class='chapter-number'>8</span>  <span class='chapter-title'>Keyboard Shortcuts</span>"
     ]
@@ -684,7 +674,7 @@
     "href": "keyboard-shortcuts.html#your-turn",
     "title": "8  Keyboard Shortcuts",
     "section": "8.7 Your Turn",
-    "text": "8.7 Your Turn\n\nUsing the Keyboard Shortcut Reference, find the keyboard shortcut for inserting a pipe character ( %&gt;% )\nSpend 3 minutes practicing these commands in a document.",
+    "text": "8.7 Your Turn\n\nUsing the Keyboard Shortcut Reference, find the keyboard shortcut for inserting a pipe character ( %&gt;% or |&gt;)\nSpend 3 minutes practicing these commands in a document.",
     "crumbs": [
       "<span class='chapter-number'>8</span>  <span class='chapter-title'>Keyboard Shortcuts</span>"
     ]
@@ -744,7 +734,17 @@
     "href": "figures-tables-captions.html#figures",
     "title": "9  Figures, Tables, Captions.",
     "section": "9.5 Figures",
-    "text": "9.5 Figures\nPrinting figures is probably my favourite feature of Quarto. It is actually relatively straightforward in the case of plots. You provide the plot you want to show in a code chunk!\n\n9.5.0.1 Demo\nFor example, I can print a plot of the gapminder data for Australia like so:\n\nlibrary(ggplot2)\nlibrary(dplyr)\n\n\nAttaching package: 'dplyr'\n\n\nThe following objects are masked from 'package:stats':\n\n    filter, lag\n\n\nThe following objects are masked from 'package:base':\n\n    intersect, setdiff, setequal, union\n\ngapminder %&gt;%\n  filter(country == \"Australia\") %&gt;%\n  ggplot(aes(x = year,\n             y = lifeExp)) + \n  geom_point()\n\n\n\n\n\n\n\n\n\n\n9.5.1 Captions for figures\nInserting a caption for a figure is a little bit different. The caption argument is controlled in the chunk option, under the option, fig.cap.\nSo to insert a figure, we do the following.\n\n```{r}\n#| label: gg-oz-gapminder\n#| fig-cap: \"Life expectancy from 1952 - 2007 for Australia. Life expentancy increases steadily except from 1962 to 1969. We can safely say that our life expectancy is higher than it has ever been!\"\nlibrary(ggplot2)\nlibrary(dplyr)\n\ngapminder %&gt;%\n  filter(country == \"Australia\") %&gt;%\n  ggplot(aes(x = lifeExp,\n             y = year)) + \n  geom_point()\n```\n\nWhich would produce the following output\n\nlibrary(ggplot2)\nlibrary(dplyr)\n\ngapminder %&gt;%\n  filter(country == \"Australia\") %&gt;%\n  ggplot(aes(x = lifeExp,\n             y = year)) + \n  geom_point()\n\n\n\n\nLife expectancy from 1952 - 2007 for Australia. Life expentancy increases steadily except from 1962 to 1969. We can safely say that our life expectancy is higher than it has ever been!\n\n\n\n\n\n\n9.5.2 Your Turn\n\nCreate a plot with your .Rmd doc\nAdd a figure caption\n\n\n\n9.5.3 Inserting images\nWe cannot always generate the graphics that we want - for example, we might have an image of something that we want to show, or perhaps a nice flowchart someone else made.\nIn our case, say we wanted to insert the new SSA logo into our document, there are two ways we can do this.\n\nWith markdown syntax\nwith knitr::include_graphics()\n\nMarkdown syntax\nThe markdown syntax to insert an image is: ![caption](\"path/to/image\")\n\n9.5.3.1 Demo\nSo we could insert the new SSA vic logo by doing the following:\n\n```\n![SSA Logo!](bit.ly/ssa-logo)\n```\n\nWhich would give us the following output:\n\n\n\nSSA Logo!\n\n\nBut say that we want more control over the output, like we want to center the image, and we want to make it smaller? Then you can use knitr::include_graphics(), and control the figure size using the options out.width, and add a caption with fig.cap.\n\n```{r ssa-logo, fig.align = 'center', out.width = \"25%\", fig.cap = \"The new SSA logo, which is actually a scatterplot, which is super neat!\"}\nknitr::include_graphics(here::here(\"figs\", \"ssa-logo.png\"))\n```\n\n\nknitr::include_graphics(here::here(\"figs\", \"ssa-logo.png\"))\n\n\n\n\nThe new SSA logo, which is actually a scatterplot, which is super neat!\n\n\n\n\n`\n\n\n\n9.5.4 Your Turn\n\nDownload the gapminder logo and put it into a new directory call “figs”\nInsert this image into your Quarto document around where you introduce gapminder.",
+    "text": "9.5 Figures\nPrinting figures is probably my favourite feature of Quarto. It is actually relatively straightforward in the case of plots. You provide the plot you want to show in a code chunk!\n\n9.5.0.1 Demo\nFor example, I can print a plot of the gapminder data for Australia like so:\n\nlibrary(ggplot2)\nlibrary(dplyr)\n\n\nAttaching package: 'dplyr'\n\n\nThe following objects are masked from 'package:stats':\n\n    filter, lag\n\n\nThe following objects are masked from 'package:base':\n\n    intersect, setdiff, setequal, union\n\ngapminder %&gt;%\n  filter(country == \"Australia\") %&gt;%\n  ggplot(aes(x = year,\n             y = lifeExp)) + \n  geom_point()\n\n\n\n\n\n\n\n\n\n\n9.5.1 Captions for figures\nInserting a caption for a figure is a little bit different. The caption argument is controlled in the chunk option, under the option, fig-cap.\nSo to insert a figure, we do the following.\n\n```{r}\n#| label: gg-oz-gapminder\n#| fig-cap: \"Life expectancy from 1952 - 2007 for Australia. Life expentancy increases steadily except from 1962 to 1969. We can safely say that our life expectancy is higher than it has ever been!\"\nlibrary(ggplot2)\nlibrary(dplyr)\n\ngapminder %&gt;%\n  filter(country == \"Australia\") %&gt;%\n  ggplot(aes(x = lifeExp,\n             y = year)) + \n  geom_point()\n```\n\nWhich would produce the following output\n\nlibrary(ggplot2)\nlibrary(dplyr)\n\ngapminder %&gt;%\n  filter(country == \"Australia\") %&gt;%\n  ggplot(aes(x = lifeExp,\n             y = year)) + \n  geom_point()\n\n\n\n\nLife expectancy from 1952 - 2007 for Australia. Life expentancy increases steadily except from 1962 to 1969. We can safely say that our life expectancy is higher than it has ever been!\n\n\n\n\n\n\n9.5.2 Your Turn\n\nCreate a plot with your .qmd doc\nAdd a figure caption\n\n\n\n9.5.3 Adding multiple (sub) figures and (sub) captions\nSometimes you want to add multiple figures that are linked, or slightly different views of similar data and then reference them as Figure 1A and Figure 1B. You can do this with layout-ncol and fig-cap, and reference the figures with @fig-&lt;chunk-name&gt;-1 @fig-&lt;chunk-name&gt;-2. For example:\n```{r}\n#| label: fig-volcanos\n#| layout-ncol: 2\n#| fig-cap:\n#|   - \"An image plot of Auckland's Maunga Whau Volcano\"\n#|   - \"A contour plot of Auckland's Maunga Whau Volcano\"\n\nimage(volcano)\ncontour(volcano)\n```\n\n\n\n\n\n\n\n\n\nFigure 9.1: An image plot of Auckland’s Maunga Whau Volcano\n\n\n\n\n\n\n\n\n\n\n\nFigure 9.2: A contour plot of Auckland’s Maunga Whau Volcano\n\n\n\n\n\n\nWe can see the image plot as (@fig-volcanos-1) Figure 9.1 and the contour plot as @fig-volcanos-2 Figure 9.2.\nFor more information on this see https://quarto.org/docs/authoring/figures.html#layout and https://quarto.org/docs/authoring/cross-references.html",
+    "crumbs": [
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Figures, Tables, Captions.</span>"
+    ]
+  },
+  {
+    "objectID": "figures-tables-captions.html#inserting-images",
+    "href": "figures-tables-captions.html#inserting-images",
+    "title": "9  Figures, Tables, Captions.",
+    "section": "9.6 Inserting images",
+    "text": "9.6 Inserting images\nWe cannot always generate the graphics that we want - for example, we might have an image of something that we want to show, or perhaps a nice flowchart someone else made.\nIn our case, say we wanted to insert the new SSA logo into our document, there are two ways we can do this.\n\nWith markdown syntax\nwith knitr::include_graphics()\n\nMarkdown syntax\nThe markdown syntax to insert an image is: ![caption](path/to/image)\n\n9.6.0.1 Demo\nSo we could insert the new SSA vic logo by doing the following:\n\n```\n![SSA Logo!](bit.ly/ssa-logo)\n```\n\nWhich would give us the following output:\n\n\n\nSSA Logo!\n\n\nBut say that we want more control over the output, like we want to center the image, and we want to make it smaller? Then you can use knitr::include_graphics(), and control the figure alignment using the options fig-align, and add a caption with fig-cap.\n\n```{r}\n#| label: ssa-logo\n#| fig-align: center\n#| fig-cap: \"The new SSA logo, which is actually a scatterplot, which is super neat!\"\nknitr::include_graphics(here::here(\"figs\", \"ssa-logo.png\"))\n```\n\n\nknitr::include_graphics(here::here(\"figs\", \"ssa-logo.png\"))\n\n\n\n\nThe new SSA logo, which is actually a scatterplot, which is super neat!\n\n\n\n\n`\n\n\n9.6.1 Your Turn\n\nDownload the gapminder logo and put it into a new directory call “figs”\nInsert this image into your Quarto document around where you introduce gapminder.",
     "crumbs": [
       "<span class='chapter-number'>9</span>  <span class='chapter-title'>Figures, Tables, Captions.</span>"
     ]
@@ -753,8 +753,8 @@
     "objectID": "figures-tables-captions.html#summary",
     "href": "figures-tables-captions.html#summary",
     "title": "9  Figures, Tables, Captions.",
-    "section": "9.6 Summary",
-    "text": "9.6 Summary\nWe’ve now learned how to insert tables, plots, and images into our documents!",
+    "section": "9.7 Summary",
+    "text": "9.7 Summary\nWe’ve now learned how to insert tables, plots, and images into our documents!",
     "crumbs": [
       "<span class='chapter-number'>9</span>  <span class='chapter-title'>Figures, Tables, Captions.</span>"
     ]
@@ -834,7 +834,7 @@
     "href": "changing-figures.html#altering-the-figure-path-figures-are-saved-to",
     "title": "10  Customising your figures",
     "section": "10.7 Altering the figure path figures are saved to",
-    "text": "10.7 Altering the figure path figures are saved to\nBy default, the figures are saved in a folder named after the file, e.g.,\n02-qmd-figures-chunks_files/figure-htaml\nIf you want to change this location, you can control the specific name of the folder by setting fig.path like so in the YAML\n---\ntitle: \"Awesome report\"\nauthor: \"You\"\nformat: \n  html:\n    keep-md: true\nknitr:\n  opts_chunk:\n    fig.path: folder/for/figures/prefix-\n---\nIf you do now want a prefix specified, you must end this part with a slash, e.g.,\n---\ntitle: \"Awesome report\"\nauthor: \"You\"\nformat: \n  html:\n    keep-md: true\nknitr:\n  opts_chunk:\n    fig.path: figures/\n---\n(reference: https://github.com/quarto-dev/quarto-cli/discussions/4254)",
+    "text": "10.7 Altering the figure path figures are saved to\nBy default, the figures are saved in a folder named after the file, e.g.,\n02-qmd-figures-chunks_files/figure-html\nIf you want to change this location, you can control the specific name of the folder by setting fig.path like so in the YAML\n---\ntitle: \"Awesome report\"\nauthor: \"You\"\nformat: \n  html:\n    keep-md: true\nknitr:\n  opts_chunk:\n    fig.path: folder/for/figures/prefix-\n---\nIf you do now want a prefix specified, you must end this part with a slash, e.g.,\n---\ntitle: \"Awesome report\"\nauthor: \"You\"\nformat: \n  html:\n    keep-md: true\nknitr:\n  opts_chunk:\n    fig.path: figures/\n---\n(reference: https://github.com/quarto-dev/quarto-cli/discussions/4254)",
     "crumbs": [
       "<span class='chapter-number'>10</span>  <span class='chapter-title'>Customising your figures</span>"
     ]
@@ -864,7 +864,7 @@
     "href": "changing-figures.html#epstiffother-multiple-image-formats",
     "title": "10  Customising your figures",
     "section": "10.10 EPS/TIFF/Other multiple image formats",
-    "text": "10.10 EPS/TIFF/Other multiple image formats\nUnfortunately (currently) in Quarto it seems you cannot save to other image formats such as “eps”, “tiff”, and cannot save to multiple formats at the same time.\nIf you would like to convert images to a specific format, you could try using code like the following.\n\nlibrary(magick)\nlibrary(fs)\n\n# List existing file paths matching \"png\" extension\nfigures_ls &lt;- dir_ls(\n  path = \"exercises/02-qmd-figures-chunks/02-qmd-figures-chunks_files/\",\n  recurse = TRUE,\n  glob = \"*.png\"\n  )\n\n# read images in\nlibrary(purrr)\nfigures &lt;- map(\n  figures_ls,\n  \\(x) image_read(path = x)\n)\n\n# create new paths with .TIFF extension\n# substitute out for another image format like \"bmp\", \"\nnew_paths &lt;- xfun::with_ext(figures_ls, \"tiff\")\n\n# write new images\nwalk2(\n  .x = figures,\n  .y = new_paths,\n  \\(x, y) image_write(image = x, path = y)\n)",
+    "text": "10.10 EPS/TIFF/Other multiple image formats\nUnfortunately (currently, as far as I can tell) in Quarto it seems you cannot save to other image formats such as “eps”, “tiff”, and cannot save to multiple formats at the same time.\nIf you would like to convert images to a specific format, you could try using code like the following.\n\nlibrary(magick)\nlibrary(fs)\n\n# List existing file paths matching \"png\" extension\nfigures_ls &lt;- dir_ls(\n  path = \"exercises/02-qmd-figures-chunks/02-qmd-figures-chunks_files/\",\n  recurse = TRUE,\n  glob = \"*.png\"\n  )\n\n# read images in\nlibrary(purrr)\nfigures &lt;- map(\n  figures_ls,\n  \\(x) image_read(path = x)\n)\n\n# create new paths with .TIFF extension\n# substitute out for another image format like \"bmp\", \"\nnew_paths &lt;- xfun::with_ext(figures_ls, \"tiff\")\n\n# write new images\nwalk2(\n  .x = figures,\n  .y = new_paths,\n  \\(x, y) image_write(image = x, path = y)\n)",
     "crumbs": [
       "<span class='chapter-number'>10</span>  <span class='chapter-title'>Customising your figures</span>"
     ]
@@ -924,7 +924,7 @@
     "href": "math.html#anatomy-of-equations",
     "title": "11  Math",
     "section": "11.5 Anatomy of Equations",
-    "text": "11.5 Anatomy of Equations\nThis section shows you some basic equations types that you want to be familiar with.\nInline equations are referenced by a pair of dollar signs: $.\nSo this text would have an equation here $ E = mc^2$\nGenerates:\nSo this text would have an equation here $ E = mc^2$\nDisplay equations are referenced by two pairs of dollar signs:\n$$\nE = mc^2\n$$\n\\[\nE = mc^2\n\\]\n\n11.5.0.1 Viewing equations\nUnderstanding whether or not you have created the right equation can be difficult. Rstudio provides previews of your equations in text (demo).",
+    "text": "11.5 Anatomy of Equations\nThis section shows you some basic equations types that you want to be familiar with.\nInline equations are referenced by a pair of dollar signs: $.\nSo this text would have an equation here: $E = mc^2$\nGenerates:\nSo this text would have an equation here: \\(E = mc^2\\)\nDisplay equations are referenced by two pairs of dollar signs:\n$$\nE = mc^2\n$$\n\\[\nE = mc^2\n\\]\n\n11.5.0.1 Viewing equations\nUnderstanding whether or not you have created the right equation can be difficult. Rstudio provides previews of your equations in text (demo).",
     "crumbs": [
       "<span class='chapter-number'>11</span>  <span class='chapter-title'>Math</span>"
     ]
@@ -1014,7 +1014,7 @@
     "href": "cite-fig-tab-sec.html#your-turn-exercise",
     "title": "12  Citing Figures, Tables & Sections",
     "section": "12.5 Your Turn (exercise)",
-    "text": "12.5 Your Turn (exercise)\n\nConvert your output to use fig prefixes to reference figures\n\n\n12.5.1 Demo (.demo)\n\n```{r}\n#| label: fig-gg-oz\n#| fig-cap: Life expectancy from 1952 - 2007 for Australia. Life expectancy increases\n#|   steadily except from 1962 to 1969. We can safely say our life expectancy is\n#|   higher than it has ever been!\nlibrary(ggplot2)\nlibrary(dplyr)\ngapminder %&gt;%\n  filter(country == \"Australia\") %&gt;%\n  ggplot(aes(x = year,\n             y = lifeExp)) + \n  geom_point()\n```\n\n\n\n\n\n\n\nFigure 12.2: Life expectancy from 1952 - 2007 for Australia. Life expectancy increases steadily except from 1962 to 1969. We can safely say our life expectancy is higher than it has ever been!\n\n\n\n\n\nAustralia’s life expectancy has increased a great deal over the past 50 years (See Figure -Figure 12.2.\n\n\n12.5.2 Your Turn\n\nAdd a new plot in your document and reference it",
+    "text": "12.5 Your Turn (exercise)\n\nConvert your output to use fig prefixes to reference figures\n\n\n12.5.1 Demo\n\n```{r}\n#| label: fig-gg-oz\n#| fig-cap: Life expectancy from 1952 - 2007 for Australia. Life expectancy increases\n#|   steadily except from 1962 to 1969. We can safely say our life expectancy is\n#|   higher than it has ever been!\nlibrary(ggplot2)\nlibrary(dplyr)\ngapminder %&gt;%\n  filter(country == \"Australia\") %&gt;%\n  ggplot(aes(x = year,\n             y = lifeExp)) + \n  geom_point()\n```\n\n\n\n\n\n\n\nFigure 12.2: Life expectancy from 1952 - 2007 for Australia. Life expectancy increases steadily except from 1962 to 1969. We can safely say our life expectancy is higher than it has ever been!\n\n\n\n\n\nAustralia’s life expectancy has increased a great deal over the past 50 years (See Figure -Figure 12.2.\n\n\n12.5.2 Your Turn\n\nAdd a new plot in your document and reference it",
     "crumbs": [
       "<span class='chapter-number'>12</span>  <span class='chapter-title'>Citing Figures, Tables & Sections</span>"
     ]
@@ -1024,17 +1024,17 @@
     "href": "cite-fig-tab-sec.html#referencing-a-table",
     "title": "12  Citing Figures, Tables & Sections",
     "section": "12.6 Referencing a table",
-    "text": "12.6 Referencing a table\nTo cite a table, you write the following:\n@tbl-chunk-name\n\n```{r}\n#| label: tbl-gg-oz-tab\ngapminder %&gt;%\n  filter(country == \"Australia\") %&gt;%\n  knitr::kable(caption = \"Raw gapminder data for Australia.\")\n```\n\n\n\nTable 12.1: Raw gapminder data for Australia.\n\n\n\n\n\n\ncountry\ncontinent\nyear\nlifeExp\npop\ngdpPercap\n\n\n\n\nAustralia\nOceania\n1952\n69.120\n8691212\n10039.60\n\n\nAustralia\nOceania\n1957\n70.330\n9712569\n10949.65\n\n\nAustralia\nOceania\n1962\n70.930\n10794968\n12217.23\n\n\nAustralia\nOceania\n1967\n71.100\n11872264\n14526.12\n\n\nAustralia\nOceania\n1972\n71.930\n13177000\n16788.63\n\n\nAustralia\nOceania\n1977\n73.490\n14074100\n18334.20\n\n\nAustralia\nOceania\n1982\n74.740\n15184200\n19477.01\n\n\nAustralia\nOceania\n1987\n76.320\n16257249\n21888.89\n\n\nAustralia\nOceania\n1992\n77.560\n17481977\n23424.77\n\n\nAustralia\nOceania\n1997\n78.830\n18565243\n26997.94\n\n\nAustralia\nOceania\n2002\n80.370\n19546792\n30687.75\n\n\nAustralia\nOceania\n2007\n81.235\n20434176\n34435.37\n\n\n\n\n\n\n\n\n@tbl-chunk-name\nReference: https://quarto.org/docs/authoring/cross-references.html#tables",
+    "text": "12.6 Referencing a table\nTo cite a table, you write the following:\n@tbl-chunk-name\n\n```{r}\n#| label: tbl-gg-oz-tab\ngapminder %&gt;%\n  filter(country == \"Australia\") %&gt;%\n  knitr::kable(caption = \"Raw gapminder data for Australia.\")\n```\n\n\n\nTable 12.1: Raw gapminder data for Australia.\n\n\n\n\n\n\ncountry\ncontinent\nyear\nlifeExp\npop\ngdpPercap\n\n\n\n\nAustralia\nOceania\n1952\n69.120\n8691212\n10039.60\n\n\nAustralia\nOceania\n1957\n70.330\n9712569\n10949.65\n\n\nAustralia\nOceania\n1962\n70.930\n10794968\n12217.23\n\n\nAustralia\nOceania\n1967\n71.100\n11872264\n14526.12\n\n\nAustralia\nOceania\n1972\n71.930\n13177000\n16788.63\n\n\nAustralia\nOceania\n1977\n73.490\n14074100\n18334.20\n\n\nAustralia\nOceania\n1982\n74.740\n15184200\n19477.01\n\n\nAustralia\nOceania\n1987\n76.320\n16257249\n21888.89\n\n\nAustralia\nOceania\n1992\n77.560\n17481977\n23424.77\n\n\nAustralia\nOceania\n1997\n78.830\n18565243\n26997.94\n\n\nAustralia\nOceania\n2002\n80.370\n19546792\n30687.75\n\n\nAustralia\nOceania\n2007\n81.235\n20434176\n34435.37\n\n\n\n\n\n\n\n\n@tbl-chunk-name\nIf you want to move the caption location you can use tbl-cap-location: &lt;position&gt; to specify the location. By default it is the top.\n\n```{r}\n#| label: tbl-gg-oz-tab-bottom\n#| tbl-cap-location: bottom\ngapminder %&gt;%\n  filter(country == \"Australia\") %&gt;%\n  knitr::kable(caption = \"Raw gapminder data for Australia.\")\n```\n\n\n\n\n\n\n\ncountry\ncontinent\nyear\nlifeExp\npop\ngdpPercap\n\n\n\n\nAustralia\nOceania\n1952\n69.120\n8691212\n10039.60\n\n\nAustralia\nOceania\n1957\n70.330\n9712569\n10949.65\n\n\nAustralia\nOceania\n1962\n70.930\n10794968\n12217.23\n\n\nAustralia\nOceania\n1967\n71.100\n11872264\n14526.12\n\n\nAustralia\nOceania\n1972\n71.930\n13177000\n16788.63\n\n\nAustralia\nOceania\n1977\n73.490\n14074100\n18334.20\n\n\nAustralia\nOceania\n1982\n74.740\n15184200\n19477.01\n\n\nAustralia\nOceania\n1987\n76.320\n16257249\n21888.89\n\n\nAustralia\nOceania\n1992\n77.560\n17481977\n23424.77\n\n\nAustralia\nOceania\n1997\n78.830\n18565243\n26997.94\n\n\nAustralia\nOceania\n2002\n80.370\n19546792\n30687.75\n\n\nAustralia\nOceania\n2007\n81.235\n20434176\n34435.37\n\n\n\n\n\n\nTable 12.2: Raw gapminder data for Australia.\n\n\n\n\nReference: https://quarto.org/docs/authoring/cross-references.html#tables and https://quarto.org/docs/authoring/tables.html#caption-location",
     "crumbs": [
       "<span class='chapter-number'>12</span>  <span class='chapter-title'>Citing Figures, Tables & Sections</span>"
     ]
   },
   {
-    "objectID": "cite-fig-tab-sec.html#other-things-you-can-reference",
-    "href": "cite-fig-tab-sec.html#other-things-you-can-reference",
+    "objectID": "cite-fig-tab-sec.html#other-things-you-can-crossreference",
+    "href": "cite-fig-tab-sec.html#other-things-you-can-crossreference",
     "title": "12  Citing Figures, Tables & Sections",
-    "section": "12.7 Other things you can reference",
-    "text": "12.7 Other things you can reference\nYou can also reference theorems, code, proofs, and equations! See https://quarto.org/docs/authoring/cross-references.html#theorems-and-proofs for more details.\n\n12.7.1 Your Turn (exercise)\n\nCreate a table in your document and refer to it in text",
+    "section": "12.7 Other things you can cross/reference",
+    "text": "12.7 Other things you can cross/reference\nYou can also reference theorems, code, proofs, and equations! See https://quarto.org/docs/authoring/cross-references.html#theorems-and-proofs for more details.\n\n12.7.1 Your Turn (exercise)\n\nCreate a table in your document and refer to it in text",
     "crumbs": [
       "<span class='chapter-number'>12</span>  <span class='chapter-title'>Citing Figures, Tables & Sections</span>"
     ]
@@ -1044,7 +1044,27 @@
     "href": "cite-fig-tab-sec.html#referencing-a-section",
     "title": "12  Citing Figures, Tables & Sections",
     "section": "12.8 Referencing a section",
-    "text": "12.8 Referencing a section\nYou can even reference a section in your report: @sec-slug\nHowever, in order to write this, you need to include sec-slug in your markdown header, like so:\n## your amazing header {#sec-slug}\nYou must also include number-section in your YAML:\n---\ntitle: \"example\"\nnumber-sections: true\n---\nFor example, I can refer to the first section (Section Chapter 12) in this document by referring to the section as\n(Section @sec-start)\nbecause it was written as:\n# Citing Figures, Tables & Sections {#sec-start}\n\n12.8.1 Your Turn\n\nReference a section in the report.",
+    "text": "12.8 Referencing a section\nYou can even reference a section in your report: @sec-slug\nHowever, in order to write this, you need to include sec-slug in your markdown header, like so:\n## your amazing header {#sec-slug}\nYou must also include number-section in your YAML:\n---\ntitle: \"example\"\nnumber-sections: true\n---\nFor example, I can refer to the first section (Section Chapter 12) in this document by referring to the section as\n(Section @sec-start)\nbecause it was written as:\n# Citing Figures, Tables & Sections {#sec-start}",
+    "crumbs": [
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Citing Figures, Tables & Sections</span>"
+    ]
+  },
+  {
+    "objectID": "cite-fig-tab-sec.html#using-visual-mode",
+    "href": "cite-fig-tab-sec.html#using-visual-mode",
+    "title": "12  Citing Figures, Tables & Sections",
+    "section": "12.9 Using visual mode",
+    "text": "12.9 Using visual mode\nVisual mode is this pretty neat feature, it’s best demonstrated live!",
+    "crumbs": [
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Citing Figures, Tables & Sections</span>"
+    ]
+  },
+  {
+    "objectID": "cite-fig-tab-sec.html#your-turn-1",
+    "href": "cite-fig-tab-sec.html#your-turn-1",
+    "title": "12  Citing Figures, Tables & Sections",
+    "section": "12.10 Your Turn",
+    "text": "12.10 Your Turn\n\nReference a section in the report.",
     "crumbs": [
       "<span class='chapter-number'>12</span>  <span class='chapter-title'>Citing Figures, Tables & Sections</span>"
     ]
@@ -1154,7 +1174,7 @@
     "href": "caption-reference-eqn.html#questions",
     "title": "14  Captioning and referencing equations",
     "section": "14.2 Questions",
-    "text": "14.2 Questions\n\nHow do I caption an equation?\nHow do I reference an equation?\n\n\n14.2.1 Numbering equations\nYou can make an equation referencable by adding a label starting with #eq- after the equation $$. For example:\n\\[\nY \\sim X\\beta_0 + X\\beta_1 + \\epsilon\n\\tag{14.1}\\]\nYou can then refer to the equation in text using @eq-linear:\n\nOur model is given in Equation 14.1.",
+    "text": "14.2 Questions\n\nHow do I caption an equation?\nHow do I reference an equation?\n\n\n14.2.1 Numbering equations\nYou can make an equation referencable by adding a label starting with #eq- after the equation $$. For example:\n$$\nY \\sim X\\beta_0 + X\\beta_1 + \\epsilon\n$$ {#eq-linear}\nGives\n\\[\nY \\sim X\\beta_0 + X\\beta_1 + \\epsilon\n\\tag{14.1}\\]\nYou can then refer to the equation in text using @eq-linear:\n\nOur model is given in Equation 14.1.",
     "crumbs": [
       "<span class='chapter-number'>14</span>  <span class='chapter-title'>Captioning and referencing equations</span>"
     ]
@@ -1354,7 +1374,7 @@
     "href": "alternative-outputs-and-exts.html#alternative-output-formats",
     "title": "16  Different Outputs and Extensions",
     "section": "",
-    "text": "Write a book\nbuild a website\ncreate a simple dashboard\nuse shiny with Quarto\ngenerate multiple reports with parameterised reports - blog post by Mike Mahoney, blog post by Mandy Norrbo\ntypst (like a next-generation LaTeX - still new.)\n\n\n16.1.1 Slideshows / Presentations\n\nHTML: revealjs\nPDF: beamer\npowerpoint\n\n\n\n16.1.2 Quarto Extensions\nQuarto has an official extensions API, you can see all their extensions on their extensions page. Perhaps the most relevant is the journal extensions page, which I discuss below. For more information on creating extensions, see their creating extensions page.\n\n16.1.2.1 For Journals\nQuarto has provided a substantial list of supported journal formats in the journal listings Quarto extensions page. This is similar to rticles in rmarkdown.\n\n\n16.1.2.2 Other extensions\nOther formats and extensions for PDF, for example, the hikmah.pdf extension by Andrew Heiss.\nThese can be found at the Quarto Custom Formats Page.",
+    "text": "Write a book\nBuild a website\nCreate a simple dashboard\nUse shiny with Quarto\nGenerate multiple reports with parameterised reports - blog post by Mike Mahoney, blog post by Mandy Norrbo\ntypst (like a next-generation LaTeX - still new.)\n\n\n16.1.1 Slideshows / Presentations\n\nHTML: revealjs\nPDF: beamer\npowerpoint\n\n\n\n16.1.2 Quarto Manuscripts\nQuarto manuscripts are a relatively new feature in quarto. They essentially help you share a bundled folder with the journal document, the rendered code, and other bits and pieces. In a future version of this book I will discuss using these in your writing.\n\n\n16.1.3 Quarto Extensions\nQuarto has an official extensions API, you can see all their extensions on their extensions page. Perhaps the most relevant is the journal extensions page, which I discuss below. For more information on creating extensions, see their creating extensions page.\n\n16.1.3.1 For Journals\nQuarto has provided a substantial list of supported journal formats in the journal listings Quarto extensions page. This is similar to rticles in rmarkdown.\n\n\n16.1.3.2 Other extensions\nOther formats and extensions for PDF, for example, the hikmah.pdf extension by Andrew Heiss.\nThese can be found at the Quarto Custom Formats Page.",
     "crumbs": [
       "<span class='chapter-number'>16</span>  <span class='chapter-title'>Different Outputs and Extensions</span>"
     ]
@@ -1374,7 +1394,7 @@
     "href": "next-steps.html#learn-how-to-use-git-and-github",
     "title": "17  Next Steps",
     "section": "",
-    "text": "Final\nFinal 2\nReally final\n\n\n\n2018-10-10-document.Rmd\n2018-10-11-document.Rmd",
+    "text": "Final\nFinal 2\nReally final\n\n\n\n2018-10-10-document.qmd\n2018-10-11-document.qmd",
     "crumbs": [
       "<span class='chapter-number'>17</span>  <span class='chapter-title'>Next Steps</span>"
     ]
@@ -1404,7 +1424,7 @@
     "href": "appendix-visual-vs-source-mode.html",
     "title": "Appendix A — Visual mode",
     "section": "",
-    "text": "This section will be best demonstrated live in the course.\nBut needless to say, some things worth checking out:\n\nciting papers in a linked .bib file\ninsert anything shortcut\ninsert table\n\nWarn against potential issues that may arise due to text changes from swapping to visual model\nThere is also a VS Code extension for visual mode, which this book does not (currently) focus on.",
+    "text": "This section will be best demonstrated live in the course.\nBut needless to say, some things worth checking out:\n\nciting papers in a linked .bib file\ninsert anything shortcut\ninsert table\n\nWarn against potential issues that may arise due to text changes from swapping to visual model\nThere is also a VS Code extension for visual mode, which this book does not (currently) focus on.\n\nB Using Zotero with Quarto\nhttps://quarto.org/docs/visual-editor/technical.html#citations-from-zotero",
     "crumbs": [
       "Appendices",
       "<span class='chapter-number'>A</span>  <span class='chapter-title'>Visual mode</span>"

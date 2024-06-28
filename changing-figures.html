@@ -297,6 +297,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  <span class="menu-text"><span class="chapter-number">D</span>&nbsp; <span class="chapter-title">HTML document extensions</span></span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./appendix-manuscript.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">E</span>&nbsp; <span class="chapter-title">Using manuscripts in your writing</span></span></a>
+  </div>
+</li>
       </ul>
   </li>
     </ul>
@@ -449,7 +455,7 @@ These are no longer an option in Quarto
 <section id="altering-the-figure-path-figures-are-saved-to" class="level2" data-number="10.7">
 <h2 data-number="10.7" class="anchored" data-anchor-id="altering-the-figure-path-figures-are-saved-to"><span class="header-section-number">10.7</span> Altering the figure path figures are saved to</h2>
 <p>By default, the figures are saved in a folder named after the file, e.g.,</p>
-<p><code>02-qmd-figures-chunks_files/figure-htaml</code></p>
+<p><code>02-qmd-figures-chunks_files/figure-html</code></p>
 <p>If you want to change this location, you can control the specific name of the folder by setting <code>fig.path</code> like so in the YAML</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"Awesome report"</span></span>
@@ -472,7 +478,7 @@ These are no longer an option in Quarto
 <span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">opts_chunk</span><span class="kw">:</span></span>
 <span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">fig.path</span><span class="kw">:</span><span class="at"> figures/</span></span>
 <span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>(reference: https://github.com/quarto-dev/quarto-cli/discussions/4254)</p>
+<p>(reference: <a href="https://github.com/quarto-dev/quarto-cli/discussions/4254">https://github.com/quarto-dev/quarto-cli/discussions/4254</a>)</p>
 </section>
 <section id="your-turn-2" class="level2 exercise" data-number="10.8">
 <h2 class="exercise anchored" data-number="10.8" data-anchor-id="your-turn-2"><span class="header-section-number">10.8</span> Your Turn</h2>
@@ -488,7 +494,7 @@ These are no longer an option in Quarto
 </section>
 <section id="epstiffother-multiple-image-formats" class="level2" data-number="10.10">
 <h2 data-number="10.10" class="anchored" data-anchor-id="epstiffother-multiple-image-formats"><span class="header-section-number">10.10</span> EPS/TIFF/Other multiple image formats</h2>
-<p>Unfortunately (currently) in Quarto it seems you cannot save to other image formats such as “eps”, “tiff”, and cannot save to multiple formats at the same time.</p>
+<p>Unfortunately (currently, as far as I can tell) in Quarto it seems you cannot save to other image formats such as “eps”, “tiff”, and cannot save to multiple formats at the same time.</p>
 <p>If you would like to convert images to a specific format, you could try using code like the following.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(magick)</span>

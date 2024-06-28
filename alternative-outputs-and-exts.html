@@ -263,6 +263,12 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text"><span class="chapter-number">D</span>&nbsp; <span class="chapter-title">HTML document extensions</span></span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./appendix-manuscript.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">E</span>&nbsp; <span class="chapter-title">Using manuscripts in your writing</span></span></a>
+  </div>
+</li>
       </ul>
   </li>
     </ul>
@@ -278,7 +284,8 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#alternative-output-formats" id="toc-alternative-output-formats" class="nav-link active" data-scroll-target="#alternative-output-formats"><span class="header-section-number">16.1</span> Alternative output formats</a>
   <ul class="collapse">
   <li><a href="#slideshows-presentations" id="toc-slideshows-presentations" class="nav-link" data-scroll-target="#slideshows-presentations"><span class="header-section-number">16.1.1</span> Slideshows / Presentations</a></li>
-  <li><a href="#quarto-extensions" id="toc-quarto-extensions" class="nav-link" data-scroll-target="#quarto-extensions"><span class="header-section-number">16.1.2</span> Quarto Extensions</a></li>
+  <li><a href="#quarto-manuscripts" id="toc-quarto-manuscripts" class="nav-link" data-scroll-target="#quarto-manuscripts"><span class="header-section-number">16.1.2</span> Quarto Manuscripts</a></li>
+  <li><a href="#quarto-extensions" id="toc-quarto-extensions" class="nav-link" data-scroll-target="#quarto-extensions"><span class="header-section-number">16.1.3</span> Quarto Extensions</a></li>
   </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/njtierney/qmd4sci/edit/main/alternative-outputs-and-exts.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/njtierney/qmd4sci/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
@@ -318,10 +325,10 @@ ul.task-list li input[type="checkbox"] {
 <h2 data-number="16.1" class="anchored" data-anchor-id="alternative-output-formats"><span class="header-section-number">16.1</span> Alternative output formats</h2>
 <ul>
 <li><a href="https://quarto.org/docs/books/">Write a book</a></li>
-<li><a href="https://quarto.org/docs/websites/">build a website</a></li>
-<li><a href="https://quarto.org/docs/dashboards/">create a simple dashboard</a></li>
-<li><a href="https://quarto.org/docs/interactive/shiny/">use shiny with Quarto</a></li>
-<li><a href="https://quarto.org/docs/computations/parameters.html">generate multiple reports with parameterised reports</a> - <a href="https://www.mm218.dev/posts/2022-08-04-how-to-use-quarto-for-parameterized-reporting/">blog post by Mike Mahoney</a>, <a href="https://www.jumpingrivers.com/blog/r-parameterised-presentations-quarto/">blog post by Mandy Norrbo</a></li>
+<li><a href="https://quarto.org/docs/websites/">Build a website</a></li>
+<li><a href="https://quarto.org/docs/dashboards/">Create a simple dashboard</a></li>
+<li><a href="https://quarto.org/docs/interactive/shiny/">Use shiny with Quarto</a></li>
+<li><a href="https://quarto.org/docs/computations/parameters.html">Generate multiple reports with parameterised reports</a> - <a href="https://www.mm218.dev/posts/2022-08-04-how-to-use-quarto-for-parameterized-reporting/">blog post by Mike Mahoney</a>, <a href="https://www.jumpingrivers.com/blog/r-parameterised-presentations-quarto/">blog post by Mandy Norrbo</a></li>
 <li><a href="https://quarto.org/docs/output-formats/typst.html">typst</a> (like a next-generation LaTeX - still new.)</li>
 </ul>
 <section id="slideshows-presentations" class="level3" data-number="16.1.1">
@@ -332,15 +339,19 @@ ul.task-list li input[type="checkbox"] {
 <li><a href="https://quarto.org/docs/presentations/powerpoint.html">powerpoint</a></li>
 </ul>
 </section>
-<section id="quarto-extensions" class="level3" data-number="16.1.2">
-<h3 data-number="16.1.2" class="anchored" data-anchor-id="quarto-extensions"><span class="header-section-number">16.1.2</span> Quarto Extensions</h3>
+<section id="quarto-manuscripts" class="level3" data-number="16.1.2">
+<h3 data-number="16.1.2" class="anchored" data-anchor-id="quarto-manuscripts"><span class="header-section-number">16.1.2</span> Quarto Manuscripts</h3>
+<p><a href="https://quarto.org/docs/manuscripts/">Quarto manuscripts</a> are a relatively new feature in quarto. They essentially help you share a bundled folder with the journal document, the rendered code, and other bits and pieces. In a future version of this book I will discuss using these in your writing.</p>
+</section>
+<section id="quarto-extensions" class="level3" data-number="16.1.3">
+<h3 data-number="16.1.3" class="anchored" data-anchor-id="quarto-extensions"><span class="header-section-number">16.1.3</span> Quarto Extensions</h3>
 <p>Quarto has an official extensions API, you can see all their extensions on their <a href="https://quarto.org/docs/extensions/">extensions page</a>. Perhaps the most relevant is the journal extensions page, which I discuss below. For more information on creating extensions, see their <a href="https://quarto.org/docs/extensions/creating.html">creating extensions page</a>.</p>
-<section id="for-journals" class="level4" data-number="16.1.2.1">
-<h4 data-number="16.1.2.1" class="anchored" data-anchor-id="for-journals"><span class="header-section-number">16.1.2.1</span> For Journals</h4>
+<section id="for-journals" class="level4" data-number="16.1.3.1">
+<h4 data-number="16.1.3.1" class="anchored" data-anchor-id="for-journals"><span class="header-section-number">16.1.3.1</span> For Journals</h4>
 <p>Quarto has provided a substantial list of supported journal formats in the <a href="https://quarto.org/docs/extensions/listing-journals.html">journal listings Quarto extensions page</a>. This is similar to <a href="https://cran.r-project.org/web/packages/rticles/index.html">rticles</a> in rmarkdown.</p>
 </section>
-<section id="other-extensions" class="level4" data-number="16.1.2.2">
-<h4 data-number="16.1.2.2" class="anchored" data-anchor-id="other-extensions"><span class="header-section-number">16.1.2.2</span> Other extensions</h4>
+<section id="other-extensions" class="level4" data-number="16.1.3.2">
+<h4 data-number="16.1.3.2" class="anchored" data-anchor-id="other-extensions"><span class="header-section-number">16.1.3.2</span> Other extensions</h4>
 <p>Other formats and extensions for PDF, for example, the <a href="https://github.com/andrewheiss/hikmah-academic-quarto"><code>hikmah.pdf</code></a> extension by <a href="https://www.andrewheiss.com/">Andrew Heiss</a>.</p>
 <p>These can be found at the <a href="https://quarto.org/docs/extensions/listing-formats.html">Quarto Custom Formats Page</a>.</p>
 

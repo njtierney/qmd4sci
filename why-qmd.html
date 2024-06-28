@@ -297,6 +297,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  <span class="menu-text"><span class="chapter-number">D</span>&nbsp; <span class="chapter-title">HTML document extensions</span></span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./appendix-manuscript.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">E</span>&nbsp; <span class="chapter-title">Using manuscripts in your writing</span></span></a>
+  </div>
+</li>
       </ul>
   </li>
     </ul>
@@ -322,9 +328,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#what-about-rmarkdown" id="toc-what-about-rmarkdown" class="nav-link" data-scroll-target="#what-about-rmarkdown"><span class="header-section-number">3</span> What about Rmarkdown?</a>
   <ul class="collapse">
   <li><a href="#your-turn-1" id="toc-your-turn-1" class="nav-link" data-scroll-target="#your-turn-1"><span class="header-section-number">3.1</span> Your Turn</a></li>
-  <li><a href="#quarto-helps-complete-the-solution-to-the-reproducibility-problem" id="toc-quarto-helps-complete-the-solution-to-the-reproducibility-problem" class="nav-link" data-scroll-target="#quarto-helps-complete-the-solution-to-the-reproducibility-problem"><span class="header-section-number">3.2</span> Quarto helps complete the solution to the reproducibility problem</a></li>
-  <li><a href="#summary" id="toc-summary" class="nav-link" data-scroll-target="#summary"><span class="header-section-number">3.3</span> Summary</a></li>
-  <li><a href="#learning-more" id="toc-learning-more" class="nav-link" data-scroll-target="#learning-more"><span class="header-section-number">3.4</span> Learning more</a></li>
+  </ul></li>
+  <li><a href="#quarto-helps-complete-the-solution-to-the-reproducibility-problem" id="toc-quarto-helps-complete-the-solution-to-the-reproducibility-problem" class="nav-link" data-scroll-target="#quarto-helps-complete-the-solution-to-the-reproducibility-problem"><span class="header-section-number">4</span> Quarto helps complete the solution to the reproducibility problem</a>
+  <ul class="collapse">
+  <li><a href="#summary" id="toc-summary" class="nav-link" data-scroll-target="#summary"><span class="header-section-number">4.1</span> Summary</a></li>
+  <li><a href="#learning-more" id="toc-learning-more" class="nav-link" data-scroll-target="#learning-more"><span class="header-section-number">4.2</span> Learning more</a></li>
   </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/njtierney/qmd4sci/edit/main/why-qmd.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/njtierney/qmd4sci/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
@@ -530,8 +538,9 @@ image(volcano)
 <li><strong>Learn to use Markdown</strong> In your small groups, spend five minutes working through this <a href="https://www.markdowntutorial.com/">brief online Markdown tutorial</a></li>
 </ol>
 </section>
-<section id="quarto-helps-complete-the-solution-to-the-reproducibility-problem" class="level2" data-number="3.2">
-<h2 data-number="3.2" class="anchored" data-anchor-id="quarto-helps-complete-the-solution-to-the-reproducibility-problem"><span class="header-section-number">3.2</span> Quarto helps complete the solution to the reproducibility problem</h2>
+</section>
+<section id="quarto-helps-complete-the-solution-to-the-reproducibility-problem" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> Quarto helps complete the solution to the reproducibility problem</h1>
 <p>So, how do we combine this with our R code, into a literate programming environment?</p>
 <p>Quarto provides an environment where you can write your complete analysis. It weaves your text, and code, and its output together into a single document.</p>
 <p>For example, look at the following report:</p>
@@ -552,36 +561,48 @@ image(volcano)
 <span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="an">format:</span><span class="co"> html</span></span>
 <span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
 <span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>#| label: library</span>
-<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>library(tidyverse)</span>
-<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a>library(broom)</span>
-<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a>#| label: data-read-in</span>
-<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a>data &lt;- read_csv(here::here("data/oz_gapminder.csv"))</span>
-<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a><span class="fu"># Introduction</span></span>
-<span id="cb8-16"><a href="#cb8-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-17"><a href="#cb8-17" aria-hidden="true" tabindex="-1"></a>let's look at the lifespan</span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a><span class="in">#| label: library</span></span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a><span class="in">library(tidyverse)</span></span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a><span class="in">library(broom)</span></span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a><span class="in">#| label: data-read-in</span></span>
+<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a><span class="in">data &lt;- read_csv(here::here("data/oz_gapminder.csv"))</span></span>
+<span id="cb8-16"><a href="#cb8-16" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb8-17"><a href="#cb8-17" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb8-18"><a href="#cb8-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-19"><a href="#cb8-19" aria-hidden="true" tabindex="-1"></a>#| label: hist-life-exp</span>
-<span id="cb8-20"><a href="#cb8-20" aria-hidden="true" tabindex="-1"></a>hist(data$lifeExp)</span>
-<span id="cb8-21"><a href="#cb8-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-22"><a href="#cb8-22" aria-hidden="true" tabindex="-1"></a>Let's fit a simple linear model of the effect of year on life expectancy</span>
-<span id="cb8-23"><a href="#cb8-23" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-24"><a href="#cb8-24" aria-hidden="true" tabindex="-1"></a>#| label: example-lm</span>
-<span id="cb8-25"><a href="#cb8-25" aria-hidden="true" tabindex="-1"></a>fit &lt;- lm(lifeExp ~ year, data = data)</span>
-<span id="cb8-26"><a href="#cb8-26" aria-hidden="true" tabindex="-1"></a>fit</span>
+<span id="cb8-19"><a href="#cb8-19" aria-hidden="true" tabindex="-1"></a><span class="fu"># Introduction</span></span>
+<span id="cb8-20"><a href="#cb8-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-21"><a href="#cb8-21" aria-hidden="true" tabindex="-1"></a>let's look at the lifespan</span>
+<span id="cb8-22"><a href="#cb8-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-23"><a href="#cb8-23" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb8-24"><a href="#cb8-24" aria-hidden="true" tabindex="-1"></a><span class="in">#| label: hist-life-exp</span></span>
+<span id="cb8-25"><a href="#cb8-25" aria-hidden="true" tabindex="-1"></a><span class="in">hist(data$lifeExp)</span></span>
+<span id="cb8-26"><a href="#cb8-26" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb8-27"><a href="#cb8-27" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-28"><a href="#cb8-28" aria-hidden="true" tabindex="-1"></a>And let's look at the coefficient table:</span>
-<span id="cb8-29"><a href="#cb8-29" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-30"><a href="#cb8-30" aria-hidden="true" tabindex="-1"></a>#| label: coef-table</span>
-<span id="cb8-31"><a href="#cb8-31" aria-hidden="true" tabindex="-1"></a>library(broom)</span>
-<span id="cb8-32"><a href="#cb8-32" aria-hidden="true" tabindex="-1"></a>fit_coef &lt;- tidy(fit)</span>
-<span id="cb8-33"><a href="#cb8-33" aria-hidden="true" tabindex="-1"></a>knitr::kable(fit_coef,</span>
-<span id="cb8-34"><a href="#cb8-34" aria-hidden="true" tabindex="-1"></a>             caption = "A table of the coefficients")</span>
-<span id="cb8-35"><a href="#cb8-35" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-36"><a href="#cb8-36" aria-hidden="true" tabindex="-1"></a>The effect of year on life expectancy is `<span class="in">` `</span>r  fit_coef$estimate<span class="co">[</span><span class="ot">2</span><span class="co">]</span>` ``.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb8-28"><a href="#cb8-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-29"><a href="#cb8-29" aria-hidden="true" tabindex="-1"></a>Let's fit a simple linear model of the effect of year on life expectancy</span>
+<span id="cb8-30"><a href="#cb8-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-31"><a href="#cb8-31" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb8-32"><a href="#cb8-32" aria-hidden="true" tabindex="-1"></a><span class="in">#| label: example-lm</span></span>
+<span id="cb8-33"><a href="#cb8-33" aria-hidden="true" tabindex="-1"></a><span class="in">fit &lt;- lm(lifeExp ~ year, data = data)</span></span>
+<span id="cb8-34"><a href="#cb8-34" aria-hidden="true" tabindex="-1"></a><span class="in">fit</span></span>
+<span id="cb8-35"><a href="#cb8-35" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb8-36"><a href="#cb8-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-37"><a href="#cb8-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-38"><a href="#cb8-38" aria-hidden="true" tabindex="-1"></a>And let's look at the coefficient table:</span>
+<span id="cb8-39"><a href="#cb8-39" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-40"><a href="#cb8-40" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb8-41"><a href="#cb8-41" aria-hidden="true" tabindex="-1"></a><span class="in">#| label: coef-table</span></span>
+<span id="cb8-42"><a href="#cb8-42" aria-hidden="true" tabindex="-1"></a><span class="in">library(broom)</span></span>
+<span id="cb8-43"><a href="#cb8-43" aria-hidden="true" tabindex="-1"></a><span class="in">fit_coef &lt;- tidy(fit)</span></span>
+<span id="cb8-44"><a href="#cb8-44" aria-hidden="true" tabindex="-1"></a><span class="in">knitr::kable(fit_coef,</span></span>
+<span id="cb8-45"><a href="#cb8-45" aria-hidden="true" tabindex="-1"></a><span class="in">             caption = "A table of the coefficients")</span></span>
+<span id="cb8-46"><a href="#cb8-46" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb8-47"><a href="#cb8-47" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-48"><a href="#cb8-48" aria-hidden="true" tabindex="-1"></a>The effect of year on life expectancy is <span class="in">`{r}  fit_coef$estimate[2]`</span>.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>We <em>render</em> this code and it creates this report!</p>
 <p>It has a plot, it has a table, we even refer to some of the values in the text - the last line of the report looks at the effect of year.</p>
@@ -613,9 +634,8 @@ image(volcano)
 <p>And we just pointed it to some different data. Then re-rendered it.</p>
 <p>That’s it.</p>
 <p>That is why we use Quarto</p>
-</section>
-<section id="summary" class="level2" data-number="3.3">
-<h2 data-number="3.3" class="anchored" data-anchor-id="summary"><span class="header-section-number">3.3</span> Summary</h2>
+<section id="summary" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="summary"><span class="header-section-number">4.1</span> Summary</h2>
 <p>In this section we’ve learned about:</p>
 <ul>
 <li>What the value is in a reproducible report</li>
@@ -624,8 +644,8 @@ image(volcano)
 <li>How to use Markdown</li>
 </ul>
 </section>
-<section id="learning-more" class="level2" data-number="3.4">
-<h2 data-number="3.4" class="anchored" data-anchor-id="learning-more"><span class="header-section-number">3.4</span> Learning more</h2>
+<section id="learning-more" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="learning-more"><span class="header-section-number">4.2</span> Learning more</h2>
 <ul>
 <li><a href="https://rstudio.github.io/cheatsheets/quarto.pdf">posit’s Quarto cheatsheet</a></li>
 </ul>
