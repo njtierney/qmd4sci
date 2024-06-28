@@ -72,6 +72,14 @@ If you get the following error, **this is good**! As it means that TeX has alrea
 Error: Detected an existing tlmgr at /usr/local/bin/tlmgr. It seems TeX Live has been installed (check tinytex::tinytex_root()). You have to uninstall it, or use install_tinytex(force = TRUE) if you are sure TinyTeX can override it (e.g., you are a PATH expert or installed TinyTeX previously).
 ```
 
+Alternatively, you can run the following from the terminal
+
+```{shell}
+#| eval: false
+quarto install tinytex
+# follow the prompts from here
+```
+
 ### Problem solving with LaTeX
 
 If you have any problems with installing `tinytex`, I recommend you check out the [tinytex FAQ page](https://yihui.name/tinytex/faq/).
