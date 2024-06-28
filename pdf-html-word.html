@@ -2,13 +2,13 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.556">
+<meta name="generator" content="quarto-1.4.557">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="description" content="For a scientific report to be completely credible, it must be reproducible. The full computational environment used to derive the results, including the data and code used for statistical analysis should be available for others to reproduce. Quarto is a tool that allows you integrate your code, text and figures in a single file in order to make high quality, reproducible reports. A paper published with an included quarto file and data sets can be reproduced by anyone with a computer.">
 
-<title>Quarto for Scientists - 8&nbsp; HTML, PDF, and Word (and more!)</title>
+<title>Quarto for Scientists - 7&nbsp; HTML, PDF, and Word (and more!)</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -34,7 +34,7 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -66,7 +66,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
 <link href="./keyboard-shortcuts.html" rel="next">
-<link href="./visual-vs-source-mode.html" rel="prev">
+<link href="./using-qmd.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -105,7 +105,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }</script>
 
 
-<link rel="stylesheet" href="style.css">
 </head>
 
 <body class="nav-sidebar floating">
@@ -117,7 +116,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./pdf-html-word.html"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">HTML, PDF, and Word (and more!)</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./pdf-html-word.html"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">HTML, PDF, and Word (and more!)</span></a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -189,86 +188,80 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./visual-vs-source-mode.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Visual mode</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
   <a href="./pdf-html-word.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">HTML, PDF, and Word (and more!)</span></span></a>
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">HTML, PDF, and Word (and more!)</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./keyboard-shortcuts.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Keyboard Shortcuts</span></span></a>
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Keyboard Shortcuts</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./figures-tables-captions.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Figures, Tables, Captions.</span></span></a>
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Figures, Tables, Captions.</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./changing-figures.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Customising your figures</span></span></a>
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Customising your figures</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./math.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Math</span></span></a>
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Math</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./cite-fig-tab-sec.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Citing Figures, Tables &amp; Sections</span></span></a>
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Citing Figures, Tables &amp; Sections</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./citations-and-styles.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Citing Articles &amp; Bibliography Styles</span></span></a>
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Citing Articles &amp; Bibliography Styles</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./caption-reference-eqn.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Captioning and referencing equations</span></span></a>
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Captioning and referencing equations</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./common-problems.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Common Problems with Quarto (and some solutions)</span></span></a>
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Common Problems with Quarto (and some solutions)</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./alternative-outputs-and-exts.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Different Outputs and Extensions</span></span></a>
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Different Outputs and Extensions</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./next-steps.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Next Steps</span></span></a>
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Next Steps</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./references.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">References</span></span></a>
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">References</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./acknowledgements.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Acknowledgements</span></span></a>
+ <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Acknowledgements</span></span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
@@ -282,20 +275,26 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./appendix-a-template.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Templates</span></span></a>
+  <a href="./appendix-visual-vs-source-mode.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Visual mode</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./appendix-b-faq.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">FAQ</span></span></a>
+  <a href="./appendix-template.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">Templates</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./appendix-c-html-extensions.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">C</span>&nbsp; <span class="chapter-title">HTML document extensions</span></span></a>
+  <a href="./appendix-faq.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">C</span>&nbsp; <span class="chapter-title">FAQ</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./appendix-html-extensions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">D</span>&nbsp; <span class="chapter-title">HTML document extensions</span></span></a>
   </div>
 </li>
       </ul>
@@ -310,14 +309,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview"><span class="header-section-number">8.1</span> Overview</a></li>
-  <li><a href="#questions" id="toc-questions" class="nav-link" data-scroll-target="#questions"><span class="header-section-number">8.2</span> Questions</a></li>
-  <li><a href="#objectives" id="toc-objectives" class="nav-link" data-scroll-target="#objectives"><span class="header-section-number">8.3</span> Objectives</a></li>
-  <li><a href="#how-do-i-convert-to-html-pdf-or-word" id="toc-how-do-i-convert-to-html-pdf-or-word" class="nav-link" data-scroll-target="#how-do-i-convert-to-html-pdf-or-word"><span class="header-section-number">8.4</span> How do I convert to HTML, PDF, or Word?</a>
+  <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview"><span class="header-section-number">7.1</span> Overview</a></li>
+  <li><a href="#questions" id="toc-questions" class="nav-link" data-scroll-target="#questions"><span class="header-section-number">7.2</span> Questions</a></li>
+  <li><a href="#objectives" id="toc-objectives" class="nav-link" data-scroll-target="#objectives"><span class="header-section-number">7.3</span> Objectives</a></li>
+  <li><a href="#how-do-i-convert-to-html-pdf-or-word" id="toc-how-do-i-convert-to-html-pdf-or-word" class="nav-link" data-scroll-target="#how-do-i-convert-to-html-pdf-or-word"><span class="header-section-number">7.4</span> How do I convert to HTML, PDF, or Word?</a>
   <ul class="collapse">
-  <li><a href="#a-note-on-workflow-with-rmarkdown-html-first-pdfword-later" id="toc-a-note-on-workflow-with-rmarkdown-html-first-pdfword-later" class="nav-link" data-scroll-target="#a-note-on-workflow-with-rmarkdown-html-first-pdfword-later"><span class="header-section-number">8.4.1</span> A note on workflow with rmarkdown: HTML first, PDF/word later</a></li>
+  <li><a href="#a-note-on-workflow-with-quarto-html-first-pdfword-later" id="toc-a-note-on-workflow-with-quarto-html-first-pdfword-later" class="nav-link" data-scroll-target="#a-note-on-workflow-with-quarto-html-first-pdfword-later"><span class="header-section-number">7.4.1</span> A note on workflow with Quarto: HTML first, PDF/word later</a></li>
   </ul></li>
-  <li><a href="#your-turn" id="toc-your-turn" class="nav-link" data-scroll-target="#your-turn"><span class="header-section-number">8.5</span> Your Turn</a></li>
+  <li><a href="#your-turn" id="toc-your-turn" class="nav-link" data-scroll-target="#your-turn"><span class="header-section-number">7.5</span> Your Turn</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/njtierney/qmd4sci/edit/main/pdf-html-word.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/njtierney/qmd4sci/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -326,7 +325,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">HTML, PDF, and Word (and more!)</span></h1>
+<h1 class="title"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">HTML, PDF, and Word (and more!)</span></h1>
 </div>
 
 
@@ -345,26 +344,26 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <p>One of the great things about Quarto is that we can convert it to many different output types. The top three that you might be most likely to use are HTML, PDF, and Microsoft Word. There are others that we can discuss later.</p>
 <p>In this section, we are going to briefly discuss how to render to these output formats, and some things that you might want to do for each of them.</p>
-<section id="overview" class="level2" data-number="8.1">
-<h2 data-number="8.1" class="anchored" data-anchor-id="overview"><span class="header-section-number">8.1</span> Overview</h2>
+<section id="overview" class="level2" data-number="7.1">
+<h2 data-number="7.1" class="anchored" data-anchor-id="overview"><span class="header-section-number">7.1</span> Overview</h2>
 <ul>
 <li><strong>Teaching</strong>: 10 minutes</li>
 <li><strong>Exercises</strong>: 15 minutes</li>
 </ul>
 </section>
-<section id="questions" class="level2" data-number="8.2">
-<h2 data-number="8.2" class="anchored" data-anchor-id="questions"><span class="header-section-number">8.2</span> Questions</h2>
+<section id="questions" class="level2" data-number="7.2">
+<h2 data-number="7.2" class="anchored" data-anchor-id="questions"><span class="header-section-number">7.2</span> Questions</h2>
 <ul>
 <li>How do I convert to HTML, PDF, or Word?</li>
 <li>How do I set options specific to each of these?</li>
 <li>How can I include a screenshot of an interactive graphic in PDF or Word?</li>
 </ul>
 </section>
-<section id="objectives" class="level2" data-number="8.3">
-<h2 data-number="8.3" class="anchored" data-anchor-id="objectives"><span class="header-section-number">8.3</span> Objectives</h2>
+<section id="objectives" class="level2" data-number="7.3">
+<h2 data-number="7.3" class="anchored" data-anchor-id="objectives"><span class="header-section-number">7.3</span> Objectives</h2>
 </section>
-<section id="how-do-i-convert-to-html-pdf-or-word" class="level2" data-number="8.4">
-<h2 data-number="8.4" class="anchored" data-anchor-id="how-do-i-convert-to-html-pdf-or-word"><span class="header-section-number">8.4</span> How do I convert to HTML, PDF, or Word?</h2>
+<section id="how-do-i-convert-to-html-pdf-or-word" class="level2" data-number="7.4">
+<h2 data-number="7.4" class="anchored" data-anchor-id="how-do-i-convert-to-html-pdf-or-word"><span class="header-section-number">7.4</span> How do I convert to HTML, PDF, or Word?</h2>
 <p>Here are three ways to do this:</p>
 <ol type="1">
 <li>You can control this in the “render” button</li>
@@ -395,13 +394,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <pre class="shell cell-code"><code>quarto render example.qmd --to html
 quarto render example.qmd --to docx</code></pre>
 </div>
-<section id="a-note-on-workflow-with-rmarkdown-html-first-pdfword-later" class="level3" data-number="8.4.1">
-<h3 data-number="8.4.1" class="anchored" data-anchor-id="a-note-on-workflow-with-rmarkdown-html-first-pdfword-later"><span class="header-section-number">8.4.1</span> A note on workflow with rmarkdown: HTML first, PDF/word later</h3>
+<section id="a-note-on-workflow-with-quarto-html-first-pdfword-later" class="level3" data-number="7.4.1">
+<h3 data-number="7.4.1" class="anchored" data-anchor-id="a-note-on-workflow-with-quarto-html-first-pdfword-later"><span class="header-section-number">7.4.1</span> A note on workflow with Quarto: HTML first, PDF/word later</h3>
 <p>It can be easy to get caught up with how your document looks. I highly recommend avoiding compiling to PDF or word until <em>you really need to</em>. <a href="https://yihui.name/en/2018/07/in-html-i-trust/">This is also recommended by the author of rmarkdown and knitr, Yihui Xie</a>. Because HTML doesn’t have page breaks, this means that you can spend time working on generating content, and not trying to get figures to line up correctly.</p>
 </section>
 </section>
-<section id="your-turn" class="level2 exercise" data-number="8.5">
-<h2 class="exercise anchored" data-number="8.5" data-anchor-id="your-turn"><span class="header-section-number">8.5</span> Your Turn</h2>
+<section id="your-turn" class="level2 exercise" data-number="7.5">
+<h2 class="exercise anchored" data-number="7.5" data-anchor-id="your-turn"><span class="header-section-number">7.5</span> Your Turn</h2>
 <ol type="1">
 <li>Generate three reports, one as HTML, one as PDF, and one as microsoft word. Remember, if you are having PDF problems, see the installation chapter note on installing &nbsp;with the R package, <code>tinytex</code>.</li>
 </ol>
@@ -821,13 +820,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./visual-vs-source-mode.html" class="pagination-link" aria-label="Visual mode">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Visual mode</span></span>
+      <a href="./using-qmd.html" class="pagination-link" aria-label="Using Quarto">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Using Quarto</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
       <a href="./keyboard-shortcuts.html" class="pagination-link" aria-label="Keyboard Shortcuts">
-        <span class="nav-page-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Keyboard Shortcuts</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Keyboard Shortcuts</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

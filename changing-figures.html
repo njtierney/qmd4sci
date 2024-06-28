@@ -2,13 +2,13 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.556">
+<meta name="generator" content="quarto-1.4.557">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="description" content="For a scientific report to be completely credible, it must be reproducible. The full computational environment used to derive the results, including the data and code used for statistical analysis should be available for others to reproduce. Quarto is a tool that allows you integrate your code, text and figures in a single file in order to make high quality, reproducible reports. A paper published with an included quarto file and data sets can be reproduced by anyone with a computer.">
 
-<title>Quarto for Scientists - 11&nbsp; Customising your figures</title>
+<title>Quarto for Scientists - 10&nbsp; Customising your figures</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -34,7 +34,7 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -105,7 +105,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }</script>
 
 
-<link rel="stylesheet" href="style.css">
 </head>
 
 <body class="nav-sidebar floating">
@@ -117,7 +116,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./changing-figures.html"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Customising your figures</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./changing-figures.html"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Customising your figures</span></a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -189,86 +188,80 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./visual-vs-source-mode.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Visual mode</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
   <a href="./pdf-html-word.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">HTML, PDF, and Word (and more!)</span></span></a>
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">HTML, PDF, and Word (and more!)</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./keyboard-shortcuts.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Keyboard Shortcuts</span></span></a>
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Keyboard Shortcuts</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./figures-tables-captions.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Figures, Tables, Captions.</span></span></a>
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Figures, Tables, Captions.</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./changing-figures.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Customising your figures</span></span></a>
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Customising your figures</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./math.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Math</span></span></a>
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Math</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./cite-fig-tab-sec.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Citing Figures, Tables &amp; Sections</span></span></a>
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Citing Figures, Tables &amp; Sections</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./citations-and-styles.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Citing Articles &amp; Bibliography Styles</span></span></a>
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Citing Articles &amp; Bibliography Styles</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./caption-reference-eqn.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Captioning and referencing equations</span></span></a>
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Captioning and referencing equations</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./common-problems.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Common Problems with Quarto (and some solutions)</span></span></a>
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Common Problems with Quarto (and some solutions)</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./alternative-outputs-and-exts.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Different Outputs and Extensions</span></span></a>
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Different Outputs and Extensions</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./next-steps.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Next Steps</span></span></a>
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Next Steps</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./references.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">References</span></span></a>
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">References</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./acknowledgements.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Acknowledgements</span></span></a>
+ <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Acknowledgements</span></span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
@@ -282,20 +275,26 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./appendix-a-template.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Templates</span></span></a>
+  <a href="./appendix-visual-vs-source-mode.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Visual mode</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./appendix-b-faq.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">FAQ</span></span></a>
+  <a href="./appendix-template.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">Templates</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./appendix-c-html-extensions.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">C</span>&nbsp; <span class="chapter-title">HTML document extensions</span></span></a>
+  <a href="./appendix-faq.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">C</span>&nbsp; <span class="chapter-title">FAQ</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./appendix-html-extensions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">D</span>&nbsp; <span class="chapter-title">HTML document extensions</span></span></a>
   </div>
 </li>
       </ul>
@@ -310,22 +309,22 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview"><span class="header-section-number">11.1</span> Overview</a></li>
-  <li><a href="#questions" id="toc-questions" class="nav-link" data-scroll-target="#questions"><span class="header-section-number">11.2</span> Questions</a></li>
-  <li><a href="#objectives" id="toc-objectives" class="nav-link" data-scroll-target="#objectives"><span class="header-section-number">11.3</span> Objectives</a></li>
-  <li><a href="#which-chunk-options-should-you-care-about-for-this" id="toc-which-chunk-options-should-you-care-about-for-this" class="nav-link" data-scroll-target="#which-chunk-options-should-you-care-about-for-this"><span class="header-section-number">11.4</span> Which chunk options should you care about for this?</a>
+  <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview"><span class="header-section-number">10.1</span> Overview</a></li>
+  <li><a href="#questions" id="toc-questions" class="nav-link" data-scroll-target="#questions"><span class="header-section-number">10.2</span> Questions</a></li>
+  <li><a href="#objectives" id="toc-objectives" class="nav-link" data-scroll-target="#objectives"><span class="header-section-number">10.3</span> Objectives</a></li>
+  <li><a href="#which-chunk-options-should-you-care-about-for-this" id="toc-which-chunk-options-should-you-care-about-for-this" class="nav-link" data-scroll-target="#which-chunk-options-should-you-care-about-for-this"><span class="header-section-number">10.4</span> Which chunk options should you care about for this?</a>
   <ul class="collapse">
-  <li><a href="#your-turn" id="toc-your-turn" class="nav-link" data-scroll-target="#your-turn"><span class="header-section-number">11.4.1</span> Your Turn</a></li>
+  <li><a href="#your-turn" id="toc-your-turn" class="nav-link" data-scroll-target="#your-turn"><span class="header-section-number">10.4.1</span> Your Turn</a></li>
   </ul></li>
-  <li><a href="#setting-global-options" id="toc-setting-global-options" class="nav-link" data-scroll-target="#setting-global-options"><span class="header-section-number">11.5</span> Setting global options</a>
+  <li><a href="#setting-global-options" id="toc-setting-global-options" class="nav-link" data-scroll-target="#setting-global-options"><span class="header-section-number">10.5</span> Setting global options</a>
   <ul class="collapse">
-  <li><a href="#your-turn-1" id="toc-your-turn-1" class="nav-link" data-scroll-target="#your-turn-1"><span class="header-section-number">11.5.1</span> Your Turn</a></li>
+  <li><a href="#your-turn-1" id="toc-your-turn-1" class="nav-link" data-scroll-target="#your-turn-1"><span class="header-section-number">10.5.1</span> Your Turn</a></li>
   </ul></li>
-  <li><a href="#keeping-your-markdown" id="toc-keeping-your-markdown" class="nav-link" data-scroll-target="#keeping-your-markdown"><span class="header-section-number">11.6</span> Keeping your markdown</a></li>
-  <li><a href="#altering-the-figure-path-figures-are-saved-to" id="toc-altering-the-figure-path-figures-are-saved-to" class="nav-link" data-scroll-target="#altering-the-figure-path-figures-are-saved-to"><span class="header-section-number">11.7</span> Altering the figure path figures are saved to</a></li>
-  <li><a href="#your-turn-2" id="toc-your-turn-2" class="nav-link" data-scroll-target="#your-turn-2"><span class="header-section-number">11.8</span> Your Turn</a></li>
-  <li><a href="#further-reading" id="toc-further-reading" class="nav-link" data-scroll-target="#further-reading"><span class="header-section-number">11.9</span> Further Reading</a></li>
-  <li><a href="#epstiffother-multiple-image-formats" id="toc-epstiffother-multiple-image-formats" class="nav-link" data-scroll-target="#epstiffother-multiple-image-formats"><span class="header-section-number">11.10</span> EPS/TIFF/Other multiple image formats</a></li>
+  <li><a href="#keeping-your-markdown" id="toc-keeping-your-markdown" class="nav-link" data-scroll-target="#keeping-your-markdown"><span class="header-section-number">10.6</span> Keeping your markdown</a></li>
+  <li><a href="#altering-the-figure-path-figures-are-saved-to" id="toc-altering-the-figure-path-figures-are-saved-to" class="nav-link" data-scroll-target="#altering-the-figure-path-figures-are-saved-to"><span class="header-section-number">10.7</span> Altering the figure path figures are saved to</a></li>
+  <li><a href="#your-turn-2" id="toc-your-turn-2" class="nav-link" data-scroll-target="#your-turn-2"><span class="header-section-number">10.8</span> Your Turn</a></li>
+  <li><a href="#further-reading" id="toc-further-reading" class="nav-link" data-scroll-target="#further-reading"><span class="header-section-number">10.9</span> Further Reading</a></li>
+  <li><a href="#epstiffother-multiple-image-formats" id="toc-epstiffother-multiple-image-formats" class="nav-link" data-scroll-target="#epstiffother-multiple-image-formats"><span class="header-section-number">10.10</span> EPS/TIFF/Other multiple image formats</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/njtierney/qmd4sci/edit/main/changing-figures.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/njtierney/qmd4sci/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -334,7 +333,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Customising your figures</span></h1>
+<h1 class="title"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Customising your figures</span></h1>
 </div>
 
 
@@ -353,15 +352,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <p>When you produce figures, you usually want to tweak them a little bit. A bit wider, perhaps a bit taller. Perhaps a different image type other than “png”, because the journal requires “svg” or “jpg”. Maybe you need 600dpi because you’re going to print it really big. So, how do you control these features?</p>
 <p>You can control the size and features of figures with the chunk options. In this section, we are going to talk more specifically about how to customise your figures.</p>
-<section id="overview" class="level2" data-number="11.1">
-<h2 data-number="11.1" class="anchored" data-anchor-id="overview"><span class="header-section-number">11.1</span> Overview</h2>
+<section id="overview" class="level2" data-number="10.1">
+<h2 data-number="10.1" class="anchored" data-anchor-id="overview"><span class="header-section-number">10.1</span> Overview</h2>
 <ul>
 <li><strong>Teaching</strong> 10 minutes</li>
 <li><strong>Exercises</strong> 10 minutes</li>
 </ul>
 </section>
-<section id="questions" class="level2" data-number="11.2">
-<h2 data-number="11.2" class="anchored" data-anchor-id="questions"><span class="header-section-number">11.2</span> Questions</h2>
+<section id="questions" class="level2" data-number="10.2">
+<h2 data-number="10.2" class="anchored" data-anchor-id="questions"><span class="header-section-number">10.2</span> Questions</h2>
 <ul>
 <li>How do I change the height and width of a figure?</li>
 <li>How to I change the type of output of a figure? (e.g., PDF, PNG, JPG, SVG)</li>
@@ -369,16 +368,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>How do I save the figures?</li>
 </ul>
 </section>
-<section id="objectives" class="level2" data-number="11.3">
-<h2 data-number="11.3" class="anchored" data-anchor-id="objectives"><span class="header-section-number">11.3</span> Objectives</h2>
+<section id="objectives" class="level2" data-number="10.3">
+<h2 data-number="10.3" class="anchored" data-anchor-id="objectives"><span class="header-section-number">10.3</span> Objectives</h2>
 <ul>
 <li>Learn how to set individual figure height, width, aspect, and print size</li>
 <li>Learn how to set global parameters for your chunks</li>
 <li>Get a copy of all of your figures</li>
 </ul>
 </section>
-<section id="which-chunk-options-should-you-care-about-for-this" class="level2" data-number="11.4">
-<h2 data-number="11.4" class="anchored" data-anchor-id="which-chunk-options-should-you-care-about-for-this"><span class="header-section-number">11.4</span> Which chunk options should you care about for this?</h2>
+<section id="which-chunk-options-should-you-care-about-for-this" class="level2" data-number="10.4">
+<h2 data-number="10.4" class="anchored" data-anchor-id="which-chunk-options-should-you-care-about-for-this"><span class="header-section-number">10.4</span> Which chunk options should you care about for this?</h2>
 <p>There are many chunk options that control your output, but only a few that you really need to worry about for your figures:</p>
 <ul>
 <li><code>fig-align</code>: How do you want your figure aligned? Takes one of the following inputs: “default”, “center”, “left”, or “right”? (<strong>demo</strong>)</li>
@@ -393,8 +392,8 @@ These are no longer an option in Quarto
 <ul>
 <li>with <code>fig-height</code>, <code>fig-width</code>, <code>fig-format:</code></li>
 </ul>
-<section id="your-turn" class="level3 exercise" data-number="11.4.1">
-<h3 class="exercise anchored" data-number="11.4.1" data-anchor-id="your-turn"><span class="header-section-number">11.4.1</span> Your Turn</h3>
+<section id="your-turn" class="level3 exercise" data-number="10.4.1">
+<h3 class="exercise anchored" data-number="10.4.1" data-anchor-id="your-turn"><span class="header-section-number">10.4.1</span> Your Turn</h3>
 <ol type="1">
 <li>Open exercise <code>exercises/02-qmd-figures-chunks/02-qmd-figures-chunks.qmd</code> Create three figures, with the respective dimensions (<code>fig-height</code> and <code>fig-width</code>)
 <ul>
@@ -410,8 +409,8 @@ These are no longer an option in Quarto
 </ol>
 </section>
 </section>
-<section id="setting-global-options" class="level2" data-number="11.5">
-<h2 data-number="11.5" class="anchored" data-anchor-id="setting-global-options"><span class="header-section-number">11.5</span> Setting global options</h2>
+<section id="setting-global-options" class="level2" data-number="10.5">
+<h2 data-number="10.5" class="anchored" data-anchor-id="setting-global-options"><span class="header-section-number">10.5</span> Setting global options</h2>
 <p>If we repeat adding the same chunk options for each figure, we might want to consider setting them globally. We can do this by changing the options in the YAML:</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"02-qmd-figures-chunks"</span></span>
@@ -424,8 +423,8 @@ These are no longer an option in Quarto
 <span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">fig-format</span><span class="kw">:</span><span class="at"> png</span></span>
 <span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">fig-dpi</span><span class="kw">:</span><span class="at"> </span><span class="dv">300</span></span>
 <span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<section id="your-turn-1" class="level3 exercise" data-number="11.5.1">
-<h3 class="exercise anchored" data-number="11.5.1" data-anchor-id="your-turn-1"><span class="header-section-number">11.5.1</span> Your Turn</h3>
+<section id="your-turn-1" class="level3 exercise" data-number="10.5.1">
+<h3 class="exercise anchored" data-number="10.5.1" data-anchor-id="your-turn-1"><span class="header-section-number">10.5.1</span> Your Turn</h3>
 <ol type="1">
 <li>Set the global options in your document to set:</li>
 </ol>
@@ -436,8 +435,8 @@ These are no longer an option in Quarto
 </ul>
 </section>
 </section>
-<section id="keeping-your-markdown" class="level2 demo" data-number="11.6">
-<h2 class="demo anchored" data-number="11.6" data-anchor-id="keeping-your-markdown"><span class="header-section-number">11.6</span> Keeping your markdown</h2>
+<section id="keeping-your-markdown" class="level2 demo" data-number="10.6">
+<h2 class="demo anchored" data-number="10.6" data-anchor-id="keeping-your-markdown"><span class="header-section-number">10.6</span> Keeping your markdown</h2>
 <p>You can set the options for your figures, which will change how they appear on the page, but this won’t save the figures anywhere. In order to save the figures to file, you need to edit the YAML option <code>keep-md: true</code>:</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"Awesome report"</span></span>
@@ -447,8 +446,8 @@ These are no longer an option in Quarto
 <span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">keep-md</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
 <span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
-<section id="altering-the-figure-path-figures-are-saved-to" class="level2" data-number="11.7">
-<h2 data-number="11.7" class="anchored" data-anchor-id="altering-the-figure-path-figures-are-saved-to"><span class="header-section-number">11.7</span> Altering the figure path figures are saved to</h2>
+<section id="altering-the-figure-path-figures-are-saved-to" class="level2" data-number="10.7">
+<h2 data-number="10.7" class="anchored" data-anchor-id="altering-the-figure-path-figures-are-saved-to"><span class="header-section-number">10.7</span> Altering the figure path figures are saved to</h2>
 <p>By default, the figures are saved in a folder named after the file, e.g.,</p>
 <p><code>02-qmd-figures-chunks_files/figure-htaml</code></p>
 <p>If you want to change this location, you can control the specific name of the folder by setting <code>fig.path</code> like so in the YAML</p>
@@ -475,20 +474,20 @@ These are no longer an option in Quarto
 <span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>(reference: https://github.com/quarto-dev/quarto-cli/discussions/4254)</p>
 </section>
-<section id="your-turn-2" class="level2 exercise" data-number="11.8">
-<h2 class="exercise anchored" data-number="11.8" data-anchor-id="your-turn-2"><span class="header-section-number">11.8</span> Your Turn</h2>
+<section id="your-turn-2" class="level2 exercise" data-number="10.8">
+<h2 class="exercise anchored" data-number="10.8" data-anchor-id="your-turn-2"><span class="header-section-number">10.8</span> Your Turn</h2>
 <ol type="1">
 <li>Save your images to a specific directory of your choice</li>
 </ol>
 </section>
-<section id="further-reading" class="level2" data-number="11.9">
-<h2 data-number="11.9" class="anchored" data-anchor-id="further-reading"><span class="header-section-number">11.9</span> Further Reading</h2>
+<section id="further-reading" class="level2" data-number="10.9">
+<h2 data-number="10.9" class="anchored" data-anchor-id="further-reading"><span class="header-section-number">10.9</span> Further Reading</h2>
 <ul>
 <li><a href="https://quarto.org/docs/computations/r.html#output-formats">Official Quarto documentation on figures</a></li>
 </ul>
 </section>
-<section id="epstiffother-multiple-image-formats" class="level2" data-number="11.10">
-<h2 data-number="11.10" class="anchored" data-anchor-id="epstiffother-multiple-image-formats"><span class="header-section-number">11.10</span> EPS/TIFF/Other multiple image formats</h2>
+<section id="epstiffother-multiple-image-formats" class="level2" data-number="10.10">
+<h2 data-number="10.10" class="anchored" data-anchor-id="epstiffother-multiple-image-formats"><span class="header-section-number">10.10</span> EPS/TIFF/Other multiple image formats</h2>
 <p>Unfortunately (currently) in Quarto it seems you cannot save to other image formats such as “eps”, “tiff”, and cannot save to multiple formats at the same time.</p>
 <p>If you would like to convert images to a specific format, you could try using code like the following.</p>
 <div class="cell">
@@ -937,12 +936,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="./figures-tables-captions.html" class="pagination-link" aria-label="Figures, Tables, Captions.">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Figures, Tables, Captions.</span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Figures, Tables, Captions.</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
       <a href="./math.html" class="pagination-link" aria-label="Math">
-        <span class="nav-page-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Math</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Math</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "Quarto for Scientists",
     "section": "",
-    "text": "About this\nThis is a book on Quarto, aimed for scientists. It was initially developed as a 3 hour workshop, “Rmarkdown for scientists”. It has been updated to use Quarto, which is a more updated and modern take on rmarkdown. It is now developed into a resource that will grow and change over time as a living book.\nThis book aims to teach the following:",
+    "text": "About this\nThis is a book on using Quarto for writing and document preparation, aimed for scientists. It was initially developed as a 3 hour workshop, “Rmarkdown for scientists”. This focusses on Quarto, which is a next-generation rmarkdown. It is now developed into a resource that will grow and change over time as a living book.\nThis book aims to teach the following:",
     "crumbs": [
       "About this"
     ]
@@ -14,7 +14,7 @@
     "href": "index.html#why-write-this-as-a-book",
     "title": "Quarto for Scientists",
     "section": "Why write this as a book?",
-    "text": "Why write this as a book?\nThis book started out its first life being around rmarkdown. There are many great books on R Markdown and it’s various features, such as “Rmarkdown: The definitive guide”, “bookdown: Authoring Books and Technical Documents with R Markdown”, and “Dynamic Documents with R and knitr, Second edition”, and Yihui Xie’s thesis, “Dynamic Graphics and Reporting for Statistics”.\nWith the release of Quarto, I wanted to translate the materials I developed in “Rmarkdown for scientists” to cover the same material. There are other excellent resources for learning Quarto:\n\nThe Quarto “get started” guide\nThe Quarto guide “Quarto manuscripts”\nThe Quarto chapter in “R for data science”\nMaking shareable documents with Quarto from, from OpenScapes\nAlison Hill’s blog post: “we don’t talk about Quarto”\nMine Çentinkaya-Rundel’s talk “Quarto for academics”\n\nWhile the Quarto guide is extensive, and indeed their “Quarto manuscripts” guide covers a lot of the ground in this book.\n\nSo, why write a book?\n\nGood question. The answer is that writing this as a book provides a nice way to structure the content in the form of a workshop, in a way suitable for learning in a few hours. It is not to say that there aren’t already great resources out there; there are. It is instead adding to the list of other useful information out there on the internet. I considered the Rmarkdown for Scientsts book and course a success, and it helped myself and others understand and better use rmarkdown. So I guess, to answer a question with another question:\n\nWhy NOT write this as a book?",
+    "text": "Why write this as a book?\nThis book started out its first life being around rmarkdown. There are many great books on R Markdown and it’s various features, such as “Rmarkdown: The definitive guide”, “bookdown: Authoring Books and Technical Documents with R Markdown”, and “Dynamic Documents with R and knitr, Second edition”, and Yihui Xie’s thesis, “Dynamic Graphics and Reporting for Statistics”.\nWith the release of Quarto, I wanted to translate the materials I developed in “Rmarkdown for scientists” to cover the same material. Here are some resources that I really liked for learning Quarto:\n\nThe Quarto “get started” guide\nThe Quarto guide “Quarto manuscripts”\nThe Quarto chapter in “R for data science”\nMaking shareable documents with Quarto from, from OpenScapes\nAlison Hill’s blog post: “we don’t talk about Quarto”\nMine Çentinkaya-Rundel’s talk “Quarto for academics”\n\nWhile the Quarto guide is extensive, and indeed their “Quarto manuscripts” guide covers a lot of the ground in this book.\n\nSo, why write a book?\n\nGood question. The answer is that writing this as a book provides a nice way to structure the content in the form of a workshop, in a way suitable for learning in a few hours. It is not to say that there aren’t already great resources out there; there are. It is instead adding to the list of other useful information out there on the internet. I considered the Rmarkdown for Scientsts book and course a success, and it helped myself and others understand and better use rmarkdown. So I guess, to answer a question with another question:\n\nWhy NOT write this as a book?",
     "crumbs": [
       "About this"
     ]
@@ -24,17 +24,7 @@
     "href": "index.html#how-to-use-this-book",
     "title": "Quarto for Scientists",
     "section": "How to use this book",
-    "text": "How to use this book\nThis book was written to provide course materials for a 3 hour course on Quarto\nWe worked through the following sections in the book in 3 hours:\n\nWhy use Quarto\nInstallation\nwhat is RStudio?\nsuggested workflow and hygiene\nhow to use R Markdown\nusing R Markdown with pdf, html, and Word\nwhat are some useful keyboard shortcuts\nAdding captions to tables and figures\nChanging figures\nAdding mathematics\nCiting figures and tables\nChanging citations and styles\n\nWith the remaining sections being used as extra material, or have since been written after the course:\n\nFixing some common problems in R Markdown\nWhat are some alternative outputs of R Markdown?\nWhere to go next?\nSuggested references\n\nCourse materials can be downloaded by using the following command from the usethis package:\n\nusethis::use_course(\"bit.ly/qmd4sci-materials\")",
-    "crumbs": [
-      "About this"
-    ]
-  },
-  {
-    "objectID": "index.html#where-has-this-course-been-taught",
-    "href": "index.html#where-has-this-course-been-taught",
-    "title": "Quarto for Scientists",
-    "section": "Where has this course been taught?",
-    "text": "Where has this course been taught?\nThe Quarto for scientists for course has not been taught yet, but the rmarkdown for scientists course, upon which this book is based, has been taught at the following locations:\n\n2018\n\nMelbourne, November for SSA Victoria\n\n2019\n\nMelbourne, April, for Monash University\nCanberra, July, for SSA Victoria\nMelbourne, November, for AIMOS2019\nMelbourne, December, for Plant Pathology Conference\n\n2020\n\nSeattle, February, for the University of Washington",
+    "text": "How to use this book\nThis book was written to provide course materials for a 3 hour course on Quarto\nWe worked through the following sections in the book in 3 hours:\n\nWhy use Quarto\nInstallation\nwhat is RStudio?\nsuggested workflow and hygiene\nhow to use R Markdown\nusing R Markdown with pdf, html, and Word\nwhat are some useful keyboard shortcuts\nAdding captions to tables and figures\nChanging figures\nAdding mathematics\nCiting figures and tables\nChanging citations and styles\n\nWith the remaining sections being used as extra material, or have since been written after the course:\n\nFixing some common problems in R Markdown\nWhat are some alternative outputs of R Markdown?\nWhere to go next?\nSuggested references\n\nCourse materials can be downloaded by using the following command from the usethis package:\n\nusethis::use_course(\"njtierney/qmd4sci-materials\")",
     "crumbs": [
       "About this"
     ]
@@ -124,7 +114,7 @@
     "href": "why-qmd.html#literate-programming-is-a-partial-solution",
     "title": "2  Why Quarto",
     "section": "2.6 Literate programming is a partial solution",
-    "text": "2.6 Literate programming is a partial solution\nThe idea of literate programming shines some light on this dark area of science. This is an idea from Donald Knuth where you combine your text with your code output to create a document. This is a blend of your literature (text), and your programming (code), to create something that you can read from top to bottom. Imagine your paper - the introduction, methods, results, discussion, and conclusion, and all the bits of code that make each section. With rmarkdown, you can see all the pieces of your data analysis all together.\n\n2.6.0.1 Some history\nThis was a popular idea, and it has had some interesting discussion and contributions over the years. Notably, in the R ecosystem, the Sweave (S+weave) program provided a way to write text and code together. As with any technology, there were some speedbumps with using Sweave, and some of the reasons we are not teaching it now is because:\n\nIt uses a form of LaTeX, which provides great flexibility at the cost of complexity.\nPrinting figures involves additional work\nThere isn’t a way to save (cache) your work. Every analysis has to be repeated from start to finish. This was time consuming.",
+    "text": "2.6 Literate programming is a partial solution\nThe idea of literate programming shines some light on this dark area of science. This is an idea from Donald Knuth where you combine your text with your code output to create a document. This is a blend of your literature (text), and your programming (code), to create something that you can read from top to bottom. Imagine your paper - the introduction, methods, results, discussion, and conclusion, and all the bits of code that make each section. With Quarto, you can see all the pieces of your data analysis all together.\n\n2.6.0.1 Some history\nThis was a popular idea, and it has had some interesting discussion and contributions over the years. Notably, in the R ecosystem, the Sweave (S+weave) program provided a way to write text and code together. As with any technology, there were some speedbumps with using Sweave, and some of the reasons we are not teaching it now is because:\n\nIt uses a form of LaTeX, which provides great flexibility at the cost of complexity.\nPrinting figures involves additional work\nThere isn’t a way to save (cache) your work. Every analysis has to be repeated from start to finish. This was time consuming.",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Why Quarto</span>"
     ]
@@ -134,17 +124,7 @@
     "href": "why-qmd.html#markdown-as-a-new-player-to-legibility",
     "title": "2  Why Quarto",
     "section": "2.7 Markdown as a new player to legibility",
-    "text": "2.7 Markdown as a new player to legibility\nIn 2004, John Gruber, of daring fireball created Markdown, a simple way to create text that rendered into an HTML webpage. The core idea was that you could write plain text (not text inside a MS Word/WordPerfect/Pages/Proprietary Format Document), and it would look readable, then get rendered into HTML.\nThe idea took off.\n\n2.7.1 A brief example of markdown\n- bullet list\n- bullet list\n- bullet list\n\n1. numbered list\n2. numbered list\n3. numbered list\n\n__bold__, **bold**, _italic_, *italic*\n\n&gt; quote of something profound\n```r\n# computer code goes in three back ticks\n1 + 1\n2 + 2\n```\nWould be converted to:\n\nbullet list\nbullet list\nbullet list\n\n\nnumbered list\nnumbered list\nnumbered list\n\nbold, bold, italic, italic\n\nquote of something profound\n\n\n# computer code goes in three back ticks\n1 + 1\n\n[1] 2\n\n2 + 2\n\n[1] 4\n\n\nWith very little marking up, we can create rich text, that actually resembles the text that we want to see.\nSome other nice features of Markdown include:\n\n\n\nfeature\nmarkdown\nrendered\n\n\n\n\nsuperscript\n2^nd^\n2nd\n\n\nsubscript\nCO~2~\nCO2\n\n\nstrikethrough\n~~mistake~~\nmistake\n\n\nlinks\n[text](http:://www.example.com/your-link-goes-here)\ntext\n\n\nimages\n![alternative text](link)\n![alternative text](link)\n\n\n\n\nUP TO HERE",
-    "crumbs": [
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Why Quarto</span>"
-    ]
-  },
-  {
-    "objectID": "why-qmd.html#what-about-rmarkdown",
-    "href": "why-qmd.html#what-about-rmarkdown",
-    "title": "2  Why Quarto",
-    "section": "2.8 What about Rmarkdown?",
-    "text": "2.8 What about Rmarkdown?\nIssues around Sweave led to the development of knitr, and subsequently Rmarkdown, which used the knitr engine. You could run more than R code in rmarkdown, in fact there are over 60 engines available, from awk and bash, to haskell, perl, php, sql, scala, stata, javascript, python, julia, and even C.\n\nThrough rmarkdown there were many approaches to document processing, such as bookdown for books, blogdown for blogs and websites, xaringan for slide decks.\n\nHowever, there are a few points of friction:\n\nYou need to call it from R to use it. No problem for R users, but what if you use python? Or javascript? If you are a python user, using R to use python just might not be in your workflow.\nThere are great packages that provide extensions, such as blogdown for blogs, bookdown for books, and xaringan for slides. However, there are differences between these systems that might cause stumbles. Each of these systems is an iteration towards something awesome, and it’s only natural they might be a little bit different.\nQuarto, instead of being an R package, is a separate piece of software, that you can call from the command line (terminal). This means other pieces of software can use it to create their own literate programming documents. Well, that’s my understanding.\n\nHere are some diagrams to illustrate this point:\n\n\n\nRmarkdown can talk to Python, but it works from within R\n\n\nIn rmarkdown, we are working in rmarkdown, and that uses knitr to talk to R and handle the document generation:\nBut with Quarto, we have this general interface, where Quarto can talk to different programming languages. Not pictured, but the “R engine” is in fact, knitr:\n\n\n\nQuarto is a separate program",
+    "text": "2.7 Markdown as a new player to legibility\nIn 2004, John Gruber, of daring fireball created Markdown, a simple way to create text that rendered into an HTML webpage. The core idea was that you could write plain text (not text inside a MS Word/WordPerfect/Pages/Proprietary Format Document), and it would look readable, then get rendered into HTML.\nThe idea took off.\n\n2.7.1 A brief example of markdown\n- bullet list\n- bullet list\n- bullet list\n\n1. numbered list\n2. numbered list\n3. numbered list\n\n__bold__, **bold**, _italic_, *italic*\n\n&gt; quote of something profound\n```r\n# computer code goes in three back ticks\n1 + 1\n2 + 2\nimage(volcano)\n```\nWould be converted to:\n\nbullet list\nbullet list\nbullet list\n\n\nnumbered list\nnumbered list\nnumbered list\n\nbold, bold, italic, italic\n\nquote of something profound\n\n\n# computer code goes in three back ticks\n1 + 1\n\n[1] 2\n\n2 + 2\n\n[1] 4\n\nimage(volcano)\n\n\n\n\n\n\n\n\nWith very little marking up, we can create rich text, that actually resembles the text that we want to see.\nSome other nice features of Markdown include:\n\n\n\nFeature\nMarkdown\nrendered\n\n\n\n\nsuperscript\n2^nd^\n2nd\n\n\nsubscript\nCO~2~\nCO2\n\n\nstrikethrough\n~~mistake~~\nmistake\n\n\nlinks\n[text](https://quarto.org/)\ntext\n\n\nimages\n![alternative text](link-to-image)\n(cannot render in a table)",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Why Quarto</span>"
     ]
@@ -153,8 +133,8 @@
     "objectID": "why-qmd.html#your-turn-1",
     "href": "why-qmd.html#your-turn-1",
     "title": "2  Why Quarto",
-    "section": "2.9 Your Turn",
-    "text": "2.9 Your Turn\n\nLearn to use Markdown In your small groups, spend five minutes working through this brief online Markdown tutorial",
+    "section": "3.1 Your Turn",
+    "text": "3.1 Your Turn\n\nLearn to use Markdown In your small groups, spend five minutes working through this brief online Markdown tutorial",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Why Quarto</span>"
     ]
@@ -163,8 +143,8 @@
     "objectID": "why-qmd.html#quarto-helps-complete-the-solution-to-the-reproducibility-problem",
     "href": "why-qmd.html#quarto-helps-complete-the-solution-to-the-reproducibility-problem",
     "title": "2  Why Quarto",
-    "section": "2.10 Quarto helps complete the solution to the reproducibility problem",
-    "text": "2.10 Quarto helps complete the solution to the reproducibility problem\nSo, how do we combine this with our R code, into a literate programming environment?\nQuarto provides an environment where you can write your complete analysis. It weaves your text, and code, and its output together into a single document.\nFor example, look at the following report:\n\n\n\n\n\n\n\n\n\nHow did we generate it?\n---\ntitle: \"Exploring gapminder\"\nauthor: \"Nicholas Tierney\"\noutput: html_document\n---\n\n\n::: {.cell}\n\n```{.r .cell-code}\nlibrary(tidyverse)\nlibrary(broom)\n```\n:::\n\n::: {.cell}\n\n```{.r .cell-code}\ndata &lt;- read_csv(here::here(\"data/oz_gapminder.csv\"))\n```\n:::\n\n# Introduction\n\nlet's look at the lifespan\n\n::: {.cell}\n\n```{.r .cell-code}\nhist(data$lifeExp)\n```\n\n::: {.cell-output-display}\n![](why-qmd_files/figure-html/hist-life-exp-1.png){width=672}\n:::\n:::\n\nLet's fit a simple linear model of the effect of year on life expectancy\n\n::: {.cell}\n\n```{.r .cell-code}\nfit &lt;- lm(lifeExp ~ year, data = data)\nfit\n```\n\n::: {.cell-output .cell-output-stdout}\n\n```\n\nCall:\nlm(formula = lifeExp ~ year, data = data)\n\nCoefficients:\n(Intercept)         year  \n  -376.1163       0.2277  \n```\n\n\n:::\n:::\n\nAnd let's look at the coefficient table:\n\n::: {.cell}\n\n```{.r .cell-code}\nlibrary(broom)\nfit_coef &lt;- tidy(fit)\nknitr::kable(fit_coef,\n             caption = \"A table of the coefficients\")\n```\n\n::: {.cell-output-display}\n\n\nTable: A table of the coefficients\n\n|term        |     estimate|  std.error| statistic| p.value|\n|:-----------|------------:|----------:|---------:|-------:|\n|(Intercept) | -376.1162984| 20.5471585| -18.30503|       0|\n|year        |    0.2277238|  0.0103796|  21.93960|       0|\n\n\n:::\n:::\n\nThe effect of year on life expectancy is `` 0.2277238 ``.\n\nWe render this code and it creates this report!\nIt has a plot, it has a table, we even refer to some of the values in the text - the last line of the report looks at the effect of year.\nBut what if the data changes? At the moment we are looking at only Australia - say we get the full dataset, what happens then?\nSay you’d created your report by hand in microsoft word, and with a graphical user interface software, you would need to:\n\nGo back to the GUI, re run the analysis\nImport the results into Excel\nCreate your graph\nCopy the graph into Word\nCopy the results of the coefficients into the text\nCopy the results of the coefficient table into the text.\n\nThis is painful.\nAnd what if someone wants to know exactly how you did your analysis?\nThis process isn’t exactly sharable.\nBut if you did it in Quarto?\nJust update the data, and render the document again, and get an updated document:\n\n\n\n\n\n\n\n\n\nThe results are updated!\nAnd we just pointed it to some different data. Then re-rendered it.\nThat’s it.\nThat is why we use Quarto",
+    "section": "3.2 Quarto helps complete the solution to the reproducibility problem",
+    "text": "3.2 Quarto helps complete the solution to the reproducibility problem\nSo, how do we combine this with our R code, into a literate programming environment?\nQuarto provides an environment where you can write your complete analysis. It weaves your text, and code, and its output together into a single document.\nFor example, look at the following report:\n\n\n\n\n\n\n\n\n\nHow did we generate it?\n\n---\ntitle: \"Exploring gapminder\"\nauthor: \"Nicholas Tierney\"\nformat: html\n---\n\n\n#| label: library\nlibrary(tidyverse)\nlibrary(broom)\n\n#| label: data-read-in\ndata &lt;- read_csv(here::here(\"data/oz_gapminder.csv\"))\n\n# Introduction\n\nlet's look at the lifespan\n\n#| label: hist-life-exp\nhist(data$lifeExp)\n\nLet's fit a simple linear model of the effect of year on life expectancy\n\n#| label: example-lm\nfit &lt;- lm(lifeExp ~ year, data = data)\nfit\n\nAnd let's look at the coefficient table:\n\n#| label: coef-table\nlibrary(broom)\nfit_coef &lt;- tidy(fit)\nknitr::kable(fit_coef,\n             caption = \"A table of the coefficients\")\n\nThe effect of year on life expectancy is `` `r  fit_coef$estimate[2]` ``.\n\nWe render this code and it creates this report!\nIt has a plot, it has a table, we even refer to some of the values in the text - the last line of the report looks at the effect of year.\nBut what if the data changes? At the moment we are looking at only Australia - say we get the full dataset, what happens then?\nSay you’d created your report by hand in microsoft word, and with a graphical user interface software, you would need to:\n\nGo back to the GUI, re run the analysis\nImport the results into Excel\nCreate your graph\nCopy the graph into Word\nCopy the results of the coefficients into the text\nCopy the results of the coefficient table into the text.\n\nThis is painful.\nAnd what if someone wants to know exactly how you did your analysis?\nThis process isn’t exactly sharable.\nBut if you did it in Quarto?\nJust update the data, and render the document again, and get an updated document:\n\n\n\n\n\n\n\n\n\nThe results are updated!\nAnd we just pointed it to some different data. Then re-rendered it.\nThat’s it.\nThat is why we use Quarto",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Why Quarto</span>"
     ]
@@ -173,8 +153,8 @@
     "objectID": "why-qmd.html#summary",
     "href": "why-qmd.html#summary",
     "title": "2  Why Quarto",
-    "section": "2.11 Summary",
-    "text": "2.11 Summary\nIn this section we’ve learned about:\n\nWhat the value is in a reproducible report\nWhat is Markdown\nHow to combine software and writing\nHow to use Markdown",
+    "section": "3.3 Summary",
+    "text": "3.3 Summary\nIn this section we’ve learned about:\n\nWhat the value is in a reproducible report\nWhat is Markdown\nHow to combine software and writing\nHow to use Markdown",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Why Quarto</span>"
     ]
@@ -183,8 +163,8 @@
     "objectID": "why-qmd.html#learning-more",
     "href": "why-qmd.html#learning-more",
     "title": "2  Why Quarto",
-    "section": "2.12 Learning more",
-    "text": "2.12 Learning more\n\nposit’s Quarto cheatsheet",
+    "section": "3.4 Learning more",
+    "text": "3.4 Learning more\n\nposit’s Quarto cheatsheet",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Why Quarto</span>"
     ]
@@ -234,7 +214,7 @@
     "href": "installation.html#software-setup",
     "title": "3  Installation",
     "section": "3.3 Software Setup",
-    "text": "3.3 Software Setup\n\n3.3.1 R\n\n3.3.1.1 Windows\nhttps://cloud.r-project.org/bin/windows/\n\n\n3.3.1.2 MacOS\nhttps://cloud.r-project.org/bin/macosx/\n\n\n3.3.1.3 Linux\nhttps://cloud.r-project.org/bin/linux/\n\n\n\n3.3.2 RStudio\nhttps://www.rstudio.com/products/rstudio/download/#download",
+    "text": "3.3 Software Setup\n\n3.3.1 R\n\n3.3.1.1 Windows\nhttps://cloud.r-project.org/bin/windows/\n\n\n3.3.1.2 MacOS\nhttps://cloud.r-project.org/bin/macosx/\n\n\n3.3.1.3 Linux\nhttps://cloud.r-project.org/bin/linux/\n\n\n\n3.3.2 RStudio\nhttps://posit.co/download/rstudio-desktop/#download",
     "crumbs": [
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Installation</span>"
     ]
@@ -254,7 +234,7 @@
     "href": "installation.html#a-note-on-pdf",
     "title": "3  Installation",
     "section": "3.5 A note on PDF",
-    "text": "3.5 A note on PDF\nQuarto documents can be compiled to PDF, which is a great feature. In order to convert the documents to PDF, they use a software called LaTeX () (pronounced la-tek or lay-tek).\nInstalling LaTeX is thankfully handled when you install Quarto, as Quarto includes a built-in Latexmk engine.",
+    "text": "3.5 A note on PDF\nQuarto documents can be compiled to PDF, which is a great feature. In order to convert the documents to PDF, they use a software called LaTeX (pronounced la-tek or lay-tek).\nInstalling LaTeX is thankfully handled when you install Quarto, as Quarto includes a built-in Latexmk engine.\n\n3.5.1 PDF / LaTeX Pain\nInstalling LaTeX can be a pain, but thankfully Yihui Xie has put a lot of time and energy into making an easier way to install it - tinytex. tinytex is an R package that installs a sane, lightweight (&lt;200Mb) version of LaTeX.\nIf you are running into issues rendering a PDF, you can try the following:\n\ntinytex::install_tinytex()\n\nIf you get the following error, this is good! As it means that TeX has already been installed:\nError: Detected an existing tlmgr at /usr/local/bin/tlmgr. It seems TeX Live has been installed (check tinytex::tinytex_root()). You have to uninstall it, or use install_tinytex(force = TRUE) if you are sure TinyTeX can override it (e.g., you are a PATH expert or installed TinyTeX previously).\n\n\n3.5.2 Problem solving with LaTeX\nIf you have any problems with installing tinytex, I recommend you check out the tinytex FAQ page.",
     "crumbs": [
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Installation</span>"
     ]
@@ -314,7 +294,7 @@
     "href": "rstudio.html#what-is-rstudio-and-why-should-i-use-it",
     "title": "4  RStudio, What and Why",
     "section": "4.4 What is RStudio, and why should I use it?",
-    "text": "4.4 What is RStudio, and why should I use it?\nIf R is the engine and bare bones of your car, then RStudio is like the rest of the car. The engine is super critical part of your car. But in order to make things properly functional, you need to have a steering wheel, comfy seats, a radio, rear and side view mirrors, storage, and seatbelts.\nThe RStudio layout has the following features:\n\nOn the upper left, the Rmarkdown script\nOn the lower left, the R console\nOn the lower right, the view for files, plots, packages, help, and viewer.\nOn the upper right, the environment / history pane\n\n\n\n\n\n\nA screenshot of the RStudio working environment.\n\n\n\n\nWe saw a bit of what an rmarkdown script does.\nThe R console is the bit where you can run your code. This is where the R code in your rmarkdown document gets sent to run.\nThe file/plot/package viewer is a handy browser for your current files, like Finder, or File Explorer, plots are where your plots appear, you can view packages, see the help files. And the environment / history pane contains the list of things you have created, and the past commands that you have run.",
+    "text": "4.4 What is RStudio, and why should I use it?\nIf R is the engine and bare bones of your car, then RStudio is like the rest of the car. The engine is super critical part of your car. But in order to make things properly functional, you need to have a steering wheel, comfy seats, a radio, rear and side view mirrors, storage, and seatbelts.\nThe RStudio layout has the following features:\n\nOn the upper left, the Rmarkdown script\nOn the lower left, the R console\nOn the lower right, the view for files, plots, packages, help, and viewer.\nOn the upper right, the environment / history pane\n\n\n\n\n\n\nA screenshot of the RStudio working environment.\n\n\n\n\nWe saw a bit of what an Quarto script does.\nThe R console is the bit where you can run your code.\nThe file/plot/package viewer is a handy browser for your current files, like Finder, or File Explorer, plots are where your plots appear, you can view packages, see the help files. And the environment / history pane contains the list of things you have created, and the past commands that you have run.",
     "crumbs": [
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>RStudio, What and Why</span>"
     ]
@@ -464,7 +444,7 @@
     "href": "workflow.html#remember",
     "title": "5  Workflow",
     "section": "5.12 Remember",
-    "text": "5.12 Remember\n\nIf the first line of your R script is\n\nsetwd(\"C:\\Users\\jenny\\path\\that\\only\\I\\have\")\n\nI will come into your office and SET YOUR COMPUTER ON FIRE 🔥.\n\n– Jenny Bryan\nUP TO HERE\n\n5.12.1 Aside: Creating an RStudio project\nYou can create an rstudio project by going to:\nfile &gt; new project &gt; new directory &gt; new project &gt; name your project &gt; create project.\nYou can also click on the create project button in the top left corner\n\n\n\n\n\n\n\n\n\nThen go to new directory, if it is a new folder - otherwise if you have an existing folder you have - click on existing directory.\n\n\n\n\n\n\n\n\n\nThen go to new project\n\n\n\n\n\n\n\n\n\nThen write the name of your project. I think it is usually worthwhile spending a bit of time thinking of a name for your project. Even if it is only a few minutes, it can make a difference. You want to think about:\n\nkeeping it short\nno spaces\ncombining words\n\nFor example, I have a project looking at bat calls, so I called it screech, because bats make a screech-y noise.\nAnd click “create project”.",
+    "text": "5.12 Remember\n\nIf the first line of your R script is\n\nsetwd(\"C:\\Users\\jenny\\path\\that\\only\\I\\have\")\n\nI will come into your office and SET YOUR COMPUTER ON FIRE 🔥.\n\n– Jenny Bryan\n\n5.12.1 Aside: Creating an RStudio project\nYou can create an Rstudio project by going to:\nfile &gt; new project &gt; new directory &gt; new project &gt; name your project &gt; create project.\nYou can also click on the create project button in the top left corner\n\n\n\n\n\n\n\n\n\nThen go to new directory, if it is a new folder - otherwise if you have an existing folder you have - click on existing directory.\n\n\n\n\n\n\n\n\n\nThen go to new project\n\n\n\n\n\n\n\n\n\nThen write the name of your project. I think it is usually worthwhile spending a bit of time thinking of a name for your project. Even if it is only a few minutes, it can make a difference. You want to think about:\n\nkeeping it short\nno spaces\ncombining words\n\nFor example, I have a project looking at bat calls, so I called it screech, because bats make a screech-y noise.\nAnd click “create project”.",
     "crumbs": [
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Workflow</span>"
     ]
@@ -514,7 +494,7 @@
     "href": "using-qmd.html#the-anatomy-of-a-quarto-document",
     "title": "6  Using Quarto",
     "section": "6.4 The anatomy of a Quarto document",
-    "text": "6.4 The anatomy of a Quarto document\nThis is a Quarto document (demo). It has three parts:\n\nMetadata (YAML)\nText (markdown formatting)\nCode (code formatting)\n\n\n6.4.1 Metadata\nThe metadata of the document tells you how it is formed - what the title is, what date to put, and other control information. If you’re familiar with LaTeX, this is kind of like how you specify the many options, what sort of document it is, what styles to use, etc at the front matter.\nQuarto documents use YAML (YAML Ain’t Markup Language) to provide the metadata. It looks like this.\n---\ntitle: \"An example document\"\nauthor: \"Nicholas Tierney\"\nformat: html\n---\nIt starts and ends with three dashes ---, and has fields like the following: title, author, and format.\ntitle and author are special inputs which place the title and author information at the top of the document in large font. They are optional!\nformat: html tells us we want this to be a HTML formatted document - you’ll see what this looks like in a moment!\n\n\n6.4.2 Text\nIs markdown, as we discussed in the earlier section,\nIt provides a simple way to mark up text\n- bullet list\n- bullet list\n- bullet list\n\n1. numbered list\n2. numbered list\n3. numbered list\n\n__bold__, **bold**, _italic_, *italic*\n\n&gt; quote of something profound \n```r\n# computer code goes in three back ticks\n1 + 1\n2 + 2\n```\nWould be converted to:\n\nbullet list\nbullet list\nbullet list\n\n\nnumbered list\nnumbered list\nnumbered list\n\nbold, bold, italic, italic\n\nquote of something profound\n\n\n# computer code goes in three back ticks\n1 + 1\n\n[1] 2\n\n2 + 2\n\n[1] 4\n\n\n\n\n6.4.3 Code\nWe refer to code in an rmarkdown document in two ways:\n\nCode chunks, and\nInline code.\n\n\n6.4.3.1 Code chunks\nCode chunks are marked by three backticks and curly braces. We put the letter r inside them to denote them as “r” code chunks, but you can instead use “python” and “julia” instead:\n\nRpythonjulia\n\n\n```{r}\n#| label: r-chunk-name\n# a code chunk\n```\n\n\n```{python}\n#| label: py-chunk-name\n# a code chunk\n```\n\n\n```{julia}\n#| label: julia-chunk-name\n# a code chunk\n```\n\n\n\na backtick is a special character you might not have seen before, it is typically located under the tilde key (~). On USA / Australia keyboards, is under the escape key:\n\n\n\n\n\nimage from https://commons.wikimedia.org/wiki/File:ANSI_Keyboard_Layout_Diagram_with_Form_Factor.svg\n\n\n\n\n\n\n\n6.4.4 Chunk names\nEvery chunk should ideally have a name. As I’ve mentioned earlier, naming things is hard, but follow these rules and you’ll be fine:\n\none word that describes the action (e.g., “read”)\none word that describes the thing inside the code (e.g, “gapminder”)\nseparate words with “-” or “_” (e.g., read-gapminder)",
+    "text": "6.4 The anatomy of a Quarto document\nThis is a Quarto document (demo). It has three parts:\n\nMetadata (YAML)\nText (markdown formatting)\nCode (code formatting)\n\n\n6.4.1 Metadata\nThe metadata of the document tells you how it is formed - what the title is, what date to put, and other control information. If you’re familiar with LaTeX, this is kind of like how you specify the many options, what sort of document it is, what styles to use, etc at the front matter.\nQuarto documents use YAML (YAML Ain’t Markup Language) to provide the metadata. It looks like this.\n---\ntitle: \"An example document\"\nauthor: \"Nicholas Tierney\"\nformat: html\n---\nIt starts and ends with three dashes ---, and has fields like the following: title, author, and format.\ntitle and author are special inputs which place the title and author information at the top of the document in large font. They are optional!\nformat: html tells us we want this to be a HTML formatted document - you’ll see what this looks like in a moment!\n\n\n6.4.2 Text\nIs markdown, as we discussed in the earlier section,\nIt provides a simple way to mark up text\n- bullet list\n- bullet list\n- bullet list\n\n1. numbered list\n2. numbered list\n3. numbered list\n\n__bold__, **bold**, _italic_, *italic*\n\n&gt; quote of something profound \n```r\n# computer code goes in three back ticks\n1 + 1\n2 + 2\n```\nWould be converted to:\n\nbullet list\nbullet list\nbullet list\n\n\nnumbered list\nnumbered list\nnumbered list\n\nbold, bold, italic, italic\n\nquote of something profound\n\n\n# computer code goes in three back ticks\n1 + 1\n\n[1] 2\n\n2 + 2\n\n[1] 4\n\n\n\n\n6.4.3 Code\nWe refer to code in an Quarto document in two ways:\n\nCode chunks, and\nInline code.\n\n\n6.4.3.1 Code chunks\nCode chunks are marked by three backticks and curly braces. We put the letter r inside them to denote them as “r” code chunks, but you can instead use “python” and “julia” instead:\n\nRpythonjulia\n\n\n```{r}\n#| label: r-chunk-name\n# a code chunk\n```\n\n\n```{python}\n#| label: py-chunk-name\n# a code chunk\n```\n\n\n```{julia}\n#| label: julia-chunk-name\n# a code chunk\n```\n\n\n\n\n\n\n\n\n\nThis book currently focusses only on R\n\n\n\n\n\nQuarto provides support for Python, Julia, and Observable, which are all very powerful and awesome languages! However currently we will only be focussing on using R in this book. But I want to make sure that you know you can use python, or Julia, or Observable! More languages will be supported into the future, I believe.\n\n\n\na backtick is a special character you might not have seen before, it is typically located under the tilde key (~). On USA / Australia keyboards, is under the escape key:\n\n\n\n\n\nimage from https://commons.wikimedia.org/wiki/File:ANSI_Keyboard_Layout_Diagram_with_Form_Factor.svg\n\n\n\n\n\n\n\n6.4.4 Chunk names\nEvery chunk should ideally have a name. As I’ve mentioned earlier, naming things is hard, but follow these rules and you’ll be fine:\n\none word that describes the action (e.g., “read”)\none word that describes the thing inside the code (e.g, “gapminder”)\nseparate words with “-” or “_” (e.g., read-gapminder)",
     "crumbs": [
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>Using Quarto</span>"
     ]
@@ -524,37 +504,37 @@
     "href": "using-qmd.html#code-chunk-options",
     "title": "6  Using Quarto",
     "section": "6.5 Code chunk options",
-    "text": "6.5 Code chunk options\nYou can control how the code is output by changing the code chunk options, which are written with a #|, called a “hash-pipe”, since # is “hash”, and | is “pipe”, but might sometimes be called “bar” or “v-bar”.\n::: {.cell}\n\n```{.r .cell-code}\ngap &lt;- read_csv(\"gapminder.csv\")\n```\n:::\nA nice feature of Quarto + Rstudio is that they provide code completion when you start writing the code chunk options, and they will provide options when hitting “tab”.\ngif showing autocomplete\nIn the past Rmarkdown required “TRUE” and “FALSE”, but note that Quarto always uses “true” or “false” in lowercase, and never “yes” or “no”.\nThe code chunks you need to know about right now are:\n\ncache: true / false Do you want to save the output of the chunk so it doesn’t have to run next time?\neval: true/false Do you want to evaluate the code?\necho: true/false Do you want to print the code?\ninclude: Do you want to include code output in the final output document? Setting to false means nothing is put into the output document, but the code is still run.\n\n\n  \n\nYou can read more about the options at the official documentation: https://quarto.org/docs/computations/execution-options.html\n\n6.5.1 Inline code\nSometimes you want to run the code inside a sentence. When the code is run inside the sentence, it is called running the code “inline”.\nYou might want to run the code inline to name the number of variables or rows in a dataset in a sentence like:\n\nThere are XXX observations in the airquality dataset, and XXX variables.\n\nYou can call code “inline” with the pattern:\nHere are some code things with language \"lang\": `` `{lang} code` ``.\nEssentially instead of using three backticks to write multiple lines of code, you use a single backtick. You can think of this as a backtick being used inside text for a one liner, whereas creating a code fence with three backticks indicates something longer.\n\nPythonKnitr\n\n\n```{python}\npy_heights = [153, 151, 156, 160, 171]\nimport statistics\npy_mean = statistics.mean(py_heights)\n```\n\nThe mean of these heights is `{python} py_mean`\nThis syntax works for any Jupyter kernel—so for Julia you would write an inline expression as `{julia} j_mean`).\n\n\n```{r}\nr_heights &lt;- c(153, 151, 156, 160, 171)\nr_mean &lt;- mean(r_heights)\n```\n\nThe mean of these heights is 158.2\n\n\n\n\nRpythonjulia\n\n\n\nThere are `` `r nrow(airquality)` `` observations in the airquality dataset, \nand `` `r ncol(airquality)` `` variables.\n\n\n```{python}\n#| label: py-chunk-name\n# a code chunk\n```\n\n\n```{julia}\n#| label: julia-chunk-name\n# a code chunk\n```\n\n\n\nWhich gives you the following sentence\n\nThere are 153 observations in the airquality dataset, and 6 variables.\n\nWhat’s great about this is that if your data changes upstream, then you don’t need to work out where you mentioned your data, you just update the document.",
+    "text": "6.5 Code chunk options\nYou can control how the code is output by changing the code chunk options, which are written with a #|, called a “hash-pipe”, since # is “hash”, and | is “pipe”, but might sometimes be called “bar” or “v-bar”.\n\n```{r}\n#| label: read-gapminder\n#| eval: false\ngap &lt;- read_csv(\"gapminder.csv\")\n```\n\nA nice feature of Quarto + Rstudio is that they provide code completion when you start writing the code chunk options, and they will provide options when hitting “tab”. gif of this\nIn the past Rmarkdown required “TRUE” and “FALSE”, but note that Quarto always uses “true” or “false” in lowercase, and never “yes” or “no”.\nThe code chunks you need to know about right now are:\n\neval: true/false Do you want to evaluate the code?\necho: true/false Do you want to print the code?\ncache: true / false Do you want to save the output of the chunk so it doesn’t have to run next time?\ninclude: Do you want to include code output in the final output document? Setting to false means nothing is put into the output document, but the code is still run.\n\n\n  \n\nYou can read more about the options at the official documentation: https://quarto.org/docs/computations/execution-options.html\n\n6.5.1 Inline code\nSometimes you want to run the code inside a sentence. When the code is run inside the sentence, it is called running the code “inline”.\nYou might want to run the code inline to name the number of variables or rows in a dataset in a sentence like:\n\nThere are XXX observations in the airquality dataset, and XXX variables.\n\nYou can call code “inline” like so:\n```{r}\nr_heights &lt;- c(153, 151, 156, 160, 171)\nr_mean &lt;- mean(r_heights)\n```\n\nThe mean of these heights is `{r} r_mean`\nWhich will produce the following sentence:\n\nThe mean of these heights is 158.2\n\nEssentially, instead of using three backticks to write multiple lines of code, you use a single backtick. You can think of this as a backtick being used inside text for a one liner, whereas creating a code fence with three backticks indicates something longer.\nThere are `{r} nrow(airquality)` observations in the airquality dataset, \nand `{r} ncol(airquality)` variables.\nWhich gives you the following sentence\n\nThere are 153 observations in the airquality dataset, and 6 variables.\n\nWhat’s great about this is that if your data changes upstream, then you don’t need to work out where you mentioned your data, you just update the document.",
     "crumbs": [
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>Using Quarto</span>"
     ]
   },
   {
-    "objectID": "using-qmd.html#creating-an-rmarkdown-document",
-    "href": "using-qmd.html#creating-an-rmarkdown-document",
+    "objectID": "using-qmd.html#creating-a-quarto-document",
+    "href": "using-qmd.html#creating-a-quarto-document",
     "title": "6  Using Quarto",
-    "section": "6.6 Creating an rmarkdown document",
-    "text": "6.6 Creating an rmarkdown document\n\nRstudio menu system\nExplore the template provided by rstudio\nCompile an rmarkdown document",
+    "section": "6.6 Creating a Quarto document",
+    "text": "6.6 Creating a Quarto document\n\nRstudio menu system\nExplore the template provided by Rstudio\nCompile an Quarto document",
     "crumbs": [
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>Using Quarto</span>"
     ]
   },
   {
-    "objectID": "using-qmd.html#working-with-an-rmarkdown-document",
-    "href": "using-qmd.html#working-with-an-rmarkdown-document",
+    "objectID": "using-qmd.html#working-with-a-quarto-document",
+    "href": "using-qmd.html#working-with-a-quarto-document",
     "title": "6  Using Quarto",
-    "section": "6.7 Working with an rmarkdown document",
-    "text": "6.7 Working with an rmarkdown document\nDemo: Create an rmarkdown document in rstudio.\n\n6.7.1 Your Turn\n\nUse the rstudio project you previously created, rmd4sci-materials, and create an rmarkdown document\nRun some brief summaries of the data in the rmarkdown document inside the ```{r chunk-part}\n\nhist(data$)\nHow big is the data?\nHow many countries are there?\nWhat was the lowest life expectancy in Australia’s History?\nHow about the lowest GDP for Australia?\nWhere does Australia rank in GDP in 1997?",
+    "section": "6.7 Working with a Quarto document",
+    "text": "6.7 Working with a Quarto document\nDemo: Create a Quarto document in rstudio.\n\n6.7.1 Your Turn\n\nUse the rstudio project you previously created, qmd4sci-materials, and create a Quarto document\nRun some brief summaries of the data in the Quarto document:\n\nhist(data$)\nHow big is the data?\nHow many countries are there?\nWhat was the lowest life expectancy in Australia’s History?\nHow about the lowest GDP for Australia?\nWhere does Australia rank in GDP in 1997?",
     "crumbs": [
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>Using Quarto</span>"
     ]
   },
   {
-    "objectID": "using-qmd.html#nicks-rmarkdown-hygiene-recommendations",
-    "href": "using-qmd.html#nicks-rmarkdown-hygiene-recommendations",
+    "objectID": "using-qmd.html#nicks-quarto-hygiene-recommendations",
+    "href": "using-qmd.html#nicks-quarto-hygiene-recommendations",
     "title": "6  Using Quarto",
-    "section": "6.8 Nick’s rmarkdown hygiene recommendations",
-    "text": "6.8 Nick’s rmarkdown hygiene recommendations\nI highly recommend that each document you write has three chunks at the top.\n\n```{r setup , include=FALSE}\nknitr::opts_chunk$set(echo = FALSE, \n                      fig.align = \"center\",\n                      fig.width = 4, \n                      fig.height = 4, \n                      dev = \"png\",\n                      cache = TRUE)\n```\n\n```{r library}\nlibrary(tidyverse)\n```\n\n```{r functions}\n# A function to scale input to 0-1\nscale_01 &lt;- function(x){\n  (x - min(x, na.rm = TRUE)) / diff(range(x, na.rm = TRUE))\n}\n```\n\n```{r read-data}\ngapminder &lt;- read_csv(here::here(\"data\", \"gapminder.csv\"))\n```\nIn the setup chunk, you set the options that you want to define globally. In this case, I’ve told rmarkdown:\n\necho = FALSE: I don’t want any code printed by setting echo = FALSE.\nfig.align = \"center\" Align my figures in the center\nfig.width = 4 & fig.height = 4. Set the width and height to 4 inches.\ndev = \"png\". Save the images as PNG\ncache = TRUE. Save the output results of all my chunks so that they don’t need to be run again.\n\nIn the library chunk, you put all the library calls. This helps make it clearer for anyone else who might read your work what is needed to run this document. I often go through the process of moving these library calls to the top of the document when I have a moment, or when I’m done writing. You can also look at Miles McBain’s packup package to help move these library calls to the top of a document.\nIn the functions chunk, you put any functions that you write in the process of writing your document. Similar to the library chunk, I write these functions as I go, as needed, and them move these to the top when I get a moment, or once I’m done. The benefit of this is that all your functions are in one spot, and you might be able to identify ways to make them work better together, or improve them separately. You might even want to move these into a new R package, and putting them here makes that easier to see what you are doing.\nIn the readr chunk, you read in any data you are going to be using in the document.\nNow, this is my personal preference, but I find the following benefits:\n\nThe “top part” of your document contains all the metadata / setup info. Your global options,\nIt helps another person get oriented with your work - they know the settings, the functions used, and the special things that you wrote (your functions)\nRemember, “another person” includes yourself in 6 months.",
+    "section": "6.8 Nick’s Quarto hygiene recommendations",
+    "text": "6.8 Nick’s Quarto hygiene recommendations\nI highly recommend that each document you write has this YAML at the top to set some global options, and then two code chunks, one that loads all the packages, and another that specifies any functions you write.\n---\ntitle: example\nformat: \n  html:\n    fig-align: center\n    fig-width: 4\n    fig-height: 4\n    fig-format: png\nexecute:\n  echo: false\n  cache: true\n---\n\n\n```{r}\n#| label: library\nlibrary(tidyverse)\n```\n\n```{r}\n#| label: functions\n# A function to scale input to 0-1\nscale_01 &lt;- function(x){\n  (x - min(x, na.rm = TRUE)) / diff(range(x, na.rm = TRUE))\n}\n```\n\n```{r}\n#| label: read-data\ngapminder &lt;- read_csv(here::here(\"data\", \"gapminder.csv\"))\n```\nIn the YAML chunk under execute, you set the options that you want to define globally. In this case, I’ve told Quarto:\n\nfig-align: center Align my figures in the center\nfig-width: 4 & fig-height: 4. Set the width and height to 4 inches.\nfig-format: png. Save the images as PNG\ncache: true. Save the output results of all my chunks so that they don’t need to be run again.\necho: false: I don’t want any code printed by setting echo: false.\n\nIn the library chunk, you put all the library calls. This helps make it clearer for anyone else who might read your work what is needed to run this document. I often go through the process of moving these library calls to the top of the document when I have a moment, or when I’m done writing. You can also look at Miles McBain’s packup package to help move these library calls to the top of a document.\nIn the functions chunk, you put any functions that you write in the process of writing your document. Similar to the library chunk, I write these functions as I go, as needed, and them move these to the top when I get a moment, or once I’m done. The benefit of this is that all your functions are in one spot, and you might be able to identify ways to make them work better together, or improve them separately. You might even want to move these into a new R package, and putting them here makes that easier to see what you are doing.\nIn the readr chunk, you read in any data you are going to be using in the document.\nNow, this is my personal preference, but I find the following benefits:\n\nThe “top part” of your document contains all the metadata / setup info. Your global options. You don’t need to specify every single code chunk.\nIt helps another person get oriented with your work - they know the settings, the functions used, and the special things that you wrote (your functions)\nRemember, “another person” includes yourself in 6 months. You are always collaborating with your future self. You are always collaborating with your future self.",
     "crumbs": [
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>Using Quarto</span>"
     ]
@@ -564,925 +544,936 @@
     "href": "using-qmd.html#your-turn-1",
     "title": "6  Using Quarto",
     "section": "6.9 Your Turn",
-    "text": "6.9 Your Turn\n\nUpdate your rmarkdown document based on the aforementioned hygiene steps discussed by Nick.",
+    "text": "6.9 Your Turn\n\nUpdate your Quarto document based on the aforementioned hygiene steps discussed above.",
     "crumbs": [
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>Using Quarto</span>"
     ]
   },
   {
-    "objectID": "visual-vs-source-mode.html",
-    "href": "visual-vs-source-mode.html",
-    "title": "7  Visual mode",
-    "section": "",
-    "text": "This\nThere is also a VS Code extension for visual mode, which this book does not (currently) focus on.",
-    "crumbs": [
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Visual mode</span>"
-    ]
-  },
-  {
     "objectID": "pdf-html-word.html",
     "href": "pdf-html-word.html",
-    "title": "8  HTML, PDF, and Word (and more!)",
+    "title": "7  HTML, PDF, and Word (and more!)",
     "section": "",
-    "text": "8.1 Overview",
+    "text": "7.1 Overview",
     "crumbs": [
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>HTML, PDF, and Word (and more!)</span>"
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>HTML, PDF, and Word (and more!)</span>"
     ]
   },
   {
     "objectID": "pdf-html-word.html#overview",
     "href": "pdf-html-word.html#overview",
-    "title": "8  HTML, PDF, and Word (and more!)",
+    "title": "7  HTML, PDF, and Word (and more!)",
     "section": "",
     "text": "Teaching: 10 minutes\nExercises: 15 minutes",
     "crumbs": [
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>HTML, PDF, and Word (and more!)</span>"
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>HTML, PDF, and Word (and more!)</span>"
     ]
   },
   {
     "objectID": "pdf-html-word.html#questions",
     "href": "pdf-html-word.html#questions",
-    "title": "8  HTML, PDF, and Word (and more!)",
-    "section": "8.2 Questions",
-    "text": "8.2 Questions\n\nHow do I convert to HTML, PDF, or Word?\nHow do I set options specific to each of these?\nHow can I include a screenshot of an interactive graphic in PDF or Word?",
+    "title": "7  HTML, PDF, and Word (and more!)",
+    "section": "7.2 Questions",
+    "text": "7.2 Questions\n\nHow do I convert to HTML, PDF, or Word?\nHow do I set options specific to each of these?\nHow can I include a screenshot of an interactive graphic in PDF or Word?",
     "crumbs": [
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>HTML, PDF, and Word (and more!)</span>"
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>HTML, PDF, and Word (and more!)</span>"
     ]
   },
   {
     "objectID": "pdf-html-word.html#objectives",
     "href": "pdf-html-word.html#objectives",
-    "title": "8  HTML, PDF, and Word (and more!)",
-    "section": "8.3 Objectives",
-    "text": "8.3 Objectives",
+    "title": "7  HTML, PDF, and Word (and more!)",
+    "section": "7.3 Objectives",
+    "text": "7.3 Objectives",
     "crumbs": [
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>HTML, PDF, and Word (and more!)</span>"
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>HTML, PDF, and Word (and more!)</span>"
     ]
   },
   {
     "objectID": "pdf-html-word.html#how-do-i-convert-to-html-pdf-or-word",
     "href": "pdf-html-word.html#how-do-i-convert-to-html-pdf-or-word",
-    "title": "8  HTML, PDF, and Word (and more!)",
-    "section": "8.4 How do I convert to HTML, PDF, or Word?",
-    "text": "8.4 How do I convert to HTML, PDF, or Word?\nHere are three ways to do this:\n\nYou can control this in the “render” button\n\n\n\n\n\n\n\n\n\n\nYou might notice that depending on the option you select, this changes things in the YAML - which is another way to control which output you have:\n\nYou can change the YAML option\n\ntitle: \"Exploring gapminder\"\nformat: html\ntitle: \"Exploring gapminder\"\nformat: pdf\ntitle: \"Exploring gapminder\"\nformat: docx\n\nYou can call the quarto render function - from the terminal if you wish\n\n\nquarto render example.qmd --to html\nquarto render example.qmd --to docx\n\n\n8.4.1 A note on workflow with rmarkdown: HTML first, PDF/word later\nIt can be easy to get caught up with how your document looks. I highly recommend avoiding compiling to PDF or word until you really need to. This is also recommended by the author of rmarkdown and knitr, Yihui Xie. Because HTML doesn’t have page breaks, this means that you can spend time working on generating content, and not trying to get figures to line up correctly.",
+    "title": "7  HTML, PDF, and Word (and more!)",
+    "section": "7.4 How do I convert to HTML, PDF, or Word?",
+    "text": "7.4 How do I convert to HTML, PDF, or Word?\nHere are three ways to do this:\n\nYou can control this in the “render” button\n\n\n\n\n\n\n\n\n\n\nYou might notice that depending on the option you select, this changes things in the YAML - which is another way to control which output you have:\n\nYou can change the YAML option\n\ntitle: \"Exploring gapminder\"\nformat: html\ntitle: \"Exploring gapminder\"\nformat: pdf\ntitle: \"Exploring gapminder\"\nformat: docx\n\nYou can call the quarto render function - from the terminal if you wish\n\n\nquarto render example.qmd --to html\nquarto render example.qmd --to docx\n\n\n7.4.1 A note on workflow with Quarto: HTML first, PDF/word later\nIt can be easy to get caught up with how your document looks. I highly recommend avoiding compiling to PDF or word until you really need to. This is also recommended by the author of rmarkdown and knitr, Yihui Xie. Because HTML doesn’t have page breaks, this means that you can spend time working on generating content, and not trying to get figures to line up correctly.",
     "crumbs": [
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>HTML, PDF, and Word (and more!)</span>"
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>HTML, PDF, and Word (and more!)</span>"
     ]
   },
   {
     "objectID": "pdf-html-word.html#your-turn",
     "href": "pdf-html-word.html#your-turn",
-    "title": "8  HTML, PDF, and Word (and more!)",
-    "section": "8.5 Your Turn",
-    "text": "8.5 Your Turn\n\nGenerate three reports, one as HTML, one as PDF, and one as microsoft word. Remember, if you are having PDF problems, see the installation chapter note on installing  with the R package, tinytex.",
+    "title": "7  HTML, PDF, and Word (and more!)",
+    "section": "7.5 Your Turn",
+    "text": "7.5 Your Turn\n\nGenerate three reports, one as HTML, one as PDF, and one as microsoft word. Remember, if you are having PDF problems, see the installation chapter note on installing  with the R package, tinytex.",
     "crumbs": [
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>HTML, PDF, and Word (and more!)</span>"
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>HTML, PDF, and Word (and more!)</span>"
     ]
   },
   {
     "objectID": "keyboard-shortcuts.html",
     "href": "keyboard-shortcuts.html",
-    "title": "9  Keyboard Shortcuts",
+    "title": "8  Keyboard Shortcuts",
     "section": "",
-    "text": "9.1 Overview",
+    "text": "8.1 Overview",
     "crumbs": [
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Keyboard Shortcuts</span>"
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Keyboard Shortcuts</span>"
     ]
   },
   {
     "objectID": "keyboard-shortcuts.html#overview",
     "href": "keyboard-shortcuts.html#overview",
-    "title": "9  Keyboard Shortcuts",
+    "title": "8  Keyboard Shortcuts",
     "section": "",
     "text": "Teaching 5 minutes\nExercises 5 minutes",
     "crumbs": [
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Keyboard Shortcuts</span>"
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Keyboard Shortcuts</span>"
     ]
   },
   {
     "objectID": "keyboard-shortcuts.html#questions",
     "href": "keyboard-shortcuts.html#questions",
-    "title": "9  Keyboard Shortcuts",
-    "section": "9.2 Questions",
-    "text": "9.2 Questions\n\nWhat sort of keyboard shortcuts should I care about?",
+    "title": "8  Keyboard Shortcuts",
+    "section": "8.2 Questions",
+    "text": "8.2 Questions\n\nWhat sort of keyboard shortcuts should I care about?",
     "crumbs": [
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Keyboard Shortcuts</span>"
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Keyboard Shortcuts</span>"
     ]
   },
   {
     "objectID": "keyboard-shortcuts.html#objectives",
     "href": "keyboard-shortcuts.html#objectives",
-    "title": "9  Keyboard Shortcuts",
-    "section": "9.3 Objectives",
-    "text": "9.3 Objectives",
+    "title": "8  Keyboard Shortcuts",
+    "section": "8.3 Objectives",
+    "text": "8.3 Objectives",
     "crumbs": [
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Keyboard Shortcuts</span>"
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Keyboard Shortcuts</span>"
     ]
   },
   {
     "objectID": "keyboard-shortcuts.html#gifs-of-the-action",
     "href": "keyboard-shortcuts.html#gifs-of-the-action",
-    "title": "9  Keyboard Shortcuts",
-    "section": "9.4 Gifs of the action",
-    "text": "9.4 Gifs of the action\n\n9.4.1 render document\n\n\n9.4.2 Insert Chunk\n\n\n9.4.3 Run Current Chunk\n\n\n9.4.4 Jump to\n\n\n9.4.5 Create multiple cursors\n\n\n9.4.6 Delete the current line\n\n\n9.4.7 Un/Comment out a line\n\n\n9.4.8 Reformat Section\n\n\n9.4.9 Show Keyboard Shortcut Reference",
+    "title": "8  Keyboard Shortcuts",
+    "section": "8.4 Gifs of the action",
+    "text": "8.4 Gifs of the action\n\n8.4.1 render document\n\n\n8.4.2 Insert Chunk\n\n\n8.4.3 Run Current Chunk\n\n\n8.4.4 Jump to\n\n\n8.4.5 Create multiple cursors\n\n\n8.4.6 Delete the current line\n\n\n8.4.7 Un/Comment out a line\n\n\n8.4.8 Reformat Section\n\n\n8.4.9 Show Keyboard Shortcut Reference",
     "crumbs": [
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Keyboard Shortcuts</span>"
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Keyboard Shortcuts</span>"
     ]
   },
   {
     "objectID": "keyboard-shortcuts.html#table-of-common-shortcuts",
     "href": "keyboard-shortcuts.html#table-of-common-shortcuts",
-    "title": "9  Keyboard Shortcuts",
-    "section": "9.5 Table of Common Shortcuts",
-    "text": "9.5 Table of Common Shortcuts\nBelow is a small table of tasks you can perform with keyboard\n\n\n\n\n\n\n\n\nAction\nWindows/Linux\nMac\n\n\n\n\nKnit document\nCtrl + Shift + K\nCmd + Shift + K\n\n\nInsert Chunk\nCtrl + Alt + I\nCmd + Option + I\n\n\nRun Current Chunk\nCtrl + Alt + C\nCmd + Option + C\n\n\nJump to Shift+Alt+J\nCmd+Shift+Option+J\n\n\n\nShow Keyboard Shortcut Reference\nAlt+Shift+K\nOption+Shift+K\n\n\nCreate multiple cursors\nCtrl + Alt + Up/Down\noption + control + Up/Down\n\n\nDelete the current line\nCtrl + D\nCmd + D\n\n\nUn/Comment out a line\nCtrl + Shift + C\nCmd + Shift + C\n\n\nReformat Section\nCtrl + Shift + A\nCmd + Shift + A",
+    "title": "8  Keyboard Shortcuts",
+    "section": "8.5 Table of Common Shortcuts",
+    "text": "8.5 Table of Common Shortcuts\nBelow is a small table of tasks you can perform with keyboard\n\n\n\n\n\n\n\n\nAction\nWindows/Linux\nMac\n\n\n\n\nKnit document\nCtrl + Shift + K\nCmd + Shift + K\n\n\nInsert Chunk\nCtrl + Alt + I\nCmd + Option + I\n\n\nRun Current Chunk\nCtrl + Alt + C\nCmd + Option + C\n\n\nJump to Shift+Alt+J\nCmd+Shift+Option+J\n\n\n\nShow Keyboard Shortcut Reference\nAlt+Shift+K\nOption+Shift+K\n\n\nCreate multiple cursors\nCtrl + Alt + Up/Down\noption + control + Up/Down\n\n\nDelete the current line\nCtrl + D\nCmd + D\n\n\nUn/Comment out a line\nCtrl + Shift + C\nCmd + Shift + C\n\n\nReformat Section\nCtrl + Shift + A\nCmd + Shift + A",
     "crumbs": [
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Keyboard Shortcuts</span>"
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Keyboard Shortcuts</span>"
     ]
   },
   {
     "objectID": "keyboard-shortcuts.html#further-reading",
     "href": "keyboard-shortcuts.html#further-reading",
-    "title": "9  Keyboard Shortcuts",
-    "section": "9.6 Further Reading",
-    "text": "9.6 Further Reading\n\nThe https://rstudio.github.io/cheatsheets/html/rstudio-ide.html#keyboard-shortcuts has an index of shortcuts.\nThis [https://support.posit.co/hc/en-us/articles/206382178-Customizing-Keyboard-Shortcuts-in-the-RStudio-IDE] help file has a guide to customising keyboard shortcuts.",
+    "title": "8  Keyboard Shortcuts",
+    "section": "8.6 Further Reading",
+    "text": "8.6 Further Reading\n\nThe https://rstudio.github.io/cheatsheets/html/rstudio-ide.html#keyboard-shortcuts has an index of shortcuts.\nThis [https://support.posit.co/hc/en-us/articles/206382178-Customizing-Keyboard-Shortcuts-in-the-RStudio-IDE] help file has a guide to customising keyboard shortcuts.",
     "crumbs": [
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Keyboard Shortcuts</span>"
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Keyboard Shortcuts</span>"
     ]
   },
   {
     "objectID": "keyboard-shortcuts.html#your-turn",
     "href": "keyboard-shortcuts.html#your-turn",
-    "title": "9  Keyboard Shortcuts",
-    "section": "9.7 Your Turn",
-    "text": "9.7 Your Turn\n\nUsing the Keyboard Shortcut Reference, find the keyboard shortcut for inserting a pipe character ( %&gt;% )\nSpend 3 minutes practicing these commands in a document.",
+    "title": "8  Keyboard Shortcuts",
+    "section": "8.7 Your Turn",
+    "text": "8.7 Your Turn\n\nUsing the Keyboard Shortcut Reference, find the keyboard shortcut for inserting a pipe character ( %&gt;% )\nSpend 3 minutes practicing these commands in a document.",
     "crumbs": [
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Keyboard Shortcuts</span>"
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Keyboard Shortcuts</span>"
     ]
   },
   {
     "objectID": "figures-tables-captions.html",
     "href": "figures-tables-captions.html",
-    "title": "10  Figures, Tables, Captions.",
+    "title": "9  Figures, Tables, Captions.",
     "section": "",
-    "text": "10.1 Overview",
+    "text": "9.1 Overview",
     "crumbs": [
-      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Figures, Tables, Captions.</span>"
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Figures, Tables, Captions.</span>"
     ]
   },
   {
     "objectID": "figures-tables-captions.html#overview",
     "href": "figures-tables-captions.html#overview",
-    "title": "10  Figures, Tables, Captions.",
+    "title": "9  Figures, Tables, Captions.",
     "section": "",
     "text": "Teaching 10 minutes\nExercises 10 minutes",
     "crumbs": [
-      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Figures, Tables, Captions.</span>"
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Figures, Tables, Captions.</span>"
     ]
   },
   {
     "objectID": "figures-tables-captions.html#questions",
     "href": "figures-tables-captions.html#questions",
-    "title": "10  Figures, Tables, Captions.",
-    "section": "10.2 Questions",
-    "text": "10.2 Questions\n\nHow do I create a figure in Quarto?\nHow do I create a table in Quarto?\nHow do I add captions for figures and tables?",
+    "title": "9  Figures, Tables, Captions.",
+    "section": "9.2 Questions",
+    "text": "9.2 Questions\n\nHow do I create a figure in Quarto?\nHow do I create a table in Quarto?\nHow do I add captions for figures and tables?",
     "crumbs": [
-      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Figures, Tables, Captions.</span>"
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Figures, Tables, Captions.</span>"
     ]
   },
   {
     "objectID": "figures-tables-captions.html#objectives",
     "href": "figures-tables-captions.html#objectives",
-    "title": "10  Figures, Tables, Captions.",
-    "section": "10.3 Objectives",
-    "text": "10.3 Objectives",
+    "title": "9  Figures, Tables, Captions.",
+    "section": "9.3 Objectives",
+    "text": "9.3 Objectives",
     "crumbs": [
-      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Figures, Tables, Captions.</span>"
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Figures, Tables, Captions.</span>"
     ]
   },
   {
     "objectID": "figures-tables-captions.html#tables",
     "href": "figures-tables-captions.html#tables",
-    "title": "10  Figures, Tables, Captions.",
-    "section": "10.4 Tables",
-    "text": "10.4 Tables\nTo produce a table, I recommend you use the kable function from the knitr package.\n\n10.4.1 Demo\nkable takes a data.frame as input, and outputs the table into a markdown table, which will get rendered into the appropriate output format.\nFor example, let’s say we wanted to share the first 6 rows of our gapminder data.\nThis gives us the following output\n\ntop_gap &lt;- head(gapminder)\n\nknitr::kable(top_gap)\n\n\n\n\ncountry\ncontinent\nyear\nlifeExp\npop\ngdpPercap\n\n\n\n\nAfghanistan\nAsia\n1952\n28.801\n8425333\n779.4453\n\n\nAfghanistan\nAsia\n1957\n30.332\n9240934\n820.8530\n\n\nAfghanistan\nAsia\n1962\n31.997\n10267083\n853.1007\n\n\nAfghanistan\nAsia\n1967\n34.020\n11537966\n836.1971\n\n\nAfghanistan\nAsia\n1972\n36.088\n13079460\n739.9811\n\n\nAfghanistan\nAsia\n1977\n38.438\n14880372\n786.1134\n\n\n\n\n\nSo how does that work? kable prints out the following:\n|country     |continent | year| lifeExp|      pop| gdpPercap|\n|:-----------|:---------|----:|-------:|--------:|---------:|\n|Afghanistan |Asia      | 1952|  28.801|  8425333|  779.4453|\n|Afghanistan |Asia      | 1957|  30.332|  9240934|  820.8530|\n|Afghanistan |Asia      | 1962|  31.997| 10267083|  853.1007|\n|Afghanistan |Asia      | 1967|  34.020| 11537966|  836.1971|\n|Afghanistan |Asia      | 1972|  36.088| 13079460|  739.9811|\n|Afghanistan |Asia      | 1977|  38.438| 14880372|  786.1134|\nAnd this then gets rendered as a table. This works for HTML, PDF, and word!\n\n10.4.1.1 Adding captions to a table\nNow, say that we wanted to include a caption? We use the caption argument. This will also automatically number the table (woo! We’ll cover this later).\n\nknitr::kable(top_gap,\n             caption = \"The first 6 rows of the dataset, gapminder\")\n\n\nThe first 6 rows of the dataset, gapminder\n\n\ncountry\ncontinent\nyear\nlifeExp\npop\ngdpPercap\n\n\n\n\nAfghanistan\nAsia\n1952\n28.801\n8425333\n779.4453\n\n\nAfghanistan\nAsia\n1957\n30.332\n9240934\n820.8530\n\n\nAfghanistan\nAsia\n1962\n31.997\n10267083\n853.1007\n\n\nAfghanistan\nAsia\n1967\n34.020\n11537966\n836.1971\n\n\nAfghanistan\nAsia\n1972\n36.088\n13079460\n739.9811\n\n\nAfghanistan\nAsia\n1977\n38.438\n14880372\n786.1134\n\n\n\n\n\nSome other useful features of kable include setting the rounding number, with the digits option.\nFor example, we could present the first 2 digits of each number like so:\n\nknitr::kable(top_gap,\n             caption = \"The first 6 rows of the dataset, gapminder\",\n             digits = 2)\n\n\nThe first 6 rows of the dataset, gapminder\n\n\ncountry\ncontinent\nyear\nlifeExp\npop\ngdpPercap\n\n\n\n\nAfghanistan\nAsia\n1952\n28.80\n8425333\n779.45\n\n\nAfghanistan\nAsia\n1957\n30.33\n9240934\n820.85\n\n\nAfghanistan\nAsia\n1962\n32.00\n10267083\n853.10\n\n\nAfghanistan\nAsia\n1967\n34.02\n11537966\n836.20\n\n\nAfghanistan\nAsia\n1972\n36.09\n13079460\n739.98\n\n\nAfghanistan\nAsia\n1977\n38.44\n14880372\n786.11\n\n\n\n\n\nThere are other options that you can set in kable, but for these options will get you through a large majority of what you need. For more information on what kable can provide, see ?knitr::kable.\nThere are many different ways to produce tables in R. We have chosen to show kable today because kable is minimal, but powerful. If you want to extend kable to do more, look at kableExtra, in particular the option kableExtra::kable_styling(latex_options = c(\"hold_position\")).\n\n\n\n10.4.2 Your Turn\n\nCreate a summary of your gapminder data, and put it into a table.\nAdd a caption to this table\nSet the number of decimals to 2.",
+    "title": "9  Figures, Tables, Captions.",
+    "section": "9.4 Tables",
+    "text": "9.4 Tables\nTo produce a table, I recommend you use the kable function from the knitr package.\n\n9.4.1 Demo\nkable takes a data.frame as input, and outputs the table into a markdown table, which will get rendered into the appropriate output format.\nFor example, let’s say we wanted to share the first 6 rows of our gapminder data.\nThis gives us the following output\n\ntop_gap &lt;- head(gapminder)\n\nknitr::kable(top_gap)\n\n\n\n\ncountry\ncontinent\nyear\nlifeExp\npop\ngdpPercap\n\n\n\n\nAfghanistan\nAsia\n1952\n28.801\n8425333\n779.4453\n\n\nAfghanistan\nAsia\n1957\n30.332\n9240934\n820.8530\n\n\nAfghanistan\nAsia\n1962\n31.997\n10267083\n853.1007\n\n\nAfghanistan\nAsia\n1967\n34.020\n11537966\n836.1971\n\n\nAfghanistan\nAsia\n1972\n36.088\n13079460\n739.9811\n\n\nAfghanistan\nAsia\n1977\n38.438\n14880372\n786.1134\n\n\n\n\n\nSo how does that work? kable prints out the following:\n|country     |continent | year| lifeExp|      pop| gdpPercap|\n|:-----------|:---------|----:|-------:|--------:|---------:|\n|Afghanistan |Asia      | 1952|  28.801|  8425333|  779.4453|\n|Afghanistan |Asia      | 1957|  30.332|  9240934|  820.8530|\n|Afghanistan |Asia      | 1962|  31.997| 10267083|  853.1007|\n|Afghanistan |Asia      | 1967|  34.020| 11537966|  836.1971|\n|Afghanistan |Asia      | 1972|  36.088| 13079460|  739.9811|\n|Afghanistan |Asia      | 1977|  38.438| 14880372|  786.1134|\nAnd this then gets rendered as a table. This works for HTML, PDF, and word!\n\n9.4.1.1 Adding captions to a table\nNow, say that we wanted to include a caption? We use the caption argument. This will also automatically number the table (woo! We’ll cover this later).\n\nknitr::kable(top_gap,\n             caption = \"The first 6 rows of the dataset, gapminder\")\n\n\nThe first 6 rows of the dataset, gapminder\n\n\ncountry\ncontinent\nyear\nlifeExp\npop\ngdpPercap\n\n\n\n\nAfghanistan\nAsia\n1952\n28.801\n8425333\n779.4453\n\n\nAfghanistan\nAsia\n1957\n30.332\n9240934\n820.8530\n\n\nAfghanistan\nAsia\n1962\n31.997\n10267083\n853.1007\n\n\nAfghanistan\nAsia\n1967\n34.020\n11537966\n836.1971\n\n\nAfghanistan\nAsia\n1972\n36.088\n13079460\n739.9811\n\n\nAfghanistan\nAsia\n1977\n38.438\n14880372\n786.1134\n\n\n\n\n\nSome other useful features of kable include setting the rounding number, with the digits option.\nFor example, we could present the first 2 digits of each number like so:\n\nknitr::kable(top_gap,\n             caption = \"The first 6 rows of the dataset, gapminder\",\n             digits = 2)\n\n\nThe first 6 rows of the dataset, gapminder\n\n\ncountry\ncontinent\nyear\nlifeExp\npop\ngdpPercap\n\n\n\n\nAfghanistan\nAsia\n1952\n28.80\n8425333\n779.45\n\n\nAfghanistan\nAsia\n1957\n30.33\n9240934\n820.85\n\n\nAfghanistan\nAsia\n1962\n32.00\n10267083\n853.10\n\n\nAfghanistan\nAsia\n1967\n34.02\n11537966\n836.20\n\n\nAfghanistan\nAsia\n1972\n36.09\n13079460\n739.98\n\n\nAfghanistan\nAsia\n1977\n38.44\n14880372\n786.11\n\n\n\n\n\nThere are other options that you can set in kable, but for these options will get you through a large majority of what you need. For more information on what kable can provide, see ?knitr::kable.\nThere are many different ways to produce tables in R. We have chosen to show kable today because kable is minimal, but powerful. If you want to extend kable to do more, look at kableExtra, in particular the option kableExtra::kable_styling(latex_options = c(\"hold_position\")).\n\n\n\n9.4.2 Your Turn\n\nCreate a summary of your gapminder data, and put it into a table.\nAdd a caption to this table\nSet the number of decimals to 2.",
     "crumbs": [
-      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Figures, Tables, Captions.</span>"
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Figures, Tables, Captions.</span>"
     ]
   },
   {
     "objectID": "figures-tables-captions.html#figures",
     "href": "figures-tables-captions.html#figures",
-    "title": "10  Figures, Tables, Captions.",
-    "section": "10.5 Figures",
-    "text": "10.5 Figures\nPrinting figures is probably my favourite feature of rmarkdown. It is actually relatively straightforward in the case of plots. You provide the plot you want to show in a code chunk!\n\n10.5.0.1 Demo\nFor example, I can print a plot of the gapminder data for Australia like so:\n\nlibrary(ggplot2)\nlibrary(dplyr)\n\n\nAttaching package: 'dplyr'\n\n\nThe following objects are masked from 'package:stats':\n\n    filter, lag\n\n\nThe following objects are masked from 'package:base':\n\n    intersect, setdiff, setequal, union\n\ngapminder %&gt;%\n  filter(country == \"Australia\") %&gt;%\n  ggplot(aes(x = year,\n             y = lifeExp)) + \n  geom_point()\n\n\n\n\n\n\n\n\n\n\n10.5.1 Captions for figures\nInserting a caption for a figure is a little bit different. The caption argument is controlled in the chunk option, under the option, fig.cap.\nSo to insert a figure, we do the following.\n```{r gg-oz-gapminder, fig.cap = \"Life expectancy from 1952 - 2007 for Australia. Life expentancy increases steadily except from 1962 to 1969. We can safely say that our life expectancy is higher than it has ever been!\"}\nlibrary(ggplot2)\nlibrary(dplyr)\n\ngapminder %&gt;%\n  filter(country == \"Australia\") %&gt;%\n  ggplot(aes(x = lifeExp,\n             y = year)) + \n  geom_point()\n```\nWhich would produce the following output\n\nlibrary(ggplot2)\nlibrary(dplyr)\n\ngapminder %&gt;%\n  filter(country == \"Australia\") %&gt;%\n  ggplot(aes(x = lifeExp,\n             y = year)) + \n  geom_point()\n\n\n\n\nLife expectancy from 1952 - 2007 for Australia. Life expentancy increases steadily except from 1962 to 1969. We can safely say that our life expectancy is higher than it has ever been!\n\n\n\n\n\n\n\n10.5.2 Your Turn\n\nCreate a plot with your .Rmd doc\nAdd a figure caption\n\n\n\n10.5.3 Inserting images\nWe cannot always generate the graphics that we want - for example, we might have an image of something that we want to show, or perhaps a nice flowchart someone else made.\nIn our case, say we wanted to insert the new SSA logo into our document, there are two ways we can do this.\n\nWith markdown syntax\nwith knitr::include_graphics()\n\nMarkdown syntax\nThe markdown syntax to insert an image is: ![caption](\"path/to/image\")\n\n10.5.3.1 Demo\nSo we could insert the new SSA vic logo by doing the following:\n```\n![SSA Logo!](bit.ly/ssa-logo)\n```\nWhich would give us the following output:\n\n\n\nSSA Logo!\n\n\nBut say that we want more control over the output, like we want to center the image, and we want to make it smaller? Then you can use knitr::include_graphics(), and control the figure size using the options out.width, and add a caption with fig.cap.\n```{r ssa-logo, fig.align = 'center', out.width = \"25%\", fig.cap = \"The new SSA logo, which is actually a scatterplot, which is super neat!\"}\nknitr::include_graphics(here::here(\"figs\", \"ssa-logo.png\"))\n```\n\nknitr::include_graphics(here::here(\"figs\", \"ssa-logo.png\"))\n\n\n\n\nThe new SSA logo, which is actually a scatterplot, which is super neat!\n\n\n\n\n`\n\n\n\n10.5.4 Your Turn\n\nDownload the gapminder logo and put it into a new directory call “figs”\nInsert this image into your rmarkdown document around where you introduce gapminder.",
+    "title": "9  Figures, Tables, Captions.",
+    "section": "9.5 Figures",
+    "text": "9.5 Figures\nPrinting figures is probably my favourite feature of Quarto. It is actually relatively straightforward in the case of plots. You provide the plot you want to show in a code chunk!\n\n9.5.0.1 Demo\nFor example, I can print a plot of the gapminder data for Australia like so:\n\nlibrary(ggplot2)\nlibrary(dplyr)\n\n\nAttaching package: 'dplyr'\n\n\nThe following objects are masked from 'package:stats':\n\n    filter, lag\n\n\nThe following objects are masked from 'package:base':\n\n    intersect, setdiff, setequal, union\n\ngapminder %&gt;%\n  filter(country == \"Australia\") %&gt;%\n  ggplot(aes(x = year,\n             y = lifeExp)) + \n  geom_point()\n\n\n\n\n\n\n\n\n\n\n9.5.1 Captions for figures\nInserting a caption for a figure is a little bit different. The caption argument is controlled in the chunk option, under the option, fig.cap.\nSo to insert a figure, we do the following.\n\n```{r}\n#| label: gg-oz-gapminder\n#| fig-cap: \"Life expectancy from 1952 - 2007 for Australia. Life expentancy increases steadily except from 1962 to 1969. We can safely say that our life expectancy is higher than it has ever been!\"\nlibrary(ggplot2)\nlibrary(dplyr)\n\ngapminder %&gt;%\n  filter(country == \"Australia\") %&gt;%\n  ggplot(aes(x = lifeExp,\n             y = year)) + \n  geom_point()\n```\n\nWhich would produce the following output\n\nlibrary(ggplot2)\nlibrary(dplyr)\n\ngapminder %&gt;%\n  filter(country == \"Australia\") %&gt;%\n  ggplot(aes(x = lifeExp,\n             y = year)) + \n  geom_point()\n\n\n\n\nLife expectancy from 1952 - 2007 for Australia. Life expentancy increases steadily except from 1962 to 1969. We can safely say that our life expectancy is higher than it has ever been!\n\n\n\n\n\n\n9.5.2 Your Turn\n\nCreate a plot with your .Rmd doc\nAdd a figure caption\n\n\n\n9.5.3 Inserting images\nWe cannot always generate the graphics that we want - for example, we might have an image of something that we want to show, or perhaps a nice flowchart someone else made.\nIn our case, say we wanted to insert the new SSA logo into our document, there are two ways we can do this.\n\nWith markdown syntax\nwith knitr::include_graphics()\n\nMarkdown syntax\nThe markdown syntax to insert an image is: ![caption](\"path/to/image\")\n\n9.5.3.1 Demo\nSo we could insert the new SSA vic logo by doing the following:\n\n```\n![SSA Logo!](bit.ly/ssa-logo)\n```\n\nWhich would give us the following output:\n\n\n\nSSA Logo!\n\n\nBut say that we want more control over the output, like we want to center the image, and we want to make it smaller? Then you can use knitr::include_graphics(), and control the figure size using the options out.width, and add a caption with fig.cap.\n\n```{r ssa-logo, fig.align = 'center', out.width = \"25%\", fig.cap = \"The new SSA logo, which is actually a scatterplot, which is super neat!\"}\nknitr::include_graphics(here::here(\"figs\", \"ssa-logo.png\"))\n```\n\n\nknitr::include_graphics(here::here(\"figs\", \"ssa-logo.png\"))\n\n\n\n\nThe new SSA logo, which is actually a scatterplot, which is super neat!\n\n\n\n\n`\n\n\n\n9.5.4 Your Turn\n\nDownload the gapminder logo and put it into a new directory call “figs”\nInsert this image into your Quarto document around where you introduce gapminder.",
     "crumbs": [
-      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Figures, Tables, Captions.</span>"
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Figures, Tables, Captions.</span>"
     ]
   },
   {
     "objectID": "figures-tables-captions.html#summary",
     "href": "figures-tables-captions.html#summary",
-    "title": "10  Figures, Tables, Captions.",
-    "section": "10.6 Summary",
-    "text": "10.6 Summary\nWe’ve now learned how to insert tables, plots, and images into our documents!",
+    "title": "9  Figures, Tables, Captions.",
+    "section": "9.6 Summary",
+    "text": "9.6 Summary\nWe’ve now learned how to insert tables, plots, and images into our documents!",
     "crumbs": [
-      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Figures, Tables, Captions.</span>"
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Figures, Tables, Captions.</span>"
     ]
   },
   {
     "objectID": "changing-figures.html",
     "href": "changing-figures.html",
-    "title": "11  Customising your figures",
+    "title": "10  Customising your figures",
     "section": "",
-    "text": "11.1 Overview",
+    "text": "10.1 Overview",
     "crumbs": [
-      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Customising your figures</span>"
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Customising your figures</span>"
     ]
   },
   {
     "objectID": "changing-figures.html#overview",
     "href": "changing-figures.html#overview",
-    "title": "11  Customising your figures",
+    "title": "10  Customising your figures",
     "section": "",
     "text": "Teaching 10 minutes\nExercises 10 minutes",
     "crumbs": [
-      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Customising your figures</span>"
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Customising your figures</span>"
     ]
   },
   {
     "objectID": "changing-figures.html#questions",
     "href": "changing-figures.html#questions",
-    "title": "11  Customising your figures",
-    "section": "11.2 Questions",
-    "text": "11.2 Questions\n\nHow do I change the height and width of a figure?\nHow to I change the type of output of a figure? (e.g., PDF, PNG, JPG, SVG)\nCan I set all the figure features globally?\nHow do I save the figures?",
+    "title": "10  Customising your figures",
+    "section": "10.2 Questions",
+    "text": "10.2 Questions\n\nHow do I change the height and width of a figure?\nHow to I change the type of output of a figure? (e.g., PDF, PNG, JPG, SVG)\nCan I set all the figure features globally?\nHow do I save the figures?",
     "crumbs": [
-      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Customising your figures</span>"
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Customising your figures</span>"
     ]
   },
   {
     "objectID": "changing-figures.html#objectives",
     "href": "changing-figures.html#objectives",
-    "title": "11  Customising your figures",
-    "section": "11.3 Objectives",
-    "text": "11.3 Objectives\n\nLearn how to set individual figure height, width, aspect, and print size\nLearn how to set global parameters for your chunks\nGet a copy of all of your figures",
+    "title": "10  Customising your figures",
+    "section": "10.3 Objectives",
+    "text": "10.3 Objectives\n\nLearn how to set individual figure height, width, aspect, and print size\nLearn how to set global parameters for your chunks\nGet a copy of all of your figures",
     "crumbs": [
-      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Customising your figures</span>"
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Customising your figures</span>"
     ]
   },
   {
     "objectID": "changing-figures.html#which-chunk-options-should-you-care-about-for-this",
     "href": "changing-figures.html#which-chunk-options-should-you-care-about-for-this",
-    "title": "11  Customising your figures",
-    "section": "11.4 Which chunk options should you care about for this?",
-    "text": "11.4 Which chunk options should you care about for this?\nThere are many chunk options that control your output, but only a few that you really need to worry about for your figures:\n\nfig-align: How do you want your figure aligned? Takes one of the following inputs: “default”, “center”, “left”, or “right”? (demo)\nfig-cap: Would you like a caption for your figure? It takes a character vector as input: “My Amazing Graph”\nfig-height & fig-width: How tall and wide would you like your figure in inches? Each takes one number (e.g., 7, or 9) [Note: these numbers are not quoted]\n\n\nFor demonstration purposes, let’s take a plot from earlier and show how it’s output can change.\n\nwith fig-height, fig-width, fig-format:\n\n\n11.4.1 Your Turn\n\nOpen exercise exercises/02-qmd-figures-chunks/02-qmd-figures-chunks.qmd Create three figures, with the respective dimensions (fig-height and fig-width)\n\n2x2\n10x10\n4x7\n\nNow add to those figures, the following:\n\nfig-align = \"center\"\n\nNow change the output type to be “svg”",
+    "title": "10  Customising your figures",
+    "section": "10.4 Which chunk options should you care about for this?",
+    "text": "10.4 Which chunk options should you care about for this?\nThere are many chunk options that control your output, but only a few that you really need to worry about for your figures:\n\nfig-align: How do you want your figure aligned? Takes one of the following inputs: “default”, “center”, “left”, or “right”? (demo)\nfig-cap: Would you like a caption for your figure? It takes a character vector as input: “My Amazing Graph”\nfig-height & fig-width: How tall and wide would you like your figure in inches? Each takes one number (e.g., 7, or 9) [Note: these numbers are not quoted]\n\n\nFor demonstration purposes, let’s take a plot from earlier and show how it’s output can change.\n\nwith fig-height, fig-width, fig-format:\n\n\n10.4.1 Your Turn\n\nOpen exercise exercises/02-qmd-figures-chunks/02-qmd-figures-chunks.qmd Create three figures, with the respective dimensions (fig-height and fig-width)\n\n2x2\n10x10\n4x7\n\nNow add to those figures, the following:\n\nfig-align = \"center\"\n\nNow change the output type to be “svg”",
     "crumbs": [
-      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Customising your figures</span>"
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Customising your figures</span>"
     ]
   },
   {
     "objectID": "changing-figures.html#setting-global-options",
     "href": "changing-figures.html#setting-global-options",
-    "title": "11  Customising your figures",
-    "section": "11.5 Setting global options",
-    "text": "11.5 Setting global options\nIf we repeat adding the same chunk options for each figure, we might want to consider setting them globally. We can do this by changing the options in the YAML:\n---\ntitle: \"02-qmd-figures-chunks\"\nauthor: \"Your Name\"\ndate: 2024/06/23\nformat: \n  html:\n    fig-height: 7\n    fig-width: 7\n    fig-format: png\n    fig-dpi: 300\n---\n\n11.5.1 Your Turn\n\nSet the global options in your document to set:\n\n\nfig-height\nfig-width\nfig-format",
+    "title": "10  Customising your figures",
+    "section": "10.5 Setting global options",
+    "text": "10.5 Setting global options\nIf we repeat adding the same chunk options for each figure, we might want to consider setting them globally. We can do this by changing the options in the YAML:\n---\ntitle: \"02-qmd-figures-chunks\"\nauthor: \"Your Name\"\ndate: 2024/06/23\nformat: \n  html:\n    fig-height: 7\n    fig-width: 7\n    fig-format: png\n    fig-dpi: 300\n---\n\n10.5.1 Your Turn\n\nSet the global options in your document to set:\n\n\nfig-height\nfig-width\nfig-format",
     "crumbs": [
-      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Customising your figures</span>"
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Customising your figures</span>"
     ]
   },
   {
     "objectID": "changing-figures.html#keeping-your-markdown",
     "href": "changing-figures.html#keeping-your-markdown",
-    "title": "11  Customising your figures",
-    "section": "11.6 Keeping your markdown",
-    "text": "11.6 Keeping your markdown\nYou can set the options for your figures, which will change how they appear on the page, but this won’t save the figures anywhere. In order to save the figures to file, you need to edit the YAML option keep-md: true:\n---\ntitle: \"Awesome report\"\nauthor: \"You\"\nformat: \n  html:\n    keep-md: true\n---",
+    "title": "10  Customising your figures",
+    "section": "10.6 Keeping your markdown",
+    "text": "10.6 Keeping your markdown\nYou can set the options for your figures, which will change how they appear on the page, but this won’t save the figures anywhere. In order to save the figures to file, you need to edit the YAML option keep-md: true:\n---\ntitle: \"Awesome report\"\nauthor: \"You\"\nformat: \n  html:\n    keep-md: true\n---",
     "crumbs": [
-      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Customising your figures</span>"
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Customising your figures</span>"
     ]
   },
   {
     "objectID": "changing-figures.html#altering-the-figure-path-figures-are-saved-to",
     "href": "changing-figures.html#altering-the-figure-path-figures-are-saved-to",
-    "title": "11  Customising your figures",
-    "section": "11.7 Altering the figure path figures are saved to",
-    "text": "11.7 Altering the figure path figures are saved to\nBy default, the figures are saved in a folder named after the file, e.g.,\n02-qmd-figures-chunks_files/figure-htaml\nIf you want to change this location, you can control the specific name of the folder by setting fig.path like so in the YAML\n---\ntitle: \"Awesome report\"\nauthor: \"You\"\nformat: \n  html:\n    keep-md: true\nknitr:\n  opts_chunk:\n    fig.path: folder/for/figures/prefix-\n---\nIf you do now want a prefix specified, you must end this part with a slash, e.g.,\n---\ntitle: \"Awesome report\"\nauthor: \"You\"\nformat: \n  html:\n    keep-md: true\nknitr:\n  opts_chunk:\n    fig.path: figures/\n---\n(reference: https://github.com/quarto-dev/quarto-cli/discussions/4254)",
+    "title": "10  Customising your figures",
+    "section": "10.7 Altering the figure path figures are saved to",
+    "text": "10.7 Altering the figure path figures are saved to\nBy default, the figures are saved in a folder named after the file, e.g.,\n02-qmd-figures-chunks_files/figure-htaml\nIf you want to change this location, you can control the specific name of the folder by setting fig.path like so in the YAML\n---\ntitle: \"Awesome report\"\nauthor: \"You\"\nformat: \n  html:\n    keep-md: true\nknitr:\n  opts_chunk:\n    fig.path: folder/for/figures/prefix-\n---\nIf you do now want a prefix specified, you must end this part with a slash, e.g.,\n---\ntitle: \"Awesome report\"\nauthor: \"You\"\nformat: \n  html:\n    keep-md: true\nknitr:\n  opts_chunk:\n    fig.path: figures/\n---\n(reference: https://github.com/quarto-dev/quarto-cli/discussions/4254)",
     "crumbs": [
-      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Customising your figures</span>"
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Customising your figures</span>"
     ]
   },
   {
     "objectID": "changing-figures.html#your-turn-2",
     "href": "changing-figures.html#your-turn-2",
-    "title": "11  Customising your figures",
-    "section": "11.8 Your Turn",
-    "text": "11.8 Your Turn\n\nSave your images to a specific directory of your choice",
+    "title": "10  Customising your figures",
+    "section": "10.8 Your Turn",
+    "text": "10.8 Your Turn\n\nSave your images to a specific directory of your choice",
     "crumbs": [
-      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Customising your figures</span>"
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Customising your figures</span>"
     ]
   },
   {
     "objectID": "changing-figures.html#further-reading",
     "href": "changing-figures.html#further-reading",
-    "title": "11  Customising your figures",
-    "section": "11.9 Further Reading",
-    "text": "11.9 Further Reading\n\nOfficial Quarto documentation on figures",
+    "title": "10  Customising your figures",
+    "section": "10.9 Further Reading",
+    "text": "10.9 Further Reading\n\nOfficial Quarto documentation on figures",
     "crumbs": [
-      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Customising your figures</span>"
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Customising your figures</span>"
     ]
   },
   {
     "objectID": "changing-figures.html#epstiffother-multiple-image-formats",
     "href": "changing-figures.html#epstiffother-multiple-image-formats",
-    "title": "11  Customising your figures",
-    "section": "11.10 EPS/TIFF/Other multiple image formats",
-    "text": "11.10 EPS/TIFF/Other multiple image formats\nUnfortunately (currently) in Quarto it seems you cannot save to other image formats such as “eps”, “tiff”, and cannot save to multiple formats at the same time.\nIf you would like to convert images to a specific format, you could try using code like the following.\n\nlibrary(magick)\nlibrary(fs)\n\n# List existing file paths matching \"png\" extension\nfigures_ls &lt;- dir_ls(\n  path = \"exercises/02-qmd-figures-chunks/02-qmd-figures-chunks_files/\",\n  recurse = TRUE,\n  glob = \"*.png\"\n  )\n\n# read images in\nlibrary(purrr)\nfigures &lt;- map(\n  figures_ls,\n  \\(x) image_read(path = x)\n)\n\n# create new paths with .TIFF extension\n# substitute out for another image format like \"bmp\", \"\nnew_paths &lt;- xfun::with_ext(figures_ls, \"tiff\")\n\n# write new images\nwalk2(\n  .x = figures,\n  .y = new_paths,\n  \\(x, y) image_write(image = x, path = y)\n)",
+    "title": "10  Customising your figures",
+    "section": "10.10 EPS/TIFF/Other multiple image formats",
+    "text": "10.10 EPS/TIFF/Other multiple image formats\nUnfortunately (currently) in Quarto it seems you cannot save to other image formats such as “eps”, “tiff”, and cannot save to multiple formats at the same time.\nIf you would like to convert images to a specific format, you could try using code like the following.\n\nlibrary(magick)\nlibrary(fs)\n\n# List existing file paths matching \"png\" extension\nfigures_ls &lt;- dir_ls(\n  path = \"exercises/02-qmd-figures-chunks/02-qmd-figures-chunks_files/\",\n  recurse = TRUE,\n  glob = \"*.png\"\n  )\n\n# read images in\nlibrary(purrr)\nfigures &lt;- map(\n  figures_ls,\n  \\(x) image_read(path = x)\n)\n\n# create new paths with .TIFF extension\n# substitute out for another image format like \"bmp\", \"\nnew_paths &lt;- xfun::with_ext(figures_ls, \"tiff\")\n\n# write new images\nwalk2(\n  .x = figures,\n  .y = new_paths,\n  \\(x, y) image_write(image = x, path = y)\n)",
     "crumbs": [
-      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Customising your figures</span>"
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Customising your figures</span>"
     ]
   },
   {
     "objectID": "math.html",
     "href": "math.html",
-    "title": "12  Math",
+    "title": "11  Math",
     "section": "",
-    "text": "12.1 Overview",
+    "text": "11.1 Overview",
     "crumbs": [
-      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Math</span>"
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Math</span>"
     ]
   },
   {
     "objectID": "math.html#overview",
     "href": "math.html#overview",
-    "title": "12  Math",
+    "title": "11  Math",
     "section": "",
     "text": "Teaching: 10 minutes\nExercises: 10 minutes",
     "crumbs": [
-      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Math</span>"
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Math</span>"
     ]
   },
   {
     "objectID": "math.html#questions",
     "href": "math.html#questions",
-    "title": "12  Math",
-    "section": "12.2 Questions",
-    "text": "12.2 Questions\n\nHow to I create an equation?\nLaTeX is funky, what are the basic math commands?",
+    "title": "11  Math",
+    "section": "11.2 Questions",
+    "text": "11.2 Questions\n\nHow to I create an equation?\nLaTeX is funky, what are the basic math commands?",
     "crumbs": [
-      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Math</span>"
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Math</span>"
     ]
   },
   {
     "objectID": "math.html#objectives",
     "href": "math.html#objectives",
-    "title": "12  Math",
-    "section": "12.3 Objectives",
-    "text": "12.3 Objectives",
+    "title": "11  Math",
+    "section": "11.3 Objectives",
+    "text": "11.3 Objectives",
     "crumbs": [
-      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Math</span>"
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Math</span>"
     ]
   },
   {
     "objectID": "math.html#some-history",
     "href": "math.html#some-history",
-    "title": "12  Math",
-    "section": "12.4 Some history",
-    "text": "12.4 Some history\nEquation editing was first made available in TeX, which later become LaTeX, named after Leslie Lamport.",
+    "title": "11  Math",
+    "section": "11.4 Some history",
+    "text": "11.4 Some history\nEquation editing was first made available in TeX, which later become LaTeX, named after Leslie Lamport.",
     "crumbs": [
-      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Math</span>"
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Math</span>"
     ]
   },
   {
     "objectID": "math.html#anatomy-of-equations",
     "href": "math.html#anatomy-of-equations",
-    "title": "12  Math",
-    "section": "12.5 Anatomy of Equations",
-    "text": "12.5 Anatomy of Equations\nThis section shows you some basic equations types that you want to be familiar with.\nInline equations are referenced by a pair of dollar signs: $.\nSo this text would have an equation here $ E = mc^2$\nGenerates:\nSo this text would have an equation here $ E = mc^2$\nDisplay equations are referenced by two pairs of dollar signs:\n$$\nE = mc^2\n$$\n\\[\nE = mc^2\n\\]\n\n12.5.0.1 Viewing equations\nUnderstanding whether or not you have created the right equation can be difficult. Rstudio provides previews of your equations in text (demo).",
+    "title": "11  Math",
+    "section": "11.5 Anatomy of Equations",
+    "text": "11.5 Anatomy of Equations\nThis section shows you some basic equations types that you want to be familiar with.\nInline equations are referenced by a pair of dollar signs: $.\nSo this text would have an equation here $ E = mc^2$\nGenerates:\nSo this text would have an equation here $ E = mc^2$\nDisplay equations are referenced by two pairs of dollar signs:\n$$\nE = mc^2\n$$\n\\[\nE = mc^2\n\\]\n\n11.5.0.1 Viewing equations\nUnderstanding whether or not you have created the right equation can be difficult. Rstudio provides previews of your equations in text (demo).",
     "crumbs": [
-      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Math</span>"
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Math</span>"
     ]
   },
   {
     "objectID": "math.html#example-math-commands",
     "href": "math.html#example-math-commands",
-    "title": "12  Math",
-    "section": "12.6 Example math commands",
-    "text": "12.6 Example math commands\nLaTeX is an amazing language, but understanding how to create the equations can be (more than) a bit confusing at times. This section demonstrates some example equations that you might be familiar with.\n\n12.6.0.1 Fractions\n$$\n\\frac{1}{2}\n$$\n\\[\n\\frac{1}{2}\n\\]\n\n\n12.6.0.2 Sub and Super Scripts\n$$\nY = X_1 + X_2\n$$\n\n$$\na^2 + b^2 = c^2\n$$\n\\[\nY = X_1 + X_2\n\\]\n\\[\na^2 + b^2 = c^2\n\\]\n\n\n12.6.0.3 Square roots\n$$\n\\sqrt{p}\n$$\n\n$$\nx = \\frac{-b \\pm \\sqrt{b^2 - 4ac}}{2a}\n$$\n\\[\n\\sqrt{p}\n\\]\n\\[\nx = \\frac{-b \\pm \\sqrt{b^2 - 4ac}}{2a}\n\\]\n\n\n12.6.0.4 Summations\n$$\n\\sum_{i = 1}^{n}{(\\bar{x} - x_i)^2}\n$$\n\\[\n\\sum_{i = 1}^{n}{(\\bar{x} - x_i)^2}\n\\]\n\n\n12.6.0.5 Bayes Rule\n$$\nPr(\\theta | y) = \\frac{Pr(y | \\theta) Pr(\\theta)}{Pr(y)}\n$$\n\n$$\nPr(\\theta | y) \\propto Pr(y | \\theta) Pr(\\theta)\n$$\n\\[\nPr(\\theta | y) = \\frac{Pr(y | \\theta) Pr(\\theta)}{Pr(y)}\n\\]\n\\[\nPr(\\theta | y) \\propto Pr(y | \\theta) Pr(\\theta)\n\\]\n\n\n12.6.0.6 Linear Model\n$$\nY \\sim X\\beta_0 + X\\beta_1 + \\epsilon\n$$\n\n$$\n\\epsilon \\sim N(0,\\sigma^2)\n$$\n\\[\nY \\sim X\\beta_0 + X\\beta_1 + \\epsilon\n\\]\n\\[\n\\epsilon \\sim N(0,\\sigma^2)\n\\]",
+    "title": "11  Math",
+    "section": "11.6 Example math commands",
+    "text": "11.6 Example math commands\nLaTeX is an amazing language, but understanding how to create the equations can be (more than) a bit confusing at times. This section demonstrates some example equations that you might be familiar with.\n\n11.6.0.1 Fractions\n$$\n\\frac{1}{2}\n$$\n\\[\n\\frac{1}{2}\n\\]\n\n\n11.6.0.2 Sub and Super Scripts\n$$\nY = X_1 + X_2\n$$\n\n$$\na^2 + b^2 = c^2\n$$\n\\[\nY = X_1 + X_2\n\\]\n\\[\na^2 + b^2 = c^2\n\\]\n\n\n11.6.0.3 Square roots\n$$\n\\sqrt{p}\n$$\n\n$$\nx = \\frac{-b \\pm \\sqrt{b^2 - 4ac}}{2a}\n$$\n\\[\n\\sqrt{p}\n\\]\n\\[\nx = \\frac{-b \\pm \\sqrt{b^2 - 4ac}}{2a}\n\\]\n\n\n11.6.0.4 Summations\n$$\n\\sum_{i = 1}^{n}{(\\bar{x} - x_i)^2}\n$$\n\\[\n\\sum_{i = 1}^{n}{(\\bar{x} - x_i)^2}\n\\]\n\n\n11.6.0.5 Bayes Rule\n$$\nPr(\\theta | y) = \\frac{Pr(y | \\theta) Pr(\\theta)}{Pr(y)}\n$$\n\n$$\nPr(\\theta | y) \\propto Pr(y | \\theta) Pr(\\theta)\n$$\n\\[\nPr(\\theta | y) = \\frac{Pr(y | \\theta) Pr(\\theta)}{Pr(y)}\n\\]\n\\[\nPr(\\theta | y) \\propto Pr(y | \\theta) Pr(\\theta)\n\\]\n\n\n11.6.0.6 Linear Model\n$$\nY \\sim X\\beta_0 + X\\beta_1 + \\epsilon\n$$\n\n$$\n\\epsilon \\sim N(0,\\sigma^2)\n$$\n\\[\nY \\sim X\\beta_0 + X\\beta_1 + \\epsilon\n\\]\n\\[\n\\epsilon \\sim N(0,\\sigma^2)\n\\]",
     "crumbs": [
-      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Math</span>"
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Math</span>"
     ]
   },
   {
     "objectID": "math.html#exercise",
     "href": "math.html#exercise",
-    "title": "12  Math",
-    "section": "12.7 Exercise",
-    "text": "12.7 Exercise\n\nAdd some math to your example document",
+    "title": "11  Math",
+    "section": "11.7 Exercise",
+    "text": "11.7 Exercise\n\nAdd some math to your example document",
     "crumbs": [
-      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Math</span>"
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Math</span>"
     ]
   },
   {
     "objectID": "math.html#further-reading",
     "href": "math.html#further-reading",
-    "title": "12  Math",
-    "section": "12.8 Further Reading:",
-    "text": "12.8 Further Reading:\nhttps://quarto.org/docs/visual-editor/technical.html#equations https://oeis.org/wiki/List_of_LaTeX_mathematical_symbols",
+    "title": "11  Math",
+    "section": "11.8 Further Reading:",
+    "text": "11.8 Further Reading:\nhttps://quarto.org/docs/visual-editor/technical.html#equations https://oeis.org/wiki/List_of_LaTeX_mathematical_symbols",
     "crumbs": [
-      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Math</span>"
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Math</span>"
     ]
   },
   {
     "objectID": "cite-fig-tab-sec.html",
     "href": "cite-fig-tab-sec.html",
-    "title": "13  Citing Figures, Tables & Sections",
+    "title": "12  Citing Figures, Tables & Sections",
     "section": "",
-    "text": "13.1 Overview",
+    "text": "12.1 Overview",
     "crumbs": [
-      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Citing Figures, Tables & Sections</span>"
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Citing Figures, Tables & Sections</span>"
     ]
   },
   {
     "objectID": "cite-fig-tab-sec.html#overview",
     "href": "cite-fig-tab-sec.html#overview",
-    "title": "13  Citing Figures, Tables & Sections",
+    "title": "12  Citing Figures, Tables & Sections",
     "section": "",
     "text": "Teaching 10 minutes\nExercises 15 minutes",
     "crumbs": [
-      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Citing Figures, Tables & Sections</span>"
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Citing Figures, Tables & Sections</span>"
     ]
   },
   {
     "objectID": "cite-fig-tab-sec.html#questions",
     "href": "cite-fig-tab-sec.html#questions",
-    "title": "13  Citing Figures, Tables & Sections",
-    "section": "13.2 Questions",
-    "text": "13.2 Questions\n\nHow do I refer to the table or figure in text and link to it?",
+    "title": "12  Citing Figures, Tables & Sections",
+    "section": "12.2 Questions",
+    "text": "12.2 Questions\n\nHow do I refer to the table or figure in text and link to it?",
     "crumbs": [
-      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Citing Figures, Tables & Sections</span>"
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Citing Figures, Tables & Sections</span>"
     ]
   },
   {
     "objectID": "cite-fig-tab-sec.html#objectives",
     "href": "cite-fig-tab-sec.html#objectives",
-    "title": "13  Citing Figures, Tables & Sections",
-    "section": "13.3 Objectives",
-    "text": "13.3 Objectives\n\nLink to tables or figures in text.",
+    "title": "12  Citing Figures, Tables & Sections",
+    "section": "12.3 Objectives",
+    "text": "12.3 Objectives\n\nLink to tables or figures in text.",
     "crumbs": [
-      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Citing Figures, Tables & Sections</span>"
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Citing Figures, Tables & Sections</span>"
     ]
   },
   {
     "objectID": "cite-fig-tab-sec.html#how-to-refer-to-tables-and-figures-in-text-demo",
     "href": "cite-fig-tab-sec.html#how-to-refer-to-tables-and-figures-in-text-demo",
-    "title": "13  Citing Figures, Tables & Sections",
-    "section": "13.4 How to refer to tables and figures in text? (demo)",
-    "text": "13.4 How to refer to tables and figures in text? (demo)\n\nTables are referenced in text with @tbl-label\nFigures are references in text with @fig-label\n\nImportantly here, for these two above examples to work, the things that they are referring to must have the exact label tbl-label and fig-label, respectively.\nSo, in order to use this referencing style, you must use specific labelling of your code chunks. For example, if you have some code like this:\n\n```{r}\n#| label: example-figure\nimage(volcano)\n```\n\n\n\n\n\n\n\n\nThen you cannot reference this figure in text - @example-figure does not work: (example-figure?).\nIt would need to have a label like:\n\n```{r}\n#| label: fig-example\nimage(volcano)\n```\n\n\n\n\n\n\n\nFigure 13.1\n\n\n\n\n\nThen you can reference it with: @fig-example - Figure 13.1.\nAlso note that there are a variety of ways to specify the figure:\n\n@fig-example: Figure 13.1\n@Fig-example: Figure 13.1\n[Fig @fig-example]: Fig 13.1\n-@fig-example: Figure -Figure 13.1\n\n(reference here: https://quarto.org/docs/authoring/cross-references.html#references)",
+    "title": "12  Citing Figures, Tables & Sections",
+    "section": "12.4 How to refer to tables and figures in text? (demo)",
+    "text": "12.4 How to refer to tables and figures in text? (demo)\n\nTables are referenced in text with @tbl-label\nFigures are references in text with @fig-label\n\nImportantly here, for these two above examples to work, the things that they are referring to must have the exact label tbl-label and fig-label, respectively.\nSo, in order to use this referencing style, you must use specific labelling of your code chunks. For example, if you have some code like this:\n\n```{r}\n#| label: example-figure\nimage(volcano)\n```\n\n\n\n\n\n\n\n\nThen you cannot reference this figure in text - @example-figure does not work: (example-figure?).\nIt would need to have a label like:\n\n```{r}\n#| label: fig-example\nimage(volcano)\n```\n\n\n\n\n\n\n\nFigure 12.1\n\n\n\n\n\nThen you can reference it with: @fig-example - Figure 12.1.\nAlso note that there are a variety of ways to specify the figure:\n\n@fig-example: Figure 12.1\n@Fig-example: Figure 12.1\n[Fig @fig-example]: Fig 12.1\n-@fig-example: Figure -Figure 12.1\n\n(reference here: https://quarto.org/docs/authoring/cross-references.html#references)",
     "crumbs": [
-      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Citing Figures, Tables & Sections</span>"
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Citing Figures, Tables & Sections</span>"
     ]
   },
   {
     "objectID": "cite-fig-tab-sec.html#your-turn-exercise",
     "href": "cite-fig-tab-sec.html#your-turn-exercise",
-    "title": "13  Citing Figures, Tables & Sections",
-    "section": "13.5 Your Turn (exercise)",
-    "text": "13.5 Your Turn (exercise)\n\nConvert your output to use fig prefixes to reference figures\n\n\n13.5.1 Demo (.demo)\n\n```{r}\n#| label: fig-gg-oz\n#| fig-cap: Life expectancy from 1952 - 2007 for Australia. Life expectancy increases\n#|   steadily except from 1962 to 1969. We can safely say our life expectancy is\n#|   higher than it has ever been!\nlibrary(ggplot2)\nlibrary(dplyr)\ngapminder %&gt;%\n  filter(country == \"Australia\") %&gt;%\n  ggplot(aes(x = year,\n             y = lifeExp)) + \n  geom_point()\n```\n\n\n\n\n\n\n\nFigure 13.2: Life expectancy from 1952 - 2007 for Australia. Life expectancy increases steadily except from 1962 to 1969. We can safely say our life expectancy is higher than it has ever been!\n\n\n\n\n\nAustralia’s life expectancy has increased a great deal over the past 50 years (See Figure -Figure 13.2.\n\n\n13.5.2 Your Turn\n\nAdd a new plot in your document and reference it",
+    "title": "12  Citing Figures, Tables & Sections",
+    "section": "12.5 Your Turn (exercise)",
+    "text": "12.5 Your Turn (exercise)\n\nConvert your output to use fig prefixes to reference figures\n\n\n12.5.1 Demo (.demo)\n\n```{r}\n#| label: fig-gg-oz\n#| fig-cap: Life expectancy from 1952 - 2007 for Australia. Life expectancy increases\n#|   steadily except from 1962 to 1969. We can safely say our life expectancy is\n#|   higher than it has ever been!\nlibrary(ggplot2)\nlibrary(dplyr)\ngapminder %&gt;%\n  filter(country == \"Australia\") %&gt;%\n  ggplot(aes(x = year,\n             y = lifeExp)) + \n  geom_point()\n```\n\n\n\n\n\n\n\nFigure 12.2: Life expectancy from 1952 - 2007 for Australia. Life expectancy increases steadily except from 1962 to 1969. We can safely say our life expectancy is higher than it has ever been!\n\n\n\n\n\nAustralia’s life expectancy has increased a great deal over the past 50 years (See Figure -Figure 12.2.\n\n\n12.5.2 Your Turn\n\nAdd a new plot in your document and reference it",
     "crumbs": [
-      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Citing Figures, Tables & Sections</span>"
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Citing Figures, Tables & Sections</span>"
     ]
   },
   {
     "objectID": "cite-fig-tab-sec.html#referencing-a-table",
     "href": "cite-fig-tab-sec.html#referencing-a-table",
-    "title": "13  Citing Figures, Tables & Sections",
-    "section": "13.6 Referencing a table",
-    "text": "13.6 Referencing a table\nTo cite a table, you write the following:\n@tbl-chunk-name\n\n```{r}\n#| label: tbl-gg-oz-tab\ngapminder %&gt;%\n  filter(country == \"Australia\") %&gt;%\n  knitr::kable(caption = \"Raw gapminder data for Australia.\")\n```\n\n\n\nTable 13.1: Raw gapminder data for Australia.\n\n\n\n\n\n\ncountry\ncontinent\nyear\nlifeExp\npop\ngdpPercap\n\n\n\n\nAustralia\nOceania\n1952\n69.120\n8691212\n10039.60\n\n\nAustralia\nOceania\n1957\n70.330\n9712569\n10949.65\n\n\nAustralia\nOceania\n1962\n70.930\n10794968\n12217.23\n\n\nAustralia\nOceania\n1967\n71.100\n11872264\n14526.12\n\n\nAustralia\nOceania\n1972\n71.930\n13177000\n16788.63\n\n\nAustralia\nOceania\n1977\n73.490\n14074100\n18334.20\n\n\nAustralia\nOceania\n1982\n74.740\n15184200\n19477.01\n\n\nAustralia\nOceania\n1987\n76.320\n16257249\n21888.89\n\n\nAustralia\nOceania\n1992\n77.560\n17481977\n23424.77\n\n\nAustralia\nOceania\n1997\n78.830\n18565243\n26997.94\n\n\nAustralia\nOceania\n2002\n80.370\n19546792\n30687.75\n\n\nAustralia\nOceania\n2007\n81.235\n20434176\n34435.37\n\n\n\n\n\n\n\n\n@tbl-chunk-name\nReference: https://quarto.org/docs/authoring/cross-references.html#tables",
+    "title": "12  Citing Figures, Tables & Sections",
+    "section": "12.6 Referencing a table",
+    "text": "12.6 Referencing a table\nTo cite a table, you write the following:\n@tbl-chunk-name\n\n```{r}\n#| label: tbl-gg-oz-tab\ngapminder %&gt;%\n  filter(country == \"Australia\") %&gt;%\n  knitr::kable(caption = \"Raw gapminder data for Australia.\")\n```\n\n\n\nTable 12.1: Raw gapminder data for Australia.\n\n\n\n\n\n\ncountry\ncontinent\nyear\nlifeExp\npop\ngdpPercap\n\n\n\n\nAustralia\nOceania\n1952\n69.120\n8691212\n10039.60\n\n\nAustralia\nOceania\n1957\n70.330\n9712569\n10949.65\n\n\nAustralia\nOceania\n1962\n70.930\n10794968\n12217.23\n\n\nAustralia\nOceania\n1967\n71.100\n11872264\n14526.12\n\n\nAustralia\nOceania\n1972\n71.930\n13177000\n16788.63\n\n\nAustralia\nOceania\n1977\n73.490\n14074100\n18334.20\n\n\nAustralia\nOceania\n1982\n74.740\n15184200\n19477.01\n\n\nAustralia\nOceania\n1987\n76.320\n16257249\n21888.89\n\n\nAustralia\nOceania\n1992\n77.560\n17481977\n23424.77\n\n\nAustralia\nOceania\n1997\n78.830\n18565243\n26997.94\n\n\nAustralia\nOceania\n2002\n80.370\n19546792\n30687.75\n\n\nAustralia\nOceania\n2007\n81.235\n20434176\n34435.37\n\n\n\n\n\n\n\n\n@tbl-chunk-name\nReference: https://quarto.org/docs/authoring/cross-references.html#tables",
     "crumbs": [
-      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Citing Figures, Tables & Sections</span>"
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Citing Figures, Tables & Sections</span>"
     ]
   },
   {
     "objectID": "cite-fig-tab-sec.html#other-things-you-can-reference",
     "href": "cite-fig-tab-sec.html#other-things-you-can-reference",
-    "title": "13  Citing Figures, Tables & Sections",
-    "section": "13.7 Other things you can reference",
-    "text": "13.7 Other things you can reference\nYou can also reference theorems, code, proofs, and equations! See https://quarto.org/docs/authoring/cross-references.html#theorems-and-proofs for more details.\n\n13.7.1 Your Turn (exercise)\n\nCreate a table in your document and refer to it in text",
+    "title": "12  Citing Figures, Tables & Sections",
+    "section": "12.7 Other things you can reference",
+    "text": "12.7 Other things you can reference\nYou can also reference theorems, code, proofs, and equations! See https://quarto.org/docs/authoring/cross-references.html#theorems-and-proofs for more details.\n\n12.7.1 Your Turn (exercise)\n\nCreate a table in your document and refer to it in text",
     "crumbs": [
-      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Citing Figures, Tables & Sections</span>"
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Citing Figures, Tables & Sections</span>"
     ]
   },
   {
     "objectID": "cite-fig-tab-sec.html#referencing-a-section",
     "href": "cite-fig-tab-sec.html#referencing-a-section",
-    "title": "13  Citing Figures, Tables & Sections",
-    "section": "13.8 Referencing a section",
-    "text": "13.8 Referencing a section\nYou can even reference a section in your report: @sec-slug\nHowever, in order to write this, you need to include sec-slug in your markdown header, like so:\n## your amazing header {#sec-slug}\nYou must also include number-section in your YAML:\n---\ntitle: \"example\"\nnumber-sections: true\n---\nFor example, I can refer to the first section (Section Chapter 13) in this document by referring to the section as\n(Section @sec-start)\nbecause it was written as:\n# Citing Figures, Tables & Sections {#sec-start}\n\n13.8.1 Your Turn\n\nReference a section in the report.",
+    "title": "12  Citing Figures, Tables & Sections",
+    "section": "12.8 Referencing a section",
+    "text": "12.8 Referencing a section\nYou can even reference a section in your report: @sec-slug\nHowever, in order to write this, you need to include sec-slug in your markdown header, like so:\n## your amazing header {#sec-slug}\nYou must also include number-section in your YAML:\n---\ntitle: \"example\"\nnumber-sections: true\n---\nFor example, I can refer to the first section (Section Chapter 12) in this document by referring to the section as\n(Section @sec-start)\nbecause it was written as:\n# Citing Figures, Tables & Sections {#sec-start}\n\n12.8.1 Your Turn\n\nReference a section in the report.",
     "crumbs": [
-      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Citing Figures, Tables & Sections</span>"
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Citing Figures, Tables & Sections</span>"
     ]
   },
   {
     "objectID": "citations-and-styles.html",
     "href": "citations-and-styles.html",
-    "title": "14  Citing Articles & Bibliography Styles",
+    "title": "13  Citing Articles & Bibliography Styles",
     "section": "",
-    "text": "14.1 Overview",
+    "text": "13.1 Overview",
     "crumbs": [
-      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Citing Articles & Bibliography Styles</span>"
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Citing Articles & Bibliography Styles</span>"
     ]
   },
   {
     "objectID": "citations-and-styles.html#overview",
     "href": "citations-and-styles.html#overview",
-    "title": "14  Citing Articles & Bibliography Styles",
+    "title": "13  Citing Articles & Bibliography Styles",
     "section": "",
     "text": "Teaching\nExercises",
     "crumbs": [
-      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Citing Articles & Bibliography Styles</span>"
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Citing Articles & Bibliography Styles</span>"
     ]
   },
   {
     "objectID": "citations-and-styles.html#questions",
     "href": "citations-and-styles.html#questions",
-    "title": "14  Citing Articles & Bibliography Styles",
-    "section": "14.2 Questions",
-    "text": "14.2 Questions\n\nWhat sort of things can I cite?\nHow do I manage my .bib file?\nHow do I change the citation style?",
+    "title": "13  Citing Articles & Bibliography Styles",
+    "section": "13.2 Questions",
+    "text": "13.2 Questions\n\nWhat sort of things can I cite?\nHow do I manage my .bib file?\nHow do I change the citation style?",
     "crumbs": [
-      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Citing Articles & Bibliography Styles</span>"
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Citing Articles & Bibliography Styles</span>"
     ]
   },
   {
     "objectID": "citations-and-styles.html#objectives",
     "href": "citations-and-styles.html#objectives",
-    "title": "14  Citing Articles & Bibliography Styles",
-    "section": "14.3 Objectives",
-    "text": "14.3 Objectives\n\nProvide a bibliography at the end of the document\nCite articles and packages during the document\nlearn how to manage citation styles",
+    "title": "13  Citing Articles & Bibliography Styles",
+    "section": "13.3 Objectives",
+    "text": "13.3 Objectives\n\nProvide a bibliography at the end of the document\nCite articles and packages during the document\nlearn how to manage citation styles",
     "crumbs": [
-      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Citing Articles & Bibliography Styles</span>"
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Citing Articles & Bibliography Styles</span>"
     ]
   },
   {
     "objectID": "citations-and-styles.html#how-to-cite-things",
     "href": "citations-and-styles.html#how-to-cite-things",
-    "title": "14  Citing Articles & Bibliography Styles",
-    "section": "14.4 How to cite things",
-    "text": "14.4 How to cite things\nCiting things in a Quarto document is straightforward, you refer to articles you want to cite using [@article-handle]. Here, article-handle matches the article handle in your .bib file.\nThis .bib file is referred to in the YAML of your document, under the option bibliography: filename.bib:\n---\ntitle: \nauthor:\noutput: html_document\nbibliography: references.bib\n---\n\n14.4.1 What is a .bib file?\nGood question. .bib is a format for storing references from the heyday of LaTeX. It contains scripts with reference information for the article. Here’s an example one\n  @Book{ggplot2,\n    author = {Hadley Wickham},\n    title = {ggplot2: Elegant Graphics for Data Analysis},\n    publisher = {Springer-Verlag New York},\n    year = {2016},\n    isbn = {978-3-319-24277-4},\n    url = {http://ggplot2.org},\n  }\n\n\n14.4.2 And how do I generate these .bib files?\nYou can use the citation function in R for R itself, and for specific R packages.\nWe can get the citation for R with:\n\ncitation()\n\nTo cite R in publications use:\n\n  R Core Team (2024). _R: A Language and Environment for Statistical\n  Computing_. R Foundation for Statistical Computing, Vienna, Austria.\n  &lt;https://www.R-project.org/&gt;.\n\nA BibTeX entry for LaTeX users is\n\n  @Manual{,\n    title = {R: A Language and Environment for Statistical Computing},\n    author = {{R Core Team}},\n    organization = {R Foundation for Statistical Computing},\n    address = {Vienna, Austria},\n    year = {2024},\n    url = {https://www.R-project.org/},\n  }\n\nWe have invested a lot of time and effort in creating R, please cite it\nwhen using it for data analysis. See also 'citation(\"pkgname\")' for\nciting R packages.\n\n\nAnd for ggplot2 with\n\ncitation(\"ggplot2\")\n\nTo cite ggplot2 in publications, please use\n\n  H. Wickham. ggplot2: Elegant Graphics for Data Analysis.\n  Springer-Verlag New York, 2016.\n\nA BibTeX entry for LaTeX users is\n\n  @Book{,\n    author = {Hadley Wickham},\n    title = {ggplot2: Elegant Graphics for Data Analysis},\n    publisher = {Springer-Verlag New York},\n    year = {2016},\n    isbn = {978-3-319-24277-4},\n    url = {https://ggplot2.tidyverse.org},\n  }\n\n\nFor journals or books, you’ll need to get a specific .bib file. Yes, this can be a bit of a pain, but this is where you need to use a reference management software like Zotero, Mendeley, papers, or paperpile. The important thing to to use something. These all allow you to get .bib files of your articles, which you can then placec in your references.bib file.\n\n\n14.4.3 Your Turn\n\nGenerate a references.bib file to place your citations\nUsing the citation() function, generate citations for the packages we have used, “dplyr”, “ggplot2”, “gapminder”, and for the R software, place these in your references.bib file\nReference these in your document\nAdd a final heading in your file called #bibliography\nRender the document",
+    "title": "13  Citing Articles & Bibliography Styles",
+    "section": "13.4 How to cite things",
+    "text": "13.4 How to cite things\nCiting things in a Quarto document is straightforward, you refer to articles you want to cite using [@article-handle]. Here, article-handle matches the article handle in your .bib file.\nThis .bib file is referred to in the YAML of your document, under the option bibliography: filename.bib:\n---\ntitle: \nauthor:\noutput: html_document\nbibliography: references.bib\n---\n\n13.4.1 What is a .bib file?\nGood question. .bib is a format for storing references from the heyday of LaTeX. It contains scripts with reference information for the article. Here’s an example one\n  @Book{ggplot2,\n    author = {Hadley Wickham},\n    title = {ggplot2: Elegant Graphics for Data Analysis},\n    publisher = {Springer-Verlag New York},\n    year = {2016},\n    isbn = {978-3-319-24277-4},\n    url = {http://ggplot2.org},\n  }\n\n\n13.4.2 And how do I generate these .bib files?\nYou can use the citation function in R for R itself, and for specific R packages.\nWe can get the citation for R with:\n\ncitation()\n\nTo cite R in publications use:\n\n  R Core Team (2024). _R: A Language and Environment for Statistical\n  Computing_. R Foundation for Statistical Computing, Vienna, Austria.\n  &lt;https://www.R-project.org/&gt;.\n\nA BibTeX entry for LaTeX users is\n\n  @Manual{,\n    title = {R: A Language and Environment for Statistical Computing},\n    author = {{R Core Team}},\n    organization = {R Foundation for Statistical Computing},\n    address = {Vienna, Austria},\n    year = {2024},\n    url = {https://www.R-project.org/},\n  }\n\nWe have invested a lot of time and effort in creating R, please cite it\nwhen using it for data analysis. See also 'citation(\"pkgname\")' for\nciting R packages.\n\n\nAnd for ggplot2 with\n\ncitation(\"ggplot2\")\n\nTo cite ggplot2 in publications, please use\n\n  H. Wickham. ggplot2: Elegant Graphics for Data Analysis.\n  Springer-Verlag New York, 2016.\n\nA BibTeX entry for LaTeX users is\n\n  @Book{,\n    author = {Hadley Wickham},\n    title = {ggplot2: Elegant Graphics for Data Analysis},\n    publisher = {Springer-Verlag New York},\n    year = {2016},\n    isbn = {978-3-319-24277-4},\n    url = {https://ggplot2.tidyverse.org},\n  }\n\n\nFor journals or books, you’ll need to get a specific .bib file. Yes, this can be a bit of a pain, but this is where you need to use a reference management software like Zotero, Mendeley, papers, or paperpile. The important thing to to use something. These all allow you to get .bib files of your articles, which you can then placec in your references.bib file.\n\n\n13.4.3 Your Turn\n\nGenerate a references.bib file to place your citations\nUsing the citation() function, generate citations for the packages we have used, “dplyr”, “ggplot2”, “gapminder”, and for the R software, place these in your references.bib file\nReference these in your document\nAdd a final heading in your file called #bibliography\nRender the document",
     "crumbs": [
-      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Citing Articles & Bibliography Styles</span>"
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Citing Articles & Bibliography Styles</span>"
     ]
   },
   {
     "objectID": "citations-and-styles.html#how-to-change-the-bibliography-style",
     "href": "citations-and-styles.html#how-to-change-the-bibliography-style",
-    "title": "14  Citing Articles & Bibliography Styles",
-    "section": "14.5 How to change the bibliography style",
-    "text": "14.5 How to change the bibliography style\nOK so now you’ve got your bibliography, but you now need to change it to a specific journal format. Luckily, this is now pretty easy. You can change your citation style from the citation style language\nSimilar to how you referred to your .bib file with bibliography: ref.bib, you do something similar:\n---\ntitle:\nauthor:\noutput: html_document\nbibliography: references.bib\ncsl: my_journal.csl\n---\n\n14.5.1 Your Turn\n\nselect your bibliography style to be one from your favourite journal at the CSL github repo here: https://github.com/citation-style-language/styles (&gt; 1800 citations and counting)\nplace this in your rstudio project\nrefer to it in the YAML\nRender your document and observe your greatness",
+    "title": "13  Citing Articles & Bibliography Styles",
+    "section": "13.5 How to change the bibliography style",
+    "text": "13.5 How to change the bibliography style\nOK so now you’ve got your bibliography, but you now need to change it to a specific journal format. Luckily, this is now pretty easy. You can change your citation style from the citation style language\nSimilar to how you referred to your .bib file with bibliography: ref.bib, you do something similar:\n---\ntitle:\nauthor:\noutput: html_document\nbibliography: references.bib\ncsl: my_journal.csl\n---\n\n13.5.1 Your Turn\n\nselect your bibliography style to be one from your favourite journal at the CSL github repo here: https://github.com/citation-style-language/styles (&gt; 1800 citations and counting)\nplace this in your rstudio project\nrefer to it in the YAML\nRender your document and observe your greatness",
     "crumbs": [
-      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Citing Articles & Bibliography Styles</span>"
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Citing Articles & Bibliography Styles</span>"
     ]
   },
   {
     "objectID": "citations-and-styles.html#how-to-move-the-bibliography-location",
     "href": "citations-and-styles.html#how-to-move-the-bibliography-location",
-    "title": "14  Citing Articles & Bibliography Styles",
-    "section": "14.6 How to move the bibliography location",
-    "text": "14.6 How to move the bibliography location\nThe bibliography is typically placed at the end of the document, so your last heading should be something like # References. However, if you want to move it, place the following piece of text in the reference section. For example.\n# Introduction\n\n# References\n\n::: {#refs}\n:::\n\n# Appendix\nThis is taken from this section of the Quarto documentation. Note they also state:\n\nIf your bibliography is being generated using BibLaTeX or natbib…the bibliography will always appear at the end of the document and the #refs div will be ignored.",
+    "title": "13  Citing Articles & Bibliography Styles",
+    "section": "13.6 How to move the bibliography location",
+    "text": "13.6 How to move the bibliography location\nThe bibliography is typically placed at the end of the document, so your last heading should be something like # References. However, if you want to move it, place the following piece of text in the reference section. For example.\n# Introduction\n\n# References\n\n::: {#refs}\n:::\n\n# Appendix\nThis is taken from this section of the Quarto documentation. Note they also state:\n\nIf your bibliography is being generated using BibLaTeX or natbib…the bibliography will always appear at the end of the document and the #refs div will be ignored.",
     "crumbs": [
-      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Citing Articles & Bibliography Styles</span>"
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Citing Articles & Bibliography Styles</span>"
     ]
   },
   {
     "objectID": "citations-and-styles.html#how-to-not-print-suppress-the-bibliography",
     "href": "citations-and-styles.html#how-to-not-print-suppress-the-bibliography",
-    "title": "14  Citing Articles & Bibliography Styles",
-    "section": "14.7 How to not print / suppress the bibliography?",
-    "text": "14.7 How to not print / suppress the bibliography?\nThe bibliography can be suppressed with the YAML option suppress-bibliography\ntitle: \"document\"\noutput: html\nbibliography: file.bib\nsuppress-bibliography: true\n\n14.7.1 Your Turn\n\nGenerate a bibliography and an appendix that follows it",
+    "title": "13  Citing Articles & Bibliography Styles",
+    "section": "13.7 How to not print / suppress the bibliography?",
+    "text": "13.7 How to not print / suppress the bibliography?\nThe bibliography can be suppressed with the YAML option suppress-bibliography\ntitle: \"document\"\noutput: html\nbibliography: file.bib\nsuppress-bibliography: true\n\n13.7.1 Your Turn\n\nGenerate a bibliography and an appendix that follows it",
     "crumbs": [
-      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Citing Articles & Bibliography Styles</span>"
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Citing Articles & Bibliography Styles</span>"
     ]
   },
   {
     "objectID": "caption-reference-eqn.html",
     "href": "caption-reference-eqn.html",
-    "title": "15  Captioning and referencing equations",
+    "title": "14  Captioning and referencing equations",
     "section": "",
-    "text": "15.1 Overview",
+    "text": "14.1 Overview",
     "crumbs": [
-      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Captioning and referencing equations</span>"
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Captioning and referencing equations</span>"
     ]
   },
   {
     "objectID": "caption-reference-eqn.html#overview",
     "href": "caption-reference-eqn.html#overview",
-    "title": "15  Captioning and referencing equations",
+    "title": "14  Captioning and referencing equations",
     "section": "",
     "text": "Teaching: 5 minutes\nExercises: 5 minutes",
     "crumbs": [
-      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Captioning and referencing equations</span>"
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Captioning and referencing equations</span>"
     ]
   },
   {
     "objectID": "caption-reference-eqn.html#questions",
     "href": "caption-reference-eqn.html#questions",
-    "title": "15  Captioning and referencing equations",
-    "section": "15.2 Questions",
-    "text": "15.2 Questions\n\nHow do I caption an equation?\nHow do I reference an equation?\n\n\n15.2.1 Numbering equations\nYou can make an equation referencable by adding a label starting with #eq- after the equation $$. For example:\n\\[\nY \\sim X\\beta_0 + X\\beta_1 + \\epsilon\n\\tag{15.1}\\]\nYou can then refer to the equation in text using @eq-linear:\n\nOur model is given in Equation 15.1.",
+    "title": "14  Captioning and referencing equations",
+    "section": "14.2 Questions",
+    "text": "14.2 Questions\n\nHow do I caption an equation?\nHow do I reference an equation?\n\n\n14.2.1 Numbering equations\nYou can make an equation referencable by adding a label starting with #eq- after the equation $$. For example:\n\\[\nY \\sim X\\beta_0 + X\\beta_1 + \\epsilon\n\\tag{14.1}\\]\nYou can then refer to the equation in text using @eq-linear:\n\nOur model is given in Equation 14.1.",
     "crumbs": [
-      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Captioning and referencing equations</span>"
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Captioning and referencing equations</span>"
     ]
   },
   {
     "objectID": "caption-reference-eqn.html#other-equation-adjacent-referencing",
     "href": "caption-reference-eqn.html#other-equation-adjacent-referencing",
-    "title": "15  Captioning and referencing equations",
-    "section": "15.3 Other equation-adjacent referencing",
-    "text": "15.3 Other equation-adjacent referencing\nYou can also use and reference theorems, lemmas, conjectures, and many more - to see these, see the Quarto documentation: theorems and proofs documentation.",
+    "title": "14  Captioning and referencing equations",
+    "section": "14.3 Other equation-adjacent referencing",
+    "text": "14.3 Other equation-adjacent referencing\nYou can also use and reference theorems, lemmas, conjectures, and many more - to see these, see the Quarto documentation: theorems and proofs documentation.",
     "crumbs": [
-      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Captioning and referencing equations</span>"
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Captioning and referencing equations</span>"
     ]
   },
   {
     "objectID": "common-problems.html",
     "href": "common-problems.html",
-    "title": "16  Common Problems with Quarto (and some solutions)",
+    "title": "15  Common Problems with Quarto (and some solutions)",
     "section": "",
-    "text": "16.1 Avoiding problems\nTo avoid problems in the first place, I try and do the following:\nThen, if there is an error:",
+    "text": "15.1 Avoiding problems\nTo avoid problems in the first place, I try and do the following:\nThen, if there is an error:",
     "crumbs": [
-      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Common Problems with Quarto (and some solutions)</span>"
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Common Problems with Quarto (and some solutions)</span>"
     ]
   },
   {
     "objectID": "common-problems.html#avoiding-problems",
     "href": "common-problems.html#avoiding-problems",
-    "title": "16  Common Problems with Quarto (and some solutions)",
+    "title": "15  Common Problems with Quarto (and some solutions)",
     "section": "",
-    "text": "Develop code in chunks and execute the chunks until they work, then move on.\nrender the document regularly to check for errors.\n\n\n\nrecreate the error in an interactive session:\n\nrestart R\nrun all chunks below\nfind the chunk that did not work, fix until it does\nrun all chunks below\nexplore working directory issues\n\nremember that the rmarkdown directory is where the .Rmd file lives",
+    "text": "Develop code in chunks and execute the chunks until they work, then move on.\nrender the document regularly to check for errors.\n\n\n\nrecreate the error in an interactive session:\n\nrestart R\nrun all chunks below\nfind the chunk that did not work, fix until it does\nrun all chunks below\nexplore working directory issues\n\nremember that the Quarto directory is where the .qmd file lives",
     "crumbs": [
-      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Common Problems with Quarto (and some solutions)</span>"
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Common Problems with Quarto (and some solutions)</span>"
     ]
   },
   {
     "objectID": "common-problems.html#the-errors",
     "href": "common-problems.html#the-errors",
-    "title": "16  Common Problems with Quarto (and some solutions)",
-    "section": "16.2 The errors",
-    "text": "16.2 The errors\nWhat follows from here are all the errors you might in an rmarkdown document, with the following structure:\n\nWhat they might look like\nWhat the error message might appear to be, and\nHow to solve them",
+    "title": "15  Common Problems with Quarto (and some solutions)",
+    "section": "15.2 The errors",
+    "text": "15.2 The errors\nWhat follows from here are all the errors you might in an Quarto document, with the following structure:\n\nWhat they might look like\nWhat the error message might appear to be, and\nHow to solve them",
     "crumbs": [
-      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Common Problems with Quarto (and some solutions)</span>"
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Common Problems with Quarto (and some solutions)</span>"
     ]
   },
   {
     "objectID": "common-problems.html#python-not-found",
     "href": "common-problems.html#python-not-found",
-    "title": "16  Common Problems with Quarto (and some solutions)",
-    "section": "16.3 Python not found",
-    "text": "16.3 Python not found\nAn error like:\nError:\n! /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/config-3.7m-darwin/libpython3.7.dylib - dlopen(/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/config-3.7m-darwin/libpython3.7.dylib, 0x000A): tried: '/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/config-3.7m-darwin/libpython3.7.dylib' (mach-o file, but is an incompatible architecture (have 'x86_64', need 'arm64e' or 'arm64')), '/System/Volumes/Preboot/Cryptexes/OS/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/config-3.7m-darwin/libpython3.7.dylib' (no such file), '/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/config-3.7m-darwin/libpython3.7.dylib' (mach-o file, but is an incompatible architecture (have 'x86_64', need 'arm64e' or 'arm64')), '/Library/Frameworks/Python.framework/Versions/3.7/Python' (mach-o file, but is an incompatible architecture (have 'x86_64', need 'arm64e' or 'arm64')), '/System/Volumes/Preboot/Cryptexes/OS/Library/Frameworks/Python.framework/Versions/3.7/Python' (no such file), '/Library/Frameworks/Python.framework/Versions/3.7/Python' (mach-o file, but is an incompatible architecture (have 'x86_64', need 'arm64e' or 'arm64')), '/System/Library/Frameworks/Python.framework/Versions/3.7/Python' (no such file, not in dyld cache)\n\nBacktrace:\n  1. global .main()\n  2. execute(...)\n  3. rmarkdown::render(...)\n  4. knitr::knit(knit_input, knit_output, envir = envir, quiet = quiet)\n  5. knitr:::process_file(text, output)\n     ...\n 17. reticulate:::initialize_python()\n 18. base::tryCatch(...)\n 19. base (local) tryCatchList(expr, classes, parentenv, handlers)\n 20. base (local) tryCatchOne(expr, names, parentenv, handlers[[1L]])\n 21. value[[3L]](cond)\nThis error went away when I installed python - I went to https://www.python.org/downloads/ and followed the prompts",
+    "title": "15  Common Problems with Quarto (and some solutions)",
+    "section": "15.3 Python not found",
+    "text": "15.3 Python not found\nAn error like:\nError:\n! /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/config-3.7m-darwin/libpython3.7.dylib - dlopen(/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/config-3.7m-darwin/libpython3.7.dylib, 0x000A): tried: '/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/config-3.7m-darwin/libpython3.7.dylib' (mach-o file, but is an incompatible architecture (have 'x86_64', need 'arm64e' or 'arm64')), '/System/Volumes/Preboot/Cryptexes/OS/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/config-3.7m-darwin/libpython3.7.dylib' (no such file), '/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/config-3.7m-darwin/libpython3.7.dylib' (mach-o file, but is an incompatible architecture (have 'x86_64', need 'arm64e' or 'arm64')), '/Library/Frameworks/Python.framework/Versions/3.7/Python' (mach-o file, but is an incompatible architecture (have 'x86_64', need 'arm64e' or 'arm64')), '/System/Volumes/Preboot/Cryptexes/OS/Library/Frameworks/Python.framework/Versions/3.7/Python' (no such file), '/Library/Frameworks/Python.framework/Versions/3.7/Python' (mach-o file, but is an incompatible architecture (have 'x86_64', need 'arm64e' or 'arm64')), '/System/Library/Frameworks/Python.framework/Versions/3.7/Python' (no such file, not in dyld cache)\n\nBacktrace:\n  1. global .main()\n  2. execute(...)\n  3. rmarkdown::render(...)\n  4. knitr::knit(knit_input, knit_output, envir = envir, quiet = quiet)\n  5. knitr:::process_file(text, output)\n     ...\n 17. reticulate:::initialize_python()\n 18. base::tryCatch(...)\n 19. base (local) tryCatchList(expr, classes, parentenv, handlers)\n 20. base (local) tryCatchOne(expr, names, parentenv, handlers[[1L]])\n 21. value[[3L]](cond)\nThis error went away when I installed python - I went to https://www.python.org/downloads/ and followed the prompts",
     "crumbs": [
-      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Common Problems with Quarto (and some solutions)</span>"
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Common Problems with Quarto (and some solutions)</span>"
     ]
   },
   {
     "objectID": "common-problems.html#no-julia",
     "href": "common-problems.html#no-julia",
-    "title": "16  Common Problems with Quarto (and some solutions)",
-    "section": "16.4 No julia",
-    "text": "16.4 No julia\nError in `loadNamespace()`:\n! there is no package called 'JuliaCall'\nBacktrace:\n  1. global .main()\n 14. base::loadNamespace(x)\n 15. base::withRestarts(stop(cond), retry_loadNamespace = function() NULL)\n 16. base (local) withOneRestart(expr, restarts[[1L]])\n 17. base (local) doWithOneRestart(return(expr), restart)\nFix: Install JuliaCall R package:\ninstall.packages(\"JuliaCall\")",
+    "title": "15  Common Problems with Quarto (and some solutions)",
+    "section": "15.4 No julia",
+    "text": "15.4 No julia\nError in `loadNamespace()`:\n! there is no package called 'JuliaCall'\nBacktrace:\n  1. global .main()\n 14. base::loadNamespace(x)\n 15. base::withRestarts(stop(cond), retry_loadNamespace = function() NULL)\n 16. base (local) withOneRestart(expr, restarts[[1L]])\n 17. base (local) doWithOneRestart(return(expr), restart)\nFix: Install JuliaCall R package:\ninstall.packages(\"JuliaCall\")",
     "crumbs": [
-      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Common Problems with Quarto (and some solutions)</span>"
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Common Problems with Quarto (and some solutions)</span>"
     ]
   },
   {
     "objectID": "common-problems.html#duplication-duplicated-chunk-names",
     "href": "common-problems.html#duplication-duplicated-chunk-names",
-    "title": "16  Common Problems with Quarto (and some solutions)",
-    "section": "16.5 “Duplication”: Duplicated chunk names",
-    "text": "16.5 “Duplication”: Duplicated chunk names\nWhat it might look like\nChunks like this:\n\n```{r}\n#| label: repeated\n1+1\n```\n\n```{r}\n#| label: repeated\n2+2\n```\nThe error message\nThis is caught before the document compiles with a warning like:\nprocessing file: duplicated-chunk-names.qmd\nError in parse_block(g[-1], g[1], params.src, markdown_mode) : \n  Duplicate chunk label 'repeated', which has been used for the chunk:\n1+1\nCalls: .main ... process_file -&gt; split_file -&gt; lapply -&gt; FUN -&gt; parse_block\nExecution halted\nThe important part to note is the start:\n.\n.\n.\nDuplicate chunk label 'repeated', which has been used for the chunk:\n1+1\n.\n.\n.\nHow to solve\n\nIn our case we have the same chunk name twice: ‘repeated’. Change the chunk name of one of them!",
+    "title": "15  Common Problems with Quarto (and some solutions)",
+    "section": "15.5 “Duplication”: Duplicated chunk names",
+    "text": "15.5 “Duplication”: Duplicated chunk names\nWhat it might look like\nChunks like this:\n\n```{r}\n#| label: repeated\n1+1\n```\n\n```{r}\n#| label: repeated\n2+2\n```\n\nThe error message\nThis is caught before the document compiles with a warning like:\nprocessing file: duplicated-chunk-names.qmd\nError in parse_block(g[-1], g[1], params.src, markdown_mode) : \n  Duplicate chunk label 'repeated', which has been used for the chunk:\n1+1\nCalls: .main ... process_file -&gt; split_file -&gt; lapply -&gt; FUN -&gt; parse_block\nExecution halted\nThe important part to note is the start:\n.\n.\n.\nDuplicate chunk label 'repeated', which has been used for the chunk:\n1+1\n.\n.\n.\nHow to solve\n\nIn our case we have the same chunk name twice: ‘repeated’. Change the chunk name of one of them!",
     "crumbs": [
-      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Common Problems with Quarto (and some solutions)</span>"
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Common Problems with Quarto (and some solutions)</span>"
     ]
   },
   {
     "objectID": "common-problems.html#not-what-i-ordered-objects-not-created-in-the-right-order",
     "href": "common-problems.html#not-what-i-ordered-objects-not-created-in-the-right-order",
-    "title": "16  Common Problems with Quarto (and some solutions)",
-    "section": "16.6 “Not what I ordered”: Objects not created in the right order",
-    "text": "16.6 “Not what I ordered”: Objects not created in the right order\nWhat it might look like\nplot(my_table)\n\nmy_table &lt;- table(mtcars$cyl)\nThe error message\nprocessing file: wrong-order.qmd\n  |......................................                   |  67% [plot-table]Error:\n! object 'my_table' not found\nBacktrace:\n 1. base::plot(my_table)\n\n\n\nQuitting from lines 8-12 [plot-table] (wrong-order.qmd)\nHow to solve\nThere is a good clue at the end of this message here, stating:\n.\n.\nQuitting from lines 8-12 [plot-table] (wrong-order.qmd)\n.\n.\nThe template here is:\nQuitting from lines START-END [CHUNK LABEL] (QUARTO-DOCUMENT-NAME.qmd)\nI would then navigate to those lines of code in the Quarto document, or search for the chunk label, and see if I can run that code interactively. A common problem with these kinds of errors is that they just might work interactively, because you might have run them out of sequence. However because a Quarto document goes from a fresh R session and runs the code from the top to the bottom in that order, the objects might not yet exist. So:\n\nRestart R - ensure it is a clean session without objects from the previous session hanging around\nRun code above the problem chunk\nRun code in the problem chunk\nHopefully this reproduces your error\nIf it doesn’t reproduce your error, consider trying to make a small reprex of the problem so you have try and figure out the bug.",
+    "title": "15  Common Problems with Quarto (and some solutions)",
+    "section": "15.6 “Not what I ordered”: Objects not created in the right order",
+    "text": "15.6 “Not what I ordered”: Objects not created in the right order\nWhat it might look like\nplot(my_table)\n\nmy_table &lt;- table(mtcars$cyl)\nThe error message\nprocessing file: wrong-order.qmd\n  |......................................                   |  67% [plot-table]Error:\n! object 'my_table' not found\nBacktrace:\n 1. base::plot(my_table)\n\n\n\nQuitting from lines 8-12 [plot-table] (wrong-order.qmd)\nHow to solve\nThere is a good clue at the end of this message here, stating:\n.\n.\nQuitting from lines 8-12 [plot-table] (wrong-order.qmd)\n.\n.\nThe template here is:\nQuitting from lines START-END [CHUNK LABEL] (QUARTO-DOCUMENT-NAME.qmd)\nI would then navigate to those lines of code in the Quarto document, or search for the chunk label, and see if I can run that code interactively. A common problem with these kinds of errors is that they just might work interactively, because you might have run them out of sequence. However because a Quarto document goes from a fresh R session and runs the code from the top to the bottom in that order, the objects might not yet exist. So:\n\nRestart R - ensure it is a clean session without objects from the previous session hanging around\nRun code above the problem chunk\nRun code in the problem chunk\nHopefully this reproduces your error\nIf it doesn’t reproduce your error, consider trying to make a small reprex of the problem so you have try and figure out the bug.",
     "crumbs": [
-      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Common Problems with Quarto (and some solutions)</span>"
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Common Problems with Quarto (and some solutions)</span>"
     ]
   },
   {
     "objectID": "common-problems.html#forgotten-trails-i-missing-or",
     "href": "common-problems.html#forgotten-trails-i-missing-or",
-    "title": "16  Common Problems with Quarto (and some solutions)",
-    "section": "16.7 Forgotten Trails I: Missing “(”, or “}”",
-    "text": "16.7 Forgotten Trails I: Missing “(”, or “}”\nWhat it might look like\n::: {.cell}\n\n```{.r .cell-code}\nimage(volcano\n```\n:::\nThe error message\nprocessing file: forgotten-trails-i.qmd\n  |.....................................                   |  67% [fig-volcano]Error in `parse()`:\n! &lt;text&gt;:2:0: unexpected end of input\n1: image(volcano\n   ^\nBacktrace:\n  1. global .main()\n  2. execute(...)\n  3. rmarkdown::render(...)\n  4. knitr::knit(knit_input, knit_output, envir = envir, quiet = quiet)\n  5. knitr:::process_file(text, output)\n     ...\n 11. knitr:::eng_r(options)\n 14. knitr (local) evaluate(...)\n 15. evaluate::evaluate(...)\n 17. evaluate:::parse_all.character(...)\n 18. base::parse(text = x, srcfile = src)\n                                                                                                        \n\n\nQuitting from lines 7-9 [fig-volcano] (forgotten-trails-i.qmd)\n\nExecution halted\nHow to solve\nIn this case the key part to look at is\n|.....................................                   |  67% [fig-volcano]Error in `parse()`:\n! &lt;text&gt;:2:0: unexpected end of input\n1: image(volcano\n   ^\nHere the error message even points to the image code, and the message, “unexpected end of input” is referring to the missing closing parenthesis.\nWhat it might look like\n```{r\n#| label: fig-volcano\nimage(volcano)\n```\nThe error message\nThere is no error message here, but your output might look like this:\n\nForgotten Trails I: Missing “(”, or “}”\n{r #| label: fig-volcano image(volcano)\nHow to solve\nThe clue here for me is that we are getting this part of the code:\n{r #| label: fig-volcano image(volcano)\nWhen we would normally not see any information about the code chunk option, #| label.\nWhen you come across some funky looking text like that, look for a missing }.",
+    "title": "15  Common Problems with Quarto (and some solutions)",
+    "section": "15.7 Forgotten Trails I: Missing “(”, or “}”",
+    "text": "15.7 Forgotten Trails I: Missing “(”, or “}”\nWhat it might look like\n\n```{r}\n#| label: fig-volcano\n#| eval: false\nimage(volcano\n```\n\nThe error message\nprocessing file: forgotten-trails-i.qmd\n  |.....................................                   |  67% [fig-volcano]Error in `parse()`:\n! &lt;text&gt;:2:0: unexpected end of input\n1: image(volcano\n   ^\nBacktrace:\n  1. global .main()\n  2. execute(...)\n  3. rmarkdown::render(...)\n  4. knitr::knit(knit_input, knit_output, envir = envir, quiet = quiet)\n  5. knitr:::process_file(text, output)\n     ...\n 11. knitr:::eng_r(options)\n 14. knitr (local) evaluate(...)\n 15. evaluate::evaluate(...)\n 17. evaluate:::parse_all.character(...)\n 18. base::parse(text = x, srcfile = src)\n                                                                                                        \n\n\nQuitting from lines 7-9 [fig-volcano] (forgotten-trails-i.qmd)\n\nExecution halted\nHow to solve\nIn this case the key part to look at is\n|.....................................                   |  67% [fig-volcano]Error in `parse()`:\n! &lt;text&gt;:2:0: unexpected end of input\n1: image(volcano\n   ^\nHere the error message even points to the image code, and the message, “unexpected end of input” is referring to the missing closing parenthesis.\nWhat it might look like\n\n```{r\n#| label: fig-volcano\nimage(volcano)\n```\n\nThe error message\nThere is no error message here, but your output might look like this:\n\nForgotten Trails I: Missing “(”, or “}”\n{r #| label: fig-volcano image(volcano)\nHow to solve\nThe clue here for me is that we are getting this part of the code:\n{r #| label: fig-volcano image(volcano)\nWhen we would normally not see any information about the code chunk option, #| label.\nWhen you come across some funky looking text like that, look for a missing }.",
     "crumbs": [
-      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Common Problems with Quarto (and some solutions)</span>"
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Common Problems with Quarto (and some solutions)</span>"
     ]
   },
   {
     "objectID": "common-problems.html#forgotten-trails-ii-chunk-option-with-trailing-or-not-input",
     "href": "common-problems.html#forgotten-trails-ii-chunk-option-with-trailing-or-not-input",
-    "title": "16  Common Problems with Quarto (and some solutions)",
-    "section": "16.8 “Forgotten Trails II”: Chunk option with trailing “, or not input",
-    "text": "16.8 “Forgotten Trails II”: Chunk option with trailing “, or not input\nWhat it might look like\n\nThe error message\nERROR: YAMLException: unexpected end of the stream within a double quoted scalar (forgotten-trails-ii.qmd, 8:188)\n7: #| label: fig-volcano\n8: #| fig-cap: \"An elevation plot of Maunga Whau (Mt Eden). Darker colours indicate higher parts of the volcano. We see one main peak on the left, followed by two smaller peaks on the right.\n                                                                                                                                                                                             ~\n9: image(volcano)\nHow to solve it?\n\nThe clue here is unexpected end of the stream within a double quoted scalar. Which, although it might sound a bit obtuse, is referring to a missing quote. The other clue is that the error captures the code chunk information and prints it out to the console.\nWhen you are working with this code in RStudio it also highlights the error:",
+    "title": "15  Common Problems with Quarto (and some solutions)",
+    "section": "15.8 “Forgotten Trails II”: Chunk option with trailing “, or not input",
+    "text": "15.8 “Forgotten Trails II”: Chunk option with trailing “, or not input\nWhat it might look like\n\nThe error message\nERROR: YAMLException: unexpected end of the stream within a double quoted scalar (forgotten-trails-ii.qmd, 8:188)\n7: #| label: fig-volcano\n8: #| fig-cap: \"An elevation plot of Maunga Whau (Mt Eden). Darker colours indicate higher parts of the volcano. We see one main peak on the left, followed by two smaller peaks on the right.\n                                                                                                                                                                                             ~\n9: image(volcano)\nHow to solve it?\n\nThe clue here is unexpected end of the stream within a double quoted scalar. Which, although it might sound a bit obtuse, is referring to a missing quote. The other clue is that the error captures the code chunk information and prints it out to the console.\nWhen you are working with this code in RStudio it also highlights the error:",
     "crumbs": [
-      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Common Problems with Quarto (and some solutions)</span>"
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Common Problems with Quarto (and some solutions)</span>"
     ]
   },
   {
     "objectID": "common-problems.html#the-path-not-taken-file-path-incorrect",
     "href": "common-problems.html#the-path-not-taken-file-path-incorrect",
-    "title": "16  Common Problems with Quarto (and some solutions)",
-    "section": "16.9 “The Path Not Taken” File path incorrect",
-    "text": "16.9 “The Path Not Taken” File path incorrect\nWhat it might look like\n::: {.cell}\n\n````{.cell-code}\n```{r}\n#| label: read-data\n#| eval: false\nlibrary(readr)\npenguins &lt;- read_csv(\"the_penguins.csv\")\n```\n:::\n\n**The error message**\n\n```         \nprocessing file: path-not-taken.qmd\n  |.......................................                   |  67% [read-data]Error:\n! 'the_penguins.csv' does not exist in current working directory ('/Users/nick/github/njtierney/qmd-errors').\nBacktrace:\n 1. readr::read_csv(\"the_penguins.csv\")\n 4. vroom (local) `&lt;fn&gt;`(\"the_penguins.csv\")\n 5. vroom:::check_path(path)\n                                                                                                      \n\n\nQuitting from lines 7-10 [read-data] (path-not-taken.qmd)\n\nExecution halted\n```\n\n**How to solve**\n\nThe key part to pay attention to here is:\n\n```         \nError:! 'the_penguins.csv' does not exist in current working directory ('/Users/nick/github/njtierney/qmd-errors').\n```\n\nIn this case, we need to ensure that the data file is in the right spot - in our example we have a typo - the data should be \"data/penguins.csv\".\n\n## \"Spolling I\" Incorrectly spelled chunk options\n\nThese are often not an error, but you just won't get the behaviour that you expect.\n\n**What it might look like**\n\n````markdown\n::: {.cell fig-caption='Penguin Bill Length against Flipper Length. coloured by species. Each dot represents the bill length and flipper length of a penguin, coloured by species (Adelie, Chinstrap, Gentoo), and facetted by the three islands (Biscoe, Dream, Torgensen). We learn that not all three species are present on all islands, only Adelie is present on each. Adelie generally has the smallest flipper and bill length of the penguins, with chinstrap and gentoo being similar. Flipper length is correlated with bill length.'}\n\n````{.cell-code}\n```{r}\n#| label: fig-penguins\n#| fig-caption: \"Penguin Bill Length against Flipper Length. coloured by species. Each dot represents the bill length and flipper length of a penguin, coloured by species (Adelie, Chinstrap, Gentoo), and facetted by the three islands (Biscoe, Dream, Torgensen). We learn that not all three species are present on all islands, only Adelie is present on each. Adelie generally has the smallest flipper and bill length of the penguins, with chinstrap and gentoo being similar. Flipper length is correlated with bill length.\"\nlibrary(palmerpenguins)\nlibrary(ggplot2)\nggplot(penguins,\n       aes(x = flipper_length_mm,\n           y = bill_length_mm,\n           colour = species)) + \n  geom_point() + \n  scale_color_brewer(palette = \"Dark2\") +\n  theme_minimal() + \n  facet_wrap(~island)\n```\n\nWarning: Removed 2 rows containing missing values or values outside the scale range\n(`geom_point()`).\n\n\n\n\n\n\n\n\nFigure 16.1\n\n\n\n\n::: ````\nAbove we have @fig-counts...\nIn this case we do not get a rendered caption at all:\n\nThe root cause of this is that we have specified fig-caption instead of fig-cap.\nThis once caused me to rewrite a lot of code and an entire section of a paper until I realised the problem.\nThe error message\nThere is no error message for this! It is a silent error.\nHow to solve\nYou can resolve this issue by using fig-cap instead of fig-caption.",
+    "title": "15  Common Problems with Quarto (and some solutions)",
+    "section": "15.9 “The Path Not Taken” File path incorrect",
+    "text": "15.9 “The Path Not Taken” File path incorrect\nWhat it might look like\n\n```{r}\n#| label: read-data\n#| echo: fenced\n#| eval: false\nlibrary(readr)\npenguins &lt;- read_csv(\"the_penguins.csv\")\n```\n\nThe error message\nprocessing file: path-not-taken.qmd\n  |.......................................                   |  67% [read-data]Error:\n! 'the_penguins.csv' does not exist in current working directory ('/Users/nick/github/njtierney/qmd-errors').\nBacktrace:\n 1. readr::read_csv(\"the_penguins.csv\")\n 4. vroom (local) `&lt;fn&gt;`(\"the_penguins.csv\")\n 5. vroom:::check_path(path)\n                                                                                                      \n\n\nQuitting from lines 7-10 [read-data] (path-not-taken.qmd)\n\nExecution halted\nHow to solve\nThe key part to pay attention to here is:\nError:! 'the_penguins.csv' does not exist in current working directory ('/Users/nick/github/njtierney/qmd-errors').\nIn this case, we need to ensure that the data file is in the right spot - in our example we have a typo - the data should be “data/penguins.csv”.",
     "crumbs": [
-      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Common Problems with Quarto (and some solutions)</span>"
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Common Problems with Quarto (and some solutions)</span>"
+    ]
+  },
+  {
+    "objectID": "common-problems.html#spolling-i-incorrectly-spelled-chunk-options",
+    "href": "common-problems.html#spolling-i-incorrectly-spelled-chunk-options",
+    "title": "15  Common Problems with Quarto (and some solutions)",
+    "section": "15.10 “Spolling I” Incorrectly spelled chunk options",
+    "text": "15.10 “Spolling I” Incorrectly spelled chunk options\nThese are often not an error, but you just won’t get the behaviour that you expect.\nWhat it might look like\n\n```{r}\n#| label: fig-penguins\n#| fig-caption: \"Penguin Bill Length against Flipper Length. coloured by species. Each dot represents the bill length and flipper length of a penguin, coloured by species (Adelie, Chinstrap, Gentoo), and facetted by the three islands (Biscoe, Dream, Torgensen). We learn that not all three species are present on all islands, only Adelie is present on each. Adelie generally has the smallest flipper and bill length of the penguins, with chinstrap and gentoo being similar. Flipper length is correlated with bill length.\"\n#| echo: fenced\nlibrary(palmerpenguins)\nlibrary(ggplot2)\nggplot(penguins,\n       aes(x = flipper_length_mm,\n           y = bill_length_mm,\n           colour = species)) + \n  geom_point() + \n  scale_color_brewer(palette = \"Dark2\") +\n  theme_minimal() + \n  facet_wrap(~island)\n```\n\n\nAbove we have @fig-counts...\n\nIn this case we do not get a rendered caption at all:\n\nThe root cause of this is that we have specified fig-caption instead of fig-cap.\nThis once caused me to rewrite a lot of code and an entire section of a paper until I realised the problem.\nThe error message\nThere is no error message for this! It is a silent error.\nHow to solve\nYou can resolve this issue by using fig-cap instead of fig-caption.",
+    "crumbs": [
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Common Problems with Quarto (and some solutions)</span>"
     ]
   },
   {
     "objectID": "common-problems.html#spolling-ii-incorrectly-spelled-chunk-option-inputs",
     "href": "common-problems.html#spolling-ii-incorrectly-spelled-chunk-option-inputs",
-    "title": "16  Common Problems with Quarto (and some solutions)",
-    "section": "16.10 “Spolling II” Incorrectly spelled chunk option inputs",
-    "text": "16.10 “Spolling II” Incorrectly spelled chunk option inputs\nSo this is when you provide the wrong input to your chunk options. Like something that requires true gets “yes”, or something that needs \"100%\" instead gets 100\nWhat it might look like\n\nThe error message\n==&gt; quarto preview spolling-ii.qmd --to html --no-watch-inputs --no-browse\n\n(line 8, columns 11--14) Field \"cache\" has value yes, which must instead be `true` or `false`\n\n✖ The value yes is a string.\nℹ The error happened in location cache.\nℹ Quarto uses YAML 1.2, which interprets booleans strictly.\nℹ Try using true instead.\n\nERROR: Validation of YAML cell metadata failed.\nERROR: Render failed due to invalid YAML.\nHow to solve\nThere’s a bit of text here, but the key piece is:\n(line 8, columns 11--14) Field \"cache\" has value yes, which must instead be `true` or `false`\nWe have specified #| cache: yes instead of #| cache: true. A good thing to internalise here is that Quarto always uses lowercase true or false and never yes or no.",
+    "title": "15  Common Problems with Quarto (and some solutions)",
+    "section": "15.11 “Spolling II” Incorrectly spelled chunk option inputs",
+    "text": "15.11 “Spolling II” Incorrectly spelled chunk option inputs\nSo this is when you provide the wrong input to your chunk options. Like something that requires true gets “yes”, or something that needs \"100%\" instead gets 100\nWhat it might look like\n\nThe error message\n==&gt; quarto preview spolling-ii.qmd --to html --no-watch-inputs --no-browse\n\n(line 8, columns 11--14) Field \"cache\" has value yes, which must instead be `true` or `false`\n\n✖ The value yes is a string.\nℹ The error happened in location cache.\nℹ Quarto uses YAML 1.2, which interprets booleans strictly.\nℹ Try using true instead.\n\nERROR: Validation of YAML cell metadata failed.\nERROR: Render failed due to invalid YAML.\nHow to solve\nThere’s a bit of text here, but the key piece is:\n(line 8, columns 11--14) Field \"cache\" has value yes, which must instead be `true` or `false`\nWe have specified #| cache: yes instead of #| cache: true. A good thing to internalise here is that Quarto always uses lowercase true or false and never yes or no.",
     "crumbs": [
-      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Common Problems with Quarto (and some solutions)</span>"
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Common Problems with Quarto (and some solutions)</span>"
     ]
   },
   {
     "objectID": "common-problems.html#the-legend-of-link-i-your-images-in-dont-work.",
     "href": "common-problems.html#the-legend-of-link-i-your-images-in-dont-work.",
-    "title": "16  Common Problems with Quarto (and some solutions)",
-    "section": "16.11 “The Legend of Link I”: Your images in ![]() don’t work.",
-    "text": "16.11 “The Legend of Link I”: Your images in ![]() don’t work.\nI often forget that it is ![](path/to/image), and not ![](\"path/to/image\"). There are no quote marks!",
+    "title": "15  Common Problems with Quarto (and some solutions)",
+    "section": "15.12 “The Legend of Link I”: Your images in ![]() don’t work.",
+    "text": "15.12 “The Legend of Link I”: Your images in ![]() don’t work.\nI often forget that it is ![](path/to/image), and not ![](\"path/to/image\"). There are no quote marks!",
     "crumbs": [
-      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Common Problems with Quarto (and some solutions)</span>"
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Common Problems with Quarto (and some solutions)</span>"
     ]
   },
   {
     "objectID": "common-problems.html#latex-errors",
     "href": "common-problems.html#latex-errors",
-    "title": "16  Common Problems with Quarto (and some solutions)",
-    "section": "16.12 LaTeX errors",
-    "text": "16.12 LaTeX errors\nThere is no panacea for LaTeX errors, but if you aren’t familiar with “what that error message” might look like, here are some details.\nWhat it might look like\nThe error message\nHow to solve",
+    "title": "15  Common Problems with Quarto (and some solutions)",
+    "section": "15.13 LaTeX errors",
+    "text": "15.13 LaTeX errors\nThere is no panacea for LaTeX errors, but if you aren’t familiar with “what that error message” might look like, here are some details.\nWhat it might look like\nThe error message\nHow to solve",
     "crumbs": [
-      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Common Problems with Quarto (and some solutions)</span>"
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Common Problems with Quarto (and some solutions)</span>"
     ]
   },
   {
     "objectID": "common-problems.html#i-want-to-include-inline-r-code-verbatim-to-show-an-example",
     "href": "common-problems.html#i-want-to-include-inline-r-code-verbatim-to-show-an-example",
-    "title": "16  Common Problems with Quarto (and some solutions)",
-    "section": "16.13 I want to include inline R code verbatim to show an example",
-    "text": "16.13 I want to include inline R code verbatim to show an example\n… Like for a book on using rmarkdown or something.\nYou can use the chunk option echo: fenced. See the Quarto documentation on fenced echo for more details.\n\n\n\n\n\n\nTip\n\n\n\nBack before we had this option we used to have to do things like this:\nblog post by T. Hovorka from R Views\nIt boils down to this:\n r \"\\u0060r expression\\u0060\" .\nThankfully the folks at Quarto have made this much easier!",
+    "title": "15  Common Problems with Quarto (and some solutions)",
+    "section": "15.14 I want to include inline R code verbatim to show an example",
+    "text": "15.14 I want to include inline R code verbatim to show an example\n… Like for a book on using Quarto or something.\nYou can use the chunk option echo: fenced. See the Quarto documentation on fenced echo for more details.\n\n\n\n\n\n\nTip\n\n\n\nBack before we had this option we used to have to do things like this:\nblog post by T. Hovorka from R Views\nIt boils down to this:\n r \"\\u0060r expression\\u0060\" .\nThankfully the folks at Quarto have made this much easier!",
     "crumbs": [
-      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Common Problems with Quarto (and some solutions)</span>"
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Common Problems with Quarto (and some solutions)</span>"
     ]
   },
   {
     "objectID": "common-problems.html#my-figure-or-table-isnt-being-cited",
     "href": "common-problems.html#my-figure-or-table-isnt-being-cited",
-    "title": "16  Common Problems with Quarto (and some solutions)",
-    "section": "16.14 My Figure or Table isn’t being cited",
-    "text": "16.14 My Figure or Table isn’t being cited\nWhat it might look like\nYou create a figure,\nThe error message\nThere isn’t one - you just get @fig-chunk-name printed.\nHow to solve\nYou need to make sure that you actually print the table or plot. If you create the plot and save it, but do not print it in the document, then you will not be able to reference the plot or table.",
+    "title": "15  Common Problems with Quarto (and some solutions)",
+    "section": "15.15 My Figure or Table isn’t being cited",
+    "text": "15.15 My Figure or Table isn’t being cited\nWhat it might look like\nYou create a figure,\nThe error message\nThere isn’t one - you just get @fig-chunk-name printed.\nHow to solve\nYou need to make sure that you actually print the table or plot. If you create the plot and save it, but do not print it in the document, then you will not be able to reference the plot or table.",
     "crumbs": [
-      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Common Problems with Quarto (and some solutions)</span>"
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Common Problems with Quarto (and some solutions)</span>"
     ]
   },
   {
     "objectID": "common-problems.html#your-turn",
     "href": "common-problems.html#your-turn",
-    "title": "16  Common Problems with Quarto (and some solutions)",
-    "section": "16.15 Your Turn",
-    "text": "16.15 Your Turn\n\nGo to this repo njtierney/qmd-errors, and give debugging some of these common rmarkdown errors a go.\n\nYou can download this repository by running this code:\n\nuse_course(\"njtierney/qmd-errors\")",
+    "title": "15  Common Problems with Quarto (and some solutions)",
+    "section": "16.1 Your Turn",
+    "text": "16.1 Your Turn\n\nGo to this repo njtierney/qmd-errors, and give debugging some of these common Quarto errors a go.\n\nYou can download this repository by running this code:\n\nusethis::use_course(\"njtierney/qmd-errors\")",
     "crumbs": [
-      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Common Problems with Quarto (and some solutions)</span>"
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Common Problems with Quarto (and some solutions)</span>"
     ]
   },
   {
     "objectID": "alternative-outputs-and-exts.html",
     "href": "alternative-outputs-and-exts.html",
-    "title": "17  Different Outputs and Extensions",
+    "title": "16  Different Outputs and Extensions",
     "section": "",
-    "text": "17.1 Alternative output formats",
+    "text": "16.1 Alternative output formats",
     "crumbs": [
-      "<span class='chapter-number'>17</span>  <span class='chapter-title'>Different Outputs and Extensions</span>"
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Different Outputs and Extensions</span>"
     ]
   },
   {
     "objectID": "alternative-outputs-and-exts.html#alternative-output-formats",
     "href": "alternative-outputs-and-exts.html#alternative-output-formats",
-    "title": "17  Different Outputs and Extensions",
+    "title": "16  Different Outputs and Extensions",
     "section": "",
-    "text": "Write a book\nbuild a website\ncreate a simple dashboard\nuse shiny with Quarto\ngenerate multiple reports with parameterised reports - blog post by Mike Mahoney, blog post by Mandy Norrbo\ntypst (like a next-generation LaTeX - still new.)\n\n\n17.1.1 Slideshows / Presentations\n\nHTML: revealjs\nPDF: beamer\npowerpoint\n\n\n\n17.1.2 Quarto Extensions\nQuarto has an official extensions API, you can see all their extensions on their extensions page. Perhaps the most relevant is the journal extensions page, which I discuss below. For more information on creating extensions, see their creating extensions page.\n\n17.1.2.1 For Journals\nQuarto has provided a substantial list of supported journal formats in the journal listings Quarto extensions page. This is similar to rticles in rmarkdown.\n\n\n17.1.2.2 Other extensions\nOther formats and extensions for PDF, for example, the hikmah.pdf extension by Andrew Heiss.\nThese can be found at the Quarto Custom Formats Page.",
+    "text": "Write a book\nbuild a website\ncreate a simple dashboard\nuse shiny with Quarto\ngenerate multiple reports with parameterised reports - blog post by Mike Mahoney, blog post by Mandy Norrbo\ntypst (like a next-generation LaTeX - still new.)\n\n\n16.1.1 Slideshows / Presentations\n\nHTML: revealjs\nPDF: beamer\npowerpoint\n\n\n\n16.1.2 Quarto Extensions\nQuarto has an official extensions API, you can see all their extensions on their extensions page. Perhaps the most relevant is the journal extensions page, which I discuss below. For more information on creating extensions, see their creating extensions page.\n\n16.1.2.1 For Journals\nQuarto has provided a substantial list of supported journal formats in the journal listings Quarto extensions page. This is similar to rticles in rmarkdown.\n\n\n16.1.2.2 Other extensions\nOther formats and extensions for PDF, for example, the hikmah.pdf extension by Andrew Heiss.\nThese can be found at the Quarto Custom Formats Page.",
     "crumbs": [
-      "<span class='chapter-number'>17</span>  <span class='chapter-title'>Different Outputs and Extensions</span>"
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Different Outputs and Extensions</span>"
     ]
   },
   {
     "objectID": "next-steps.html",
     "href": "next-steps.html",
-    "title": "18  Next Steps",
+    "title": "17  Next Steps",
     "section": "",
-    "text": "18.1 Learn how to use git and github\ngit is a version control system. Not sure what a version control system is? No worries, let me explain. If you’ve ever named a document something like:\nRelevant PhD comics link\nOr even if you have something like:\nThese are ways of managing which version you have.\nTo learn git and github, I’d highly recommend Happy Git with R by Jenny Bryan, the STAT 545 TAs, and Jim Hester",
+    "text": "17.1 Learn how to use git and github\ngit is a version control system. Not sure what a version control system is? No worries, let me explain. If you’ve ever named a document something like:\nRelevant PhD comics link\nOr even if you have something like:\nThese are ways of managing which version you have.\nTo learn git and github, I’d highly recommend Happy Git with R by Jenny Bryan, the STAT 545 TAs, and Jim Hester",
     "crumbs": [
-      "<span class='chapter-number'>18</span>  <span class='chapter-title'>Next Steps</span>"
+      "<span class='chapter-number'>17</span>  <span class='chapter-title'>Next Steps</span>"
     ]
   },
   {
     "objectID": "next-steps.html#learn-how-to-use-git-and-github",
     "href": "next-steps.html#learn-how-to-use-git-and-github",
-    "title": "18  Next Steps",
+    "title": "17  Next Steps",
     "section": "",
     "text": "Final\nFinal 2\nReally final\n\n\n\n2018-10-10-document.Rmd\n2018-10-11-document.Rmd",
     "crumbs": [
-      "<span class='chapter-number'>18</span>  <span class='chapter-title'>Next Steps</span>"
+      "<span class='chapter-number'>17</span>  <span class='chapter-title'>Next Steps</span>"
     ]
   },
   {
     "objectID": "references.html",
     "href": "references.html",
-    "title": "19  References",
+    "title": "18  References",
     "section": "",
     "text": "Quarto website\nThe Posit cheatsheet\nR For Data Science section on Quarto\nExtending word templates: https://quarto.org/docs/output-formats/ms-word-templates.html\nhappy git with r",
     "crumbs": [
-      "<span class='chapter-number'>19</span>  <span class='chapter-title'>References</span>"
+      "<span class='chapter-number'>18</span>  <span class='chapter-title'>References</span>"
     ]
   },
   {
     "objectID": "acknowledgements.html",
     "href": "acknowledgements.html",
-    "title": "20  Acknowledgements",
+    "title": "19  Acknowledgements",
     "section": "",
     "text": "This books was first written to be a guide for a course run by the Statistics Society Australia (SSA), and Melbourne Integrative Genomics (MIG) on November 12, 2018. Initially written as “Rmarkdown for Scientists”, “Quarto for Scientists” takes the same format and makes it about Quarto.\nI’d like to first thank Miles McBain, for his working book, “Git For Scientists”. This book inspired the structure and workflow of this existing book.\nI’d also like to thank Karthik Ram, Yoav Ram, Martin Fenner, Puneet Kishor, and Jonathan Dugan, involved with the Scholarly Markdown site. This has helped inform some of the structure of this book. I’d also like to thank Patrick Robotham for his helpful discussions when first creating this book.\nThere have been various wonderful contributions from the community to fix typos in this book, I would like to thank Allison Presmanes Hill PR1, PR2, as well as the many offline helpful conversations about serving this book online and other matters. I’d also like to thank Murray Cadzow PR, and Federico Marini PR, and Raymond B Huey for their thoughtful contributions.",
     "crumbs": [
-      "<span class='chapter-number'>20</span>  <span class='chapter-title'>Acknowledgements</span>"
+      "<span class='chapter-number'>19</span>  <span class='chapter-title'>Acknowledgements</span>"
     ]
   },
   {
-    "objectID": "appendix-a-template.html",
-    "href": "appendix-a-template.html",
-    "title": "Appendix A — Templates",
+    "objectID": "appendix-visual-vs-source-mode.html",
+    "href": "appendix-visual-vs-source-mode.html",
+    "title": "Appendix A — Visual mode",
     "section": "",
-    "text": "A.1 Controlling the outputs\nDepending on the output type, HTML, PDF, or word, you can actually control how the document looks",
+    "text": "This section will be best demonstrated live in the course.\nBut needless to say, some things worth checking out:\n\nciting papers in a linked .bib file\ninsert anything shortcut\ninsert table\n\nWarn against potential issues that may arise due to text changes from swapping to visual model\nThere is also a VS Code extension for visual mode, which this book does not (currently) focus on.",
     "crumbs": [
       "Appendices",
-      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Templates</span>"
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Visual mode</span>"
     ]
   },
   {
-    "objectID": "appendix-a-template.html#controlling-the-outputs",
-    "href": "appendix-a-template.html#controlling-the-outputs",
-    "title": "Appendix A — Templates",
+    "objectID": "appendix-template.html",
+    "href": "appendix-template.html",
+    "title": "Appendix B — Templates",
     "section": "",
-    "text": "A.1.1 Options for HTML\nSome common options for HTML include:\n\nAdding tab sets\nfloating table of contents\n\n\n\nA.1.2 Options for PDF\n\nAdding page breaks\ninjecting LaTeX into your rmarkdown document\n\n\n\nA.1.3 Options for Word\n\ntemplates using .doct files",
+    "text": "B.1 Controlling the outputs\nDepending on the output type, HTML, PDF, or word, you can actually control how the document looks",
     "crumbs": [
       "Appendices",
-      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Templates</span>"
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Templates</span>"
     ]
   },
   {
-    "objectID": "appendix-a-template.html#how-do-i-set-options-specific-to-each-output",
-    "href": "appendix-a-template.html#how-do-i-set-options-specific-to-each-output",
-    "title": "Appendix A — Templates",
-    "section": "A.2 How do I set options specific to each output",
-    "text": "A.2 How do I set options specific to each output\nSometimes you might want to have specific output changes to",
-    "crumbs": [
-      "Appendices",
-      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Templates</span>"
-    ]
-  },
-  {
-    "objectID": "appendix-b-faq.html",
-    "href": "appendix-b-faq.html",
-    "title": "Appendix B — FAQ",
+    "objectID": "appendix-template.html#controlling-the-outputs",
+    "href": "appendix-template.html#controlling-the-outputs",
+    "title": "Appendix B — Templates",
     "section": "",
-    "text": "B.1 How can I include a screenshot of an interactive graphic in PDF or Word?\nYou might wish to include a screenshot of an interactive graphic you had in your HTML document. To do this, you will need the webshot package, and will need the following code in your rmarkdown document.\nI recommend using the webshot package.",
+    "text": "B.1.1 Options for HTML\nSome common options for HTML include:\n\nAdding tab sets\nfloating table of contents\n\n\n\nB.1.2 Options for PDF\n\nAdding page breaks\ninjecting LaTeX into your Quarto document\n\n\n\nB.1.3 Options for Word\n\ntemplates using .doct files",
     "crumbs": [
       "Appendices",
-      "<span class='chapter-number'>B</span>  <span class='chapter-title'>FAQ</span>"
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Templates</span>"
     ]
   },
   {
-    "objectID": "appendix-c-html-extensions.html",
-    "href": "appendix-c-html-extensions.html",
-    "title": "Appendix C — HTML document extensions",
+    "objectID": "appendix-template.html#how-do-i-set-options-specific-to-each-output",
+    "href": "appendix-template.html#how-do-i-set-options-specific-to-each-output",
+    "title": "Appendix B — Templates",
+    "section": "B.2 How do I set options specific to each output",
+    "text": "B.2 How do I set options specific to each output\nSometimes you might want to have specific output changes to",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Templates</span>"
+    ]
+  },
+  {
+    "objectID": "appendix-faq.html",
+    "href": "appendix-faq.html",
+    "title": "Appendix C — FAQ",
     "section": "",
-    "text": "C.0.1 Adding Tab sets\nA tab set looks like the following:\nTo add a tab set, you include {.tabset} after your heading",
+    "text": "C.1 How can I include a screenshot of an interactive graphic in PDF or Word?\nYou might wish to include a screenshot of an interactive graphic you had in your HTML document. To do this, you can use the webshot2 package",
     "crumbs": [
       "Appendices",
-      "<span class='chapter-number'>C</span>  <span class='chapter-title'>HTML document extensions</span>"
+      "<span class='chapter-number'>C</span>  <span class='chapter-title'>FAQ</span>"
     ]
   },
   {
-    "objectID": "appendix-c-html-extensions.html#your-turn",
-    "href": "appendix-c-html-extensions.html#your-turn",
-    "title": "Appendix C — HTML document extensions",
-    "section": "C.1 Your turn",
-    "text": "C.1 Your turn\n\nAdd tab sets to your document\nAdd a floating table of contents",
+    "objectID": "appendix-html-extensions.html",
+    "href": "appendix-html-extensions.html",
+    "title": "Appendix D — HTML document extensions",
+    "section": "",
+    "text": "D.0.1 Adding Tab sets\nA tab set looks like the following:\n## Example tab set {.tabset}\n\n### Tab 1\n\n&gt; Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sed eleifend velit. Sed porta pulvinar lorem ut rutrum. Etiam quis cursus libero. Donec nibh nisl, auctor quis sem in, feugiat convallis odio. Ut at euismod ligula. Nullam vitae quam non lacus scelerisque tempus. Sed tincidunt massa non nunc tincidunt feugiat. In hac habitasse platea dictumst.\n\n### Tab 2\n\n```{r}\n#| label: tab-plot\nplot(iris$Sepal.Length, iris$Sepal.Width)\n```\nTo add a tab set, you include {.tabset} after your heading",
     "crumbs": [
       "Appendices",
-      "<span class='chapter-number'>C</span>  <span class='chapter-title'>HTML document extensions</span>"
+      "<span class='chapter-number'>D</span>  <span class='chapter-title'>HTML document extensions</span>"
+    ]
+  },
+  {
+    "objectID": "appendix-html-extensions.html#your-turn",
+    "href": "appendix-html-extensions.html#your-turn",
+    "title": "Appendix D — HTML document extensions",
+    "section": "D.1 Your turn",
+    "text": "D.1 Your turn\n\nAdd tab sets to your document\nAdd a floating table of contents",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>D</span>  <span class='chapter-title'>HTML document extensions</span>"
     ]
   }
 ]
