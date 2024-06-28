@@ -11,9 +11,9 @@ This online book covers more content than the workshop. Here's an example struct
 
 | time | topic |
 |------|-------|
-|1:00-1:20|	Get started with your own Quarto document | 
-|1:20-1:50|	Workflow when using Quarto documents and projects |
-|1:50-2:20|	Exporting Quarto documents to PDF, HTML, and Microsoft Word |
+|1:30-1:40|	Get started with your own Quarto document | 
+|1:40-2:00|	Workflow when using Quarto documents and projects |
+|2:00-2:20|	Exporting Quarto documents to PDF, HTML, and Microsoft Word |
 |2:30-3:00|	BREAK|
 |3:00-3:30|	Managing captions, figures, tables |
 |3:30-3:45|	Managing equations and bibliographies |
