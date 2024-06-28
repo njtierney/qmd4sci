@@ -48,6 +48,7 @@ book:
     - "appendix-template.qmd"
     - "appendix-faq.qmd"
     - "appendix-html-extensions.qmd"
+    - "appendix-manuscript.qmd"
 bibliography:
   - book.bib
   - packages.bib
