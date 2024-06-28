@@ -110,7 +110,7 @@ gapminder %>%
 
 ### Captions for figures {.demo}
 
-Inserting a caption for a figure is a little bit different. The caption argument is controlled in the chunk option, under the option, `fig.cap`.
+Inserting a caption for a figure is a little bit different. The caption argument is controlled in the chunk option, under the option, `fig-cap`.
 
 So to insert a figure, we do the following.
 
@@ -148,7 +148,7 @@ gapminder %>%
 
 ### Your Turn {.exercise}
 
-* Create a plot with your .Rmd doc
+* Create a plot with your .qmd doc
 * Add a figure caption
 
 ### Inserting images
@@ -162,7 +162,7 @@ In our case, say we wanted to insert the new SSA logo into our document, there a
 
 **Markdown syntax**
 
-The markdown syntax to insert an image is: `![caption]("path/to/image")`
+The markdown syntax to insert an image is: `![caption](path/to/image)`
 
 #### Demo {.demo}
 
@@ -178,10 +178,13 @@ Which would give us the following output:
 
 ![SSA Logo!](figs/ssa-logo.png)
 
-But say that we want more control over the output, like we want to center the image, and we want to make it smaller? Then you can use `knitr::include_graphics()`, and control the figure size using the options `out.width`, and add a caption with `fig.cap`.
+But say that we want more control over the output, like we want to center the image, and we want to make it smaller? Then you can use `knitr::include_graphics()`, and control the figure alignment using the options fig-align, and add a caption with `fig-cap`.
 
 ````{markdown}
-```{r ssa-logo, fig.align = 'center', out.width = "25%", fig.cap = "The new SSA logo, which is actually a scatterplot, which is super neat!"}
+```{r}
+#| label: ssa-logo
+#| fig-align: center
+#| fig-cap: "The new SSA logo, which is actually a scatterplot, which is super neat!"
 knitr::include_graphics(here::here("figs", "ssa-logo.png"))
 ```
 ````

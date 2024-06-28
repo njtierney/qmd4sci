@@ -93,7 +93,7 @@ users
 #| label: tree-elbow
 #| eval: false
 #| echo: false
-file_dir <- "Desktop/qmd4sci-materials/demo-gapminder.Rmd"
+file_dir <- "Desktop/qmd4sci-materials/demo-gapminder.qmd"
 
 gsub(pattern = "/", 
      replacement = "\n└──  ", 

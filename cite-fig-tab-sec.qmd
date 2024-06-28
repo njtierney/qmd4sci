@@ -95,7 +95,7 @@ Also note that there are a variety of ways to specify the figure:
 
 1. Convert your output to use `fig` prefixes to reference figures
 
-### Demo (.demo)
+### Demo {.demo}
 
 ```{r}
 #| label: fig-gg-oz
@@ -134,9 +134,20 @@ gapminder %>%
 
 `@tbl-chunk-name`
 
-Reference: https://quarto.org/docs/authoring/cross-references.html#tables
+If you want to move the caption location you can use `tbl-cap-location: <position>` to specify the location. By default it is the top.
 
-## Other things you can reference
+```{r}
+#| label: tbl-gg-oz-tab
+#| tbl-cap-location: bottom
+#| echo: fenced
+gapminder %>%
+  filter(country == "Australia") %>%
+  knitr::kable(caption = "Raw gapminder data for Australia.")
+```
+
+Reference: <https://quarto.org/docs/authoring/cross-references.html#tables> and <https://quarto.org/docs/authoring/tables.html#caption-location>
+
+## Other things you can cross/reference
 
 You can also reference theorems, code, proofs, and equations! See https://quarto.org/docs/authoring/cross-references.html#theorems-and-proofs for more details.
 
@@ -173,6 +184,13 @@ because it was written as:
 # Citing Figures, Tables & Sections {#sec-start}
 ```
 
-### Your Turn {.exercise}
+
+## Using visual mode {.demo}
+
+Visual mode is this pretty neat feature, it's best demonstrated live!
+
+
+## Your Turn {.exercise}
 
 1. Reference a section in the report.
+

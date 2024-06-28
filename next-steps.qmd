@@ -16,8 +16,8 @@ Really final
 
 Or even if you have something like:
 
-- `2018-10-10-document.Rmd`
-- `2018-10-11-document.Rmd`
+- `2018-10-10-document.qmd`
+- `2018-10-11-document.qmd`
 
 These are ways of managing which version you have.
 

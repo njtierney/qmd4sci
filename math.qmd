@@ -17,7 +17,7 @@ LaTeX style equation writing. This section introduces the two types equations, i
 
 ## Some history {.history}
 
-Equation editing was first made available in TeX, which later become LaTeX, named after Leslie Lamport.
+Equation editing was first made available in TeX, which later become LaTeX, named after [Leslie Lamport](https://en.wikipedia.org/wiki/Leslie_Lamport).
 
 ## Anatomy of Equations
 
@@ -26,12 +26,12 @@ This section shows you some basic equations types that you want to be familiar w
 Inline equations are referenced by a pair of dollar signs: `$`.
 
 ```
-So this text would have an equation here $ E = mc^2$
+So this text would have an equation here: $E = mc^2$
 ```
 
 Generates:
 
-So this text would have an equation here $ E = mc^2$
+So this text would have an equation here: $E = mc^2$
 
 Display equations are referenced by two pairs of dollar signs:
 
@@ -165,6 +165,6 @@ $$
 
 ## Further Reading:
 
-https://quarto.org/docs/visual-editor/technical.html#equations
-https://oeis.org/wiki/List_of_LaTeX_mathematical_symbols
+<https://quarto.org/docs/visual-editor/technical.html#equations>
+<https://oeis.org/wiki/List_of_LaTeX_mathematical_symbols>
 

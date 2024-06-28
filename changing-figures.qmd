@@ -94,7 +94,7 @@ format:
 
 By default, the figures are saved in a folder named after the file, e.g., 
 
-`02-qmd-figures-chunks_files/figure-htaml`
+`02-qmd-figures-chunks_files/figure-html`
 
 If you want to change this location, you can control the specific name of the folder by setting `fig.path` like so in the YAML
 
@@ -126,7 +126,7 @@ knitr:
 ---
 ```
 
-(reference: https://github.com/quarto-dev/quarto-cli/discussions/4254)
+(reference: [https://github.com/quarto-dev/quarto-cli/discussions/4254](https://github.com/quarto-dev/quarto-cli/discussions/4254))
 
 ## Your Turn {.exercise}
 
@@ -138,7 +138,7 @@ knitr:
 
 ## EPS/TIFF/Other multiple image formats
 
-Unfortunately (currently) in Quarto it seems you cannot save to other image formats such as "eps", "tiff", and cannot save to multiple formats at the same time.
+Unfortunately (currently, as far as I can tell) in Quarto it seems you cannot save to other image formats such as "eps", "tiff", and cannot save to multiple formats at the same time.
 
 If you would like to convert images to a specific format, you could try using code like the following.
 

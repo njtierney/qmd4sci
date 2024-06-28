@@ -11,3 +11,8 @@ But needless to say, some things worth checking out:
 Warn against potential issues that may arise due to text changes from swapping to visual model
 
 There is also a [VS Code extension for visual mode](https://quarto.org/docs/visual-editor/vscode/), which this book does not (currently) focus on.
+
+# Using Zotero with Quarto
+
+https://quarto.org/docs/visual-editor/technical.html#citations-from-zotero
+

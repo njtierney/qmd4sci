@@ -16,9 +16,18 @@ This section introduces how to add captions to equations, and reference them in 
 
 You can make an equation referencable by adding a label starting with `#eq-` after the equation `$$`. For example:
 
+```
 $$
 Y \sim X\beta_0 + X\beta_1 + \epsilon
 $$ {#eq-linear}
+```
+
+Gives
+
+$$
+Y \sim X\beta_0 + X\beta_1 + \epsilon
+$$ {#eq-linear}
+
 
 You can then refer to the equation in text using `@eq-linear`:
 

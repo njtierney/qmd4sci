@@ -17,3 +17,5 @@ notes
 _freeze
 *.tex
 site_libs/
+*.ipynb
+*.html

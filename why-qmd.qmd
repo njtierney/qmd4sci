@@ -137,7 +137,7 @@ But with Quarto, we have this general interface, where Quarto can talk to differ
 
 1.  **Learn to use Markdown** In your small groups, spend five minutes working through this [brief online Markdown tutorial](https://www.markdowntutorial.com/)
 
-## Quarto helps complete the solution to the reproducibility problem
+# Quarto helps complete the solution to the reproducibility problem
 
 So, how do we combine this with our R code, into a literate programming environment?
 
@@ -161,45 +161,57 @@ knitr::include_graphics("figs/qmd-report-example.png")
 
 How did we generate it?
 
-```{markdown}
+````{markdown}
 ---
 title: "Exploring gapminder"
 author: "Nicholas Tierney"
 format: html
 ---
 
-
+```{r}
 #| label: library
 library(tidyverse)
 library(broom)
+```
 
+```{r}
 #| label: data-read-in
 data <- read_csv(here::here("data/oz_gapminder.csv"))
+```
+
 
 # Introduction
 
 let's look at the lifespan
 
+```{r}
 #| label: hist-life-exp
 hist(data$lifeExp)
+```
+
 
 Let's fit a simple linear model of the effect of year on life expectancy
 
+```{r}
 #| label: example-lm
 fit <- lm(lifeExp ~ year, data = data)
 fit
+```
+
 
 And let's look at the coefficient table:
 
+```{r}
 #| label: coef-table
 library(broom)
 fit_coef <- tidy(fit)
 knitr::kable(fit_coef,
              caption = "A table of the coefficients")
-
-The effect of year on life expectancy is `` `r  fit_coef$estimate[2]` ``.
-
 ```
+
+The effect of year on life expectancy is `{{r}}  fit_coef$estimate[2]`.
+
+````
 
 We *render* this code and it creates this report!
 

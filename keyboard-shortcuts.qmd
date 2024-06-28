@@ -45,10 +45,10 @@ Below is a small table of tasks you can perform with keyboard
 
 ## Further Reading
 
-- The [https://rstudio.github.io/cheatsheets/html/rstudio-ide.html#keyboard-shortcuts](Rstudio Cheat Sheet) has an index of shortcuts. 
-- This [https://support.posit.co/hc/en-us/articles/206382178-Customizing-Keyboard-Shortcuts-in-the-RStudio-IDE] help file has a guide to customising keyboard shortcuts.
+- The [Rstudio Cheat Sheet](https://rstudio.github.io/cheatsheets/html/rstudio-ide.html#keyboard-shortcuts) has an index of shortcuts. 
+- This [help file](https://support.posit.co/hc/en-us/articles/206382178-Customizing-Keyboard-Shortcuts-in-the-RStudio-IDE) has a guide to customising keyboard shortcuts.
 
 ## Your Turn {.exercise}
 
-- Using the Keyboard Shortcut Reference, find the keyboard shortcut for inserting a pipe character ( %>% )
+- Using the Keyboard Shortcut Reference, find the keyboard shortcut for inserting a pipe character ( %>% or |>)
 - Spend 3 minutes practicing these commands in a document.
