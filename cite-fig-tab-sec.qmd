@@ -137,7 +137,7 @@ gapminder %>%
 If you want to move the caption location you can use `tbl-cap-location: <position>` to specify the location. By default it is the top.
 
 ```{r}
-#| label: tbl-gg-oz-tab
+#| label: tbl-gg-oz-tab-bottom
 #| tbl-cap-location: bottom
 #| echo: fenced
 gapminder %>%
