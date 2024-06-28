@@ -151,7 +151,27 @@ gapminder %>%
 * Create a plot with your .qmd doc
 * Add a figure caption
 
-### Inserting images
+### Adding multiple (sub) figures and (sub) captions
+
+Sometimes you want to add multiple figures that are linked, or slightly different views of similar data and then reference them as Figure 1A and Figure 1B. You can do this with `layout-ncol` and `fig-cap`, and reference the figures with `@fig-<chunk-name>-1` `@fig-<chunk-name>-2`. For example:
+
+```{r}
+#| label: fig-volcanos
+#| layout-ncol: 2
+#| echo: fenced
+#| fig-cap: 
+#|   - "An image plot of Auckland's Maunga Whau Volcano"
+#|   - "A contour plot of Auckland's Maunga Whau Volcano"
+
+image(volcano)
+contour(volcano)
+```
+
+We can see the image plot as (`@fig-volcanos-1`) @fig-volcanos-1 and the contour plot as `@fig-volcanos-2` @fig-volcanos-2.
+
+For more information on this see <https://quarto.org/docs/authoring/figures.html#layout> and <https://quarto.org/docs/authoring/cross-references.html>
+
+## Inserting images
 
 We cannot always generate the graphics that we want - for example, we might have an image of something that we want to show, or perhaps a nice flowchart someone else made.
 

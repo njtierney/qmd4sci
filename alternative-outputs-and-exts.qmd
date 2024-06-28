@@ -12,10 +12,10 @@ There are some small differences in how files are setup, but by and large the wo
 ## Alternative output formats
 
 - [Write a book](https://quarto.org/docs/books/)
-- [build a website](https://quarto.org/docs/websites/)
-- [create a simple dashboard](https://quarto.org/docs/dashboards/)
-- [use shiny with Quarto](https://quarto.org/docs/interactive/shiny/)
-- [generate multiple reports with parameterised reports](https://quarto.org/docs/computations/parameters.html) - [blog post by Mike Mahoney](https://www.mm218.dev/posts/2022-08-04-how-to-use-quarto-for-parameterized-reporting/), [blog post by Mandy Norrbo](https://www.jumpingrivers.com/blog/r-parameterised-presentations-quarto/)
+- [Build a website](https://quarto.org/docs/websites/)
+- [Create a simple dashboard](https://quarto.org/docs/dashboards/)
+- [Use shiny with Quarto](https://quarto.org/docs/interactive/shiny/)
+- [Generate multiple reports with parameterised reports](https://quarto.org/docs/computations/parameters.html) - [blog post by Mike Mahoney](https://www.mm218.dev/posts/2022-08-04-how-to-use-quarto-for-parameterized-reporting/), [blog post by Mandy Norrbo](https://www.jumpingrivers.com/blog/r-parameterised-presentations-quarto/)
 - [typst](https://quarto.org/docs/output-formats/typst.html) (like a next-generation LaTeX - still new.)
 
 ### Slideshows / Presentations
@@ -23,6 +23,10 @@ There are some small differences in how files are setup, but by and large the wo
 - [HTML: revealjs](https://quarto.org/docs/presentations/revealjs/)
 - [PDF: beamer](https://quarto.org/docs/presentations/beamer.html)
 - [powerpoint](https://quarto.org/docs/presentations/powerpoint.html)
+
+### Quarto Manuscripts
+
+[Quarto manuscripts](https://quarto.org/docs/manuscripts/) are a relatively new feature in quarto. They essentially help you share a bundled folder with the journal document, the rendered code, and other bits and pieces. In a future version of this book I will discuss using these in your writing.
 
 ### Quarto Extensions
 
