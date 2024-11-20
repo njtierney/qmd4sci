@@ -323,19 +323,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#metadata" id="toc-metadata" class="nav-link" data-scroll-target="#metadata"><span class="header-section-number">5.4.1</span> Metadata</a></li>
   <li><a href="#text" id="toc-text" class="nav-link" data-scroll-target="#text"><span class="header-section-number">5.4.2</span> Text</a></li>
   <li><a href="#code" id="toc-code" class="nav-link" data-scroll-target="#code"><span class="header-section-number">5.4.3</span> Code</a></li>
-  <li><a href="#chunk-names" id="toc-chunk-names" class="nav-link" data-scroll-target="#chunk-names"><span class="header-section-number">5.5.1</span> Chunk names</a></li>
+  <li><a href="#chunk-names" id="toc-chunk-names" class="nav-link" data-scroll-target="#chunk-names"><span class="header-section-number">5.4.4</span> Chunk names</a></li>
   </ul></li>
-  <li><a href="#code-chunk-options" id="toc-code-chunk-options" class="nav-link" data-scroll-target="#code-chunk-options"><span class="header-section-number">5.6</span> Code chunk options</a>
+  <li><a href="#code-chunk-options" id="toc-code-chunk-options" class="nav-link" data-scroll-target="#code-chunk-options"><span class="header-section-number">5.5</span> Code chunk options</a>
   <ul class="collapse">
-  <li><a href="#inline-code" id="toc-inline-code" class="nav-link" data-scroll-target="#inline-code"><span class="header-section-number">5.6.1</span> Inline code</a></li>
+  <li><a href="#inline-code" id="toc-inline-code" class="nav-link" data-scroll-target="#inline-code"><span class="header-section-number">5.5.1</span> Inline code</a></li>
   </ul></li>
-  <li><a href="#creating-a-quarto-document" id="toc-creating-a-quarto-document" class="nav-link" data-scroll-target="#creating-a-quarto-document"><span class="header-section-number">5.7</span> Creating a Quarto document</a></li>
-  <li><a href="#working-with-a-quarto-document" id="toc-working-with-a-quarto-document" class="nav-link" data-scroll-target="#working-with-a-quarto-document"><span class="header-section-number">5.8</span> Working with a Quarto document</a>
-  <ul class="collapse">
-  <li><a href="#your-turn" id="toc-your-turn" class="nav-link" data-scroll-target="#your-turn"><span class="header-section-number">5.8.1</span> Your Turn</a></li>
-  </ul></li>
-  <li><a href="#nicks-quarto-starter-pack" id="toc-nicks-quarto-starter-pack" class="nav-link" data-scroll-target="#nicks-quarto-starter-pack"><span class="header-section-number">5.9</span> Nick’s Quarto starter pack</a></li>
-  <li><a href="#your-turn-1" id="toc-your-turn-1" class="nav-link" data-scroll-target="#your-turn-1"><span class="header-section-number">5.10</span> Your Turn</a></li>
+  <li><a href="#creating-a-quarto-document" id="toc-creating-a-quarto-document" class="nav-link" data-scroll-target="#creating-a-quarto-document"><span class="header-section-number">5.6</span> Creating a Quarto document</a></li>
+  <li><a href="#working-with-a-quarto-document" id="toc-working-with-a-quarto-document" class="nav-link" data-scroll-target="#working-with-a-quarto-document"><span class="header-section-number">5.7</span> Working with a Quarto document</a></li>
+  <li><a href="#nicks-quarto-starter-pack" id="toc-nicks-quarto-starter-pack" class="nav-link" data-scroll-target="#nicks-quarto-starter-pack"><span class="header-section-number">5.8</span> Nick’s Quarto starter pack</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/njtierney/qmd4sci/edit/main/using-qmd.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/njtierney/qmd4sci/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -460,14 +456,14 @@ __bold__, **bold**, _italic_, *italic*
 </div>
 </section>
 <section id="code" class="level3" data-number="5.4.3">
-<h3 data-number="5.4.3" class="anchored"><span class="header-section-number">5.4.3</span> Code</h3>
+<h3 data-number="5.4.3" class="anchored" data-anchor-id="code"><span class="header-section-number">5.4.3</span> Code</h3>
 <p>We refer to code in an Quarto document in two ways:</p>
 <ol type="1">
 <li>Code chunks, and</li>
 <li>Inline code.</li>
 </ol>
 <section id="code-chunks" class="level4" data-number="5.4.3.1">
-<h4 data-number="5.4.3.1" class="anchored"><span class="header-section-number">5.4.3.1</span> Code chunks</h4>
+<h4 data-number="5.4.3.1" class="anchored" data-anchor-id="code-chunks"><span class="header-section-number">5.4.3.1</span> Code chunks</h4>
 <p>Code chunks are marked by three backticks and curly braces. We put the letter <code>r</code> inside them to denote them as “r” code chunks, but you can instead use “python” and “julia” instead:</p>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
 <ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" aria-current="page">R</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">python</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false">julia</a></li></ul>
@@ -492,23 +488,19 @@ __bold__, **bold**, _italic_, *italic*
 </div>
 </div>
 </div>
-<div class="callout callout-style-default callout-caution callout-titled">
+<div class="callout callout-style-default callout-important callout-titled" title="This book currently focusses only on R">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Caution
+This book currently focusses only on R
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
 <div id="callout-1" class="callout-1-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
-<p>However…</p>
-<section id="this-book-currently-focusses-only-on-r" class="level2" data-number="5.5">
-<h2 data-number="5.5" class="anchored" data-anchor-id="this-book-currently-focusses-only-on-r"><span class="header-section-number">5.5</span> This book currently focusses only on R</h2>
 <p>Quarto provides support for R, Python, Julia, and Observable, which are all very powerful and awesome languages! However currently we will only be focussing on using R in this book. But I want to make sure that you know you can use python, or Julia, or Observable! More languages will be supported into the future, I believe.</p>
-</section>
 </div>
 </div>
 </div>
@@ -525,8 +517,8 @@ Caution
 </div>
 </section>
 </section>
-<section id="chunk-names" class="level3" data-number="5.5.1">
-<h3 data-number="5.5.1" class="anchored" data-anchor-id="chunk-names"><span class="header-section-number">5.5.1</span> Chunk names</h3>
+<section id="chunk-names" class="level3" data-number="5.4.4">
+<h3 data-number="5.4.4" class="anchored" data-anchor-id="chunk-names"><span class="header-section-number">5.4.4</span> Chunk names</h3>
 <p>Every chunk should ideally have a name. As I’ve mentioned earlier, naming things is hard, but follow these rules and you’ll be fine:</p>
 <ul>
 <li>one word that describes the action (e.g., “read”)</li>
@@ -535,8 +527,8 @@ Caution
 </ul>
 </section>
 </section>
-<section id="code-chunk-options" class="level2" data-number="5.6">
-<h2 data-number="5.6" class="anchored" data-anchor-id="code-chunk-options"><span class="header-section-number">5.6</span> Code chunk options</h2>
+<section id="code-chunk-options" class="level2" data-number="5.5">
+<h2 data-number="5.5" class="anchored" data-anchor-id="code-chunk-options"><span class="header-section-number">5.5</span> Code chunk options</h2>
 <p>You can control how the code is output by changing the code chunk options, which are written with a <code>#|</code>, called a “hash-pipe”, since <code>#</code> is “hash”, and <code>|</code> is “pipe”, but might sometimes be called “bar” or “v-bar”.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
@@ -559,8 +551,8 @@ Caution
 <p><!-- * error: If you want R to stop on errors, set to `false` --> <!-- * warning: preserve warnings (produced by `warning()`). IF `false`, all warnings will be printed in the console instead of the output document  --> <!-- * message: Similar to warning, do you want to preserve messages provided by `message()`.  --></p>
 <!--   * results: option 'hold' will wait until the code chunk is complete and then  -->
 <p>You can read more about the options at the official documentation: <a href="https://quarto.org/docs/computations/execution-options.html" class="uri">https://quarto.org/docs/computations/execution-options.html</a></p>
-<section id="inline-code" class="level3" data-number="5.6.1">
-<h3 data-number="5.6.1" class="anchored" data-anchor-id="inline-code"><span class="header-section-number">5.6.1</span> Inline code</h3>
+<section id="inline-code" class="level3" data-number="5.5.1">
+<h3 data-number="5.5.1" class="anchored" data-anchor-id="inline-code"><span class="header-section-number">5.5.1</span> Inline code</h3>
 <p>Sometimes you want to run the code inside a sentence. When the code is run inside the sentence, it is called running the code “inline”.</p>
 <p>You might want to run the code inline to name the number of variables or rows in a dataset in a sentence like:</p>
 <blockquote class="blockquote">
@@ -587,19 +579,27 @@ Caution
 <p>What’s great about this is that if your data changes upstream, then you don’t need to work out where you mentioned your data and change that bit of text. You just render the document and it takes care of these details.</p>
 </section>
 </section>
-<section id="creating-a-quarto-document" class="level2" data-number="5.7">
-<h2 data-number="5.7" class="anchored" data-anchor-id="creating-a-quarto-document"><span class="header-section-number">5.7</span> Creating a Quarto document</h2>
+<section id="creating-a-quarto-document" class="level2" data-number="5.6">
+<h2 data-number="5.6" class="anchored" data-anchor-id="creating-a-quarto-document"><span class="header-section-number">5.6</span> Creating a Quarto document</h2>
 <ul>
 <li>Rstudio menu system</li>
 <li>Explore the template provided by Rstudio</li>
 <li>Compile an Quarto document</li>
 </ul>
 </section>
-<section id="working-with-a-quarto-document" class="level2" data-number="5.8">
-<h2 data-number="5.8" class="anchored" data-anchor-id="working-with-a-quarto-document"><span class="header-section-number">5.8</span> Working with a Quarto document</h2>
+<section id="working-with-a-quarto-document" class="level2" data-number="5.7">
+<h2 data-number="5.7" class="anchored" data-anchor-id="working-with-a-quarto-document"><span class="header-section-number">5.7</span> Working with a Quarto document</h2>
 <p><strong>Demo: Create a Quarto document in rstudio.</strong></p>
-<section id="your-turn" class="level3 exercise" data-number="5.8.1">
-<h3 class="exercise anchored" data-number="5.8.1" data-anchor-id="your-turn"><span class="header-section-number">5.8.1</span> Your Turn</h3>
+<div class="callout callout-style-default callout-note callout-titled" title="Your Turn">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Your Turn
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <ol type="1">
 <li>Use the rstudio project you previously created, <code>qmd4sci-materials</code>, and open the “01-qmd-examples.qmd” file.</li>
 <li>Run some brief summaries of the data in the Quarto document:
@@ -615,10 +615,11 @@ Caution
 <!-- # My philosophy on Quarto -->
 <!-- - Keep it simple -->
 <!-- - focus on content -->
+</div>
+</div>
 </section>
-</section>
-<section id="nicks-quarto-starter-pack" class="level2" data-number="5.9">
-<h2 data-number="5.9" class="anchored" data-anchor-id="nicks-quarto-starter-pack"><span class="header-section-number">5.9</span> Nick’s Quarto starter pack</h2>
+<section id="nicks-quarto-starter-pack" class="level2" data-number="5.8">
+<h2 data-number="5.8" class="anchored" data-anchor-id="nicks-quarto-starter-pack"><span class="header-section-number">5.8</span> Nick’s Quarto starter pack</h2>
 <p>I highly recommend that each document you write has a certain structure:</p>
 <ul>
 <li>Sets global options in the YAML</li>
@@ -674,12 +675,21 @@ Caution
 <li>It helps another person get oriented with your work - they know the settings, the functions used, and the special things that you wrote (your functions)</li>
 <li>Remember, “another person” includes yourself in 6 months. You are always collaborating with your future self. <strong>You are always collaborating with your future self.</strong> Say it with me.</li>
 </ol>
-</section>
-<section id="your-turn-1" class="level2 exercise" data-number="5.10">
-<h2 class="exercise anchored" data-number="5.10" data-anchor-id="your-turn-1"><span class="header-section-number">5.10</span> Your Turn</h2>
+<div class="callout callout-style-default callout-note callout-titled" title="Your Turn">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Your Turn
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <ol type="1">
 <li>Update the “01-qmd-example.qmd” Quarto document you just created, based on the aforementioned steps discussed above.</li>
 </ol>
+</div>
+</div>
 
 
 </section>

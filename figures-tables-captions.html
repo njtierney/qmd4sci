@@ -320,19 +320,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#objectives" id="toc-objectives" class="nav-link" data-scroll-target="#objectives"><span class="header-section-number">8.3</span> Objectives</a></li>
   <li><a href="#tables" id="toc-tables" class="nav-link" data-scroll-target="#tables"><span class="header-section-number">8.4</span> Tables</a>
   <ul class="collapse">
-  <li><a href="#demo" id="toc-demo" class="nav-link" data-scroll-target="#demo"><span class="header-section-number">8.4.1</span> Demo</a></li>
-  <li><a href="#your-turn" id="toc-your-turn" class="nav-link" data-scroll-target="#your-turn"><span class="header-section-number">8.4.2</span> Your Turn</a></li>
+  <li><a href="#demonstrating-using-tables" id="toc-demonstrating-using-tables" class="nav-link" data-scroll-target="#demonstrating-using-tables"><span class="header-section-number">8.4.1</span> Demonstrating using tables</a></li>
   </ul></li>
   <li><a href="#figures" id="toc-figures" class="nav-link" data-scroll-target="#figures"><span class="header-section-number">8.5</span> Figures</a>
   <ul class="collapse">
-  <li><a href="#captions-for-figures" id="toc-captions-for-figures" class="nav-link" data-scroll-target="#captions-for-figures"><span class="header-section-number">8.5.1</span> Captions for figures</a></li>
-  <li><a href="#your-turn-1" id="toc-your-turn-1" class="nav-link" data-scroll-target="#your-turn-1"><span class="header-section-number">8.5.2</span> Your Turn</a></li>
-  <li><a href="#adding-multiple-sub-figures-and-sub-captions" id="toc-adding-multiple-sub-figures-and-sub-captions" class="nav-link" data-scroll-target="#adding-multiple-sub-figures-and-sub-captions"><span class="header-section-number">8.5.3</span> Adding multiple (sub) figures and (sub) captions</a></li>
+  <li><a href="#adding-multiple-sub-figures-and-sub-captions" id="toc-adding-multiple-sub-figures-and-sub-captions" class="nav-link" data-scroll-target="#adding-multiple-sub-figures-and-sub-captions"><span class="header-section-number">8.5.1</span> Adding multiple (sub) figures and (sub) captions</a></li>
   </ul></li>
-  <li><a href="#inserting-images" id="toc-inserting-images" class="nav-link" data-scroll-target="#inserting-images"><span class="header-section-number">8.6</span> Inserting images</a>
-  <ul class="collapse">
-  <li><a href="#your-turn-2" id="toc-your-turn-2" class="nav-link" data-scroll-target="#your-turn-2"><span class="header-section-number">8.6.1</span> Your Turn</a></li>
-  </ul></li>
+  <li><a href="#inserting-images" id="toc-inserting-images" class="nav-link" data-scroll-target="#inserting-images"><span class="header-section-number">8.6</span> Inserting images</a></li>
   <li><a href="#summary" id="toc-summary" class="nav-link" data-scroll-target="#summary"><span class="header-section-number">8.7</span> Summary</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/njtierney/qmd4sci/edit/main/figures-tables-captions.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/njtierney/qmd4sci/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
@@ -381,21 +375,24 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="tables" class="level2" data-number="8.4">
 <h2 data-number="8.4" class="anchored" data-anchor-id="tables"><span class="header-section-number">8.4</span> Tables</h2>
 <p>To produce a table, I recommend you use the <code>kable</code> function from the <code>knitr</code> package.</p>
-<div class="callout callout-style-default callout-note callout-titled" title="Other table R packages">
-<div class="callout-header d-flex align-content-center">
+<div class="callout callout-style-default callout-caution callout-titled" title="Other table R packages">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
 Other table R packages
 </div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>There are many other table making pieces of R packages, such as <a href="https://gt.rstudio.com/"><code>gt</code></a>, <a href="https://renkun-ken.github.io/formattable/"><code>formattable</code></a>, <a href="https://glin.github.io/reactable/index.html"><code>reactable</code></a>, and <a href="https://davidgohel.github.io/flextable/index.html"><code>flextable</code></a>). But I think you can get 90% of the way there with <code>kable</code> from <code>knitr</code>, and for the</p>
 </div>
 </div>
-<section id="demo" class="level3 demo" data-number="8.4.1">
-<h3 class="demo anchored" data-number="8.4.1" data-anchor-id="demo"><span class="header-section-number">8.4.1</span> Demo</h3>
+</div>
+<section id="demonstrating-using-tables" class="level3" data-number="8.4.1">
+<h3 data-number="8.4.1" class="anchored" data-anchor-id="demonstrating-using-tables"><span class="header-section-number">8.4.1</span> Demonstrating using tables</h3>
 <p><code>kable</code> takes a <code>data.frame</code> as input, and outputs the table into a <code>markdown table</code>, which will get rendered into the appropriate output format.</p>
 <p>For example, let’s say we wanted to share the first 6 rows of our gapminder data.</p>
 <p>This gives us the following output</p>
@@ -624,23 +621,40 @@ Other table R packages
 </div>
 <p>There are other options that you can set in <code>kable</code>, but for these options will get you through a large majority of what you need. For more information on what <code>kable</code> can provide, see <code>?knitr::kable</code>.</p>
 <p>There are many different ways to produce tables in R. We have chosen to show <code>kable</code> today because kable is minimal, but powerful. If you want to extend <code>kable</code> to do more, look at <a href="https://cran.r-project.org/web/packages/kableExtra/index.html">kableExtra</a>. For PDF/LaTeX output, I found the option <code>kableExtra::kable_styling(latex_options = c("hold_position"))</code> particularly nice to just <strong>put the table where it should be, goshdarnit</strong>.</p>
-</section>
-</section>
-<section id="your-turn" class="level3 exercise" data-number="8.4.2">
-<h3 class="exercise anchored" data-number="8.4.2" data-anchor-id="your-turn"><span class="header-section-number">8.4.2</span> Your Turn</h3>
+<div class="callout callout-style-default callout-note callout-titled" title="Your Turn">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Your Turn
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <ol type="1">
 <li>Using the “02-qmd-figures-chunks.qmd”</li>
 <li>Create a summary of your gapminder data, put it into a table.</li>
 <li>Add a caption to this table.</li>
 <li>Set the number of decimals to 2.</li>
 </ol>
+</div>
+</div>
+</section>
 </section>
 </section>
 <section id="figures" class="level2" data-number="8.5">
 <h2 data-number="8.5" class="anchored" data-anchor-id="figures"><span class="header-section-number">8.5</span> Figures</h2>
 <p>Printing figures is probably my favourite feature of Quarto. It is actually relatively straightforward in the case of plots. You provide the plot you want to show in a code chunk!</p>
-<section id="demo-1" class="level4 demo" data-number="8.5.0.1">
-<h4 class="demo anchored" data-number="8.5.0.1" data-anchor-id="demo-1"><span class="header-section-number">8.5.0.1</span> Demo</h4>
+<div class="callout callout-style-default callout-tip callout-titled" title="Demo using gapminder">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Demo using gapminder
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <p>For example, I can print a plot of the gapminder data for Australia like so:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">options</span>(<span class="at">tidyverse.quiet =</span> <span class="cn">TRUE</span>)</span>
@@ -659,9 +673,18 @@ Other table R packages
 </div>
 </div>
 </div>
-</section>
-<section id="captions-for-figures" class="level3 demo" data-number="8.5.1">
-<h3 class="demo anchored" data-number="8.5.1" data-anchor-id="captions-for-figures"><span class="header-section-number">8.5.1</span> Captions for figures</h3>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled" title="Demo: Captions for figures">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Demo: Captions for figures
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <p>Inserting a caption for a figure is a little bit different. The caption argument is controlled in the chunk option, under the option, <code>fig-cap</code>.</p>
 <p>So to insert a figure, we do the following.</p>
 <div class="cell">
@@ -697,9 +720,18 @@ Other table R packages
 </div>
 </div>
 </div>
-</section>
-<section id="your-turn-1" class="level3 exercise" data-number="8.5.2">
-<h3 class="exercise anchored" data-number="8.5.2" data-anchor-id="your-turn-1"><span class="header-section-number">8.5.2</span> Your Turn</h3>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled" title="Your Turn">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Your Turn
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <ol type="1">
 <li>Using 02-qmd-figures-chunks.qmd
 <ol type="1">
@@ -707,9 +739,10 @@ Other table R packages
 <li>Add a figure caption</li>
 </ol></li>
 </ol>
-</section>
-<section id="adding-multiple-sub-figures-and-sub-captions" class="level3" data-number="8.5.3">
-<h3 data-number="8.5.3" class="anchored" data-anchor-id="adding-multiple-sub-figures-and-sub-captions"><span class="header-section-number">8.5.3</span> Adding multiple (sub) figures and (sub) captions</h3>
+</div>
+</div>
+<section id="adding-multiple-sub-figures-and-sub-captions" class="level3" data-number="8.5.1">
+<h3 data-number="8.5.1" class="anchored" data-anchor-id="adding-multiple-sub-figures-and-sub-captions"><span class="header-section-number">8.5.1</span> Adding multiple (sub) figures and (sub) captions</h3>
 <p>Sometimes you want to add multiple figures that are linked, or slightly different views of similar data and then reference them as Figure 1A and Figure 1B. You can do this with <code>layout-ncol</code> and <code>fig-cap</code>, and reference the figures with <code>@fig-&lt;chunk-name&gt;-1</code> <code>@fig-&lt;chunk-name&gt;-2</code>. For example:</p>
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="in">#| label: fig-volcanos</span></span>
@@ -763,8 +796,16 @@ Figure&nbsp;8.2: A contour plot of Auckland’s Maunga Whau Volcano
 </ol>
 <p><strong>Markdown syntax</strong></p>
 <p>The markdown syntax to insert an image is: <code>![caption](path/to/image){options}</code></p>
-<section id="demo-2" class="level4 demo" data-number="8.6.0.1">
-<h4 class="demo anchored" data-number="8.6.0.1" data-anchor-id="demo-2"><span class="header-section-number">8.6.0.1</span> Demo</h4>
+<div class="callout callout-style-default callout-tip callout-titled" title="Demo: inserting a logo">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Demo: inserting a logo
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <p>So we could insert the new SSA vic logo by doing the following:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
@@ -798,22 +839,34 @@ Figure&nbsp;8.2: A contour plot of Auckland’s Maunga Whau Volcano
 </div>
 </div>
 </div>
-<div class="callout callout-style-default callout-tip callout-titled" title="Controlling image output with css">
-<div class="callout-header d-flex align-content-center">
+<div class="callout callout-style-default callout-caution callout-titled" title="Controlling image output with css">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
 Controlling image output with css
 </div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
+<div id="callout-6" class="callout-6-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>You can control more features of figures, e.g., sizing, alignment, alt text, etc., by using CSS type styling, which you can read more about here: <a href="https://quarto.org/docs/authoring/figures.html#figure-sizing%60" class="uri">https://quarto.org/docs/authoring/figures.html#figure-sizing`</a></p>
 </div>
 </div>
-</section>
-<section id="your-turn-2" class="level3 exercise" data-number="8.6.1">
-<h3 class="exercise anchored" data-number="8.6.1" data-anchor-id="your-turn-2"><span class="header-section-number">8.6.1</span> Your Turn</h3>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled" title="Your Turn">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Your Turn
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <ol type="1">
 <li>Download <a href="https://www.gapminder.org/wp-content/themes/gapminder2/images/gapminder-logo.svg">the gapminder logo</a></li>
 <li>Put it into a new directory called “figs” (at the top level)</li>
@@ -821,7 +874,8 @@ Controlling image output with css
 <li>Try using both markdown <code>![]()</code> syntax, and <code>knitr::include_graphics()</code>.</li>
 <li>Hint: Remember to refer to the image in the right spot using <code>here</code>!</li>
 </ol>
-</section>
+</div>
+</div>
 </section>
 <section id="summary" class="level2" data-number="8.7">
 <h2 data-number="8.7" class="anchored" data-anchor-id="summary"><span class="header-section-number">8.7</span> Summary</h2>

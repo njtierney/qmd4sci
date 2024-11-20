@@ -322,18 +322,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul class="collapse">
   <li><a href="#what-is-a-.bib-file" id="toc-what-is-a-.bib-file" class="nav-link" data-scroll-target="#what-is-a-.bib-file"><span class="header-section-number">12.4.1</span> What is a .bib file?</a></li>
   <li><a href="#and-how-do-i-generate-these-.bib-files" id="toc-and-how-do-i-generate-these-.bib-files" class="nav-link" data-scroll-target="#and-how-do-i-generate-these-.bib-files"><span class="header-section-number">12.4.2</span> And how do I generate these .bib files?</a></li>
-  <li><a href="#your-turn" id="toc-your-turn" class="nav-link" data-scroll-target="#your-turn"><span class="header-section-number">12.4.3</span> Your Turn</a></li>
   </ul></li>
-  <li><a href="#how-to-change-the-bibliography-style" id="toc-how-to-change-the-bibliography-style" class="nav-link" data-scroll-target="#how-to-change-the-bibliography-style"><span class="header-section-number">12.5</span> How to change the bibliography style</a>
-  <ul class="collapse">
-  <li><a href="#your-turn-1" id="toc-your-turn-1" class="nav-link" data-scroll-target="#your-turn-1"><span class="header-section-number">12.5.1</span> Your Turn</a></li>
-  </ul></li>
+  <li><a href="#how-to-change-the-bibliography-style" id="toc-how-to-change-the-bibliography-style" class="nav-link" data-scroll-target="#how-to-change-the-bibliography-style"><span class="header-section-number">12.5</span> How to change the bibliography style</a></li>
   <li><a href="#how-to-move-the-bibliography-location" id="toc-how-to-move-the-bibliography-location" class="nav-link" data-scroll-target="#how-to-move-the-bibliography-location"><span class="header-section-number">12.6</span> How to move the bibliography location</a></li>
-  <li><a href="#how-to-not-print-suppress-the-bibliography" id="toc-how-to-not-print-suppress-the-bibliography" class="nav-link" data-scroll-target="#how-to-not-print-suppress-the-bibliography"><span class="header-section-number">12.7</span> How to not print / suppress the bibliography?</a>
-  <ul class="collapse">
-  <li><a href="#your-turn-2" id="toc-your-turn-2" class="nav-link" data-scroll-target="#your-turn-2"><span class="header-section-number">12.7.1</span> Your Turn</a></li>
-  <li><a href="#demo-use-the-visual-editor-mode-of-rstudio" id="toc-demo-use-the-visual-editor-mode-of-rstudio" class="nav-link" data-scroll-target="#demo-use-the-visual-editor-mode-of-rstudio"><span class="header-section-number">12.7.2</span> Demo: Use the Visual Editor mode of RStudio</a></li>
-  </ul></li>
+  <li><a href="#how-to-not-print-suppress-the-bibliography" id="toc-how-to-not-print-suppress-the-bibliography" class="nav-link" data-scroll-target="#how-to-not-print-suppress-the-bibliography"><span class="header-section-number">12.7</span> How to not print / suppress the bibliography?</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/njtierney/qmd4sci/edit/main/citations-and-styles.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/njtierney/qmd4sci/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -457,9 +449,16 @@ A BibTeX entry for LaTeX users is
 </div>
 </div>
 <p>For journals or books, you’ll need to get a specific .bib file. Yes, this can be a bit of a pain, but this is where you need to use a reference management software like <a href="https://www.zotero.org/">Zotero</a>, <a href="https://www.mendeley.com/download-desktop/">Mendeley</a>, <a href="https://www.papersapp.com/">papers</a>, or <a href="https://paperpile.com/">paperpile</a>. The important thing to to <strong>use something</strong>. These all allow you to get .bib files of your articles, which you can then placec in your <code>references.bib</code> file.</p>
-</section>
-<section id="your-turn" class="level3 exercise" data-number="12.4.3">
-<h3 class="exercise anchored" data-number="12.4.3" data-anchor-id="your-turn"><span class="header-section-number">12.4.3</span> Your Turn</h3>
+<div class="callout callout-style-default callout-note callout-titled" title="Your Turn">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Your Turn
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <ol type="1">
 <li>Using “05-qmd-bib-polish.qmd”
 <ol type="1">
@@ -470,6 +469,8 @@ A BibTeX entry for LaTeX users is
 <li>Render the document</li>
 </ol></li>
 </ol>
+</div>
+</div>
 </section>
 </section>
 <section id="how-to-change-the-bibliography-style" class="level2" data-number="12.5">
@@ -483,15 +484,24 @@ A BibTeX entry for LaTeX users is
 <span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="fu">bibliography</span><span class="kw">:</span><span class="at"> references.bib</span></span>
 <span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="fu">csl</span><span class="kw">:</span><span class="at"> my_journal.csl</span></span>
 <span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<section id="your-turn-1" class="level3 exercise" data-number="12.5.1">
-<h3 class="exercise anchored" data-number="12.5.1" data-anchor-id="your-turn-1"><span class="header-section-number">12.5.1</span> Your Turn</h3>
+<div class="callout callout-style-default callout-note callout-titled" title="Your Turn">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Your Turn
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <ol type="1">
 <li>select your bibliography style to be one from your favourite journal at the CSL github repo here: https://github.com/citation-style-language/styles (&gt; 2,600 citations and counting)</li>
 <li>place this in your rstudio project</li>
 <li>refer to it in the YAML</li>
 <li>Render your document and observe your greatness</li>
 </ol>
-</section>
+</div>
+</div>
 </section>
 <section id="how-to-move-the-bibliography-location" class="level2" data-number="12.6">
 <h2 data-number="12.6" class="anchored" data-anchor-id="how-to-move-the-bibliography-location"><span class="header-section-number">12.6</span> How to move the bibliography location</h2>
@@ -516,23 +526,41 @@ A BibTeX entry for LaTeX users is
 output: html
 bibliography: file.bib
 suppress-bibliography: true</code></pre>
-<section id="your-turn-2" class="level3 exercise" data-number="12.7.1">
-<h3 class="exercise anchored" data-number="12.7.1" data-anchor-id="your-turn-2"><span class="header-section-number">12.7.1</span> Your Turn</h3>
+<div class="callout callout-style-default callout-note callout-titled" title="Your Turn">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Your Turn
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <ol type="1">
 <li>Generate a bibliography and an appendix that follows it</li>
 </ol>
-</section>
-<section id="demo-use-the-visual-editor-mode-of-rstudio" class="level3 demo" data-number="12.7.2">
-<h3 class="demo anchored" data-number="12.7.2" data-anchor-id="demo-use-the-visual-editor-mode-of-rstudio"><span class="header-section-number">12.7.2</span> Demo: Use the Visual Editor mode of RStudio</h3>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled" title="Demo: Use the Visual Editor mode of RStudio">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Demo: Use the Visual Editor mode of RStudio
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <p>Show off the citation auto-complete magic!</p>
 <ul>
 <li>search for DOIs</li>
 <li>search for R packages</li>
 <li>search pubmed/datacite/more!</li>
 </ul>
+</div>
+</div>
 
 
-</section>
 </section>
 
 

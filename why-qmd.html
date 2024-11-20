@@ -318,17 +318,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview"><span class="header-section-number">1.1</span> Overview</a></li>
   <li><a href="#questions" id="toc-questions" class="nav-link" data-scroll-target="#questions"><span class="header-section-number">1.2</span> Questions</a></li>
   <li><a href="#objectives" id="toc-objectives" class="nav-link" data-scroll-target="#objectives"><span class="header-section-number">1.3</span> Objectives</a></li>
-  <li><a href="#your-turn" id="toc-your-turn" class="nav-link" data-scroll-target="#your-turn"><span class="header-section-number">1.4</span> Your Turn</a></li>
-  <li><a href="#reproducibility-is-a-problem" id="toc-reproducibility-is-a-problem" class="nav-link" data-scroll-target="#reproducibility-is-a-problem"><span class="header-section-number">1.5</span> Reproducibility is a problem</a></li>
-  <li><a href="#literate-programming-is-a-partial-solution" id="toc-literate-programming-is-a-partial-solution" class="nav-link" data-scroll-target="#literate-programming-is-a-partial-solution"><span class="header-section-number">1.6</span> Literate programming is a partial solution</a></li>
-  <li><a href="#markdown-as-a-new-player-to-legibility" id="toc-markdown-as-a-new-player-to-legibility" class="nav-link" data-scroll-target="#markdown-as-a-new-player-to-legibility"><span class="header-section-number">1.7</span> Markdown as a new player to legibility</a>
+  <li><a href="#reproducibility-is-a-problem" id="toc-reproducibility-is-a-problem" class="nav-link" data-scroll-target="#reproducibility-is-a-problem"><span class="header-section-number">1.4</span> Reproducibility is a problem</a></li>
+  <li><a href="#literate-programming-is-a-partial-solution" id="toc-literate-programming-is-a-partial-solution" class="nav-link" data-scroll-target="#literate-programming-is-a-partial-solution"><span class="header-section-number">1.5</span> Literate programming is a partial solution</a></li>
+  <li><a href="#markdown-as-a-new-player-to-legibility" id="toc-markdown-as-a-new-player-to-legibility" class="nav-link" data-scroll-target="#markdown-as-a-new-player-to-legibility"><span class="header-section-number">1.6</span> Markdown as a new player to legibility</a>
   <ul class="collapse">
-  <li><a href="#a-brief-example-of-markdown" id="toc-a-brief-example-of-markdown" class="nav-link" data-scroll-target="#a-brief-example-of-markdown"><span class="header-section-number">1.7.1</span> A brief example of markdown</a></li>
+  <li><a href="#a-brief-example-of-markdown" id="toc-a-brief-example-of-markdown" class="nav-link" data-scroll-target="#a-brief-example-of-markdown"><span class="header-section-number">1.6.1</span> A brief example of markdown</a></li>
   </ul></li>
-  <li><a href="#what-about-rmarkdown" id="toc-what-about-rmarkdown" class="nav-link" data-scroll-target="#what-about-rmarkdown"><span class="header-section-number">2</span> What about Rmarkdown?</a>
-  <ul class="collapse">
-  <li><a href="#your-turn-1" id="toc-your-turn-1" class="nav-link" data-scroll-target="#your-turn-1"><span class="header-section-number">2.1</span> Your Turn</a></li>
-  </ul></li>
+  <li><a href="#what-about-rmarkdown" id="toc-what-about-rmarkdown" class="nav-link" data-scroll-target="#what-about-rmarkdown"><span class="header-section-number">2</span> What about Rmarkdown?</a></li>
   <li><a href="#quarto-helps-complete-the-solution-to-the-reproducibility-problem" id="toc-quarto-helps-complete-the-solution-to-the-reproducibility-problem" class="nav-link" data-scroll-target="#quarto-helps-complete-the-solution-to-the-reproducibility-problem"><span class="header-section-number">3</span> Quarto helps complete the solution to the reproducibility problem</a>
   <ul class="collapse">
   <li><a href="#summary" id="toc-summary" class="nav-link" data-scroll-target="#summary"><span class="header-section-number">3.1</span> Summary</a></li>
@@ -381,38 +377,59 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><a href="https://www.markdowntutorial.com/">Learn how to use Markdown</a></li>
 <li>Think about why you want to use Markdown</li>
 </ul>
-</section>
-<section id="your-turn" class="level2 exercise" data-number="1.4">
-<h2 class="exercise anchored" data-number="1.4" data-anchor-id="your-turn"><span class="header-section-number">1.4</span> Your Turn</h2>
+<div class="callout callout-style-default callout-note callout-titled" title="Your Turn">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Your Turn
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <ol type="1">
 <li><strong>Why are we here</strong> Form small groups of 2-4 with your neighbours and discuss how you expect learning Quarto might benefit you.</li>
 </ol>
+</div>
+</div>
 </section>
-<section id="reproducibility-is-a-problem" class="level2" data-number="1.5">
-<h2 data-number="1.5" class="anchored" data-anchor-id="reproducibility-is-a-problem"><span class="header-section-number">1.5</span> Reproducibility is a problem</h2>
+<section id="reproducibility-is-a-problem" class="level2" data-number="1.4">
+<h2 data-number="1.4" class="anchored" data-anchor-id="reproducibility-is-a-problem"><span class="header-section-number">1.4</span> Reproducibility is a problem</h2>
 <p>It is unfortunately a common, seemingly evergreen problem that a lot of people cannot reproduce scientific work. This might appear to be a “current” problem, but it has indeed been a problem throughout a lot of scientific history. To illustrate this, here’s a nice article by <a href="https://github.com/richfitz">Rich FitzJohn</a>, <a href="https://ropensci.org/blog/2014/06/09/reproducibility/">Reproducible research is still a challenge</a>, which was written 10 years ago, in 2014, and provides a list of the challenges and lessons learned in making research reproducible. The list is still relevant. This problem isn’t completely solved. But, we can make it easier to solve, to get further.</p>
 <p>Reproducibility isn’t just something that impacts a few people, and it’s not cheap. A 2010 estimate stated that in the biomedical industry, in the USA, irreproducibility (not being able to reproduce a given piece of work) costs $28 Billion dollars annually <a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>. That was one country, one field, and one year.</p>
 <p>So what can we do about it?</p>
 </section>
-<section id="literate-programming-is-a-partial-solution" class="level2" data-number="1.6">
-<h2 data-number="1.6" class="anchored" data-anchor-id="literate-programming-is-a-partial-solution"><span class="header-section-number">1.6</span> Literate programming is a partial solution</h2>
+<section id="literate-programming-is-a-partial-solution" class="level2" data-number="1.5">
+<h2 data-number="1.5" class="anchored" data-anchor-id="literate-programming-is-a-partial-solution"><span class="header-section-number">1.5</span> Literate programming is a partial solution</h2>
 <p>The idea of literate programming shines some light on this dark area of science. This is an idea from <a href="https://en.wikipedia.org/wiki/Donald_Knuth">Donald Knuth</a> where you combine your text with your code output to create a document. This is a <em>blend</em> of your literature (<strong>text</strong>), and your programming (<strong>code</strong>), to create something that you can read from top to bottom. Imagine your paper - the introduction, methods, results, discussion, and conclusion, and all the bits of code that make each section. With Quarto, you can see all the pieces of your data analysis all together.</p>
-<section id="some-history" class="level4 history" data-number="1.6.0.1">
-<h4 class="history anchored" data-number="1.6.0.1" data-anchor-id="some-history"><span class="header-section-number">1.6.0.1</span> Some history</h4>
-<p>This was a popular idea, and it has had some interesting discussion and contributions over the years. Notably, in the R ecosystem, the <em>Sweave</em> (S+weave) program provided a way to write text and code together. As with any technology, there were some speedbumps with using Sweave, and some of the reasons we are not teaching it now is because:</p>
+<div class="callout callout-style-default callout-caution callout-titled" title="Some history: Quarto, Rmarkdown, Sweave">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Some history: Quarto, Rmarkdown, Sweave
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Literate programming was a popular idea, and it has had some interesting discussion and contributions over the years. Notably, in the R ecosystem, the <a href="https://en.wikipedia.org/wiki/Sweave"><em>Sweave</em></a>, (The <a href="https://en.wikipedia.org/wiki/S_(programming_language)"><strong>S language</strong></a> + weaving together text and code) program provided a way to write text and code together. As with any technology, there were some speedbumps with using Sweave, and some of the reasons we are not teaching it now is because:</p>
 <ul>
 <li>It uses a form of LaTeX, which provides great flexibility at the cost of complexity.</li>
 <li>Printing figures involves additional work</li>
 <li>There isn’t a way to save (cache) your work. Every analysis has to be repeated from start to finish. This was time consuming.</li>
 </ul>
+</div>
+</div>
+</div>
 </section>
-</section>
-<section id="markdown-as-a-new-player-to-legibility" class="level2" data-number="1.7">
-<h2 data-number="1.7" class="anchored" data-anchor-id="markdown-as-a-new-player-to-legibility"><span class="header-section-number">1.7</span> Markdown as a new player to legibility</h2>
+<section id="markdown-as-a-new-player-to-legibility" class="level2" data-number="1.6">
+<h2 data-number="1.6" class="anchored" data-anchor-id="markdown-as-a-new-player-to-legibility"><span class="header-section-number">1.6</span> Markdown as a new player to legibility</h2>
 <p>In 2004, <a href="https://en.wikipedia.org/wiki/John_Gruber">John Gruber</a>, of <a href="https://daringfireball.net/">daring fireball</a> created <a href="https://en.wikipedia.org/wiki/Markdown">Markdown</a>, a simple way to create text that rendered into an HTML webpage. The core idea was that you could write plain text (not text inside a MS Word/WordPerfect/Pages/Proprietary Format Document), and it would look readable, then get rendered into HTML.</p>
 <p>The idea took off.</p>
-<section id="a-brief-example-of-markdown" class="level3" data-number="1.7.1">
-<h3 data-number="1.7.1" class="anchored" data-anchor-id="a-brief-example-of-markdown"><span class="header-section-number">1.7.1</span> A brief example of markdown</h3>
+<section id="a-brief-example-of-markdown" class="level3" data-number="1.6.1">
+<h3 data-number="1.6.1" class="anchored" data-anchor-id="a-brief-example-of-markdown"><span class="header-section-number">1.6.1</span> A brief example of markdown</h3>
 <pre><code>- bullet list
 - bullet list
 - bullet list
@@ -538,12 +555,21 @@ image(volcano)
 <figcaption>Quarto is a separate program</figcaption>
 </figure>
 </div>
-<section id="your-turn-1" class="level2 exercise" data-number="2.1">
-<h2 class="exercise anchored" data-number="2.1" data-anchor-id="your-turn-1"><span class="header-section-number">2.1</span> Your Turn</h2>
+<div class="callout callout-style-default callout-note callout-titled" title="Your Turn">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Your Turn
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <ol type="1">
 <li><strong>Learn to use Markdown</strong> In your small groups, spend five minutes working through this <a href="https://www.markdowntutorial.com/">brief online Markdown tutorial</a></li>
 </ol>
-</section>
+</div>
+</div>
 </section>
 <section id="quarto-helps-complete-the-solution-to-the-reproducibility-problem" class="level1" data-number="3">
 <h1 data-number="3"><span class="header-section-number">3</span> Quarto helps complete the solution to the reproducibility problem</h1>

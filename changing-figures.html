@@ -318,19 +318,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview"><span class="header-section-number">9.1</span> Overview</a></li>
   <li><a href="#questions" id="toc-questions" class="nav-link" data-scroll-target="#questions"><span class="header-section-number">9.2</span> Questions</a></li>
   <li><a href="#objectives" id="toc-objectives" class="nav-link" data-scroll-target="#objectives"><span class="header-section-number">9.3</span> Objectives</a></li>
-  <li><a href="#which-chunk-options-should-you-care-about-for-this" id="toc-which-chunk-options-should-you-care-about-for-this" class="nav-link" data-scroll-target="#which-chunk-options-should-you-care-about-for-this"><span class="header-section-number">9.4</span> Which chunk options should you care about for this?</a>
-  <ul class="collapse">
-  <li><a href="#your-turn" id="toc-your-turn" class="nav-link" data-scroll-target="#your-turn"><span class="header-section-number">9.4.1</span> Your Turn</a></li>
-  </ul></li>
-  <li><a href="#setting-global-options" id="toc-setting-global-options" class="nav-link" data-scroll-target="#setting-global-options"><span class="header-section-number">9.5</span> Setting global options</a>
-  <ul class="collapse">
-  <li><a href="#your-turn-1" id="toc-your-turn-1" class="nav-link" data-scroll-target="#your-turn-1"><span class="header-section-number">9.5.1</span> Your Turn</a></li>
-  </ul></li>
-  <li><a href="#demo-keeping-your-markdown" id="toc-demo-keeping-your-markdown" class="nav-link" data-scroll-target="#demo-keeping-your-markdown"><span class="header-section-number">9.6</span> Demo: Keeping your markdown</a></li>
-  <li><a href="#altering-where-figures-are-saved-to" id="toc-altering-where-figures-are-saved-to" class="nav-link" data-scroll-target="#altering-where-figures-are-saved-to"><span class="header-section-number">9.7</span> Altering where figures are saved to</a></li>
-  <li><a href="#your-turn-2" id="toc-your-turn-2" class="nav-link" data-scroll-target="#your-turn-2"><span class="header-section-number">9.8</span> Your Turn</a></li>
-  <li><a href="#further-reading" id="toc-further-reading" class="nav-link" data-scroll-target="#further-reading"><span class="header-section-number">9.9</span> Further Reading</a></li>
-  <li><a href="#epstiffother-multiple-image-formats" id="toc-epstiffother-multiple-image-formats" class="nav-link" data-scroll-target="#epstiffother-multiple-image-formats"><span class="header-section-number">9.10</span> EPS/TIFF/Other multiple image formats</a></li>
+  <li><a href="#which-chunk-options-should-you-care-about-for-this" id="toc-which-chunk-options-should-you-care-about-for-this" class="nav-link" data-scroll-target="#which-chunk-options-should-you-care-about-for-this"><span class="header-section-number">9.4</span> Which chunk options should you care about for this?</a></li>
+  <li><a href="#setting-global-options" id="toc-setting-global-options" class="nav-link" data-scroll-target="#setting-global-options"><span class="header-section-number">9.5</span> Setting global options</a></li>
+  <li><a href="#altering-where-figures-are-saved-to" id="toc-altering-where-figures-are-saved-to" class="nav-link" data-scroll-target="#altering-where-figures-are-saved-to"><span class="header-section-number">9.6</span> Altering where figures are saved to</a></li>
+  <li><a href="#further-reading" id="toc-further-reading" class="nav-link" data-scroll-target="#further-reading"><span class="header-section-number">9.7</span> Further Reading</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/njtierney/qmd4sci/edit/main/changing-figures.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/njtierney/qmd4sci/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -399,8 +390,16 @@ These are no longer an option in Quarto
 <ul>
 <li>with <code>fig-height</code>, <code>fig-width</code>, <code>fig-format:</code></li>
 </ul>
-<section id="your-turn" class="level3 exercise" data-number="9.4.1">
-<h3 class="exercise anchored" data-number="9.4.1" data-anchor-id="your-turn"><span class="header-section-number">9.4.1</span> Your Turn</h3>
+<div class="callout callout-style-default callout-note callout-titled" title="Your Turn">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Your Turn
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <ol type="1">
 <li>Open exercise <code>exercises/02-qmd-figures-chunks/02-qmd-figures-chunks.qmd</code> Create three figures, with the respective dimensions (<code>fig-height</code> and <code>fig-width</code>)
 <ul>
@@ -414,7 +413,8 @@ These are no longer an option in Quarto
 </ul></li>
 <li>Now change the output type to be “svg”</li>
 </ol>
-</section>
+</div>
+</div>
 </section>
 <section id="setting-global-options" class="level2" data-number="9.5">
 <h2 data-number="9.5" class="anchored" data-anchor-id="setting-global-options"><span class="header-section-number">9.5</span> Setting global options</h2>
@@ -430,8 +430,16 @@ These are no longer an option in Quarto
 <span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">fig-format</span><span class="kw">:</span><span class="at"> png</span></span>
 <span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">fig-dpi</span><span class="kw">:</span><span class="at"> </span><span class="dv">300</span></span>
 <span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<section id="your-turn-1" class="level3 exercise" data-number="9.5.1">
-<h3 class="exercise anchored" data-number="9.5.1" data-anchor-id="your-turn-1"><span class="header-section-number">9.5.1</span> Your Turn</h3>
+<div class="callout callout-style-default callout-note callout-titled" title="Your Turn">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Your Turn
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <ol type="1">
 <li>Set the global options in the “02-qmd-figures-chunks.qmd” document to set:</li>
 </ol>
@@ -440,10 +448,18 @@ These are no longer an option in Quarto
 <li><code>fig-width</code></li>
 <li><code>fig-format</code></li>
 </ul>
-</section>
-</section>
-<section id="demo-keeping-your-markdown" class="level2 demo" data-number="9.6">
-<h2 class="demo anchored" data-number="9.6" data-anchor-id="demo-keeping-your-markdown"><span class="header-section-number">9.6</span> Demo: Keeping your markdown</h2>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled" title="Demo: Keeping your markdown">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Demo: Keeping your markdown
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <p>You can set the options for your figures, which will change how they appear on the page, but this won’t save the figures anywhere. In order to save the figures to file, you need to edit the YAML option <code>keep-md: true</code>:</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"Awesome report"</span></span>
@@ -452,9 +468,11 @@ These are no longer an option in Quarto
 <span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">html</span><span class="kw">:</span></span>
 <span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">keep-md</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
 <span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
 </section>
-<section id="altering-where-figures-are-saved-to" class="level2" data-number="9.7">
-<h2 data-number="9.7" class="anchored" data-anchor-id="altering-where-figures-are-saved-to"><span class="header-section-number">9.7</span> Altering where figures are saved to</h2>
+<section id="altering-where-figures-are-saved-to" class="level2" data-number="9.6">
+<h2 data-number="9.6" class="anchored" data-anchor-id="altering-where-figures-are-saved-to"><span class="header-section-number">9.6</span> Altering where figures are saved to</h2>
 <p>By default, the figures are saved in a folder named after the file, e.g.,</p>
 <p><code>02-qmd-figures-chunks_files/figure-html</code></p>
 <p>If you want to change this location, you can control the specific name of the folder by setting <code>fig.path</code> like so in the YAML</p>
@@ -480,21 +498,39 @@ These are no longer an option in Quarto
 <span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">fig.path</span><span class="kw">:</span><span class="at"> figures/</span></span>
 <span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>(reference: <a href="https://github.com/quarto-dev/quarto-cli/discussions/4254">https://github.com/quarto-dev/quarto-cli/discussions/4254</a>)</p>
-</section>
-<section id="your-turn-2" class="level2 exercise" data-number="9.8">
-<h2 class="exercise anchored" data-number="9.8" data-anchor-id="your-turn-2"><span class="header-section-number">9.8</span> Your Turn</h2>
+<div class="callout callout-style-default callout-note callout-titled" title="Your Turn">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Your Turn
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <ol type="1">
 <li>Save your images to a specific directory of your choice</li>
 </ol>
+</div>
+</div>
 </section>
-<section id="further-reading" class="level2" data-number="9.9">
-<h2 data-number="9.9" class="anchored" data-anchor-id="further-reading"><span class="header-section-number">9.9</span> Further Reading</h2>
+<section id="further-reading" class="level2" data-number="9.7">
+<h2 data-number="9.7" class="anchored" data-anchor-id="further-reading"><span class="header-section-number">9.7</span> Further Reading</h2>
 <ul>
 <li><a href="https://quarto.org/docs/computations/r.html#output-formats">Official Quarto documentation on figures</a></li>
 </ul>
-</section>
-<section id="epstiffother-multiple-image-formats" class="level2" data-number="9.10">
-<h2 data-number="9.10" class="anchored" data-anchor-id="epstiffother-multiple-image-formats"><span class="header-section-number">9.10</span> EPS/TIFF/Other multiple image formats</h2>
+<div class="callout callout-style-default callout-caution callout-titled" title="Managing EPS/TIFF/Other multiple image formats">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Managing EPS/TIFF/Other multiple image formats
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-5" class="callout-5-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
 <p>Unfortunately (currently, as far as I can tell) in Quarto it seems you cannot save to other image formats such as “eps”, “tiff”, and cannot save to multiple formats at the same time.</p>
 <p>If you would like to convert images to a specific format, you could try using code like the following.</p>
 <div class="cell">
@@ -525,6 +561,9 @@ These are no longer an option in Quarto
 <span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a>  <span class="at">.y =</span> new_paths,</span>
 <span id="cb5-26"><a href="#cb5-26" aria-hidden="true" tabindex="-1"></a>  \(x, y) <span class="fu">image_write</span>(<span class="at">image =</span> x, <span class="at">path =</span> y)</span>
 <span id="cb5-27"><a href="#cb5-27" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
 </div>
 
 
