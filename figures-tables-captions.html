@@ -629,8 +629,9 @@ Other table R packages
 <section id="your-turn" class="level3 exercise" data-number="8.4.2">
 <h3 class="exercise anchored" data-number="8.4.2" data-anchor-id="your-turn"><span class="header-section-number">8.4.2</span> Your Turn</h3>
 <ol type="1">
-<li>Create a summary of your gapminder data, and put it into a table.</li>
-<li>Add a caption to this table</li>
+<li>Using the “02-qmd-figures-chunks.qmd”</li>
+<li>Create a summary of your gapminder data, put it into a table.</li>
+<li>Add a caption to this table.</li>
 <li>Set the number of decimals to 2.</li>
 </ol>
 </section>
@@ -699,10 +700,13 @@ Other table R packages
 </section>
 <section id="your-turn-1" class="level3 exercise" data-number="8.5.2">
 <h3 class="exercise anchored" data-number="8.5.2" data-anchor-id="your-turn-1"><span class="header-section-number">8.5.2</span> Your Turn</h3>
-<ul>
-<li>Create a plot with your .qmd doc</li>
+<ol type="1">
+<li>Using 02-qmd-figures-chunks.qmd
+<ol type="1">
+<li>Create a plot</li>
 <li>Add a figure caption</li>
-</ul>
+</ol></li>
+</ol>
 </section>
 <section id="adding-multiple-sub-figures-and-sub-captions" class="level3" data-number="8.5.3">
 <h3 data-number="8.5.3" class="anchored" data-anchor-id="adding-multiple-sub-figures-and-sub-captions"><span class="header-section-number">8.5.3</span> Adding multiple (sub) figures and (sub) captions</h3>
@@ -758,7 +762,7 @@ Figure&nbsp;8.2: A contour plot of Auckland’s Maunga Whau Volcano
 <li>with <code>knitr::include_graphics()</code></li>
 </ol>
 <p><strong>Markdown syntax</strong></p>
-<p>The markdown syntax to insert an image is: <code>![caption](path/to/image)</code></p>
+<p>The markdown syntax to insert an image is: <code>![caption](path/to/image){options}</code></p>
 <section id="demo-2" class="level4 demo" data-number="8.6.0.1">
 <h4 class="demo anchored" data-number="8.6.0.1" data-anchor-id="demo-2"><span class="header-section-number">8.6.0.1</span> Demo</h4>
 <p>So we could insert the new SSA vic logo by doing the following:</p>
@@ -811,8 +815,11 @@ Controlling image output with css
 <section id="your-turn-2" class="level3 exercise" data-number="8.6.1">
 <h3 class="exercise anchored" data-number="8.6.1" data-anchor-id="your-turn-2"><span class="header-section-number">8.6.1</span> Your Turn</h3>
 <ol type="1">
-<li>Download <a href="https://www.gapminder.org/wp-content/themes/gapminder2/images/gapminder-logo.svg">the gapminder logo</a> and put it into a new directory call “figs”</li>
-<li>Insert this image into your Quarto document around where you introduce gapminder.</li>
+<li>Download <a href="https://www.gapminder.org/wp-content/themes/gapminder2/images/gapminder-logo.svg">the gapminder logo</a></li>
+<li>Put it into a new directory called “figs” (at the top level)</li>
+<li>Insert the image into your “02-qmd-figures-chunks.qmd” Quarto document around where you introduce gapminder.</li>
+<li>Try using both markdown <code>![]()</code> syntax, and <code>knitr::include_graphics()</code>.</li>
+<li>Hint: Remember to refer to the image in the right spot using <code>here</code>!</li>
 </ol>
 </section>
 </section>

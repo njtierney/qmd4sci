@@ -334,7 +334,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul class="collapse">
   <li><a href="#your-turn" id="toc-your-turn" class="nav-link" data-scroll-target="#your-turn"><span class="header-section-number">5.8.1</span> Your Turn</a></li>
   </ul></li>
-  <li><a href="#nicks-quarto-hygiene-recommendations" id="toc-nicks-quarto-hygiene-recommendations" class="nav-link" data-scroll-target="#nicks-quarto-hygiene-recommendations"><span class="header-section-number">5.9</span> Nick’s Quarto hygiene recommendations</a></li>
+  <li><a href="#nicks-quarto-starter-pack" id="toc-nicks-quarto-starter-pack" class="nav-link" data-scroll-target="#nicks-quarto-starter-pack"><span class="header-section-number">5.9</span> Nick’s Quarto starter pack</a></li>
   <li><a href="#your-turn-1" id="toc-your-turn-1" class="nav-link" data-scroll-target="#your-turn-1"><span class="header-section-number">5.10</span> Your Turn</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/njtierney/qmd4sci/edit/main/using-qmd.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/njtierney/qmd4sci/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
@@ -601,7 +601,7 @@ Caution
 <section id="your-turn" class="level3 exercise" data-number="5.8.1">
 <h3 class="exercise anchored" data-number="5.8.1" data-anchor-id="your-turn"><span class="header-section-number">5.8.1</span> Your Turn</h3>
 <ol type="1">
-<li>Use the rstudio project you previously created, <code>qmd4sci-materials</code>, and create a Quarto document</li>
+<li>Use the rstudio project you previously created, <code>qmd4sci-materials</code>, and open the “01-qmd-examples.qmd” file.</li>
 <li>Run some brief summaries of the data in the Quarto document:
 <ul>
 <li>hist(data$)</li>
@@ -617,9 +617,15 @@ Caution
 <!-- - focus on content -->
 </section>
 </section>
-<section id="nicks-quarto-hygiene-recommendations" class="level2" data-number="5.9">
-<h2 data-number="5.9" class="anchored" data-anchor-id="nicks-quarto-hygiene-recommendations"><span class="header-section-number">5.9</span> Nick’s Quarto hygiene recommendations</h2>
-<p>I highly recommend that each document you write sets some global options in the YAML, and then has two code chunks to manage libraries, and functions. Below, we can see an example of this.</p>
+<section id="nicks-quarto-starter-pack" class="level2" data-number="5.9">
+<h2 data-number="5.9" class="anchored" data-anchor-id="nicks-quarto-starter-pack"><span class="header-section-number">5.9</span> Nick’s Quarto starter pack</h2>
+<p>I highly recommend that each document you write has a certain structure:</p>
+<ul>
+<li>Sets global options in the YAML</li>
+<li>First code chunk manages libraries</li>
+<li>Second code chunk manages functions</li>
+</ul>
+<p>For example</p>
 <div class="sourceCode" id="cb14"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
 <span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> example</span></span>
 <span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="an">format:</span><span class="co"> </span></span>
@@ -672,7 +678,7 @@ Caution
 <section id="your-turn-1" class="level2 exercise" data-number="5.10">
 <h2 class="exercise anchored" data-number="5.10" data-anchor-id="your-turn-1"><span class="header-section-number">5.10</span> Your Turn</h2>
 <ol type="1">
-<li>Update your Quarto document based on the aforementioned hygiene steps discussed above.</li>
+<li>Update the “01-qmd-example.qmd” Quarto document you just created, based on the aforementioned steps discussed above.</li>
 </ol>
 
 

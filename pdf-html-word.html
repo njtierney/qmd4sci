@@ -322,7 +322,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul class="collapse">
   <li><a href="#a-note-on-workflow-with-quarto-html-first-pdfword-later" id="toc-a-note-on-workflow-with-quarto-html-first-pdfword-later" class="nav-link" data-scroll-target="#a-note-on-workflow-with-quarto-html-first-pdfword-later"><span class="header-section-number">6.4.1</span> A note on workflow with Quarto: HTML first, PDF/word later</a></li>
   </ul></li>
-  <li><a href="#your-turn" id="toc-your-turn" class="nav-link" data-scroll-target="#your-turn"><span class="header-section-number">6.5</span> Your Turn</a></li>
+  <li><a href="#how-to-make-a-html-page-self-contained" id="toc-how-to-make-a-html-page-self-contained" class="nav-link" data-scroll-target="#how-to-make-a-html-page-self-contained"><span class="header-section-number">6.5</span> How to make a HTML page “self contained”</a></li>
+  <li><a href="#your-turn" id="toc-your-turn" class="nav-link" data-scroll-target="#your-turn"><span class="header-section-number">6.6</span> Your Turn</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/njtierney/qmd4sci/edit/main/pdf-html-word.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/njtierney/qmd4sci/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -363,6 +364,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>How do I convert to HTML, PDF, or Word?</li>
 <li>How do I set options specific to each of these?</li>
 <li>How can I include a screenshot of an interactive graphic in PDF or Word?</li>
+<li>How to make a HTML page “self contained”?</li>
 </ul>
 </section>
 <section id="objectives" class="level2" data-number="6.3">
@@ -406,10 +408,25 @@ quarto render example.qmd --to docx</code></pre>
 <p>This was a minor revelation to me, to understand that page breaks were the cause of so much angst and pain. Embrace HTML, I say!</p>
 </section>
 </section>
-<section id="your-turn" class="level2 exercise" data-number="6.5">
-<h2 class="exercise anchored" data-number="6.5" data-anchor-id="your-turn"><span class="header-section-number">6.5</span> Your Turn</h2>
+<section id="how-to-make-a-html-page-self-contained" class="level2" data-number="6.5">
+<h2 data-number="6.5" class="anchored" data-anchor-id="how-to-make-a-html-page-self-contained"><span class="header-section-number">6.5</span> How to make a HTML page “self contained”</h2>
+<p>PDFs are great because they are a very Portable Document Format (PDF!). But HTML can be really awesome as well because:</p>
+<ul>
+<li>no page breaks</li>
+<li>awesome online interactive data vis</li>
+<li>did I mention no page breaks?</li>
+</ul>
+<p>But in order to share a HTML document you’ll need to also typically share a folder of other figures/files etc.</p>
+<p>You can have everything crammed into a <em>single HTML page</em> by setting the option <code>embed-resources</code> to <code>true</code>:</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> HTML is great</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">format</span><span class="kw">:</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">html</span><span class="kw">:</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">embed-resources</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="your-turn" class="level2 exercise" data-number="6.6">
+<h2 class="exercise anchored" data-number="6.6" data-anchor-id="your-turn"><span class="header-section-number">6.6</span> Your Turn</h2>
 <ol type="1">
-<li>Generate three reports, one as HTML, one as PDF, and one as microsoft word. Remember, if you are having PDF problems, see the <a href="installation">installation chapter</a> note on installing &nbsp;with the R package, <code>tinytex</code>.</li>
+<li>Using your <strong>awesome</strong> Quarto document you created earlier, generate three reports, one as HTML, one as PDF, and one as microsoft word. Remember, if you are having PDF problems, see the <a href="installation">installation chapter</a> note on installing &nbsp;with the R package, <code>tinytex</code>.</li>
 </ol>
 
 
