@@ -1,6 +1,12 @@
 # Using Quarto
 
-Now that we've covered how to organise your project, have some data, and talked a bit about what Quarto is, let's talk about using it.
+So far we have covered:
+
+- How to **organise** your project (RStudio projects!)
+- **Appropriately** refer to data (file storage hygiene!)
+- A brief intro into **what** Quarto is
+
+Now, let's talk about **using** Quarto.
 
 ## Overview
 
@@ -9,14 +15,14 @@ Now that we've covered how to organise your project, have some data, and talked 
 
 ## Questions
 
-* How should I start an Quarto document?
-* What do I put in the YAML metadata?
-* How do I create a code chunk?
-* What sort of options to I need to worry about for my code?
+- How should I start an Quarto document?
+- What do I put in the YAML metadata?
+- How do I create a code chunk?
+- What sort of options to I need to worry about for my code?
 
 ## Objectives
 
-* Create a Quarto document, do some basic exploration
+- Create a Quarto document, do some basic exploration
 
 ## The anatomy of a Quarto document
 
@@ -26,9 +32,11 @@ This is a Quarto document (demo). It has three parts:
 1. Text (markdown formatting)
 1. Code (code formatting)
 
+<!-- TODO It would be super cool to have a little cute figure of this overview -->
+
 ### Metadata
 
-The metadata of the document tells you how it is formed - what the title is, what date to put, and other control information.  If you're familiar with LaTeX, this is kind of like how you specify the many options, what sort of document it is, what styles to use, etc at the front matter.
+The metadata of the document tells you how it is formed - what the title is, what date to put, and other control information.  If you're familiar with LaTeX, this is kind of like how you specify the many options, what sort of document it is, what styles to use, and so on at the front matter.
 
 Quarto documents use [YAML (YAML Ain't Markup Language)](https://en.wikipedia.org/wiki/YAML) to provide the metadata. It looks like this.
 
@@ -132,10 +140,14 @@ Code chunks are marked by three backticks and curly braces. We put the letter `r
 
 ::: 
 
-::: {.callout-caution collapse="true"}
+::: {.callout-caution collapse="false"}
+
+However...
+
 ## This book currently focusses only on R
 
-Quarto provides support for Python, Julia, and Observable, which are all very powerful and awesome languages! However currently we will only be focussing on using R in this book. But I want to make sure that you know you can use python, or Julia, or Observable! More languages will be supported into the future, I believe.
+Quarto provides support for R, Python, Julia, and Observable, which are all very powerful and awesome languages! However currently we will only be focussing on using R in this book. But I want to make sure that you know you can use python, or Julia, or Observable! More languages will be supported into the future, I believe.
+
 :::
 
 **a backtick** is a special character you might not have seen before, it is typically located under the tilde key (`~`). On USA / Australia keyboards, is under the escape key:
@@ -168,18 +180,19 @@ gap <- read_csv("gapminder.csv")
 ```
 
 A nice feature of Quarto + Rstudio is that they provide code completion when you start writing the code chunk options, and they will provide options when hitting "tab". 
-*gif of this*
 
-In the past Rmarkdown required "TRUE" and "FALSE", but note that Quarto always uses "true" or "false" in lowercase, and never "yes" or "no".
+<!-- TODO *gif of this* -->
+
+In the past Rmarkdown required "TRUE" and "FALSE", but note that Quarto **always** uses `true` or `false` in lowercase, and __never__ "yes" or "no". 
 
 The code chunks you need to know about right now are:
 
-  * `eval`: true/false Do you want to evaluate the code?
-  * `echo`: true/false Do you want to print the code?
-  * `cache`: true / false Do you want to save the output of the chunk so it doesn't have to run next time?
+  * `eval`: `true`/`false` Do you want to evaluate the code?
+  * `echo`: `true`/`false` Do you want to print the code?
+  * `cache`: `true` / `false` Do you want to save the output of the chunk so it doesn't have to run next time?
   * `include`: Do you want to include code output in the final output document? Setting to `false` means nothing is put into the output document, but the code is still run.
 
-<!-- What are messages, warnings, errors, results? -->
+<!-- TODO What are messages, warnings, errors, results? -->
 
   <!-- * error: If you want R to stop on errors, set to `false` -->
   <!-- * warning: preserve warnings (produced by `warning()`). IF `false`, all warnings will be printed in the console instead of the output document  -->
@@ -188,7 +201,7 @@ The code chunks you need to know about right now are:
 
 <!--   * results: option 'hold' will wait until the code chunk is complete and then  -->
   
-You can read more about the options at the official documentation: https://quarto.org/docs/computations/execution-options.html
+You can read more about the options at the official documentation: <https://quarto.org/docs/computations/execution-options.html>
 
 ### Inline code
 
@@ -221,7 +234,7 @@ r_mean <- mean(r_heights)
 
 > The mean of these heights is `{r} r_mean`
 
-Essentially, instead of using three backticks to write multiple lines of code, you use a single backtick. You can think of this as a backtick being used inside text for a one liner, whereas creating a code fence with three backticks indicates something longer.
+Essentially, instead of using **three backticks** to write multiple lines of code, you use **a single backtick**. You can think of this as a backtick being used inside text for a one liner, whereas creating a code fence with three backticks indicates something longer.
 
 ````{verbatim, lang = "r"}
 There are `{{r}} nrow(airquality)` observations in the airquality dataset, 
@@ -232,7 +245,7 @@ Which gives you the following sentence
 
 > There are `r nrow(airquality)` observations in the airquality dataset, and `r ncol(airquality)` variables.
 
-What's great about this is that if your data changes upstream, then you don't need to work out where you mentioned your data, you just update the document.
+What's great about this is that if your data changes upstream, then you don't need to work out where you mentioned your data and change that bit of text. You just render the document and it takes care of these details.
 
 ## Creating a Quarto document
 
@@ -262,7 +275,7 @@ What's great about this is that if your data changes upstream, then you don't ne
 
 ## Nick's Quarto hygiene recommendations
 
-I highly recommend that each document you write has this YAML at the top to set some global options, and then two code chunks, one that loads all the packages, and another that specifies any functions you write.
+I highly recommend that each document you write sets some global options in the YAML, and then has two code chunks to manage libraries, and functions. Below, we can see an example of this.
 
 ````
 ---
@@ -312,11 +325,11 @@ In the `functions` chunk, you put any functions that you write in the process of
 
 In the `readr` chunk, you read in any data you are going to be using in the document.
 
-Now, this is my personal preference, but I find the following benefits:
+Now, this is my personal preference, and there are definitely other ways to organise things! But, I find the following benefits:
 
 1. The "top part" of your document contains all the metadata / setup info. Your global options. You don't need to specify every single code chunk.
 1. It helps another person get oriented with your work - they know the settings, the functions used, and the special things that you wrote (your functions)
-1. Remember, "another person" includes yourself in 6 months. You are always collaborating with your future self. **You are always collaborating with your future self.**
+1. Remember, "another person" includes yourself in 6 months. You are always collaborating with your future self. **You are always collaborating with your future self.** Say it with me.
 
 ## Your Turn {.exercise}
 

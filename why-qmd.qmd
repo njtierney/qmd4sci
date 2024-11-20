@@ -52,7 +52,7 @@ The idea took off.
 
 ### A brief example of markdown
 
-``` markdown
+```
 - bullet list
 - bullet list
 - bullet list
@@ -67,6 +67,7 @@ __bold__, **bold**, _italic_, *italic*
 ```
 
 ````         
+
 ```r
 # computer code goes in three back ticks
 1 + 1
@@ -101,15 +102,23 @@ With very little marking up, we can create rich text, that **actually resembles*
 
 Some other nice features of Markdown include:
 
-| Feature       | Markdown                                 | rendered                    |
-|---------------|------------------------------------------|-----------------------------|
-| superscript   | `2^nd^`                                  | 2^nd^                       |
-| subscript     | `CO~2~`                                  | CO~2~                       |
-| strikethrough | `~~mistake~~`                            | ~~mistake~~                 |
-| links         | `[text](https://quarto.org/)`            | [text](https://quarto.org/) |
-| images        | `![alternative text](link-to-image)`     | (cannot render in a table)  |
++---------------+----------------------------------------------+----------------------+
+| Feature       | Markdown                              | rendered                    |
++===============+==============================================+======================+
+| superscript   | `2^nd^`                               | 2^nd^                       |
++---------------+----------------------------------------------+----------------------+
+| subscript     | `CO~2~`                               | CO~2~                       |
++---------------+----------------------------------------------+----------------------+
+| strikethrough | `~~mistake~~`                         | ~~mistake~~                 |
++---------------+----------------------------------------------+----------------------+
+| links         | `[text](https://quarto.org/)`         | [text](https://quarto.org/) |
++---------------+----------------------------------------------+----------------------+
+| links         | `<https://quarto.org/>`               | <https://quarto.org/)>      |
++---------------+----------------------------------------------+----------------------+
+| images        | `![alternative text](link-to-image)`  | (cannot render in a table)  |
++---------------+----------------------------------------------+----------------------+
 
-<!-- | footnote(s)     | `[^1]` followed by `[^1]: footnote text goes here`.| [^1] followed by [^1]: footnote text goes here. | -->
+For more examples and details of using markdown in Quarto, see the official [Quarto "Markdown Basics" documentation](https://quarto.org/docs/authoring/markdown-basics.html).
 
 # What about Rmarkdown?
 
@@ -119,8 +128,8 @@ Issues around Sweave led to the development of [knitr](https://yihui.org/knitr/)
 
 However, there are a few points of friction:
 
--   You need to call it from R to use it. No problem for R users, but what if you use python? Or javascript? If you are a python user, using R to use python just might not be in your workflow.
--   There are great packages that provide extensions, such as blogdown for blogs, bookdown for books, and xaringan for slides. However, there are differences between these systems that might cause stumbles. Each of these systems is an iteration towards something awesome, and it’s only natural they might be a little bit different.
+-   You need to call it from R to use it. No problem for R users, but what if you use python? Or Julia? Or javascript? If you are a python user, using R to use python just might not be in your workflow.
+-   There are great packages that provide extensions, such as [blogdown](https://bookdown.org/yihui/blogdown/) for blogs, [bookdown](https://bookdown.org/) for books, and [xaringan](https://github.com/yihui/xaringan) for slides. Each of these systems is an iteration towards something awesome, and it’s only natural they might be a little bit different. Overall, there are differences between these systems that might cause stumbles.
 -   Quarto, instead of being an R package, is a separate piece of software, that you can call from the command line (terminal). This means other pieces of software can use it to create their own literate programming documents. Well, that’s my understanding.
 
 Here are some diagrams to illustrate this point:
@@ -273,4 +282,4 @@ In this section we've learned about:
 
 ## Learning more
 
--   [posit's Quarto cheatsheet](https://rstudio.github.io/cheatsheets/quarto.pdf)
+-   [Posit's Quarto cheatsheet](https://rstudio.github.io/cheatsheets/quarto.pdf)

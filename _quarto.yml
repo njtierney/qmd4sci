@@ -18,7 +18,7 @@ book:
   repo-branch: main
   repo-actions: [edit, issue]
   # sharing: [twitter]
-  date: "2024-06-27"
+  date: "2024-11-21"
   page-footer: "Copyright 2022-2024, Nicholas Tierney" 
   page-navigation: true
   search: true
@@ -67,7 +67,7 @@ format:
     keep-tex: true
     cite-method: natbib
 execute: 
-  freeze: auto
+  freeze: false
   # epub:
   #   cover-image: cover.png
 

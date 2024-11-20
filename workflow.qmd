@@ -1,6 +1,19 @@
 # Workflow
 
-Before we start with Quarto, we need to make sure that you understand _file storage hygiene_. This helps you keep your files, paths, and directories clean, which prevents unexpected problems. It will make you more productive in the future because you'll spend less time fighting against file paths. Not sure what a file path is? We explain that as well.
+> Before we start with Quarto, we need to make sure that you understand _file storage hygiene_. 
+
+We can prevent __unexpected problems__ if we can maintain an order to your files, paths, and directories. A common problem that arises is R not knowing where a certain file is. For example, we get the error:
+
+```{r}
+#| error: true
+read.csv("my-very-important-data-file-somewhere.csv")
+```
+
+Because R doesn't know where `"my-very-important-data-file-somewhere.csv"` is.
+
+Practicing _good file storage hygiene_ will help maintain an order to files, paths, and directories. This will make you more productive in the future, because you'll spend less time fighting against file paths. 
+
+Not sure what a file path is? We explain that as well.
 
 ## Overview
 
@@ -63,11 +76,13 @@ So while this has the effect of **making the file paths work in your file**, it 
 
 So, to get this to work, you need to hand edit the file path to your machine. 
 
-This is painful. And when you do this all the time, it gets old, fast.
+This is painful. 
+
+When you do this all the time, it gets old, fast.
 
 ## What is a file path?
   
-So, this might all be a bit confusing if you don't know what a file path is. A file path is the machine-readable directions to where files on your computer live. So, the file path:
+This might all be a bit confusing if you don't know what a file path is. A file path is the machine-readable directions to where files on your computer live. So, the file path:
 
 ```
 /Users/njtierney/Desktop/qmd4sci-materials/demo.R
@@ -108,7 +123,7 @@ So, if you want to read in the `gapminder.csv` file, you might need to write cod
 gapminder <- read_csv("/Users/njtierney/Desktop/qmd4sci-materials/data/gapminder.csv")
 ```
 
-As we now know, this is a problem, because this is not portable code.
+As we now know, this is a problem, because this is not portable code. It is unlikely someone else will have the `gapminder.csv` data stored under the folders, `"Users/njtierney/Desktop"`.
 
 If you have an RStudio project file inside the `qmd4sci-materials` folder, you can instead write the following:
 
@@ -137,11 +152,11 @@ I highly recommend when you start on a new idea, new research project, paper. An
 
 An rstudio project helps keep related work together in the same place. Amongst other things, they:
 
-* Keep all your files together
-* Set the working directory to the project directory
-* Starts a new session of R
-* Restore previously edited files into the editor tabs
-* Restore other rstudio settings
+* Keep all your files together.
+* Set the working directory to the project directory.
+* Starts a new session of R.
+* Restore previously edited files into the editor tabs.
+* Restore other rstudio settings.
 * Allow for multiple R projects open at the same time.
 
 This helps keep you sane, because:
@@ -151,7 +166,7 @@ This helps keep you sane, because:
 * Objects and functions you create and run from project idea won't impact one another.  
 * You can refer to your data and other projects in a consistent way.
 
-And finally, the big one
+And finally, the big one:
 
 **RStudio projects help resolve file path problems**, because they automatically set the working directory to the location of the rstudio project.
 
@@ -213,7 +228,6 @@ You can read the above `here` code as:
 This is really handy for a few reasons:
 
 1. It makes things _completely_ portable
-<!-- TODO - what are Quarto's rules for looking for files? -->
 1. Quarto documents have a special way of looking for files, this helps eliminate file path pain.
 1. If you decide to not use RStudio projects, you have code that will work on _any machine_
 
@@ -266,11 +280,11 @@ knitr::include_graphics(here::here("figs", "rstudio-create-proj-3.png"))
 
 Then write the name of your project. I think it is usually worthwhile spending a bit of time thinking of a name for your project. Even if it is only a few minutes, it can make a difference. You want to think about:
 
-- keeping it short
-- no spaces
-- combining words
+- Keeping it short.
+- No spaces.
+- Combining words.
 
-For example, I have a project looking at bat calls, so I called it `screech`, because bats make a screech-y noise.
+For example, I had a project looking at bat calls, so I called it `screech`, because bats make a screech-y noise. But maybe you're doing some global health  analysis so you call it "world-health".
 
 And click "create project". 
 

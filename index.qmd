@@ -57,25 +57,25 @@ This book was written to provide course materials for a 3 hour course on Quarto
 
 We worked through the following sections in the book in 3 hours:
 
-- [Why use Quarto](why-qmd)
-- [Installation](installation)
+- [why use Quarto](why-qmd)
+- [installation](installation)
 - [what is RStudio?](rstudio)
 - [suggested workflow and hygiene](workflow)
-- [how to use R Markdown](using-rmd)
-- [using R Markdown with pdf, html, and Word](pdf-html-word)
+- [how to use Quarto](using-qmd)
+- [using Quarto with pdf, html, and Word](pdf-html-word)
 - [what are some useful keyboard shortcuts](keyboard-shortcuts)
-- [Adding captions to tables and figures](figures-tables-captions)
-- [Changing figures](changing-figures)
-- [Adding mathematics](math)
-- [Citing figures and tables](cite-fig-tab-sec)
-- [Changing citations and styles](citations-and-styles)
+- [adding captions to tables and figures](figures-tables-captions)
+- [changing figures](changing-figures)
+- [adding mathematics](math)
+- [citing figures and tables](cite-fig-tab-sec)
+- [changing citations and styles](citations-and-styles)
 
 With the remaining sections being used as extra material, or have since been written after the course:
 
-- [Fixing some common problems in R Markdown](common-problems)
-- [What are some alternative outputs of R Markdown?](alternative-outputs-and-exts)
-- [Where to go next?](next-steps)
-- [Suggested references](references)
+- [fixing some common problems in Quarto](common-problems)
+- [what are some alternative outputs of Quarto?](alternative-outputs-and-exts)
+- [where to go next?](next-steps)
+- [suggested references](references)
 
 Course materials can be downloaded by using the following command from the `usethis` package:
 

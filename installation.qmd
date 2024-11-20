@@ -32,7 +32,11 @@ In this section, the aim is to have everyone setup with R, RStudio, and Quarto
 
 [https://posit.co/download/rstudio-desktop/#download](https://posit.co/download/rstudio-desktop/#download)
 
-## Quarto
+### Quarto
+
+[Quarto installation page](https://quarto.org/docs/get-started/)
+
+## Checking you are up to date
 
 To ensure you are up to date, run the following script to install the packages.
 
@@ -50,7 +54,7 @@ install.packages("usethis")
 
 ## A note on PDF
 
-Quarto documents can be compiled to PDF, which is a great feature. In order to convert the documents to PDF, they use a software called LaTeX (pronounced la-tek or lay-tek).
+Quarto documents can be compiled to PDF, which is a great feature. In order to convert the documents to PDF, they use a software called [LaTeX](https://www.latex-project.org/) (pronounced la-tek or lay-tek).
 
 Installing LaTeX is thankfully handled when you install Quarto, as [Quarto includes a built-in Latexmk engine](https://quarto.org/docs/output-formats/pdf-engine.html#latexmk). 
 
@@ -83,7 +87,6 @@ quarto install tinytex
 ### Problem solving with LaTeX
 
 If you have any problems with installing `tinytex`, I recommend you check out the [tinytex FAQ page](https://yihui.name/tinytex/faq/).
-
 
 ## Test Script
 
