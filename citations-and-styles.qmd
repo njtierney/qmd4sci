@@ -71,7 +71,7 @@ citation("ggplot2")
 
 For journals or books, you'll need to get a specific .bib file. Yes, this can be a bit of a pain, but this is where you need to use a reference management software like [Zotero](https://www.zotero.org/), [Mendeley](https://www.mendeley.com/download-desktop/), [papers](https://www.papersapp.com/), or [paperpile](https://paperpile.com/). The important thing to to **use something**. These all allow you to get .bib files of your articles, which you can then placec in your `references.bib` file.
   
-### Your Turn {.exercise}
+:::{.callout-note title="Your Turn"}
 
 1. Using "05-qmd-bib-polish.qmd"
     1. Generate a references.bib file to place your citations
@@ -79,6 +79,8 @@ For journals or books, you'll need to get a specific .bib file. Yes, this can be
     1. Reference these in your document
     1. Add a final heading in your file called `#bibliography`
     1. Render the document
+    
+:::
 
 ## How to change the bibliography style
 
@@ -96,12 +98,14 @@ csl: my_journal.csl
 ---
 ```
 
-### Your Turn {.exercise}
+:::{.callout-note title="Your Turn"}
 
 1. select your bibliography style to be one from your favourite journal at the CSL github repo here: https://github.com/citation-style-language/styles (> 2,600 citations and counting)
 1. place this in your rstudio project
 1. refer to it in the YAML
 1. Render your document and observe your greatness
+
+:::
 
 ## How to move the bibliography location
 
@@ -133,14 +137,19 @@ bibliography: file.bib
 suppress-bibliography: true
 ```
 
-### Your Turn {.exercise}
+:::{.callout-note title="Your Turn"}
 
 1. Generate a bibliography and an appendix that follows it
 
-### Demo: Use the Visual Editor mode of RStudio {.demo}
+:::
+
+
+:::{.callout-tip title="Demo: Use the Visual Editor mode of RStudio"}
 
 Show off the citation auto-complete magic!
 
 - search for DOIs
 - search for R packages
 - search pubmed/datacite/more!
+
+:::

@@ -14,5 +14,5 @@ There is also a [VS Code extension for visual mode](https://quarto.org/docs/visu
 
 # Using Zotero with Quarto
 
-https://quarto.org/docs/visual-editor/technical.html#citations-from-zotero
+<https://quarto.org/docs/visual-editor/technical.html#citations-from-zotero>
 

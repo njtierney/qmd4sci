@@ -43,7 +43,7 @@ For demonstration purposes, let's take a plot from earlier and show how it's out
 * with `fig-height`, `fig-width`, `fig-format: `
 
 
-### Your Turn {.exercise}
+::: {.callout-note title="Your Turn"}
 
 1. Open exercise `exercises/02-qmd-figures-chunks/02-qmd-figures-chunks.qmd` Create three figures, with the respective dimensions (`fig-height` and `fig-width`)
     * 2x2
@@ -52,6 +52,8 @@ For demonstration purposes, let's take a plot from earlier and show how it's out
 2. Now add to those figures, the following:
     * `fig-align = "center"`
 3. Now change the output type to be "svg"
+
+:::
 
 ## Setting global options
 
@@ -71,14 +73,17 @@ format:
 ---
 ```
 
-### Your Turn {.exercise}
+::: {.callout-note title="Your Turn"}
 
 1. Set the global options in the "02-qmd-figures-chunks.qmd" document to set:
   * `fig-height`
   * `fig-width`
   * `fig-format`
+  
+:::
 
-## Demo: Keeping your markdown {.demo}
+
+::: {.callout-tip title="Demo: Keeping your markdown"}
 
 You can set the options for your figures, which will change how they appear on the page, but this won't save the figures anywhere. In order to save the figures to file, you need to edit the YAML option `keep-md: true`:
 
@@ -91,6 +96,8 @@ format:
     keep-md: true
 ---
 ```
+
+:::
 
 ## Altering where figures are saved to
 
@@ -130,15 +137,17 @@ knitr:
 
 (reference: [https://github.com/quarto-dev/quarto-cli/discussions/4254](https://github.com/quarto-dev/quarto-cli/discussions/4254))
 
-## Your Turn {.exercise}
+::: {.callout-note title="Your Turn"}
 
 1. Save your images to a specific directory of your choice
+
+:::
 
 ## Further Reading
 
 - [Official Quarto documentation on figures](https://quarto.org/docs/computations/r.html#output-formats)
 
-## EPS/TIFF/Other multiple image formats
+::: {.callout-caution title="Managing EPS/TIFF/Other multiple image formats" collapse="true"}
 
 Unfortunately (currently, as far as I can tell) in Quarto it seems you cannot save to other image formats such as "eps", "tiff", and cannot save to multiple formats at the same time.
 
@@ -177,3 +186,4 @@ walk2(
 
 ```
 
+:::

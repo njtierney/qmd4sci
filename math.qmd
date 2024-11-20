@@ -13,11 +13,13 @@ LaTeX style equation writing. This section introduces the two types equations, i
 - How to I create an equation?
 - LaTeX is funky, what are the basic math commands?
 
-## Objectives
+<!-- ## Objectives -->
 
-## Some history {.history}
+:::{.callout-caution title="Some History about LaTeX" collapse="true"}
 
 Equation editing was first made available in TeX, which later become LaTeX, named after [Leslie Lamport](https://en.wikipedia.org/wiki/Leslie_Lamport).
+
+:::
 
 ## Anatomy of Equations
 
@@ -238,9 +240,11 @@ $$
 :::
 ::::
 
-## Exercise
+::: {.callout-note title="Your Turn"}
 
 1. Add some math to your "02-qmd-figures-chunks.qmd" document
+
+:::
 
 ## Further Reading:
 

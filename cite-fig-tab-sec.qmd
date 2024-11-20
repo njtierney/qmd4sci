@@ -96,12 +96,14 @@ Also note that there are a variety of ways to specify the figure:
 
 (reference here: <https://quarto.org/docs/authoring/cross-references.html#references>)
 
-## Your Turn (exercise)
+:::{.callout-note title="Your Turn"}
 
 1. Using "03-qmd-lm-tables-inline-qmd"
     1. Convert your output to use `fig` prefixes to reference figures
 
-### Demo {.demo}
+:::
+
+:::{.callout-tip title="Demo"}
 
 ```{r}
 #| label: fig-gg-oz
@@ -120,10 +122,14 @@ gapminder %>%
 
 Australia's life expectancy has increased a great deal over the past 50 years (See Figure -@fig-gg-oz).
 
-### Your Turn {.exercise}
+:::
+
+:::{.callout-note title="Your Turn"}
 
 1. Using "03-qmd-lm-tables-inline-qmd":
     1. Add a new plot in your document and reference it
+
+:::
 
 ## Referencing a table
 
@@ -158,10 +164,12 @@ Reference: <https://quarto.org/docs/authoring/cross-references.html#tables> and 
 
 You can also reference theorems, code, proofs, and equations! See <https://quarto.org/docs/authoring/cross-references.html#theorems-and-proofs> for more details.
 
-### Your Turn {.exercise}
+:::{.callout-note title="Your Turn"}
 
 1. Using "03-qmd-lm-tables-inline-qmd"
     1. Create a table in your document and refer to it in text
+
+:::
 
 ## Referencing a section
 
@@ -193,17 +201,16 @@ because it was written as:
 ```
 
 
-## Using visual mode {.demo}
+:::{.callout-tip title="Demo: Using visual mode"}
 
 Visual mode is this pretty neat feature, it's best demonstrated live!
 
+:::
 
-## Your Turn {.exercise}
+:::{.callout-note title="Your Turn"}
 
 1. Using "03-qmd-lm-tables-inline-qmd"
     1. Reference a section in the report.
-
-
-## Your Turn {.exercise}
-
 1. Open up "04-qmd-global-opts-device.qmd" and work through the tasks there
+
+:::
