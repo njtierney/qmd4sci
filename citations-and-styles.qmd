@@ -73,11 +73,12 @@ For journals or books, you'll need to get a specific .bib file. Yes, this can be
   
 ### Your Turn {.exercise}
 
-1. Generate a references.bib file to place your citations
-1. Using the `citation()` function, generate citations for the packages we have used, "dplyr", "ggplot2", "gapminder", and for the R software, place these in your `references.bib` file
-1. Reference these in your document
-1. Add a final heading in your file called `#bibliography`
-1. Render the document
+1. Using "05-qmd-bib-polish.qmd"
+    1. Generate a references.bib file to place your citations
+    1. Using the `citation()` function, generate citations for the packages we have used, "dplyr", "ggplot2", "gapminder", and for the R software, place these in your `references.bib` file
+    1. Reference these in your document
+    1. Add a final heading in your file called `#bibliography`
+    1. Render the document
 
 ## How to change the bibliography style
 

@@ -58,119 +58,189 @@ LaTeX is an amazing language, but understanding how to create the equations can 
 
 #### Fractions
 
+:::: columns
+::: {.column width="45%"}
 ```
 $$
 \frac{1}{2}
 $$
 ```
+:::
+
+::: {.column width="45%"}
 
 $$
 \frac{1}{2}
 $$
+:::
+::::
 
 #### Sub and Super Scripts
 
+:::: columns
+::: {.column width="45%"}
 ```
 $$
 Y = X_1 + X_2
 $$
 ```
 
+:::
+::: {.column width="45%"}
 $$
 Y = X_1 + X_2
 $$
+:::
+::::
 
+
+:::: columns
+::: {.column width="45%"}
 ```
 $$
 a^2 + b^2 = c^2
 $$
 ```
 
+:::
+::: {.column width="45%"}
 $$
 a^2 + b^2 = c^2
 $$
+:::
+::::
 
 #### Square roots
 
+:::: columns
+::: {.column width="45%"}
+
 ```
 $$
 \sqrt{p}
 $$
 ```
+:::
+::: {.column width="45%"}
 
 $$
 \sqrt{p}
 $$
+:::
+::::
+
+:::: columns
+::: {.column width="45%"}
 
 ```
 $$
 x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}
 $$
 ```
+:::
+::: {.column width="45%"}
 
 $$
 x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}
 $$
+:::
+::::
 
 #### Summations
 
+:::: columns
+::: {.column width="45%"}
+
 ```
 $$
 \sum_{i = 1}^{n}{(\bar{x} - x_i)^2}
 $$
 ```
+:::
+
+::: {.column width="45%"}
 
 $$
 \sum_{i = 1}^{n}{(\bar{x} - x_i)^2}
 $$
+:::
+::::
 
 #### Bayes Rule
 
+:::: columns
+::: {.column width="45%"}
+
 ```
 $$
 Pr(\theta | y) = \frac{Pr(y | \theta) Pr(\theta)}{Pr(y)}
 $$
 ```
+:::
+::: {.column width="45%"}
 
 $$
 Pr(\theta | y) = \frac{Pr(y | \theta) Pr(\theta)}{Pr(y)}
 $$
+:::
+::::
 
+:::: columns
+::: {.column width="45%"}
 ```
 $$
 Pr(\theta | y) \propto Pr(y | \theta) Pr(\theta)
 $$
 ```
+:::
+
+::: {.column width="45%"}
 
 $$
 Pr(\theta | y) \propto Pr(y | \theta) Pr(\theta)
 $$
+:::
+::::
 
 #### Linear Model
 
+:::: columns
+::: {.column width="45%"}
 ```
 $$
 Y \sim X\beta_0 + X\beta_1 + \epsilon
 $$
 ```
+:::
+
+::: {.column width="45%"}
 
 $$
 Y \sim X\beta_0 + X\beta_1 + \epsilon
 $$
+:::
+::::
 
+:::: columns
+::: {.column width="45%"}
 ```
 $$
 \epsilon \sim N(0,\sigma^2)
 $$
 ```
+:::
+
+::: {.column width="45%"}
 
 $$
 \epsilon \sim N(0,\sigma^2)
 $$
+:::
+::::
 
 ## Exercise
 
-1. Add some math to your example document
+1. Add some math to your "02-qmd-figures-chunks.qmd" document
 
 ## Further Reading:
 

@@ -2,7 +2,14 @@
 
 There are some things that I run into fairly frequently (and some not so much) when I'm rendering my Quarto documents. This section details some the common problems, and the solution that I have found works for me.
 
-If you want to practice on fixing broken Quarto documents, check out some pathologically broken examples on github at [github.com/njtierney/qmd-errors](https://github.com/njtierney/qmd-errors).
+## Your turn {.exercise}
+
+1. Using "06-qmd-find-errors.qmd"
+  - Fix all the problems and get the document to render
+
+## More practice?
+
+If you want to practice fixing broken Quarto documents, check out some pathologically broken examples on github at [github.com/njtierney/qmd-errors](https://github.com/njtierney/qmd-errors).
 
 ## Avoiding problems
 

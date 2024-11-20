@@ -9,8 +9,8 @@ This is a course on how to use Quarto, with the target audience being for scient
 
 This online book covers more content than the workshop. Here's an example structure of a 3.5 hour course.
 
-| time | topic |
-|------|-------|
+| time    | topic |
+|---------|-------|
 |1:30-1:40|	Get started with your own Quarto document | 
 |1:40-2:00|	Workflow when using Quarto documents and projects |
 |2:00-2:20|	Exporting Quarto documents to PDF, HTML, and Microsoft Word |

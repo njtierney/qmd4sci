@@ -14,6 +14,7 @@ In this section, we are going to briefly discuss how to render to these output f
 * How do I convert to HTML, PDF, or Word?
 * How do I set options specific to each of these?
 * How can I include a screenshot of an interactive graphic in PDF or Word?
+* How to make a HTML page "self contained"?
 
 ## Objectives
 
@@ -64,6 +65,27 @@ It can be easy to get caught up with how your document looks. I highly recommend
 
 This was a minor revelation to me, to understand that page breaks were the cause of so much angst and pain. Embrace HTML, I say!
 
+
+## How to make a HTML page "self contained"
+
+PDFs are great because they are a very Portable Document Format (PDF!). But HTML can be really awesome as well because:
+
+- no page breaks
+- awesome online interactive data vis
+- did I mention no page breaks?
+
+But in order to share a HTML document you'll need to also typically share a folder of other figures/files etc.
+
+You can have everything crammed into a _single HTML page_ by setting the option `embed-resources` to `true`:
+
+```yaml
+title: HTML is great
+format:
+  html:
+    embed-resources: true
+```
+
+
 ## Your Turn {.exercise}
 
-1. Generate three reports, one as HTML, one as PDF, and one as microsoft word. Remember, if you are having PDF problems, see the [installation chapter](installation) note on installing \LaTeX\ with the R package, `tinytex`.
+1. Using your **awesome** Quarto document you created earlier, generate three reports, one as HTML, one as PDF, and one as microsoft word. Remember, if you are having PDF problems, see the [installation chapter](installation) note on installing \LaTeX\ with the R package, `tinytex`.

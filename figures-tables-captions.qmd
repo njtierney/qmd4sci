@@ -87,9 +87,10 @@ There are many different ways to produce tables in R. We have chosen to show `ka
 
 ### Your Turn {.exercise}
 
-1. Create a summary of your gapminder data, and put it into a table.
-1. Add a caption to this table
-1. Set the number of decimals to 2.
+1. Using the "02-qmd-figures-chunks.qmd"
+  1. Create a summary of your gapminder data, put it into a table.
+  1. Add a caption to this table.
+  1. Set the number of decimals to 2.
 
 ## Figures
 
@@ -152,8 +153,9 @@ gapminder |>
 
 ### Your Turn {.exercise}
 
-* Create a plot with your .qmd doc
-* Add a figure caption
+1. Using 02-qmd-figures-chunks.qmd
+    1. Create a plot 
+    1. Add a figure caption
 
 ### Adding multiple (sub) figures and (sub) captions
 
@@ -186,7 +188,7 @@ In our case, say we wanted to insert the Statistical Society of Australia logo i
 
 **Markdown syntax**
 
-The markdown syntax to insert an image is: `![caption](path/to/image)`
+The markdown syntax to insert an image is: `![caption](path/to/image){options}`
 
 #### Demo {.demo}
 
@@ -227,8 +229,12 @@ You can control more features of figures, e.g., sizing, alignment, alt text, etc
 
 ### Your Turn {.exercise}
 
-1. Download [the gapminder logo](https://www.gapminder.org/wp-content/themes/gapminder2/images/gapminder-logo.svg) and put it into a new directory call "figs"
-1. Insert this image into your Quarto document around where you introduce gapminder.
+
+1. Download [the gapminder logo](https://www.gapminder.org/wp-content/themes/gapminder2/images/gapminder-logo.svg)
+1. Put it into a new directory called "figs" (at the top level)
+1. Insert the image into your "02-qmd-figures-chunks.qmd" Quarto document around where you introduce gapminder.
+  1. Try using both markdown `![]()` syntax, and `knitr::include_graphics()`.
+  1. Hint: Remember to refer to the image in the right spot using `here`!
 
 ## Summary
 

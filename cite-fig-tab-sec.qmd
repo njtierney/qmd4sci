@@ -98,7 +98,8 @@ Also note that there are a variety of ways to specify the figure:
 
 ## Your Turn (exercise)
 
-1. Convert your output to use `fig` prefixes to reference figures
+1. Using "03-qmd-lm-tables-inline-qmd"
+    1. Convert your output to use `fig` prefixes to reference figures
 
 ### Demo {.demo}
 
@@ -121,7 +122,8 @@ Australia's life expectancy has increased a great deal over the past 50 years (S
 
 ### Your Turn {.exercise}
 
-1. Add a new plot in your document and reference it
+1. Using "03-qmd-lm-tables-inline-qmd":
+    1. Add a new plot in your document and reference it
 
 ## Referencing a table
 
@@ -158,7 +160,8 @@ You can also reference theorems, code, proofs, and equations! See <https://quart
 
 ### Your Turn {.exercise}
 
-1. Create a table in your document and refer to it in text
+1. Using "03-qmd-lm-tables-inline-qmd"
+    1. Create a table in your document and refer to it in text
 
 ## Referencing a section
 
@@ -197,5 +200,10 @@ Visual mode is this pretty neat feature, it's best demonstrated live!
 
 ## Your Turn {.exercise}
 
-1. Reference a section in the report.
+1. Using "03-qmd-lm-tables-inline-qmd"
+    1. Reference a section in the report.
 
+
+## Your Turn {.exercise}
+
+1. Open up "04-qmd-global-opts-device.qmd" and work through the tasks there

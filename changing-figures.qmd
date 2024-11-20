@@ -1,8 +1,10 @@
 # Customising your figures
 
-When you produce figures, you usually want to tweak them a little bit. A bit wider, perhaps a bit taller. Perhaps a different image type other than "png", because the journal requires "svg" or "jpg". Maybe you need 600dpi because you're going to print it really big. So, how do you control these features?
+When you produce figures, you usually want to tweak them a little bit. A bit wider, perhaps a bit taller. Perhaps a different image type other than "png", because the journal requires "svg" or "jpg". Maybe you need 600dpi because you're going to print it really big. 
 
-You can control the size and features of figures with the chunk options. In this section, we are going to talk more specifically about how to customise your figures.
+We can control these features with code chunk options. 
+
+In this section, we are going to talk more specifically about how to customise your figures.
 
 ## Overview
 
@@ -71,7 +73,7 @@ format:
 
 ### Your Turn {.exercise}
 
-1. Set the global options in your document to set:
+1. Set the global options in the "02-qmd-figures-chunks.qmd" document to set:
   * `fig-height`
   * `fig-width`
   * `fig-format`

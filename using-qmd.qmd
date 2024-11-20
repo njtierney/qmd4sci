@@ -259,7 +259,7 @@ What's great about this is that if your data changes upstream, then you don't ne
 
 ### Your Turn {.exercise}
 
-1. Use the rstudio project you previously created, `qmd4sci-materials`, and create a Quarto document
+1. Use the rstudio project you previously created, `qmd4sci-materials`, and open the "01-qmd-examples.qmd" file.
 1. Run some brief summaries of the data in the Quarto document:
     - hist(data$)
     - How big is the data?
@@ -273,9 +273,15 @@ What's great about this is that if your data changes upstream, then you don't ne
 <!-- - Keep it simple -->
 <!-- - focus on content -->
 
-## Nick's Quarto hygiene recommendations
+## Nick's Quarto starter pack
 
-I highly recommend that each document you write sets some global options in the YAML, and then has two code chunks to manage libraries, and functions. Below, we can see an example of this.
+I highly recommend that each document you write has a certain structure:
+
+- Sets global options in the YAML
+- First code chunk manages libraries
+- Second code chunk manages functions
+
+For example
 
 ````
 ---
@@ -333,4 +339,4 @@ Now, this is my personal preference, and there are definitely other ways to orga
 
 ## Your Turn {.exercise}
 
-1. Update your Quarto document based on the aforementioned hygiene steps discussed above.
+1. Update the "01-qmd-example.qmd" Quarto document you just created, based on the aforementioned steps discussed above.

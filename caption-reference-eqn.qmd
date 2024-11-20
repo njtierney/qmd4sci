@@ -14,7 +14,7 @@ This section introduces how to add captions to equations, and reference them in 
 
 ### Numbering equations
 
-You can make an equation referencable by adding a label starting with `#eq-` after the equation `$$`. For example:
+You can make reference an equation by adding a label starting with `#eq-` after the equation `$$`. For example:
 
 ```
 $$
