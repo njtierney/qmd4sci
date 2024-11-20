@@ -36,7 +36,9 @@ bibliography: references.bib
 
 ### What is a .bib file?
 
-Good question. `.bib` is a format for storing references from the heyday of LaTeX. It contains scripts with reference information for the article. Here's an example one
+Good question. 
+
+`.bib` is a format for storing references from the heyday of LaTeX. It contains plain text with reference information for the article. Here's an example one:
 
 ```
   @Book{ggplot2,
@@ -95,7 +97,7 @@ csl: my_journal.csl
 
 ### Your Turn {.exercise}
 
-1. select your bibliography style to be one from your favourite journal at the CSL github repo here: https://github.com/citation-style-language/styles (> 1800 citations and counting)
+1. select your bibliography style to be one from your favourite journal at the CSL github repo here: https://github.com/citation-style-language/styles (> 2,600 citations and counting)
 1. place this in your rstudio project
 1. refer to it in the YAML
 1. Render your document and observe your greatness
@@ -133,3 +135,11 @@ suppress-bibliography: true
 ### Your Turn {.exercise}
 
 1. Generate a bibliography and an appendix that follows it
+
+### Demo: Use the Visual Editor mode of RStudio {.demo}
+
+Show off the citation auto-complete magic!
+
+- search for DOIs
+- search for R packages
+- search pubmed/datacite/more!

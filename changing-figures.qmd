@@ -76,7 +76,7 @@ format:
   * `fig-width`
   * `fig-format`
 
-## Keeping your markdown {.demo}
+## Demo: Keeping your markdown {.demo}
 
 You can set the options for your figures, which will change how they appear on the page, but this won't save the figures anywhere. In order to save the figures to file, you need to edit the YAML option `keep-md: true`:
 
@@ -90,7 +90,7 @@ format:
 ---
 ```
 
-## Altering the figure path figures are saved to
+## Altering where figures are saved to
 
 By default, the figures are saved in a folder named after the file, e.g., 
 
@@ -111,7 +111,7 @@ knitr:
 ---
 ```
 
-If you do now want a prefix specified, you must end this part with a slash, e.g., 
+If you do **not** want a prefix specified, you must end this part with a slash, e.g., 
 
 ```yaml
 ---

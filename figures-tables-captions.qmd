@@ -19,6 +19,10 @@ You need figures and tables in your own writing, whether it be a journal paper, 
 
 To produce a table, I recommend you use the `kable` function from the `knitr` package.
 
+::: {.callout-note title="Other table R packages"}
+There are many other table making pieces of R packages, such as [`gt`](https://gt.rstudio.com/), [`formattable`](https://renkun-ken.github.io/formattable/), [`reactable`](https://glin.github.io/reactable/index.html), and [`flextable`](https://davidgohel.github.io/flextable/index.html)). But I think you can get 90% of the way there with `kable` from `knitr`, and for the 
+:::
+
 ### Demo {.demo}
 
 `kable` takes a `data.frame` as input, and outputs the table into a `markdown table`, which will get rendered into the appropriate output format.
@@ -79,7 +83,7 @@ knitr::kable(top_gap,
 
 There are other options that you can set in `kable`, but for these options will get you through a large majority of what you need. For more information on what `kable` can provide, see `?knitr::kable`.
 
-There are many different ways to produce tables in R. We have chosen to show `kable` today because kable is minimal, but powerful. If you want to extend `kable` to do more, look at [kableExtra](https://cran.r-project.org/web/packages/kableExtra/index.html), in particular the option `kableExtra::kable_styling(latex_options = c("hold_position"))`.
+There are many different ways to produce tables in R. We have chosen to show `kable` today because kable is minimal, but powerful. If you want to extend `kable` to do more, look at [kableExtra](https://cran.r-project.org/web/packages/kableExtra/index.html). For PDF/LaTeX output, I found the option `kableExtra::kable_styling(latex_options = c("hold_position"))` particularly nice to just __put the table where it should be, goshdarnit__.
 
 ### Your Turn {.exercise}
 
@@ -97,11 +101,11 @@ For example, I can print a plot of the gapminder data for Australia like so:
 
 ```{r}
 #| label: gg-gapminder
-library(ggplot2)
-library(dplyr)
+options(tidyverse.quiet = TRUE)
+library(tidyverse)
 
-gapminder %>%
-  filter(country == "Australia") %>%
+gapminder |>
+  filter(country == "Australia") |>
   ggplot(aes(x = year,
              y = lifeExp)) + 
   geom_point()
@@ -121,8 +125,8 @@ So to insert a figure, we do the following.
 library(ggplot2)
 library(dplyr)
 
-gapminder %>%
-  filter(country == "Australia") %>%
+gapminder |>
+  filter(country == "Australia") |>
   ggplot(aes(x = lifeExp,
              y = year)) + 
   geom_point()
@@ -139,8 +143,8 @@ Which would produce the following output
 library(ggplot2)
 library(dplyr)
 
-gapminder %>%
-  filter(country == "Australia") %>%
+gapminder |>
+  filter(country == "Australia") |>
   ggplot(aes(x = lifeExp,
              y = year)) + 
   geom_point()
@@ -175,7 +179,7 @@ For more information on this see <https://quarto.org/docs/authoring/figures.html
 
 We cannot always generate the graphics that we want - for example, we might have an image of something that we want to show, or perhaps a nice flowchart someone else made.
 
-In our case, say we wanted to insert the new SSA logo into our document, there are two ways we can do this.
+In our case, say we wanted to insert the Statistical Society of Australia logo into our document, there are two ways we can do this.
 
 1. With `markdown` syntax
 1. with `knitr::include_graphics()`
@@ -190,13 +194,13 @@ So we could insert the new SSA vic logo by doing the following:
 
 ````{markdown}
 ```
-![SSA Logo!](bit.ly/ssa-logo)
+![The new, gorgeous SSA Logo has a hidden element, can you see it?](https://qmd4sci.njtierney.com/figs/ssa-logo.png)
 ```
 ````
 
 Which would give us the following output:
 
-![SSA Logo!](figs/ssa-logo.png)
+![The new, gorgeous SSA Logo has a hidden element, can you see it?](figs/ssa-logo.png)
 
 But say that we want more control over the output, like we want to center the image, and we want to make it smaller? Then you can use `knitr::include_graphics()`, and control the figure alignment using the options fig-align, and add a caption with `fig-cap`.
 
@@ -217,7 +221,9 @@ knitr::include_graphics(here::here("figs", "ssa-logo.png"))
 knitr::include_graphics(here::here("figs", "ssa-logo.png"))
 ```
 
-`
+::: {.callout-tip title="Controlling image output with css"}
+You can control more features of figures, e.g., sizing, alignment, alt text, etc., by using CSS type styling, which you can read more about here: <https://quarto.org/docs/authoring/figures.html#figure-sizing`>
+:::
 
 ### Your Turn {.exercise}
 

@@ -1,8 +1,10 @@
 # Keyboard Shortcuts
 
+![Imaged sources from https://xkcd.com/2150/](https://imgs.xkcd.com/comics/xkeyboarcd.png){title="The key caps use LCD displays for all the vowels, so they can automatically adjust over the years to reflect ongoing vowel shifts while allowing you to keep typing phonetically."}
+
 Keyboard shortcuts tend to make our lives easier. Some that you might already be familiar with in day to day life include quickly saving (Cmd + S or Ctrl + S), or Undo (Cmd + Z or Ctrl + Z).
 
-There are many keyboard shortcuts that you can access in R, this section provides a brief tour of them, and why you might want to use them.
+There are many keyboard shortcuts you can access in R, this section provides a brief tour of them, and why you might want to use them.
 
 ## Overview
 
@@ -14,6 +16,8 @@ There are many keyboard shortcuts that you can access in R, this section provide
 * What sort of keyboard shortcuts should I care about?
 
 ## Objectives
+
+<!-- TODO -->
 
 ## Gifs of the action
 
@@ -50,5 +54,5 @@ Below is a small table of tasks you can perform with keyboard
 
 ## Your Turn {.exercise}
 
-- Using the Keyboard Shortcut Reference, find the keyboard shortcut for inserting a pipe character ( %>% or |>)
+- Using the Keyboard Shortcut Reference, find the keyboard shortcut for inserting a pipe character ( `%>%` or `|>`)
 - Spend 3 minutes practicing these commands in a document.

@@ -26,8 +26,10 @@ gapminder %>%
 
 _Figure 1. Life expectancy from 1952 - 2007 for Australia. Life expectancy increases steadily except from 1962 to 1969. We can safely say that our life expectancy is higher than it has ever been!_
 
-And sure, this is figure 1.
+And sure, this is figure 1...for now.
+
 But what happens if actually, that figure should be moved later in the paper?
+
 You need to do the following:
 
 1. Update the reference to figure 1 in the text. 
@@ -37,9 +39,9 @@ This is fine.
 
 Once. 
 
-But it is never once. After this, it is frustrating, and error prone.
+But it is __never__ once. After this, it is frustrating, and error prone.
 
-There is a way to solve this, which this lesson discusses.
+There is a way to solve this, using figure citations, which this lesson discusses.
 
 ## Overview
 
@@ -59,7 +61,7 @@ There is a way to solve this, which this lesson discusses.
 - Tables are referenced in text with `@tbl-label`
 - Figures are references in text with `@fig-label`
 
-Importantly here, for these two above examples to work, the things that they are referring to must have the exact label `tbl-label` and `fig-label`, respectively.
+Importantly here, for these two above examples to work, the things that they are referring to must have the exact label `tbl-label` and `fig-label`, respectively. That is, they must have the `tbl` or the `fig` part in there!
 
 So, in order to use this referencing style, you must use specific labelling of your code chunks. For example, if you have some code like this:
 
@@ -69,7 +71,7 @@ So, in order to use this referencing style, you must use specific labelling of y
 image(volcano)
 ```
 
-Then you cannot reference this figure in text - `@example-figure` does not work: @example-figure.
+Then you cannot reference this figure in text - `@example-figure` does not work: @example-figure. We get the error: "example-figure?".
 
 It would need to have a label like:
 
@@ -81,6 +83,10 @@ image(volcano)
 
 Then you can reference it with: `@fig-example` - @fig-example.
 
+::: {.callout-tip title="Hover your mouse on a figure!"}
+Note the awesome on-hover behaviour for hovering over a reference!
+:::
+
 Also note that there are a variety of ways to specify the figure:
 
 - `@fig-example`: @fig-example
@@ -88,8 +94,7 @@ Also note that there are a variety of ways to specify the figure:
 - `[Fig @fig-example]`: [Fig @fig-example]
 - `-@fig-example`: Figure -@fig-example
 
-(reference here: https://quarto.org/docs/authoring/cross-references.html#references)
-
+(reference here: <https://quarto.org/docs/authoring/cross-references.html#references>)
 
 ## Your Turn (exercise)
 
@@ -112,7 +117,7 @@ gapminder %>%
   geom_point()
 ```
 
-Australia's life expectancy has increased a great deal over the past 50 years (See Figure -@fig-gg-oz.
+Australia's life expectancy has increased a great deal over the past 50 years (See Figure -@fig-gg-oz).
 
 ### Your Turn {.exercise}
 
@@ -132,7 +137,7 @@ gapminder %>%
   knitr::kable(caption = "Raw gapminder data for Australia.")
 ```
 
-`@tbl-chunk-name`
+See above in Table @tbl-tbl-gg-oz-tab.
 
 If you want to move the caption location you can use `tbl-cap-location: <position>` to specify the location. By default it is the top.
 
@@ -149,9 +154,9 @@ Reference: <https://quarto.org/docs/authoring/cross-references.html#tables> and 
 
 ## Other things you can cross/reference
 
-You can also reference theorems, code, proofs, and equations! See https://quarto.org/docs/authoring/cross-references.html#theorems-and-proofs for more details.
+You can also reference theorems, code, proofs, and equations! See <https://quarto.org/docs/authoring/cross-references.html#theorems-and-proofs> for more details.
 
-### Your Turn (exercise)
+### Your Turn {.exercise}
 
 1. Create a table in your document and refer to it in text
 

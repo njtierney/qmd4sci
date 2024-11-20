@@ -31,7 +31,7 @@ So this text would have an equation here: $E = mc^2$
 
 Generates:
 
-So this text would have an equation here: $E = mc^2$
+> So this text would have an equation here: $E = mc^2$
 
 Display equations are referenced by two pairs of dollar signs:
 
@@ -40,6 +40,8 @@ $$
 E = mc^2
 $$
 ```
+
+Gives: 
 
 $$
 E = mc^2
@@ -72,15 +74,17 @@ $$
 $$
 Y = X_1 + X_2
 $$
-
-$$
-a^2 + b^2 = c^2
-$$
 ```
 
 $$
 Y = X_1 + X_2
 $$
+
+```
+$$
+a^2 + b^2 = c^2
+$$
+```
 
 $$
 a^2 + b^2 = c^2
@@ -92,15 +96,17 @@ $$
 $$
 \sqrt{p}
 $$
-
-$$
-x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}
-$$
 ```
 
 $$
 \sqrt{p}
 $$
+
+```
+$$
+x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}
+$$
+```
 
 $$
 x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}
@@ -124,16 +130,17 @@ $$
 $$
 Pr(\theta | y) = \frac{Pr(y | \theta) Pr(\theta)}{Pr(y)}
 $$
-
-$$
-Pr(\theta | y) \propto Pr(y | \theta) Pr(\theta)
-$$
 ```
-
 
 $$
 Pr(\theta | y) = \frac{Pr(y | \theta) Pr(\theta)}{Pr(y)}
 $$
+
+```
+$$
+Pr(\theta | y) \propto Pr(y | \theta) Pr(\theta)
+$$
+```
 
 $$
 Pr(\theta | y) \propto Pr(y | \theta) Pr(\theta)
@@ -145,15 +152,17 @@ $$
 $$
 Y \sim X\beta_0 + X\beta_1 + \epsilon
 $$
-
-$$
-\epsilon \sim N(0,\sigma^2)
-$$
 ```
 
 $$
 Y \sim X\beta_0 + X\beta_1 + \epsilon
 $$
+
+```
+$$
+\epsilon \sim N(0,\sigma^2)
+$$
+```
 
 $$
 \epsilon \sim N(0,\sigma^2)
