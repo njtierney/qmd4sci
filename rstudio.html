@@ -2,13 +2,13 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.557">
+<meta name="generator" content="quarto-1.5.57">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="description" content="For a scientific report to be completely credible, it must be reproducible. The full computational environment used to derive the results, including the data and code used for statistical analysis should be available for others to reproduce. Quarto is a tool that allows you integrate your code, text and figures in a single file in order to make high quality, reproducible reports. A paper published with an included quarto file and data sets can be reproduced by anyone with a computer.">
 
-<title>Quarto for Scientists - 3&nbsp; RStudio, What and Why</title>
+<title>3&nbsp; RStudio, What and Why – Quarto for Scientists</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -79,13 +79,13 @@ ul.task-list li input[type="checkbox"] {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
         <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./rstudio.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">RStudio, What and Why</span></a></li></ol></nav>
-        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
-      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
     </div>
@@ -232,9 +232,9 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
  <span class="menu-text">Appendices</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -337,10 +337,13 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="what-is-rstudio-and-why-should-i-use-it" class="level2" data-number="3.4">
 <h2 data-number="3.4" class="anchored" data-anchor-id="what-is-rstudio-and-why-should-i-use-it"><span class="header-section-number">3.4</span> What is RStudio, and why should I use it?</h2>
-<p>If R is the engine and bare bones of your car, then RStudio is like <em>the rest of the car</em>. The engine is super critical part of your car. But in order to make things properly functional, you need to have a steering wheel, comfy seats, a radio, rear and side view mirrors, storage, and seatbelts.</p>
+<blockquote class="blockquote">
+<p>If R is the engine and bare bones of your car, then RStudio is like <em>the rest of the car</em>.</p>
+</blockquote>
+<p>The engine is super critical part of your car. But in order to make things properly functional, you need to have a steering wheel, comfy seats, a radio, rear and side view mirrors, storage, and seatbelts. RStudio is all those niceties</p>
 <p>The RStudio layout has the following features:</p>
 <ul>
-<li>On the upper left, the Rmarkdown script</li>
+<li>On the upper left, the Quarto script</li>
 <li>On the lower left, the R console</li>
 <li>On the lower right, the view for files, plots, packages, help, and viewer.</li>
 <li>On the upper right, the environment / history pane</li>
@@ -356,8 +359,12 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 <p>We saw a bit of what an Quarto script does.</p>
-<p>The R console is the bit where you can run your code.</p>
-<p>The file/plot/package viewer is a handy browser for your current files, like Finder, or File Explorer, plots are where your plots appear, you can view packages, see the help files. And the environment / history pane contains the list of things you have created, and the past commands that you have run.</p>
+<ul>
+<li>The R console is the bit where you can run your code.</li>
+<li>The file/plot/package viewer is a handy browser for your current files, like Finder, or File Explorer.</li>
+<li>Plots are where your plots appear, you can view packages, see the help files.</li>
+<li>The environment / history pane contains the list of things you have created, and the past commands that you have run.</li>
+</ul>
 </section>
 <section id="exercise-rstudio-default-options" class="level2 exercise" data-number="3.5">
 <h2 class="exercise anchored" data-number="3.5" data-anchor-id="exercise-rstudio-default-options"><span class="header-section-number">3.5</span> Exercise: RStudio default options</h2>
@@ -365,20 +372,20 @@ ul.task-list li input[type="checkbox"] {
 <p>Tools &gt; Global Options (or <code>Cmd + ,</code> on macOS)</p>
 <p>Under the <strong>General</strong> tab:</p>
 <ul>
-<li>For <strong>workspace</strong>
+<li>For <strong>workspace</strong>:
 <ul>
-<li>Uncheck restore .RData into workspace at startup</li>
-<li>Save workspace to .RData on exit : “Never”</li>
+<li>Uncheck restore .RData into workspace at startup.</li>
+<li>Save workspace to .RData on exit : “Never”.</li>
 </ul></li>
-<li>For <strong>History</strong>
+<li>For <strong>History</strong>:
 <ul>
-<li>Uncheck “Always save history (even when not saving .RData)</li>
-<li>Uncheck “Remove duplicate entries in history”</li>
+<li>Uncheck “Always save history (even when not saving .RData).</li>
+<li>Uncheck “Remove duplicate entries in history”.</li>
 </ul></li>
 </ul>
 <div class="cell">
 <div class="cell-output-display">
-<div id="fig-rstudio-workspace-options" class="quarto-figure quarto-figure-center quarto-float anchored">
+<div id="fig-rstudio-workspace-options" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-rstudio-workspace-options-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="figs/rstudio-remove-data.png" class="img-fluid figure-img" style="width:50.0%">
@@ -443,18 +450,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
     return false;
   }
-  const clipboard = new window.ClipboardJS('.code-copy-button', {
-    text: function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-    }
-  });
-  clipboard.on('success', function(e) {
+  const onCopySuccess = function(e) {
     // button target
     const button = e.trigger;
     // don't keep focus
@@ -486,7 +482,29 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }, 1000);
     // clear code selection
     e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
   });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
       var filterRegex = new RegExp("https:\/\/qmd4sci\.njtierney\.com");
@@ -494,7 +512,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
     // Inspect non-navigation links and adorn them if external
- 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
     for (var i=0; i<links.length; i++) {
       const link = links[i];
       if (!isInternal(link.href)) {

@@ -2,13 +2,13 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.557">
+<meta name="generator" content="quarto-1.5.57">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="description" content="For a scientific report to be completely credible, it must be reproducible. The full computational environment used to derive the results, including the data and code used for statistical analysis should be available for others to reproduce. Quarto is a tool that allows you integrate your code, text and figures in a single file in order to make high quality, reproducible reports. A paper published with an included quarto file and data sets can be reproduced by anyone with a computer.">
 
-<title>Quarto for Scientists - 4&nbsp; Workflow</title>
+<title>4&nbsp; Workflow – Quarto for Scientists</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -113,13 +113,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
         <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./workflow.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Workflow</span></a></li></ol></nav>
-        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
-      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
     </div>
@@ -266,9 +266,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
  <span class="menu-text">Appendices</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -359,7 +359,23 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p>Before we start with Quarto, we need to make sure that you understand <em>file storage hygiene</em>. This helps you keep your files, paths, and directories clean, which prevents unexpected problems. It will make you more productive in the future because you’ll spend less time fighting against file paths. Not sure what a file path is? We explain that as well.</p>
+<blockquote class="blockquote">
+<p>Before we start with Quarto, we need to make sure that you understand <em>file storage hygiene</em>.</p>
+</blockquote>
+<p>We can prevent <strong>unexpected problems</strong> if we can maintain an order to your files, paths, and directories. A common problem that arises is R not knowing where a certain file is. For example, we get the error:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">read.csv</span>(<span class="st">"my-very-important-data-file-somewhere.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in file(file, "rt"): cannot open file
+'my-very-important-data-file-somewhere.csv': No such file or directory</code></pre>
+</div>
+<div class="cell-output cell-output-error">
+<pre><code>Error in file(file, "rt"): cannot open the connection</code></pre>
+</div>
+</div>
+<p>Because R doesn’t know where <code>"my-very-important-data-file-somewhere.csv"</code> is.</p>
+<p>Practicing <em>good file storage hygiene</em> will help maintain an order to files, paths, and directories. This will make you more productive in the future, because you’ll spend less time fighting against file paths.</p>
+<p>Not sure what a file path is? We explain that as well.</p>
 <section id="overview" class="level2" data-number="4.1">
 <h2 data-number="4.1" class="anchored" data-anchor-id="overview"><span class="header-section-number">4.1</span> Overview</h2>
 <ul>
@@ -395,7 +411,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 data-number="4.5" class="anchored" data-anchor-id="when-you-start-a-new-project-open-a-new-rstudio-project"><span class="header-section-number">4.5</span> When you start a new project: Open a new RStudio project</h2>
 <p>This section is heavily influenced by <a href="https://www.tidyverse.org/articles/2017/12/workflow-vs-script/">Jenny Bryan’s great blog post on project based workflows.</a></p>
 <p>Sometimes this is the first line of an R Script or R markdown file.</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">setwd</span>(<span class="st">"c:/really/long/file/path/to/this/directory"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">setwd</span>(<span class="st">"c:/really/long/file/path/to/this/directory"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <section id="question" class="level4 question" data-number="4.5.0.1">
 <h4 class="question anchored" data-number="4.5.0.1" data-anchor-id="question"><span class="header-section-number">4.5.0.1</span> Question</h4>
 <p>What do you think the <code>setwd</code> code does?</p>
@@ -404,21 +420,22 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h3 data-number="4.5.1" class="anchored" data-anchor-id="so-what-does-this-do"><span class="header-section-number">4.5.1</span> So what does this do?</h3>
 <p>This says, “set my working directory to this specific working directory”.</p>
 <p>It means that you can read in data and other things like this:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/mydata.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/mydata.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Instead of</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"c:/really/long/file/path/to/this/directory/data/mydata.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"c:/really/long/file/path/to/this/directory/data/mydata.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>So while this has the effect of <strong>making the file paths work in your file</strong>, it is a problem. It is a problem because, among other things, using <code>setwd()</code> like this:</p>
 <ul>
 <li>Has 0% chance of working on someone else’s machine (<strong>this could include you in 6 months!</strong>)</li>
 <li>Your file is not self-contained and portable. (Think: <em>“What if this folder moved to /Downloads, or onto another machine?”</em>)</li>
 </ul>
 <p>So, to get this to work, you need to hand edit the file path to your machine.</p>
-<p>This is painful. And when you do this all the time, it gets old, fast.</p>
+<p>This is painful.</p>
+<p>When you do this all the time, it gets old, fast.</p>
 </section>
 </section>
 <section id="what-is-a-file-path" class="level2" data-number="4.6">
 <h2 data-number="4.6" class="anchored" data-anchor-id="what-is-a-file-path"><span class="header-section-number">4.6</span> What is a file path?</h2>
-<p>So, this might all be a bit confusing if you don’t know what a file path is. A file path is the machine-readable directions to where files on your computer live. So, the file path:</p>
+<p>This might all be a bit confusing if you don’t know what a file path is. A file path is the machine-readable directions to where files on your computer live. So, the file path:</p>
 <pre><code>/Users/njtierney/Desktop/qmd4sci-materials/demo.R</code></pre>
 <p>Describes the location of the file “demo.R”. This could be visualised as:</p>
 <pre><code>users
@@ -433,10 +450,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
                └──  data
                     └──  gapminder.csv</code></pre>
 <p>So, if you want to read in the <code>gapminder.csv</code> file, you might need to write code like this:</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>gapminder <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"/Users/njtierney/Desktop/qmd4sci-materials/data/gapminder.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>As we now know, this is a problem, because this is not portable code.</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>gapminder <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"/Users/njtierney/Desktop/qmd4sci-materials/data/gapminder.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>As we now know, this is a problem, because this is not portable code. It is unlikely someone else will have the <code>gapminder.csv</code> data stored under the folders, <code>"Users/njtierney/Desktop"</code>.</p>
 <p>If you have an RStudio project file inside the <code>qmd4sci-materials</code> folder, you can instead write the following:</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>gapminder <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/gapminder.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>gapminder <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/gapminder.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="your-turn-1" class="level2 exercise" data-number="4.7">
 <h2 class="exercise anchored" data-number="4.7" data-anchor-id="your-turn-1"><span class="header-section-number">4.7</span> Your Turn</h2>
@@ -444,7 +461,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><p>(1-2 minutes) Imagine you see the following directory path: <code>"/Users/miles/etc1010/week1/data/health.csv"</code> what are the folders above the file, <code>health.csv</code>?</p></li>
 <li><p>What would be the result of using the following code in <code>demo-gapminder.qmd</code>, and then using the code, and then moving this to another location, say inside your C drive?</p></li>
 </ul>
-<div class="sourceCode" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">setwd</span>(<span class="st">"Downloads/etc1010/week1/week1.qmd)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">setwd</span>(<span class="st">"Downloads/etc1010/week1/week1.qmd)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="is-there-an-answer-to-the-madness" class="level2" data-number="4.8">
 <h2 data-number="4.8" class="anchored" data-anchor-id="is-there-an-answer-to-the-madness"><span class="header-section-number">4.8</span> Is there an answer to the madness?</h2>
@@ -453,11 +470,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>I highly recommend when you start on a new idea, new research project, paper. Anything that is new. It should start its life as an <strong>rstudio project</strong>.</p>
 <p>An rstudio project helps keep related work together in the same place. Amongst other things, they:</p>
 <ul>
-<li>Keep all your files together</li>
-<li>Set the working directory to the project directory</li>
-<li>Starts a new session of R</li>
-<li>Restore previously edited files into the editor tabs</li>
-<li>Restore other rstudio settings</li>
+<li>Keep all your files together.</li>
+<li>Set the working directory to the project directory.</li>
+<li>Starts a new session of R.</li>
+<li>Restore previously edited files into the editor tabs.</li>
+<li>Restore other rstudio settings.</li>
 <li>Allow for multiple R projects open at the same time.</li>
 </ul>
 <p>This helps keep you sane, because:</p>
@@ -468,7 +485,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
 <li>You can refer to your data and other projects in a consistent way.</li>
 </ul>
-<p>And finally, the big one</p>
+<p>And finally, the big one:</p>
 <p><strong>RStudio projects help resolve file path problems</strong>, because they automatically set the working directory to the location of the rstudio project.</p>
 <p>Let’s open one together.</p>
 </section>
@@ -477,7 +494,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <ol type="1">
 <li>In RStudio, and run the following code to start a new rstudio project called “qmd4sci-materials”.</li>
 </ol>
-<div class="sourceCode" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>usethis<span class="sc">::</span><span class="fu">use_course</span>(<span class="st">"njtierney/qmd4sci-materials"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>usethis<span class="sc">::</span><span class="fu">use_course</span>(<span class="st">"njtierney/qmd4sci-materials"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <ol start="2" type="1">
 <li><p>Follow the prompts to download this to your desktop and then run the rstudio project. (You can move it later if you like!)</p></li>
 <li><p>You are now in an rstudio project!</p></li>
@@ -497,11 +514,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="the-here-package" class="level2" data-number="4.11">
 <h2 data-number="4.11" class="anchored" data-anchor-id="the-here-package"><span class="header-section-number">4.11</span> The “here” package</h2>
 <p>Although RStudio projects help resolve file path problems, in some cases you might have many folders in your r project. To help navigate them appropriately, you can use the <code>here</code> package to provide the full path directory, in a compact way.</p>
-<div class="sourceCode" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>here<span class="sc">::</span><span class="fu">here</span>(<span class="st">"data"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>here<span class="sc">::</span><span class="fu">here</span>(<span class="st">"data"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>returns</p>
 <pre><code>[1] "/Users/nick/github/njtierney/qmd4sci-materials/data"</code></pre>
 <p>And</p>
-<div class="sourceCode" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>here<span class="sc">::</span><span class="fu">here</span>(<span class="st">"data"</span>, <span class="st">"gapminder.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>here<span class="sc">::</span><span class="fu">here</span>(<span class="st">"data"</span>, <span class="st">"gapminder.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>returns</p>
 <pre><code>[1] "/Users/nick/github/njtierney/qmd4sci-materials/data/gapminder.csv"</code></pre>
 <p>(Note that these absolute file paths will indeed be different on my computer compared to yours - super neat!)</p>
@@ -511,7 +528,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </blockquote>
 <p>This is really handy for a few reasons:</p>
 <ol type="1">
-<li>It makes things <em>completely</em> portable <!-- TODO - what are Quarto's rules for looking for files? --></li>
+<li>It makes things <em>completely</em> portable</li>
 <li>Quarto documents have a special way of looking for files, this helps eliminate file path pain.</li>
 <li>If you decide to not use RStudio projects, you have code that will work on <em>any machine</em></li>
 </ol>
@@ -562,11 +579,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <p>Then write the name of your project. I think it is usually worthwhile spending a bit of time thinking of a name for your project. Even if it is only a few minutes, it can make a difference. You want to think about:</p>
 <ul>
-<li>keeping it short</li>
-<li>no spaces</li>
-<li>combining words</li>
+<li>Keeping it short.</li>
+<li>No spaces.</li>
+<li>Combining words.</li>
 </ul>
-<p>For example, I have a project looking at bat calls, so I called it <code>screech</code>, because bats make a screech-y noise.</p>
+<p>For example, I had a project looking at bat calls, so I called it <code>screech</code>, because bats make a screech-y noise. But maybe you’re doing some global health analysis so you call it “world-health”.</p>
 <p>And click “create project”.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
@@ -627,18 +644,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
     return false;
   }
-  const clipboard = new window.ClipboardJS('.code-copy-button', {
-    text: function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-    }
-  });
-  clipboard.on('success', function(e) {
+  const onCopySuccess = function(e) {
     // button target
     const button = e.trigger;
     // don't keep focus
@@ -670,7 +676,29 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }, 1000);
     // clear code selection
     e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
   });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
       var filterRegex = new RegExp("https:\/\/qmd4sci\.njtierney\.com");
@@ -678,7 +706,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
     // Inspect non-navigation links and adorn them if external
- 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
     for (var i=0; i<links.length; i++) {
       const link = links[i];
       if (!isInternal(link.href)) {

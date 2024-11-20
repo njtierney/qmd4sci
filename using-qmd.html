@@ -2,13 +2,13 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.557">
+<meta name="generator" content="quarto-1.5.57">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="description" content="For a scientific report to be completely credible, it must be reproducible. The full computational environment used to derive the results, including the data and code used for statistical analysis should be available for others to reproduce. Quarto is a tool that allows you integrate your code, text and figures in a single file in order to make high quality, reproducible reports. A paper published with an included quarto file and data sets can be reproduced by anyone with a computer.">
 
-<title>Quarto for Scientists - 5&nbsp; Using Quarto</title>
+<title>5&nbsp; Using Quarto – Quarto for Scientists</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -113,13 +113,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
         <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./using-qmd.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Using Quarto</span></a></li></ol></nav>
-        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
-      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
     </div>
@@ -266,9 +266,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
  <span class="menu-text">Appendices</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -323,19 +323,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#metadata" id="toc-metadata" class="nav-link" data-scroll-target="#metadata"><span class="header-section-number">5.4.1</span> Metadata</a></li>
   <li><a href="#text" id="toc-text" class="nav-link" data-scroll-target="#text"><span class="header-section-number">5.4.2</span> Text</a></li>
   <li><a href="#code" id="toc-code" class="nav-link" data-scroll-target="#code"><span class="header-section-number">5.4.3</span> Code</a></li>
-  <li><a href="#chunk-names" id="toc-chunk-names" class="nav-link" data-scroll-target="#chunk-names"><span class="header-section-number">5.4.4</span> Chunk names</a></li>
+  <li><a href="#chunk-names" id="toc-chunk-names" class="nav-link" data-scroll-target="#chunk-names"><span class="header-section-number">5.5.1</span> Chunk names</a></li>
   </ul></li>
-  <li><a href="#code-chunk-options" id="toc-code-chunk-options" class="nav-link" data-scroll-target="#code-chunk-options"><span class="header-section-number">5.5</span> Code chunk options</a>
+  <li><a href="#code-chunk-options" id="toc-code-chunk-options" class="nav-link" data-scroll-target="#code-chunk-options"><span class="header-section-number">5.6</span> Code chunk options</a>
   <ul class="collapse">
-  <li><a href="#inline-code" id="toc-inline-code" class="nav-link" data-scroll-target="#inline-code"><span class="header-section-number">5.5.1</span> Inline code</a></li>
+  <li><a href="#inline-code" id="toc-inline-code" class="nav-link" data-scroll-target="#inline-code"><span class="header-section-number">5.6.1</span> Inline code</a></li>
   </ul></li>
-  <li><a href="#creating-a-quarto-document" id="toc-creating-a-quarto-document" class="nav-link" data-scroll-target="#creating-a-quarto-document"><span class="header-section-number">5.6</span> Creating a Quarto document</a></li>
-  <li><a href="#working-with-a-quarto-document" id="toc-working-with-a-quarto-document" class="nav-link" data-scroll-target="#working-with-a-quarto-document"><span class="header-section-number">5.7</span> Working with a Quarto document</a>
+  <li><a href="#creating-a-quarto-document" id="toc-creating-a-quarto-document" class="nav-link" data-scroll-target="#creating-a-quarto-document"><span class="header-section-number">5.7</span> Creating a Quarto document</a></li>
+  <li><a href="#working-with-a-quarto-document" id="toc-working-with-a-quarto-document" class="nav-link" data-scroll-target="#working-with-a-quarto-document"><span class="header-section-number">5.8</span> Working with a Quarto document</a>
   <ul class="collapse">
-  <li><a href="#your-turn" id="toc-your-turn" class="nav-link" data-scroll-target="#your-turn"><span class="header-section-number">5.7.1</span> Your Turn</a></li>
+  <li><a href="#your-turn" id="toc-your-turn" class="nav-link" data-scroll-target="#your-turn"><span class="header-section-number">5.8.1</span> Your Turn</a></li>
   </ul></li>
-  <li><a href="#nicks-quarto-hygiene-recommendations" id="toc-nicks-quarto-hygiene-recommendations" class="nav-link" data-scroll-target="#nicks-quarto-hygiene-recommendations"><span class="header-section-number">5.8</span> Nick’s Quarto hygiene recommendations</a></li>
-  <li><a href="#your-turn-1" id="toc-your-turn-1" class="nav-link" data-scroll-target="#your-turn-1"><span class="header-section-number">5.9</span> Your Turn</a></li>
+  <li><a href="#nicks-quarto-hygiene-recommendations" id="toc-nicks-quarto-hygiene-recommendations" class="nav-link" data-scroll-target="#nicks-quarto-hygiene-recommendations"><span class="header-section-number">5.9</span> Nick’s Quarto hygiene recommendations</a></li>
+  <li><a href="#your-turn-1" id="toc-your-turn-1" class="nav-link" data-scroll-target="#your-turn-1"><span class="header-section-number">5.10</span> Your Turn</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/njtierney/qmd4sci/edit/main/using-qmd.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/njtierney/qmd4sci/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -361,7 +361,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p>Now that we’ve covered how to organise your project, have some data, and talked a bit about what Quarto is, let’s talk about using it.</p>
+<p>So far we have covered:</p>
+<ul>
+<li>How to <strong>organise</strong> your project (RStudio projects!)</li>
+<li><strong>Appropriately</strong> refer to data (file storage hygiene!)</li>
+<li>A brief intro into <strong>what</strong> Quarto is</li>
+</ul>
+<p>Now, let’s talk about <strong>using</strong> Quarto.</p>
 <section id="overview" class="level2" data-number="5.1">
 <h2 data-number="5.1" class="anchored" data-anchor-id="overview"><span class="header-section-number">5.1</span> Overview</h2>
 <ul>
@@ -392,9 +398,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Text (markdown formatting)</li>
 <li>Code (code formatting)</li>
 </ol>
+<!-- TODO It would be super cool to have a little cute figure of this overview -->
 <section id="metadata" class="level3" data-number="5.4.1">
 <h3 data-number="5.4.1" class="anchored" data-anchor-id="metadata"><span class="header-section-number">5.4.1</span> Metadata</h3>
-<p>The metadata of the document tells you how it is formed - what the title is, what date to put, and other control information. If you’re familiar with LaTeX, this is kind of like how you specify the many options, what sort of document it is, what styles to use, etc at the front matter.</p>
+<p>The metadata of the document tells you how it is formed - what the title is, what date to put, and other control information. If you’re familiar with LaTeX, this is kind of like how you specify the many options, what sort of document it is, what styles to use, and so on at the front matter.</p>
 <p>Quarto documents use <a href="https://en.wikipedia.org/wiki/YAML">YAML (YAML Ain’t Markup Language)</a> to provide the metadata. It looks like this.</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"An example document"</span></span>
@@ -453,14 +460,14 @@ __bold__, **bold**, _italic_, *italic*
 </div>
 </section>
 <section id="code" class="level3" data-number="5.4.3">
-<h3 data-number="5.4.3" class="anchored" data-anchor-id="code"><span class="header-section-number">5.4.3</span> Code</h3>
+<h3 data-number="5.4.3" class="anchored"><span class="header-section-number">5.4.3</span> Code</h3>
 <p>We refer to code in an Quarto document in two ways:</p>
 <ol type="1">
 <li>Code chunks, and</li>
 <li>Inline code.</li>
 </ol>
 <section id="code-chunks" class="level4" data-number="5.4.3.1">
-<h4 data-number="5.4.3.1" class="anchored" data-anchor-id="code-chunks"><span class="header-section-number">5.4.3.1</span> Code chunks</h4>
+<h4 data-number="5.4.3.1" class="anchored"><span class="header-section-number">5.4.3.1</span> Code chunks</h4>
 <p>Code chunks are marked by three backticks and curly braces. We put the letter <code>r</code> inside them to denote them as “r” code chunks, but you can instead use “python” and “julia” instead:</p>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
 <ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" aria-current="page">R</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">python</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false">julia</a></li></ul>
@@ -486,18 +493,22 @@ __bold__, **bold**, _italic_, *italic*
 </div>
 </div>
 <div class="callout callout-style-default callout-caution callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-This book currently focusses only on R
+Caution
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div id="callout-1" class="callout-1-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
-<p>Quarto provides support for Python, Julia, and Observable, which are all very powerful and awesome languages! However currently we will only be focussing on using R in this book. But I want to make sure that you know you can use python, or Julia, or Observable! More languages will be supported into the future, I believe.</p>
+<p>However…</p>
+<section id="this-book-currently-focusses-only-on-r" class="level2" data-number="5.5">
+<h2 data-number="5.5" class="anchored" data-anchor-id="this-book-currently-focusses-only-on-r"><span class="header-section-number">5.5</span> This book currently focusses only on R</h2>
+<p>Quarto provides support for R, Python, Julia, and Observable, which are all very powerful and awesome languages! However currently we will only be focussing on using R in this book. But I want to make sure that you know you can use python, or Julia, or Observable! More languages will be supported into the future, I believe.</p>
+</section>
 </div>
 </div>
 </div>
@@ -514,8 +525,8 @@ This book currently focusses only on R
 </div>
 </section>
 </section>
-<section id="chunk-names" class="level3" data-number="5.4.4">
-<h3 data-number="5.4.4" class="anchored" data-anchor-id="chunk-names"><span class="header-section-number">5.4.4</span> Chunk names</h3>
+<section id="chunk-names" class="level3" data-number="5.5.1">
+<h3 data-number="5.5.1" class="anchored" data-anchor-id="chunk-names"><span class="header-section-number">5.5.1</span> Chunk names</h3>
 <p>Every chunk should ideally have a name. As I’ve mentioned earlier, naming things is hard, but follow these rules and you’ll be fine:</p>
 <ul>
 <li>one word that describes the action (e.g., “read”)</li>
@@ -524,8 +535,8 @@ This book currently focusses only on R
 </ul>
 </section>
 </section>
-<section id="code-chunk-options" class="level2" data-number="5.5">
-<h2 data-number="5.5" class="anchored" data-anchor-id="code-chunk-options"><span class="header-section-number">5.5</span> Code chunk options</h2>
+<section id="code-chunk-options" class="level2" data-number="5.6">
+<h2 data-number="5.6" class="anchored" data-anchor-id="code-chunk-options"><span class="header-section-number">5.6</span> Code chunk options</h2>
 <p>You can control how the code is output by changing the code chunk options, which are written with a <code>#|</code>, called a “hash-pipe”, since <code>#</code> is “hash”, and <code>|</code> is “pipe”, but might sometimes be called “bar” or “v-bar”.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
@@ -534,21 +545,22 @@ This book currently focusses only on R
 <span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="in">gap &lt;- read_csv("gapminder.csv")</span></span>
 <span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>A nice feature of Quarto + Rstudio is that they provide code completion when you start writing the code chunk options, and they will provide options when hitting “tab”. <em>gif of this</em></p>
-<p>In the past Rmarkdown required “TRUE” and “FALSE”, but note that Quarto always uses “true” or “false” in lowercase, and never “yes” or “no”.</p>
+<p>A nice feature of Quarto + Rstudio is that they provide code completion when you start writing the code chunk options, and they will provide options when hitting “tab”.</p>
+<!-- TODO *gif of this* -->
+<p>In the past Rmarkdown required “TRUE” and “FALSE”, but note that Quarto <strong>always</strong> uses <code>true</code> or <code>false</code> in lowercase, and <strong>never</strong> “yes” or “no”.</p>
 <p>The code chunks you need to know about right now are:</p>
 <ul>
-<li><code>eval</code>: true/false Do you want to evaluate the code?</li>
-<li><code>echo</code>: true/false Do you want to print the code?</li>
-<li><code>cache</code>: true / false Do you want to save the output of the chunk so it doesn’t have to run next time?</li>
+<li><code>eval</code>: <code>true</code>/<code>false</code> Do you want to evaluate the code?</li>
+<li><code>echo</code>: <code>true</code>/<code>false</code> Do you want to print the code?</li>
+<li><code>cache</code>: <code>true</code> / <code>false</code> Do you want to save the output of the chunk so it doesn’t have to run next time?</li>
 <li><code>include</code>: Do you want to include code output in the final output document? Setting to <code>false</code> means nothing is put into the output document, but the code is still run.</li>
 </ul>
-<!-- What are messages, warnings, errors, results? -->
+<!-- TODO What are messages, warnings, errors, results? -->
 <p><!-- * error: If you want R to stop on errors, set to `false` --> <!-- * warning: preserve warnings (produced by `warning()`). IF `false`, all warnings will be printed in the console instead of the output document  --> <!-- * message: Similar to warning, do you want to preserve messages provided by `message()`.  --></p>
 <!--   * results: option 'hold' will wait until the code chunk is complete and then  -->
-<p>You can read more about the options at the official documentation: https://quarto.org/docs/computations/execution-options.html</p>
-<section id="inline-code" class="level3" data-number="5.5.1">
-<h3 data-number="5.5.1" class="anchored" data-anchor-id="inline-code"><span class="header-section-number">5.5.1</span> Inline code</h3>
+<p>You can read more about the options at the official documentation: <a href="https://quarto.org/docs/computations/execution-options.html" class="uri">https://quarto.org/docs/computations/execution-options.html</a></p>
+<section id="inline-code" class="level3" data-number="5.6.1">
+<h3 data-number="5.6.1" class="anchored" data-anchor-id="inline-code"><span class="header-section-number">5.6.1</span> Inline code</h3>
 <p>Sometimes you want to run the code inside a sentence. When the code is run inside the sentence, it is called running the code “inline”.</p>
 <p>You might want to run the code inline to name the number of variables or rows in a dataset in a sentence like:</p>
 <blockquote class="blockquote">
@@ -565,29 +577,29 @@ This book currently focusses only on R
 <blockquote class="blockquote">
 <p>The mean of these heights is 158.2</p>
 </blockquote>
-<p>Essentially, instead of using three backticks to write multiple lines of code, you use a single backtick. You can think of this as a backtick being used inside text for a one liner, whereas creating a code fence with three backticks indicates something longer.</p>
+<p>Essentially, instead of using <strong>three backticks</strong> to write multiple lines of code, you use <strong>a single backtick</strong>. You can think of this as a backtick being used inside text for a one liner, whereas creating a code fence with three backticks indicates something longer.</p>
 <div class="sourceCode" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>There are <span class="st">`</span><span class="at">{r} nrow(airquality)</span><span class="st">`</span> observations <span class="cf">in</span> the airquality dataset, </span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>and <span class="st">`</span><span class="at">{r} ncol(airquality)</span><span class="st">`</span> variables.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Which gives you the following sentence</p>
 <blockquote class="blockquote">
 <p>There are 153 observations in the airquality dataset, and 6 variables.</p>
 </blockquote>
-<p>What’s great about this is that if your data changes upstream, then you don’t need to work out where you mentioned your data, you just update the document.</p>
+<p>What’s great about this is that if your data changes upstream, then you don’t need to work out where you mentioned your data and change that bit of text. You just render the document and it takes care of these details.</p>
 </section>
 </section>
-<section id="creating-a-quarto-document" class="level2" data-number="5.6">
-<h2 data-number="5.6" class="anchored" data-anchor-id="creating-a-quarto-document"><span class="header-section-number">5.6</span> Creating a Quarto document</h2>
+<section id="creating-a-quarto-document" class="level2" data-number="5.7">
+<h2 data-number="5.7" class="anchored" data-anchor-id="creating-a-quarto-document"><span class="header-section-number">5.7</span> Creating a Quarto document</h2>
 <ul>
 <li>Rstudio menu system</li>
 <li>Explore the template provided by Rstudio</li>
 <li>Compile an Quarto document</li>
 </ul>
 </section>
-<section id="working-with-a-quarto-document" class="level2" data-number="5.7">
-<h2 data-number="5.7" class="anchored" data-anchor-id="working-with-a-quarto-document"><span class="header-section-number">5.7</span> Working with a Quarto document</h2>
+<section id="working-with-a-quarto-document" class="level2" data-number="5.8">
+<h2 data-number="5.8" class="anchored" data-anchor-id="working-with-a-quarto-document"><span class="header-section-number">5.8</span> Working with a Quarto document</h2>
 <p><strong>Demo: Create a Quarto document in rstudio.</strong></p>
-<section id="your-turn" class="level3 exercise" data-number="5.7.1">
-<h3 class="exercise anchored" data-number="5.7.1" data-anchor-id="your-turn"><span class="header-section-number">5.7.1</span> Your Turn</h3>
+<section id="your-turn" class="level3 exercise" data-number="5.8.1">
+<h3 class="exercise anchored" data-number="5.8.1" data-anchor-id="your-turn"><span class="header-section-number">5.8.1</span> Your Turn</h3>
 <ol type="1">
 <li>Use the rstudio project you previously created, <code>qmd4sci-materials</code>, and create a Quarto document</li>
 <li>Run some brief summaries of the data in the Quarto document:
@@ -605,9 +617,9 @@ This book currently focusses only on R
 <!-- - focus on content -->
 </section>
 </section>
-<section id="nicks-quarto-hygiene-recommendations" class="level2" data-number="5.8">
-<h2 data-number="5.8" class="anchored" data-anchor-id="nicks-quarto-hygiene-recommendations"><span class="header-section-number">5.8</span> Nick’s Quarto hygiene recommendations</h2>
-<p>I highly recommend that each document you write has this YAML at the top to set some global options, and then two code chunks, one that loads all the packages, and another that specifies any functions you write.</p>
+<section id="nicks-quarto-hygiene-recommendations" class="level2" data-number="5.9">
+<h2 data-number="5.9" class="anchored" data-anchor-id="nicks-quarto-hygiene-recommendations"><span class="header-section-number">5.9</span> Nick’s Quarto hygiene recommendations</h2>
+<p>I highly recommend that each document you write sets some global options in the YAML, and then has two code chunks to manage libraries, and functions. Below, we can see an example of this.</p>
 <div class="sourceCode" id="cb14"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
 <span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> example</span></span>
 <span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="an">format:</span><span class="co"> </span></span>
@@ -650,15 +662,15 @@ This book currently focusses only on R
 <p>In the <code>library</code> chunk, you put all the library calls. This helps make it clearer for anyone else who might read your work what is needed to run this document. I often go through the process of moving these <code>library</code> calls to the top of the document when I have a moment, or when I’m done writing. You can also look at Miles McBain’s <a href="https://github.com/milesMcBain/packup"><code>packup</code></a> package to help move these library calls to the top of a document.</p>
 <p>In the <code>functions</code> chunk, you put any functions that you write in the process of writing your document. Similar to the <code>library</code> chunk, I write these functions as I go, as needed, and them move these to the top when I get a moment, or once I’m done. The benefit of this is that all your functions are in one spot, and you might be able to identify ways to make them work better together, or improve them separately. You might even want to move these into a new R package, and putting them here makes that easier to see what you are doing.</p>
 <p>In the <code>readr</code> chunk, you read in any data you are going to be using in the document.</p>
-<p>Now, this is my personal preference, but I find the following benefits:</p>
+<p>Now, this is my personal preference, and there are definitely other ways to organise things! But, I find the following benefits:</p>
 <ol type="1">
 <li>The “top part” of your document contains all the metadata / setup info. Your global options. You don’t need to specify every single code chunk.</li>
 <li>It helps another person get oriented with your work - they know the settings, the functions used, and the special things that you wrote (your functions)</li>
-<li>Remember, “another person” includes yourself in 6 months. You are always collaborating with your future self. <strong>You are always collaborating with your future self.</strong></li>
+<li>Remember, “another person” includes yourself in 6 months. You are always collaborating with your future self. <strong>You are always collaborating with your future self.</strong> Say it with me.</li>
 </ol>
 </section>
-<section id="your-turn-1" class="level2 exercise" data-number="5.9">
-<h2 class="exercise anchored" data-number="5.9" data-anchor-id="your-turn-1"><span class="header-section-number">5.9</span> Your Turn</h2>
+<section id="your-turn-1" class="level2 exercise" data-number="5.10">
+<h2 class="exercise anchored" data-number="5.10" data-anchor-id="your-turn-1"><span class="header-section-number">5.10</span> Your Turn</h2>
 <ol type="1">
 <li>Update your Quarto document based on the aforementioned hygiene steps discussed above.</li>
 </ol>
@@ -702,18 +714,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
     return false;
   }
-  const clipboard = new window.ClipboardJS('.code-copy-button', {
-    text: function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-    }
-  });
-  clipboard.on('success', function(e) {
+  const onCopySuccess = function(e) {
     // button target
     const button = e.trigger;
     // don't keep focus
@@ -745,7 +746,29 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }, 1000);
     // clear code selection
     e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
   });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
       var filterRegex = new RegExp("https:\/\/qmd4sci\.njtierney\.com");
@@ -753,7 +776,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
     // Inspect non-navigation links and adorn them if external
- 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
     for (var i=0; i<links.length; i++) {
       const link = links[i];
       if (!isInternal(link.href)) {

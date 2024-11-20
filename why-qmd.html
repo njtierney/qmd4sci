@@ -2,13 +2,13 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.557">
+<meta name="generator" content="quarto-1.5.57">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="description" content="For a scientific report to be completely credible, it must be reproducible. The full computational environment used to derive the results, including the data and code used for statistical analysis should be available for others to reproduce. Quarto is a tool that allows you integrate your code, text and figures in a single file in order to make high quality, reproducible reports. A paper published with an included quarto file and data sets can be reproduced by anyone with a computer.">
 
-<title>Quarto for Scientists - 1&nbsp; Why Quarto</title>
+<title>1&nbsp; Why Quarto – Quarto for Scientists</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -113,13 +113,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
         <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./why-qmd.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Why Quarto</span></a></li></ol></nav>
-        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
-      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
     </div>
@@ -266,9 +266,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
  <span class="menu-text">Appendices</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -413,18 +413,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>The idea took off.</p>
 <section id="a-brief-example-of-markdown" class="level3" data-number="1.7.1">
 <h3 data-number="1.7.1" class="anchored" data-anchor-id="a-brief-example-of-markdown"><span class="header-section-number">1.7.1</span> A brief example of markdown</h3>
-<div class="sourceCode" id="cb1"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>bullet list</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>bullet list</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>bullet list</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>numbered list</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>numbered list</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>numbered list</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>__bold__, **bold**, _italic_, *italic*</span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; quote of something profound</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<pre><code>```r
+<pre><code>- bullet list
+- bullet list
+- bullet list
+
+1. numbered list
+2. numbered list
+3. numbered list
+
+__bold__, **bold**, _italic_, *italic*
+
+&gt; quote of something profound</code></pre>
+<pre><code>
+```r
 # computer code goes in three back ticks
 1 + 1
 2 + 2
@@ -470,39 +471,44 @@ image(volcano)
 <thead>
 <tr class="header">
 <th>Feature</th>
-<th>Markdown</th>
-<th>rendered</th>
+<th>Markdown | rendered</th>
+<th></th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td>superscript</td>
-<td><code>2^nd^</code></td>
-<td>2<sup>nd</sup></td>
+<td><code>2^nd^</code> | 2<sup>nd</sup></td>
+<td></td>
 </tr>
 <tr class="even">
 <td>subscript</td>
-<td><code>CO~2~</code></td>
-<td>CO<sub>2</sub></td>
+<td><code>CO~2~</code> | CO<sub>2</sub></td>
+<td></td>
 </tr>
 <tr class="odd">
 <td>strikethrough</td>
-<td><code>~~mistake~~</code></td>
-<td><del>mistake</del></td>
+<td><code>~~mistake~~</code> | <del>mistake</del></td>
+<td></td>
 </tr>
 <tr class="even">
 <td>links</td>
-<td><code>[text](https://quarto.org/)</code></td>
-<td><a href="https://quarto.org/">text</a></td>
+<td><code>[text](https://quarto.org/)</code> | <a href="https://quarto.org/">text</a></td>
+<td></td>
 </tr>
 <tr class="odd">
+<td>links</td>
+<td><code>&lt;https://quarto.org/&gt;</code> | <a href="https://quarto.org/)" class="uri">https://quarto.org/)</a></td>
+<td></td>
+</tr>
+<tr class="even">
 <td>images</td>
-<td><code>![alternative text](link-to-image)</code></td>
-<td>(cannot render in a table)</td>
+<td><code>![alternative text](link-to-image)</code> | (cannot render in a table)</td>
+<td></td>
 </tr>
 </tbody>
 </table>
-<!-- | footnote(s)     | `[^1]` followed by `[^1]: footnote text goes here`.| [^1] followed by [^1]: footnote text goes here. | -->
+<p>For more examples and details of using markdown in Quarto, see the official <a href="https://quarto.org/docs/authoring/markdown-basics.html">Quarto “Markdown Basics” documentation</a>.</p>
 </section>
 </section>
 <section id="what-about-rmarkdown" class="level1" data-number="2">
@@ -513,8 +519,8 @@ image(volcano)
 </ul>
 <p>However, there are a few points of friction:</p>
 <ul>
-<li>You need to call it from R to use it. No problem for R users, but what if you use python? Or javascript? If you are a python user, using R to use python just might not be in your workflow.</li>
-<li>There are great packages that provide extensions, such as blogdown for blogs, bookdown for books, and xaringan for slides. However, there are differences between these systems that might cause stumbles. Each of these systems is an iteration towards something awesome, and it’s only natural they might be a little bit different.</li>
+<li>You need to call it from R to use it. No problem for R users, but what if you use python? Or Julia? Or javascript? If you are a python user, using R to use python just might not be in your workflow.</li>
+<li>There are great packages that provide extensions, such as <a href="https://bookdown.org/yihui/blogdown/">blogdown</a> for blogs, <a href="https://bookdown.org/">bookdown</a> for books, and <a href="https://github.com/yihui/xaringan">xaringan</a> for slides. Each of these systems is an iteration towards something awesome, and it’s only natural they might be a little bit different. Overall, there are differences between these systems that might cause stumbles.</li>
 <li>Quarto, instead of being an R package, is a separate piece of software, that you can call from the command line (terminal). This means other pieces of software can use it to create their own literate programming documents. Well, that’s my understanding.</li>
 </ul>
 <p>Here are some diagrams to illustrate this point:</p>
@@ -647,7 +653,7 @@ image(volcano)
 <section id="learning-more" class="level2" data-number="3.2">
 <h2 data-number="3.2" class="anchored" data-anchor-id="learning-more"><span class="header-section-number">3.2</span> Learning more</h2>
 <ul>
-<li><a href="https://rstudio.github.io/cheatsheets/quarto.pdf">posit’s Quarto cheatsheet</a></li>
+<li><a href="https://rstudio.github.io/cheatsheets/quarto.pdf">Posit’s Quarto cheatsheet</a></li>
 </ul>
 
 
@@ -696,18 +702,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
     return false;
   }
-  const clipboard = new window.ClipboardJS('.code-copy-button', {
-    text: function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-    }
-  });
-  clipboard.on('success', function(e) {
+  const onCopySuccess = function(e) {
     // button target
     const button = e.trigger;
     // don't keep focus
@@ -739,7 +734,29 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }, 1000);
     // clear code selection
     e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
   });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
       var filterRegex = new RegExp("https:\/\/qmd4sci\.njtierney\.com");
@@ -747,7 +764,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
     // Inspect non-navigation links and adorn them if external
- 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
     for (var i=0; i<links.length; i++) {
       const link = links[i];
       if (!isInternal(link.href)) {
