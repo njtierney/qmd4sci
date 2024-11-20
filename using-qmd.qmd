@@ -140,11 +140,7 @@ Code chunks are marked by three backticks and curly braces. We put the letter `r
 
 ::: 
 
-::: {.callout-caution collapse="false"}
-
-However...
-
-## This book currently focusses only on R
+::: {.callout-important collapse="false" title="This book currently focusses only on R"}
 
 Quarto provides support for R, Python, Julia, and Observable, which are all very powerful and awesome languages! However currently we will only be focussing on using R in this book. But I want to make sure that you know you can use python, or Julia, or Observable! More languages will be supported into the future, I believe.
 
@@ -257,7 +253,7 @@ What's great about this is that if your data changes upstream, then you don't ne
 
 **Demo: Create a Quarto document in rstudio.**
 
-### Your Turn {.exercise}
+::: {.callout-note title="Your Turn"}
 
 1. Use the rstudio project you previously created, `qmd4sci-materials`, and open the "01-qmd-examples.qmd" file.
 1. Run some brief summaries of the data in the Quarto document:
@@ -272,6 +268,8 @@ What's great about this is that if your data changes upstream, then you don't ne
 
 <!-- - Keep it simple -->
 <!-- - focus on content -->
+
+:::
 
 ## Nick's Quarto starter pack
 
@@ -337,6 +335,8 @@ Now, this is my personal preference, and there are definitely other ways to orga
 1. It helps another person get oriented with your work - they know the settings, the functions used, and the special things that you wrote (your functions)
 1. Remember, "another person" includes yourself in 6 months. You are always collaborating with your future self. **You are always collaborating with your future self.** Say it with me.
 
-## Your Turn {.exercise}
+::: {.callout-note title="Your Turn"}
 
 1. Update the "01-qmd-example.qmd" Quarto document you just created, based on the aforementioned steps discussed above.
+
+:::

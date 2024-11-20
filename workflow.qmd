@@ -32,12 +32,14 @@ Not sure what a file path is? We explain that as well.
 * Set up an RStudio Project to organise your work
 * Put some data in your project to set up the next tasks
 
-## Your Turn {.exercise}
+::: {.callout-note title = "Your Turn"}
 
 In groups of 2-4 discuss:
 
 1. What your normal "workflow" is for starting a new project
 2. Possible challenges that might arise when maintaining your project
+
+:::
 
 ## When you start a new project: Open a new RStudio project
 
@@ -49,9 +51,11 @@ Sometimes this is the first line of an R Script or R markdown file.
 setwd("c:/really/long/file/path/to/this/directory")
 ```
 
-#### Question {.question}
+:::{.callout-tip title="Question"}
 
 What do you think the `setwd` code does?
+
+:::
 
 ### So what does this do?
 
@@ -131,7 +135,7 @@ If you have an RStudio project file inside the `qmd4sci-materials` folder, you c
 gapminder <- read_csv("data/gapminder.csv")
 ```
 
-## Your Turn {.exercise}
+::: {.callout-note title="Your Turn"}
 
 * (1-2 minutes) Imagine you see the following directory path: `"/Users/miles/etc1010/week1/data/health.csv"`
 what are the folders above the file, `health.csv`?
@@ -141,6 +145,8 @@ what are the folders above the file, `health.csv`?
 ```r
 setwd("Downloads/etc1010/week1/week1.qmd)
 ```
+
+:::
 
 ## Is there an answer to the madness?
 
@@ -172,7 +178,7 @@ And finally, the big one:
 
 Let's open one together.
 
-## Your Turn: Use your own rstudio project {.exercise}
+::: {.callout-note title="Your Turn Use your own rstudio project"}
 
 1. In RStudio, and run the following code to start a new rstudio project called "qmd4sci-materials".
 
@@ -184,14 +190,18 @@ usethis::use_course("njtierney/qmd4sci-materials")
 
 3. You are now in an rstudio project!
 
-## Your turn {.exercise}
+:::
 
-1. Run the code inside the `demo.R` document
+::: {.callout-note title="Your Turn: open the `demo.R` file"}
+
+1. Run the code inside the `demo.R` file
 2. Why does the `read_csv` code work?
 3. Run the code inside the `exploratory-data-analysis` folder - `eda-script.R`.
 4. Does the `read_csv` code work?
 5. Run the code inside the `exploratory-data-analysis` folder - `eda-document.qmd`, by clicking the "render" button (we'll go into this in more detail soon!)
 6. Does it work?
+
+:::
 
 ## The "here" package
 
@@ -241,8 +251,7 @@ setwd("C:\Users\jenny\path\that\only\I\have")
 
 -- Jenny Bryan
 
-
-### Aside: Creating an RStudio project {.history}
+::: {.callout-caution title="Aside: Creating an RStudio project" collapse = "true"}
 
 You can create an Rstudio project by going to:
 
@@ -295,6 +304,8 @@ And click "create project".
 #| out-width: 50%
 knitr::include_graphics(here::here("figs", "rstudio-create-proj-4.png"))
 ```
+
+:::
 
 # Summary
 

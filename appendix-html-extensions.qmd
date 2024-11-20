@@ -41,7 +41,10 @@ output:
 ---
 ```
 
-## Your turn {.exercise}
+
+:::{.callout-note title="Your Turn"}
 
 1. Add tab sets to your document
 1. Add a floating table of contents
+
+:::

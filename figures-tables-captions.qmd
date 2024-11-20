@@ -19,11 +19,11 @@ You need figures and tables in your own writing, whether it be a journal paper, 
 
 To produce a table, I recommend you use the `kable` function from the `knitr` package.
 
-::: {.callout-note title="Other table R packages"}
+::: {.callout-caution title="Other table R packages" collapse="true"}
 There are many other table making pieces of R packages, such as [`gt`](https://gt.rstudio.com/), [`formattable`](https://renkun-ken.github.io/formattable/), [`reactable`](https://glin.github.io/reactable/index.html), and [`flextable`](https://davidgohel.github.io/flextable/index.html)). But I think you can get 90% of the way there with `kable` from `knitr`, and for the 
 :::
 
-### Demo {.demo}
+### Demonstrating using tables
 
 `kable` takes a `data.frame` as input, and outputs the table into a `markdown table`, which will get rendered into the appropriate output format.
 
@@ -85,18 +85,20 @@ There are other options that you can set in `kable`, but for these options will 
 
 There are many different ways to produce tables in R. We have chosen to show `kable` today because kable is minimal, but powerful. If you want to extend `kable` to do more, look at [kableExtra](https://cran.r-project.org/web/packages/kableExtra/index.html). For PDF/LaTeX output, I found the option `kableExtra::kable_styling(latex_options = c("hold_position"))` particularly nice to just __put the table where it should be, goshdarnit__.
 
-### Your Turn {.exercise}
+::: {.callout-note title="Your Turn"}
 
 1. Using the "02-qmd-figures-chunks.qmd"
   1. Create a summary of your gapminder data, put it into a table.
   1. Add a caption to this table.
   1. Set the number of decimals to 2.
 
+:::
+
 ## Figures
 
 Printing figures is probably my favourite feature of Quarto. It is actually relatively straightforward in the case of plots. You provide the plot you want to show in a code chunk!
 
-#### Demo {.demo}
+::: {.callout-tip title="Demo using gapminder"}
 
 For example, I can print a plot of the gapminder data for Australia like so:
 
@@ -113,7 +115,9 @@ gapminder |>
 
 ```
 
-### Captions for figures {.demo}
+:::
+
+:::{.callout-tip title="Demo: Captions for figures"}
 
 Inserting a caption for a figure is a little bit different. The caption argument is controlled in the chunk option, under the option, `fig-cap`.
 
@@ -151,11 +155,15 @@ gapminder |>
   geom_point()
 ```
 
-### Your Turn {.exercise}
+:::
+
+::: {.callout-note title="Your Turn"}
 
 1. Using 02-qmd-figures-chunks.qmd
     1. Create a plot 
     1. Add a figure caption
+
+:::
 
 ### Adding multiple (sub) figures and (sub) captions
 
@@ -190,7 +198,7 @@ In our case, say we wanted to insert the Statistical Society of Australia logo i
 
 The markdown syntax to insert an image is: `![caption](path/to/image){options}`
 
-#### Demo {.demo}
+:::: {.callout-tip title="Demo: inserting a logo"}
 
 So we could insert the new SSA vic logo by doing the following:
 
@@ -223,18 +231,21 @@ knitr::include_graphics(here::here("figs", "ssa-logo.png"))
 knitr::include_graphics(here::here("figs", "ssa-logo.png"))
 ```
 
-::: {.callout-tip title="Controlling image output with css"}
+::: {.callout-caution title="Controlling image output with css" collapse="true"}
 You can control more features of figures, e.g., sizing, alignment, alt text, etc., by using CSS type styling, which you can read more about here: <https://quarto.org/docs/authoring/figures.html#figure-sizing`>
 :::
 
-### Your Turn {.exercise}
+::::
 
+::: {.callout-note title="Your Turn"}
 
 1. Download [the gapminder logo](https://www.gapminder.org/wp-content/themes/gapminder2/images/gapminder-logo.svg)
 1. Put it into a new directory called "figs" (at the top level)
 1. Insert the image into your "02-qmd-figures-chunks.qmd" Quarto document around where you introduce gapminder.
   1. Try using both markdown `![]()` syntax, and `knitr::include_graphics()`.
   1. Hint: Remember to refer to the image in the right spot using `here`!
+
+:::
 
 ## Summary
 

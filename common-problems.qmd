@@ -2,10 +2,21 @@
 
 There are some things that I run into fairly frequently (and some not so much) when I'm rendering my Quarto documents. This section details some the common problems, and the solution that I have found works for me.
 
-## Your turn {.exercise}
+:::{.callout-note title="Your Turn"}
 
 1. Using "06-qmd-find-errors.qmd"
   - Fix all the problems and get the document to render
+1.  Go to this repo [njtierney/qmd-errors](https://github.com/njtierney/qmd-errors), and give debugging some of these common Quarto errors a go.
+
+You can download this repository by running this code:
+
+```{r}
+#| label: use-course-code
+#| eval: false
+usethis::use_course("njtierney/qmd-errors")
+```
+
+:::
 
 ## More practice?
 
@@ -455,15 +466,3 @@ You need to make sure that you actually print the table or plot. If you create t
 
 # `::: {.cell}` appears in my quarto document
 
-
-## Your Turn {.exercise}
-
-1.  Go to this repo [njtierney/qmd-errors](https://github.com/njtierney/qmd-errors), and give debugging some of these common Quarto errors a go.
-
-You can download this repository by running this code:
-
-```{r}
-#| label: use-course-code
-#| eval: false
-usethis::use_course("njtierney/qmd-errors")
-```
