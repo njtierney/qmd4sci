@@ -348,7 +348,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p>One of the great things about Quarto is that we can convert it to many different output types. The top three that you might be most likely to use are HTML, PDF, and Microsoft Word. There are others that we can discuss later.</p>
+<p>One of the great things about Quarto is that we can convert it to many different output types. The top three that you might be most likely to use are HTML, PDF, and Microsoft Word. There are <a href="https://quarto.org/docs/reference/">other formats</a>! But we can discuss later.</p>
 <p>In this section, we are going to briefly discuss how to render to these output formats, and some things that you might want to do for each of them.</p>
 <section id="overview" class="level2" data-number="6.1">
 <h2 data-number="6.1" class="anchored" data-anchor-id="overview"><span class="header-section-number">6.1</span> Overview</h2>
@@ -403,12 +403,13 @@ quarto render example.qmd --to docx</code></pre>
 <section id="a-note-on-workflow-with-quarto-html-first-pdfword-later" class="level3" data-number="6.4.1">
 <h3 data-number="6.4.1" class="anchored" data-anchor-id="a-note-on-workflow-with-quarto-html-first-pdfword-later"><span class="header-section-number">6.4.1</span> A note on workflow with Quarto: HTML first, PDF/word later</h3>
 <p>It can be easy to get caught up with how your document looks. I highly recommend avoiding compiling to PDF or word until <em>you really need to</em>. <a href="https://yihui.name/en/2018/07/in-html-i-trust/">This is also recommended by the author of rmarkdown and knitr, Yihui Xie</a>. Because HTML doesn’t have page breaks, this means that you can spend time working on generating content, and not trying to get figures to line up correctly.</p>
+<p>This was a minor revelation to me, to understand that page breaks were the cause of so much angst and pain. Embrace HTML, I say!</p>
 </section>
 </section>
 <section id="your-turn" class="level2 exercise" data-number="6.5">
 <h2 class="exercise anchored" data-number="6.5" data-anchor-id="your-turn"><span class="header-section-number">6.5</span> Your Turn</h2>
 <ol type="1">
-<li>Generate three reports, one as HTML, one as PDF, and one as microsoft word. Remember, if you are having PDF problems, see the installation chapter note on installing &nbsp;with the R package, <code>tinytex</code>.</li>
+<li>Generate three reports, one as HTML, one as PDF, and one as microsoft word. Remember, if you are having PDF problems, see the <a href="installation">installation chapter</a> note on installing &nbsp;with the R package, <code>tinytex</code>.</li>
 </ol>
 
 

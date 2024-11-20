@@ -327,11 +327,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#referencing-a-table" id="toc-referencing-a-table" class="nav-link" data-scroll-target="#referencing-a-table"><span class="header-section-number">11.6</span> Referencing a table</a></li>
   <li><a href="#other-things-you-can-crossreference" id="toc-other-things-you-can-crossreference" class="nav-link" data-scroll-target="#other-things-you-can-crossreference"><span class="header-section-number">11.7</span> Other things you can cross/reference</a>
   <ul class="collapse">
-  <li><a href="#your-turn-exercise-1" id="toc-your-turn-exercise-1" class="nav-link" data-scroll-target="#your-turn-exercise-1"><span class="header-section-number">11.7.1</span> Your Turn (exercise)</a></li>
+  <li><a href="#your-turn-1" id="toc-your-turn-1" class="nav-link" data-scroll-target="#your-turn-1"><span class="header-section-number">11.7.1</span> Your Turn</a></li>
   </ul></li>
   <li><a href="#referencing-a-section" id="toc-referencing-a-section" class="nav-link" data-scroll-target="#referencing-a-section"><span class="header-section-number">11.8</span> Referencing a section</a></li>
   <li><a href="#using-visual-mode" id="toc-using-visual-mode" class="nav-link" data-scroll-target="#using-visual-mode"><span class="header-section-number">11.9</span> Using visual mode</a></li>
-  <li><a href="#your-turn-1" id="toc-your-turn-1" class="nav-link" data-scroll-target="#your-turn-1"><span class="header-section-number">11.10</span> Your Turn</a></li>
+  <li><a href="#your-turn-2" id="toc-your-turn-2" class="nav-link" data-scroll-target="#your-turn-2"><span class="header-section-number">11.10</span> Your Turn</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/njtierney/qmd4sci/edit/main/cite-fig-tab-sec.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/njtierney/qmd4sci/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -371,15 +371,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <p><em>Figure 1. Life expectancy from 1952 - 2007 for Australia. Life expectancy increases steadily except from 1962 to 1969. We can safely say that our life expectancy is higher than it has ever been!</em></p>
-<p>And sure, this is figure 1. But what happens if actually, that figure should be moved later in the paper? You need to do the following:</p>
+<p>And sure, this is figure 1…for now.</p>
+<p>But what happens if actually, that figure should be moved later in the paper?</p>
+<p>You need to do the following:</p>
 <ol type="1">
 <li>Update the reference to figure 1 in the text.</li>
 <li>Update the figure 1 caption to not say figure 1.</li>
 </ol>
 <p>This is fine.</p>
 <p>Once.</p>
-<p>But it is never once. After this, it is frustrating, and error prone.</p>
-<p>There is a way to solve this, which this lesson discusses.</p>
+<p>But it is <strong>never</strong> once. After this, it is frustrating, and error prone.</p>
+<p>There is a way to solve this, using figure citations, which this lesson discusses.</p>
 <section id="overview" class="level2" data-number="11.1">
 <h2 data-number="11.1" class="anchored" data-anchor-id="overview"><span class="header-section-number">11.1</span> Overview</h2>
 <ul>
@@ -405,7 +407,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Tables are referenced in text with <code>@tbl-label</code></li>
 <li>Figures are references in text with <code>@fig-label</code></li>
 </ul>
-<p>Importantly here, for these two above examples to work, the things that they are referring to must have the exact label <code>tbl-label</code> and <code>fig-label</code>, respectively.</p>
+<p>Importantly here, for these two above examples to work, the things that they are referring to must have the exact label <code>tbl-label</code> and <code>fig-label</code>, respectively. That is, they must have the <code>tbl</code> or the <code>fig</code> part in there!</p>
 <p>So, in order to use this referencing style, you must use specific labelling of your code chunks. For example, if you have some code like this:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
@@ -420,7 +422,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </div>
-<p>Then you cannot reference this figure in text - <code>@example-figure</code> does not work: <span class="citation" data-cites="example-figure">(<a href="citations-and-styles.html#ref-example-figure" role="doc-biblioref"><strong>example-figure?</strong></a>)</span>.</p>
+<p>Then you cannot reference this figure in text - <code>@example-figure</code> does not work: <span class="citation" data-cites="example-figure">(<a href="citations-and-styles.html#ref-example-figure" role="doc-biblioref"><strong>example-figure?</strong></a>)</span>. We get the error: “example-figure?”.</p>
 <p>It would need to have a label like:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
@@ -441,6 +443,19 @@ Figure&nbsp;11.1
 </div>
 </div>
 <p>Then you can reference it with: <code>@fig-example</code> - <a href="#fig-example" class="quarto-xref">Figure&nbsp;<span>11.1</span></a>.</p>
+<div class="callout callout-style-default callout-tip callout-titled" title="Hover your mouse on a figure!">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Hover your mouse on a figure!
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Note the awesome on-hover behaviour for hovering over a reference!</p>
+</div>
+</div>
 <p>Also note that there are a variety of ways to specify the figure:</p>
 <ul>
 <li><code>@fig-example</code>: <a href="#fig-example" class="quarto-xref">Figure&nbsp;<span>11.1</span></a></li>
@@ -448,7 +463,7 @@ Figure&nbsp;11.1
 <li><code>[Fig @fig-example]</code>: <a href="#fig-example" class="quarto-xref">Fig&nbsp;<span>11.1</span></a></li>
 <li><code>-@fig-example</code>: Figure -<a href="#fig-example" class="quarto-xref">Figure&nbsp;<span>11.1</span></a></li>
 </ul>
-<p>(reference here: https://quarto.org/docs/authoring/cross-references.html#references)</p>
+<p>(reference here: <a href="https://quarto.org/docs/authoring/cross-references.html#references" class="uri">https://quarto.org/docs/authoring/cross-references.html#references</a>)</p>
 </section>
 <section id="your-turn-exercise" class="level2" data-number="11.5">
 <h2 data-number="11.5" class="anchored" data-anchor-id="your-turn-exercise"><span class="header-section-number">11.5</span> Your Turn (exercise)</h2>
@@ -484,7 +499,7 @@ Figure&nbsp;11.2: Life expectancy from 1952 - 2007 for Australia. Life expectanc
 </div>
 </div>
 </div>
-<p>Australia’s life expectancy has increased a great deal over the past 50 years (See Figure -<a href="#fig-gg-oz" class="quarto-xref">Figure&nbsp;<span>11.2</span></a>.</p>
+<p>Australia’s life expectancy has increased a great deal over the past 50 years (See Figure -<a href="#fig-gg-oz" class="quarto-xref">Figure&nbsp;<span>11.2</span></a>).</p>
 </section>
 <section id="your-turn" class="level3 exercise" data-number="11.5.2">
 <h3 class="exercise anchored" data-number="11.5.2" data-anchor-id="your-turn"><span class="header-section-number">11.5.2</span> Your Turn</h3>
@@ -626,7 +641,7 @@ Table&nbsp;11.1: Raw gapminder data for Australia.
 </figure>
 </div>
 </div>
-<p><code>@tbl-chunk-name</code></p>
+<p>See above in Table <span class="quarto-unresolved-ref">?tbl-tbl-gg-oz-tab</span>.</p>
 <p>If you want to move the caption location you can use <code>tbl-cap-location: &lt;position&gt;</code> to specify the location. By default it is the top.</p>
 <div class="cell" data-tbl-cap-location="bottom">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
@@ -762,9 +777,9 @@ Table&nbsp;11.2: Raw gapminder data for Australia.
 </section>
 <section id="other-things-you-can-crossreference" class="level2" data-number="11.7">
 <h2 data-number="11.7" class="anchored" data-anchor-id="other-things-you-can-crossreference"><span class="header-section-number">11.7</span> Other things you can cross/reference</h2>
-<p>You can also reference theorems, code, proofs, and equations! See https://quarto.org/docs/authoring/cross-references.html#theorems-and-proofs for more details.</p>
-<section id="your-turn-exercise-1" class="level3" data-number="11.7.1">
-<h3 data-number="11.7.1" class="anchored" data-anchor-id="your-turn-exercise-1"><span class="header-section-number">11.7.1</span> Your Turn (exercise)</h3>
+<p>You can also reference theorems, code, proofs, and equations! See <a href="https://quarto.org/docs/authoring/cross-references.html#theorems-and-proofs" class="uri">https://quarto.org/docs/authoring/cross-references.html#theorems-and-proofs</a> for more details.</p>
+<section id="your-turn-1" class="level3 exercise" data-number="11.7.1">
+<h3 class="exercise anchored" data-number="11.7.1" data-anchor-id="your-turn-1"><span class="header-section-number">11.7.1</span> Your Turn</h3>
 <ol type="1">
 <li>Create a table in your document and refer to it in text</li>
 </ol>
@@ -789,8 +804,8 @@ Table&nbsp;11.2: Raw gapminder data for Australia.
 <h2 class="demo anchored" data-number="11.9" data-anchor-id="using-visual-mode"><span class="header-section-number">11.9</span> Using visual mode</h2>
 <p>Visual mode is this pretty neat feature, it’s best demonstrated live!</p>
 </section>
-<section id="your-turn-1" class="level2 exercise" data-number="11.10">
-<h2 class="exercise anchored" data-number="11.10" data-anchor-id="your-turn-1"><span class="header-section-number">11.10</span> Your Turn</h2>
+<section id="your-turn-2" class="level2 exercise" data-number="11.10">
+<h2 class="exercise anchored" data-number="11.10" data-anchor-id="your-turn-2"><span class="header-section-number">11.10</span> Your Turn</h2>
 <ol type="1">
 <li>Reference a section in the report.</li>
 </ol>

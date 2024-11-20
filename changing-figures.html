@@ -326,8 +326,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul class="collapse">
   <li><a href="#your-turn-1" id="toc-your-turn-1" class="nav-link" data-scroll-target="#your-turn-1"><span class="header-section-number">9.5.1</span> Your Turn</a></li>
   </ul></li>
-  <li><a href="#keeping-your-markdown" id="toc-keeping-your-markdown" class="nav-link" data-scroll-target="#keeping-your-markdown"><span class="header-section-number">9.6</span> Keeping your markdown</a></li>
-  <li><a href="#altering-the-figure-path-figures-are-saved-to" id="toc-altering-the-figure-path-figures-are-saved-to" class="nav-link" data-scroll-target="#altering-the-figure-path-figures-are-saved-to"><span class="header-section-number">9.7</span> Altering the figure path figures are saved to</a></li>
+  <li><a href="#demo-keeping-your-markdown" id="toc-demo-keeping-your-markdown" class="nav-link" data-scroll-target="#demo-keeping-your-markdown"><span class="header-section-number">9.6</span> Demo: Keeping your markdown</a></li>
+  <li><a href="#altering-where-figures-are-saved-to" id="toc-altering-where-figures-are-saved-to" class="nav-link" data-scroll-target="#altering-where-figures-are-saved-to"><span class="header-section-number">9.7</span> Altering where figures are saved to</a></li>
   <li><a href="#your-turn-2" id="toc-your-turn-2" class="nav-link" data-scroll-target="#your-turn-2"><span class="header-section-number">9.8</span> Your Turn</a></li>
   <li><a href="#further-reading" id="toc-further-reading" class="nav-link" data-scroll-target="#further-reading"><span class="header-section-number">9.9</span> Further Reading</a></li>
   <li><a href="#epstiffother-multiple-image-formats" id="toc-epstiffother-multiple-image-formats" class="nav-link" data-scroll-target="#epstiffother-multiple-image-formats"><span class="header-section-number">9.10</span> EPS/TIFF/Other multiple image formats</a></li>
@@ -441,8 +441,8 @@ These are no longer an option in Quarto
 </ul>
 </section>
 </section>
-<section id="keeping-your-markdown" class="level2 demo" data-number="9.6">
-<h2 class="demo anchored" data-number="9.6" data-anchor-id="keeping-your-markdown"><span class="header-section-number">9.6</span> Keeping your markdown</h2>
+<section id="demo-keeping-your-markdown" class="level2 demo" data-number="9.6">
+<h2 class="demo anchored" data-number="9.6" data-anchor-id="demo-keeping-your-markdown"><span class="header-section-number">9.6</span> Demo: Keeping your markdown</h2>
 <p>You can set the options for your figures, which will change how they appear on the page, but this won’t save the figures anywhere. In order to save the figures to file, you need to edit the YAML option <code>keep-md: true</code>:</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"Awesome report"</span></span>
@@ -452,8 +452,8 @@ These are no longer an option in Quarto
 <span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">keep-md</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
 <span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
-<section id="altering-the-figure-path-figures-are-saved-to" class="level2" data-number="9.7">
-<h2 data-number="9.7" class="anchored" data-anchor-id="altering-the-figure-path-figures-are-saved-to"><span class="header-section-number">9.7</span> Altering the figure path figures are saved to</h2>
+<section id="altering-where-figures-are-saved-to" class="level2" data-number="9.7">
+<h2 data-number="9.7" class="anchored" data-anchor-id="altering-where-figures-are-saved-to"><span class="header-section-number">9.7</span> Altering where figures are saved to</h2>
 <p>By default, the figures are saved in a folder named after the file, e.g.,</p>
 <p><code>02-qmd-figures-chunks_files/figure-html</code></p>
 <p>If you want to change this location, you can control the specific name of the folder by setting <code>fig.path</code> like so in the YAML</p>
@@ -467,7 +467,7 @@ These are no longer an option in Quarto
 <span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">opts_chunk</span><span class="kw">:</span></span>
 <span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">fig.path</span><span class="kw">:</span><span class="at"> folder/for/figures/prefix-</span></span>
 <span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>If you do now want a prefix specified, you must end this part with a slash, e.g.,</p>
+<p>If you do <strong>not</strong> want a prefix specified, you must end this part with a slash, e.g.,</p>
 <div class="sourceCode" id="cb4"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"Awesome report"</span></span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="fu">author</span><span class="kw">:</span><span class="at"> </span><span class="st">"You"</span></span>

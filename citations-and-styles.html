@@ -332,6 +332,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#how-to-not-print-suppress-the-bibliography" id="toc-how-to-not-print-suppress-the-bibliography" class="nav-link" data-scroll-target="#how-to-not-print-suppress-the-bibliography"><span class="header-section-number">12.7</span> How to not print / suppress the bibliography?</a>
   <ul class="collapse">
   <li><a href="#your-turn-2" id="toc-your-turn-2" class="nav-link" data-scroll-target="#your-turn-2"><span class="header-section-number">12.7.1</span> Your Turn</a></li>
+  <li><a href="#demo-use-the-visual-editor-mode-of-rstudio" id="toc-demo-use-the-visual-editor-mode-of-rstudio" class="nav-link" data-scroll-target="#demo-use-the-visual-editor-mode-of-rstudio"><span class="header-section-number">12.7.2</span> Demo: Use the Visual Editor mode of RStudio</a></li>
   </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/njtierney/qmd4sci/edit/main/citations-and-styles.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/njtierney/qmd4sci/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
@@ -394,7 +395,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <section id="what-is-a-.bib-file" class="level3" data-number="12.4.1">
 <h3 data-number="12.4.1" class="anchored" data-anchor-id="what-is-a-.bib-file"><span class="header-section-number">12.4.1</span> What is a .bib file?</h3>
-<p>Good question. <code>.bib</code> is a format for storing references from the heyday of LaTeX. It contains scripts with reference information for the article. Here’s an example one</p>
+<p>Good question.</p>
+<p><code>.bib</code> is a format for storing references from the heyday of LaTeX. It contains plain text with reference information for the article. Here’s an example one:</p>
 <pre><code>  @Book{ggplot2,
     author = {Hadley Wickham},
     title = {ggplot2: Elegant Graphics for Data Analysis},
@@ -481,7 +483,7 @@ A BibTeX entry for LaTeX users is
 <section id="your-turn-1" class="level3 exercise" data-number="12.5.1">
 <h3 class="exercise anchored" data-number="12.5.1" data-anchor-id="your-turn-1"><span class="header-section-number">12.5.1</span> Your Turn</h3>
 <ol type="1">
-<li>select your bibliography style to be one from your favourite journal at the CSL github repo here: https://github.com/citation-style-language/styles (&gt; 1800 citations and counting)</li>
+<li>select your bibliography style to be one from your favourite journal at the CSL github repo here: https://github.com/citation-style-language/styles (&gt; 2,600 citations and counting)</li>
 <li>place this in your rstudio project</li>
 <li>refer to it in the YAML</li>
 <li>Render your document and observe your greatness</li>
@@ -516,6 +518,15 @@ suppress-bibliography: true</code></pre>
 <ol type="1">
 <li>Generate a bibliography and an appendix that follows it</li>
 </ol>
+</section>
+<section id="demo-use-the-visual-editor-mode-of-rstudio" class="level3 demo" data-number="12.7.2">
+<h3 class="demo anchored" data-number="12.7.2" data-anchor-id="demo-use-the-visual-editor-mode-of-rstudio"><span class="header-section-number">12.7.2</span> Demo: Use the Visual Editor mode of RStudio</h3>
+<p>Show off the citation auto-complete magic!</p>
+<ul>
+<li>search for DOIs</li>
+<li>search for R packages</li>
+<li>search pubmed/datacite/more!</li>
+</ul>
 
 
 </section>
