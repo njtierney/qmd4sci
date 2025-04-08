@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.57">
+<meta name="generator" content="quarto-1.6.43">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -72,10 +72,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-d4d76bf8491c20bad77d141916dc28e1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-52fe8380a9347df2133e4080513fd0bf.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -391,13 +391,23 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Set up an RStudio Project to organise your work</li>
 <li>Put some data in your project to set up the next tasks</li>
 </ul>
-<p>::: {.callout-note title = “Your Turn”}</p>
+<div class="callout callout-style-default callout-note callout-titled" title="Your Turn">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Your Turn
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <p>In groups of 2-4 discuss:</p>
 <ol type="1">
 <li>What your normal “workflow” is for starting a new project</li>
 <li>Possible challenges that might arise when maintaining your project</li>
 </ol>
-<p>:::</p>
+</div>
+</div>
 </section>
 <section id="when-you-start-a-new-project-open-a-new-rstudio-project" class="level2" data-number="4.4">
 <h2 data-number="4.4" class="anchored" data-anchor-id="when-you-start-a-new-project-open-a-new-rstudio-project"><span class="header-section-number">4.4</span> When you start a new project: Open a new RStudio project</h2>
@@ -571,7 +581,18 @@ Your Turn: open the <code>demo.R</code> file
 <p>I will come into your office and SET YOUR COMPUTER ON FIRE 🔥.</p>
 </blockquote>
 <p>– Jenny Bryan</p>
-<p>::: {.callout-caution title=“Aside: Creating an RStudio project” collapse = “true”}</p>
+<div class="callout callout-style-default callout-caution callout-titled" title="Aside: Creating an RStudio project">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Aside: Creating an RStudio project
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-6" class="callout-6-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
 <p>You can create an Rstudio project by going to:</p>
 <p>file &gt; new project &gt; new directory &gt; new project &gt; name your project &gt; create project.</p>
 <p>You can also click on the create project button in the top left corner</p>
@@ -621,7 +642,9 @@ Your Turn: open the <code>demo.R</code> file
 </div>
 </div>
 </div>
-<p>:::</p>
+</div>
+</div>
+</div>
 </section>
 <section id="summary" class="level1" data-number="5">
 <h1 data-number="5"><span class="header-section-number">5</span> Summary</h1>
@@ -718,8 +741,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   });
   clipboard.on('success', onCopySuccess);
   if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-    // For code content inside modals, clipBoardJS needs to be initialized with a container option
-    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
     const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
       text: getTextToCopy,
       container: window.document.getElementById('quarto-embedded-source-code-modal')
@@ -830,7 +851,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (window.Quarto?.typesetMath) {
         window.Quarto.typesetMath(note);
       }
-      // TODO in 1.5, we should make sure this works without a callout special case
       if (note.classList.contains("callout")) {
         return note.outerHTML;
       } else {
