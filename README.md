@@ -7,12 +7,32 @@ This is a course on how to use Quarto, with the target audience being for scient
 
 # Structure of the workshop
 
-This online book covers more content than the workshop. Here's an example structure of a 3.5 hour course.
+This online book covers more content than the workshop. Here's an example course structure for a full day's course.
+
+| duration| topic | time  | 
+|---------|-------|-------|
+|30 minutes|	installation | 930
+|15 minutes|	Why use Quarto | 945
+|20 minutes|	Workflow when using Quarto documents and projects | 1005
+|20 minutes|	Exporting Quarto documents to PDF, HTML, and Microsoft Word | 1025
+|30 minutes|	BREAK | 11:00
+|10 minutes|  Workflow and using keyboard shortcuts | 11:10
+|30 minutes|	Managing figures, tables, and captions | 11:40
+|20 minutes|	Managing equations and bibliographies | 12:00
+|30 minutes|	How to debug and handle common errors | 12:30
+|60 minutes|	BREAK | 13:30 | 
+|30 minutes|  Other quarto formats | 14:00
+|30 minutes|  Free time to convert your own documents into Quarto | 14:30
+|60 minutes|  The practice of 'getting unstuck', and reproducible examples | 15:30
+|30 minutes|  BREAK | 16:00
+|60 minutes|  Free time for discussion around other Quarto formats: websites, blogs, slides, and more!| 17:00
+
+This online book covers more content than the workshop. Here's an example structure of a 6 hour course.
 
 | time    | topic |
 |---------|-------|
-|1:30-1:40|	Get started with your own Quarto document | 
-|1:40-2:00|	Workflow when using Quarto documents and projects |
+|15 mi|	Get started with your own Quarto document | 
+|9:45-2:00|	Workflow when using Quarto documents and projects |
 |2:00-2:20|	Exporting Quarto documents to PDF, HTML, and Microsoft Word |
 |2:30-3:00|	BREAK|
 |3:00-3:30|	Managing captions, figures, tables |
