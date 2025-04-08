@@ -27,19 +27,6 @@ This online book covers more content than the workshop. Here's an example course
 |30 minutes|  BREAK | 16:00
 |60 minutes|  Free time for discussion around other Quarto formats: websites, blogs, slides, and more!| 17:00
 
-This online book covers more content than the workshop. Here's an example structure of a 6 hour course.
-
-| time    | topic |
-|---------|-------|
-|15 mi|	Get started with your own Quarto document | 
-|9:45-2:00|	Workflow when using Quarto documents and projects |
-|2:00-2:20|	Exporting Quarto documents to PDF, HTML, and Microsoft Word |
-|2:30-3:00|	BREAK|
-|3:00-3:30|	Managing captions, figures, tables |
-|3:30-3:45|	Managing equations and bibliographies |
-|3:45-4:15|	How to debug and handle common errors |
-|3:45-5:00|	Free time for discussion around aother Quarto formats: websites, blogs, slides, and more!|
-
 # Learning outcomes
 
 After completing this course, you will know how to:
