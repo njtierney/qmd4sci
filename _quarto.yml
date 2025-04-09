@@ -18,15 +18,15 @@ book:
   repo-branch: main
   repo-actions: [edit, issue]
   # sharing: [twitter]
-  date: "2024-11-21"
-  page-footer: "Copyright 2022-2024, Nicholas Tierney" 
+  date: "2025-04-09"
+  page-footer: "Copyright 2022-2025, Nicholas Tierney" 
   page-navigation: true
   search: true
   chapters:
     - "index.qmd"
     - "license.qmd"
-    - "why-qmd.qmd"
     - "installation.qmd"
+    - "why-qmd.qmd"
     - "rstudio.qmd"
     - "workflow.qmd"
     - "using-qmd.qmd"

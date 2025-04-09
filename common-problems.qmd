@@ -47,7 +47,7 @@ What follows from here are all the errors you might in an Quarto document, with 
 -   What the error message might appear to be, and
 -   How to solve them
 
-## Python not found
+### Python not found
 
 An error like:
 
@@ -73,7 +73,7 @@ This error went away when I installed python - I went to https://www.python.org/
 
 ![](images/clipboard-3981398633.png)
 
-## No julia
+### No julia
 
 ```         
 Error in `loadNamespace()`:
@@ -92,7 +92,7 @@ Fix: Install `JuliaCall` R package:
 install.packages("JuliaCall")
 ```
 
-## "Duplication": Duplicated chunk names
+### "Duplication": Duplicated chunk names
 
 **What it might look like**
 
@@ -140,7 +140,7 @@ Duplicate chunk label 'repeated', which has been used for the chunk:
 
 -   In our case we have the same chunk name twice: 'repeated'. Change the chunk name of one of them!
 
-## "Not what I ordered": Objects not created in the right order
+### "Not what I ordered": Objects not created in the right order
 
 **What it might look like**
 
@@ -190,7 +190,7 @@ I would then navigate to those lines of code in the Quarto document, or search f
 4.  Hopefully this reproduces your error
 5.  If it doesn't reproduce your error, consider trying to make a [small reprex](https://reprex.tidyverse.org/) of the problem so you have try and figure out the bug.
 
-## Forgotten Trails I: Missing "(", or "}"
+### Forgotten Trails I: Missing "(", or "}"
 
 **What it might look like**
 
@@ -273,7 +273,7 @@ When we would normally not see any information about the code chunk option, `#| 
 
 When you come across some funky looking text like that, look for a missing `}`.
 
-## "Forgotten Trails II": Chunk option with trailing ", or not input
+### "Forgotten Trails II": Chunk option with trailing ", or not input
 
 **What it might look like**
 
@@ -296,7 +296,7 @@ ERROR: YAMLException: unexpected end of the stream within a double quoted scalar
 
 ![](images/clipboard-1852474255.png)
 
-## "The Path Not Taken" File path incorrect
+### "The Path Not Taken" File path incorrect
 
 **What it might look like**
 
@@ -338,7 +338,7 @@ Error:! 'the_penguins.csv' does not exist in current working directory ('/Users/
 
 In this case, we need to ensure that the data file is in the right spot - in our example we have a typo - the data should be "data/penguins.csv".
 
-## "Spolling I" Incorrectly spelled chunk options
+### "Spolling I" Incorrectly spelled chunk options
 
 These are often not an error, but you just won't get the behaviour that you expect.
 
@@ -382,7 +382,7 @@ There is no error message for this! It is a silent error.
 
 You can resolve this issue by using `fig-cap` instead of `fig-caption`.
 
-## "Spolling II" Incorrectly spelled chunk option inputs
+### "Spolling II" Incorrectly spelled chunk option inputs
 
 So this is when you provide the wrong input to your chunk options. Like something that requires `true` gets "yes", or something that needs `"100%"` instead gets `100`
 
@@ -416,13 +416,13 @@ There's a bit of text here, but the key piece is:
 
 We have specified `#| cache: yes` instead of `#| cache: true`. A good thing to internalise here is that Quarto always uses lowercase `true` or `false` and never `yes` or `no`.
 
-## "The Legend of Link I": Your images in `![]()` don't work.
+### "The Legend of Link I": Your images in `![]()` don't work.
 
 I often forget that it is `![](path/to/image)`, and not `![]("path/to/image")`. There are no quote marks!
 
 ![](images/clipboard-1417429929.png)
 
-## LaTeX errors
+### LaTeX errors
 
 There is no panacea for LaTeX errors, but if you aren't familiar with "what that error message" might look like, here are some details.
 
@@ -432,7 +432,7 @@ There is no panacea for LaTeX errors, but if you aren't familiar with "what that
 
 **How to solve**
 
-## I want to include inline R code verbatim to show an example
+### I want to include inline R code verbatim to show an example
 
 ... Like for a book on using Quarto or something.
 
@@ -450,7 +450,7 @@ It boils down to this:
 Thankfully the folks at Quarto have made this much easier!
 :::
 
-## My Figure or Table isn't being cited
+### My Figure or Table isn't being cited
 
 **What it might look like**
 
@@ -464,5 +464,6 @@ There isn't one - you just get `@fig-chunk-name` printed.
 
 You need to make sure that you actually print the table or plot. If you create the plot and save it, but do not print it in the document, then you will not be able to reference the plot or table.
 
-# `::: {.cell}` appears in my quarto document
+### `::: {.cell}` appears in my quarto document
 
+Generally look for a missing `:::` partner - however sometimes I do find this problem a bit sticky!

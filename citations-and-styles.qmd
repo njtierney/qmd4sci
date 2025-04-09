@@ -78,7 +78,12 @@ For journals or books, you'll need to get a specific .bib file. Yes, this can be
     1. Using the `citation()` function, generate citations for the packages we have used, "dplyr", "ggplot2", "gapminder", and for the R software, place these in your `references.bib` file
     1. Reference these in your document
     1. Add a final heading in your file called `#bibliography`
-    1. Render the document
+    1.  Cite the packages you use when you use them
+      1.  hint: https://quarto.org/docs/authoring/footnotes-and-citations.html
+      2.  hint: look at the names in packages.bib
+1.  Tidy up the structure, provide some more words around the introduction and results
+1.  Render the document
+
     
 :::
 
@@ -99,6 +104,8 @@ csl: my_journal.csl
 ```
 
 :::{.callout-note title="Your Turn"}
+
+In "05-qmd-bib-polish.qmd":
 
 1. select your bibliography style to be one from your favourite journal at the CSL github repo here: https://github.com/citation-style-language/styles (> 2,600 citations and counting)
 1. place this in your rstudio project
@@ -138,6 +145,8 @@ suppress-bibliography: true
 ```
 
 :::{.callout-note title="Your Turn"}
+
+In "05-qmd-bib-polish.qmd":
 
 1. Generate a bibliography and an appendix that follows it
 

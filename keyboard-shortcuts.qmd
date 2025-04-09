@@ -37,7 +37,7 @@ Below is a small table of tasks you can perform with keyboard
 
 | Action      | Windows/Linux | Mac  | 
 |-------------|---------------|----------------|
-| Knit document | Ctrl + Shift + K | Cmd + Shift + K |
+| Render document | Ctrl + Shift + K | Cmd + Shift + K |
 | Insert Chunk  | Ctrl + Alt + I   | Cmd + Option + I |
 | Run Current Chunk | Ctrl + Alt + C | Cmd + Option + C | 
 | Jump to  	Shift+Alt+J 	| Cmd+Shift+Option+J |
@@ -56,8 +56,9 @@ Below is a small table of tasks you can perform with keyboard
 ::: {.callout-note title="Your Turn"}
 
 - In your **awesome** quarto document
-  - Oractice using the Keyboard Shortcut Reference and find the keyboard shortcut for inserting a pipe character ( `%>%` or `|>`)
+  - Practice using the Keyboard Shortcut Reference and find the keyboard shortcut for inserting a pipe character ( `%>%` or `|>`)
   - Spend 3 minutes practicing these commands.
-- Ask Nick to demonstrate some of his favourite shortcut combos
+- Ask Nick to demonstrate some of his [favourite shortcut combos](https://www.njtierney.com/post/2023/12/04/get-good-type-fast/)
+  - e.g., multiline cursor, yank lines, copy lines, go to file/function
 
 :::

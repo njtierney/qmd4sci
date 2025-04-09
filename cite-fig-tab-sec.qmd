@@ -83,7 +83,7 @@ image(volcano)
 
 Then you can reference it with: `@fig-example` - @fig-example.
 
-::: {.callout-tip title="Hover your mouse on a figure!"}
+::: {.callout-tip title="Hover your mouse on a reference!"}
 Note the awesome on-hover behaviour for hovering over a reference!
 :::
 

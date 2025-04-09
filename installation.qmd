@@ -16,6 +16,8 @@ In this section, the aim is to have everyone setup with R, RStudio, and Quarto
 
 ### R
 
+::: {.panel-tabset}
+
 #### Windows
 
 [https://cloud.r-project.org/bin/windows/](https://cloud.r-project.org/bin/windows/)
@@ -27,6 +29,8 @@ In this section, the aim is to have everyone setup with R, RStudio, and Quarto
 #### Linux
 
 [https://cloud.r-project.org/bin/linux/](https://cloud.r-project.org/bin/linux/)
+
+:::
 
 ### RStudio
 

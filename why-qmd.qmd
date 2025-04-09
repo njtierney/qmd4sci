@@ -56,6 +56,10 @@ The idea took off.
 
 ### A brief example of markdown
 
+::: {.panel-tabset}
+
+#### Markdown text
+
 ```
 - bullet list
 - bullet list
@@ -80,7 +84,7 @@ image(volcano)
 ```
 ````
 
-Would be converted to:
+#### Rendered result
 
 -   bullet list
 -   bullet list
@@ -101,6 +105,8 @@ Would be converted to:
 2 + 2
 image(volcano)
 ```
+
+:::
 
 With very little marking up, we can create rich text, that **actually resembles** the text that we want to see.
 
@@ -146,6 +152,22 @@ But with Quarto, we have this general interface, where Quarto can talk to differ
 
 ![Quarto is a separate program](figs/quarto-all.jpeg)
 
+
+::: {.callout-tip title="Converting Rmarkdown to Quarto" collapse="false"}
+
+One of the big things that is different between Rmarkdown and Quarto are the chunk options. In Rmarkdown they are in the chunk header, and in quarto they are in the body of the function. To help change these over appropriately, you can run this code, which will rewrite the chunk headers.
+
+```{r}
+#| eval: false
+knitr::convert_chunk_header(
+  input = "paper.qmd",
+  output = identity
+)
+```
+
+:::
+
+
 ::: {.callout-note title="Your Turn"}
 
 1.  **Learn to use Markdown** In your small groups, spend five minutes working through this [brief online Markdown tutorial](https://www.markdowntutorial.com/)
@@ -185,6 +207,7 @@ format: html
 
 ```{r}
 #| label: library
+#| message: false
 library(tidyverse)
 library(broom)
 ```

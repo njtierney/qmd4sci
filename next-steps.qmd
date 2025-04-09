@@ -22,3 +22,58 @@ Or even if you have something like:
 These are ways of managing which version you have.
 
 To learn git and github, I'd highly recommend [Happy Git with R](https://happygitwithr.com/) by [Jenny Bryan](https://jennybryan.org/), the [STAT 545 TAs](https://stat545.com/), and [Jim Hester](https://www.jimhester.com/)
+
+## Learn how to make reproducible examples
+
+(The following is an excerpt from my blog post, ["How to get good at R"](https://www.njtierney.com/post/2023/11/10/how-to-get-good-with-r/))
+
+When you run into a problem, or an error, if you can't work out the answer after some tinkering about, it can be worthwhile spending some time to construct a small example of the code that breaks. This takes a bit of time, and could be its own little blog post. It takes practice. But in the process of reducing the problem down to its core components, I often can solve the problem myself. It's kind of like that experience of when you talk to someone to try and describe a problem that you are working on, and in talking about it, you arrive at a solution.
+
+There is a great R package that helps you create these reproducible examples, called [`reprex`](https://reprex.tidyverse.org/), by [Jenny Bryan](https://jennybryan.org/). I've written about the reprex package [here](https://www.njtierney.com/post/2017/01/11/magic-reprex/)
+
+For the purposes of illustration, let's briefly tear down a small example using the somewhat large dataset of `diamonds`
+
+```{r}
+library(tidyverse)
+diamonds
+```
+
+Let's say we had a few steps involved in the data summary of diamonds data:
+
+```{r}
+diamonds %>%
+  mutate(
+    price_per_carat = price / carat
+  ) %>% 
+  group_by(
+    cut
+    ) %>% 
+  summarise(
+    price_mean = mean(price_per_carat),
+    price_sd = sd(price_per_carat),
+    mean_color = mean(color)
+  )
+```
+
+We get a clue that the error is in the line `mean_color`, so let's just try and do that line:
+
+```{r}
+diamonds %>%
+  mutate(
+    mean_color = mean(color)
+  )
+```
+
+We still get that error, so what if we just do
+
+```{r}
+mean(diamonds$color)
+```
+
+OK same error. What is in color?
+
+```{r}
+head(diamonds$color)
+```
+
+Does it really make sense to take the mean of some letters? Ah, of course not!

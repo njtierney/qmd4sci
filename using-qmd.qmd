@@ -60,6 +60,10 @@ Is markdown, as we discussed in the earlier section,
 
 It provides a simple way to mark up text
 
+::: {.panel-tabset}
+
+#### Markdown
+
 ```
 - bullet list
 - bullet list
@@ -82,7 +86,7 @@ __bold__, **bold**, _italic_, *italic*
 ```
 ````
 
-Would be converted to:
+#### Rendered text
 
 - bullet list
 - bullet list
@@ -103,6 +107,7 @@ __bold__, **bold**, _italic_, *italic*
 2 + 2
 ```
 
+:::
 
 ### Code
 
@@ -198,6 +203,20 @@ The code chunks you need to know about right now are:
 <!--   * results: option 'hold' will wait until the code chunk is complete and then  -->
   
 You can read more about the options at the official documentation: <https://quarto.org/docs/computations/execution-options.html>
+
+::: {.callout-tip title="Converting Rmarkdown to Quarto" collapse="true"}
+
+If you've got some Rmarkdown document and you want to change over the chunk headers, you can run code like this:
+
+```{r}
+#| eval: false
+knitr::convert_chunk_header(
+  input = "paper.qmd",
+  output = identity
+)
+```
+
+:::
 
 ### Inline code
 
