@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "Quarto for Scientists",
     "section": "",
-    "text": "About this\nThis is a book on using Quarto for writing and document preparation, aimed for scientists. It was initially developed as a 3 hour workshop, “Rmarkdown for scientists”. This focusses on Quarto, which is a next-generation rmarkdown. It is now developed into a resource that will grow and change over time as a living book.\nThis book aims to teach the following:",
+    "text": "About this\nThis is a book on using Quarto for writing and document preparation, aimed for scientists. It was initially developed as a half day workshop, “Rmarkdown for scientists”. This focusses on Quarto, which is a next-generation rmarkdown. It is now developed into a resource that will grow and change over time as a living book.\nThis book aims to teach the following:",
     "crumbs": [
       "About this"
     ]
@@ -24,7 +24,7 @@
     "href": "index.html#how-to-use-this-book",
     "title": "Quarto for Scientists",
     "section": "How to use this book",
-    "text": "How to use this book\nThis book was written to provide course materials for a 3 hour course on Quarto\nWe worked through the following sections in the book in 3 hours:\n\nwhy use Quarto\ninstallation\nwhat is RStudio?\nsuggested workflow and hygiene\nhow to use Quarto\nusing Quarto with pdf, html, and Word\nwhat are some useful keyboard shortcuts\nadding captions to tables and figures\nchanging figures\nadding mathematics\nciting figures and tables\nchanging citations and styles\n\nWith the remaining sections being used as extra material, or have since been written after the course:\n\nfixing some common problems in Quarto\nwhat are some alternative outputs of Quarto?\nwhere to go next?\nsuggested references\n\nCourse materials can be downloaded by using the following command from the usethis package:\n\nusethis::use_course(\"njtierney/qmd4sci-materials\")",
+    "text": "How to use this book\nThis book was written to provide course materials for a half day course on Quarto\nWe worked through the following sections in the book in a half day:\n\nwhy use Quarto\ninstallation\nwhat is RStudio?\nsuggested workflow and hygiene\nhow to use Quarto\nusing Quarto with pdf, html, and Word\nwhat are some useful keyboard shortcuts\nadding captions to tables and figures\nchanging figures\nadding mathematics\nciting figures and tables\nchanging citations and styles\n\nWith the remaining sections being used as extra material, or have since been written after the course:\n\nfixing some common problems in Quarto\nwhat are some alternative outputs of Quarto?\nwhere to go next?\nsuggested references\n\nCourse materials can be downloaded by using the following command from the usethis package:\n\nusethis::use_course(\"njtierney/qmd4sci-materials\")",
     "crumbs": [
       "About this"
     ]
@@ -50,173 +50,173 @@
     ]
   },
   {
-    "objectID": "why-qmd.html",
-    "href": "why-qmd.html",
-    "title": "1  Why Quarto",
-    "section": "",
-    "text": "1.1 Overview\nThe goal of this section is to briefly discuss why we want to learn Quarto, the benefits, and the barriers to using it.",
-    "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Why Quarto</span>"
-    ]
-  },
-  {
-    "objectID": "why-qmd.html#overview",
-    "href": "why-qmd.html#overview",
-    "title": "1  Why Quarto",
-    "section": "",
-    "text": "Teaching 3 minutes\nExercises 5 minutes",
-    "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Why Quarto</span>"
-    ]
-  },
-  {
-    "objectID": "why-qmd.html#questions",
-    "href": "why-qmd.html#questions",
-    "title": "1  Why Quarto",
-    "section": "1.2 Questions",
-    "text": "1.2 Questions\n\nWhat is the value in a reproducible report?\nWhat is Markdown?\nCan I combine my software and my writing?",
-    "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Why Quarto</span>"
-    ]
-  },
-  {
-    "objectID": "why-qmd.html#objectives",
-    "href": "why-qmd.html#objectives",
-    "title": "1  Why Quarto",
-    "section": "1.3 Objectives",
-    "text": "1.3 Objectives\n\nLearn how to use Markdown\nThink about why you want to use Markdown\n\n\n\n\n\n\n\nYour Turn\n\n\n\n\nWhy are we here Form small groups of 2-4 with your neighbours and discuss how you expect learning Quarto might benefit you.",
-    "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Why Quarto</span>"
-    ]
-  },
-  {
-    "objectID": "why-qmd.html#reproducibility-is-a-problem",
-    "href": "why-qmd.html#reproducibility-is-a-problem",
-    "title": "1  Why Quarto",
-    "section": "1.4 Reproducibility is a problem",
-    "text": "1.4 Reproducibility is a problem\nIt is unfortunately a common, seemingly evergreen problem that a lot of people cannot reproduce scientific work. This might appear to be a “current” problem, but it has indeed been a problem throughout a lot of scientific history. To illustrate this, here’s a nice article by Rich FitzJohn, Reproducible research is still a challenge, which was written 10 years ago, in 2014, and provides a list of the challenges and lessons learned in making research reproducible. The list is still relevant. This problem isn’t completely solved. But, we can make it easier to solve, to get further.\nReproducibility isn’t just something that impacts a few people, and it’s not cheap. A 2010 estimate stated that in the biomedical industry, in the USA, irreproducibility (not being able to reproduce a given piece of work) costs $28 Billion dollars annually 1. That was one country, one field, and one year.\nSo what can we do about it?",
-    "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Why Quarto</span>"
-    ]
-  },
-  {
-    "objectID": "why-qmd.html#literate-programming-is-a-partial-solution",
-    "href": "why-qmd.html#literate-programming-is-a-partial-solution",
-    "title": "1  Why Quarto",
-    "section": "1.5 Literate programming is a partial solution",
-    "text": "1.5 Literate programming is a partial solution\nThe idea of literate programming shines some light on this dark area of science. This is an idea from Donald Knuth where you combine your text with your code output to create a document. This is a blend of your literature (text), and your programming (code), to create something that you can read from top to bottom. Imagine your paper - the introduction, methods, results, discussion, and conclusion, and all the bits of code that make each section. With Quarto, you can see all the pieces of your data analysis all together.\n\n\n\n\n\n\nSome history: Quarto, Rmarkdown, Sweave\n\n\n\n\n\nLiterate programming was a popular idea, and it has had some interesting discussion and contributions over the years. Notably, in the R ecosystem, the Sweave, (The S language + weaving together text and code) program provided a way to write text and code together. As with any technology, there were some speedbumps with using Sweave, and some of the reasons we are not teaching it now is because:\n\nIt uses a form of LaTeX, which provides great flexibility at the cost of complexity.\nPrinting figures involves additional work\nThere isn’t a way to save (cache) your work. Every analysis has to be repeated from start to finish. This was time consuming.",
-    "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Why Quarto</span>"
-    ]
-  },
-  {
-    "objectID": "why-qmd.html#markdown-as-a-new-player-to-legibility",
-    "href": "why-qmd.html#markdown-as-a-new-player-to-legibility",
-    "title": "1  Why Quarto",
-    "section": "1.6 Markdown as a new player to legibility",
-    "text": "1.6 Markdown as a new player to legibility\nIn 2004, John Gruber, of daring fireball created Markdown, a simple way to create text that rendered into an HTML webpage. The core idea was that you could write plain text (not text inside a MS Word/WordPerfect/Pages/Proprietary Format Document), and it would look readable, then get rendered into HTML.\nThe idea took off.\n\n1.6.1 A brief example of markdown\n- bullet list\n- bullet list\n- bullet list\n\n1. numbered list\n2. numbered list\n3. numbered list\n\n__bold__, **bold**, _italic_, *italic*\n\n&gt; quote of something profound\n\n```r\n# computer code goes in three back ticks\n1 + 1\n2 + 2\nimage(volcano)\n```\nWould be converted to:\n\nbullet list\nbullet list\nbullet list\n\n\nnumbered list\nnumbered list\nnumbered list\n\nbold, bold, italic, italic\n\nquote of something profound\n\n\n# computer code goes in three back ticks\n1 + 1\n\n[1] 2\n\n2 + 2\n\n[1] 4\n\nimage(volcano)\n\n\n\n\n\n\n\n\nWith very little marking up, we can create rich text, that actually resembles the text that we want to see.\nSome other nice features of Markdown include:\n\n\n\nFeature\nMarkdown | rendered\n\n\n\n\n\nsuperscript\n2^nd^ | 2nd\n\n\n\nsubscript\nCO~2~ | CO2\n\n\n\nstrikethrough\n~~mistake~~ | mistake\n\n\n\nlinks\n[text](https://quarto.org/) | text\n\n\n\nlinks\n&lt;https://quarto.org/&gt; | https://quarto.org/)\n\n\n\nimages\n![alternative text](link-to-image) | (cannot render in a table)\n\n\n\n\nFor more examples and details of using markdown in Quarto, see the official Quarto “Markdown Basics” documentation.",
-    "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Why Quarto</span>"
-    ]
-  },
-  {
-    "objectID": "why-qmd.html#summary",
-    "href": "why-qmd.html#summary",
-    "title": "1  Why Quarto",
-    "section": "3.1 Summary",
-    "text": "3.1 Summary\nIn this section we’ve learned about:\n\nWhat the value is in a reproducible report\nWhat is Markdown\nHow to combine software and writing\nHow to use Markdown",
-    "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Why Quarto</span>"
-    ]
-  },
-  {
-    "objectID": "why-qmd.html#learning-more",
-    "href": "why-qmd.html#learning-more",
-    "title": "1  Why Quarto",
-    "section": "3.2 Learning more",
-    "text": "3.2 Learning more\n\nPosit’s Quarto cheatsheet",
-    "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Why Quarto</span>"
-    ]
-  },
-  {
-    "objectID": "why-qmd.html#footnotes",
-    "href": "why-qmd.html#footnotes",
-    "title": "1  Why Quarto",
-    "section": "",
-    "text": "The article, Freedman, 2010, Heard via Garret Grolemund’s great talk↩︎",
-    "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Why Quarto</span>"
-    ]
-  },
-  {
     "objectID": "installation.html",
     "href": "installation.html",
-    "title": "2  Installation",
+    "title": "1  Installation",
     "section": "",
-    "text": "2.1 Overview\nIn this section, the aim is to have everyone setup with R, RStudio, and Quarto",
+    "text": "1.1 Overview\nIn this section, the aim is to have everyone setup with R, RStudio, and Quarto",
     "crumbs": [
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Installation</span>"
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Installation</span>"
     ]
   },
   {
     "objectID": "installation.html#overview",
     "href": "installation.html#overview",
-    "title": "2  Installation",
+    "title": "1  Installation",
     "section": "",
     "text": "Duration 15 minutes",
     "crumbs": [
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Installation</span>"
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Installation</span>"
     ]
   },
   {
     "objectID": "installation.html#questions",
     "href": "installation.html#questions",
-    "title": "2  Installation",
-    "section": "2.2 Questions",
-    "text": "2.2 Questions\n\nHow do I install R?\nHow do I install Quarto?\nHow do I install LaTeX in a sane way?",
+    "title": "1  Installation",
+    "section": "1.2 Questions",
+    "text": "1.2 Questions\n\nHow do I install R?\nHow do I install Quarto?\nHow do I install LaTeX in a sane way?",
     "crumbs": [
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Installation</span>"
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Installation</span>"
     ]
   },
   {
     "objectID": "installation.html#software-setup",
     "href": "installation.html#software-setup",
-    "title": "2  Installation",
-    "section": "2.3 Software Setup",
-    "text": "2.3 Software Setup\n\n2.3.1 R\n\n2.3.1.1 Windows\nhttps://cloud.r-project.org/bin/windows/\n\n\n2.3.1.2 MacOS\nhttps://cloud.r-project.org/bin/macosx/\n\n\n2.3.1.3 Linux\nhttps://cloud.r-project.org/bin/linux/\n\n\n\n2.3.2 RStudio\nhttps://posit.co/download/rstudio-desktop/#download\n\n\n2.3.3 Quarto\nQuarto installation page",
+    "title": "1  Installation",
+    "section": "1.3 Software Setup",
+    "text": "1.3 Software Setup\n\n1.3.1 R\n\nWindowsMacOSLinux\n\n\nhttps://cloud.r-project.org/bin/windows/\n\n\nhttps://cloud.r-project.org/bin/macosx/\n\n\nhttps://cloud.r-project.org/bin/linux/\n\n\n\n\n\n1.3.2 RStudio\nhttps://posit.co/download/rstudio-desktop/#download\n\n\n1.3.3 Quarto\nQuarto installation page",
     "crumbs": [
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Installation</span>"
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Installation</span>"
     ]
   },
   {
     "objectID": "installation.html#checking-you-are-up-to-date",
     "href": "installation.html#checking-you-are-up-to-date",
-    "title": "2  Installation",
-    "section": "2.4 Checking you are up to date",
-    "text": "2.4 Checking you are up to date\nTo ensure you are up to date, run the following script to install the packages.\n\ninstall.packages(\"quarto\")\ninstall.packages(\"knitr\")\ninstall.packages(\"here\")\ninstall.packages(\"tidyverse\")\ninstall.packages(\"broom\")\ninstall.packages(\"fs\")\ninstall.packages(\"usethis\")",
+    "title": "1  Installation",
+    "section": "1.4 Checking you are up to date",
+    "text": "1.4 Checking you are up to date\nTo ensure you are up to date, run the following script to install the packages.\n\ninstall.packages(\"quarto\")\ninstall.packages(\"knitr\")\ninstall.packages(\"here\")\ninstall.packages(\"tidyverse\")\ninstall.packages(\"broom\")\ninstall.packages(\"fs\")\ninstall.packages(\"usethis\")",
     "crumbs": [
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Installation</span>"
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Installation</span>"
     ]
   },
   {
     "objectID": "installation.html#a-note-on-pdf",
     "href": "installation.html#a-note-on-pdf",
-    "title": "2  Installation",
-    "section": "2.5 A note on PDF",
-    "text": "2.5 A note on PDF\nQuarto documents can be compiled to PDF, which is a great feature. In order to convert the documents to PDF, they use a software called LaTeX (pronounced la-tek or lay-tek).\nInstalling LaTeX is thankfully handled when you install Quarto, as Quarto includes a built-in Latexmk engine.\n\n2.5.1 PDF / LaTeX Pain\nInstalling LaTeX can be a pain, but thankfully Yihui Xie has put a lot of time and energy into making an easier way to install it - tinytex. tinytex is an R package that installs a sane, lightweight (&lt;200Mb) version of LaTeX.\nIf you are running into issues rendering a PDF, you can try the following:\n\ntinytex::install_tinytex()\n\nIf you get the following error, this is good! As it means that TeX has already been installed:\nError: Detected an existing tlmgr at /usr/local/bin/tlmgr. It seems TeX Live has been installed (check tinytex::tinytex_root()). You have to uninstall it, or use install_tinytex(force = TRUE) if you are sure TinyTeX can override it (e.g., you are a PATH expert or installed TinyTeX previously).\nAlternatively, you can run the following from the terminal\n\nquarto install tinytex\n# follow the prompts from here\n\n\n\n2.5.2 Problem solving with LaTeX\nIf you have any problems with installing tinytex, I recommend you check out the tinytex FAQ page.",
+    "title": "1  Installation",
+    "section": "1.5 A note on PDF",
+    "text": "1.5 A note on PDF\nQuarto documents can be compiled to PDF, which is a great feature. In order to convert the documents to PDF, they use a software called LaTeX (pronounced la-tek or lay-tek).\nInstalling LaTeX is thankfully handled when you install Quarto, as Quarto includes a built-in Latexmk engine.\n\n1.5.1 PDF / LaTeX Pain\nInstalling LaTeX can be a pain, but thankfully Yihui Xie has put a lot of time and energy into making an easier way to install it - tinytex. tinytex is an R package that installs a sane, lightweight (&lt;200Mb) version of LaTeX.\nIf you are running into issues rendering a PDF, you can try the following:\n\ntinytex::install_tinytex()\n\nIf you get the following error, this is good! As it means that TeX has already been installed:\nError: Detected an existing tlmgr at /usr/local/bin/tlmgr. It seems TeX Live has been installed (check tinytex::tinytex_root()). You have to uninstall it, or use install_tinytex(force = TRUE) if you are sure TinyTeX can override it (e.g., you are a PATH expert or installed TinyTeX previously).\nAlternatively, you can run the following from the terminal\n\nquarto install tinytex\n# follow the prompts from here\n\n\n\n1.5.2 Problem solving with LaTeX\nIf you have any problems with installing tinytex, I recommend you check out the tinytex FAQ page.",
     "crumbs": [
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Installation</span>"
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Installation</span>"
     ]
   },
   {
     "objectID": "installation.html#test-script",
     "href": "installation.html#test-script",
-    "title": "2  Installation",
-    "section": "2.6 Test Script",
-    "text": "2.6 Test Script\nYou should be able to run the following code on your machine\n\nlibrary(quarto)\nlibrary(knitr)\nlibrary(here)\nlibrary(tidyverse)\nlibrary(broom)\nlibrary(fs)\nlibrary(usethis)",
+    "title": "1  Installation",
+    "section": "1.6 Test Script",
+    "text": "1.6 Test Script\nYou should be able to run the following code on your machine\n\nlibrary(quarto)\nlibrary(knitr)\nlibrary(here)\nlibrary(tidyverse)\nlibrary(broom)\nlibrary(fs)\nlibrary(usethis)",
     "crumbs": [
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Installation</span>"
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Installation</span>"
+    ]
+  },
+  {
+    "objectID": "why-qmd.html",
+    "href": "why-qmd.html",
+    "title": "2  Why Quarto",
+    "section": "",
+    "text": "2.1 Overview\nThe goal of this section is to briefly discuss why we want to learn Quarto, the benefits, and the barriers to using it.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Why Quarto</span>"
+    ]
+  },
+  {
+    "objectID": "why-qmd.html#overview",
+    "href": "why-qmd.html#overview",
+    "title": "2  Why Quarto",
+    "section": "",
+    "text": "Teaching 3 minutes\nExercises 5 minutes",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Why Quarto</span>"
+    ]
+  },
+  {
+    "objectID": "why-qmd.html#questions",
+    "href": "why-qmd.html#questions",
+    "title": "2  Why Quarto",
+    "section": "2.2 Questions",
+    "text": "2.2 Questions\n\nWhat is the value in a reproducible report?\nWhat is Markdown?\nCan I combine my software and my writing?",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Why Quarto</span>"
+    ]
+  },
+  {
+    "objectID": "why-qmd.html#objectives",
+    "href": "why-qmd.html#objectives",
+    "title": "2  Why Quarto",
+    "section": "2.3 Objectives",
+    "text": "2.3 Objectives\n\nLearn how to use Markdown\nThink about why you want to use Markdown\n\n\n\n\n\n\n\nYour Turn\n\n\n\n\nWhy are we here Form small groups of 2-4 with your neighbours and discuss how you expect learning Quarto might benefit you.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Why Quarto</span>"
+    ]
+  },
+  {
+    "objectID": "why-qmd.html#reproducibility-is-a-problem",
+    "href": "why-qmd.html#reproducibility-is-a-problem",
+    "title": "2  Why Quarto",
+    "section": "2.4 Reproducibility is a problem",
+    "text": "2.4 Reproducibility is a problem\nIt is unfortunately a common, seemingly evergreen problem that a lot of people cannot reproduce scientific work. This might appear to be a “current” problem, but it has indeed been a problem throughout a lot of scientific history. To illustrate this, here’s a nice article by Rich FitzJohn, Reproducible research is still a challenge, which was written 10 years ago, in 2014, and provides a list of the challenges and lessons learned in making research reproducible. The list is still relevant. This problem isn’t completely solved. But, we can make it easier to solve, to get further.\nReproducibility isn’t just something that impacts a few people, and it’s not cheap. A 2010 estimate stated that in the biomedical industry, in the USA, irreproducibility (not being able to reproduce a given piece of work) costs $28 Billion dollars annually 1. That was one country, one field, and one year.\nSo what can we do about it?",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Why Quarto</span>"
+    ]
+  },
+  {
+    "objectID": "why-qmd.html#literate-programming-is-a-partial-solution",
+    "href": "why-qmd.html#literate-programming-is-a-partial-solution",
+    "title": "2  Why Quarto",
+    "section": "2.5 Literate programming is a partial solution",
+    "text": "2.5 Literate programming is a partial solution\nThe idea of literate programming shines some light on this dark area of science. This is an idea from Donald Knuth where you combine your text with your code output to create a document. This is a blend of your literature (text), and your programming (code), to create something that you can read from top to bottom. Imagine your paper - the introduction, methods, results, discussion, and conclusion, and all the bits of code that make each section. With Quarto, you can see all the pieces of your data analysis all together.\n\n\n\n\n\n\nSome history: Quarto, Rmarkdown, Sweave\n\n\n\n\n\nLiterate programming was a popular idea, and it has had some interesting discussion and contributions over the years. Notably, in the R ecosystem, the Sweave, (The S language + weaving together text and code) program provided a way to write text and code together. As with any technology, there were some speedbumps with using Sweave, and some of the reasons we are not teaching it now is because:\n\nIt uses a form of LaTeX, which provides great flexibility at the cost of complexity.\nPrinting figures involves additional work\nThere isn’t a way to save (cache) your work. Every analysis has to be repeated from start to finish. This was time consuming.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Why Quarto</span>"
+    ]
+  },
+  {
+    "objectID": "why-qmd.html#markdown-as-a-new-player-to-legibility",
+    "href": "why-qmd.html#markdown-as-a-new-player-to-legibility",
+    "title": "2  Why Quarto",
+    "section": "2.6 Markdown as a new player to legibility",
+    "text": "2.6 Markdown as a new player to legibility\nIn 2004, John Gruber, of daring fireball created Markdown, a simple way to create text that rendered into an HTML webpage. The core idea was that you could write plain text (not text inside a MS Word/WordPerfect/Pages/Proprietary Format Document), and it would look readable, then get rendered into HTML.\nThe idea took off.\n\n2.6.1 A brief example of markdown\n\nMarkdown textRendered result\n\n\n- bullet list\n- bullet list\n- bullet list\n\n1. numbered list\n2. numbered list\n3. numbered list\n\n__bold__, **bold**, _italic_, *italic*\n\n&gt; quote of something profound\n\n```r\n# computer code goes in three back ticks\n1 + 1\n2 + 2\nimage(volcano)\n```\n\n\n\nbullet list\nbullet list\nbullet list\n\n\nnumbered list\nnumbered list\nnumbered list\n\nbold, bold, italic, italic\n\nquote of something profound\n\n\n# computer code goes in three back ticks\n1 + 1\n\n[1] 2\n\n2 + 2\n\n[1] 4\n\nimage(volcano)\n\n\n\n\n\n\n\n\n\n\n\nWith very little marking up, we can create rich text, that actually resembles the text that we want to see.\nSome other nice features of Markdown include:\n\n\n\nFeature\nMarkdown | rendered\n\n\n\n\n\nsuperscript\n2^nd^ | 2nd\n\n\n\nsubscript\nCO~2~ | CO2\n\n\n\nstrikethrough\n~~mistake~~ | mistake\n\n\n\nlinks\n[text](https://quarto.org/) | text\n\n\n\nlinks\n&lt;https://quarto.org/&gt; | https://quarto.org/)\n\n\n\nimages\n![alternative text](link-to-image) | (cannot render in a table)\n\n\n\n\nFor more examples and details of using markdown in Quarto, see the official Quarto “Markdown Basics” documentation.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Why Quarto</span>"
+    ]
+  },
+  {
+    "objectID": "why-qmd.html#summary",
+    "href": "why-qmd.html#summary",
+    "title": "2  Why Quarto",
+    "section": "4.1 Summary",
+    "text": "4.1 Summary\nIn this section we’ve learned about:\n\nWhat the value is in a reproducible report\nWhat is Markdown\nHow to combine software and writing\nHow to use Markdown",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Why Quarto</span>"
+    ]
+  },
+  {
+    "objectID": "why-qmd.html#learning-more",
+    "href": "why-qmd.html#learning-more",
+    "title": "2  Why Quarto",
+    "section": "4.2 Learning more",
+    "text": "4.2 Learning more\n\nPosit’s Quarto cheatsheet",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Why Quarto</span>"
+    ]
+  },
+  {
+    "objectID": "why-qmd.html#footnotes",
+    "href": "why-qmd.html#footnotes",
+    "title": "2  Why Quarto",
+    "section": "",
+    "text": "The article, Freedman, 2010, Heard via Garret Grolemund’s great talk↩︎",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Why Quarto</span>"
     ]
   },
   {
@@ -414,7 +414,7 @@
     "href": "using-qmd.html#the-anatomy-of-a-quarto-document",
     "title": "5  Using Quarto",
     "section": "5.4 The anatomy of a Quarto document",
-    "text": "5.4 The anatomy of a Quarto document\nThis is a Quarto document (demo). It has three parts:\n\nMetadata (YAML)\nText (markdown formatting)\nCode (code formatting)\n\n\n\n5.4.1 Metadata\nThe metadata of the document tells you how it is formed - what the title is, what date to put, and other control information. If you’re familiar with LaTeX, this is kind of like how you specify the many options, what sort of document it is, what styles to use, and so on at the front matter.\nQuarto documents use YAML (YAML Ain’t Markup Language) to provide the metadata. It looks like this.\n---\ntitle: \"An example document\"\nauthor: \"Nicholas Tierney\"\nformat: html\n---\nIt starts and ends with three dashes ---, and has fields like the following: title, author, and format.\ntitle and author are special inputs which place the title and author information at the top of the document in large font. They are optional!\nformat: html tells us we want this to be a HTML formatted document - you’ll see what this looks like in a moment!\n\n\n5.4.2 Text\nIs markdown, as we discussed in the earlier section,\nIt provides a simple way to mark up text\n- bullet list\n- bullet list\n- bullet list\n\n1. numbered list\n2. numbered list\n3. numbered list\n\n__bold__, **bold**, _italic_, *italic*\n\n&gt; quote of something profound \n```r\n# computer code goes in three back ticks\n1 + 1\n2 + 2\n```\nWould be converted to:\n\nbullet list\nbullet list\nbullet list\n\n\nnumbered list\nnumbered list\nnumbered list\n\nbold, bold, italic, italic\n\nquote of something profound\n\n\n# computer code goes in three back ticks\n1 + 1\n\n[1] 2\n\n2 + 2\n\n[1] 4\n\n\n\n\n5.4.3 Code\nWe refer to code in an Quarto document in two ways:\n\nCode chunks, and\nInline code.\n\n\n5.4.3.1 Code chunks\nCode chunks are marked by three backticks and curly braces. We put the letter r inside them to denote them as “r” code chunks, but you can instead use “python” and “julia” instead:\n\nRpythonjulia\n\n\n```{r}\n#| label: r-chunk-name\n# a code chunk\n```\n\n\n```{python}\n#| label: py-chunk-name\n# a code chunk\n```\n\n\n```{julia}\n#| label: julia-chunk-name\n# a code chunk\n```\n\n\n\n\n\n\n\n\n\nThis book currently focusses only on R\n\n\n\n\n\nQuarto provides support for R, Python, Julia, and Observable, which are all very powerful and awesome languages! However currently we will only be focussing on using R in this book. But I want to make sure that you know you can use python, or Julia, or Observable! More languages will be supported into the future, I believe.\n\n\n\na backtick is a special character you might not have seen before, it is typically located under the tilde key (~). On USA / Australia keyboards, is under the escape key:\n\n\n\n\n\nimage from https://commons.wikimedia.org/wiki/File:ANSI_Keyboard_Layout_Diagram_with_Form_Factor.svg\n\n\n\n\n\n\n\n5.4.4 Chunk names\nEvery chunk should ideally have a name. As I’ve mentioned earlier, naming things is hard, but follow these rules and you’ll be fine:\n\none word that describes the action (e.g., “read”)\none word that describes the thing inside the code (e.g, “gapminder”)\nseparate words with “-” or “_” (e.g., read-gapminder)",
+    "text": "5.4 The anatomy of a Quarto document\nThis is a Quarto document (demo). It has three parts:\n\nMetadata (YAML)\nText (markdown formatting)\nCode (code formatting)\n\n\n\n5.4.1 Metadata\nThe metadata of the document tells you how it is formed - what the title is, what date to put, and other control information. If you’re familiar with LaTeX, this is kind of like how you specify the many options, what sort of document it is, what styles to use, and so on at the front matter.\nQuarto documents use YAML (YAML Ain’t Markup Language) to provide the metadata. It looks like this.\n---\ntitle: \"An example document\"\nauthor: \"Nicholas Tierney\"\nformat: html\n---\nIt starts and ends with three dashes ---, and has fields like the following: title, author, and format.\ntitle and author are special inputs which place the title and author information at the top of the document in large font. They are optional!\nformat: html tells us we want this to be a HTML formatted document - you’ll see what this looks like in a moment!\n\n\n5.4.2 Text\nIs markdown, as we discussed in the earlier section,\nIt provides a simple way to mark up text\n\nMarkdownRendered text\n\n\n- bullet list\n- bullet list\n- bullet list\n\n1. numbered list\n2. numbered list\n3. numbered list\n\n__bold__, **bold**, _italic_, *italic*\n\n&gt; quote of something profound \n```r\n# computer code goes in three back ticks\n1 + 1\n2 + 2\n```\n\n\n\nbullet list\nbullet list\nbullet list\n\n\nnumbered list\nnumbered list\nnumbered list\n\nbold, bold, italic, italic\n\nquote of something profound\n\n\n# computer code goes in three back ticks\n1 + 1\n\n[1] 2\n\n2 + 2\n\n[1] 4\n\n\n\n\n\n\n\n5.4.3 Code\nWe refer to code in an Quarto document in two ways:\n\nCode chunks, and\nInline code.\n\n\n5.4.3.1 Code chunks\nCode chunks are marked by three backticks and curly braces. We put the letter r inside them to denote them as “r” code chunks, but you can instead use “python” and “julia” instead:\n\nRpythonjulia\n\n\n```{r}\n#| label: r-chunk-name\n# a code chunk\n```\n\n\n```{python}\n#| label: py-chunk-name\n# a code chunk\n```\n\n\n```{julia}\n#| label: julia-chunk-name\n# a code chunk\n```\n\n\n\n\n\n\n\n\n\nThis book currently focusses only on R\n\n\n\n\n\nQuarto provides support for R, Python, Julia, and Observable, which are all very powerful and awesome languages! However currently we will only be focussing on using R in this book. But I want to make sure that you know you can use python, or Julia, or Observable! More languages will be supported into the future, I believe.\n\n\n\na backtick is a special character you might not have seen before, it is typically located under the tilde key (~). On USA / Australia keyboards, is under the escape key:\n\n\n\n\n\nimage from https://commons.wikimedia.org/wiki/File:ANSI_Keyboard_Layout_Diagram_with_Form_Factor.svg\n\n\n\n\n\n\n\n5.4.4 Chunk names\nEvery chunk should ideally have a name. As I’ve mentioned earlier, naming things is hard, but follow these rules and you’ll be fine:\n\none word that describes the action (e.g., “read”)\none word that describes the thing inside the code (e.g, “gapminder”)\nseparate words with “-” or “_” (e.g., read-gapminder)",
     "crumbs": [
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Using Quarto</span>"
     ]
@@ -424,7 +424,7 @@
     "href": "using-qmd.html#code-chunk-options",
     "title": "5  Using Quarto",
     "section": "5.5 Code chunk options",
-    "text": "5.5 Code chunk options\nYou can control how the code is output by changing the code chunk options, which are written with a #|, called a “hash-pipe”, since # is “hash”, and | is “pipe”, but might sometimes be called “bar” or “v-bar”.\n\n```{r}\n#| label: read-gapminder\n#| eval: false\ngap &lt;- read_csv(\"gapminder.csv\")\n```\n\nA nice feature of Quarto + Rstudio is that they provide code completion when you start writing the code chunk options, and they will provide options when hitting “tab”.\n\nIn the past Rmarkdown required “TRUE” and “FALSE”, but note that Quarto always uses true or false in lowercase, and never “yes” or “no”.\nThe code chunks you need to know about right now are:\n\neval: true/false Do you want to evaluate the code?\necho: true/false Do you want to print the code?\ncache: true / false Do you want to save the output of the chunk so it doesn’t have to run next time?\ninclude: Do you want to include code output in the final output document? Setting to false means nothing is put into the output document, but the code is still run.\n\n\n  \n\nYou can read more about the options at the official documentation: https://quarto.org/docs/computations/execution-options.html\n\n5.5.1 Inline code\nSometimes you want to run the code inside a sentence. When the code is run inside the sentence, it is called running the code “inline”.\nYou might want to run the code inline to name the number of variables or rows in a dataset in a sentence like:\n\nThere are XXX observations in the airquality dataset, and XXX variables.\n\nYou can call code “inline” like so:\n```{r}\nr_heights &lt;- c(153, 151, 156, 160, 171)\nr_mean &lt;- mean(r_heights)\n```\n\nThe mean of these heights is `{r} r_mean`\nWhich will produce the following sentence:\n\nThe mean of these heights is 158.2\n\nEssentially, instead of using three backticks to write multiple lines of code, you use a single backtick. You can think of this as a backtick being used inside text for a one liner, whereas creating a code fence with three backticks indicates something longer.\nThere are `{r} nrow(airquality)` observations in the airquality dataset, \nand `{r} ncol(airquality)` variables.\nWhich gives you the following sentence\n\nThere are 153 observations in the airquality dataset, and 6 variables.\n\nWhat’s great about this is that if your data changes upstream, then you don’t need to work out where you mentioned your data and change that bit of text. You just render the document and it takes care of these details.",
+    "text": "5.5 Code chunk options\nYou can control how the code is output by changing the code chunk options, which are written with a #|, called a “hash-pipe”, since # is “hash”, and | is “pipe”, but might sometimes be called “bar” or “v-bar”.\n\n```{r}\n#| label: read-gapminder\n#| eval: false\ngap &lt;- read_csv(\"gapminder.csv\")\n```\n\nA nice feature of Quarto + Rstudio is that they provide code completion when you start writing the code chunk options, and they will provide options when hitting “tab”.\n\nIn the past Rmarkdown required “TRUE” and “FALSE”, but note that Quarto always uses true or false in lowercase, and never “yes” or “no”.\nThe code chunks you need to know about right now are:\n\neval: true/false Do you want to evaluate the code?\necho: true/false Do you want to print the code?\ncache: true / false Do you want to save the output of the chunk so it doesn’t have to run next time?\ninclude: Do you want to include code output in the final output document? Setting to false means nothing is put into the output document, but the code is still run.\n\n\n  \n\nYou can read more about the options at the official documentation: https://quarto.org/docs/computations/execution-options.html\n\n\n\n\n\n\nConverting Rmarkdown to Quarto\n\n\n\n\n\nIf you’ve got some Rmarkdown document and you want to change over the chunk headers, you can run code like this:\n\nknitr::convert_chunk_header(\n  input = \"paper.qmd\",\n  output = identity\n)\n\n\n\n\n\n5.5.1 Inline code\nSometimes you want to run the code inside a sentence. When the code is run inside the sentence, it is called running the code “inline”.\nYou might want to run the code inline to name the number of variables or rows in a dataset in a sentence like:\n\nThere are XXX observations in the airquality dataset, and XXX variables.\n\nYou can call code “inline” like so:\n```{r}\nr_heights &lt;- c(153, 151, 156, 160, 171)\nr_mean &lt;- mean(r_heights)\n```\n\nThe mean of these heights is `{r} r_mean`\nWhich will produce the following sentence:\n\nThe mean of these heights is 158.2\n\nEssentially, instead of using three backticks to write multiple lines of code, you use a single backtick. You can think of this as a backtick being used inside text for a one liner, whereas creating a code fence with three backticks indicates something longer.\nThere are `{r} nrow(airquality)` observations in the airquality dataset, \nand `{r} ncol(airquality)` variables.\nWhich gives you the following sentence\n\nThere are 153 observations in the airquality dataset, and 6 variables.\n\nWhat’s great about this is that if your data changes upstream, then you don’t need to work out where you mentioned your data and change that bit of text. You just render the document and it takes care of these details.",
     "crumbs": [
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Using Quarto</span>"
     ]
@@ -564,7 +564,7 @@
     "href": "keyboard-shortcuts.html#table-of-common-shortcuts",
     "title": "7  Keyboard Shortcuts",
     "section": "7.4 Table of Common Shortcuts",
-    "text": "7.4 Table of Common Shortcuts\nBelow is a small table of tasks you can perform with keyboard\n\n\n\n\n\n\n\n\nAction\nWindows/Linux\nMac\n\n\n\n\nKnit document\nCtrl + Shift + K\nCmd + Shift + K\n\n\nInsert Chunk\nCtrl + Alt + I\nCmd + Option + I\n\n\nRun Current Chunk\nCtrl + Alt + C\nCmd + Option + C\n\n\nJump to Shift+Alt+J\nCmd+Shift+Option+J\n\n\n\nShow Keyboard Shortcut Reference\nAlt+Shift+K\nOption+Shift+K\n\n\nCreate multiple cursors\nCtrl + Alt + Up/Down\noption + control + Up/Down\n\n\nDelete the current line\nCtrl + D\nCmd + D\n\n\nUn/Comment out a line\nCtrl + Shift + C\nCmd + Shift + C\n\n\nReformat Section\nCtrl + Shift + A\nCmd + Shift + A",
+    "text": "7.4 Table of Common Shortcuts\nBelow is a small table of tasks you can perform with keyboard\n\n\n\n\n\n\n\n\nAction\nWindows/Linux\nMac\n\n\n\n\nRender document\nCtrl + Shift + K\nCmd + Shift + K\n\n\nInsert Chunk\nCtrl + Alt + I\nCmd + Option + I\n\n\nRun Current Chunk\nCtrl + Alt + C\nCmd + Option + C\n\n\nJump to Shift+Alt+J\nCmd+Shift+Option+J\n\n\n\nShow Keyboard Shortcut Reference\nAlt+Shift+K\nOption+Shift+K\n\n\nCreate multiple cursors\nCtrl + Alt + Up/Down\noption + control + Up/Down\n\n\nDelete the current line\nCtrl + D\nCmd + D\n\n\nUn/Comment out a line\nCtrl + Shift + C\nCmd + Shift + C\n\n\nReformat Section\nCtrl + Shift + A\nCmd + Shift + A",
     "crumbs": [
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>Keyboard Shortcuts</span>"
     ]
@@ -574,7 +574,7 @@
     "href": "keyboard-shortcuts.html#further-reading",
     "title": "7  Keyboard Shortcuts",
     "section": "7.5 Further Reading",
-    "text": "7.5 Further Reading\n\nThe Rstudio Cheat Sheet has an index of shortcuts.\nThis help file has a guide to customising keyboard shortcuts.\nThe shrtcts R package for creating new shortcuts.\n\n\n\n\n\n\n\nYour Turn\n\n\n\n\nIn your awesome quarto document\n\nOractice using the Keyboard Shortcut Reference and find the keyboard shortcut for inserting a pipe character ( %&gt;% or |&gt;)\nSpend 3 minutes practicing these commands.\n\nAsk Nick to demonstrate some of his favourite shortcut combos",
+    "text": "7.5 Further Reading\n\nThe Rstudio Cheat Sheet has an index of shortcuts.\nThis help file has a guide to customising keyboard shortcuts.\nThe shrtcts R package for creating new shortcuts.\n\n\n\n\n\n\n\nYour Turn\n\n\n\n\nIn your awesome quarto document\n\nPractice using the Keyboard Shortcut Reference and find the keyboard shortcut for inserting a pipe character ( %&gt;% or |&gt;)\nSpend 3 minutes practicing these commands.\n\nAsk Nick to demonstrate some of his favourite shortcut combos\n\ne.g., multiline cursor, yank lines, copy lines, go to file/function",
     "crumbs": [
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>Keyboard Shortcuts</span>"
     ]
@@ -844,7 +844,7 @@
     "href": "cite-fig-tab-sec.html#how-to-refer-to-tables-and-figures-in-text-demo",
     "title": "11  Citing Figures, Tables & Sections",
     "section": "11.4 How to refer to tables and figures in text? (demo)",
-    "text": "11.4 How to refer to tables and figures in text? (demo)\n\nTables are referenced in text with @tbl-label\nFigures are references in text with @fig-label\n\nImportantly here, for these two above examples to work, the things that they are referring to must have the exact label tbl-label and fig-label, respectively. That is, they must have the tbl or the fig part in there!\nSo, in order to use this referencing style, you must use specific labelling of your code chunks. For example, if you have some code like this:\n\n```{r}\n#| label: example-figure\nimage(volcano)\n```\n\n\n\n\n\n\n\n\nThen you cannot reference this figure in text - @example-figure does not work: (example-figure?). We get the error: “example-figure?”.\nIt would need to have a label like:\n\n```{r}\n#| label: fig-example\nimage(volcano)\n```\n\n\n\n\n\n\n\nFigure 11.1\n\n\n\n\n\nThen you can reference it with: @fig-example - Figure 11.1.\n\n\n\n\n\n\nHover your mouse on a figure!\n\n\n\nNote the awesome on-hover behaviour for hovering over a reference!\n\n\nAlso note that there are a variety of ways to specify the figure:\n\n@fig-example: Figure 11.1\n@Fig-example: Figure 11.1\n[Fig @fig-example]: Fig 11.1\n-@fig-example: Figure 11.1\n\n(reference here: https://quarto.org/docs/authoring/cross-references.html#references)\n\n\n\n\n\n\nYour Turn\n\n\n\n\nUsing “03-qmd-lm-tables-inline-qmd”\n\nConvert your output to use fig prefixes to reference figures\n\n\n\n\n\n\n\n\n\n\nDemo\n\n\n\n\n```{r}\n#| label: fig-gg-oz\n#| fig-cap: Life expectancy from 1952 - 2007 for Australia. Life expectancy increases\n#|   steadily except from 1962 to 1969. We can safely say our life expectancy is\n#|   higher than it has ever been!\nlibrary(ggplot2)\nlibrary(dplyr)\ngapminder %&gt;%\n  filter(country == \"Australia\") %&gt;%\n  ggplot(aes(x = year,\n             y = lifeExp)) + \n  geom_point()\n```\n\n\n\n\n\n\n\nFigure 11.2: Life expectancy from 1952 - 2007 for Australia. Life expectancy increases steadily except from 1962 to 1969. We can safely say our life expectancy is higher than it has ever been!\n\n\n\n\n\nAustralia’s life expectancy has increased a great deal over the past 50 years (See Figure 11.2).\n\n\n\n\n\n\n\n\nYour Turn\n\n\n\n\nUsing “03-qmd-lm-tables-inline-qmd”:\n\nAdd a new plot in your document and reference it",
+    "text": "11.4 How to refer to tables and figures in text? (demo)\n\nTables are referenced in text with @tbl-label\nFigures are references in text with @fig-label\n\nImportantly here, for these two above examples to work, the things that they are referring to must have the exact label tbl-label and fig-label, respectively. That is, they must have the tbl or the fig part in there!\nSo, in order to use this referencing style, you must use specific labelling of your code chunks. For example, if you have some code like this:\n\n```{r}\n#| label: example-figure\nimage(volcano)\n```\n\n\n\n\n\n\n\n\nThen you cannot reference this figure in text - @example-figure does not work: (example-figure?). We get the error: “example-figure?”.\nIt would need to have a label like:\n\n```{r}\n#| label: fig-example\nimage(volcano)\n```\n\n\n\n\n\n\n\nFigure 11.1\n\n\n\n\n\nThen you can reference it with: @fig-example - Figure 11.1.\n\n\n\n\n\n\nHover your mouse on a reference!\n\n\n\nNote the awesome on-hover behaviour for hovering over a reference!\n\n\nAlso note that there are a variety of ways to specify the figure:\n\n@fig-example: Figure 11.1\n@Fig-example: Figure 11.1\n[Fig @fig-example]: Fig 11.1\n-@fig-example: Figure 11.1\n\n(reference here: https://quarto.org/docs/authoring/cross-references.html#references)\n\n\n\n\n\n\nYour Turn\n\n\n\n\nUsing “03-qmd-lm-tables-inline-qmd”\n\nConvert your output to use fig prefixes to reference figures\n\n\n\n\n\n\n\n\n\n\nDemo\n\n\n\n\n```{r}\n#| label: fig-gg-oz\n#| fig-cap: Life expectancy from 1952 - 2007 for Australia. Life expectancy increases\n#|   steadily except from 1962 to 1969. We can safely say our life expectancy is\n#|   higher than it has ever been!\nlibrary(ggplot2)\nlibrary(dplyr)\ngapminder %&gt;%\n  filter(country == \"Australia\") %&gt;%\n  ggplot(aes(x = year,\n             y = lifeExp)) + \n  geom_point()\n```\n\n\n\n\n\n\n\nFigure 11.2: Life expectancy from 1952 - 2007 for Australia. Life expectancy increases steadily except from 1962 to 1969. We can safely say our life expectancy is higher than it has ever been!\n\n\n\n\n\nAustralia’s life expectancy has increased a great deal over the past 50 years (See Figure 11.2).\n\n\n\n\n\n\n\n\nYour Turn\n\n\n\n\nUsing “03-qmd-lm-tables-inline-qmd”:\n\nAdd a new plot in your document and reference it",
     "crumbs": [
       "<span class='chapter-number'>11</span>  <span class='chapter-title'>Citing Figures, Tables & Sections</span>"
     ]
@@ -924,7 +924,7 @@
     "href": "citations-and-styles.html#how-to-cite-things",
     "title": "12  Citing Articles & Bibliography Styles",
     "section": "12.4 How to cite things",
-    "text": "12.4 How to cite things\nCiting things in a Quarto document is straightforward, you refer to articles you want to cite using [@article-handle]. Here, article-handle matches the article handle in your .bib file.\nThis .bib file is referred to in the YAML of your document, under the option bibliography: filename.bib:\n---\ntitle: \nauthor:\noutput: html_document\nbibliography: references.bib\n---\n\n12.4.1 What is a .bib file?\nGood question.\n.bib is a format for storing references from the heyday of LaTeX. It contains plain text with reference information for the article. Here’s an example one:\n  @Book{ggplot2,\n    author = {Hadley Wickham},\n    title = {ggplot2: Elegant Graphics for Data Analysis},\n    publisher = {Springer-Verlag New York},\n    year = {2016},\n    isbn = {978-3-319-24277-4},\n    url = {http://ggplot2.org},\n  }\n\n\n12.4.2 And how do I generate these .bib files?\nYou can use the citation function in R for R itself, and for specific R packages.\nWe can get the citation for R with:\n\ncitation()\n\nTo cite R in publications use:\n\n  R Core Team (2025). _R: A Language and Environment for Statistical\n  Computing_. R Foundation for Statistical Computing, Vienna, Austria.\n  &lt;https://www.R-project.org/&gt;.\n\nA BibTeX entry for LaTeX users is\n\n  @Manual{,\n    title = {R: A Language and Environment for Statistical Computing},\n    author = {{R Core Team}},\n    organization = {R Foundation for Statistical Computing},\n    address = {Vienna, Austria},\n    year = {2025},\n    url = {https://www.R-project.org/},\n  }\n\nWe have invested a lot of time and effort in creating R, please cite it\nwhen using it for data analysis. See also 'citation(\"pkgname\")' for\nciting R packages.\n\n\nAnd for ggplot2 with\n\ncitation(\"ggplot2\")\n\nTo cite ggplot2 in publications, please use\n\n  H. Wickham. ggplot2: Elegant Graphics for Data Analysis.\n  Springer-Verlag New York, 2016.\n\nA BibTeX entry for LaTeX users is\n\n  @Book{,\n    author = {Hadley Wickham},\n    title = {ggplot2: Elegant Graphics for Data Analysis},\n    publisher = {Springer-Verlag New York},\n    year = {2016},\n    isbn = {978-3-319-24277-4},\n    url = {https://ggplot2.tidyverse.org},\n  }\n\n\nFor journals or books, you’ll need to get a specific .bib file. Yes, this can be a bit of a pain, but this is where you need to use a reference management software like Zotero, Mendeley, papers, or paperpile. The important thing to to use something. These all allow you to get .bib files of your articles, which you can then placec in your references.bib file.\n\n\n\n\n\n\nYour Turn\n\n\n\n\nUsing “05-qmd-bib-polish.qmd”\n\nGenerate a references.bib file to place your citations\nUsing the citation() function, generate citations for the packages we have used, “dplyr”, “ggplot2”, “gapminder”, and for the R software, place these in your references.bib file\nReference these in your document\nAdd a final heading in your file called #bibliography\nRender the document",
+    "text": "12.4 How to cite things\nCiting things in a Quarto document is straightforward, you refer to articles you want to cite using [@article-handle]. Here, article-handle matches the article handle in your .bib file.\nThis .bib file is referred to in the YAML of your document, under the option bibliography: filename.bib:\n---\ntitle: \nauthor:\noutput: html_document\nbibliography: references.bib\n---\n\n12.4.1 What is a .bib file?\nGood question.\n.bib is a format for storing references from the heyday of LaTeX. It contains plain text with reference information for the article. Here’s an example one:\n  @Book{ggplot2,\n    author = {Hadley Wickham},\n    title = {ggplot2: Elegant Graphics for Data Analysis},\n    publisher = {Springer-Verlag New York},\n    year = {2016},\n    isbn = {978-3-319-24277-4},\n    url = {http://ggplot2.org},\n  }\n\n\n12.4.2 And how do I generate these .bib files?\nYou can use the citation function in R for R itself, and for specific R packages.\nWe can get the citation for R with:\n\ncitation()\n\nTo cite R in publications use:\n\n  R Core Team (2025). _R: A Language and Environment for Statistical\n  Computing_. R Foundation for Statistical Computing, Vienna, Austria.\n  &lt;https://www.R-project.org/&gt;.\n\nA BibTeX entry for LaTeX users is\n\n  @Manual{,\n    title = {R: A Language and Environment for Statistical Computing},\n    author = {{R Core Team}},\n    organization = {R Foundation for Statistical Computing},\n    address = {Vienna, Austria},\n    year = {2025},\n    url = {https://www.R-project.org/},\n  }\n\nWe have invested a lot of time and effort in creating R, please cite it\nwhen using it for data analysis. See also 'citation(\"pkgname\")' for\nciting R packages.\n\n\nAnd for ggplot2 with\n\ncitation(\"ggplot2\")\n\nTo cite ggplot2 in publications, please use\n\n  H. Wickham. ggplot2: Elegant Graphics for Data Analysis.\n  Springer-Verlag New York, 2016.\n\nA BibTeX entry for LaTeX users is\n\n  @Book{,\n    author = {Hadley Wickham},\n    title = {ggplot2: Elegant Graphics for Data Analysis},\n    publisher = {Springer-Verlag New York},\n    year = {2016},\n    isbn = {978-3-319-24277-4},\n    url = {https://ggplot2.tidyverse.org},\n  }\n\n\nFor journals or books, you’ll need to get a specific .bib file. Yes, this can be a bit of a pain, but this is where you need to use a reference management software like Zotero, Mendeley, papers, or paperpile. The important thing to to use something. These all allow you to get .bib files of your articles, which you can then placec in your references.bib file.\n\n\n\n\n\n\nYour Turn\n\n\n\n\nUsing “05-qmd-bib-polish.qmd”\n\nGenerate a references.bib file to place your citations\nUsing the citation() function, generate citations for the packages we have used, “dplyr”, “ggplot2”, “gapminder”, and for the R software, place these in your references.bib file\nReference these in your document\nAdd a final heading in your file called #bibliography\nCite the packages you use when you use them\nhint: https://quarto.org/docs/authoring/footnotes-and-citations.html\nhint: look at the names in packages.bib\n\nTidy up the structure, provide some more words around the introduction and results\nRender the document",
     "crumbs": [
       "<span class='chapter-number'>12</span>  <span class='chapter-title'>Citing Articles & Bibliography Styles</span>"
     ]
@@ -934,7 +934,7 @@
     "href": "citations-and-styles.html#how-to-change-the-bibliography-style",
     "title": "12  Citing Articles & Bibliography Styles",
     "section": "12.5 How to change the bibliography style",
-    "text": "12.5 How to change the bibliography style\nOK so now you’ve got your bibliography, but you now need to change it to a specific journal format. Luckily, this is now pretty easy. You can change your citation style from the citation style language\nSimilar to how you referred to your .bib file with bibliography: ref.bib, you do something similar:\n---\ntitle:\nauthor:\noutput: html_document\nbibliography: references.bib\ncsl: my_journal.csl\n---\n\n\n\n\n\n\nYour Turn\n\n\n\n\nselect your bibliography style to be one from your favourite journal at the CSL github repo here: https://github.com/citation-style-language/styles (&gt; 2,600 citations and counting)\nplace this in your rstudio project\nrefer to it in the YAML\nRender your document and observe your greatness",
+    "text": "12.5 How to change the bibliography style\nOK so now you’ve got your bibliography, but you now need to change it to a specific journal format. Luckily, this is now pretty easy. You can change your citation style from the citation style language\nSimilar to how you referred to your .bib file with bibliography: ref.bib, you do something similar:\n---\ntitle:\nauthor:\noutput: html_document\nbibliography: references.bib\ncsl: my_journal.csl\n---\n\n\n\n\n\n\nYour Turn\n\n\n\nIn “05-qmd-bib-polish.qmd”:\n\nselect your bibliography style to be one from your favourite journal at the CSL github repo here: https://github.com/citation-style-language/styles (&gt; 2,600 citations and counting)\nplace this in your rstudio project\nrefer to it in the YAML\nRender your document and observe your greatness",
     "crumbs": [
       "<span class='chapter-number'>12</span>  <span class='chapter-title'>Citing Articles & Bibliography Styles</span>"
     ]
@@ -954,7 +954,7 @@
     "href": "citations-and-styles.html#how-to-not-print-suppress-the-bibliography",
     "title": "12  Citing Articles & Bibliography Styles",
     "section": "12.7 How to not print / suppress the bibliography?",
-    "text": "12.7 How to not print / suppress the bibliography?\nThe bibliography can be suppressed with the YAML option suppress-bibliography\ntitle: \"document\"\noutput: html\nbibliography: file.bib\nsuppress-bibliography: true\n\n\n\n\n\n\nYour Turn\n\n\n\n\nGenerate a bibliography and an appendix that follows it\n\n\n\n\n\n\n\n\n\nDemo: Use the Visual Editor mode of RStudio\n\n\n\nShow off the citation auto-complete magic!\n\nsearch for DOIs\nsearch for R packages\nsearch pubmed/datacite/more!",
+    "text": "12.7 How to not print / suppress the bibliography?\nThe bibliography can be suppressed with the YAML option suppress-bibliography\ntitle: \"document\"\noutput: html\nbibliography: file.bib\nsuppress-bibliography: true\n\n\n\n\n\n\nYour Turn\n\n\n\nIn “05-qmd-bib-polish.qmd”:\n\nGenerate a bibliography and an appendix that follows it\n\n\n\n\n\n\n\n\n\nDemo: Use the Visual Editor mode of RStudio\n\n\n\nShow off the citation auto-complete magic!\n\nsearch for DOIs\nsearch for R packages\nsearch pubmed/datacite/more!",
     "crumbs": [
       "<span class='chapter-number'>12</span>  <span class='chapter-title'>Citing Articles & Bibliography Styles</span>"
     ]
@@ -1024,137 +1024,7 @@
     "href": "common-problems.html#the-errors",
     "title": "14  Common Problems with Quarto (and some solutions)",
     "section": "14.3 The errors",
-    "text": "14.3 The errors\nWhat follows from here are all the errors you might in an Quarto document, with the following structure:\n\nWhat they might look like\nWhat the error message might appear to be, and\nHow to solve them",
-    "crumbs": [
-      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Common Problems with Quarto (and some solutions)</span>"
-    ]
-  },
-  {
-    "objectID": "common-problems.html#python-not-found",
-    "href": "common-problems.html#python-not-found",
-    "title": "14  Common Problems with Quarto (and some solutions)",
-    "section": "14.4 Python not found",
-    "text": "14.4 Python not found\nAn error like:\nError:\n! /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/config-3.7m-darwin/libpython3.7.dylib - dlopen(/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/config-3.7m-darwin/libpython3.7.dylib, 0x000A): tried: '/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/config-3.7m-darwin/libpython3.7.dylib' (mach-o file, but is an incompatible architecture (have 'x86_64', need 'arm64e' or 'arm64')), '/System/Volumes/Preboot/Cryptexes/OS/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/config-3.7m-darwin/libpython3.7.dylib' (no such file), '/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/config-3.7m-darwin/libpython3.7.dylib' (mach-o file, but is an incompatible architecture (have 'x86_64', need 'arm64e' or 'arm64')), '/Library/Frameworks/Python.framework/Versions/3.7/Python' (mach-o file, but is an incompatible architecture (have 'x86_64', need 'arm64e' or 'arm64')), '/System/Volumes/Preboot/Cryptexes/OS/Library/Frameworks/Python.framework/Versions/3.7/Python' (no such file), '/Library/Frameworks/Python.framework/Versions/3.7/Python' (mach-o file, but is an incompatible architecture (have 'x86_64', need 'arm64e' or 'arm64')), '/System/Library/Frameworks/Python.framework/Versions/3.7/Python' (no such file, not in dyld cache)\n\nBacktrace:\n  1. global .main()\n  2. execute(...)\n  3. rmarkdown::render(...)\n  4. knitr::knit(knit_input, knit_output, envir = envir, quiet = quiet)\n  5. knitr:::process_file(text, output)\n     ...\n 17. reticulate:::initialize_python()\n 18. base::tryCatch(...)\n 19. base (local) tryCatchList(expr, classes, parentenv, handlers)\n 20. base (local) tryCatchOne(expr, names, parentenv, handlers[[1L]])\n 21. value[[3L]](cond)\nThis error went away when I installed python - I went to https://www.python.org/downloads/ and followed the prompts",
-    "crumbs": [
-      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Common Problems with Quarto (and some solutions)</span>"
-    ]
-  },
-  {
-    "objectID": "common-problems.html#no-julia",
-    "href": "common-problems.html#no-julia",
-    "title": "14  Common Problems with Quarto (and some solutions)",
-    "section": "14.5 No julia",
-    "text": "14.5 No julia\nError in `loadNamespace()`:\n! there is no package called 'JuliaCall'\nBacktrace:\n  1. global .main()\n 14. base::loadNamespace(x)\n 15. base::withRestarts(stop(cond), retry_loadNamespace = function() NULL)\n 16. base (local) withOneRestart(expr, restarts[[1L]])\n 17. base (local) doWithOneRestart(return(expr), restart)\nFix: Install JuliaCall R package:\ninstall.packages(\"JuliaCall\")",
-    "crumbs": [
-      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Common Problems with Quarto (and some solutions)</span>"
-    ]
-  },
-  {
-    "objectID": "common-problems.html#duplication-duplicated-chunk-names",
-    "href": "common-problems.html#duplication-duplicated-chunk-names",
-    "title": "14  Common Problems with Quarto (and some solutions)",
-    "section": "14.6 “Duplication”: Duplicated chunk names",
-    "text": "14.6 “Duplication”: Duplicated chunk names\nWhat it might look like\nChunks like this:\n\n```{r}\n#| label: repeated\n1+1\n```\n\n```{r}\n#| label: repeated\n2+2\n```\n\nThe error message\nThis is caught before the document compiles with a warning like:\nprocessing file: duplicated-chunk-names.qmd\nError in parse_block(g[-1], g[1], params.src, markdown_mode) : \n  Duplicate chunk label 'repeated', which has been used for the chunk:\n1+1\nCalls: .main ... process_file -&gt; split_file -&gt; lapply -&gt; FUN -&gt; parse_block\nExecution halted\nThe important part to note is the start:\n.\n.\n.\nDuplicate chunk label 'repeated', which has been used for the chunk:\n1+1\n.\n.\n.\nHow to solve\n\nIn our case we have the same chunk name twice: ‘repeated’. Change the chunk name of one of them!",
-    "crumbs": [
-      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Common Problems with Quarto (and some solutions)</span>"
-    ]
-  },
-  {
-    "objectID": "common-problems.html#not-what-i-ordered-objects-not-created-in-the-right-order",
-    "href": "common-problems.html#not-what-i-ordered-objects-not-created-in-the-right-order",
-    "title": "14  Common Problems with Quarto (and some solutions)",
-    "section": "14.7 “Not what I ordered”: Objects not created in the right order",
-    "text": "14.7 “Not what I ordered”: Objects not created in the right order\nWhat it might look like\nplot(my_table)\n\nmy_table &lt;- table(mtcars$cyl)\nThe error message\nprocessing file: wrong-order.qmd\n  |......................................                   |  67% [plot-table]Error:\n! object 'my_table' not found\nBacktrace:\n 1. base::plot(my_table)\n\n\n\nQuitting from lines 8-12 [plot-table] (wrong-order.qmd)\nHow to solve\nThere is a good clue at the end of this message here, stating:\n.\n.\nQuitting from lines 8-12 [plot-table] (wrong-order.qmd)\n.\n.\nThe template here is:\nQuitting from lines START-END [CHUNK LABEL] (QUARTO-DOCUMENT-NAME.qmd)\nI would then navigate to those lines of code in the Quarto document, or search for the chunk label, and see if I can run that code interactively. A common problem with these kinds of errors is that they just might work interactively, because you might have run them out of sequence. However because a Quarto document goes from a fresh R session and runs the code from the top to the bottom in that order, the objects might not yet exist. So:\n\nRestart R - ensure it is a clean session without objects from the previous session hanging around\nRun code above the problem chunk\nRun code in the problem chunk\nHopefully this reproduces your error\nIf it doesn’t reproduce your error, consider trying to make a small reprex of the problem so you have try and figure out the bug.",
-    "crumbs": [
-      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Common Problems with Quarto (and some solutions)</span>"
-    ]
-  },
-  {
-    "objectID": "common-problems.html#forgotten-trails-i-missing-or",
-    "href": "common-problems.html#forgotten-trails-i-missing-or",
-    "title": "14  Common Problems with Quarto (and some solutions)",
-    "section": "14.8 Forgotten Trails I: Missing “(”, or “}”",
-    "text": "14.8 Forgotten Trails I: Missing “(”, or “}”\nWhat it might look like\n\n```{r}\n#| label: fig-volcano\n#| eval: false\nimage(volcano\n```\n\nThe error message\nprocessing file: forgotten-trails-i.qmd\n  |.....................................                   |  67% [fig-volcano]Error in `parse()`:\n! &lt;text&gt;:2:0: unexpected end of input\n1: image(volcano\n   ^\nBacktrace:\n  1. global .main()\n  2. execute(...)\n  3. rmarkdown::render(...)\n  4. knitr::knit(knit_input, knit_output, envir = envir, quiet = quiet)\n  5. knitr:::process_file(text, output)\n     ...\n 11. knitr:::eng_r(options)\n 14. knitr (local) evaluate(...)\n 15. evaluate::evaluate(...)\n 17. evaluate:::parse_all.character(...)\n 18. base::parse(text = x, srcfile = src)\n                                                                                                        \n\n\nQuitting from lines 7-9 [fig-volcano] (forgotten-trails-i.qmd)\n\nExecution halted\nHow to solve\nIn this case the key part to look at is\n|.....................................                   |  67% [fig-volcano]Error in `parse()`:\n! &lt;text&gt;:2:0: unexpected end of input\n1: image(volcano\n   ^\nHere the error message even points to the image code, and the message, “unexpected end of input” is referring to the missing closing parenthesis.\nWhat it might look like\n\n```{r\n#| label: fig-volcano\nimage(volcano)\n```\n\nThe error message\nThere is no error message here, but your output might look like this:\n\nForgotten Trails I: Missing “(”, or “}”\n{r #| label: fig-volcano image(volcano)\nHow to solve\nThe clue here for me is that we are getting this part of the code:\n{r #| label: fig-volcano image(volcano)\nWhen we would normally not see any information about the code chunk option, #| label.\nWhen you come across some funky looking text like that, look for a missing }.",
-    "crumbs": [
-      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Common Problems with Quarto (and some solutions)</span>"
-    ]
-  },
-  {
-    "objectID": "common-problems.html#forgotten-trails-ii-chunk-option-with-trailing-or-not-input",
-    "href": "common-problems.html#forgotten-trails-ii-chunk-option-with-trailing-or-not-input",
-    "title": "14  Common Problems with Quarto (and some solutions)",
-    "section": "14.9 “Forgotten Trails II”: Chunk option with trailing “, or not input",
-    "text": "14.9 “Forgotten Trails II”: Chunk option with trailing “, or not input\nWhat it might look like\n\nThe error message\nERROR: YAMLException: unexpected end of the stream within a double quoted scalar (forgotten-trails-ii.qmd, 8:188)\n7: #| label: fig-volcano\n8: #| fig-cap: \"An elevation plot of Maunga Whau (Mt Eden). Darker colours indicate higher parts of the volcano. We see one main peak on the left, followed by two smaller peaks on the right.\n                                                                                                                                                                                             ~\n9: image(volcano)\nHow to solve it?\n\nThe clue here is unexpected end of the stream within a double quoted scalar. Which, although it might sound a bit obtuse, is referring to a missing quote. The other clue is that the error captures the code chunk information and prints it out to the console.\nWhen you are working with this code in RStudio it also highlights the error:",
-    "crumbs": [
-      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Common Problems with Quarto (and some solutions)</span>"
-    ]
-  },
-  {
-    "objectID": "common-problems.html#the-path-not-taken-file-path-incorrect",
-    "href": "common-problems.html#the-path-not-taken-file-path-incorrect",
-    "title": "14  Common Problems with Quarto (and some solutions)",
-    "section": "14.10 “The Path Not Taken” File path incorrect",
-    "text": "14.10 “The Path Not Taken” File path incorrect\nWhat it might look like\n\n```{r}\n#| label: read-data\n#| echo: fenced\n#| eval: false\nlibrary(readr)\npenguins &lt;- read_csv(\"the_penguins.csv\")\n```\n\nThe error message\nprocessing file: path-not-taken.qmd\n  |.......................................                   |  67% [read-data]Error:\n! 'the_penguins.csv' does not exist in current working directory ('/Users/nick/github/njtierney/qmd-errors').\nBacktrace:\n 1. readr::read_csv(\"the_penguins.csv\")\n 4. vroom (local) `&lt;fn&gt;`(\"the_penguins.csv\")\n 5. vroom:::check_path(path)\n                                                                                                      \n\n\nQuitting from lines 7-10 [read-data] (path-not-taken.qmd)\n\nExecution halted\nHow to solve\nThe key part to pay attention to here is:\nError:! 'the_penguins.csv' does not exist in current working directory ('/Users/nick/github/njtierney/qmd-errors').\nIn this case, we need to ensure that the data file is in the right spot - in our example we have a typo - the data should be “data/penguins.csv”.",
-    "crumbs": [
-      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Common Problems with Quarto (and some solutions)</span>"
-    ]
-  },
-  {
-    "objectID": "common-problems.html#spolling-i-incorrectly-spelled-chunk-options",
-    "href": "common-problems.html#spolling-i-incorrectly-spelled-chunk-options",
-    "title": "14  Common Problems with Quarto (and some solutions)",
-    "section": "14.11 “Spolling I” Incorrectly spelled chunk options",
-    "text": "14.11 “Spolling I” Incorrectly spelled chunk options\nThese are often not an error, but you just won’t get the behaviour that you expect.\nWhat it might look like\n\n```{r}\n#| label: fig-penguins\n#| fig-caption: \"Penguin Bill Length against Flipper Length. coloured by species. Each dot represents the bill length and flipper length of a penguin, coloured by species (Adelie, Chinstrap, Gentoo), and facetted by the three islands (Biscoe, Dream, Torgensen). We learn that not all three species are present on all islands, only Adelie is present on each. Adelie generally has the smallest flipper and bill length of the penguins, with chinstrap and gentoo being similar. Flipper length is correlated with bill length.\"\n#| echo: fenced\nlibrary(palmerpenguins)\nlibrary(ggplot2)\nggplot(penguins,\n       aes(x = flipper_length_mm,\n           y = bill_length_mm,\n           colour = species)) + \n  geom_point() + \n  scale_color_brewer(palette = \"Dark2\") +\n  theme_minimal() + \n  facet_wrap(~island)\n```\n\n\nAbove we have @fig-counts...\n\nIn this case we do not get a rendered caption at all:\n\nThe root cause of this is that we have specified fig-caption instead of fig-cap.\nThis once caused me to rewrite a lot of code and an entire section of a paper until I realised the problem.\nThe error message\nThere is no error message for this! It is a silent error.\nHow to solve\nYou can resolve this issue by using fig-cap instead of fig-caption.",
-    "crumbs": [
-      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Common Problems with Quarto (and some solutions)</span>"
-    ]
-  },
-  {
-    "objectID": "common-problems.html#spolling-ii-incorrectly-spelled-chunk-option-inputs",
-    "href": "common-problems.html#spolling-ii-incorrectly-spelled-chunk-option-inputs",
-    "title": "14  Common Problems with Quarto (and some solutions)",
-    "section": "14.12 “Spolling II” Incorrectly spelled chunk option inputs",
-    "text": "14.12 “Spolling II” Incorrectly spelled chunk option inputs\nSo this is when you provide the wrong input to your chunk options. Like something that requires true gets “yes”, or something that needs \"100%\" instead gets 100\nWhat it might look like\n\nThe error message\n==&gt; quarto preview spolling-ii.qmd --to html --no-watch-inputs --no-browse\n\n(line 8, columns 11--14) Field \"cache\" has value yes, which must instead be `true` or `false`\n\n✖ The value yes is a string.\nℹ The error happened in location cache.\nℹ Quarto uses YAML 1.2, which interprets booleans strictly.\nℹ Try using true instead.\n\nERROR: Validation of YAML cell metadata failed.\nERROR: Render failed due to invalid YAML.\nHow to solve\nThere’s a bit of text here, but the key piece is:\n(line 8, columns 11--14) Field \"cache\" has value yes, which must instead be `true` or `false`\nWe have specified #| cache: yes instead of #| cache: true. A good thing to internalise here is that Quarto always uses lowercase true or false and never yes or no.",
-    "crumbs": [
-      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Common Problems with Quarto (and some solutions)</span>"
-    ]
-  },
-  {
-    "objectID": "common-problems.html#the-legend-of-link-i-your-images-in-dont-work.",
-    "href": "common-problems.html#the-legend-of-link-i-your-images-in-dont-work.",
-    "title": "14  Common Problems with Quarto (and some solutions)",
-    "section": "14.13 “The Legend of Link I”: Your images in ![]() don’t work.",
-    "text": "14.13 “The Legend of Link I”: Your images in ![]() don’t work.\nI often forget that it is ![](path/to/image), and not ![](\"path/to/image\"). There are no quote marks!",
-    "crumbs": [
-      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Common Problems with Quarto (and some solutions)</span>"
-    ]
-  },
-  {
-    "objectID": "common-problems.html#latex-errors",
-    "href": "common-problems.html#latex-errors",
-    "title": "14  Common Problems with Quarto (and some solutions)",
-    "section": "14.14 LaTeX errors",
-    "text": "14.14 LaTeX errors\nThere is no panacea for LaTeX errors, but if you aren’t familiar with “what that error message” might look like, here are some details.\nWhat it might look like\nThe error message\nHow to solve",
-    "crumbs": [
-      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Common Problems with Quarto (and some solutions)</span>"
-    ]
-  },
-  {
-    "objectID": "common-problems.html#i-want-to-include-inline-r-code-verbatim-to-show-an-example",
-    "href": "common-problems.html#i-want-to-include-inline-r-code-verbatim-to-show-an-example",
-    "title": "14  Common Problems with Quarto (and some solutions)",
-    "section": "14.15 I want to include inline R code verbatim to show an example",
-    "text": "14.15 I want to include inline R code verbatim to show an example\n… Like for a book on using Quarto or something.\nYou can use the chunk option echo: fenced. See the Quarto documentation on fenced echo for more details.\n\n\n\n\n\n\nTip\n\n\n\nBack before we had this option we used to have to do things like this:\nblog post by T. Hovorka from R Views\nIt boils down to this:\n r \"\\u0060r expression\\u0060\" .\nThankfully the folks at Quarto have made this much easier!",
-    "crumbs": [
-      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Common Problems with Quarto (and some solutions)</span>"
-    ]
-  },
-  {
-    "objectID": "common-problems.html#my-figure-or-table-isnt-being-cited",
-    "href": "common-problems.html#my-figure-or-table-isnt-being-cited",
-    "title": "14  Common Problems with Quarto (and some solutions)",
-    "section": "14.16 My Figure or Table isn’t being cited",
-    "text": "14.16 My Figure or Table isn’t being cited\nWhat it might look like\nYou create a figure,\nThe error message\nThere isn’t one - you just get @fig-chunk-name printed.\nHow to solve\nYou need to make sure that you actually print the table or plot. If you create the plot and save it, but do not print it in the document, then you will not be able to reference the plot or table.",
+    "text": "14.3 The errors\nWhat follows from here are all the errors you might in an Quarto document, with the following structure:\n\nWhat they might look like\nWhat the error message might appear to be, and\nHow to solve them\n\n\n14.3.1 Python not found\nAn error like:\nError:\n! /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/config-3.7m-darwin/libpython3.7.dylib - dlopen(/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/config-3.7m-darwin/libpython3.7.dylib, 0x000A): tried: '/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/config-3.7m-darwin/libpython3.7.dylib' (mach-o file, but is an incompatible architecture (have 'x86_64', need 'arm64e' or 'arm64')), '/System/Volumes/Preboot/Cryptexes/OS/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/config-3.7m-darwin/libpython3.7.dylib' (no such file), '/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/config-3.7m-darwin/libpython3.7.dylib' (mach-o file, but is an incompatible architecture (have 'x86_64', need 'arm64e' or 'arm64')), '/Library/Frameworks/Python.framework/Versions/3.7/Python' (mach-o file, but is an incompatible architecture (have 'x86_64', need 'arm64e' or 'arm64')), '/System/Volumes/Preboot/Cryptexes/OS/Library/Frameworks/Python.framework/Versions/3.7/Python' (no such file), '/Library/Frameworks/Python.framework/Versions/3.7/Python' (mach-o file, but is an incompatible architecture (have 'x86_64', need 'arm64e' or 'arm64')), '/System/Library/Frameworks/Python.framework/Versions/3.7/Python' (no such file, not in dyld cache)\n\nBacktrace:\n  1. global .main()\n  2. execute(...)\n  3. rmarkdown::render(...)\n  4. knitr::knit(knit_input, knit_output, envir = envir, quiet = quiet)\n  5. knitr:::process_file(text, output)\n     ...\n 17. reticulate:::initialize_python()\n 18. base::tryCatch(...)\n 19. base (local) tryCatchList(expr, classes, parentenv, handlers)\n 20. base (local) tryCatchOne(expr, names, parentenv, handlers[[1L]])\n 21. value[[3L]](cond)\nThis error went away when I installed python - I went to https://www.python.org/downloads/ and followed the prompts\n\n\n\n14.3.2 No julia\nError in `loadNamespace()`:\n! there is no package called 'JuliaCall'\nBacktrace:\n  1. global .main()\n 14. base::loadNamespace(x)\n 15. base::withRestarts(stop(cond), retry_loadNamespace = function() NULL)\n 16. base (local) withOneRestart(expr, restarts[[1L]])\n 17. base (local) doWithOneRestart(return(expr), restart)\nFix: Install JuliaCall R package:\ninstall.packages(\"JuliaCall\")\n\n\n14.3.3 “Duplication”: Duplicated chunk names\nWhat it might look like\nChunks like this:\n\n```{r}\n#| label: repeated\n1+1\n```\n\n```{r}\n#| label: repeated\n2+2\n```\n\nThe error message\nThis is caught before the document compiles with a warning like:\nprocessing file: duplicated-chunk-names.qmd\nError in parse_block(g[-1], g[1], params.src, markdown_mode) : \n  Duplicate chunk label 'repeated', which has been used for the chunk:\n1+1\nCalls: .main ... process_file -&gt; split_file -&gt; lapply -&gt; FUN -&gt; parse_block\nExecution halted\nThe important part to note is the start:\n.\n.\n.\nDuplicate chunk label 'repeated', which has been used for the chunk:\n1+1\n.\n.\n.\nHow to solve\n\nIn our case we have the same chunk name twice: ‘repeated’. Change the chunk name of one of them!\n\n\n\n14.3.4 “Not what I ordered”: Objects not created in the right order\nWhat it might look like\nplot(my_table)\n\nmy_table &lt;- table(mtcars$cyl)\nThe error message\nprocessing file: wrong-order.qmd\n  |......................................                   |  67% [plot-table]Error:\n! object 'my_table' not found\nBacktrace:\n 1. base::plot(my_table)\n\n\n\nQuitting from lines 8-12 [plot-table] (wrong-order.qmd)\nHow to solve\nThere is a good clue at the end of this message here, stating:\n.\n.\nQuitting from lines 8-12 [plot-table] (wrong-order.qmd)\n.\n.\nThe template here is:\nQuitting from lines START-END [CHUNK LABEL] (QUARTO-DOCUMENT-NAME.qmd)\nI would then navigate to those lines of code in the Quarto document, or search for the chunk label, and see if I can run that code interactively. A common problem with these kinds of errors is that they just might work interactively, because you might have run them out of sequence. However because a Quarto document goes from a fresh R session and runs the code from the top to the bottom in that order, the objects might not yet exist. So:\n\nRestart R - ensure it is a clean session without objects from the previous session hanging around\nRun code above the problem chunk\nRun code in the problem chunk\nHopefully this reproduces your error\nIf it doesn’t reproduce your error, consider trying to make a small reprex of the problem so you have try and figure out the bug.\n\n\n\n14.3.5 Forgotten Trails I: Missing “(”, or “}”\nWhat it might look like\n\n```{r}\n#| label: fig-volcano\n#| eval: false\nimage(volcano\n```\n\nThe error message\nprocessing file: forgotten-trails-i.qmd\n  |.....................................                   |  67% [fig-volcano]Error in `parse()`:\n! &lt;text&gt;:2:0: unexpected end of input\n1: image(volcano\n   ^\nBacktrace:\n  1. global .main()\n  2. execute(...)\n  3. rmarkdown::render(...)\n  4. knitr::knit(knit_input, knit_output, envir = envir, quiet = quiet)\n  5. knitr:::process_file(text, output)\n     ...\n 11. knitr:::eng_r(options)\n 14. knitr (local) evaluate(...)\n 15. evaluate::evaluate(...)\n 17. evaluate:::parse_all.character(...)\n 18. base::parse(text = x, srcfile = src)\n                                                                                                        \n\n\nQuitting from lines 7-9 [fig-volcano] (forgotten-trails-i.qmd)\n\nExecution halted\nHow to solve\nIn this case the key part to look at is\n|.....................................                   |  67% [fig-volcano]Error in `parse()`:\n! &lt;text&gt;:2:0: unexpected end of input\n1: image(volcano\n   ^\nHere the error message even points to the image code, and the message, “unexpected end of input” is referring to the missing closing parenthesis.\nWhat it might look like\n\n```{r\n#| label: fig-volcano\nimage(volcano)\n```\n\nThe error message\nThere is no error message here, but your output might look like this:\n\nForgotten Trails I: Missing “(”, or “}”\n{r #| label: fig-volcano image(volcano)\nHow to solve\nThe clue here for me is that we are getting this part of the code:\n{r #| label: fig-volcano image(volcano)\nWhen we would normally not see any information about the code chunk option, #| label.\nWhen you come across some funky looking text like that, look for a missing }.\n\n\n14.3.6 “Forgotten Trails II”: Chunk option with trailing “, or not input\nWhat it might look like\n\nThe error message\nERROR: YAMLException: unexpected end of the stream within a double quoted scalar (forgotten-trails-ii.qmd, 8:188)\n7: #| label: fig-volcano\n8: #| fig-cap: \"An elevation plot of Maunga Whau (Mt Eden). Darker colours indicate higher parts of the volcano. We see one main peak on the left, followed by two smaller peaks on the right.\n                                                                                                                                                                                             ~\n9: image(volcano)\nHow to solve it?\n\nThe clue here is unexpected end of the stream within a double quoted scalar. Which, although it might sound a bit obtuse, is referring to a missing quote. The other clue is that the error captures the code chunk information and prints it out to the console.\nWhen you are working with this code in RStudio it also highlights the error:\n\n\n\n\n14.3.7 “The Path Not Taken” File path incorrect\nWhat it might look like\n\n```{r}\n#| label: read-data\n#| echo: fenced\n#| eval: false\nlibrary(readr)\npenguins &lt;- read_csv(\"the_penguins.csv\")\n```\n\nThe error message\nprocessing file: path-not-taken.qmd\n  |.......................................                   |  67% [read-data]Error:\n! 'the_penguins.csv' does not exist in current working directory ('/Users/nick/github/njtierney/qmd-errors').\nBacktrace:\n 1. readr::read_csv(\"the_penguins.csv\")\n 4. vroom (local) `&lt;fn&gt;`(\"the_penguins.csv\")\n 5. vroom:::check_path(path)\n                                                                                                      \n\n\nQuitting from lines 7-10 [read-data] (path-not-taken.qmd)\n\nExecution halted\nHow to solve\nThe key part to pay attention to here is:\nError:! 'the_penguins.csv' does not exist in current working directory ('/Users/nick/github/njtierney/qmd-errors').\nIn this case, we need to ensure that the data file is in the right spot - in our example we have a typo - the data should be “data/penguins.csv”.\n\n\n14.3.8 “Spolling I” Incorrectly spelled chunk options\nThese are often not an error, but you just won’t get the behaviour that you expect.\nWhat it might look like\n\n```{r}\n#| label: fig-penguins\n#| fig-caption: \"Penguin Bill Length against Flipper Length. coloured by species. Each dot represents the bill length and flipper length of a penguin, coloured by species (Adelie, Chinstrap, Gentoo), and facetted by the three islands (Biscoe, Dream, Torgensen). We learn that not all three species are present on all islands, only Adelie is present on each. Adelie generally has the smallest flipper and bill length of the penguins, with chinstrap and gentoo being similar. Flipper length is correlated with bill length.\"\n#| echo: fenced\nlibrary(palmerpenguins)\nlibrary(ggplot2)\nggplot(penguins,\n       aes(x = flipper_length_mm,\n           y = bill_length_mm,\n           colour = species)) + \n  geom_point() + \n  scale_color_brewer(palette = \"Dark2\") +\n  theme_minimal() + \n  facet_wrap(~island)\n```\n\n\nAbove we have @fig-counts...\n\nIn this case we do not get a rendered caption at all:\n\nThe root cause of this is that we have specified fig-caption instead of fig-cap.\nThis once caused me to rewrite a lot of code and an entire section of a paper until I realised the problem.\nThe error message\nThere is no error message for this! It is a silent error.\nHow to solve\nYou can resolve this issue by using fig-cap instead of fig-caption.\n\n\n14.3.9 “Spolling II” Incorrectly spelled chunk option inputs\nSo this is when you provide the wrong input to your chunk options. Like something that requires true gets “yes”, or something that needs \"100%\" instead gets 100\nWhat it might look like\n\nThe error message\n==&gt; quarto preview spolling-ii.qmd --to html --no-watch-inputs --no-browse\n\n(line 8, columns 11--14) Field \"cache\" has value yes, which must instead be `true` or `false`\n\n✖ The value yes is a string.\nℹ The error happened in location cache.\nℹ Quarto uses YAML 1.2, which interprets booleans strictly.\nℹ Try using true instead.\n\nERROR: Validation of YAML cell metadata failed.\nERROR: Render failed due to invalid YAML.\nHow to solve\nThere’s a bit of text here, but the key piece is:\n(line 8, columns 11--14) Field \"cache\" has value yes, which must instead be `true` or `false`\nWe have specified #| cache: yes instead of #| cache: true. A good thing to internalise here is that Quarto always uses lowercase true or false and never yes or no.\n\n\n14.3.10 “The Legend of Link I”: Your images in ![]() don’t work.\nI often forget that it is ![](path/to/image), and not ![](\"path/to/image\"). There are no quote marks!\n\n\n\n14.3.11 LaTeX errors\nThere is no panacea for LaTeX errors, but if you aren’t familiar with “what that error message” might look like, here are some details.\nWhat it might look like\nThe error message\nHow to solve\n\n\n14.3.12 I want to include inline R code verbatim to show an example\n… Like for a book on using Quarto or something.\nYou can use the chunk option echo: fenced. See the Quarto documentation on fenced echo for more details.\n\n\n\n\n\n\nTip\n\n\n\nBack before we had this option we used to have to do things like this:\nblog post by T. Hovorka from R Views\nIt boils down to this:\n r \"\\u0060r expression\\u0060\" .\nThankfully the folks at Quarto have made this much easier!\n\n\n\n\n14.3.13 My Figure or Table isn’t being cited\nWhat it might look like\nYou create a figure,\nThe error message\nThere isn’t one - you just get @fig-chunk-name printed.\nHow to solve\nYou need to make sure that you actually print the table or plot. If you create the plot and save it, but do not print it in the document, then you will not be able to reference the plot or table.\n\n\n14.3.14 ::: {.cell} appears in my quarto document\nGenerally look for a missing ::: partner - however sometimes I do find this problem a bit sticky!",
     "crumbs": [
       "<span class='chapter-number'>14</span>  <span class='chapter-title'>Common Problems with Quarto (and some solutions)</span>"
     ]
@@ -1195,6 +1065,16 @@
     "title": "16  Next Steps",
     "section": "",
     "text": "Final\nFinal 2\nReally final\n\n\n\n2018-10-10-document.qmd\n2018-10-11-document.qmd",
+    "crumbs": [
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Next Steps</span>"
+    ]
+  },
+  {
+    "objectID": "next-steps.html#learn-how-to-make-reproducible-examples",
+    "href": "next-steps.html#learn-how-to-make-reproducible-examples",
+    "title": "16  Next Steps",
+    "section": "16.2 Learn how to make reproducible examples",
+    "text": "16.2 Learn how to make reproducible examples\n(The following is an excerpt from my blog post, “How to get good at R”)\nWhen you run into a problem, or an error, if you can’t work out the answer after some tinkering about, it can be worthwhile spending some time to construct a small example of the code that breaks. This takes a bit of time, and could be its own little blog post. It takes practice. But in the process of reducing the problem down to its core components, I often can solve the problem myself. It’s kind of like that experience of when you talk to someone to try and describe a problem that you are working on, and in talking about it, you arrive at a solution.\nThere is a great R package that helps you create these reproducible examples, called reprex, by Jenny Bryan. I’ve written about the reprex package here\nFor the purposes of illustration, let’s briefly tear down a small example using the somewhat large dataset of diamonds\n\nlibrary(tidyverse)\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.0     ✔ stringr   1.5.1\n✔ ggplot2   3.5.1     ✔ tibble    3.2.1\n✔ lubridate 1.9.4     ✔ tidyr     1.3.1\n✔ purrr     1.0.4     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\ndiamonds\n\n# A tibble: 53,940 × 10\n   carat cut       color clarity depth table price     x     y     z\n   &lt;dbl&gt; &lt;ord&gt;     &lt;ord&gt; &lt;ord&gt;   &lt;dbl&gt; &lt;dbl&gt; &lt;int&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;\n 1  0.23 Ideal     E     SI2      61.5    55   326  3.95  3.98  2.43\n 2  0.21 Premium   E     SI1      59.8    61   326  3.89  3.84  2.31\n 3  0.23 Good      E     VS1      56.9    65   327  4.05  4.07  2.31\n 4  0.29 Premium   I     VS2      62.4    58   334  4.2   4.23  2.63\n 5  0.31 Good      J     SI2      63.3    58   335  4.34  4.35  2.75\n 6  0.24 Very Good J     VVS2     62.8    57   336  3.94  3.96  2.48\n 7  0.24 Very Good I     VVS1     62.3    57   336  3.95  3.98  2.47\n 8  0.26 Very Good H     SI1      61.9    55   337  4.07  4.11  2.53\n 9  0.22 Fair      E     VS2      65.1    61   337  3.87  3.78  2.49\n10  0.23 Very Good H     VS1      59.4    61   338  4     4.05  2.39\n# ℹ 53,930 more rows\n\n\nLet’s say we had a few steps involved in the data summary of diamonds data:\n\ndiamonds %&gt;%\n  mutate(\n    price_per_carat = price / carat\n  ) %&gt;% \n  group_by(\n    cut\n    ) %&gt;% \n  summarise(\n    price_mean = mean(price_per_carat),\n    price_sd = sd(price_per_carat),\n    mean_color = mean(color)\n  )\n\nWarning: There were 5 warnings in `summarise()`.\nThe first warning was:\nℹ In argument: `mean_color = mean(color)`.\nℹ In group 1: `cut = Fair`.\nCaused by warning in `mean.default()`:\n! argument is not numeric or logical: returning NA\nℹ Run `dplyr::last_dplyr_warnings()` to see the 4 remaining warnings.\n\n\n# A tibble: 5 × 4\n  cut       price_mean price_sd mean_color\n  &lt;ord&gt;          &lt;dbl&gt;    &lt;dbl&gt;      &lt;dbl&gt;\n1 Fair           3767.    1540.         NA\n2 Good           3860.    1830.         NA\n3 Very Good      4014.    2037.         NA\n4 Premium        4223.    2035.         NA\n5 Ideal          3920.    2043.         NA\n\n\nWe get a clue that the error is in the line mean_color, so let’s just try and do that line:\n\ndiamonds %&gt;%\n  mutate(\n    mean_color = mean(color)\n  )\n\nWarning: There was 1 warning in `mutate()`.\nℹ In argument: `mean_color = mean(color)`.\nCaused by warning in `mean.default()`:\n! argument is not numeric or logical: returning NA\n\n\n# A tibble: 53,940 × 11\n   carat cut       color clarity depth table price     x     y     z mean_color\n   &lt;dbl&gt; &lt;ord&gt;     &lt;ord&gt; &lt;ord&gt;   &lt;dbl&gt; &lt;dbl&gt; &lt;int&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;      &lt;dbl&gt;\n 1  0.23 Ideal     E     SI2      61.5    55   326  3.95  3.98  2.43         NA\n 2  0.21 Premium   E     SI1      59.8    61   326  3.89  3.84  2.31         NA\n 3  0.23 Good      E     VS1      56.9    65   327  4.05  4.07  2.31         NA\n 4  0.29 Premium   I     VS2      62.4    58   334  4.2   4.23  2.63         NA\n 5  0.31 Good      J     SI2      63.3    58   335  4.34  4.35  2.75         NA\n 6  0.24 Very Good J     VVS2     62.8    57   336  3.94  3.96  2.48         NA\n 7  0.24 Very Good I     VVS1     62.3    57   336  3.95  3.98  2.47         NA\n 8  0.26 Very Good H     SI1      61.9    55   337  4.07  4.11  2.53         NA\n 9  0.22 Fair      E     VS2      65.1    61   337  3.87  3.78  2.49         NA\n10  0.23 Very Good H     VS1      59.4    61   338  4     4.05  2.39         NA\n# ℹ 53,930 more rows\n\n\nWe still get that error, so what if we just do\n\nmean(diamonds$color)\n\nWarning in mean.default(diamonds$color): argument is not numeric or logical:\nreturning NA\n\n\n[1] NA\n\n\nOK same error. What is in color?\n\nhead(diamonds$color)\n\n[1] E E E I J J\nLevels: D &lt; E &lt; F &lt; G &lt; H &lt; I &lt; J\n\n\nDoes it really make sense to take the mean of some letters? Ah, of course not!",
     "crumbs": [
       "<span class='chapter-number'>16</span>  <span class='chapter-title'>Next Steps</span>"
     ]
