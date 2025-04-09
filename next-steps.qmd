@@ -25,6 +25,8 @@ To learn git and github, I'd highly recommend [Happy Git with R](https://happygi
 
 ## Learn how to make reproducible examples
 
+(See https://github.com/njtierney/reprex-essentials for more examples)
+
 (The following is an excerpt from my blog post, ["How to get good at R"](https://www.njtierney.com/post/2023/11/10/how-to-get-good-with-r/))
 
 When you run into a problem, or an error, if you can't work out the answer after some tinkering about, it can be worthwhile spending some time to construct a small example of the code that breaks. This takes a bit of time, and could be its own little blog post. It takes practice. But in the process of reducing the problem down to its core components, I often can solve the problem myself. It's kind of like that experience of when you talk to someone to try and describe a problem that you are working on, and in talking about it, you arrive at a solution.
