@@ -1,15 +1,13 @@
-### Introduction to Quarto
-
-**Prerequisites**
+## Prerequisites
 
 - Basic familiarity with R or Python
 - Experience writing scripts or data analysis code
 - No prior experience with Quarto or R Markdown required
 
-**Learning outcomes**:
+## Learning outcomes
 
-- Getting started with your own Quarto document
-- Best practices for project workflow with Quarto, using keyboard shortcuts
+- Write your own Quarto document from scratch
+- Best practices for project workflow with Quarto
 - Rendering Quarto to HTML, PDF, and Word
 - Managing dynamic referencing and creating captions for figures and tables
 - Managing bibliographies, reference systems
@@ -18,6 +16,6 @@
 
 This course will also end with an (optional) capstone assessment, where you submit a document you created with Quarto to Nick, and he will review the writing, code, and project with you.
 
-**Course website**
+## Course website
 
 <https://qmd4sci.njtierney.com>

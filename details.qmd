@@ -1,4 +1,4 @@
-### Introduction to Quarto
+## Details
 
 For an analytic report to be completely credible, it must be reproducible. The full computational environment used to derive the results, including the data and code used for statistical analysis should be available for others to reproduce.
 

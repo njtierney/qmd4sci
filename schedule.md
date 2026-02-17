@@ -1,4 +1,3 @@
-
 ## Schedule
 
 This course is structured into 6 parts, each approximately 1 hour long.
@@ -128,12 +127,3 @@ This course is structured into 6 parts, each approximately 1 hour long.
   - Advanced features to explore
   - Integrating Quarto into your workflow
   - Open Q&A
-
----
-
-Notes:
-- Each part is approximately 1 hour
-- Follows the qmd4sci book structure
-- Emphasizes hands-on practice throughout
-- Includes time for converting personal documents
-- Scaffolds from simple to complex topics
