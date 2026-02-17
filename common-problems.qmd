@@ -4,7 +4,7 @@ There are some things that I run into fairly frequently (and some not so much) w
 
 :::{.callout-note title="Your Turn"}
 
-1. Using "06-qmd-find-errors.qmd"
+1. Using "06-qmd-find-errors.ignore"
   - Fix all the problems and get the document to render
 1.  Go to this repo [njtierney/qmd-errors](https://github.com/njtierney/qmd-errors), and give debugging some of these common Quarto errors a go.
 
