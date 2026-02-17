@@ -1,6 +1,6 @@
 # Citing Figures, Tables & Sections {#sec-start}
 
-When you're writing a report, you often refer to a table or figure in text. 
+When you're writing a report, you often refer to a table or figure in text.
 
 ```{r}
 #| label: no-show
@@ -24,7 +24,7 @@ gapminder %>%
   geom_point()
 ```
 
-_Figure 1. Life expectancy from 1952 - 2007 for Australia. Life expectancy increases steadily except from 1962 to 1969. We can safely say that our life expectancy is higher than it has ever been!_
+*Figure 1. Life expectancy from 1952 - 2007 for Australia. Life expectancy increases steadily except from 1962 to 1969. We can safely say that our life expectancy is higher than it has ever been!*
 
 And sure, this is figure 1...for now.
 
@@ -32,34 +32,34 @@ But what happens if actually, that figure should be moved later in the paper?
 
 You need to do the following:
 
-1. Update the reference to figure 1 in the text. 
-1. Update the figure 1 caption to not say figure 1.
+1.  Update the reference to figure 1 in the text.
+2.  Update the figure 1 caption to not say figure 1.
 
-This is fine. 
+This is fine.
 
-Once. 
+Once.
 
-But it is __never__ once. After this, it is frustrating, and error prone.
+But it is **never** once. After this, it is frustrating, and error prone.
 
 There is a way to solve this, using figure citations, which this lesson discusses.
 
 ## Overview
 
-* **Teaching** 10 minutes
-* **Exercises** 15 minutes
+-   **Teaching** 10 minutes
+-   **Exercises** 15 minutes
 
 ## Questions
 
-* How do I refer to the table or figure in text and link to it?
+-   How do I refer to the table or figure in text and link to it?
 
 ## Objectives
 
-* Link to tables or figures in text.
+-   Link to tables or figures in text.
 
 ## How to refer to tables and figures in text? (demo)
 
-- Tables are referenced in text with `@tbl-label`
-- Figures are references in text with `@fig-label`
+-   Tables are referenced in text with `@tbl-label` (e.g., `@tbl-gapminder`)
+-   Figures are references in text with `@fig-label`(e.g., `@git-gapminder`)
 
 Importantly here, for these two above examples to work, the things that they are referring to must have the exact label `tbl-label` and `fig-label`, respectively. That is, they must have the `tbl` or the `fig` part in there!
 
@@ -89,22 +89,19 @@ Note the awesome on-hover behaviour for hovering over a reference!
 
 Also note that there are a variety of ways to specify the figure:
 
-- `@fig-example`: @fig-example
-- `@Fig-example`: @Fig-example
-- `[Fig @fig-example]`: [Fig @fig-example]
-- `-@fig-example`: Figure -@fig-example
+-   `@fig-example`: @fig-example
+-   `@Fig-example`: @Fig-example
+-   `[Fig @fig-example]`: [Fig @fig-example]
+-   `-@fig-example`: Figure [-@fig-example]
 
 (reference here: <https://quarto.org/docs/authoring/cross-references.html#references>)
 
-:::{.callout-note title="Your Turn"}
-
-1. Using "03-qmd-lm-tables-inline-qmd"
-    1. Convert your output to use `fig` prefixes to reference figures
-
+::: {.callout-note title="Your Turn"}
+1.  Using "03-qmd-lm-tables-inline-qmd"
+    1.  Convert your output to use `fig` prefixes to reference figures
 :::
 
-:::{.callout-tip title="Demo"}
-
+::: {.callout-tip title="Demo"}
 ```{r}
 #| label: fig-gg-oz
 #| echo: fenced
@@ -120,15 +117,12 @@ gapminder %>%
   geom_point()
 ```
 
-Australia's life expectancy has increased a great deal over the past 50 years (See Figure -@fig-gg-oz).
-
+Australia's life expectancy has increased a great deal over the past 50 years (See Figure [-@fig-gg-oz]).
 :::
 
-:::{.callout-note title="Your Turn"}
-
-1. Using "03-qmd-lm-tables-inline-qmd":
-    1. Add a new plot in your document and reference it
-
+::: {.callout-note title="Your Turn"}
+1.  Using "03-qmd-lm-tables-inline-qmd":
+    1.  Add a new plot in your document and reference it
 :::
 
 ## Referencing a table
@@ -145,7 +139,7 @@ gapminder %>%
   knitr::kable(caption = "Raw gapminder data for Australia.")
 ```
 
-See above in Table @tbl-tbl-gg-oz-tab.
+See above in Table [-@tbl-gg-oz-tab].
 
 If you want to move the caption location you can use `tbl-cap-location: <position>` to specify the location. By default it is the top.
 
@@ -164,11 +158,9 @@ Reference: <https://quarto.org/docs/authoring/cross-references.html#tables> and 
 
 You can also reference theorems, code, proofs, and equations! See <https://quarto.org/docs/authoring/cross-references.html#theorems-and-proofs> for more details.
 
-:::{.callout-note title="Your Turn"}
-
-1. Using "03-qmd-lm-tables-inline-qmd"
-    1. Create a table in your document and refer to it in text
-
+::: {.callout-note title="Your Turn"}
+1.  Using "03-qmd-lm-tables-inline-qmd"
+    1.  Create a table in your document and refer to it in text
 :::
 
 ## Referencing a section
@@ -177,40 +169,35 @@ You can even reference a section in your report: `@sec-slug`
 
 However, in order to write this, you need to include `sec-slug` in your markdown header, like so:
 
-```
+```         
 ## your amazing header {#sec-slug}
 ```
 
 You must also include `number-section` in your YAML:
 
-```r
+``` r
 ---
 title: "example"
 number-sections: true
 ---
 ```
 
-For example, I can refer to the first section (Section @sec-start) in this document by referring to the section as 
+For example, I can refer to the first section (Section @sec-start) in this document by referring to the section as
 
 `(Section @sec-start)`
 
 because it was written as:
 
-```
+```         
 # Citing Figures, Tables & Sections {#sec-start}
 ```
 
-
-:::{.callout-tip title="Demo: Using visual mode"}
-
+::: {.callout-tip title="Demo: Using visual mode"}
 Visual mode is this pretty neat feature, it's best demonstrated live!
-
 :::
 
-:::{.callout-note title="Your Turn"}
-
-1. Using "03-qmd-lm-tables-inline-qmd"
-    1. Reference a section in the report.
-1. Open up "04-qmd-global-opts-device.qmd" and work through the tasks there
-
+::: {.callout-note title="Your Turn"}
+1.  Using "03-qmd-lm-tables-inline-qmd"
+    1.  Reference a section in the report.
+2.  Open up "04-qmd-global-opts-device.qmd" and work through the tasks there
 :::

@@ -31,6 +31,7 @@ There are many chunk options that control your output, but only a few that you r
 - `fig-align`: How do you want your figure aligned? Takes one of the following inputs: "default", "center", "left", or "right"? (**demo**)
 - `fig-cap`: Would you like a caption for your figure? It takes a character vector as input: "My Amazing Graph"
 - `fig-height` & `fig-width`: How tall and wide would you like your figure in inches? Each takes one number (e.g., 7, or 9) [Note: these numbers are not quoted]
+- `fig-format`: Which format do you want to save your code in? Options are: jpeg, svg, png, retina, and pdf.
 
 
 <!-- - `out.height` & `out.width`: The height and width of your plot in the final file. This can be handy if you like the current aspect ratio of your plot, but you want to shrink it by say 50% - which you would do with "50%". You can also include LaTeX output or HTML output. Say for example, ".8//linewidth" or "8cm" for LaTeX, or "300px" for HTML. 
@@ -45,7 +46,7 @@ For demonstration purposes, let's take a plot from earlier and show how it's out
 
 ::: {.callout-note title="Your Turn"}
 
-1. Open exercise `exercises/02-qmd-figures-chunks/02-qmd-figures-chunks.qmd` Create three figures, with the respective dimensions (`fig-height` and `fig-width`)
+1. Open exercise `exercises/02-qmd-figures-chunks/02-qmd-figures-chunks.qmd` Create three figures (plots created by code, e.g., `hist`, `ggplot`), with the respective dimensions (`fig-height` and `fig-width`)
     * 2x2
     * 10x10
     * 4x7
@@ -85,7 +86,7 @@ format:
 
 ::: {.callout-tip title="Demo: Keeping your markdown"}
 
-You can set the options for your figures, which will change how they appear on the page, but this won't save the figures anywhere. In order to save the figures to file, you need to edit the YAML option `keep-md: true`:
+If you need to keep the markdown text itself, you can do this with: `keep-md: true`:
 
 ```YAML
 ---

@@ -40,12 +40,13 @@ Below is a small table of tasks you can perform with keyboard
 | Render document | Ctrl + Shift + K | Cmd + Shift + K |
 | Insert Chunk  | Ctrl + Alt + I   | Cmd + Option + I |
 | Run Current Chunk | Ctrl + Alt + C | Cmd + Option + C | 
-| Jump to  	Shift+Alt+J 	| Cmd+Shift+Option+J |
+| Jump to  | Shift+Alt+J 	| Cmd+Shift+Option+J |
 | Show Keyboard Shortcut Reference  |	Alt+Shift+K | Option+Shift+K |
 | Create multiple cursors | Ctrl + Alt + Up/Down | option + control + Up/Down|
 | Delete the current line | Ctrl + D | Cmd + D|
 | Un/Comment out a line   | Ctrl + Shift + C | Cmd + Shift + C| 
 | Reformat Section | Ctrl + Shift + A | Cmd + Shift + A| 
+| Duplicate lines | Alt + Shift + Up/Down | Cmd + Option + Up/Down| 
 
 ## Further Reading
 

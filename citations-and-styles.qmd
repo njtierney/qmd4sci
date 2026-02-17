@@ -4,20 +4,20 @@ Now that you are near the end of your data analysis, you want to make sure that 
 
 ## Overview
 
-* **Teaching**
-* **Exercises**
+-   **Teaching**
+-   **Exercises**
 
 ## Questions
 
-* What sort of things can I cite?
-* How do I manage my `.bib` file?
-* How do I change the citation style?
+-   What sort of things can I cite?
+-   How do I manage my `.bib` file?
+-   How do I change the citation style?
 
 ## Objectives
 
-* Provide a bibliography at the end of the document
-* Cite articles and packages during the document
-* learn how to manage citation styles
+-   Provide a bibliography at the end of the document
+-   Cite articles and packages during the document
+-   learn how to manage citation styles
 
 ## How to cite things
 
@@ -25,7 +25,7 @@ Citing things in a Quarto document is straightforward, you refer to articles you
 
 This `.bib` file is referred to in the YAML of your document, under the option `bibliography: filename.bib`:
 
-```YAML
+``` yaml
 ---
 title: 
 author:
@@ -36,11 +36,11 @@ bibliography: references.bib
 
 ### What is a .bib file?
 
-Good question. 
+Good question.
 
 `.bib` is a format for storing references from the heyday of LaTeX. It contains plain text with reference information for the article. Here's an example one:
 
-```
+```         
   @Book{ggplot2,
     author = {Hadley Wickham},
     title = {ggplot2: Elegant Graphics for Data Analysis},
@@ -70,30 +70,27 @@ citation("ggplot2")
 ```
 
 For journals or books, you'll need to get a specific .bib file. Yes, this can be a bit of a pain, but this is where you need to use a reference management software like [Zotero](https://www.zotero.org/), [Mendeley](https://www.mendeley.com/download-desktop/), [papers](https://www.papersapp.com/), or [paperpile](https://paperpile.com/). The important thing to to **use something**. These all allow you to get .bib files of your articles, which you can then placec in your `references.bib` file.
-  
-:::{.callout-note title="Your Turn"}
 
-1. Using "05-qmd-bib-polish.qmd"
-    1. Generate a references.bib file to place your citations
-    1. Using the `citation()` function, generate citations for the packages we have used, "dplyr", "ggplot2", "gapminder", and for the R software, place these in your `references.bib` file
-    1. Reference these in your document
-    1. Add a final heading in your file called `#bibliography`
-    1.  Cite the packages you use when you use them
-      1.  hint: https://quarto.org/docs/authoring/footnotes-and-citations.html
-      2.  hint: look at the names in packages.bib
-1.  Tidy up the structure, provide some more words around the introduction and results
-1.  Render the document
-
-    
+::: {.callout-note title="Your Turn"}
+1.  Using "05-qmd-bib-polish.qmd"
+    1.  Generate a references.bib file to place your citations
+    2.  Using the `citation()` function, generate citations for the packages we have used, "dplyr", "ggplot2", "gapminder", and for the R software, place these in your `references.bib` file
+    3.  Reference these in your document
+    4.  Add a final heading in your file called `#bibliography`
+    5.  Cite the packages you use when you use them
+    6.  hint: https://quarto.org/docs/authoring/footnotes-and-citations.html
+    7.  hint: look at the names in packages.bib
+2.  Tidy up the structure, provide some more words around the introduction and results
+3.  Render the document
 :::
 
 ## How to change the bibliography style
 
-OK so now you've got your bibliography, but you now need to change it to _a specific journal format_. Luckily, this is now pretty easy. You can change your citation style from the [citation style language](https://citationstyles.org/)
+OK so now you've got your bibliography, but you now need to change it to *a specific journal format*. Luckily, this is now pretty easy. You can change your citation style from the [citation style language](https://citationstyles.org/)
 
 Similar to how you referred to your `.bib` file with `bibliography: ref.bib`, you do something similar:
 
-```YAML
+``` yaml
 ---
 title:
 author:
@@ -103,22 +100,20 @@ csl: my_journal.csl
 ---
 ```
 
-:::{.callout-note title="Your Turn"}
-
+::: {.callout-note title="Your Turn"}
 In "05-qmd-bib-polish.qmd":
 
-1. select your bibliography style to be one from your favourite journal at the CSL github repo here: https://github.com/citation-style-language/styles (> 2,600 citations and counting)
-1. place this in your rstudio project
-1. refer to it in the YAML
-1. Render your document and observe your greatness
-
+1.  select your bibliography style to be one from your favourite journal at the CSL github repo here: https://github.com/citation-style-language/styles (\> 2,600 citations and counting)
+2.  place this in your rstudio project
+3.  refer to it in the YAML
+4.  Render your document and observe your greatness
 :::
 
 ## How to move the bibliography location
 
 The bibliography is typically placed at the end of the document, so your last heading should be something like `# References`. However, if you want to move it, place the following piece of text in the reference section. For example.
 
-```
+```         
 # Introduction
 
 # References
@@ -137,28 +132,23 @@ This is taken from [this section of the Quarto documentation](https://quarto.org
 
 The bibliography can be suppressed with the YAML option `suppress-bibliography`
 
-```
+```         
 title: "document"
 output: html
 bibliography: file.bib
 suppress-bibliography: true
 ```
 
-:::{.callout-note title="Your Turn"}
-
+::: {.callout-note title="Your Turn"}
 In "05-qmd-bib-polish.qmd":
 
-1. Generate a bibliography and an appendix that follows it
-
+1.  Generate a bibliography and an appendix that follows it
 :::
 
-
-:::{.callout-tip title="Demo: Use the Visual Editor mode of RStudio"}
-
+::: {.callout-tip title="Demo: Use the Visual Editor mode of RStudio"}
 Show off the citation auto-complete magic!
 
-- search for DOIs
-- search for R packages
-- search pubmed/datacite/more!
-
+-   search for DOIs
+-   search for R packages
+-   search pubmed/datacite/more!
 :::

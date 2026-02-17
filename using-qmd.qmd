@@ -277,7 +277,7 @@ What's great about this is that if your data changes upstream, then you don't ne
 1. Use the rstudio project you previously created, `qmd4sci-materials`, and open the "01-qmd-examples.qmd" file.
 1. Run some brief summaries of the data in the Quarto document:
     - hist(data$)
-    - How big is the data?
+    - How big (rows and columns) is the data?
     - How many countries are there?
     - What was the lowest life expectancy in Australia's History?
     - How about the lowest GDP for Australia?

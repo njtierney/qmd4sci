@@ -25,7 +25,7 @@ To learn git and github, I'd highly recommend [Happy Git with R](https://happygi
 
 ## Learn how to make reproducible examples
 
-(See https://github.com/njtierney/reprex-essentials for more examples)
+(See <https://github.com/njtierney/reprex-essentials> for more examples)
 
 (The following is an excerpt from my blog post, ["How to get good at R"](https://www.njtierney.com/post/2023/11/10/how-to-get-good-with-r/))
 

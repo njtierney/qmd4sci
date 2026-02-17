@@ -7,12 +7,14 @@ format: html
 
 # Tasks
 
-  - fit a linear model of Ozone ~ Temp + Wind + Solar.R 
-    - (hint: use `lm`)
-  - Make a table of the coefficients from the linear model 
-    - (hint: use `coef` and `knitr::kable`)
-  - Make some inline code chunks that describe the single values of the R-squared or a coefficient
-  - Make an equation describing the relationship
+1. Convert your output to use fig prefixes to reference figures
+
+  <!-- - fit a linear model of Ozone ~ Temp + Wind + Solar.R  -->
+  <!--   - (hint: use `lm`) -->
+  <!-- - Make a table of the coefficients from the linear model  -->
+  <!--   - (hint: use `coef` and `knitr::kable`) -->
+  <!-- - Make some inline code chunks that describe the single values of the R-squared or a coefficient -->
+  <!-- - Make an equation describing the relationship -->
 
 
 # Introduction
@@ -41,10 +43,11 @@ We are going to explore the relationship between solar radiation and other selec
 We can see that there is an interesting relationship between ozone and solar radiation in figure 1 below, plotted using ggplot2.
 
 ```{r}
-#| label: figure-1
+#| label: fig-airquality
 #| echo: true
-#| fig-height: 2
-#| fig-width: 2
+#| fig-height: 5
+#| fig-width: 5
+#| fig-cap: example captions
 library(ggplot2)
 ggplot(airquality,
        aes(x = Ozone,
@@ -53,7 +56,7 @@ ggplot(airquality,
 
 ```
 
-We can also see that there is an interesting relationship between Ozone and temperature.
+We can also see that there is an interesting relationship between Ozone and temperature @fig-airquality.
 
 ```{r}
 #| label: figure-2

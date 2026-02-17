@@ -33,9 +33,9 @@ Then, if there is an error:
 
 -   Recreate the error in an interactive session:
     -   restart R
-    -   run all chunks below
+    -   run all chunks above
     -   find the chunk that did not work, fix until it does
-    -   run all chunks below
+    -   run all chunks above and below
     -   explore working directory issues
         -   remember that the Quarto directory is where the .qmd file lives
 

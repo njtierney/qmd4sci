@@ -1,0 +1,5 @@
+### Introduction to Quarto
+
+For an analytic report to be completely credible, it must be reproducible. The full computational environment used to derive the results, including the data and code used for statistical analysis should be available for others to reproduce.
+
+Quarto is a tool that allows you integrate your code, text, and figures into a single file. This allows you to create high quality, reproducible reports. A paper published with an included Quarto file and data sets can (in principle) be reproduced by anyone with a computer.
