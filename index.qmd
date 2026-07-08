@@ -83,7 +83,7 @@ Course materials can be downloaded by using the following command from the `uset
 #| label: use-course
 #| echo: true
 #| eval: false
-usethis::use_course("njtierney/qmd4sci-materials")
+usethis::use_course("njtierney/qmd4sci-exercises")
 ```
 
 <!-- ## Where has this course been taught? -->

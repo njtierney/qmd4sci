@@ -11,7 +11,7 @@ This course is structured into 6 parts, each approximately 1 hour long.
 - Installation and setup
   - Install Quarto and verify setup
   - RStudio integration
-  - Download course materials: `usethis::use_course("njtierney/qmd4sci-materials")`
+  - Download course materials: `usethis::use_course("njtierney/qmd4sci-exercises")`
 - Your first Quarto document
   - Create a .qmd file
   - Understand YAML headers

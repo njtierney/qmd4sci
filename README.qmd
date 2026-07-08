@@ -27,7 +27,7 @@ This is a course on how to use Quarto, with the target audience being for scient
 
 See the [installation chapter](https://qmd4sci.njtierney.com/installation) for details on software to be installed.
 
-Working materials will be made available at [github.com/njtierney/qmd4sci-materials](https://github.com/njtierney/qmd4sci-materials).
+Working materials will be made available at [github.com/njtierney/qmd4sci-exercises](https://github.com/njtierney/qmd4sci-exercises).
 <!-- 
 ## Book 
 

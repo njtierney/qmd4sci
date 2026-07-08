@@ -89,7 +89,7 @@ When you do this all the time, it gets old, fast.
 This might all be a bit confusing if you don't know what a file path is. A file path is the machine-readable directions to where files on your computer live. So, the file path:
 
 ```
-/Users/njtierney/Desktop/qmd4sci-materials/demo.R
+/Users/njtierney/Desktop/qmd4sci-exercises/demo.R
 ```
 
 Describes the location of the file "demo.R". This could be visualised as:
@@ -98,7 +98,7 @@ Describes the location of the file "demo.R". This could be visualised as:
 users
   └── njtierney
       └── Desktop
-          └──  qmd4sci-materials
+          └──  qmd4sci-exercises
                └── demo.R << THIS IS THE FILE HERE
                └── exercises
                └── exploratory-data-analysis
@@ -112,7 +112,7 @@ users
 #| label: tree-elbow
 #| eval: false
 #| echo: false
-file_dir <- "Desktop/qmd4sci-materials/demo-gapminder.qmd"
+file_dir <- "Desktop/qmd4sci-exercises/demo-gapminder.qmd"
 
 gsub(pattern = "/", 
      replacement = "\n└──  ", 
@@ -124,12 +124,12 @@ gsub(pattern = "/",
 So, if you want to read in the `gapminder.csv` file, you might need to write code like this:
 
 ```r
-gapminder <- read_csv("/Users/njtierney/Desktop/qmd4sci-materials/data/gapminder.csv")
+gapminder <- read_csv("/Users/njtierney/Desktop/qmd4sci-exercises/data/gapminder.csv")
 ```
 
 As we now know, this is a problem, because this is not portable code. It is unlikely someone else will have the `gapminder.csv` data stored under the folders, `"Users/njtierney/Desktop"`.
 
-If you have an RStudio project file inside the `qmd4sci-materials` folder, you can instead write the following:
+If you have an RStudio project file inside the `qmd4sci-exercises` folder, you can instead write the following:
 
 ```r
 gapminder <- read_csv("data/gapminder.csv")
@@ -180,10 +180,10 @@ Let's open one together.
 
 ::: {.callout-note title="Your Turn Use your own rstudio project"}
 
-1. In RStudio, and run the following code to start a new rstudio project called "qmd4sci-materials".
+1. In RStudio, and run the following code to start a new rstudio project called "qmd4sci-exercises".
 
 ```r
-usethis::use_course("njtierney/qmd4sci-materials")
+usethis::use_course("njtierney/qmd4sci-exercises")
 ```
 
 2. Follow the prompts to download this to your desktop and then run the rstudio project. (You can move it later if you like!)
@@ -214,7 +214,7 @@ here::here("data")
 returns
 
 ```
-[1] "/Users/nick/github/njtierney/qmd4sci-materials/data"
+[1] "/Users/nick/github/njtierney/qmd4sci-exercises/data"
 ```
 
 And 
@@ -226,7 +226,7 @@ here::here("data", "gapminder.csv")
 returns
 
 ```
-[1] "/Users/nick/github/njtierney/qmd4sci-materials/data/gapminder.csv"
+[1] "/Users/nick/github/njtierney/qmd4sci-exercises/data/gapminder.csv"
 ```
 
 (Note that these absolute file paths will indeed be different on my computer compared to yours - super neat!)
