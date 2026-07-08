@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.27">
+<meta name="generator" content="quarto-1.9.38">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -10,6 +10,9 @@
 
 <title>4&nbsp; Workflow – Quarto for Scientists</title>
 <style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
 div.columns{display: flex; gap: min(4vw, 1.5em);}
@@ -70,15 +73,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="./rstudio.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-43e2796130263d999b3f7c99eff310e4.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-a91a8b217ab1124da67cc1ae5dc6d0e3.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -451,12 +453,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="what-is-a-file-path" class="level2" data-number="4.5">
 <h2 data-number="4.5" class="anchored" data-anchor-id="what-is-a-file-path"><span class="header-section-number">4.5</span> What is a file path?</h2>
 <p>This might all be a bit confusing if you don’t know what a file path is. A file path is the machine-readable directions to where files on your computer live. So, the file path:</p>
-<pre><code>/Users/njtierney/Desktop/qmd4sci-materials/demo.R</code></pre>
+<pre><code>/Users/njtierney/Desktop/qmd4sci-exercises/demo.R</code></pre>
 <p>Describes the location of the file “demo.R”. This could be visualised as:</p>
 <pre><code>users
   └── njtierney
       └── Desktop
-          └──  qmd4sci-materials
+          └──  qmd4sci-exercises
                └── demo.R &lt;&lt; THIS IS THE FILE HERE
                └── exercises
                └── exploratory-data-analysis
@@ -465,9 +467,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
                └──  data
                     └──  gapminder.csv</code></pre>
 <p>So, if you want to read in the <code>gapminder.csv</code> file, you might need to write code like this:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>gapminder <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"/Users/njtierney/Desktop/qmd4sci-materials/data/gapminder.csv"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>gapminder <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"/Users/njtierney/Desktop/qmd4sci-exercises/data/gapminder.csv"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>As we now know, this is a problem, because this is not portable code. It is unlikely someone else will have the <code>gapminder.csv</code> data stored under the folders, <code>"Users/njtierney/Desktop"</code>.</p>
-<p>If you have an RStudio project file inside the <code>qmd4sci-materials</code> folder, you can instead write the following:</p>
+<p>If you have an RStudio project file inside the <code>qmd4sci-exercises</code> folder, you can instead write the following:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>gapminder <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/gapminder.csv"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="callout callout-style-default callout-note callout-titled" title="Your Turn">
 <div class="callout-header d-flex align-content-center">
@@ -523,9 +525,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <div class="callout-body-container callout-body">
 <ol type="1">
-<li>In RStudio, and run the following code to start a new rstudio project called “qmd4sci-materials”.</li>
+<li>In RStudio, and run the following code to start a new rstudio project called “qmd4sci-exercises”.</li>
 </ol>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>usethis<span class="sc">::</span><span class="fu">use_course</span>(<span class="st">"njtierney/qmd4sci-materials"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>usethis<span class="sc">::</span><span class="fu">use_course</span>(<span class="st">"njtierney/qmd4sci-exercises"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <ol start="2" type="1">
 <li><p>Follow the prompts to download this to your desktop and then run the rstudio project. (You can move it later if you like!)</p></li>
 <li><p>You are now in an rstudio project!</p></li>
@@ -558,11 +560,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Although RStudio projects help resolve file path problems, in some cases you might have many folders in your r project. To help navigate them appropriately, you can use the <code>here</code> package to provide the full path directory, in a compact way.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>here<span class="sc">::</span><span class="fu">here</span>(<span class="st">"data"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>returns</p>
-<pre><code>[1] "/Users/nick/github/njtierney/qmd4sci-materials/data"</code></pre>
+<pre><code>[1] "/Users/nick/github/njtierney/qmd4sci-exercises/data"</code></pre>
 <p>And</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>here<span class="sc">::</span><span class="fu">here</span>(<span class="st">"data"</span>, <span class="st">"gapminder.csv"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>returns</p>
-<pre><code>[1] "/Users/nick/github/njtierney/qmd4sci-materials/data/gapminder.csv"</code></pre>
+<pre><code>[1] "/Users/nick/github/njtierney/qmd4sci-exercises/data/gapminder.csv"</code></pre>
 <p>(Note that these absolute file paths will indeed be different on my computer compared to yours - super neat!)</p>
 <p>You can read the above <code>here</code> code as:</p>
 <blockquote class="blockquote">
