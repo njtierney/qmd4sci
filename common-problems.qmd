@@ -4,7 +4,7 @@ There are some things that I run into fairly frequently (and some not so much) w
 
 :::{.callout-note title="Your Turn"}
 
-1. Using "06-qmd-find-errors.ignore"
+1. Using "06-qmd-find-errors.qmd"
   - Fix all the problems and get the document to render
 1.  Go to this repo [njtierney/qmd-errors](https://github.com/njtierney/qmd-errors), and give debugging some of these common Quarto errors a go.
 
@@ -349,11 +349,10 @@ These are often not an error, but you just won't get the behaviour that you expe
 #| label: fig-penguins
 #| fig-caption: "Penguin Bill Length against Flipper Length. coloured by species. Each dot represents the bill length and flipper length of a penguin, coloured by species (Adelie, Chinstrap, Gentoo), and facetted by the three islands (Biscoe, Dream, Torgensen). We learn that not all three species are present on all islands, only Adelie is present on each. Adelie generally has the smallest flipper and bill length of the penguins, with chinstrap and gentoo being similar. Flipper length is correlated with bill length."
 #| echo: fenced
-library(palmerpenguins)
 library(ggplot2)
 ggplot(penguins,
-       aes(x = flipper_length_mm,
-           y = bill_length_mm,
+       aes(x = flipper_len,
+           y = bill_len,
            colour = species)) + 
   geom_point() + 
   scale_color_brewer(palette = "Dark2") +
