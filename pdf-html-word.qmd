@@ -87,6 +87,6 @@ format:
 
 ::: {.callout-note title="Your Turn"}
 
-1. Using your “01-qmd-examples.qmd” Quarto document you were using earlier, generate three reports, one as HTML, one as PDF, and one as microsoft word. Remember, if you are having PDF problems, see the [installation chapter](installation) note on installing LaTeX with the R package, `tinytex`.
+1. Using your “01-qmd-example.qmd” Quarto document you were using earlier, generate three reports, one as HTML, one as PDF, and one as microsoft word. Remember, if you are having PDF problems, see the [installation chapter](installation) note on installing LaTeX with the R package, `tinytex`.
 
 :::

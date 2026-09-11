@@ -50,14 +50,15 @@ Below is a small table of tasks you can perform with keyboard
 
 ## Further Reading
 
-- The [Rstudio Cheat Sheet](https://rstudio.github.io/cheatsheets/html/rstudio-ide.html#keyboard-shortcuts) has an index of shortcuts. 
+- The [Rstudio Cheat Sheet](https://rstudio.github.io/cheatsheets/html/rstudio-ide.html#keyboard-shortcuts) has an index of shortcuts.
 - This [help file](https://support.posit.co/hc/en-us/articles/206382178-Customizing-Keyboard-Shortcuts-in-the-RStudio-IDE) has a guide to customising keyboard shortcuts.
 - The [shrtcts](https://github.com/gadenbuie/shrtcts) R package for creating new shortcuts.
+- My course [R Best Practices](https://r-best-practices.njtierney.com) goes further into this, covering typing speed, working closer to the speed of thought, and a longer list of shortcuts worth learning.
 
 ::: {.callout-note title="Your Turn"}
 
 - In your **awesome** quarto document
-  - Practice using the Keyboard Shortcut Reference and find the keyboard shortcut for inserting a pipe character ( `%>%` or `|>`)
+  - Practice using the Keyboard Shortcut Reference and find the keyboard shortcut for inserting a pipe character ( `|>` or `|>`)
   - Spend 3 minutes practicing these commands.
 - Ask Nick to demonstrate some of his [favourite shortcut combos](https://www.njtierney.com/post/2023/12/04/get-good-type-fast/)
   - e.g., multiline cursor, yank lines, copy lines, go to file/function

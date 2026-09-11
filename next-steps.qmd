@@ -43,13 +43,13 @@ diamonds
 Let's say we had a few steps involved in the data summary of diamonds data:
 
 ```{r}
-diamonds %>%
+diamonds |>
   mutate(
     price_per_carat = price / carat
-  ) %>% 
+  ) |> 
   group_by(
     cut
-    ) %>% 
+    ) |> 
   summarise(
     price_mean = mean(price_per_carat),
     price_sd = sd(price_per_carat),
@@ -60,7 +60,7 @@ diamonds %>%
 We get a clue that the error is in the line `mean_color`, so let's just try and do that line:
 
 ```{r}
-diamonds %>%
+diamonds |>
   mutate(
     mean_color = mean(color)
   )

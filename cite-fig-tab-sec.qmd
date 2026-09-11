@@ -17,8 +17,8 @@ gapminder <- readr::read_csv(here::here("data", "gapminder.csv"))
 #| message: false
 library(ggplot2)
 library(dplyr)
-gapminder %>%
-  filter(country == "Australia") %>%
+gapminder |>
+  filter(country == "Australia") |>
   ggplot(aes(x = year,
              y = lifeExp)) + 
   geom_point()
@@ -97,7 +97,7 @@ Also note that there are a variety of ways to specify the figure:
 (reference here: <https://quarto.org/docs/authoring/cross-references.html#references>)
 
 ::: {.callout-note title="Your Turn"}
-1.  Using "03-qmd-lm-tables-inline-qmd"
+1.  Using "03-qmd-lm-tables-inline-eqn.qmd"
     1.  Convert your output to use `fig` prefixes to reference figures
 :::
 
@@ -110,8 +110,8 @@ Also note that there are a variety of ways to specify the figure:
 #|   higher than it has ever been!
 library(ggplot2)
 library(dplyr)
-gapminder %>%
-  filter(country == "Australia") %>%
+gapminder |>
+  filter(country == "Australia") |>
   ggplot(aes(x = year,
              y = lifeExp)) + 
   geom_point()
@@ -121,7 +121,7 @@ Australia's life expectancy has increased a great deal over the past 50 years (S
 :::
 
 ::: {.callout-note title="Your Turn"}
-1.  Using "03-qmd-lm-tables-inline-qmd":
+1.  Using "03-qmd-lm-tables-inline-eqn.qmd":
     1.  Add a new plot in your document and reference it
 :::
 
@@ -134,8 +134,8 @@ To cite a table, you write the following:
 ```{r}
 #| label: tbl-gg-oz-tab
 #| echo: fenced
-gapminder %>%
-  filter(country == "Australia") %>%
+gapminder |>
+  filter(country == "Australia") |>
   knitr::kable(caption = "Raw gapminder data for Australia.")
 ```
 
@@ -147,8 +147,8 @@ If you want to move the caption location you can use `tbl-cap-location: <positio
 #| label: tbl-gg-oz-tab-bottom
 #| tbl-cap-location: bottom
 #| echo: fenced
-gapminder %>%
-  filter(country == "Australia") %>%
+gapminder |>
+  filter(country == "Australia") |>
   knitr::kable(caption = "Raw gapminder data for Australia.")
 ```
 
@@ -159,7 +159,7 @@ Reference: <https://quarto.org/docs/authoring/cross-references.html#tables> and 
 You can also reference theorems, code, proofs, and equations! See <https://quarto.org/docs/authoring/cross-references.html#theorems-and-proofs> for more details.
 
 ::: {.callout-note title="Your Turn"}
-1.  Using "03-qmd-lm-tables-inline-qmd"
+1.  Using "03-qmd-lm-tables-inline-eqn.qmd"
     1.  Create a table in your document and refer to it in text
 :::
 
@@ -197,7 +197,7 @@ Visual mode is this pretty neat feature, it's best demonstrated live!
 :::
 
 ::: {.callout-note title="Your Turn"}
-1.  Using "03-qmd-lm-tables-inline-qmd"
+1.  Using "03-qmd-lm-tables-inline-eqn.qmd"
     1.  Reference a section in the report.
 2.  Open up "04-qmd-global-opts-device.qmd" and work through the tasks there
 :::

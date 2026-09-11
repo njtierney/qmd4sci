@@ -116,7 +116,7 @@ file_dir <- "Desktop/qmd4sci-exercises/demo-gapminder.qmd"
 
 gsub(pattern = "/", 
      replacement = "\n└──  ", 
-     x = file_dir) %>%
+     x = file_dir) |>
   clipr::write_clip()
 
 ```
