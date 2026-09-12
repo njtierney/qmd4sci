@@ -1,6 +1,6 @@
 # Installation
 
-In this section, the aim is to have everyone setup with R, RStudio, and Quarto
+In this section, the aim is to have everyone set up with R, RStudio, Quarto, and LaTeX (using TinyTeX), which Quarto needs to make PDFs.
 
 ## Overview
 
@@ -11,10 +11,21 @@ In this section, the aim is to have everyone setup with R, RStudio, and Quarto
 * How do I install R?
 * How do I install Quarto?
 * How do I install LaTeX in a sane way?
+* How do I download the exercises?
 
 ## Software Setup
 
 ### R
+
+We recommend R 4.5.0 or later. You can check which version you have with:
+
+```{r}
+#| label: r-version
+#| eval: false
+R.version.string
+```
+
+You can download R here:
 
 ::: {.panel-tabset}
 
@@ -47,26 +58,36 @@ To ensure you are up to date, run the following script to install the packages.
 ```{r}
 #| label: install-rmd
 #| eval: false
-install.packages("quarto")
-install.packages("knitr")
-install.packages("here")
-install.packages("tidyverse")
-install.packages("broom")
-install.packages("fs")
-install.packages("usethis")
+install.packages(c(
+  "broom",
+  "fs",
+  "here",
+  "knitr",
+  "naniar",
+  "quarto",
+  "rmarkdown",
+  "skimr",
+  "spelling",
+  "tidyverse",
+  "tinytex",
+  "usethis",
+  "visdat"
+))
 ```
 
 ## A note on PDF
 
 Quarto documents can be compiled to PDF, which is a great feature. In order to convert the documents to PDF, they use a software called [LaTeX](https://www.latex-project.org/) (pronounced la-tek or lay-tek).
 
-Installing LaTeX is thankfully handled when you install Quarto, as [Quarto includes a built-in Latexmk engine](https://quarto.org/docs/output-formats/pdf-engine.html#latexmk). 
+**You need to install LaTeX yourself.** Quarto doesn't come with it. I recommend that you use [TinyTeX](https://yihui.org/tinytex/), the steps are below. 
 
-### PDF / LaTeX Pain
+Once TinyTeX is installed, Quarto takes care of the rest. Its [built-in LaTeX engine](https://quarto.org/docs/output-formats/pdf-engine.html#latexmk) runs LaTeX for you, and installs any missing LaTeX packages as it goes.
 
-Installing LaTeX [can be a pain](https://yihui.name/tinytex/pain/), but thankfully Yihui Xie has put a lot of time and energy into making an easier way to install it - [`tinytex`](https://yihui.name/tinytex/). `tinytex` is an R package that installs a sane, lightweight (<200Mb) version of LaTeX. 
+### Installing TinyTeX
 
-If you are running into issues rendering a PDF, you can try the following:
+Installing LaTeX [can be a pain](https://yihui.name/tinytex/pain/), but thankfully Yihui Xie has put a lot of time and energy into making an easier way to install it - [`tinytex`](https://yihui.name/tinytex/). `tinytex` is an R package that installs a sane, lightweight (<200Mb) version of LaTeX.
+
+To install TinyTeX, run the following in R. It takes a few minutes:
 
 ```{r}
 #| label: run-tiny-tex
@@ -99,11 +120,33 @@ You should be able to run the following code on your machine
 ```{r}
 #| label: library-test
 #| eval: false
-library(quarto)
-library(knitr)
-library(here)
-library(tidyverse)
 library(broom)
 library(fs)
+library(here)
+library(knitr)
+library(naniar)
+library(quarto)
+library(rmarkdown)
+library(skimr)
+library(spelling)
+library(tidyverse)
+library(tinytex)
 library(usethis)
+library(visdat)
 ```
+
+## Downloading the exercises
+
+The exercises and data for the course live in their own repository, [qmd4sci-exercises](https://github.com/njtierney/qmd4sci-exercises). This code from usethis will automagically download them, and open up an RStudio project. We will talk more about those later.
+
+```{r}
+#| label: download-exercises
+#| eval: false
+usethis::use_course("njtierney/qmd4sci-exercises")
+```
+
+If this doesn't work on your machine, the same files are in this zip - clicking this link should download it for you: <https://github.com/njtierney/qmd4sci-exercises/archive/refs/heads/main.zip>
+
+Alternatively you can go to <https://github.com/njtierney/qmd4sci-exercises> and download them there by navigating to the "Download Zip" link - see below for a screenshot:
+
+![](images/download-zip.png)
