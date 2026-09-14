@@ -182,7 +182,7 @@ number-sections: true
 ---
 ```
 
-For example, I can refer to the first section (Section @sec-start) in this document by referring to the section as
+For example, I can refer to the first section `(@sec-start)` in this document by referring to the section as
 
 `(Section @sec-start)`
 
