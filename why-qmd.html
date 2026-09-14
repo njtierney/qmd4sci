@@ -332,12 +332,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul class="collapse">
   <li><a href="#a-brief-example-of-markdown" id="toc-a-brief-example-of-markdown" class="nav-link" data-scroll-target="#a-brief-example-of-markdown"><span class="header-section-number">2.6.1</span> A brief example of markdown</a></li>
   </ul></li>
-  <li><a href="#what-about-rmarkdown" id="toc-what-about-rmarkdown" class="nav-link" data-scroll-target="#what-about-rmarkdown"><span class="header-section-number">3</span> What about Rmarkdown?</a></li>
-  <li><a href="#quarto-helps-complete-the-solution-to-the-reproducibility-problem" id="toc-quarto-helps-complete-the-solution-to-the-reproducibility-problem" class="nav-link" data-scroll-target="#quarto-helps-complete-the-solution-to-the-reproducibility-problem"><span class="header-section-number">4</span> Quarto helps complete the solution to the reproducibility problem</a>
-  <ul class="collapse">
-  <li><a href="#summary" id="toc-summary" class="nav-link" data-scroll-target="#summary"><span class="header-section-number">4.1</span> Summary</a></li>
-  <li><a href="#learning-more" id="toc-learning-more" class="nav-link" data-scroll-target="#learning-more"><span class="header-section-number">4.2</span> Learning more</a></li>
-  </ul></li>
+  <li><a href="#what-about-rmarkdown" id="toc-what-about-rmarkdown" class="nav-link" data-scroll-target="#what-about-rmarkdown"><span class="header-section-number">2.7</span> What about Rmarkdown?</a></li>
+  <li><a href="#quarto-helps-complete-the-solution-to-the-reproducibility-problem" id="toc-quarto-helps-complete-the-solution-to-the-reproducibility-problem" class="nav-link" data-scroll-target="#quarto-helps-complete-the-solution-to-the-reproducibility-problem"><span class="header-section-number">2.8</span> Quarto helps complete the solution to the reproducibility problem</a></li>
+  <li><a href="#summary" id="toc-summary" class="nav-link" data-scroll-target="#summary"><span class="header-section-number">2.9</span> Summary</a></li>
+  <li><a href="#learning-more" id="toc-learning-more" class="nav-link" data-scroll-target="#learning-more"><span class="header-section-number">2.10</span> Learning more</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/njtierney/qmd4sci/edit/main/why-qmd.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/njtierney/qmd4sci/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -404,7 +402,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="reproducibility-is-a-problem" class="level2" data-number="2.4">
 <h2 data-number="2.4" class="anchored" data-anchor-id="reproducibility-is-a-problem"><span class="header-section-number">2.4</span> Reproducibility is a problem</h2>
 <p>It is unfortunately a common, seemingly evergreen problem that a lot of people cannot reproduce scientific work. This might appear to be a “current” problem, but it has indeed been a problem throughout a lot of scientific history. To illustrate this, here’s a nice article by <a href="https://github.com/richfitz">Rich FitzJohn</a>, <a href="https://ropensci.org/blog/2014/06/09/reproducibility/">Reproducible research is still a challenge</a>, which was written 10 years ago, in 2014, and provides a list of the challenges and lessons learned in making research reproducible. The list is still relevant. This problem isn’t completely solved. But, we can make it easier to solve, to get further.</p>
-<p>Reproducibility isn’t just something that impacts a few people, and it’s not cheap. A 2010 estimate stated that in the biomedical industry, in the USA, irreproducibility (not being able to reproduce a given piece of work) costs $28 Billion dollars annually <a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>. That was one country, one field, and one year.</p>
+<p>Reproducibility isn’t just something that impacts a few people, and it’s not cheap. A 2015 estimate stated that in the biomedical industry, in the USA, irreproducibility (not being able to reproduce a given piece of work) costs $28 Billion dollars annually <a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>. That was one country, one field, and one year.</p>
 <p>So what can we do about it?</p>
 </section>
 <section id="literate-programming-is-a-partial-solution" class="level2" data-number="2.5">
@@ -542,8 +540,8 @@ image(volcano)
 <p>For more examples and details of using markdown in Quarto, see the official <a href="https://quarto.org/docs/authoring/markdown-basics.html">Quarto “Markdown Basics” documentation</a>.</p>
 </section>
 </section>
-<section id="what-about-rmarkdown" class="level1" data-number="3">
-<h1 data-number="3"><span class="header-section-number">3</span> What about Rmarkdown?</h1>
+<section id="what-about-rmarkdown" class="level2" data-number="2.7">
+<h2 data-number="2.7" class="anchored" data-anchor-id="what-about-rmarkdown"><span class="header-section-number">2.7</span> What about Rmarkdown?</h2>
 <p>Issues around Sweave led to the development of <a href="https://yihui.org/knitr/">knitr</a>, and subsequently <a href="https://rmarkdown.rstudio.com/">Rmarkdown</a>, which used the knitr engine. You could run more than R code in rmarkdown, in fact there are <a href="https://bookdown.org/yihui/rmarkdown/language-engines.html">over 60 engines available</a>, from awk and bash, to haskell, perl, php, sql, scala, stata, javascript, python, julia, and even C.</p>
 <ul>
 <li>Through rmarkdown there were many approaches to document processing, such as bookdown for books, blogdown for blogs and websites, xaringan for slide decks.</li>
@@ -581,12 +579,13 @@ image(volcano)
 </div>
 <div id="callout-3" class="callout-3-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>One of the big things that is different between Rmarkdown and Quarto are the chunk options. In Rmarkdown they are in the chunk header, and in quarto they are “inside” the code fence. We talk about this later on in the <a href="using-qmd.html" class="quarto-xref"><span>Chapter 5</span></a>.</p>
+<p>One of the big things that is different between Rmarkdown and Quarto are the chunk options. In Rmarkdown they are in the chunk header, use <code>.</code> as a separator (<code>fig.height</code>), and use <code>=</code>, and in quarto they are “inside” the code fence, and use <code>-</code> as a separator (<code>fig-height</code>) and use <code>:</code>.</p>
+<p>We talk about this later on in the <a href="using-qmd.html" class="quarto-xref"><span>Chapter 5</span></a>.</p>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
 <ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true" href="">rmarkdown</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false" href="">quarto</a></li></ul>
 <div class="tab-content">
 <div id="tabset-2-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-2-1-tab">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="st">```</span><span class="at">{r name, fig-height=7, fig-width=5}</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="st">```</span><span class="at">{r name, fig.height=7, fig.width=5}</span></span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="st">```</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <div id="tabset-2-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-2-tab">
@@ -625,8 +624,8 @@ image(volcano)
 </div>
 </div>
 </section>
-<section id="quarto-helps-complete-the-solution-to-the-reproducibility-problem" class="level1" data-number="4">
-<h1 data-number="4"><span class="header-section-number">4</span> Quarto helps complete the solution to the reproducibility problem</h1>
+<section id="quarto-helps-complete-the-solution-to-the-reproducibility-problem" class="level2" data-number="2.8">
+<h2 data-number="2.8" class="anchored" data-anchor-id="quarto-helps-complete-the-solution-to-the-reproducibility-problem"><span class="header-section-number">2.8</span> Quarto helps complete the solution to the reproducibility problem</h2>
 <p>So, how do we combine this with our R code, into a literate programming environment?</p>
 <p>Quarto provides an environment where you can write your complete analysis. It weaves your text, and code, and its output together into a single document.</p>
 <p>For example, look at the following report:</p>
@@ -721,8 +720,9 @@ image(volcano)
 <p>And we just pointed it to some different data. Then re-rendered it.</p>
 <p>That’s it.</p>
 <p>That is why we use Quarto</p>
-<section id="summary" class="level2" data-number="4.1">
-<h2 data-number="4.1" class="anchored" data-anchor-id="summary"><span class="header-section-number">4.1</span> Summary</h2>
+</section>
+<section id="summary" class="level2" data-number="2.9">
+<h2 data-number="2.9" class="anchored" data-anchor-id="summary"><span class="header-section-number">2.9</span> Summary</h2>
 <p>In this section we’ve learned about:</p>
 <ul>
 <li>What the value is in a reproducible report</li>
@@ -731,14 +731,13 @@ image(volcano)
 <li>How to use Markdown</li>
 </ul>
 </section>
-<section id="learning-more" class="level2" data-number="4.2">
-<h2 data-number="4.2" class="anchored" data-anchor-id="learning-more"><span class="header-section-number">4.2</span> Learning more</h2>
+<section id="learning-more" class="level2" data-number="2.10">
+<h2 data-number="2.10" class="anchored" data-anchor-id="learning-more"><span class="header-section-number">2.10</span> Learning more</h2>
 <ul>
 <li><a href="https://rstudio.github.io/cheatsheets/quarto.pdf">Posit’s Quarto cheatsheet</a></li>
 </ul>
 
 
-</section>
 </section>
 <section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
 <hr>

@@ -334,7 +334,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#is-there-an-answer-to-the-madness" id="toc-is-there-an-answer-to-the-madness" class="nav-link" data-scroll-target="#is-there-an-answer-to-the-madness"><span class="header-section-number">4.6</span> Is there an answer to the madness?</a></li>
   <li><a href="#the-here-package" id="toc-the-here-package" class="nav-link" data-scroll-target="#the-here-package"><span class="header-section-number">4.7</span> The “here” package</a></li>
   <li><a href="#remember" id="toc-remember" class="nav-link" data-scroll-target="#remember"><span class="header-section-number">4.8</span> Remember</a></li>
-  <li><a href="#summary" id="toc-summary" class="nav-link" data-scroll-target="#summary"><span class="header-section-number">5</span> Summary</a></li>
+  <li><a href="#summary" id="toc-summary" class="nav-link" data-scroll-target="#summary"><span class="header-section-number">4.9</span> Summary</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/njtierney/qmd4sci/edit/main/workflow.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/njtierney/qmd4sci/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -485,10 +485,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <div class="callout-body-container callout-body">
 <ul>
-<li><p>(1-2 minutes) Imagine you see the following directory path: <code>"/Users/miles/etc1010/week1/data/health.csv"</code> what are the folders above the file, <code>health.csv</code>?</p></li>
-<li><p>What would be the result of using the following code in <code>demo-gapminder.qmd</code>, and then using the code, and then moving this to another location, say inside your C drive?</p></li>
+<li>(1-2 minutes) Imagine you see the following directory path: <code>"/Users/miles/etc1010/week1/data/health.csv"</code> what are the folders above the file, <code>health.csv</code>?</li>
 </ul>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">setwd</span>(<span class="st">"Downloads/etc1010/week1/week1.qmd)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div>
 </section>
@@ -517,13 +515,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>And finally, the big one:</p>
 <p><strong>RStudio projects help resolve file path problems</strong>, because they automatically set the working directory to the location of the rstudio project.</p>
 <p>Let’s open one together.</p>
-<div class="callout callout-style-default callout-note callout-titled" title="Your Turn Use your own rstudio project">
+<div class="callout callout-style-default callout-note callout-titled" title="Your Turn: Use your own rstudio project">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Your Turn Use your own rstudio project
+<span class="screen-reader-only">Note</span>Your Turn: Use your own rstudio project
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -532,7 +530,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <ol type="1">
 <li>In RStudio, and run the following code to start a new rstudio project called “qmd4sci-exercises”.</li>
 </ol>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>usethis<span class="sc">::</span><span class="fu">use_course</span>(<span class="st">"njtierney/qmd4sci-exercises"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>usethis<span class="sc">::</span><span class="fu">use_course</span>(<span class="st">"njtierney/qmd4sci-exercises"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <ol start="2" type="1">
 <li><p>Follow the prompts to download this to your desktop and then run the rstudio project. (You can move it later if you like!)</p></li>
 <li><p>You are now in an rstudio project!</p></li>
@@ -563,11 +561,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="the-here-package" class="level2" data-number="4.7">
 <h2 data-number="4.7" class="anchored" data-anchor-id="the-here-package"><span class="header-section-number">4.7</span> The “here” package</h2>
 <p>Although RStudio projects help resolve file path problems, in some cases you might have many folders in your r project. To help navigate them appropriately, you can use the <code>here</code> package to provide the full path directory, in a compact way.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>here<span class="sc">::</span><span class="fu">here</span>(<span class="st">"data"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>here<span class="sc">::</span><span class="fu">here</span>(<span class="st">"data"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>returns</p>
 <pre><code>[1] "/Users/nick/github/njtierney/qmd4sci-exercises/data"</code></pre>
 <p>And</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>here<span class="sc">::</span><span class="fu">here</span>(<span class="st">"data"</span>, <span class="st">"gapminder.csv"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>here<span class="sc">::</span><span class="fu">here</span>(<span class="st">"data"</span>, <span class="st">"gapminder.csv"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>returns</p>
 <pre><code>[1] "/Users/nick/github/njtierney/qmd4sci-exercises/data/gapminder.csv"</code></pre>
 <p>(Note that these absolute file paths will indeed be different on my computer compared to yours - super neat!)</p>
@@ -581,6 +579,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Quarto documents have a special way of looking for files, this helps eliminate file path pain.</li>
 <li>If you decide to not use RStudio projects, you have code that will work on <em>any machine</em></li>
 </ol>
+<div class="callout callout-style-default callout-note callout-titled" title="Your Turn: Fix the quarto doc">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Your Turn: Fix the quarto doc
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>You got an error earlier when rendering <code>exploratory-data-analysis/eda-document.qmd</code>.</p>
+<p>Your quarto document assumes it’s directory where it lives, is the home - so it cannot see “data”. Given when we know now about <code>here::here()</code>, how would you solve this?</p>
+</div>
+</div>
 </section>
 <section id="remember" class="level2" data-number="4.8">
 <h2 data-number="4.8" class="anchored" data-anchor-id="remember"><span class="header-section-number">4.8</span> Remember</h2>
@@ -593,7 +605,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </blockquote>
 <p>– Jenny Bryan</p>
 <div class="callout callout-style-default callout-caution callout-titled" title="Aside: Creating an RStudio project">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -602,7 +614,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-6" class="callout-6-contents callout-collapse collapse">
+<div id="callout-7" class="callout-7-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>You can create an Rstudio project by going to:</p>
 <p>file &gt; new project &gt; new directory &gt; new project &gt; name your project &gt; create project.</p>
@@ -656,9 +668,29 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </div>
+<div class="callout callout-style-default callout-caution callout-titled" title="Aside: Using RStudio projects outside of RStudio">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Caution</span>Aside: Using RStudio projects outside of RStudio
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-8" class="callout-8-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>If you want to use these nice features of the “.Rproj” file but are working in VS Code, or elsewhere (but still using R). You can still enjoy the benefits of the <code>here::here()</code> package, if you have a .Rproj file. You can create one in R by typing</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(usethis)</span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="fu">use_rstudio</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Which will create a <code>.Rproj</code> file, named after the directory you are in.</p>
+<p>For more details on this, read: <a href="https://positron.posit.co/migrate-rstudio-rproj.html" class="uri">https://positron.posit.co/migrate-rstudio-rproj.html</a></p>
+</div>
+</div>
+</div>
 </section>
-<section id="summary" class="level1" data-number="5">
-<h1 data-number="5"><span class="header-section-number">5</span> Summary</h1>
+<section id="summary" class="level2" data-number="4.9">
+<h2 data-number="4.9" class="anchored" data-anchor-id="summary"><span class="header-section-number">4.9</span> Summary</h2>
 <p>In this lesson we’ve:</p>
 <ul>
 <li>Learnt what file paths are</li>

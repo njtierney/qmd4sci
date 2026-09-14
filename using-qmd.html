@@ -382,7 +382,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="questions" class="level2" data-number="5.2">
 <h2 data-number="5.2" class="anchored" data-anchor-id="questions"><span class="header-section-number">5.2</span> Questions</h2>
 <ul>
-<li>How should I start an Quarto document?</li>
+<li>How should I start a Quarto document?</li>
 <li>What do I put in the YAML metadata?</li>
 <li>How do I create a code chunk?</li>
 <li>What sort of options to I need to worry about for my code?</li>
@@ -473,7 +473,7 @@ __bold__, **bold**, _italic_, *italic*
 </section>
 <section id="code" class="level3" data-number="5.4.3">
 <h3 data-number="5.4.3" class="anchored" data-anchor-id="code"><span class="header-section-number">5.4.3</span> Code</h3>
-<p>We refer to code in an Quarto document in two ways:</p>
+<p>We refer to code in a Quarto document in two ways:</p>
 <ol type="1">
 <li>Code chunks, and</li>
 <li>Inline code.</li>
@@ -622,7 +622,7 @@ __bold__, **bold**, _italic_, *italic*
 <ul>
 <li>Rstudio menu system</li>
 <li>Explore the template provided by Rstudio</li>
-<li>Compile an Quarto document</li>
+<li>Compile a Quarto document</li>
 </ul>
 </section>
 <section id="working-with-a-quarto-document" class="level2" data-number="5.7">
@@ -663,6 +663,7 @@ __bold__, **bold**, _italic_, *italic*
 <li>Sets global options in the YAML</li>
 <li>First code chunk manages libraries</li>
 <li>Second code chunk manages functions</li>
+<li>Third code chunk reads in data</li>
 </ul>
 <p>For example</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb15"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
@@ -706,7 +707,7 @@ __bold__, **bold**, _italic_, *italic*
 </ul>
 <p>In the <code>library</code> chunk, you put all the library calls. This helps make it clearer for anyone else who might read your work what is needed to run this document. I often go through the process of moving these <code>library</code> calls to the top of the document when I have a moment, or when I’m done writing. You can also look at Miles McBain’s <a href="https://github.com/milesMcBain/packup"><code>packup</code></a> package to help move these library calls to the top of a document.</p>
 <p>In the <code>functions</code> chunk, you put any functions that you write in the process of writing your document. Similar to the <code>library</code> chunk, I write these functions as I go, as needed, and them move these to the top when I get a moment, or once I’m done. The benefit of this is that all your functions are in one spot, and you might be able to identify ways to make them work better together, or improve them separately. You might even want to move these into a new R package, and putting them here makes that easier to see what you are doing.</p>
-<p>In the <code>readr</code> chunk, you read in any data you are going to be using in the document.</p>
+<p>In the <code>read-data</code> chunk, you read in any data you are going to be using in the document.</p>
 <p>Now, this is my personal preference, and there are definitely other ways to organise things! But, I find the following benefits:</p>
 <ol type="1">
 <li>The “top part” of your document contains all the metadata / setup info. Your global options. You don’t need to specify every single code chunk.</li>
