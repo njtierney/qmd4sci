@@ -33,6 +33,15 @@ You can then refer to the equation in text using `@eq-linear`:
 
 > Our model is given in @eq-linear.
 
+::: {.callout-note title="Your Turn"}
+
+1.  Using "03-qmd-lm-tables-inline-eqn.qmd"
+    1.  Give the equation in your document a label starting with `#eq-`
+    1.  Refer to that equation in text with `@eq-`
+    1.  Render the document, and check that the equation is numbered and that your reference links to it
+
+:::
+
 ## Other equation-adjacent referencing
 
 You can also use and reference theorems, lemmas, conjectures, and many more - to see these, see the Quarto documentation: [theorems and proofs documentation](https://quarto.org/docs/authoring/cross-references.html#theorems-and-proofs).
