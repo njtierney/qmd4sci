@@ -153,9 +153,35 @@ But with Quarto, we have this general interface, where Quarto can talk to differ
 ![Quarto is a separate program](figs/quarto-all.jpeg)
 
 
-::: {.callout-tip title="Converting Rmarkdown to Quarto" collapse="false"}
+::: {.callout-tip title="Converting Rmarkdown to Quarto" collapse="true"}
 
-One of the big things that is different between Rmarkdown and Quarto are the chunk options. In Rmarkdown they are in the chunk header, and in quarto they are in the body of the function. To help change these over appropriately, you can run this code, which will rewrite the chunk headers.
+One of the big things that is different between Rmarkdown and Quarto are the chunk options. In Rmarkdown they are in the chunk header, and in quarto they are "inside" the code fence. We talk about this later on in the @sec-using-quarto.
+
+::: {.panel-tabset}
+
+## rmarkdown
+
+````{verbatim, lang = "r"}
+```{r name, fig-height=7, fig-width=5}
+```
+````
+
+## quarto
+
+````{verbatim, lang = "r"}
+```{r}
+#| label: name
+#| fig-height: 7
+#| fig-width: 5
+```
+
+````
+
+:::
+
+Note that Rmarkdown now also takes in these "hash-pipe" (`#|`) options.
+
+You can automatically change these code chunk options over with the following code.
 
 ```{r}
 #| eval: false
