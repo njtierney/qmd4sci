@@ -57,7 +57,7 @@ diamonds |>
   )
 ```
 
-We get a clue that the error is in the line `mean_color`, so let's just try and do that line:
+We get a clue that the warning is coming from the line `mean_color`, so let's just try and do that line:
 
 ```{r}
 diamonds |>
@@ -66,13 +66,13 @@ diamonds |>
   )
 ```
 
-We still get that error, so what if we just do
+We still get that warning, and an `NA`, so what if we just do
 
 ```{r}
 mean(diamonds$color)
 ```
 
-OK same error. What is in color?
+OK, same warning. What is in color?
 
 ```{r}
 head(diamonds$color)
