@@ -140,12 +140,6 @@ gapminder <- read_csv("data/gapminder.csv")
 * (1-2 minutes) Imagine you see the following directory path: `"/Users/miles/etc1010/week1/data/health.csv"`
 what are the folders above the file, `health.csv`?
 
-* What would be the result of using the following code in `demo-gapminder.qmd`, and then using the code, and then moving this to another location, say inside your C drive?
-
-```r
-setwd("Downloads/etc1010/week1/week1.qmd)
-```
-
 :::
 
 ## Is there an answer to the madness?
@@ -178,7 +172,7 @@ And finally, the big one:
 
 Let's open one together.
 
-::: {.callout-note title="Your Turn Use your own rstudio project"}
+::: {.callout-note title="Your Turn: Use your own rstudio project"}
 
 As mentioned in @sec-download-exercises, our course exercises exist at <https://github.com/njtierney/qmd4sci-exercises>.
 
@@ -244,6 +238,14 @@ This is really handy for a few reasons:
 1. It makes things _completely_ portable
 1. Quarto documents have a special way of looking for files, this helps eliminate file path pain.
 1. If you decide to not use RStudio projects, you have code that will work on _any machine_
+
+:::{.callout-note title="Your Turn: Fix the quarto doc"}
+
+You got an error earlier when rendering `exploratory-data-analysis/eda-document.qmd`.
+
+Your quarto document assumes it's directory where it lives, is the home - so it cannot see "data". Given when we know now about `here::here()`, how would you solve this?
+
+:::
 
 ## Remember
 
@@ -311,7 +313,23 @@ knitr::include_graphics(here::here("figs", "rstudio-create-proj-4.png"))
 
 :::
 
-# Summary
+::: {.callout-caution title="Aside: Using RStudio projects outside of RStudio" collapse = "true"}
+
+If you want to use these nice features of the ".Rproj" file but are working in VS Code, or elsewhere (but still using R). You can still enjoy the benefits of the `here::here()` package, if you have a .Rproj file. You can create one in R by typing 
+
+```r
+library(usethis)
+use_rstudio()
+```
+
+Which will create a `.Rproj` file, named after the directory you are in.
+
+For more details on this, read: <https://positron.posit.co/migrate-rstudio-rproj.html>
+
+:::
+
+
+## Summary
 
 In this lesson we've:
 

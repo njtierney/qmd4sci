@@ -15,7 +15,7 @@ Now, let's talk about **using** Quarto.
 
 ## Questions
 
-- How should I start an Quarto document?
+- How should I start a Quarto document?
 - What do I put in the YAML metadata?
 - How do I create a code chunk?
 - What sort of options to I need to worry about for my code?
@@ -111,7 +111,7 @@ __bold__, **bold**, _italic_, *italic*
 
 ### Code
 
-We refer to code in an Quarto document in two ways: 
+We refer to code in a Quarto document in two ways: 
 
 1. Code chunks, and 
 1. Inline code.
@@ -266,7 +266,7 @@ What's great about this is that if your data changes upstream, then you don't ne
 
 * Rstudio menu system
 * Explore the template provided by Rstudio
-* Compile an Quarto document
+* Compile a Quarto document
 
 ## Working with a Quarto document
 
@@ -297,6 +297,7 @@ I highly recommend that each document you write has a certain structure:
 - Sets global options in the YAML
 - First code chunk manages libraries
 - Second code chunk manages functions
+- Third code chunk reads in data
 
 For example
 
@@ -346,7 +347,7 @@ In the `library` chunk, you put all the library calls. This helps make it cleare
 
 In the `functions` chunk, you put any functions that you write in the process of writing your document. Similar to the `library` chunk, I write these functions as I go, as needed, and them move these to the top when I get a moment, or once I'm done. The benefit of this is that all your functions are in one spot, and you might be able to identify ways to make them work better together, or improve them separately. You might even want to move these into a new R package, and putting them here makes that easier to see what you are doing.
 
-In the `readr` chunk, you read in any data you are going to be using in the document.
+In the `read-data` chunk, you read in any data you are going to be using in the document.
 
 Now, this is my personal preference, and there are definitely other ways to organise things! But, I find the following benefits:
 

@@ -65,7 +65,7 @@ And this then gets _rendered_ as a table. This works for HTML, PDF, and word!
 Now, say that we wanted to include a caption? We use the `caption` argument. This will also automatically number the table (woo! We'll cover this later).
 
 ```{r}
-#| label: print-tab-gap-captions
+#| label: tbl-gap-captions
 knitr::kable(top_gap,
              caption = "The first 6 rows of the dataset, gapminder")
 ```
@@ -75,7 +75,7 @@ Some other useful features of `kable` include setting the rounding number, with 
 For example, we could present the first 2 digits of each number like so:
 
 ```{r}
-#| label: print-tab-gap-digits
+#| label: tbl-gap-captions-digits
 knitr::kable(top_gap,
              caption = "The first 6 rows of the dataset, gapminder",
              digits = 2)
@@ -126,14 +126,14 @@ So to insert a figure, we do the following.
 ````{markdown}
 ```{r}
 #| label: gg-oz-gapminder
-#| fig-cap: "Life expectancy from 1952 - 2007 for Australia. Life expentancy increases steadily except from 1962 to 1969. We can safely say that our life expectancy is higher than it has ever been!"
+#| fig-cap: "Life expectancy from 1952 - 2007 for Australia. Life expectancy increases steadily except from 1962 to 1969. We can safely say that our life expectancy is higher than it has ever been!"
 library(ggplot2)
 library(dplyr)
 
 gapminder |>
   filter(country == "Australia") |>
-  ggplot(aes(x = lifeExp,
-             y = year)) + 
+  ggplot(aes(x = year,
+             y = lifeExp)) + 
   geom_point()
 ```
 ````
@@ -142,7 +142,7 @@ Which would produce the following output
 
 ```{r}
 #| label: gg-oz-gapminder
-#| fig-cap: Life expectancy from 1952 - 2007 for Australia. Life expentancy increases
+#| fig-cap: Life expectancy from 1952 - 2007 for Australia. Life expectancy increases
 #|   steadily except from 1962 to 1969. We can safely say that our life expectancy is
 #|   higher than it has ever been!
 library(ggplot2)
@@ -150,8 +150,8 @@ library(dplyr)
 
 gapminder |>
   filter(country == "Australia") |>
-  ggplot(aes(x = lifeExp,
-             y = year)) + 
+  ggplot(aes(x = year,
+             y = lifeExp)) + 
   geom_point()
 ```
 
@@ -232,7 +232,7 @@ knitr::include_graphics(here::here("figs", "ssa-logo.png"))
 ```
 
 ::: {.callout-caution title="Controlling image output with css" collapse="true"}
-You can control more features of figures, e.g., sizing, alignment, alt text, etc., by using CSS type styling, which you can read more about here: <https://quarto.org/docs/authoring/figures.html#figure-sizing`>
+You can control more features of figures, e.g., sizing, alignment, alt text, etc., by using CSS type styling, which you can read more about here: <https://quarto.org/docs/authoring/figures.html#figure-sizing>
 :::
 
 ::::
@@ -240,7 +240,7 @@ You can control more features of figures, e.g., sizing, alignment, alt text, etc
 ::: {.callout-note title="Your Turn"}
 
 1. Download the gapminder logo, which is at [this link](https://www.gapminder.org/wp-content/themes/gapminder2/images/gapminder-logo.svg)
-1. Put it into a new directory called "figs" (at the same level as your `qmd4sci-exercises.Rroj` file)
+1. Put it into a new directory called "figs" (at the same level as your `qmd4sci-exercises.Rproj` file)
 1. Insert the image into your "02-qmd-figures-chunks.qmd" Quarto document around where you introduce gapminder.
   1. Try using both markdown `![]()` syntax, and `knitr::include_graphics()`.
   1. Hint: Remember to refer to the image in the right spot using `here`!

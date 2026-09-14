@@ -38,7 +38,7 @@ The RStudio layout has the following features:
 knitr::include_graphics(here::here("figs","rstudio-screenshot.jpeg"))
 ```
 
-We saw a bit of what an Quarto script does.
+We saw a bit of what a Quarto script does.
 
 - The R console is the bit where you can run your code. 
 - The file/plot/package viewer is a handy browser for your current files, like Finder, or File Explorer.

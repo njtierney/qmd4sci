@@ -28,7 +28,7 @@ The goal of this section is to briefly discuss why we want to learn Quarto, the 
 
 It is unfortunately a common, seemingly evergreen problem that a lot of people cannot reproduce scientific work. This might appear to be a "current" problem, but it has indeed been a problem throughout a lot of scientific history. To illustrate this, here's a nice article by [Rich FitzJohn](https://github.com/richfitz), [Reproducible research is still a challenge](https://ropensci.org/blog/2014/06/09/reproducibility/), which was written 10 years ago, in 2014, and provides a list of the challenges and lessons learned in making research reproducible. The list is still relevant. This problem isn't completely solved. But, we can make it easier to solve, to get further.
 
-Reproducibility isn't just something that impacts a few people, and it's not cheap. A 2010 estimate stated that in the biomedical industry, in the USA, irreproducibility (not being able to reproduce a given piece of work) costs \$28 Billion dollars annually [^why-qmd-1]. That was one country, one field, and one year.
+Reproducibility isn't just something that impacts a few people, and it's not cheap. A 2015 estimate stated that in the biomedical industry, in the USA, irreproducibility (not being able to reproduce a given piece of work) costs \$28 Billion dollars annually [^why-qmd-1]. That was one country, one field, and one year.
 
 [^why-qmd-1]: The article, [Freedman, 2010](https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.1002165), Heard via Garret Grolemund's [great talk](https://www.youtube.com/watch?v=HVlwNayog-k)
 
@@ -130,7 +130,7 @@ Some other nice features of Markdown include:
 
 For more examples and details of using markdown in Quarto, see the official [Quarto "Markdown Basics" documentation](https://quarto.org/docs/authoring/markdown-basics.html).
 
-# What about Rmarkdown?
+## What about Rmarkdown?
 
 Issues around Sweave led to the development of [knitr](https://yihui.org/knitr/), and subsequently [Rmarkdown](https://rmarkdown.rstudio.com/), which used the knitr engine. You could run more than R code in rmarkdown, in fact there are [over 60 engines available](https://bookdown.org/yihui/rmarkdown/language-engines.html), from awk and bash, to haskell, perl, php, sql, scala, stata, javascript, python, julia, and even C.
 
@@ -155,14 +155,16 @@ But with Quarto, we have this general interface, where Quarto can talk to differ
 
 ::: {.callout-tip title="Converting Rmarkdown to Quarto" collapse="true"}
 
-One of the big things that is different between Rmarkdown and Quarto are the chunk options. In Rmarkdown they are in the chunk header, and in quarto they are "inside" the code fence. We talk about this later on in the @sec-using-quarto.
+One of the big things that is different between Rmarkdown and Quarto are the chunk options. In Rmarkdown they are in the chunk header, use `.` as a separator (`fig.height`), and use `=`, and in quarto they are "inside" the code fence, and use `-` as a separator (`fig-height`) and use `:`. 
+
+We talk about this later on in the @sec-using-quarto.
 
 ::: {.panel-tabset}
 
 ## rmarkdown
 
 ````{verbatim, lang = "r"}
-```{r name, fig-height=7, fig-width=5}
+```{r name, fig.height=7, fig.width=5}
 ```
 ````
 
@@ -200,7 +202,7 @@ knitr::convert_chunk_header(
 
 :::
 
-# Quarto helps complete the solution to the reproducibility problem
+## Quarto helps complete the solution to the reproducibility problem
 
 So, how do we combine this with our R code, into a literate programming environment?
 

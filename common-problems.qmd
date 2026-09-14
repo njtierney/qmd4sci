@@ -41,7 +41,7 @@ Then, if there is an error:
 
 ## The errors
 
-What follows from here are all the errors you might in an Quarto document, with the following structure:
+What follows from here are all the errors you might find in a Quarto document, with the following structure:
 
 -   What they might look like
 -   What the error message might appear to be, and
