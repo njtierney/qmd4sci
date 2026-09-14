@@ -29,7 +29,7 @@ This `.bib` file is referred to in the YAML of your document, under the option `
 ---
 title: 
 author:
-output: html_document
+format: html
 bibliography: references.bib
 ---
 ```
@@ -76,7 +76,7 @@ For journals or books, you'll need to get a specific .bib file. Yes, this can be
     1.  Generate a references.bib file to place your citations
     2.  Using the `citation()` function, generate citations for the packages we have used, "dplyr", "ggplot2", "gapminder", and for the R software, place these in your `references.bib` file
     3.  Reference these in your document
-    4.  Add a final heading in your file called `#bibliography`
+    4.  Add a final heading in your file called `# References`, with `::: {#refs}` if you want to place it in a specific location
     5.  Cite the packages you use when you use them
     6.  hint: https://quarto.org/docs/authoring/footnotes-and-citations.html
     7.  hint: look at the names in packages.bib
@@ -94,7 +94,7 @@ Similar to how you referred to your `.bib` file with `bibliography: ref.bib`, yo
 ---
 title:
 author:
-output: html_document
+format: html
 bibliography: references.bib
 csl: my_journal.csl
 ---
@@ -134,7 +134,7 @@ The bibliography can be suppressed with the YAML option `suppress-bibliography`
 
 ```         
 title: "document"
-output: html
+format: html
 bibliography: file.bib
 suppress-bibliography: true
 ```
