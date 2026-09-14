@@ -1,4 +1,4 @@
-# Using Quarto
+# Using Quarto {#sec-using-quarto}
 
 So far we have covered:
 

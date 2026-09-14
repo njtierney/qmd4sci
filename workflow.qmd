@@ -180,6 +180,10 @@ Let's open one together.
 
 ::: {.callout-note title="Your Turn Use your own rstudio project"}
 
+As mentioned in @sec-download-exercises, our course exercises exist at <https://github.com/njtierney/qmd4sci-exercises>.
+
+You can download them and then have RStudio automagically open by following the following steps:
+
 1. In RStudio, and run the following code to start a new rstudio project called "qmd4sci-exercises".
 
 ```r

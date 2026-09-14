@@ -1,4 +1,4 @@
-# Customising your figures
+# Customising your figures {#sec-options}
 
 When you produce figures, you usually want to tweak them a little bit. A bit wider, perhaps a bit taller. Perhaps a different image type other than "png", because the journal requires "svg" or "jpg". Maybe you need 600dpi because you're going to print it really big. 
 

@@ -45,7 +45,7 @@ You can download R here:
 
 ### RStudio
 
-[https://posit.co/download/rstudio-desktop/#download](https://posit.co/download/rstudio-desktop/#download)
+[https://docs.posit.co/ide/user/#rstudio-ide-oss-downloads](https://docs.posit.co/ide/user/#rstudio-ide-oss-downloads)
 
 ### Quarto
 
@@ -135,7 +135,7 @@ library(usethis)
 library(visdat)
 ```
 
-## Downloading the exercises
+## Downloading the exercises {#sec-download-exercises}
 
 The exercises and data for the course live in their own repository, [qmd4sci-exercises](https://github.com/njtierney/qmd4sci-exercises). This code from usethis will automagically download them, and open up an RStudio project. We will talk more about those later.
 
