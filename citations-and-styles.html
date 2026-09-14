@@ -390,7 +390,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">author</span><span class="kw">:</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">output</span><span class="kw">:</span><span class="at"> html_document</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">format</span><span class="kw">:</span><span class="at"> html</span></span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">bibliography</span><span class="kw">:</span><span class="at"> references.bib</span></span>
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <section id="what-is-a-.bib-file" class="level3" data-number="12.4.1">
@@ -475,7 +475,7 @@ A BibTeX entry for LaTeX users is
 <li>Generate a references.bib file to place your citations</li>
 <li>Using the <code>citation()</code> function, generate citations for the packages we have used, “dplyr”, “ggplot2”, “gapminder”, and for the R software, place these in your <code>references.bib</code> file</li>
 <li>Reference these in your document</li>
-<li>Add a final heading in your file called <code>#bibliography</code></li>
+<li>Add a final heading in your file called <code># References</code>, with <code>::: {#refs}</code> if you want to place it in a specific location</li>
 <li>Cite the packages you use when you use them</li>
 <li>hint: https://quarto.org/docs/authoring/footnotes-and-citations.html</li>
 <li>hint: look at the names in packages.bib</li>
@@ -494,7 +494,7 @@ A BibTeX entry for LaTeX users is
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="fu">title</span><span class="kw">:</span></span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="fu">author</span><span class="kw">:</span></span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="fu">output</span><span class="kw">:</span><span class="at"> html_document</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="fu">format</span><span class="kw">:</span><span class="at"> html</span></span>
 <span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="fu">bibliography</span><span class="kw">:</span><span class="at"> references.bib</span></span>
 <span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="fu">csl</span><span class="kw">:</span><span class="at"> my_journal.csl</span></span>
 <span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -538,7 +538,7 @@ A BibTeX entry for LaTeX users is
 <h2 data-number="12.7" class="anchored" data-anchor-id="how-to-not-print-suppress-the-bibliography"><span class="header-section-number">12.7</span> How to not print / suppress the bibliography?</h2>
 <p>The bibliography can be suppressed with the YAML option <code>suppress-bibliography</code></p>
 <pre><code>title: "document"
-output: html
+format: html
 bibliography: file.bib
 suppress-bibliography: true</code></pre>
 <div class="callout callout-style-default callout-note callout-titled" title="Your Turn">

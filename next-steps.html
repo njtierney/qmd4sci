@@ -439,7 +439,7 @@ Caused by warning in `mean.default()`:
 5 Ideal          3920.    2043.         NA</code></pre>
 </div>
 </div>
-<p>We get a clue that the error is in the line <code>mean_color</code>, so let’s just try and do that line:</p>
+<p>We get a clue that the warning is coming from the line <code>mean_color</code>, so let’s just try and do that line:</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>diamonds <span class="sc">|&gt;</span></span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
@@ -468,7 +468,7 @@ Caused by warning in `mean.default()`:
 # ℹ 53,930 more rows</code></pre>
 </div>
 </div>
-<p>We still get that error, so what if we just do</p>
+<p>We still get that warning, and an <code>NA</code>, so what if we just do</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(diamonds<span class="sc">$</span>color)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stderr">
@@ -479,7 +479,7 @@ returning NA</code></pre>
 <pre><code>[1] NA</code></pre>
 </div>
 </div>
-<p>OK same error. What is in color?</p>
+<p>OK, same warning. What is in color?</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(diamonds<span class="sc">$</span>color)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
