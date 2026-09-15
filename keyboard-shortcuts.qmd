@@ -39,6 +39,7 @@ Below is a small table of tasks you can perform with keyboard shortcuts
 |-------------|---------------|----------------|
 | Render document | Ctrl + Shift + K | Cmd + Shift + K |
 | Insert Chunk  | Ctrl + Alt + I   | Cmd + Option + I |
+| Run current line or selection | Ctrl + Enter | Cmd + Return |
 | Run Current Chunk | Ctrl + Alt + C | Cmd + Option + C | 
 | Jump to  | Shift+Alt+J 	| Cmd+Shift+Option+J |
 | Show Keyboard Shortcut Reference  |	Alt+Shift+K | Option+Shift+K |
