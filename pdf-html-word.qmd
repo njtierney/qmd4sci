@@ -63,10 +63,7 @@ quarto render example.qmd --to docx
 
 It can be easy to get caught up with how your document looks. I highly recommend avoiding compiling to PDF or word until _you really need to_. [This is also recommended by the author of rmarkdown and knitr, Yihui Xie](https://yihui.name/en/2018/07/in-html-i-trust/). Because HTML doesn't have page breaks, this means that you can spend time working on generating content, and not trying to get figures to line up correctly. 
 
-This was a minor revelation to me, to understand that page breaks were the cause of so much angst and pain. Embrace HTML, I say!
-
-Rendering is also not how you find out whether your code works. Run the chunks first, fix whatever breaks, and then render. Rendering starts a fresh R session and runs your code from the top, so it is the slowest way there is to discover a typo.
-
+This was a more than a minor revelation to me, to understand that page breaks were the cause of so much angst and pain. Embrace HTML, I say!
 
 ## How to make a HTML page "self contained"
 

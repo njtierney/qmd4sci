@@ -163,7 +163,7 @@ Quarto provides support for R, Python, Julia, and Observable, which are all very
 knitr::include_graphics("figs/ansi-keyboard.png")
 ```
 
-#### Running code in quarto
+### Running code in quarto
 
 You do not have to type the backticks - there are keyboard shortcuts for this!
 
