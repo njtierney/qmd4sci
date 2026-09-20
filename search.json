@@ -604,7 +604,7 @@
     "href": "keyboard-shortcuts.html#table-of-common-shortcuts",
     "title": "7  Keyboard Shortcuts",
     "section": "7.4 Table of Common Shortcuts",
-    "text": "7.4 Table of Common Shortcuts\nBelow is a small table of tasks you can perform with keyboard shortcuts\n\n\n\n\n\n\n\n\nAction\nWindows/Linux\nMac\n\n\n\n\nRender document\nCtrl + Shift + K\nCmd + Shift + K\n\n\nInsert Chunk\nCtrl + Alt + I\nCmd + Option + I\n\n\nRun current line or selection\nCtrl + Enter\nCmd + Return\n\n\nRun Current Chunk\nCtrl + Alt + C\nCmd + Option + C\n\n\nJump to\nShift+Alt+J\nCmd+Shift+Option+J\n\n\nShow Keyboard Shortcut Reference\nAlt+Shift+K\nOption+Shift+K\n\n\nCreate multiple cursors\nCtrl + Alt + Up/Down\noption + control + Up/Down\n\n\nDelete the current line\nCtrl + D\nCmd + D\n\n\nUn/Comment out a line\nCtrl + Shift + C\nCmd + Shift + C\n\n\nReformat Section\nCtrl + Shift + A\nCmd + Shift + A\n\n\nDuplicate lines\nAlt + Shift + Up/Down\nCmd + Option + Up/Down",
+    "text": "7.4 Table of Common Shortcuts\nBelow is a small table of tasks you can perform with keyboard shortcuts\n\n\n\n\n\n\n\n\nAction\nWindows/Linux\nMac\n\n\n\n\nCommand Palette\nCtrl + Shift + P\nCmd + Shift + P\n\n\nRender document\nCtrl + Shift + K\nCmd + Shift + K\n\n\nInsert Chunk\nCtrl + Alt + I\nCmd + Option + I\n\n\nRun current line or selection\nCtrl + Enter\nCmd + Return\n\n\nRun Current Chunk\nCtrl + Alt + C\nCmd + Option + C\n\n\nShow Keyboard Shortcut Reference\nAlt+Shift+K\nOption+Shift+K\n\n\nCreate multiple cursors\nCtrl + Alt + Up/Down\noption + control + Up/Down\n\n\nDelete the current line\nCtrl + D\nCmd + D\n\n\nUn/Comment out a line\nCtrl + Shift + C\nCmd + Shift + C\n\n\nReformat Section\nCtrl + Shift + A\nCmd + Shift + A\n\n\nMove lines up/down\nAlt + Up/Down\nOption + Up/Down\n\n\nCopy lines up/down\nShift + Alt + Up/Down\nCmd + Option + Up/Down\n\n\nJump to Word\nCtrl + Left/Right\nOption + Left or Right\n\n\nSelect to Word\nCtrl + Shift + Left/Right\nOption + Shift + Left or Right\n\n\nJump to Line Start/End\nAlt + Left/Right\nCmd + Left or Right\n\n\nSelect to Line Start/End\nShift + Alt + Left/Right\nShift + Cmd + Left or Right",
     "crumbs": [
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>Keyboard Shortcuts</span>"
     ]
@@ -614,7 +614,7 @@
     "href": "keyboard-shortcuts.html#further-reading",
     "title": "7  Keyboard Shortcuts",
     "section": "7.5 Further Reading",
-    "text": "7.5 Further Reading\n\nThe Rstudio Cheat Sheet has an index of shortcuts.\nThis help file has a guide to customising keyboard shortcuts.\nThe shrtcts R package for creating new shortcuts.\nMy course R Best Practices goes further into this, covering typing speed, working closer to the speed of thought, and a longer list of shortcuts worth learning.\n\n\n\n\n\n\n\nNoteYour Turn\n\n\n\n\nIn your awesome quarto document\n\nPractice using the Keyboard Shortcut Reference and find the keyboard shortcut for inserting a pipe character ( %&gt;% or |&gt;)\nSpend 3 minutes practicing these commands.\n\nAsk Nick to demonstrate some of his favourite shortcut combos\n\ne.g., multiline cursor, yank lines, copy lines, go to file/function",
+    "text": "7.5 Further Reading\n\nThe Rstudio Cheat Sheet has an index of shortcuts.\nThis help file has a guide to customising keyboard shortcuts.\nThe shrtcts R package for creating new shortcuts.\nMy course R Best Practices goes further into this, covering typing speed, working closer to the speed of thought, and a longer list of shortcuts worth learning.\n\n\n\n\n\n\n\nNoteYour Turn\n\n\n\n\nIn your awesome quarto document\n\nPractice using the Keyboard Shortcut Reference and find the keyboard shortcut for inserting a pipe character ( %&gt;% or |&gt;)\nFind the keyboard shortcut for inserting assignment (&lt;-)\nRead the “Editing (console and source)” shortcuts\nSpend 5 minutes practicing these commands. Really!\n\nAsk Nick to demonstrate some of his favourite shortcut combos\n\ne.g., multiline cursor, yank lines, copy lines, go to file/function",
     "crumbs": [
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>Keyboard Shortcuts</span>"
     ]
@@ -622,81 +622,81 @@
   {
     "objectID": "figures-tables-captions.html",
     "href": "figures-tables-captions.html",
-    "title": "8  Figures, Tables, Captions.",
+    "title": "8  Figures, Tables, Captions",
     "section": "",
     "text": "8.1 Overview\nYou need figures and tables in your own writing, whether it be a journal paper, an internal document, or some documentation. In this section, we discuss how to add figures and tables into your Quarto document, and how to provide captions for them.",
     "crumbs": [
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Figures, Tables, Captions.</span>"
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Figures, Tables, Captions</span>"
     ]
   },
   {
     "objectID": "figures-tables-captions.html#overview",
     "href": "figures-tables-captions.html#overview",
-    "title": "8  Figures, Tables, Captions.",
+    "title": "8  Figures, Tables, Captions",
     "section": "",
     "text": "Teaching 10 minutes\nExercises 10 minutes",
     "crumbs": [
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Figures, Tables, Captions.</span>"
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Figures, Tables, Captions</span>"
     ]
   },
   {
     "objectID": "figures-tables-captions.html#questions",
     "href": "figures-tables-captions.html#questions",
-    "title": "8  Figures, Tables, Captions.",
+    "title": "8  Figures, Tables, Captions",
     "section": "8.2 Questions",
     "text": "8.2 Questions\n\nHow do I create a figure in Quarto?\nHow do I create a table in Quarto?\nHow do I add captions for figures and tables?",
     "crumbs": [
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Figures, Tables, Captions.</span>"
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Figures, Tables, Captions</span>"
     ]
   },
   {
     "objectID": "figures-tables-captions.html#objectives",
     "href": "figures-tables-captions.html#objectives",
-    "title": "8  Figures, Tables, Captions.",
+    "title": "8  Figures, Tables, Captions",
     "section": "8.3 Objectives",
     "text": "8.3 Objectives",
     "crumbs": [
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Figures, Tables, Captions.</span>"
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Figures, Tables, Captions</span>"
     ]
   },
   {
     "objectID": "figures-tables-captions.html#tables",
     "href": "figures-tables-captions.html#tables",
-    "title": "8  Figures, Tables, Captions.",
+    "title": "8  Figures, Tables, Captions",
     "section": "8.4 Tables",
     "text": "8.4 Tables\nTo produce a table, I recommend you use the kable function from the knitr package.\n\n\n\n\n\n\nCautionOther table R packages\n\n\n\n\n\nThere are many other table making pieces of R packages, such as gt, formattable, reactable, and flextable). But I think you can get 90% of the way there with kable from knitr.\n\n\n\n\n8.4.1 Demonstrating using tables\nkable takes a data.frame as input, and outputs the table into a markdown table, which will get rendered into the appropriate output format.\nFor example, let’s say we wanted to share the first 6 rows of our gapminder data.\nThis gives us the following output\n\ntop_gap &lt;- head(gapminder)\n\nknitr::kable(top_gap)\n\n\n\n\ncountry\ncontinent\nyear\nlifeExp\npop\ngdpPercap\n\n\n\n\nAfghanistan\nAsia\n1952\n28.801\n8425333\n779.4453\n\n\nAfghanistan\nAsia\n1957\n30.332\n9240934\n820.8530\n\n\nAfghanistan\nAsia\n1962\n31.997\n10267083\n853.1007\n\n\nAfghanistan\nAsia\n1967\n34.020\n11537966\n836.1971\n\n\nAfghanistan\nAsia\n1972\n36.088\n13079460\n739.9811\n\n\nAfghanistan\nAsia\n1977\n38.438\n14880372\n786.1134\n\n\n\n\n\nSo how does that work? kable prints out the following:\n|country     |continent | year| lifeExp|      pop| gdpPercap|\n|:-----------|:---------|----:|-------:|--------:|---------:|\n|Afghanistan |Asia      | 1952|  28.801|  8425333|  779.4453|\n|Afghanistan |Asia      | 1957|  30.332|  9240934|  820.8530|\n|Afghanistan |Asia      | 1962|  31.997| 10267083|  853.1007|\n|Afghanistan |Asia      | 1967|  34.020| 11537966|  836.1971|\n|Afghanistan |Asia      | 1972|  36.088| 13079460|  739.9811|\n|Afghanistan |Asia      | 1977|  38.438| 14880372|  786.1134|\nAnd this then gets rendered as a table. This works for HTML, PDF, and word!\n\n8.4.1.1 Adding captions to a table\nNow, say that we wanted to include a caption? We use the caption argument. This will also automatically number the table (woo! We’ll cover this later).\n\nknitr::kable(top_gap,\n             caption = \"The first 6 rows of the dataset, gapminder\")\n\n\n\nTable 8.1: The first 6 rows of the dataset, gapminder\n\n\n\n\n\n\ncountry\ncontinent\nyear\nlifeExp\npop\ngdpPercap\n\n\n\n\nAfghanistan\nAsia\n1952\n28.801\n8425333\n779.4453\n\n\nAfghanistan\nAsia\n1957\n30.332\n9240934\n820.8530\n\n\nAfghanistan\nAsia\n1962\n31.997\n10267083\n853.1007\n\n\nAfghanistan\nAsia\n1967\n34.020\n11537966\n836.1971\n\n\nAfghanistan\nAsia\n1972\n36.088\n13079460\n739.9811\n\n\nAfghanistan\nAsia\n1977\n38.438\n14880372\n786.1134\n\n\n\n\n\n\n\n\nSome other useful features of kable include setting the rounding number, with the digits option.\nFor example, we could present the first 2 digits of each number like so:\n\nknitr::kable(top_gap,\n             caption = \"The first 6 rows of the dataset, gapminder\",\n             digits = 2)\n\n\n\nTable 8.2: The first 6 rows of the dataset, gapminder\n\n\n\n\n\n\ncountry\ncontinent\nyear\nlifeExp\npop\ngdpPercap\n\n\n\n\nAfghanistan\nAsia\n1952\n28.80\n8425333\n779.45\n\n\nAfghanistan\nAsia\n1957\n30.33\n9240934\n820.85\n\n\nAfghanistan\nAsia\n1962\n32.00\n10267083\n853.10\n\n\nAfghanistan\nAsia\n1967\n34.02\n11537966\n836.20\n\n\nAfghanistan\nAsia\n1972\n36.09\n13079460\n739.98\n\n\nAfghanistan\nAsia\n1977\n38.44\n14880372\n786.11\n\n\n\n\n\n\n\n\nThere are other options that you can set in kable, but for these options will get you through a large majority of what you need. For more information on what kable can provide, see ?knitr::kable.\nThere are many different ways to produce tables in R. We have chosen to show kable today because kable is minimal, but powerful. If you want to extend kable to do more, look at kableExtra. For PDF/LaTeX output, I found the option kableExtra::kable_styling(latex_options = c(\"hold_position\")) particularly nice to just put the table where it should be, goshdarnit.\n\n\n\n\n\n\nNoteYour Turn\n\n\n\n\nUsing the “02-qmd-figures-chunks.qmd”\nCreate a summary of your gapminder data, put it into a table.\nAdd a caption to this table.\nSet the number of decimals to 2.",
     "crumbs": [
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Figures, Tables, Captions.</span>"
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Figures, Tables, Captions</span>"
     ]
   },
   {
     "objectID": "figures-tables-captions.html#figures",
     "href": "figures-tables-captions.html#figures",
-    "title": "8  Figures, Tables, Captions.",
+    "title": "8  Figures, Tables, Captions",
     "section": "8.5 Figures",
-    "text": "8.5 Figures\nPrinting figures is probably my favourite feature of Quarto. It is actually relatively straightforward in the case of plots. You provide the plot you want to show in a code chunk!\n\n\n\n\n\n\nTipDemo using gapminder\n\n\n\nFor example, I can print a plot of the gapminder data for Australia like so:\n\noptions(tidyverse.quiet = TRUE)\nlibrary(tidyverse)\n\ngapminder |&gt;\n  filter(country == \"Australia\") |&gt;\n  ggplot(aes(x = year,\n             y = lifeExp)) + \n  geom_point()\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTipDemo: Captions for figures\n\n\n\nInserting a caption for a figure is a little bit different. The caption argument is controlled in the chunk option, under the option, fig-cap.\nSo to insert a figure, we do the following.\n\n```{r}\n#| label: gg-oz-gapminder\n#| fig-cap: \"Life expectancy from 1952 - 2007 for Australia. Life expectancy increases steadily except from 1962 to 1969. We can safely say that our life expectancy is higher than it has ever been!\"\nlibrary(ggplot2)\nlibrary(dplyr)\n\ngapminder |&gt;\n  filter(country == \"Australia\") |&gt;\n  ggplot(aes(x = year,\n             y = lifeExp)) + \n  geom_point()\n```\n\nWhich would produce the following output\n\nlibrary(ggplot2)\nlibrary(dplyr)\n\ngapminder |&gt;\n  filter(country == \"Australia\") |&gt;\n  ggplot(aes(x = year,\n             y = lifeExp)) + \n  geom_point()\n\n\n\n\nLife expectancy from 1952 - 2007 for Australia. Life expectancy increases steadily except from 1962 to 1969. We can safely say that our life expectancy is higher than it has ever been!\n\n\n\n\n\n\n\n\n\n\n\n\nNoteYour Turn\n\n\n\n\nUsing 02-qmd-figures-chunks.qmd\n\nCreate a plot\nAdd a figure caption\n\n\n\n\n\n8.5.1 Adding multiple (sub) figures and (sub) captions\nSometimes you want to add multiple figures that are linked, or slightly different views of similar data and then reference them as Figure 1A and Figure 1B. You can do this with layout-ncol and fig-cap, and reference the figures with @fig-&lt;chunk-name&gt;-1 @fig-&lt;chunk-name&gt;-2. For example:\n```{r}\n#| label: fig-volcanos\n#| layout-ncol: 2\n#| fig-cap: \n#|   - \"An image plot of Auckland's Maunga Whau Volcano\"\n#|   - \"A contour plot of Auckland's Maunga Whau Volcano\"\n\nimage(volcano)\ncontour(volcano)\n```\n\n\n\n\n\n\n\n\n\nFigure 8.1: An image plot of Auckland’s Maunga Whau Volcano\n\n\n\n\n\n\n\n\n\n\n\nFigure 8.2: A contour plot of Auckland’s Maunga Whau Volcano\n\n\n\n\n\n\nWe can see the image plot as (@fig-volcanos-1) Figure 8.1 and the contour plot as @fig-volcanos-2 Figure 8.2.\nFor more information on this see https://quarto.org/docs/authoring/figures.html#layout and https://quarto.org/docs/authoring/cross-references.html",
+    "text": "8.5 Figures\nPrinting figures is probably my favourite feature of Quarto. It is actually relatively straightforward in the case of plots. You provide the plot you want to show in a code chunk!\n\n\n\n\n\n\nTipDemo using gapminder\n\n\n\nFor example, I can print a plot of the gapminder data for Australia like so:\n\noptions(tidyverse.quiet = TRUE)\nlibrary(tidyverse)\n\ngapminder |&gt;\n  filter(country == \"Australia\") |&gt;\n  ggplot(aes(x = year,\n             y = lifeExp)) + \n  geom_point()\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTipDemo: Captions for figures\n\n\n\nInserting a caption for a figure is a little bit different. The caption argument is controlled in the chunk option, under the option, fig-cap.\nSo to insert a figure, we do the following.\n\n```{r}\n#| label: gg-oz-gapminder\n#| fig-cap: \"Life expectancy from 1952 - 2007 for Australia. Life expectancy increases steadily except from 1962 to 1969. We can safely say that our life expectancy is higher than it has ever been!\"\nlibrary(ggplot2)\nlibrary(dplyr)\n\ngapminder |&gt;\n  filter(country == \"Australia\") |&gt;\n  ggplot(aes(x = year,\n             y = lifeExp)) + \n  geom_point()\n```\n\nWhich would produce the following output\n\nlibrary(ggplot2)\nlibrary(dplyr)\n\ngapminder |&gt;\n  filter(country == \"Australia\") |&gt;\n  ggplot(aes(x = year,\n             y = lifeExp)) + \n  geom_point()\n\n\n\n\nLife expectancy from 1952 - 2007 for Australia. Life expectancy increases steadily except from 1962 to 1969. We can safely say that our life expectancy is higher than it has ever been!\n\n\n\n\n\n\n\n\n\n\n\n\nNoteYour Turn\n\n\n\n\nUsing 02-qmd-figures-chunks.qmd\n\nCreate a plot\nAdd a figure caption\n\n\n\n\n\n8.5.1 Adding multiple (sub) figures and (sub) captions\nSometimes you want to add multiple figures that are linked, or slightly different views of similar data. Quarto calls these subfigures. You give the chunk one fig-cap for the whole figure, and a fig-subcap with one caption per panel. You can then reference the individual panels with @fig-&lt;chunk-name&gt;-1 and @fig-&lt;chunk-name&gt;-2. For example:\n```{r}\n#| label: fig-volcanos\n#| layout-ncol: 2\n#| fig-cap: \"Two views of Auckland's Maunga Whau Volcano\"\n#| fig-subcap:\n#|   - \"An image plot\"\n#|   - \"A contour plot\"\n\nimage(volcano)\ncontour(volcano)\n```\n\n\n\n\n\n\n\n\n\n\n\n(a) An image plot\n\n\n\n\n\n\n\n\n\n\n\n(b) A contour plot\n\n\n\n\n\n\n\nFigure 8.1: Two views of Auckland’s Maunga Whau Volcano\n\n\n\nThe panels get lettered captions, (a) and (b). We can see the image plot as (@fig-volcanos-1) Figure 8.1 (a) and the contour plot as (@fig-volcanos-2) Figure 8.1 (b). The figure as a whole is (@fig-volcanos) Figure 8.1.\n\n\n\n\n\n\nWarningA list in fig-cap works, too!\n\n\n\n\n\nYou can give fig-cap a list of captions instead, one per plot. That does not make subfigures, but produces two separate figures, numbered Figure 1 and Figure 2, each with its own caption, and @fig-volcanos on its own no longer resolves - you only get the numbered references, @fig-volcanos-1 and @fig-volcanos-2.\n\n\n\nFor more information on this see https://quarto.org/docs/authoring/figures.html#layout and https://quarto.org/docs/authoring/cross-references.html",
     "crumbs": [
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Figures, Tables, Captions.</span>"
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Figures, Tables, Captions</span>"
     ]
   },
   {
     "objectID": "figures-tables-captions.html#inserting-images",
     "href": "figures-tables-captions.html#inserting-images",
-    "title": "8  Figures, Tables, Captions.",
+    "title": "8  Figures, Tables, Captions",
     "section": "8.6 Inserting images",
     "text": "8.6 Inserting images\nWe cannot always generate the graphics that we want - for example, we might have an image of something that we want to show, or perhaps a nice flowchart someone else made.\nIn our case, say we wanted to insert the Statistical Society of Australia logo into our document, there are two ways we can do this.\n\nWith markdown syntax\nwith knitr::include_graphics()\n\nMarkdown syntax\nThe markdown syntax to insert an image is: ![caption](path/to/image){options}\n\n\n\n\n\n\nTipDemo: inserting a logo\n\n\n\nSo we could insert the new SSA vic logo by doing the following:\n\n```\n![The new, gorgeous SSA Logo has a hidden element, can you see it?](https://qmd4sci.njtierney.com/figs/ssa-logo.png)\n```\n\nWhich would give us the following output:\n\n\n\nThe new, gorgeous SSA Logo has a hidden element, can you see it?\n\n\nBut say that we want more control over the output, like we want to center the image, and we want to make it smaller? Then you can use knitr::include_graphics(), and control the figure alignment using the options fig-align, and add a caption with fig-cap.\n\n```{r}\n#| label: ssa-logo\n#| fig-align: center\n#| fig-cap: \"The new SSA logo, which is actually a scatterplot, which is super neat!\"\nknitr::include_graphics(here::here(\"figs\", \"ssa-logo.png\"))\n```\n\n\nknitr::include_graphics(here::here(\"figs\", \"ssa-logo.png\"))\n\n\n\n\nThe new SSA logo, which is actually a scatterplot, which is super neat!\n\n\n\n\n\n\n\n\n\n\nCautionControlling image output with css\n\n\n\n\n\nYou can control more features of figures, e.g., sizing, alignment, alt text, etc., by using CSS type styling, which you can read more about here: https://quarto.org/docs/authoring/figures.html#figure-sizing\n\n\n\n\n\n\n\n\n\n\n\nNoteYour Turn\n\n\n\n\nDownload the gapminder logo, which is at this link\nPut it into a new directory called “figs” (at the same level as your qmd4sci-exercises.Rproj file)\nInsert the image into your “02-qmd-figures-chunks.qmd” Quarto document around where you introduce gapminder.\nTry using both markdown ![]() syntax, and knitr::include_graphics().\nHint: Remember to refer to the image in the right spot using here!",
     "crumbs": [
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Figures, Tables, Captions.</span>"
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Figures, Tables, Captions</span>"
     ]
   },
   {
     "objectID": "figures-tables-captions.html#summary",
     "href": "figures-tables-captions.html#summary",
-    "title": "8  Figures, Tables, Captions.",
+    "title": "8  Figures, Tables, Captions",
     "section": "8.7 Summary",
     "text": "8.7 Summary\nWe’ve now learned how to insert tables, plots, and images into our documents!",
     "crumbs": [
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Figures, Tables, Captions.</span>"
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Figures, Tables, Captions</span>"
     ]
   },
   {
