@@ -37,17 +37,22 @@ Below is a small table of tasks you can perform with keyboard shortcuts
 
 | Action      | Windows/Linux | Mac  | 
 |-------------|---------------|----------------|
+| Command Palette | Ctrl + Shift + P | Cmd + Shift + P| 
 | Render document | Ctrl + Shift + K | Cmd + Shift + K |
 | Insert Chunk  | Ctrl + Alt + I   | Cmd + Option + I |
 | Run current line or selection | Ctrl + Enter | Cmd + Return |
 | Run Current Chunk | Ctrl + Alt + C | Cmd + Option + C | 
-| Jump to  | Shift+Alt+J 	| Cmd+Shift+Option+J |
 | Show Keyboard Shortcut Reference  |	Alt+Shift+K | Option+Shift+K |
 | Create multiple cursors | Ctrl + Alt + Up/Down | option + control + Up/Down|
 | Delete the current line | Ctrl + D | Cmd + D|
 | Un/Comment out a line   | Ctrl + Shift + C | Cmd + Shift + C| 
 | Reformat Section | Ctrl + Shift + A | Cmd + Shift + A| 
-| Duplicate lines | Alt + Shift + Up/Down | Cmd + Option + Up/Down| 
+| Move lines up/down | Alt + Up/Down | Option + Up/Down| 
+| Copy lines up/down | Shift + Alt + Up/Down | Cmd + Option + Up/Down| 
+| Jump to Word  | Ctrl + Left/Right | Option + Left or Right |
+| Select to Word  | Ctrl + Shift + Left/Right | Option + Shift + Left or Right |
+| Jump to Line Start/End  | Alt + Left/Right | Cmd + Left or Right |
+| Select to Line Start/End  | Shift + Alt + Left/Right | Shift + Cmd + Left or Right |
 
 ## Further Reading
 
@@ -60,8 +65,12 @@ Below is a small table of tasks you can perform with keyboard shortcuts
 
 - In your **awesome** quarto document
   - Practice using the Keyboard Shortcut Reference and find the keyboard shortcut for inserting a pipe character ( `%>%` or `|>`)
-  - Spend 3 minutes practicing these commands.
+  - Find the keyboard shortcut for inserting assignment (`<-`)
+  - Read the "Editing (console and source)" shortcuts
+  - Spend 5 minutes practicing these commands. Really!
 - Ask Nick to demonstrate some of his [favourite shortcut combos](https://www.njtierney.com/post/2023/12/04/get-good-type-fast/)
   - e.g., multiline cursor, yank lines, copy lines, go to file/function
+
+
 
 :::

@@ -1,4 +1,4 @@
-# Figures, Tables, Captions.
+# Figures, Tables, Captions
 
 You need figures and tables in your own writing, whether it be a journal paper, an internal document, or some documentation. In this section, we discuss how to add figures and tables into your Quarto document, and how to provide captions for them.
 
@@ -167,21 +167,28 @@ gapminder |>
 
 ### Adding multiple (sub) figures and (sub) captions
 
-Sometimes you want to add multiple figures that are linked, or slightly different views of similar data and then reference them as Figure 1A and Figure 1B. You can do this with `layout-ncol` and `fig-cap`, and reference the figures with `@fig-<chunk-name>-1` `@fig-<chunk-name>-2`. For example:
+Sometimes you want to add multiple figures that are linked, or slightly different views of similar data. Quarto calls these **subfigures**. You give the chunk one `fig-cap` for the whole figure, and a `fig-subcap` with one caption per panel. You can then reference the individual panels with `@fig-<chunk-name>-1` and `@fig-<chunk-name>-2`. For example:
 
 ```{r}
 #| label: fig-volcanos
 #| layout-ncol: 2
 #| echo: fenced
-#| fig-cap: 
-#|   - "An image plot of Auckland's Maunga Whau Volcano"
-#|   - "A contour plot of Auckland's Maunga Whau Volcano"
+#| fig-cap: "Two views of Auckland's Maunga Whau Volcano"
+#| fig-subcap:
+#|   - "An image plot"
+#|   - "A contour plot"
 
 image(volcano)
 contour(volcano)
 ```
 
-We can see the image plot as (`@fig-volcanos-1`) @fig-volcanos-1 and the contour plot as `@fig-volcanos-2` @fig-volcanos-2.
+The panels get lettered captions, (a) and (b). We can see the image plot as (`@fig-volcanos-1`) @fig-volcanos-1 and the contour plot as (`@fig-volcanos-2`) @fig-volcanos-2. The figure as a whole is (`@fig-volcanos`) @fig-volcanos.
+
+::: {.callout-warning title="A list in `fig-cap` works, too!" collapse="true"}
+
+You can give `fig-cap` a list of captions instead, one per plot. That  does not make subfigures, but produces two separate figures, numbered Figure 1 and Figure 2, each with its own caption, and `@fig-volcanos` on its own no longer resolves - you only get the numbered references, `@fig-volcanos-1` and `@fig-volcanos-2`.
+
+:::
 
 For more information on this see <https://quarto.org/docs/authoring/figures.html#layout> and <https://quarto.org/docs/authoring/cross-references.html>
 
