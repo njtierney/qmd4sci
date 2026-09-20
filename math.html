@@ -283,26 +283,8 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./appendix-template.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">Templates</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./appendix-faq.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">C</span>&nbsp; <span class="chapter-title">FAQ</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
   <a href="./appendix-html-extensions.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">D</span>&nbsp; <span class="chapter-title">HTML document extensions</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./appendix-manuscript.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">E</span>&nbsp; <span class="chapter-title">Using manuscripts in your writing</span></span></a>
+ <span class="menu-text"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">HTML document extensions</span></span></a>
   </div>
 </li>
       </ul>
@@ -319,8 +301,19 @@ window.Quarto = {
   <ul>
   <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview"><span class="header-section-number">10.1</span> Overview</a></li>
   <li><a href="#questions" id="toc-questions" class="nav-link" data-scroll-target="#questions"><span class="header-section-number">10.2</span> Questions</a></li>
-  <li><a href="#anatomy-of-equations" id="toc-anatomy-of-equations" class="nav-link" data-scroll-target="#anatomy-of-equations"><span class="header-section-number">10.3</span> Anatomy of Equations</a></li>
-  <li><a href="#example-math-commands" id="toc-example-math-commands" class="nav-link" data-scroll-target="#example-math-commands"><span class="header-section-number">10.4</span> Example math commands</a></li>
+  <li><a href="#anatomy-of-equations" id="toc-anatomy-of-equations" class="nav-link" data-scroll-target="#anatomy-of-equations"><span class="header-section-number">10.3</span> Anatomy of Equations</a>
+  <ul class="collapse">
+  <li><a href="#viewing-equations" id="toc-viewing-equations" class="nav-link" data-scroll-target="#viewing-equations"><span class="header-section-number">10.3.1</span> Viewing equations</a></li>
+  </ul></li>
+  <li><a href="#example-math-commands" id="toc-example-math-commands" class="nav-link" data-scroll-target="#example-math-commands"><span class="header-section-number">10.4</span> Example math commands</a>
+  <ul class="collapse">
+  <li><a href="#fractions" id="toc-fractions" class="nav-link" data-scroll-target="#fractions"><span class="header-section-number">10.4.1</span> Fractions</a></li>
+  <li><a href="#sub-and-super-scripts" id="toc-sub-and-super-scripts" class="nav-link" data-scroll-target="#sub-and-super-scripts"><span class="header-section-number">10.4.2</span> Sub and Super Scripts</a></li>
+  <li><a href="#square-roots" id="toc-square-roots" class="nav-link" data-scroll-target="#square-roots"><span class="header-section-number">10.4.3</span> Square roots</a></li>
+  <li><a href="#summations" id="toc-summations" class="nav-link" data-scroll-target="#summations"><span class="header-section-number">10.4.4</span> Summations</a></li>
+  <li><a href="#bayes-rule" id="toc-bayes-rule" class="nav-link" data-scroll-target="#bayes-rule"><span class="header-section-number">10.4.5</span> Bayes Rule</a></li>
+  <li><a href="#linear-model" id="toc-linear-model" class="nav-link" data-scroll-target="#linear-model"><span class="header-section-number">10.4.6</span> Linear Model</a></li>
+  </ul></li>
   <li><a href="#further-reading" id="toc-further-reading" class="nav-link" data-scroll-target="#further-reading"><span class="header-section-number">10.5</span> Further Reading:</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/njtierney/qmd4sci/edit/main/math.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/njtierney/qmd4sci/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
@@ -396,16 +389,16 @@ $$</code></pre>
 <p><span class="math display">\[
 E = mc^2
 \]</span></p>
-<section id="viewing-equations" class="level4" data-number="10.3.0.1">
-<h4 data-number="10.3.0.1" class="anchored" data-anchor-id="viewing-equations"><span class="header-section-number">10.3.0.1</span> Viewing equations</h4>
+<section id="viewing-equations" class="level3" data-number="10.3.1">
+<h3 data-number="10.3.1" class="anchored" data-anchor-id="viewing-equations"><span class="header-section-number">10.3.1</span> Viewing equations</h3>
 <p>Understanding whether or not you have created the right equation can be difficult. Rstudio provides previews of your equations in text (<strong>demo</strong>).</p>
 </section>
 </section>
 <section id="example-math-commands" class="level2" data-number="10.4">
 <h2 data-number="10.4" class="anchored" data-anchor-id="example-math-commands"><span class="header-section-number">10.4</span> Example math commands</h2>
 <p>LaTeX is an amazing language, but understanding how to create the equations can be (more than) a bit confusing at times. This section demonstrates some example equations that you might be familiar with.</p>
-<section id="fractions" class="level4" data-number="10.4.0.1">
-<h4 data-number="10.4.0.1" class="anchored" data-anchor-id="fractions"><span class="header-section-number">10.4.0.1</span> Fractions</h4>
+<section id="fractions" class="level3" data-number="10.4.1">
+<h3 data-number="10.4.1" class="anchored" data-anchor-id="fractions"><span class="header-section-number">10.4.1</span> Fractions</h3>
 <div class="columns">
 <div class="column" style="width:45%;">
 <pre><code>$$
@@ -418,8 +411,8 @@ $$</code></pre>
 </div>
 </div>
 </section>
-<section id="sub-and-super-scripts" class="level4" data-number="10.4.0.2">
-<h4 data-number="10.4.0.2" class="anchored" data-anchor-id="sub-and-super-scripts"><span class="header-section-number">10.4.0.2</span> Sub and Super Scripts</h4>
+<section id="sub-and-super-scripts" class="level3" data-number="10.4.2">
+<h3 data-number="10.4.2" class="anchored" data-anchor-id="sub-and-super-scripts"><span class="header-section-number">10.4.2</span> Sub and Super Scripts</h3>
 <div class="columns">
 <div class="column" style="width:45%;">
 <pre><code>$$
@@ -443,8 +436,8 @@ a^2 + b^2 = c^2
 </div>
 </div>
 </section>
-<section id="square-roots" class="level4" data-number="10.4.0.3">
-<h4 data-number="10.4.0.3" class="anchored" data-anchor-id="square-roots"><span class="header-section-number">10.4.0.3</span> Square roots</h4>
+<section id="square-roots" class="level3" data-number="10.4.3">
+<h3 data-number="10.4.3" class="anchored" data-anchor-id="square-roots"><span class="header-section-number">10.4.3</span> Square roots</h3>
 <div class="columns">
 <div class="column" style="width:45%;">
 <pre><code>$$
@@ -468,8 +461,8 @@ x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}
 </div>
 </div>
 </section>
-<section id="summations" class="level4" data-number="10.4.0.4">
-<h4 data-number="10.4.0.4" class="anchored" data-anchor-id="summations"><span class="header-section-number">10.4.0.4</span> Summations</h4>
+<section id="summations" class="level3" data-number="10.4.4">
+<h3 data-number="10.4.4" class="anchored" data-anchor-id="summations"><span class="header-section-number">10.4.4</span> Summations</h3>
 <div class="columns">
 <div class="column" style="width:45%;">
 <pre><code>$$
@@ -482,8 +475,8 @@ $$</code></pre>
 </div>
 </div>
 </section>
-<section id="bayes-rule" class="level4" data-number="10.4.0.5">
-<h4 data-number="10.4.0.5" class="anchored" data-anchor-id="bayes-rule"><span class="header-section-number">10.4.0.5</span> Bayes Rule</h4>
+<section id="bayes-rule" class="level3" data-number="10.4.5">
+<h3 data-number="10.4.5" class="anchored" data-anchor-id="bayes-rule"><span class="header-section-number">10.4.5</span> Bayes Rule</h3>
 <div class="columns">
 <div class="column" style="width:45%;">
 <pre><code>$$
@@ -507,8 +500,8 @@ Pr(\theta | y) \propto Pr(y | \theta) Pr(\theta)
 </div>
 </div>
 </section>
-<section id="linear-model" class="level4" data-number="10.4.0.6">
-<h4 data-number="10.4.0.6" class="anchored" data-anchor-id="linear-model"><span class="header-section-number">10.4.0.6</span> Linear Model</h4>
+<section id="linear-model" class="level3" data-number="10.4.6">
+<h3 data-number="10.4.6" class="anchored" data-anchor-id="linear-model"><span class="header-section-number">10.4.6</span> Linear Model</h3>
 <div class="columns">
 <div class="column" style="width:45%;">
 <pre><code>$$

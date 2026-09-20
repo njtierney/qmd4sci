@@ -289,26 +289,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./appendix-template.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">Templates</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./appendix-faq.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">C</span>&nbsp; <span class="chapter-title">FAQ</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
   <a href="./appendix-html-extensions.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">D</span>&nbsp; <span class="chapter-title">HTML document extensions</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./appendix-manuscript.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">E</span>&nbsp; <span class="chapter-title">Using manuscripts in your writing</span></span></a>
+ <span class="menu-text"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">HTML document extensions</span></span></a>
   </div>
 </li>
       </ul>
@@ -413,6 +395,7 @@ quarto render example.qmd --to docx</code></pre>
 <h3 data-number="6.4.1" class="anchored" data-anchor-id="a-note-on-workflow-with-quarto-html-first-pdfword-later"><span class="header-section-number">6.4.1</span> A note on workflow with Quarto: HTML first, PDF/word later</h3>
 <p>It can be easy to get caught up with how your document looks. I highly recommend avoiding compiling to PDF or word until <em>you really need to</em>. <a href="https://yihui.name/en/2018/07/in-html-i-trust/">This is also recommended by the author of rmarkdown and knitr, Yihui Xie</a>. Because HTML doesn’t have page breaks, this means that you can spend time working on generating content, and not trying to get figures to line up correctly.</p>
 <p>This was a minor revelation to me, to understand that page breaks were the cause of so much angst and pain. Embrace HTML, I say!</p>
+<p>Rendering is also not how you find out whether your code works. Run the chunks first, fix whatever breaks, and then render. Rendering starts a fresh R session and runs your code from the top, so it is the slowest way there is to discover a typo.</p>
 </section>
 </section>
 <section id="how-to-make-a-html-page-self-contained" class="level2" data-number="6.5">
@@ -440,7 +423,7 @@ quarto render example.qmd --to docx</code></pre>
 </div>
 <div class="callout-body-container callout-body">
 <ol type="1">
-<li>Using your “01-qmd-example.qmd” Quarto document you were using earlier, generate three reports, one as HTML, one as PDF, and one as microsoft word. Remember, if you are having PDF problems, see the <a href="installation">installation chapter</a> note on installing LaTeX with the R package, <code>tinytex</code>.</li>
+<li>Using your “01-qmd-example.qmd” Quarto document you were using earlier, generate three reports, one as HTML, one as PDF, and one as microsoft word. You can render with the Render button, or with <code>Ctrl + Shift + K</code> on Windows and <code>Cmd + Shift + K</code> on a Mac. Remember, if you are having PDF problems, see the <a href="installation">installation chapter</a> note on installing LaTeX with the R package, <code>tinytex</code>.</li>
 </ol>
 </div>
 </div>

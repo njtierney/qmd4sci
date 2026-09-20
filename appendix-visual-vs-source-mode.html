@@ -37,7 +37,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./appendix-template.html" rel="next">
+<link href="./appendix-html-extensions.html" rel="next">
 <link href="./acknowledgements.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
@@ -254,26 +254,8 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./appendix-template.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">Templates</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./appendix-faq.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">C</span>&nbsp; <span class="chapter-title">FAQ</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
   <a href="./appendix-html-extensions.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">D</span>&nbsp; <span class="chapter-title">HTML document extensions</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./appendix-manuscript.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">E</span>&nbsp; <span class="chapter-title">Using manuscripts in your writing</span></span></a>
+ <span class="menu-text"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">HTML document extensions</span></span></a>
   </div>
 </li>
       </ul>
@@ -288,7 +270,8 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#using-zotero-with-quarto" id="toc-using-zotero-with-quarto" class="nav-link active" data-scroll-target="#using-zotero-with-quarto"><span class="header-section-number">B</span> Using Zotero with Quarto</a></li>
+  <li><a href="#source-mode" id="toc-source-mode" class="nav-link active" data-scroll-target="#source-mode"><span class="header-section-number">A.1</span> Source mode</a></li>
+  <li><a href="#using-zotero-with-quarto" id="toc-using-zotero-with-quarto" class="nav-link" data-scroll-target="#using-zotero-with-quarto"><span class="header-section-number">A.2</span> Using Zotero with Quarto</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/njtierney/qmd4sci/edit/main/appendix-visual-vs-source-mode.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/njtierney/qmd4sci/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -321,10 +304,26 @@ ul.task-list li input[type="checkbox"] {
 <li>insert anything shortcut</li>
 <li>insert table</li>
 </ul>
-<p>Warn against potential issues that may arise due to text changes from swapping to visual model</p>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Warning
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Visual mode rewrites the markdown source as you type. It reflows paragraphs, changes how lists are indented, and standardises things like <code>_italics_</code> into <code>*italics*</code>. The rendered document is unchanged, but the diff can be large, which is worth knowing before you switch over a file that someone else is also working on.</p>
+</div>
+</div>
 <p>There is also a <a href="https://quarto.org/docs/visual-editor/vscode/">VS Code extension for visual mode</a>, which this book does not (currently) focus on.</p>
-<section id="using-zotero-with-quarto" class="level1" data-number="B">
-<h1 data-number="B"><span class="header-section-number">B</span> Using Zotero with Quarto</h1>
+<section id="source-mode" class="level2" data-number="A.1">
+<h2 data-number="A.1" class="anchored" data-anchor-id="source-mode"><span class="header-section-number">A.1</span> Source mode</h2>
+<p>Source mode is the plain text view of the same file, and it is what the rest of this book shows. You can swap between the two with the “Source” and “Visual” buttons at the top left of the editor.</p>
+</section>
+<section id="using-zotero-with-quarto" class="level2" data-number="A.2">
+<h2 data-number="A.2" class="anchored" data-anchor-id="using-zotero-with-quarto"><span class="header-section-number">A.2</span> Using Zotero with Quarto</h2>
 <p><a href="https://quarto.org/docs/visual-editor/technical.html#citations-from-zotero" class="uri">https://quarto.org/docs/visual-editor/technical.html#citations-from-zotero</a></p>
 
 
@@ -738,8 +737,8 @@ ul.task-list li input[type="checkbox"] {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./appendix-template.html" class="pagination-link" aria-label="Templates">
-        <span class="nav-page-text"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">Templates</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./appendix-html-extensions.html" class="pagination-link" aria-label="HTML document extensions">
+        <span class="nav-page-text"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">HTML document extensions</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
