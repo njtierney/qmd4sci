@@ -2,21 +2,16 @@
 
 There are some things that I run into fairly frequently (and some not so much) when I'm rendering my Quarto documents. This section details some the common problems, and the solution that I have found works for me.
 
-:::{.callout-note title="Your Turn"}
+## Overview
 
-1. Using "06-qmd-find-errors.qmd"
-  - Fix all the problems and get the document to render
-1.  Go to this repo [njtierney/qmd-errors](https://github.com/njtierney/qmd-errors), and give debugging some of these common Quarto errors a go.
+* **Teaching** 10 minutes
+* **Exercises** 15 minutes
 
-You can download this repository by running this code:
+## Questions
 
-```{r}
-#| label: use-course-code
-#| eval: false
-usethis::use_course("njtierney/qmd-errors")
-```
-
-:::
+* Why won't my document render?
+* How do I read a Quarto error message?
+* How do I fix the errors I am most likely to hit?
 
 ## More practice?
 
@@ -112,7 +107,7 @@ Chunks like this:
 
 **The error message**
 
-This is caught before the document compiles with a warning like:
+This is caught before the document compiles with an error like:
 
 ```         
 processing file: duplicated-chunk-names.qmd
@@ -185,7 +180,7 @@ Quitting from lines START-END [CHUNK LABEL] (QUARTO-DOCUMENT-NAME.qmd)
 I would then navigate to those lines of code in the Quarto document, or search for the chunk label, and see if I can run that code interactively. A common problem with these kinds of errors is that they *just might* work interactively, because you might have run them out of sequence. However because a Quarto document goes from a fresh R session and runs the code from the top to the bottom in that order, the objects might not yet exist. So:
 
 1.  Restart R - ensure it is a clean session without objects from the previous session hanging around
-2.  Run code above the problem chunk
+2.  Run code above the problem chunk. In RStudio that is the grey downward arrow at the top right of the chunk, or Run \> Run All Chunks Above
 3.  Run code in the problem chunk
 4.  Hopefully this reproduces your error
 5.  If it doesn't reproduce your error, consider trying to make a [small reprex](https://reprex.tidyverse.org/) of the problem so you have try and figure out the bug.
@@ -427,9 +422,27 @@ There is no panacea for LaTeX errors, but if you aren't familiar with "what that
 
 **What it might look like**
 
+The document renders to HTML without complaint, but rendering to PDF stops. The message usually names either a `.sty` file you have never heard of, or a character that LaTeX cannot typeset.
+
 **The error message**
 
+```
+compilation failed- no matching packages
+LaTeX Error: File `sansmathaccent.sty' not found.
+```
+
+or
+
+```
+! Package inputenc Error: Unicode character ° (U+00B0)
+(inputenc)                not set up for use with LaTeX.
+```
+
 **How to solve**
+
+-   For a missing `.sty` file, render again first. Quarto installs missing LaTeX packages as it goes, so the second attempt often succeeds. If it does not, install it yourself with `tinytex::tlmgr_install("sansmathaccent")`, using whichever name the message gave you.
+-   For a Unicode character, either write it the LaTeX way (`$^\circ$C` instead of `°C`), or switch to an engine that handles Unicode by adding `pdf-engine: xelatex` to your YAML.
+-   If you are stuck, render to HTML. If the HTML is fine, the problem is LaTeX rather than your code, which is a much smaller thing to go looking for.
 
 ### I want to include inline R code verbatim to show an example
 
@@ -453,7 +466,7 @@ Thankfully the folks at Quarto have made this much easier!
 
 **What it might look like**
 
-You create a figure,
+You create a figure in a chunk, label the chunk `fig-something`, and refer to it in text with `@fig-something`. The reference stays as the literal text `@fig-something` instead of turning into "Figure 1".
 
 **The error message**
 
@@ -466,3 +479,19 @@ You need to make sure that you actually print the table or plot. If you create t
 ### `::: {.cell}` appears in my quarto document
 
 Generally look for a missing `:::` partner - however sometimes I do find this problem a bit sticky!
+
+::: {.callout-note title="Your Turn"}
+
+1.  Using "06-qmd-find-errors.qmd"
+    -   Fix all the problems and get the document to render
+1.  Go to this repo [njtierney/qmd-errors](https://github.com/njtierney/qmd-errors), and give debugging some of these common Quarto errors a go.
+
+You can download this repository by running this code:
+
+```{r}
+#| label: use-course-code
+#| eval: false
+usethis::use_course("njtierney/qmd-errors")
+```
+
+:::

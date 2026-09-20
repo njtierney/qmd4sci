@@ -45,10 +45,14 @@ book:
     - "acknowledgements.qmd"
   appendices:
     - "appendix-visual-vs-source-mode.qmd"
-    - "appendix-template.qmd"
-    - "appendix-faq.qmd"
     - "appendix-html-extensions.qmd"
-    - "appendix-manuscript.qmd"
+    # Commented out 14 Sep 2026: these three ship in the published book as
+    # stubs. "template" stops mid-sentence, "faq" opens with "( A place for
+    # questions)", and "manuscript" is a title with an empty body. Uncomment
+    # each one once it is written.
+    # - "appendix-template.qmd"
+    # - "appendix-faq.qmd"
+    # - "appendix-manuscript.qmd"
 bibliography:
   - book.bib
   - packages.bib

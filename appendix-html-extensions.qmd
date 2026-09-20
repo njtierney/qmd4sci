@@ -10,21 +10,23 @@ Some common options for HTML include:
 A tab set looks like the following:
 
 ````{markdown}
-## Example tab set {.tabset}
+::: {.panel-tabset}
 
-### Tab 1
+## Tab 1
 
 > Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sed eleifend velit. Sed porta pulvinar lorem ut rutrum. Etiam quis cursus libero. Donec nibh nisl, auctor quis sem in, feugiat convallis odio. Ut at euismod ligula. Nullam vitae quam non lacus scelerisque tempus. Sed tincidunt massa non nunc tincidunt feugiat. In hac habitasse platea dictumst.
 
-### Tab 2
+## Tab 2
 
 ```{r}
 #| label: tab-plot
 plot(iris$Sepal.Length, iris$Sepal.Width)
 ```
+
+:::
 ````
 
-To add a tab set, you include `{.tabset}` after your heading
+To add a tab set, you wrap the tabs in a `::: {.panel-tabset}` div. Each heading inside that div becomes a tab.
 
 ### Floating table of contents
 
@@ -34,10 +36,10 @@ A floating table of contents can be added with the following lines in the YAML h
 ---
 title: "Your title"
 author: "Your name"
-output: 
-  html_document:
+format: 
+  html:
     toc: true
-    toc_float: true
+    toc-location: left
 ---
 ```
 

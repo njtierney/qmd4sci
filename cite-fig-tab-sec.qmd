@@ -173,7 +173,7 @@ However, in order to write this, you need to include `sec-slug` in your markdown
 ## your amazing header {#sec-slug}
 ```
 
-You must also include `number-section` in your YAML:
+You must also include `number-sections` in your YAML:
 
 ``` r
 ---

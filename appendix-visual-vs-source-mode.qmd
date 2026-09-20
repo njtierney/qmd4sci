@@ -8,11 +8,19 @@ But needless to say, some things worth checking out:
 - insert anything shortcut
 - insert table
 
-Warn against potential issues that may arise due to text changes from swapping to visual model
+::: {.callout-warning}
+
+Visual mode rewrites the markdown source as you type. It reflows paragraphs, changes how lists are indented, and standardises things like `_italics_` into `*italics*`. The rendered document is unchanged, but the diff can be large, which is worth knowing before you switch over a file that someone else is also working on.
+
+:::
 
 There is also a [VS Code extension for visual mode](https://quarto.org/docs/visual-editor/vscode/), which this book does not (currently) focus on.
 
-# Using Zotero with Quarto
+## Source mode
+
+Source mode is the plain text view of the same file, and it is what the rest of this book shows. You can swap between the two with the "Source" and "Visual" buttons at the top left of the editor.
+
+## Using Zotero with Quarto
 
 <https://quarto.org/docs/visual-editor/technical.html#citations-from-zotero>
 

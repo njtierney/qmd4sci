@@ -49,7 +49,7 @@ $$
 E = mc^2
 $$
 
-#### Viewing equations
+### Viewing equations
 
 Understanding whether or not you have created the right equation can be difficult. Rstudio provides previews of your equations in text (**demo**).
 
@@ -58,7 +58,7 @@ Understanding whether or not you have created the right equation can be difficul
 LaTeX is an amazing language, but understanding how to create the equations can be (more than) a bit confusing at times. This section demonstrates some example equations that you might be familiar with.
 
 
-#### Fractions
+### Fractions
 
 :::: columns
 ::: {.column width="45%"}
@@ -77,7 +77,7 @@ $$
 :::
 ::::
 
-#### Sub and Super Scripts
+### Sub and Super Scripts
 
 :::: columns
 ::: {.column width="45%"}
@@ -112,7 +112,7 @@ $$
 :::
 ::::
 
-#### Square roots
+### Square roots
 
 :::: columns
 ::: {.column width="45%"}
@@ -148,7 +148,7 @@ $$
 :::
 ::::
 
-#### Summations
+### Summations
 
 :::: columns
 ::: {.column width="45%"}
@@ -168,7 +168,7 @@ $$
 :::
 ::::
 
-#### Bayes Rule
+### Bayes Rule
 
 :::: columns
 ::: {.column width="45%"}
@@ -204,7 +204,7 @@ $$
 :::
 ::::
 
-#### Linear Model
+### Linear Model
 
 :::: columns
 ::: {.column width="45%"}

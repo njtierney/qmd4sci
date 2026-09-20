@@ -65,6 +65,8 @@ It can be easy to get caught up with how your document looks. I highly recommend
 
 This was a minor revelation to me, to understand that page breaks were the cause of so much angst and pain. Embrace HTML, I say!
 
+Rendering is also not how you find out whether your code works. Run the chunks first, fix whatever breaks, and then render. Rendering starts a fresh R session and runs your code from the top, so it is the slowest way there is to discover a typo.
+
 
 ## How to make a HTML page "self contained"
 
@@ -87,6 +89,6 @@ format:
 
 ::: {.callout-note title="Your Turn"}
 
-1. Using your “01-qmd-example.qmd” Quarto document you were using earlier, generate three reports, one as HTML, one as PDF, and one as microsoft word. Remember, if you are having PDF problems, see the [installation chapter](installation) note on installing LaTeX with the R package, `tinytex`.
+1. Using your “01-qmd-example.qmd” Quarto document you were using earlier, generate three reports, one as HTML, one as PDF, and one as microsoft word. You can render with the Render button, or with `Ctrl + Shift + K` on Windows and `Cmd + Shift + K` on a Mac. Remember, if you are having PDF problems, see the [installation chapter](installation) note on installing LaTeX with the R package, `tinytex`.
 
 :::

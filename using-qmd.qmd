@@ -54,6 +54,8 @@ It starts and ends with three dashes `---`, and has fields like the following: `
 
 `format: html ` tells us we want this to be a HTML formatted document - you'll see what this looks like in a moment!
 
+* **Demo**: using tab-complete
+
 ### Text
 
 Is markdown, as we discussed in the earlier section,
@@ -161,6 +163,22 @@ Quarto provides support for R, Python, Julia, and Observable, which are all very
 knitr::include_graphics("figs/ansi-keyboard.png")
 ```
 
+#### Running code in quarto
+
+You do not have to type the backticks - there are keyboard shortcuts for this!
+
+- Windows: `Ctrl + Alt + I`
+- Mac: `Option + Command + I`
+
+This creates an empty code chunk in wherever your cursor is.
+
+You can also run code with keyboard shortcuts (windows/mac):
+
+* `Ctrl + Enter` / `Cmd + Return`: run the current line, or whatever is selected. 
+* `Ctrl + Alt + C` / `Option + Command + C`: runs the whole code chunk you are in. You can also use the green play button at the top right of the code chunk.
+
+You can also **run every chunk above** the code chunk you are in, by pressing the grey downward arrow in the code chunk. This is a really useful one to use when you are wanting to make sure all the code is up to date, or you don't want to render the entire document, and explore what the current state of things is.
+
 ### Chunk names
 
 Every chunk should ideally have a name. As I've mentioned earlier, naming things is hard, but follow these rules and you'll be fine:
@@ -186,12 +204,128 @@ A nice feature of Quarto + Rstudio is that they provide code completion when you
 
 In the past Rmarkdown required "TRUE" and "FALSE", but note that Quarto **always** uses `true` or `false` in lowercase, and __never__ "yes" or "no". 
 
-The code chunks you need to know about right now are:
+Right now, I think these are the most important code chunk options to know:
 
+  * `label`: the name of the chunk. This helps Quarto (and you!) find this chunk if there is an error.
+  * `echo`: `true`/`false` Do you want to print the code onto the renderd document?
   * `eval`: `true`/`false` Do you want to evaluate the code?
-  * `echo`: `true`/`false` Do you want to print the code?
-  * `cache`: `true` / `false` Do you want to save the output of the chunk so it doesn't have to run next time?
-  * `include`: Do you want to include code output in the final output document? Setting to `false` means nothing is put into the output document, but the code is still run.
+  * `include`: `true`/`false` Do you want any of it in the final document? Setting this to `false` means nothing is put into the output document, but the code is still run. It overrides `echo`.
+  * `cache`: `true`/`false` Do you want to save the output of the chunk so it doesn't have to run next time?
+
+Let's demonstrate each of these options with a code chunk making three different kinds of output: a table, a warning, and a plot.
+
+Each tab below shows the chunk as you would write it, and then what you would see you in your document.
+
+::: {.panel-tabset}
+
+## everything on
+
+You write this:
+
+````{verbatim, lang = "r"}
+```{r}
+#| label: demo-code
+#| echo: true
+#| eval: true
+#| include: true
+gap <- readr::read_csv(here::here("data", "gapminder.csv"))
+head(gap)
+warning("Watch out!")
+image(volcano)
+```
+````
+
+And your document gets the lot: the code, the message from `read_csv()`, the table, the warning, and the plot.
+
+```{r}
+#| label: demo-code
+gap <- readr::read_csv(here::here("data", "gapminder.csv"))
+head(gap)
+warning("Watch out!")
+image(volcano)
+```
+
+## `echo: false`
+
+You write this:
+
+````{verbatim, lang = "r"}
+```{r}
+#| label: demo-echo
+#| echo: false
+gap <- readr::read_csv(here::here("data", "gapminder.csv"))
+head(gap)
+warning("Watch out!")
+image(volcano)
+```
+````
+
+And you get all of that output, without the code:
+
+```{r}
+#| label: demo-echo
+#| ref.label: demo-code
+#| echo: false
+```
+
+This is useful in reports where you don't necessarily need or want to show the code.
+
+## `eval: false`
+
+You write this:
+
+````{verbatim, lang = "r"}
+```{r}
+#| label: demo-eval
+#| echo: true
+#| eval: false
+gap <- readr::read_csv(here::here("data", "gapminder.csv"))
+head(gap)
+warning("Watch out!")
+image(volcano)
+```
+````
+
+And you get that code block in your document, and nothing else. 
+
+
+```{r}
+#| label: demo-eval-real
+#| ref.label: demo-code
+#| echo: true
+#| eval: false
+```
+
+It never runs, so there is no message, no table, no warning, and no plot. This is useful for demonstrating code without running it - say for example in a demonstration, or helper paper, you do not want to run `install.packages()`.
+
+## `include: false`
+
+You write this:
+
+````{verbatim, lang = "r"}
+```{r}
+#| label: demo-include
+#| include: false
+gap <- readr::read_csv(here::here("data", "gapminder.csv"))
+head(gap)
+warning("Watch out!")
+image(volcano)
+```
+````
+
+And you get nothing at all. No code, no message, no table, no warning, no plot.
+
+```{r}
+#| label: demo-include
+#| ref.label: demo-code
+#| include: false
+```
+
+The code did run, though. `gap` exists, and it has `{r} nrow(gap)` rows. This is how you do the work quietly, and then talk about the results in your own words.
+
+:::
+
+`cache` is the one you cannot see on the page. The first time the chunk runs, Quarto saves the result, and after that it reuses the saved result until the code changes.
 
 <!-- TODO What are messages, warnings, errors, results? -->
 
