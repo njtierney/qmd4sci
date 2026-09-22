@@ -78,7 +78,7 @@ For journals or books, you'll need to get a specific .bib file. Yes, this can be
     3.  Reference these in your document
     4.  Add a final heading in your file called `# References`, with `::: {#refs}` if you want to place it in a specific location
     5.  Cite the packages you use when you use them
-    6.  hint: https://quarto.org/docs/authoring/footnotes-and-citations.html
+    6.  hint: <https://quarto.org/docs/authoring/footnotes-and-citations.html>
     7.  hint: look at the names in packages.bib
 2.  Tidy up the structure, provide some more words around the introduction and results
 3.  Render the document
